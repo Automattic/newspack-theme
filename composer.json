@@ -1,0 +1,23 @@
+{
+  "name"       : "automattic/newspack-theme",
+  "description": "A theme for Newspack. https://newspack.blog/",
+  "homepage"   : "https://newspack.blog/",
+  "type"       : "package",
+  "license"    : "GPL-2.0-or-later",
+  "support"    : {
+    "issues": "https://github.com/Automattic/newspack-plugin/issues"
+  },
+  "require"    : {
+      "composer/installers": "~1.6"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wptrt/wpthemereview": "^0.1.0",
+		"automattic/vipwpcs": "^0.4.0"
+  },
+  "scripts": {
+		"phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
+		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"format": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+	}
+}
