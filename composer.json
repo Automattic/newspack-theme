@@ -5,7 +5,7 @@
   "type"       : "package",
   "license"    : "GPL-2.0-or-later",
   "support"    : {
-    "issues": "https://github.com/Automattic/newspack-plugin/issues"
+    "issues": "https://github.com/Automattic/newspack-theme/issues"
   },
   "require"    : {
       "composer/installers": "~1.6"
