@@ -26,6 +26,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'image-filters-enabled';
 	}
 
+	// Adds a class when in the Customizer.
+	if ( is_customize_preview() ) :
+		$classes[] = 'newspack-customizer';
+	endif;
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
