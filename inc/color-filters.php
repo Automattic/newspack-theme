@@ -9,13 +9,13 @@
  * Define default color filters.
  */
 
-define( 'newspack_DEFAULT_HUE', 199 );        // H
-define( 'newspack_DEFAULT_SATURATION', 100 ); // S
-define( 'newspack_DEFAULT_LIGHTNESS', 33 );   // L
+define( 'NEWSPACK_DEFAULT_HUE', 199 );        // H
+define( 'NEWSPACK_DEFAULT_SATURATION', 100 ); // S
+define( 'NEWSPACK_DEFAULT_LIGHTNESS', 33 );   // L
 
-define( 'newspack_DEFAULT_SATURATION_SELECTION', 50 );
-define( 'newspack_DEFAULT_LIGHTNESS_SELECTION', 90 );
-define( 'newspack_DEFAULT_LIGHTNESS_HOVER', 23 );
+define( 'NEWSPACK_DEFAULT_SATURATION_SELECTION', 50 );
+define( 'NEWSPACK_DEFAULT_LIGHTNESS_SELECTION', 90 );
+define( 'NEWSPACK_DEFAULT_LIGHTNESS_HOVER', 23 );
 
 /**
  * The default hue (as in hsl) used for the primary color throughout this theme
@@ -23,7 +23,7 @@ define( 'newspack_DEFAULT_LIGHTNESS_HOVER', 23 );
  * @return number the default hue
  */
 function newspack_get_default_hue() {
-	return apply_filters( 'newspack_default_hue', newspack_DEFAULT_HUE );
+	return apply_filters( 'newspack_default_hue', NEWSPACK_DEFAULT_HUE );
 }
 
 /**
@@ -32,7 +32,7 @@ function newspack_get_default_hue() {
  * @return number the default saturation
  */
 function newspack_get_default_saturation() {
-	return apply_filters( 'newspack_default_saturation', newspack_DEFAULT_SATURATION );
+	return apply_filters( 'newspack_default_saturation', NEWSPACK_DEFAULT_SATURATION );
 }
 
 /**
@@ -41,7 +41,7 @@ function newspack_get_default_saturation() {
  * @return number the default lightness
  */
 function newspack_get_default_lightness() {
-	return apply_filters( 'newspack_default_lightness', newspack_DEFAULT_LIGHTNESS );
+	return apply_filters( 'newspack_default_lightness', NEWSPACK_DEFAULT_LIGHTNESS );
 }
 
 /**
@@ -50,7 +50,7 @@ function newspack_get_default_lightness() {
  * @return number the default saturation selection
  */
 function newspack_get_default_saturation_selection() {
-	return apply_filters( 'newspack_default_saturation_selection', newspack_DEFAULT_SATURATION_SELECTION );
+	return apply_filters( 'newspack_default_saturation_selection', NEWSPACK_DEFAULT_SATURATION_SELECTION );
 }
 
 /**
@@ -59,7 +59,7 @@ function newspack_get_default_saturation_selection() {
  * @return number the default lightness selection
  */
 function newspack_get_default_lightness_selection() {
-	return apply_filters( 'newspack_default_lightness_selection', newspack_DEFAULT_LIGHTNESS_SELECTION );
+	return apply_filters( 'newspack_default_lightness_selection', NEWSPACK_DEFAULT_LIGHTNESS_SELECTION );
 }
 
 /**
@@ -68,9 +68,14 @@ function newspack_get_default_lightness_selection() {
  * @return number the default lightness hover
  */
 function newspack_get_default_lightness_hover() {
-	return apply_filters( 'newspack_default_lightness_hover', newspack_DEFAULT_LIGHTNESS_HOVER );
+	return apply_filters( 'newspack_default_lightness_hover', NEWSPACK_DEFAULT_LIGHTNESS_HOVER );
 }
 
+/**
+ * Tests the current default hue against NEWSPACK_DEFAULT_HUE.
+ *
+ * @return bool
+ */
 function newspack_has_custom_default_hue() {
-	return newspack_get_default_hue() !== newspack_DEFAULT_HUE;
+	return newspack_get_default_hue() !== NEWSPACK_DEFAULT_HUE;
 }
