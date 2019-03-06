@@ -56,6 +56,9 @@ Any standard WordPress local development environment should be able to run Newsp
 
 Once your environment is set up, run `composer install` and `npm install` to get all of the environmental dependencies.
 
+When the dependencies are installed, you can use them to compile the SCSS. After making a change to a .scss file, run `npm run build` from within the theme directory to build the CSS files with your new changes. You can also “watch” the theme directory for Sass changes and rebuild the CSS anytime a change occurs by running `npm run watch`.
+
+
 ## License
 
 Newspack is licensed under [GNU General Public License v3 (or later)](../LICENSE.md).
