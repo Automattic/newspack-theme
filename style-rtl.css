@@ -129,7 +129,11 @@ input:lang(ar)[type="submit"], .comment-navigation .nav-previous:lang(ar),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ar), .entry .entry-content .wp-block-file:lang(ar), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ar), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ar), .wp-caption-text:lang(ar), .gallery-caption:lang(ar), .site-main #infinite-handle span button:lang(ar),
 .site-main #infinite-handle span button:lang(ar):hover,
 .site-main #infinite-handle span button:lang(ar):focus, .entry div.sharedaddy h3.sd-title:lang(ar),
-.entry h3.sd-title:lang(ar), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ar) {
+.entry h3.sd-title:lang(ar), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ar), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ar),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ar), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ar),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ar), .widget_links li:lang(ar),
+.widget_jp_blogs_i_follow li:lang(ar),
+.widget_rss_links li:lang(ar), .widget_authors > ul > li > a:lang(ar), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ar) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -190,7 +194,11 @@ input:lang(ary)[type="submit"], .comment-navigation .nav-previous:lang(ary),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ary), .entry .entry-content .wp-block-file:lang(ary), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ary), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ary), .wp-caption-text:lang(ary), .gallery-caption:lang(ary), .site-main #infinite-handle span button:lang(ary),
 .site-main #infinite-handle span button:lang(ary):hover,
 .site-main #infinite-handle span button:lang(ary):focus, .entry div.sharedaddy h3.sd-title:lang(ary),
-.entry h3.sd-title:lang(ary), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ary) {
+.entry h3.sd-title:lang(ary), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ary), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ary),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ary), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ary),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ary), .widget_links li:lang(ary),
+.widget_jp_blogs_i_follow li:lang(ary),
+.widget_rss_links li:lang(ary), .widget_authors > ul > li > a:lang(ary), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ary) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -251,7 +259,11 @@ input:lang(azb)[type="submit"], .comment-navigation .nav-previous:lang(azb),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(azb), .entry .entry-content .wp-block-file:lang(azb), .entry .entry-content .wp-block-file .wp-block-file__button:lang(azb), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(azb), .wp-caption-text:lang(azb), .gallery-caption:lang(azb), .site-main #infinite-handle span button:lang(azb),
 .site-main #infinite-handle span button:lang(azb):hover,
 .site-main #infinite-handle span button:lang(azb):focus, .entry div.sharedaddy h3.sd-title:lang(azb),
-.entry h3.sd-title:lang(azb), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(azb) {
+.entry h3.sd-title:lang(azb), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(azb), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(azb),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(azb), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(azb),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(azb), .widget_links li:lang(azb),
+.widget_jp_blogs_i_follow li:lang(azb),
+.widget_rss_links li:lang(azb), .widget_authors > ul > li > a:lang(azb), .widget_eu_cookie_law_widget #eu-cookie-law:lang(azb) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -312,7 +324,11 @@ input:lang(ckb)[type="submit"], .comment-navigation .nav-previous:lang(ckb),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ckb), .entry .entry-content .wp-block-file:lang(ckb), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ckb), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ckb), .wp-caption-text:lang(ckb), .gallery-caption:lang(ckb), .site-main #infinite-handle span button:lang(ckb),
 .site-main #infinite-handle span button:lang(ckb):hover,
 .site-main #infinite-handle span button:lang(ckb):focus, .entry div.sharedaddy h3.sd-title:lang(ckb),
-.entry h3.sd-title:lang(ckb), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ckb) {
+.entry h3.sd-title:lang(ckb), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ckb), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ckb),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ckb), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ckb),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ckb), .widget_links li:lang(ckb),
+.widget_jp_blogs_i_follow li:lang(ckb),
+.widget_rss_links li:lang(ckb), .widget_authors > ul > li > a:lang(ckb), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ckb) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -373,7 +389,11 @@ input:lang(fa-IR)[type="submit"], .comment-navigation .nav-previous:lang(fa-IR),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(fa-IR), .entry .entry-content .wp-block-file:lang(fa-IR), .entry .entry-content .wp-block-file .wp-block-file__button:lang(fa-IR), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(fa-IR), .wp-caption-text:lang(fa-IR), .gallery-caption:lang(fa-IR), .site-main #infinite-handle span button:lang(fa-IR),
 .site-main #infinite-handle span button:lang(fa-IR):hover,
 .site-main #infinite-handle span button:lang(fa-IR):focus, .entry div.sharedaddy h3.sd-title:lang(fa-IR),
-.entry h3.sd-title:lang(fa-IR), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(fa-IR) {
+.entry h3.sd-title:lang(fa-IR), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(fa-IR), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(fa-IR),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(fa-IR), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(fa-IR),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(fa-IR), .widget_links li:lang(fa-IR),
+.widget_jp_blogs_i_follow li:lang(fa-IR),
+.widget_rss_links li:lang(fa-IR), .widget_authors > ul > li > a:lang(fa-IR), .widget_eu_cookie_law_widget #eu-cookie-law:lang(fa-IR) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -434,7 +454,11 @@ input:lang(haz)[type="submit"], .comment-navigation .nav-previous:lang(haz),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(haz), .entry .entry-content .wp-block-file:lang(haz), .entry .entry-content .wp-block-file .wp-block-file__button:lang(haz), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(haz), .wp-caption-text:lang(haz), .gallery-caption:lang(haz), .site-main #infinite-handle span button:lang(haz),
 .site-main #infinite-handle span button:lang(haz):hover,
 .site-main #infinite-handle span button:lang(haz):focus, .entry div.sharedaddy h3.sd-title:lang(haz),
-.entry h3.sd-title:lang(haz), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(haz) {
+.entry h3.sd-title:lang(haz), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(haz), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(haz),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(haz), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(haz),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(haz), .widget_links li:lang(haz),
+.widget_jp_blogs_i_follow li:lang(haz),
+.widget_rss_links li:lang(haz), .widget_authors > ul > li > a:lang(haz), .widget_eu_cookie_law_widget #eu-cookie-law:lang(haz) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -495,7 +519,11 @@ input:lang(ps)[type="submit"], .comment-navigation .nav-previous:lang(ps),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ps), .entry .entry-content .wp-block-file:lang(ps), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ps), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ps), .wp-caption-text:lang(ps), .gallery-caption:lang(ps), .site-main #infinite-handle span button:lang(ps),
 .site-main #infinite-handle span button:lang(ps):hover,
 .site-main #infinite-handle span button:lang(ps):focus, .entry div.sharedaddy h3.sd-title:lang(ps),
-.entry h3.sd-title:lang(ps), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ps) {
+.entry h3.sd-title:lang(ps), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ps), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ps),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ps), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ps),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ps), .widget_links li:lang(ps),
+.widget_jp_blogs_i_follow li:lang(ps),
+.widget_rss_links li:lang(ps), .widget_authors > ul > li > a:lang(ps), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ps) {
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -556,7 +584,11 @@ input:lang(be)[type="submit"], .comment-navigation .nav-previous:lang(be),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(be), .entry .entry-content .wp-block-file:lang(be), .entry .entry-content .wp-block-file .wp-block-file__button:lang(be), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(be), .wp-caption-text:lang(be), .gallery-caption:lang(be), .site-main #infinite-handle span button:lang(be),
 .site-main #infinite-handle span button:lang(be):hover,
 .site-main #infinite-handle span button:lang(be):focus, .entry div.sharedaddy h3.sd-title:lang(be),
-.entry h3.sd-title:lang(be), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(be) {
+.entry h3.sd-title:lang(be), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(be), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(be),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(be), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(be),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(be), .widget_links li:lang(be),
+.widget_jp_blogs_i_follow li:lang(be),
+.widget_rss_links li:lang(be), .widget_authors > ul > li > a:lang(be), .widget_eu_cookie_law_widget #eu-cookie-law:lang(be) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -617,7 +649,11 @@ input:lang(bg-BG)[type="submit"], .comment-navigation .nav-previous:lang(bg-BG),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(bg-BG), .entry .entry-content .wp-block-file:lang(bg-BG), .entry .entry-content .wp-block-file .wp-block-file__button:lang(bg-BG), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(bg-BG), .wp-caption-text:lang(bg-BG), .gallery-caption:lang(bg-BG), .site-main #infinite-handle span button:lang(bg-BG),
 .site-main #infinite-handle span button:lang(bg-BG):hover,
 .site-main #infinite-handle span button:lang(bg-BG):focus, .entry div.sharedaddy h3.sd-title:lang(bg-BG),
-.entry h3.sd-title:lang(bg-BG), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(bg-BG) {
+.entry h3.sd-title:lang(bg-BG), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(bg-BG), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(bg-BG),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(bg-BG), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(bg-BG),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(bg-BG), .widget_links li:lang(bg-BG),
+.widget_jp_blogs_i_follow li:lang(bg-BG),
+.widget_rss_links li:lang(bg-BG), .widget_authors > ul > li > a:lang(bg-BG), .widget_eu_cookie_law_widget #eu-cookie-law:lang(bg-BG) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -678,7 +714,11 @@ input:lang(kk)[type="submit"], .comment-navigation .nav-previous:lang(kk),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(kk), .entry .entry-content .wp-block-file:lang(kk), .entry .entry-content .wp-block-file .wp-block-file__button:lang(kk), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(kk), .wp-caption-text:lang(kk), .gallery-caption:lang(kk), .site-main #infinite-handle span button:lang(kk),
 .site-main #infinite-handle span button:lang(kk):hover,
 .site-main #infinite-handle span button:lang(kk):focus, .entry div.sharedaddy h3.sd-title:lang(kk),
-.entry h3.sd-title:lang(kk), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(kk) {
+.entry h3.sd-title:lang(kk), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(kk), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(kk),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(kk), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(kk),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(kk), .widget_links li:lang(kk),
+.widget_jp_blogs_i_follow li:lang(kk),
+.widget_rss_links li:lang(kk), .widget_authors > ul > li > a:lang(kk), .widget_eu_cookie_law_widget #eu-cookie-law:lang(kk) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -739,7 +779,11 @@ input:lang(mk-MK)[type="submit"], .comment-navigation .nav-previous:lang(mk-MK),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(mk-MK), .entry .entry-content .wp-block-file:lang(mk-MK), .entry .entry-content .wp-block-file .wp-block-file__button:lang(mk-MK), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(mk-MK), .wp-caption-text:lang(mk-MK), .gallery-caption:lang(mk-MK), .site-main #infinite-handle span button:lang(mk-MK),
 .site-main #infinite-handle span button:lang(mk-MK):hover,
 .site-main #infinite-handle span button:lang(mk-MK):focus, .entry div.sharedaddy h3.sd-title:lang(mk-MK),
-.entry h3.sd-title:lang(mk-MK), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mk-MK) {
+.entry h3.sd-title:lang(mk-MK), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mk-MK), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(mk-MK),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(mk-MK), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(mk-MK),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(mk-MK), .widget_links li:lang(mk-MK),
+.widget_jp_blogs_i_follow li:lang(mk-MK),
+.widget_rss_links li:lang(mk-MK), .widget_authors > ul > li > a:lang(mk-MK), .widget_eu_cookie_law_widget #eu-cookie-law:lang(mk-MK) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -800,7 +844,11 @@ input:lang(mn)[type="submit"], .comment-navigation .nav-previous:lang(mn),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(mn), .entry .entry-content .wp-block-file:lang(mn), .entry .entry-content .wp-block-file .wp-block-file__button:lang(mn), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(mn), .wp-caption-text:lang(mn), .gallery-caption:lang(mn), .site-main #infinite-handle span button:lang(mn),
 .site-main #infinite-handle span button:lang(mn):hover,
 .site-main #infinite-handle span button:lang(mn):focus, .entry div.sharedaddy h3.sd-title:lang(mn),
-.entry h3.sd-title:lang(mn), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mn) {
+.entry h3.sd-title:lang(mn), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mn), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(mn),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(mn), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(mn),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(mn), .widget_links li:lang(mn),
+.widget_jp_blogs_i_follow li:lang(mn),
+.widget_rss_links li:lang(mn), .widget_authors > ul > li > a:lang(mn), .widget_eu_cookie_law_widget #eu-cookie-law:lang(mn) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -861,7 +909,11 @@ input:lang(ru-RU)[type="submit"], .comment-navigation .nav-previous:lang(ru-RU),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ru-RU), .entry .entry-content .wp-block-file:lang(ru-RU), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ru-RU), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ru-RU), .wp-caption-text:lang(ru-RU), .gallery-caption:lang(ru-RU), .site-main #infinite-handle span button:lang(ru-RU),
 .site-main #infinite-handle span button:lang(ru-RU):hover,
 .site-main #infinite-handle span button:lang(ru-RU):focus, .entry div.sharedaddy h3.sd-title:lang(ru-RU),
-.entry h3.sd-title:lang(ru-RU), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ru-RU) {
+.entry h3.sd-title:lang(ru-RU), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ru-RU), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ru-RU),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ru-RU), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ru-RU),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ru-RU), .widget_links li:lang(ru-RU),
+.widget_jp_blogs_i_follow li:lang(ru-RU),
+.widget_rss_links li:lang(ru-RU), .widget_authors > ul > li > a:lang(ru-RU), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ru-RU) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -922,7 +974,11 @@ input:lang(sah)[type="submit"], .comment-navigation .nav-previous:lang(sah),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(sah), .entry .entry-content .wp-block-file:lang(sah), .entry .entry-content .wp-block-file .wp-block-file__button:lang(sah), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(sah), .wp-caption-text:lang(sah), .gallery-caption:lang(sah), .site-main #infinite-handle span button:lang(sah),
 .site-main #infinite-handle span button:lang(sah):hover,
 .site-main #infinite-handle span button:lang(sah):focus, .entry div.sharedaddy h3.sd-title:lang(sah),
-.entry h3.sd-title:lang(sah), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(sah) {
+.entry h3.sd-title:lang(sah), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(sah), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(sah),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(sah), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(sah),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(sah), .widget_links li:lang(sah),
+.widget_jp_blogs_i_follow li:lang(sah),
+.widget_rss_links li:lang(sah), .widget_authors > ul > li > a:lang(sah), .widget_eu_cookie_law_widget #eu-cookie-law:lang(sah) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -983,7 +1039,11 @@ input:lang(sr-RS)[type="submit"], .comment-navigation .nav-previous:lang(sr-RS),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(sr-RS), .entry .entry-content .wp-block-file:lang(sr-RS), .entry .entry-content .wp-block-file .wp-block-file__button:lang(sr-RS), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(sr-RS), .wp-caption-text:lang(sr-RS), .gallery-caption:lang(sr-RS), .site-main #infinite-handle span button:lang(sr-RS),
 .site-main #infinite-handle span button:lang(sr-RS):hover,
 .site-main #infinite-handle span button:lang(sr-RS):focus, .entry div.sharedaddy h3.sd-title:lang(sr-RS),
-.entry h3.sd-title:lang(sr-RS), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(sr-RS) {
+.entry h3.sd-title:lang(sr-RS), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(sr-RS), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(sr-RS),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(sr-RS), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(sr-RS),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(sr-RS), .widget_links li:lang(sr-RS),
+.widget_jp_blogs_i_follow li:lang(sr-RS),
+.widget_rss_links li:lang(sr-RS), .widget_authors > ul > li > a:lang(sr-RS), .widget_eu_cookie_law_widget #eu-cookie-law:lang(sr-RS) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -1044,7 +1104,11 @@ input:lang(tt-RU)[type="submit"], .comment-navigation .nav-previous:lang(tt-RU),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(tt-RU), .entry .entry-content .wp-block-file:lang(tt-RU), .entry .entry-content .wp-block-file .wp-block-file__button:lang(tt-RU), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(tt-RU), .wp-caption-text:lang(tt-RU), .gallery-caption:lang(tt-RU), .site-main #infinite-handle span button:lang(tt-RU),
 .site-main #infinite-handle span button:lang(tt-RU):hover,
 .site-main #infinite-handle span button:lang(tt-RU):focus, .entry div.sharedaddy h3.sd-title:lang(tt-RU),
-.entry h3.sd-title:lang(tt-RU), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(tt-RU) {
+.entry h3.sd-title:lang(tt-RU), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(tt-RU), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(tt-RU),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(tt-RU), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(tt-RU),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(tt-RU), .widget_links li:lang(tt-RU),
+.widget_jp_blogs_i_follow li:lang(tt-RU),
+.widget_rss_links li:lang(tt-RU), .widget_authors > ul > li > a:lang(tt-RU), .widget_eu_cookie_law_widget #eu-cookie-law:lang(tt-RU) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -1105,7 +1169,11 @@ input:lang(uk)[type="submit"], .comment-navigation .nav-previous:lang(uk),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(uk), .entry .entry-content .wp-block-file:lang(uk), .entry .entry-content .wp-block-file .wp-block-file__button:lang(uk), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(uk), .wp-caption-text:lang(uk), .gallery-caption:lang(uk), .site-main #infinite-handle span button:lang(uk),
 .site-main #infinite-handle span button:lang(uk):hover,
 .site-main #infinite-handle span button:lang(uk):focus, .entry div.sharedaddy h3.sd-title:lang(uk),
-.entry h3.sd-title:lang(uk), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(uk) {
+.entry h3.sd-title:lang(uk), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(uk), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(uk),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(uk), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(uk),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(uk), .widget_links li:lang(uk),
+.widget_jp_blogs_i_follow li:lang(uk),
+.widget_rss_links li:lang(uk), .widget_authors > ul > li > a:lang(uk), .widget_eu_cookie_law_widget #eu-cookie-law:lang(uk) {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
 
@@ -1166,7 +1234,11 @@ input:lang(zh-HK)[type="submit"], .comment-navigation .nav-previous:lang(zh-HK),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(zh-HK), .entry .entry-content .wp-block-file:lang(zh-HK), .entry .entry-content .wp-block-file .wp-block-file__button:lang(zh-HK), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(zh-HK), .wp-caption-text:lang(zh-HK), .gallery-caption:lang(zh-HK), .site-main #infinite-handle span button:lang(zh-HK),
 .site-main #infinite-handle span button:lang(zh-HK):hover,
 .site-main #infinite-handle span button:lang(zh-HK):focus, .entry div.sharedaddy h3.sd-title:lang(zh-HK),
-.entry h3.sd-title:lang(zh-HK), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-HK) {
+.entry h3.sd-title:lang(zh-HK), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-HK), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(zh-HK),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(zh-HK), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(zh-HK),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(zh-HK), .widget_links li:lang(zh-HK),
+.widget_jp_blogs_i_follow li:lang(zh-HK),
+.widget_rss_links li:lang(zh-HK), .widget_authors > ul > li > a:lang(zh-HK), .widget_eu_cookie_law_widget #eu-cookie-law:lang(zh-HK) {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif;
 }
 
@@ -1227,7 +1299,11 @@ input:lang(zh-TW)[type="submit"], .comment-navigation .nav-previous:lang(zh-TW),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(zh-TW), .entry .entry-content .wp-block-file:lang(zh-TW), .entry .entry-content .wp-block-file .wp-block-file__button:lang(zh-TW), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(zh-TW), .wp-caption-text:lang(zh-TW), .gallery-caption:lang(zh-TW), .site-main #infinite-handle span button:lang(zh-TW),
 .site-main #infinite-handle span button:lang(zh-TW):hover,
 .site-main #infinite-handle span button:lang(zh-TW):focus, .entry div.sharedaddy h3.sd-title:lang(zh-TW),
-.entry h3.sd-title:lang(zh-TW), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-TW) {
+.entry h3.sd-title:lang(zh-TW), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-TW), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(zh-TW),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(zh-TW), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(zh-TW),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(zh-TW), .widget_links li:lang(zh-TW),
+.widget_jp_blogs_i_follow li:lang(zh-TW),
+.widget_rss_links li:lang(zh-TW), .widget_authors > ul > li > a:lang(zh-TW), .widget_eu_cookie_law_widget #eu-cookie-law:lang(zh-TW) {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif;
 }
 
@@ -1288,7 +1364,11 @@ input:lang(zh-CN)[type="submit"], .comment-navigation .nav-previous:lang(zh-CN),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(zh-CN), .entry .entry-content .wp-block-file:lang(zh-CN), .entry .entry-content .wp-block-file .wp-block-file__button:lang(zh-CN), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(zh-CN), .wp-caption-text:lang(zh-CN), .gallery-caption:lang(zh-CN), .site-main #infinite-handle span button:lang(zh-CN),
 .site-main #infinite-handle span button:lang(zh-CN):hover,
 .site-main #infinite-handle span button:lang(zh-CN):focus, .entry div.sharedaddy h3.sd-title:lang(zh-CN),
-.entry h3.sd-title:lang(zh-CN), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-CN) {
+.entry h3.sd-title:lang(zh-CN), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(zh-CN), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(zh-CN),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(zh-CN), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(zh-CN),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(zh-CN), .widget_links li:lang(zh-CN),
+.widget_jp_blogs_i_follow li:lang(zh-CN),
+.widget_rss_links li:lang(zh-CN), .widget_authors > ul > li > a:lang(zh-CN), .widget_eu_cookie_law_widget #eu-cookie-law:lang(zh-CN) {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei New", STHeiti Light, sans-serif;
 }
 
@@ -1349,7 +1429,11 @@ input:lang(bn-BD)[type="submit"], .comment-navigation .nav-previous:lang(bn-BD),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(bn-BD), .entry .entry-content .wp-block-file:lang(bn-BD), .entry .entry-content .wp-block-file .wp-block-file__button:lang(bn-BD), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(bn-BD), .wp-caption-text:lang(bn-BD), .gallery-caption:lang(bn-BD), .site-main #infinite-handle span button:lang(bn-BD),
 .site-main #infinite-handle span button:lang(bn-BD):hover,
 .site-main #infinite-handle span button:lang(bn-BD):focus, .entry div.sharedaddy h3.sd-title:lang(bn-BD),
-.entry h3.sd-title:lang(bn-BD), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(bn-BD) {
+.entry h3.sd-title:lang(bn-BD), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(bn-BD), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(bn-BD),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(bn-BD), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(bn-BD),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(bn-BD), .widget_links li:lang(bn-BD),
+.widget_jp_blogs_i_follow li:lang(bn-BD),
+.widget_rss_links li:lang(bn-BD), .widget_authors > ul > li > a:lang(bn-BD), .widget_eu_cookie_law_widget #eu-cookie-law:lang(bn-BD) {
   font-family: Arial, sans-serif;
 }
 
@@ -1410,7 +1494,11 @@ input:lang(hi-IN)[type="submit"], .comment-navigation .nav-previous:lang(hi-IN),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(hi-IN), .entry .entry-content .wp-block-file:lang(hi-IN), .entry .entry-content .wp-block-file .wp-block-file__button:lang(hi-IN), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(hi-IN), .wp-caption-text:lang(hi-IN), .gallery-caption:lang(hi-IN), .site-main #infinite-handle span button:lang(hi-IN),
 .site-main #infinite-handle span button:lang(hi-IN):hover,
 .site-main #infinite-handle span button:lang(hi-IN):focus, .entry div.sharedaddy h3.sd-title:lang(hi-IN),
-.entry h3.sd-title:lang(hi-IN), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(hi-IN) {
+.entry h3.sd-title:lang(hi-IN), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(hi-IN), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(hi-IN),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(hi-IN), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(hi-IN),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(hi-IN), .widget_links li:lang(hi-IN),
+.widget_jp_blogs_i_follow li:lang(hi-IN),
+.widget_rss_links li:lang(hi-IN), .widget_authors > ul > li > a:lang(hi-IN), .widget_eu_cookie_law_widget #eu-cookie-law:lang(hi-IN) {
   font-family: Arial, sans-serif;
 }
 
@@ -1471,7 +1559,11 @@ input:lang(mr)[type="submit"], .comment-navigation .nav-previous:lang(mr),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(mr), .entry .entry-content .wp-block-file:lang(mr), .entry .entry-content .wp-block-file .wp-block-file__button:lang(mr), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(mr), .wp-caption-text:lang(mr), .gallery-caption:lang(mr), .site-main #infinite-handle span button:lang(mr),
 .site-main #infinite-handle span button:lang(mr):hover,
 .site-main #infinite-handle span button:lang(mr):focus, .entry div.sharedaddy h3.sd-title:lang(mr),
-.entry h3.sd-title:lang(mr), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mr) {
+.entry h3.sd-title:lang(mr), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(mr), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(mr),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(mr), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(mr),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(mr), .widget_links li:lang(mr),
+.widget_jp_blogs_i_follow li:lang(mr),
+.widget_rss_links li:lang(mr), .widget_authors > ul > li > a:lang(mr), .widget_eu_cookie_law_widget #eu-cookie-law:lang(mr) {
   font-family: Arial, sans-serif;
 }
 
@@ -1532,7 +1624,11 @@ input:lang(ne-NP)[type="submit"], .comment-navigation .nav-previous:lang(ne-NP),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ne-NP), .entry .entry-content .wp-block-file:lang(ne-NP), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ne-NP), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ne-NP), .wp-caption-text:lang(ne-NP), .gallery-caption:lang(ne-NP), .site-main #infinite-handle span button:lang(ne-NP),
 .site-main #infinite-handle span button:lang(ne-NP):hover,
 .site-main #infinite-handle span button:lang(ne-NP):focus, .entry div.sharedaddy h3.sd-title:lang(ne-NP),
-.entry h3.sd-title:lang(ne-NP), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ne-NP) {
+.entry h3.sd-title:lang(ne-NP), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ne-NP), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ne-NP),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ne-NP), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ne-NP),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ne-NP), .widget_links li:lang(ne-NP),
+.widget_jp_blogs_i_follow li:lang(ne-NP),
+.widget_rss_links li:lang(ne-NP), .widget_authors > ul > li > a:lang(ne-NP), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ne-NP) {
   font-family: Arial, sans-serif;
 }
 
@@ -1593,7 +1689,11 @@ input:lang(el)[type="submit"], .comment-navigation .nav-previous:lang(el),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(el), .entry .entry-content .wp-block-file:lang(el), .entry .entry-content .wp-block-file .wp-block-file__button:lang(el), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(el), .wp-caption-text:lang(el), .gallery-caption:lang(el), .site-main #infinite-handle span button:lang(el),
 .site-main #infinite-handle span button:lang(el):hover,
 .site-main #infinite-handle span button:lang(el):focus, .entry div.sharedaddy h3.sd-title:lang(el),
-.entry h3.sd-title:lang(el), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(el) {
+.entry h3.sd-title:lang(el), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(el), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(el),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(el), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(el),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(el), .widget_links li:lang(el),
+.widget_jp_blogs_i_follow li:lang(el),
+.widget_rss_links li:lang(el), .widget_authors > ul > li > a:lang(el), .widget_eu_cookie_law_widget #eu-cookie-law:lang(el) {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -1654,7 +1754,11 @@ input:lang(gu)[type="submit"], .comment-navigation .nav-previous:lang(gu),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(gu), .entry .entry-content .wp-block-file:lang(gu), .entry .entry-content .wp-block-file .wp-block-file__button:lang(gu), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(gu), .wp-caption-text:lang(gu), .gallery-caption:lang(gu), .site-main #infinite-handle span button:lang(gu),
 .site-main #infinite-handle span button:lang(gu):hover,
 .site-main #infinite-handle span button:lang(gu):focus, .entry div.sharedaddy h3.sd-title:lang(gu),
-.entry h3.sd-title:lang(gu), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(gu) {
+.entry h3.sd-title:lang(gu), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(gu), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(gu),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(gu), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(gu),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(gu), .widget_links li:lang(gu),
+.widget_jp_blogs_i_follow li:lang(gu),
+.widget_rss_links li:lang(gu), .widget_authors > ul > li > a:lang(gu), .widget_eu_cookie_law_widget #eu-cookie-law:lang(gu) {
   font-family: Arial, sans-serif;
 }
 
@@ -1715,7 +1819,11 @@ input:lang(he-IL)[type="submit"], .comment-navigation .nav-previous:lang(he-IL),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(he-IL), .entry .entry-content .wp-block-file:lang(he-IL), .entry .entry-content .wp-block-file .wp-block-file__button:lang(he-IL), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(he-IL), .wp-caption-text:lang(he-IL), .gallery-caption:lang(he-IL), .site-main #infinite-handle span button:lang(he-IL),
 .site-main #infinite-handle span button:lang(he-IL):hover,
 .site-main #infinite-handle span button:lang(he-IL):focus, .entry div.sharedaddy h3.sd-title:lang(he-IL),
-.entry h3.sd-title:lang(he-IL), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(he-IL) {
+.entry h3.sd-title:lang(he-IL), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(he-IL), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(he-IL),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(he-IL), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(he-IL),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(he-IL), .widget_links li:lang(he-IL),
+.widget_jp_blogs_i_follow li:lang(he-IL),
+.widget_rss_links li:lang(he-IL), .widget_authors > ul > li > a:lang(he-IL), .widget_eu_cookie_law_widget #eu-cookie-law:lang(he-IL) {
   font-family: "Arial Hebrew", Arial, sans-serif;
 }
 
@@ -1776,7 +1884,11 @@ input:lang(ja)[type="submit"], .comment-navigation .nav-previous:lang(ja),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ja), .entry .entry-content .wp-block-file:lang(ja), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ja), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ja), .wp-caption-text:lang(ja), .gallery-caption:lang(ja), .site-main #infinite-handle span button:lang(ja),
 .site-main #infinite-handle span button:lang(ja):hover,
 .site-main #infinite-handle span button:lang(ja):focus, .entry div.sharedaddy h3.sd-title:lang(ja),
-.entry h3.sd-title:lang(ja), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ja) {
+.entry h3.sd-title:lang(ja), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ja), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ja),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ja), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ja),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ja), .widget_links li:lang(ja),
+.widget_jp_blogs_i_follow li:lang(ja),
+.widget_rss_links li:lang(ja), .widget_authors > ul > li > a:lang(ja), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ja) {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
 }
 
@@ -1837,7 +1949,11 @@ input:lang(ko-KR)[type="submit"], .comment-navigation .nav-previous:lang(ko-KR),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ko-KR), .entry .entry-content .wp-block-file:lang(ko-KR), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ko-KR), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ko-KR), .wp-caption-text:lang(ko-KR), .gallery-caption:lang(ko-KR), .site-main #infinite-handle span button:lang(ko-KR),
 .site-main #infinite-handle span button:lang(ko-KR):hover,
 .site-main #infinite-handle span button:lang(ko-KR):focus, .entry div.sharedaddy h3.sd-title:lang(ko-KR),
-.entry h3.sd-title:lang(ko-KR), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ko-KR) {
+.entry h3.sd-title:lang(ko-KR), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(ko-KR), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(ko-KR),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(ko-KR), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(ko-KR),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(ko-KR), .widget_links li:lang(ko-KR),
+.widget_jp_blogs_i_follow li:lang(ko-KR),
+.widget_rss_links li:lang(ko-KR), .widget_authors > ul > li > a:lang(ko-KR), .widget_eu_cookie_law_widget #eu-cookie-law:lang(ko-KR) {
   font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif;
 }
 
@@ -1898,7 +2014,11 @@ input:lang(th)[type="submit"], .comment-navigation .nav-previous:lang(th),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(th), .entry .entry-content .wp-block-file:lang(th), .entry .entry-content .wp-block-file .wp-block-file__button:lang(th), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(th), .wp-caption-text:lang(th), .gallery-caption:lang(th), .site-main #infinite-handle span button:lang(th),
 .site-main #infinite-handle span button:lang(th):hover,
 .site-main #infinite-handle span button:lang(th):focus, .entry div.sharedaddy h3.sd-title:lang(th),
-.entry h3.sd-title:lang(th), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(th) {
+.entry h3.sd-title:lang(th), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(th), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(th),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(th), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(th),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(th), .widget_links li:lang(th),
+.widget_jp_blogs_i_follow li:lang(th),
+.widget_rss_links li:lang(th), .widget_authors > ul > li > a:lang(th), .widget_eu_cookie_law_widget #eu-cookie-law:lang(th) {
   font-family: "Sukhumvit Set", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
@@ -1959,7 +2079,11 @@ input:lang(vi)[type="submit"], .comment-navigation .nav-previous:lang(vi),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(vi), .entry .entry-content .wp-block-file:lang(vi), .entry .entry-content .wp-block-file .wp-block-file__button:lang(vi), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(vi), .wp-caption-text:lang(vi), .gallery-caption:lang(vi), .site-main #infinite-handle span button:lang(vi),
 .site-main #infinite-handle span button:lang(vi):hover,
 .site-main #infinite-handle span button:lang(vi):focus, .entry div.sharedaddy h3.sd-title:lang(vi),
-.entry h3.sd-title:lang(vi), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(vi) {
+.entry h3.sd-title:lang(vi), .entry #jp-relatedposts h3.jp-relatedposts-headline:lang(vi), .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title:lang(vi),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:lang(vi), .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context:lang(vi),
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date:lang(vi), .widget_links li:lang(vi),
+.widget_jp_blogs_i_follow li:lang(vi),
+.widget_rss_links li:lang(vi), .widget_authors > ul > li > a:lang(vi), .widget_eu_cookie_law_widget #eu-cookie-law:lang(vi) {
   font-family: "Libre Franklin", sans-serif;
 }
 
@@ -6595,13 +6719,11 @@ svg {
 
 .entry #jp-relatedposts h3.jp-relatedposts-headline:before {
   background: #767676;
-  border-top: none;
   content: "\020";
   display: block;
   height: 2px;
   margin: 1rem 0;
   width: 1em;
-  min-width: inherit;
 }
 
 .entry #jp-relatedposts h3.jp-relatedposts-headline em:before {
@@ -6615,7 +6737,7 @@ svg {
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1em;
+  font-size: 0.88889em;
   line-height: 1.2;
   margin-bottom: 0.5em;
   -webkit-font-smoothing: antialiased;
@@ -6635,7 +6757,7 @@ svg {
 
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context,
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-size: 13px;
   font-weight: 500;
 }
@@ -6672,7 +6794,7 @@ svg {
 .widget_jp_blogs_i_follow li,
 .widget_rss_links li {
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-size: calc(22px * 1.125);
   font-weight: 700;
   line-height: 1.2;
@@ -6686,14 +6808,9 @@ svg {
   padding-right: 4.25rem;
 }
 
-.rtl .widget.widget_authors ul li > ul {
-  padding-right: 0;
-  padding-left: 1rem;
-}
-
 .widget_authors > ul > li > a {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   position: relative;
 }
 
@@ -6739,7 +6856,7 @@ svg {
 .widget_eu_cookie_law_widget #eu-cookie-law {
   border-color: #ccc;
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-size: 0.68182em;
   padding: 0.5rem 1rem;
 }
@@ -6795,7 +6912,7 @@ svg {
 /**
  * Content Options
  */
-.twentynineteen-customizer .entry .entry-meta > span,
-.twentynineteen-customizer .entry .entry-footer > span {
+.newspack-customizer .entry .entry-meta > span,
+.newspack-customizer .entry .entry-footer > span {
   display: inline;
 }
