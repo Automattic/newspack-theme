@@ -1,0 +1,109 @@
+// Site header
+
+.site-header {
+	padding: 1em;
+
+	&.featured-image {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 90vh;
+
+		.site-branding-container {
+			margin-bottom: auto;
+		}
+	}
+
+	@include media(tablet) {
+		margin: 0;
+		padding: 3rem 0;
+
+		&.featured-image {
+			min-height: 100vh;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+// Site branding
+
+.site-branding {
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	color: $color__text-light;
+	position: relative;
+
+	@include media(tablet) {
+		margin: 0 $size__site-margins;
+	}
+}
+
+// Site logo
+
+.site-logo {
+
+	/* margin-bottom: calc(.66 * #{$size__spacing-unit}); */
+	width: 100%;
+
+	.custom-logo-link {
+		box-sizing: content-box;
+		overflow: hidden;
+
+		.custom-logo {
+			min-height: inherit;
+		}
+	}
+}
+
+// Site title
+
+.site-title {
+	color: $color__text-main;
+	margin: 0;
+
+	a {
+		color: $color__text-main;
+
+		&:link,
+		&:visited {
+			color: $color__text-main;
+		}
+
+		&:hover {
+			color: $color__text-hover;
+		}
+	}
+
+	.featured-image & {
+		margin: 0;
+
+		@include media(tablet) {
+			display: inline-block;
+		}
+	}
+
+	/* When there is no description set, make sure navigation appears below title. */
+	+ .main-navigation {
+		display: block;
+	}
+
+	&:not(:empty) + .site-description:not(:empty):before {
+		content: "\2014";
+		margin: 0 .2em;
+	}
+}
+
+// Site description
+
+.site-description {
+
+	color: $color__text-light;
+	flex: 1 1 auto;
+	font-weight: normal;
+	font-size: $font__size-sm;
+	margin: 7px 0 0;
+}
