@@ -14,7 +14,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-    $wp_customize->get_control( 'header_text' )->label = __( 'Display Site Title', 'newspack' );
+	$wp_customize->get_control( 'header_text' )->label          = __( 'Display Site Title', 'newspack' );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -125,9 +125,13 @@ function newspack_customize_partial_blogdescription() {
  */
 function newspack_customize_preview_js() {
 	wp_enqueue_script( 'newspack-customize-preview', get_theme_file_uri( '/js/customize-preview.js' ), array( 'customize-preview' ), '20181231', true );
-	wp_localize_script( 'newspack-customize-preview', '_NewspackThemePreviewData', array(
-		'default_hue' => newspack_get_default_hue()
-	));
+	wp_localize_script(
+		'newspack-customize-preview',
+		'_NewspackThemePreviewData',
+		array(
+			'default_hue' => newspack_get_default_hue(),
+		)
+	);
 }
 add_action( 'customize_preview_init', 'newspack_customize_preview_js' );
 
