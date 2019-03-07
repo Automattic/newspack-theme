@@ -17,7 +17,7 @@
  *
  * @since 1.0.0
  */
-class newspack_SVG_Icons {
+class Newspack_SVG_Icons {
 
 	/**
 	 * Gets the SVG code for a given icon.

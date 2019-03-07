@@ -10,7 +10,7 @@
  *
  * @since 1.0.0
  */
-class newspack_Walker_Comment extends Walker_Comment {
+class Newspack_Walker_Comment extends Walker_Comment {
 
 	/**
 	 * Outputs a comment in the HTML5 format.
@@ -43,6 +43,7 @@ class newspack_Walker_Comment extends Walker_Comment {
 								echo $avatar;
 							}
 						}
+
 						/*
 						 * Using the `check` icon instead of `check_circle`, since we can't add a
 						 * fill color to the inner check shape when in circle form.

@@ -2,21 +2,28 @@
 /**
  * Jetpack Compatibility File
  * See: http://jetpack.com/
+ *
+ * @package Newspack
  */
 
+/**
+ * Set up theme support for Jetpack.
+ */
 function newspack_jetpack_setup() {
+	/**
+	 * Add theme support for Infinite Scroll.
+	 */
+	add_theme_support(
+		'infinite-scroll',
+		array(
+			'type'      => 'click',
+			'container' => 'main',
+			'render'    => 'newspack_infinite_scroll_render',
+			'footer'    => 'page',
+		)
+	);
 
 	/**
- 	 * Add theme support for Infinite Scroll.
-	 */
- 	add_theme_support( 'infinite-scroll', array(
-	 	'type'      => 'click',
- 		'container' => 'main',
- 		'render'    => 'newspack_infinite_scroll_render',
- 		'footer'    => 'page',
- 	) );
-
- 	/**
 	 * Add theme support for Responsive Videos.
 	 */
 	add_theme_support( 'jetpack-responsive-videos' );
@@ -29,22 +36,28 @@ function newspack_jetpack_setup() {
 	/**
 	 * Add theme support for Content Options.
 	 */
-	add_theme_support( 'jetpack-content-options', array(
-		'blog-display' => array( 'content', 'excerpt' ),
-    	'post-details' => array(
-			'stylesheet' => 'newspack-style',
-			'date'       => '.posted-on',
-			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
-			'comment'    => '.comments-link',
-		),
-		'featured-images'    => array(
-			'archive'  => true,
-			'post'     => true,
-			'page'     => true,
-		),
-	) );
+	add_theme_support(
+		'jetpack-content-options',
+		array(
+			'blog-display'    => array(
+				'content',
+				'excerpt',
+			),
+			'post-details'    => array(
+				'stylesheet' => 'newspack-style',
+				'date'       => '.posted-on',
+				'categories' => '.cat-links',
+				'tags'       => '.tags-links',
+				'author'     => '.byline',
+				'comment'    => '.comments-link',
+			),
+			'featured-images' => array(
+				'archive' => true,
+				'post'    => true,
+				'page'    => true,
+			),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'newspack_jetpack_setup' );
 
@@ -78,10 +91,19 @@ function newspack_override_post_thumbnail( $width ) {
 		'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
 	);
 
-	$settings = array_merge( $settings, array(
-		'post-option'  => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
-		'page-option'  => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
-	) );
+	$settings = array_merge(
+		$settings,
+		array(
+			'post-option' => get_option(
+				'jetpack_content_featured_images_post',
+				$settings['post-default']
+			),
+			'page-option' => get_option(
+				'jetpack_content_featured_images_page',
+				$settings['page-default']
+			),
+		)
+	);
 
 	if ( ( ! $settings['post-option'] && is_single() )
 	|| ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
