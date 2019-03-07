@@ -104,6 +104,8 @@
 
 	.nav-links {
 
+		@include postContentMaxWidth();
+
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0 calc(.5 * #{$size__spacing-unit});
@@ -145,7 +147,7 @@
 
 		@include media(tablet) {
 
-			margin-left: $size__site-margins;
+			margin-left: 0 auto;
 			padding: 0;
 
 			.prev,

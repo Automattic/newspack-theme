@@ -52,11 +52,6 @@ h6 {
 	margin: $size__spacing-unit 0;
 }
 
-h1:not(.site-title),
-h2 {
-	@include post-section-dash;
-}
-
 hr {
 	background-color: $color__text-light;
 	border: 0;

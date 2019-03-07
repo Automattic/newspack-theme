@@ -45,7 +45,6 @@
 
 	.entry-title {
 
-		@include post-section-dash;
 		margin: 0;
 
 		a {
@@ -105,7 +104,7 @@
 			max-width: $size__site-tablet-content;
 		}
 
-		@include media(tablet) {
+		@include media(desktop) {
 			max-width: $size__site-desktop-content;
 		}
 	}
@@ -282,7 +281,6 @@
 	}
 
 	.author-title {
-		@include post-section-dash;
 		display: inline;
 	}
 

@@ -99,7 +99,6 @@ h6 {
 
 h1 {
 	font-size: $font__size-xl;
-	@include post-section-dash;
 
 	@include media(tablet) {
 		font-size: $font__size-xxl;
@@ -108,7 +107,6 @@ h1 {
 
 h2 {
 	font-size: $font__size-lg;
-	@include post-section-dash;
 
 	@include media(tablet) {
 		font-size: $font__size-xl;
@@ -198,7 +196,6 @@ figcaption,
 /** === Post Title === */
 
 .editor-post-title__block {
-	@include post-section-dash;
 
 	&:before {
 		width: $font__size-xxl;
