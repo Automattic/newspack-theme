@@ -14,7 +14,7 @@ The theme for Newspack. https://newspack.blog.
 == Changelog ==
 
 = 1.0 =
-*
+* Test
 
 Initial release
 
