@@ -14,11 +14,6 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 	<?php newspack_posted_by(); ?>
 	<?php newspack_posted_on(); ?>
 	<span class="comment-count">
-		<?php
-		if ( ! empty( $discussion ) ) {
-			newspack_discussion_avatars_list( $discussion->authors );
-		}
-		?>
 		<?php newspack_comment_count(); ?>
 	</span>
 	<?php

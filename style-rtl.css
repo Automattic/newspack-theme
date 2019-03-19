@@ -4120,10 +4120,6 @@ body.page .main-navigation {
   margin-left: 0.5em;
 }
 
-.site-header.featured-image .site-featured-image .entry-header .entry-meta .discussion-avatar-list {
-  display: none;
-}
-
 @media only screen and (min-width: 768px) {
   .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta {
     display: flex;
@@ -4135,11 +4131,6 @@ body.page .main-navigation {
   .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta .comment-count {
     position: absolute;
     left: 0;
-  }
-  .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta .discussion-avatar-list {
-    display: block;
-    position: absolute;
-    bottom: 100%;
   }
 }
 

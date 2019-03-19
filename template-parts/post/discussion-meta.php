@@ -18,11 +18,6 @@ if ( $has_responses ) {
 ?>
 
 <div class="discussion-meta">
-	<?php
-	if ( $has_responses ) {
-		newspack_discussion_avatars_list( $discussion->authors );
-	}
-	?>
 	<p class="discussion-meta-info">
 		<?php echo newspack_get_icon_svg( 'comment', 24 ); ?>
 		<span><?php echo esc_html( $meta_label ); ?></span>
