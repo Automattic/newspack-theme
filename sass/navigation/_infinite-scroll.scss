@@ -42,7 +42,7 @@
 	border-radius: 5px;
 	box-sizing: border-box;
 	color: $color__background-body;
-	@include font-family( $font__heading );
+	font-family: $font__heading;
 	font-weight: 700;
 	line-height: $font__line-height-heading;
 	outline: none;

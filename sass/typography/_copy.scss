@@ -13,9 +13,9 @@ i {
 blockquote {
 
 	cite {
+		font-family: $font__heading;
 		font-size: $font__size-xs;
 		font-style: normal;
-		@include font-family( $font__heading );
 	}
 }
 
