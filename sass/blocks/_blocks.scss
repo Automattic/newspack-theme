@@ -159,8 +159,8 @@
 		.wp-block-button__link {
 			@include button-transition;
 			border: none;
+			font-family: $font__heading;
 			font-size: $font__size-sm;
-			@include font-family( $font__heading );
 			line-height: $font__line-height-heading;
 			box-sizing: border-box;
 			font-weight: bold;
@@ -230,7 +230,7 @@
 
 		li {
 			color: $color__text-light;
-			@include font-family( $font__heading );
+			font-family: $font__heading;
 			font-size: calc(#{$font__size_base} * #{$font__size-ratio});
 			font-weight: bold;
 			line-height: $font__line-height-heading;
@@ -299,7 +299,7 @@
 
 	//! Verse
 	.wp-block-verse {
-		@include font-family( $font__body );
+		font-family: $font__body;
 		font-size: $font__size_base;
 		line-height: 1.8;
 	}
@@ -307,7 +307,7 @@
 	//! Paragraphs
 	.has-drop-cap {
 		&:not(:focus):first-letter {
-			@include font-family( $font__heading );
+			font-family: $font__heading;
 			font-size: $font__size-xxxl;
 			line-height: 1;
 			font-weight: bold;
@@ -348,7 +348,7 @@
 
 		cite {
 			display: inline-block;
-			@include font-family( $font__heading );
+			font-family: $font__heading;
 			line-height: 1.6;
 			text-transform: none;
 			color: $color__text-light;
@@ -513,7 +513,7 @@
 		}
 
 		.aligncenter {
-			
+
 			@include postContentMaxWidth();
 
 			@include media(tablet) {
@@ -560,7 +560,7 @@
 		.wp-block-cover-image-text,
 		.wp-block-cover-text,
 		h2 {
-			@include font-family( $font__heading );
+			font-family: $font__heading;
 			font-size: $font__size-lg;
 			font-weight: bold;
 			line-height: 1.25;
@@ -624,8 +624,8 @@
 	.wp-block-image figcaption,
 	.wp-block-gallery .blocks-gallery-image figcaption,
 	.wp-block-gallery .blocks-gallery-item figcaption {
+		font-family: $font__heading;
 		font-size: $font__size-xs;
-		@include font-family( $font__heading );
 		line-height: $font__line-height-pre;
 		margin: 0;
 		padding: ( $size__spacing-unit * .5 );
@@ -691,7 +691,7 @@
 
 	//! File
 	.wp-block-file {
-		@include font-family( $font__heading );
+		font-family: $font__heading;
 
 		.wp-block-file__button {
 			display: table;
@@ -699,8 +699,8 @@
 			border: none;
 			border-radius: 5px;
 			background: $color__background-button;
+			font-family: $font__heading;
 			font-size: $font__size-base;
-			@include font-family( $font__heading );
 			line-height: $font__line-height-heading;
 			text-decoration: none;
 			font-weight: bold;
@@ -782,7 +782,7 @@
 	.wp-block-latest-comments {
 
 		.wp-block-latest-comments__comment-meta {
-			@include font-family( $font__heading );
+			font-family: $font__heading;
 			font-weight: bold;
 
 			.wp-block-latest-comments__comment-date {
