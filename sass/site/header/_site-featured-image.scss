@@ -150,10 +150,6 @@
 					vertical-align: middle;
 					margin-right: 0.5em;
 				}
-
-				.discussion-avatar-list {
-					display: none;
-				}
 			}
 
 			&.has-discussion {
@@ -172,12 +168,6 @@
 					.entry-meta .comment-count {
 						position: absolute;
 						right: 0;
-					}
-
-					.entry-meta .discussion-avatar-list {
-						display: block;
-						position: absolute;
-						bottom: 100%;
 					}
 				}
 			}

@@ -164,39 +164,6 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'newspack_comment_avatar' ) ) :
-	/**
-	 * Returns the HTML markup to generate a user avatar.
-	 */
-	function newspack_get_user_avatar_markup( $id_or_email = null ) {
-
-		if ( ! isset( $id_or_email ) ) {
-			$id_or_email = get_current_user_id();
-		}
-
-		return sprintf( '<div class="comment-user-avatar comment-author vcard">%s</div>', get_avatar( $id_or_email, newspack_get_avatar_size() ) );
-	}
-endif;
-
-if ( ! function_exists( 'newspack_discussion_avatars_list' ) ) :
-	/**
-	 * Displays a list of avatars involved in a discussion for a given post.
-	 */
-	function newspack_discussion_avatars_list( $comment_authors ) {
-		if ( empty( $comment_authors ) ) {
-			return;
-		}
-		echo '<ol class="discussion-avatar-list">', "\n";
-		foreach ( $comment_authors as $id_or_email ) {
-			printf(
-				"<li>%s</li>\n",
-				newspack_get_user_avatar_markup( $id_or_email )
-			);
-		}
-		echo '</ol><!-- .discussion-avatar-list -->', "\n";
-	}
-endif;
-
 if ( ! function_exists( 'newspack_comment_form' ) ) :
 	/**
 	 * Documentation for function.
