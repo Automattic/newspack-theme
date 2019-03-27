@@ -21,11 +21,6 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class if image filters are enabled.
-	if ( newspack_image_filters_enabled() ) {
-		$classes[] = 'image-filters-enabled';
-	}
-
 	// Adds a class when in the Customizer.
 	if ( is_customize_preview() ) :
 		$classes[] = 'newspack-customizer';
@@ -103,13 +98,6 @@ add_filter( 'get_the_archive_title', 'newspack_get_the_archive_title' );
  */
 function newspack_can_show_post_thumbnail() {
 	return apply_filters( 'newspack_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
-}
-
-/**
- * Returns true if image filters are enabled on the theme options.
- */
-function newspack_image_filters_enabled() {
-	return 0 !== get_theme_mod( 'image_filter', 1 );
 }
 
 /**

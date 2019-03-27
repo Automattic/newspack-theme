@@ -78,10 +78,6 @@ function newspack_custom_colors_css() {
 		 * - WP Block Button
 		 * - Blocks
 		 */
-		.image-filters-enabled .site-header.featured-image .site-featured-image:before,
-		.image-filters-enabled .site-header.featured-image .site-featured-image:after,
-		.image-filters-enabled .entry .post-thumbnail:before,
-		.image-filters-enabled .entry .post-thumbnail:after,
 		.main-navigation .sub-menu,
 		.sticky-post,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
