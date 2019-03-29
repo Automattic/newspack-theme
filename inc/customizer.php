@@ -80,6 +80,29 @@ function newspack_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	// Add option to hide page title on static front page.
+	$wp_customize->add_setting(
+		'hide_front_page_title',
+		array(
+			'default'           => false,
+			'type'              => 'theme_mod',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'hide_front_page_title',
+		array(
+			'label'       => esc_html__( 'Hide Homepage Title', 'newspack' ),
+			'description' => esc_html__( 'Check to hide the page title, if your homepage is set to display a static page.', 'newspack' ),
+			'section'     => 'static_front_page',
+			'priority'    => 10,
+			'type'        => 'checkbox',
+			'settings'    => 'hide_front_page_title',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
@@ -142,4 +165,19 @@ function newspack_sanitize_color_option( $choice ) {
 	}
 
 	return 'default';
+}
+
+/**
+ * Sanitize the checkbox.
+ *
+ * @param boolean $input Value of checkbox.
+ *
+ * @return boolean true if is 1 or '1', false if anything else
+ */
+function newspack_sanitize_checkbox( $input ) {
+	if ( 1 == $input ) {
+		return true;
+	} else {
+		return false;
+	}
 }
