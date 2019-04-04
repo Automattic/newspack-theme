@@ -222,6 +222,14 @@
 	}
 }
 
+/* Hide page title on the homepage */
+
+.page.home.hide-homepage-title {
+	.entry-header {
+		display: none;
+	}
+}
+
 /* Author description */
 
 .author-bio {
