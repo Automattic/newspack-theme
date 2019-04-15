@@ -30,6 +30,7 @@ function newspack_woocommerce_setup() {
 }
 add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
 
+
 /**
  * Add theme's WooCommerce styles.
  *
@@ -43,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
 
 
 /**
- * Remove specific WooCommerce styles.
+ * Remove WooCommerce general styles.
  */
 function newspack_dequeue_styles( $enqueue_styles ) {
 	unset( $enqueue_styles['woocommerce-general'] );
@@ -77,6 +78,11 @@ function newspack_woo_custom_colors_css( $css, $primary_color, $saturation ) {
 add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 3 );
 
 
+/**
+ * Remove WooCommerce sidebar - this theme doesn't have a traditional sidebar.
+ */
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
 
 /**
  * Remove default WooCommerce wrapper.
@@ -84,10 +90,6 @@ add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-/**
- * Remove WooCommerce sidebar - this theme doesn't have a traditional sidebar.
- */
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 if ( ! function_exists( 'newspack_woocommerce_wrapper_before' ) ) {
 	/**
