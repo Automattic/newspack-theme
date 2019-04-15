@@ -428,6 +428,7 @@ table.variations td,
 table.variations th {
   border: 0;
   padding-right: 0;
+  vertical-align: top;
   word-break: normal;
 }
 
