@@ -285,6 +285,15 @@ ul.products li.product .added_to_cart {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+/* Name your price */
+.product .nyp label {
+  display: block;
+}
+
+.product .nyp .nyp-input {
+  margin-bottom: 0;
+}
+
 .star-rating {
   overflow: hidden;
   position: relative;
@@ -418,6 +427,7 @@ dl.variation p, dl.variation:last-child,
 table.variations td,
 table.variations th {
   border: 0;
+  padding-left: 0;
   word-break: normal;
 }
 

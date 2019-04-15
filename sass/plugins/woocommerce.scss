@@ -294,6 +294,17 @@ ul.products {
 	}
 }
 
+/* Name your price */
+.product .nyp {
+	label {
+		display: block;
+	}
+
+	.nyp-input {
+		margin-bottom: 0;
+	}
+}
+
 .star-rating {
 	overflow: hidden;
 	position: relative;
@@ -434,6 +445,7 @@ table.variations {
 	td,
 	th {
 		border: 0;
+		padding-left: 0;
 		word-break: normal;
 	}
 
