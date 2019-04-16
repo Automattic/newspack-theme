@@ -23,10 +23,6 @@ function newspack_woocommerce_setup() {
 			'single_image_width'    => 706,
 		)
 	);
-
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
 
