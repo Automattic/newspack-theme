@@ -184,6 +184,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		// Make our theme AMP Native
+		add_theme_support( 'amp' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
