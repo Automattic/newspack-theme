@@ -137,10 +137,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
-		$default_hue     = newspack_get_default_hue();
-		$saturation      = newspack_get_default_saturation();
-		$lightness       = newspack_get_default_lightness();
-		$lightness_hover = newspack_get_default_lightness_hover();
+		$primary_color = newspack_get_primary_color();
 
 		// Editor color palette.
 		add_theme_support(
@@ -149,12 +146,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'newspack' ),
 					'slug'  => 'primary',
-					'color' => newspack_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, $lightness ),
-				),
-				array(
-					'name'  => __( 'Secondary', 'newspack' ),
-					'slug'  => 'secondary',
-					'color' => newspack_hsl_hex( 'default' === get_theme_mod( 'primary_color' ) ? $default_hue : get_theme_mod( 'primary_color_hue', $default_hue ), $saturation, 23 ),
+					'color' => 'default' === get_theme_mod( 'primary_color' ) ? $primary_color : get_theme_mod( 'primary_color_hex', $primary_color ),
 				),
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
@@ -283,13 +275,13 @@ function newspack_colors_css_wrap() {
 
 	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 
-	$primary_color = newspack_get_default_hue();
+	$primary_color = newspack_get_primary_color();
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
-		$primary_color = get_theme_mod( 'primary_color_hue', $primary_color );
+		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
 	}
 	?>
 
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
+	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-primary="' . esc_attr( $primary_color ) . '"' : ''; ?>>
 		<?php echo newspack_custom_colors_css(); ?>
 	</style>
 	<?php

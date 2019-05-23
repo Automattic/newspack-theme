@@ -9,73 +9,22 @@
  * Define default color filters.
  */
 
-define( 'NEWSPACK_DEFAULT_HUE', 199 );        // H
-define( 'NEWSPACK_DEFAULT_SATURATION', 100 ); // S
-define( 'NEWSPACK_DEFAULT_LIGHTNESS', 33 );   // L
-
-define( 'NEWSPACK_DEFAULT_SATURATION_SELECTION', 50 );
-define( 'NEWSPACK_DEFAULT_LIGHTNESS_SELECTION', 90 );
-define( 'NEWSPACK_DEFAULT_LIGHTNESS_HOVER', 23 );
+define( 'NEWSPACK_DEFAULT_PRIMARY', '#0073a8' ); // Hex
 
 /**
- * The default hue (as in hsl) used for the primary color throughout this theme
+ * The default color used for the primary color throughout this theme
  *
- * @return number the default hue
+ * @return string the default hexidecimal color.
  */
-function newspack_get_default_hue() {
-	return apply_filters( 'newspack_default_hue', NEWSPACK_DEFAULT_HUE );
+function newspack_get_primary_color() {
+	return apply_filters( 'newspack_primary_color', NEWSPACK_DEFAULT_PRIMARY );
 }
 
 /**
- * The default saturation (as in hsl) used for the primary color throughout this theme
- *
- * @return number the default saturation
- */
-function newspack_get_default_saturation() {
-	return apply_filters( 'newspack_default_saturation', NEWSPACK_DEFAULT_SATURATION );
-}
-
-/**
- * The default lightness (as in hsl) used for the primary color throughout this theme
- *
- * @return number the default lightness
- */
-function newspack_get_default_lightness() {
-	return apply_filters( 'newspack_default_lightness', NEWSPACK_DEFAULT_LIGHTNESS );
-}
-
-/**
- * The default saturation (as in hsl) used when selecting text throughout this theme
- *
- * @return number the default saturation selection
- */
-function newspack_get_default_saturation_selection() {
-	return apply_filters( 'newspack_default_saturation_selection', NEWSPACK_DEFAULT_SATURATION_SELECTION );
-}
-
-/**
- * The default lightness (as in hsl) used when selecting text throughout this theme
- *
- * @return number the default lightness selection
- */
-function newspack_get_default_lightness_selection() {
-	return apply_filters( 'newspack_default_lightness_selection', NEWSPACK_DEFAULT_LIGHTNESS_SELECTION );
-}
-
-/**
- * The default lightness hover (as in hsl) used when hovering over links throughout this theme
- *
- * @return number the default lightness hover
- */
-function newspack_get_default_lightness_hover() {
-	return apply_filters( 'newspack_default_lightness_hover', NEWSPACK_DEFAULT_LIGHTNESS_HOVER );
-}
-
-/**
- * Tests the current default hue against NEWSPACK_DEFAULT_HUE.
+ * Tests the current default hue against NEWSPACK_DEFAULT_HEX.
  *
  * @return bool
  */
-function newspack_has_custom_default_hue() {
-	return newspack_get_default_hue() !== NEWSPACK_DEFAULT_HUE;
+function newspack_has_custom_primary_color() {
+	return newspack_get_primary_color() !== NEWSPACK_DEFAULT_PRIMARY;
 }

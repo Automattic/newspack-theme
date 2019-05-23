@@ -10,60 +10,12 @@
  */
 function newspack_custom_colors_css() {
 
-	$primary_color = newspack_get_default_hue();
+	$primary_color = newspack_get_primary_color();
+
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
-		$primary_color = absint( get_theme_mod( 'primary_color_hue', $primary_color ) );
+		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
 	}
 
-	/**
-	 * Filter Newspack Theme default saturation level.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param int $saturation Color saturation level.
-	 */
-	$saturation = newspack_get_default_saturation();
-	$saturation = absint( $saturation ) . '%';
-
-	/**
-	 * Filter Newspack Theme default selection saturation level.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param int $saturation_selection Selection color saturation level.
-	 */
-	$saturation_selection = newspack_get_default_saturation_selection();
-	$saturation_selection = absint( $saturation_selection ) . '%';
-
-	/**
-	 * Filter Newspack Theme default lightness level.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param int $lightness Color lightness level.
-	 */
-	$lightness = newspack_get_default_lightness();
-	$lightness = absint( $lightness ) . '%';
-
-	/**
-	 * Filter Newspack Theme default hover lightness level.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param int $lightness_hover Hover color lightness level.
-	 */
-	$lightness_hover = newspack_get_default_lightness_hover();
-	$lightness_hover = absint( $lightness_hover ) . '%';
-
-	/**
-	 * Filter Newspack Theme default selection lightness level.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param int $lightness_selection Selection color lightness level.
-	 */
-	$lightness_selection = newspack_get_default_lightness_selection();
-	$lightness_selection = absint( $lightness_selection ) . '%';
 
 	$theme_css = '
 		/*
@@ -88,7 +40,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
 		.entry .entry-content .wp-block-file .wp-block-file__button {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		/*
@@ -122,7 +74,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
-			color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		/*
@@ -150,11 +102,11 @@ function newspack_custom_colors_css() {
 		input[type="datetime-local"]:focus,
 		input[type="color"]:focus,
 		textarea:focus {
-			border-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			border-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		.gallery-item > div > a:focus {
-			box-shadow: 0 0 0 2px hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			box-shadow: 0 0 0 2px ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		/* Hover colors */
@@ -174,7 +126,7 @@ function newspack_custom_colors_css() {
 		.comment-navigation .nav-next a:hover,
 		#cancel-comment-reply-link:hover,
 		.widget a:hover {
-			color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness_hover . ' ); /* base: #005177; */
+			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		.main-navigation .sub-menu > li > a:hover,
@@ -189,15 +141,15 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > *[class^="wp-block-"].has-secondary-background-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-secondary-background-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness_hover . ' ); /* base: #005177; */
+			background-color: ' . $primary_color . '; /* base: #005177; */
 		}
 
 		/* Text selection colors */
 		::selection {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation_selection . ', ' . $lightness_selection . ' ); /* base: #005177; */
+			background-color: ' . $primary_color . '; /* base: #005177; */
 		}
 		::-moz-selection {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation_selection . ', ' . $lightness_selection . ' ); /* base: #005177; */
+			background-color: ' . $primary_color . '; /* base: #005177; */
 		}';
 
 	$editor_css = '
@@ -214,16 +166,16 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:active .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink {
-			color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large),
 		.editor-styles-wrapper .editor-block-list__layout .wp-block-freeform blockquote {
-			border-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			border-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-pullquote.is-style-solid-color:not(.has-background-color) {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__button,
@@ -231,14 +183,14 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button:not(.is-style-outline) .wp-block-button__link:active,
 		.editor-block-list__layout .editor-block-list__block .wp-block-button:not(.is-style-outline) .wp-block-button__link:focus,
 		.editor-block-list__layout .editor-block-list__block .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' ); /* base: #0073a8; */
+			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
 		/* Hover colors */
 		.editor-block-list__layout .editor-block-list__block a:hover,
 		.editor-block-list__layout .editor-block-list__block a:active,
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink:hover {
-			color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness_hover . ' ); /* base: #005177; */
+			color: ' . $primary_color . '; /* base: #005177; */
 		}
 
 		/* Do not overwrite solid color pullquote or cover links */
@@ -258,8 +210,8 @@ function newspack_custom_colors_css() {
 	 * @since Newspack Theme 1.0
 	 *
 	 * @param string $css           Base theme colors CSS.
-	 * @param int    $primary_color The user's selected color hue.
+	 * @param int    $primary_color The user's selected color hex.
 	 * @param string $saturation    Filtered theme color saturation level.
 	 */
-	return apply_filters( 'newspack_custom_colors_css', $theme_css, $primary_color, $saturation );
+	return apply_filters( 'newspack_custom_colors_css', $theme_css, $primary_color );
 }

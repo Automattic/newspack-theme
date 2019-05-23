@@ -59,24 +59,23 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add primary color hue setting and control.
+	// Add primary color hexidecimal setting and control.
 	$wp_customize->add_setting(
-		'primary_color_hue',
+		'primary_color_hex',
 		array(
-			'default'           => newspack_get_default_hue(),
+			'default'           => newspack_get_primary_color(),
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'absint',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'primary_color_hue',
+			'primary_color_hex',
 			array(
 				'description' => __( 'Apply a custom color for buttons, links, featured images, etc.', 'newspack' ),
 				'section'     => 'colors',
-				'mode'        => 'hue',
 			)
 		)
 	);
@@ -133,7 +132,7 @@ function newspack_customize_preview_js() {
 		'newspack-customize-preview',
 		'_NewspackThemePreviewData',
 		array(
-			'default_hue' => newspack_get_default_hue(),
+			'default_hex' => newspack_get_primary_color(),
 		)
 	);
 }
