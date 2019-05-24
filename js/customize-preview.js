@@ -25,7 +25,7 @@
 			}
 
 			// Replace previous hex value with new hex value.
-			css = css.replaceAll( primary, color );
+			css = css.split( primary ).join( color );
 			style.html( css ).data( 'primary', color );
 		});
 	});
@@ -39,7 +39,7 @@
 				css = style.html();
 
 			// Replace previous primary hex value with new primary hex value.
-			css = css.replaceAll( primary, to );
+			css = css.split( primary ).join( to );
 			style.html( css ).data( 'primary', to );
 		});
 	});
