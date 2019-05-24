@@ -913,9 +913,11 @@ a:focus {
 --------------------------------------------------------------*/
 /** === Main menu === */
 .main-navigation {
-  display: block;
   margin-top: 0.25rem;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles
@@ -931,12 +933,11 @@ a:focus {
 	 */
 }
 
-body.page .main-navigation {
-  display: block;
-}
-
-.main-navigation > div {
-  display: inline;
+@media only screen and (min-width: 768px) {
+  .main-navigation {
+    margin-right: calc(10% + 60px);
+    margin-left: calc(10% + 60px);
+  }
 }
 
 .main-navigation button {
@@ -1483,6 +1484,12 @@ body.page .main-navigation {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .top-nav-contain {
+    margin: 0 calc(10% + 60px);
+  }
+}
+
 /* Social menu */
 .social-navigation {
   margin-top: calc(1rem / 2);
@@ -2024,7 +2031,6 @@ body.page .main-navigation {
 .site-title {
   color: #111;
   margin: 0;
-  /* When there is no description set, make sure navigation appears below title. */
 }
 
 .site-title a {
@@ -2047,10 +2053,6 @@ body.page .main-navigation {
   .featured-image .site-title {
     display: inline-block;
   }
-}
-
-.site-title + .main-navigation {
-  display: block;
 }
 
 .site-title:not(:empty) + .site-description:not(:empty):before {

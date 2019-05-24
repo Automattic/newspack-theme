@@ -1,0 +1,5 @@
+.top-nav-contain {
+	@include media(tablet) {
+		margin: 0 $size__site-margins;
+	}
+}
