@@ -12,7 +12,7 @@
 
 		// Only show the color hue control when there's a custom primary color.
 		wp.customize( 'primary_color', function( setting ) {
-			wp.customize.control( 'primary_color_hue', function( control ) {
+			wp.customize.control( 'primary_color_hex', function( control ) {
 				var visibility = function() {
 					if ( 'custom' === setting.get() ) {
 						control.container.slideDown( 180 );
