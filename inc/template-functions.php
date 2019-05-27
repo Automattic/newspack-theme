@@ -21,6 +21,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Add class on front page.
+	if ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) {
+		$classes[] = 'newspack-front-page';
+	}
+
 	// Adds a class when in the Customizer.
 	if ( is_customize_preview() ) :
 		$classes[] = 'newspack-customizer';
