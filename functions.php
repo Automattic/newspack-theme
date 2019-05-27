@@ -146,7 +146,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'newspack' ),
 					'slug'  => 'primary',
-					'color' => 'default' === get_theme_mod( 'primary_color' ) ? $primary_color : get_theme_mod( 'primary_color_hex', $primary_color ),
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ? $primary_color : get_theme_mod( 'primary_color_hex', $primary_color ),
+				),
+				array(
+					'name'  => __( 'Primary Variation', 'newspack' ),
+					'slug'  => 'primary-variation',
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ? newspack_adjust_brightness( $primary_color, -40 ) : newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
 				),
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
@@ -255,7 +260,7 @@ function newspack_editor_customizer_styles() {
 
 	wp_enqueue_style( 'newspack-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
 
-	if ( 'custom' === get_theme_mod( 'primary_color' ) ) {
+	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		wp_add_inline_style( 'newspack-editor-customizer-styles', newspack_custom_colors_css() );
@@ -269,14 +274,14 @@ add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' )
 function newspack_colors_css_wrap() {
 
 	// Only bother if we haven't customized the color.
-	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'primary_color', 'default' ) ) || is_admin() ) {
+	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'theme_colors', 'default' ) ) || is_admin() ) {
 		return;
 	}
 
 	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 
 	$primary_color = newspack_get_primary_color();
-	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
+	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
 	}
 	?>
@@ -287,12 +292,6 @@ function newspack_colors_css_wrap() {
 	<?php
 }
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
-
-/**
- * Default color filters.
- */
-require get_template_directory() . '/inc/color-filters.php';
-
 /**
  * SVG Icons class.
  */
@@ -307,6 +306,12 @@ require get_template_directory() . '/classes/class-newspack-walker-comment.php';
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Default color filters.
+ */
+require get_template_directory() . '/inc/color-filters.php';
+
 
 /**
  * SVG Icons related functions.

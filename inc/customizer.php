@@ -37,7 +37,7 @@ function newspack_customize_register( $wp_customize ) {
 	 * Primary color.
 	 */
 	$wp_customize->add_setting(
-		'primary_color',
+		'theme_colors',
 		array(
 			'default'           => 'default',
 			'transport'         => 'postMessage',
@@ -46,7 +46,7 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'primary_color',
+		'theme_colors',
 		array(
 			'type'     => 'radio',
 			'label'    => __( 'Primary Color', 'newspack' ),
