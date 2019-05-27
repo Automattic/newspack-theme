@@ -146,10 +146,10 @@ function newspack_custom_colors_css() {
 
 		/* Text selection colors */
 		::selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, -200 ) . '; /* base: #005177; */
+			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}
 		::-moz-selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, -200 ) . '; /* base: #005177; */
+			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}';
 
 	$editor_css = '
