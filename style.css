@@ -914,6 +914,7 @@ a:focus {
 /** === Main menu === */
 .main-navigation {
   margin-top: 0.25rem;
+  display: flex;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles

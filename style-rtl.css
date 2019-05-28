@@ -915,9 +915,6 @@ a:focus {
 .main-navigation {
   margin-top: 0.25rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles

@@ -3,7 +3,7 @@
 .main-navigation {
 
 	margin-top: #{0.25 * $size__spacing-unit};
-
+	display: flex;
 
 	@include media(tablet) {
 		margin-left: $size__site-margins;
