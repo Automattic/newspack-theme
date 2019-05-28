@@ -2505,7 +2505,7 @@ a:focus {
 }
 
 /* Hide page title on the homepage */
-.page.home.hide-homepage-title .entry-header {
+.newpack-front-page.hide-homepage-title .entry-header {
   display: none;
 }
 
