@@ -72,7 +72,7 @@ function newspack_woo_custom_colors_css( $css, $primary_color ) {
 	';
 	return $css;
 }
-add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 3 );
+add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 2 );
 
 
 /**
