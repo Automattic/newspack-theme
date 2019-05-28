@@ -3190,7 +3190,7 @@ body.page .main-navigation {
   .entry .entry-content > *.alignwide,
   .entry .entry-summary > *.alignwide {
     margin-right: -53%;
-    max-width: 1000%;
+    max-width: 100vw;
   }
 }
 

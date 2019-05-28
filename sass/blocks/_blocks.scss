@@ -16,7 +16,7 @@
 	&.alignwide {
 		@include media(tablet) {
 			margin-right: -53%;
-			max-width: 1000%;
+			max-width: 100vw;
 		}
 	}
 
