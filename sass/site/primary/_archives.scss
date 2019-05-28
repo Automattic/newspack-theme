@@ -1,10 +1,10 @@
 .archive .page-header,
 .search .page-header {
 
-	margin: $size__spacing-unit $size__spacing-unit calc(3 * #{$size__spacing-unit});
+	margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
 
 	@include media(tablet) {
-		margin: 0 $size__site-margins $size__site-margins;
+		margin: 0 0 $size__site-margins;
 	}
 
 	.page-title {
@@ -35,13 +35,6 @@
 	display: block;
 	color: $color__text-main;
 	font-size: 1em;
-}
-
-.hfeed .entry .entry-header {
-
-	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) auto calc(#{ $size__spacing-unit } / 2);
-	}
 }
 
 /* 404 & Not found */
