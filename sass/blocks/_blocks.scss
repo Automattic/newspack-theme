@@ -404,7 +404,7 @@
 				&.has-text-color p,
 				&.has-text-color a,
 				&.has-primary-color,
-				&.has-secondary-color,
+				&.has-primary-variation-color,
 				&.has-dark-gray-color,
 				&.has-light-gray-color,
 				&.has-white-color {
@@ -817,7 +817,7 @@
 
 	//! Custom background colors
 	.has-primary-background-color,
-	.has-secondary-background-color,
+	.has-primary-variation-background-color,
 	.has-dark-gray-background-color,
 	.has-light-gray-background-color {
 
@@ -857,8 +857,8 @@
 		background-color: $color__link;
 	}
 
-	.has-secondary-background-color,
-	.wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
+	.has-primary-variation-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-primary-variation-background-color {
 		background-color: $color__border-link-hover;
 	}
 
@@ -884,9 +884,9 @@
 		color: $color__link;
 	}
 
-	.has-secondary-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
+	.has-primary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p {
 		color: $color__border-link-hover;
 	}
 

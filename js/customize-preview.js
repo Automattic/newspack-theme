@@ -8,7 +8,7 @@
 
 (function( $ ) {
 	// Primary color.
-	wp.customize( 'primary_color', function( value ) {
+	wp.customize( 'theme_colors', function( value ) {
 		value.bind( function( to ) {
 			// Update custom color CSS.
 			var style = $( '#custom-theme-colors' ),

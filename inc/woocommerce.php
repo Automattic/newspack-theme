@@ -52,26 +52,27 @@ add_filter( 'woocommerce_enqueue_styles', 'newspack_dequeue_styles' );
 /**
  * Use theme's custom color for WooCommerce elements.
  */
-function newspack_woo_custom_colors_css( $css, $primary_color, $saturation ) {
+function newspack_woo_custom_colors_css( $css, $primary_color ) {
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {
 		return $css;
 	}
-	$lightness = absint( apply_filters( 'newspack_custom_colors_lightness', 33 ) );
-	$lightness = $lightness . '%';
 	$css      .= '
 		.onsale,
 		.woocommerce-info,
 		.woocommerce-store-notice {
-			background-color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' );
+			background-color: ' . $primary_color . ';
 		}
 		.woocommerce-tabs ul li.active a {
-			color: hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' );
-			box-shadow: 0 2px 0 hsl( ' . $primary_color . ', ' . $saturation . ', ' . $lightness . ' );
+			color:  ' . $primary_color . ';
+			box-shadow: 0 2px 0 ' . $primary_color . ';
+		}
+		.woocommerce-tabs ul li a:hover {
+			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 		}
 	';
 	return $css;
 }
-add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 3 );
+add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 2 );
 
 
 /**

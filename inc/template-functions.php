@@ -339,3 +339,32 @@ function newspack_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) 
 	return $amended_menu_items;
 }
 add_filter( 'wp_nav_menu_objects', 'newspack_add_mobile_parent_nav_menu_items', 10, 2 );
+
+/**
+ * Adjust a hexidecimal colour value to lighten or darken it.
+ *
+ * @param  string $hex Hexidecimal value of the color to adjust.
+ * @param  string $steps Number of 'steps' to adjust the hexidecimal value's brightness.
+ * @return string Updated hexidecimal value.
+ */
+function newspack_adjust_brightness( $hex, $steps ) {
+
+	$steps = max( -255, min( 255, $steps ) );
+
+	$hex = str_replace( '#', '', $hex );
+	if ( 3 == strlen( $hex ) ) {
+		$hex = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
+	}
+
+	// Split into three parts: R, G and B
+	$color_parts = str_split( $hex, 2 );
+	$new_shade   = '#';
+
+	foreach ( $color_parts as $color ) {
+		$color      = hexdec( $color ); // Convert to decimal
+		$color      = max( 0, min( 255, $color + $steps ) ); // Adjust color
+		$new_shade .= str_pad( dechex( $color ), 2, '0', STR_PAD_LEFT ); // Make two char hex code
+	}
+
+	return $new_shade;
+}

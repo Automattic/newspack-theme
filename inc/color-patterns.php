@@ -12,7 +12,7 @@ function newspack_custom_colors_css() {
 
 	$primary_color = newspack_get_primary_color();
 
-	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
+	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
 	}
 
@@ -116,17 +116,17 @@ function newspack_custom_colors_css() {
 		.post-navigation .nav-links a:hover,
 		.post-navigation .nav-links a:hover .post-title,
 		.author-bio .author-description .author-link:hover,
-		.entry .entry-content > .has-secondary-color,
-		.entry .entry-content > *[class^="wp-block-"] .has-secondary-color,
-		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
-		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
+		.entry .entry-content > .has-primary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color p,
 		.comment .comment-author .fn a:hover,
 		.comment-reply-link:hover,
 		.comment-navigation .nav-previous a:hover,
 		.comment-navigation .nav-next a:hover,
 		#cancel-comment-reply-link:hover,
 		.widget a:hover {
-			color: ' . $primary_color . '; /* base: #0073a8; */
+			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #0073a8; */
 		}
 
 		.main-navigation .sub-menu > li > a:hover,
@@ -137,19 +137,19 @@ function newspack_custom_colors_css() {
 		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
 		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
 		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
-		.entry .entry-content > .has-secondary-background-color,
-		.entry .entry-content > *[class^="wp-block-"].has-secondary-background-color,
-		.entry .entry-content > *[class^="wp-block-"] .has-secondary-background-color,
-		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
-			background-color: ' . $primary_color . '; /* base: #005177; */
+		.entry .entry-content > .has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color {
+			background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
 		}
 
 		/* Text selection colors */
 		::selection {
-			background-color: ' . $primary_color . '; /* base: #005177; */
+			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}
 		::-moz-selection {
-			background-color: ' . $primary_color . '; /* base: #005177; */
+			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}';
 
 	$editor_css = '
@@ -190,7 +190,7 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block a:hover,
 		.editor-block-list__layout .editor-block-list__block a:active,
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink:hover {
-			color: ' . $primary_color . '; /* base: #005177; */
+			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
 		}
 
 		/* Do not overwrite solid color pullquote or cover links */

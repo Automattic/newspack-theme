@@ -142,7 +142,7 @@ a:focus {
 }
 
 .has-primary-background-color,
-.has-secondary-background-color,
+.has-primary-variation-background-color,
 .has-dark-gray-background-color,
 .has-light-gray-background-color {
   color: #fff;
@@ -156,14 +156,14 @@ a:focus {
 .has-primary-background-color h5,
 .has-primary-background-color h6,
 .has-primary-background-color a,
-.has-secondary-background-color p,
-.has-secondary-background-color h1,
-.has-secondary-background-color h2,
-.has-secondary-background-color h3,
-.has-secondary-background-color h4,
-.has-secondary-background-color h5,
-.has-secondary-background-color h6,
-.has-secondary-background-color a,
+.has-primary-variation-background-color p,
+.has-primary-variation-background-color h1,
+.has-primary-variation-background-color h2,
+.has-primary-variation-background-color h3,
+.has-primary-variation-background-color h4,
+.has-primary-variation-background-color h5,
+.has-primary-variation-background-color h6,
+.has-primary-variation-background-color a,
 .has-dark-gray-background-color p,
 .has-dark-gray-background-color h1,
 .has-dark-gray-background-color h2,
