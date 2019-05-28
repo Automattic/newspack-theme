@@ -1154,17 +1154,6 @@ a:focus {
   /* Nested sub-menu dashes */
 }
 
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
-  display: block;
-  right: 0;
-  margin-top: 0;
-  opacity: 1;
-  width: auto;
-  min-width: 100%;
-  /* Non-mobile position */
-  /* Nested sub-menu dashes */
-}
-
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu {
   display: block;
   right: 0;
@@ -1177,21 +1166,6 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
-  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
-    display: block;
-    margin-top: 0;
-    opacity: 1;
-    position: absolute;
-    right: 0;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    height: auto;
-    min-width: -moz-max-content;
-    min-width: -webkit-max-content;
-    min-width: max-content;
-    transform: none;
-  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
     display: block;
     margin-top: 0;
@@ -1231,13 +1205,6 @@ a:focus {
   position: absolute;
 }
 
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu.hidden-links {
-  right: 0;
-  width: 100%;
-  display: table;
-  position: absolute;
-}
-
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu.hidden-links {
   right: 0;
   width: 100%;
@@ -1252,22 +1219,12 @@ a:focus {
     display: block;
     width: max-content;
   }
-  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu.hidden-links {
-    left: 0;
-    right: auto;
-    display: block;
-    width: max-content;
-  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu.hidden-links {
     left: 0;
     right: auto;
     display: block;
     width: max-content;
   }
-}
-
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .submenu-expand {
-  display: none;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .submenu-expand {
@@ -1288,16 +1245,6 @@ a:focus {
   /* Non-mobile position */
 }
 
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
-  display: block;
-  margin-top: inherit;
-  position: relative;
-  width: 100%;
-  right: 0;
-  opacity: 1;
-  /* Non-mobile position */
-}
-
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu {
   display: block;
   margin-top: inherit;
@@ -1313,10 +1260,6 @@ a:focus {
     float: none;
     max-width: 100%;
   }
-  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
-    float: none;
-    max-width: 100%;
-  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu {
     float: none;
     max-width: 100%;
@@ -1327,19 +1270,8 @@ a:focus {
   counter-reset: submenu;
 }
 
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
-  counter-reset: submenu;
-}
-
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu {
   counter-reset: submenu;
-}
-
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
-  font-weight: normal;
-  content: "– " counters(submenu, "– ", none);
-  counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
@@ -1545,7 +1477,6 @@ a:focus {
 }
 
 .top-nav-contain {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1554,16 +1485,29 @@ a:focus {
   width: 1200px;
 }
 
+@media only screen and (min-width: 768px) {
+  .top-nav-contain {
+    flex-wrap: nowrap;
+  }
+}
+
 .secondary-menu {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
+  list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-menu {
+    padding: 0;
+  }
 }
 
 .secondary-menu li {
-  display: inline;
   margin: 0;
   padding: 0;
 }
@@ -1584,18 +1528,12 @@ a:focus {
 }
 
 .social-navigation ul.social-links-menu {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  display: inline-block;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .social-navigation ul.social-links-menu li {
-  display: inline-block;
-  vertical-align: bottom;
-  vertical-align: -webkit-baseline-middle;
   list-style: none;
 }
 
@@ -2065,7 +2003,7 @@ a:focus {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2084,6 +2022,12 @@ a:focus {
   padding: 1rem 0;
   position: relative;
   width: 1200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-branding {
+    padding: 2rem 0;
+  }
 }
 
 .site-logo {

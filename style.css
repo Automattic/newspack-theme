@@ -1477,7 +1477,6 @@ a:focus {
 }
 
 .top-nav-contain {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1486,16 +1485,29 @@ a:focus {
   width: 1200px;
 }
 
+@media only screen and (min-width: 768px) {
+  .top-nav-contain {
+    flex-wrap: nowrap;
+  }
+}
+
 .secondary-menu {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
+  list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-menu {
+    padding: 0;
+  }
 }
 
 .secondary-menu li {
-  display: inline;
   margin: 0;
   padding: 0;
 }
@@ -1516,18 +1528,12 @@ a:focus {
 }
 
 .social-navigation ul.social-links-menu {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  display: inline-block;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .social-navigation ul.social-links-menu li {
-  display: inline-block;
-  vertical-align: bottom;
-  vertical-align: -webkit-baseline-middle;
   list-style: none;
 }
 
@@ -2003,7 +2009,7 @@ a:focus {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2022,6 +2028,12 @@ a:focus {
   padding: 1rem 0;
   position: relative;
   width: 1200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-branding {
+    padding: 2rem 0;
+  }
 }
 
 .site-logo {
