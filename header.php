@@ -32,6 +32,7 @@
 								'theme_location' => 'menu-2',
 								'menu_class'     => 'secondary-menu',
 								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'          => 1,
 							)
 						);
 						?>
