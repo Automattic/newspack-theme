@@ -86,11 +86,6 @@
 		}
 	}
 
-	/* When there is no description set, make sure navigation appears below title. */
-	+ .main-navigation {
-		display: block;
-	}
-
 	&:not(:empty) + .site-description:not(:empty):before {
 		content: "\2014";
 		margin: 0 .2em;

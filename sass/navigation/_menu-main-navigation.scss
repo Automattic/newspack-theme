@@ -2,16 +2,12 @@
 
 .main-navigation {
 
-	display: block;
 	margin-top: #{0.25 * $size__spacing-unit};
-	width: 100%;
+	display: flex;
 
-	body.page & {
-		display: block;
-	}
-
-	> div {
-		display: inline;
+	@include media(tablet) {
+		margin-left: $size__site-margins;
+		margin-right: $size__site-margins;
 	}
 
 	/* Un-style buttons */
