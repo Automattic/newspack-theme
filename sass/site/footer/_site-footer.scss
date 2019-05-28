@@ -4,22 +4,24 @@
 
 	.widget-area,
 	.site-info {
-		@include postContentMaxWidth();
-		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
+		margin: calc(2 * #{$size__spacing-unit}) auto;
+		max-width: 90%;
+		width: $size__site-main;
 
 		@include media(tablet) {
-			margin: calc(1.5 * #{$size__spacing-unit}) auto;
+			margin: calc(3 * #{$size__spacing-unit}) auto;
 		}
 	}
 
 	.widget-column {
 		display: flex;
 		flex-wrap: wrap;
+
 		.widget {
 			width: 100%;
 			@include media(desktop) {
 				margin-right: calc(3 * #{$size__spacing-unit});
-				width: calc(50% - (3 * #{$size__spacing-unit}));
+				width: calc(33% - (3 * #{$size__spacing-unit}));
 			}
 		}
 	}

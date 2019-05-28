@@ -33,14 +33,8 @@
 	}
 
 	.entry-header {
-
-		margin: calc(3 * #{ $size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
+		margin: calc(3 * #{ $size__spacing-unit}) 0 $size__spacing-unit;
 		position: relative;
-
-		@include media(tablet) {
-			margin: calc(3 * #{ $size__spacing-unit}) auto $size__spacing-unit;
-			@include postContentMaxWidth();
-		}
 	}
 
 	.entry-title {
@@ -97,10 +91,10 @@
 
 	.entry-footer {
 
-		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
+		margin: calc(2 * #{$size__spacing-unit}) 0 $size__spacing-unit;
 
 		@include media(tablet) {
-			margin: $size__spacing-unit auto calc(3 * #{$size__spacing-unit});
+			margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
 			max-width: $size__site-tablet-content;
 		}
 
@@ -110,12 +104,7 @@
 	}
 
 	.post-thumbnail {
-
-		margin: $size__spacing-unit;
-
-		@include media(tablet) {
-			margin: $size__spacing-unit $size__site-margins;
-		}
+		margin: $size__spacing-unit 0;
 
 		&:focus {
 			outline: none;
@@ -134,13 +123,12 @@
 
 	.entry-content,
 	.entry-summary {
-		max-width: calc(100% - (2 * #{ $size__spacing-unit }));
-		margin: 0 $size__spacing-unit;
-
 		@include media(tablet) {
-			max-width: 80%;
-			margin: 0 10%;
-			padding: 0 60px;
+			max-width: $size__site-tablet-content;
+		}
+
+		@include media(desktop) {
+			max-width: $size__site-desktop-content;
 		}
 	}
 
@@ -220,6 +208,10 @@
 			}
 		}
 	}
+}
+
+.page.home .entry .entry-content {
+	max-width: 100%;
 }
 
 /* Hide page title on the homepage */

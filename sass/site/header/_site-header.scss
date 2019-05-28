@@ -28,18 +28,15 @@
 // Site branding
 
 .site-branding {
-
+	align-items: center;
+	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	justify-content: space-between;
-
-	color: $color__text-light;
+	margin: auto;
+	max-width: 90%;
 	position: relative;
-
-	@include media(tablet) {
-		margin: 0 $size__site-margins;
-	}
+	width: $size__site-main;
 }
 
 // Site logo

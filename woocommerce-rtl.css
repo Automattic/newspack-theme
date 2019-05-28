@@ -1191,13 +1191,13 @@ table.variations select {
 
 @media only screen and (min-width: 768px) {
   .woocommerce .content-area .site-main {
-    max-width: calc(8 * (100vw / 12) - 28px);
+    max-width: 65%;
   }
 }
 
 @media only screen and (min-width: 1168px) {
   .woocommerce .content-area .site-main {
-    max-width: calc(6 * (100vw / 12) - 28px);
+    max-width: 65%;
   }
 }
 
