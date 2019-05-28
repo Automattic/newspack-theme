@@ -1521,12 +1521,6 @@ a:focus {
   text-align: left;
 }
 
-@media only screen and (min-width: 768px) {
-  .social-navigation {
-    margin-left: auto;
-  }
-}
-
 .social-navigation ul.social-links-menu {
   display: flex;
   margin: 0;

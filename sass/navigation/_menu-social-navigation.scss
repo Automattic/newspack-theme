@@ -3,10 +3,6 @@
 .social-navigation {
 	text-align: left;
 
-	@include media(tablet) {
-		margin-left: auto; // bump social menu to the left on mobile - TODO maybe tie this into a class checking for other menus.
-	}
-
 	ul.social-links-menu {
 		display: flex;
 		margin: 0;
