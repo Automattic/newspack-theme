@@ -74,12 +74,6 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 
-			// Posted by
-			newspack_posted_by();
-
-			// Posted on
-			newspack_posted_on();
-
 			/* translators: used between list items, there is a space after the comma. */
 			$categories_list = get_the_category_list( __( ', ', 'newspack' ) );
 			if ( $categories_list ) {
