@@ -1,5 +1,29 @@
 .top-nav-contain {
-	@include media(tablet) {
-		margin: 0 $size__site-margins;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 90%;
+	width: $size__site-main;
+}
+
+.secondary-menu {
+	display: block;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	> li {
+		> a {
+			margin-right: #{0.5 * $size__spacing-unit};
+		}
 	}
 }

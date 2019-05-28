@@ -24,6 +24,19 @@
 		<header id="masthead" class="site-header">
 
 			<div class="top-nav-contain">
+				<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
+					<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-2',
+								'menu_class'     => 'secondary-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							)
+						);
+						?>
+					</nav>
+				<?php endif; ?>
 				<?php if ( has_nav_menu( 'social' ) ) : ?>
 					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
 						<?php

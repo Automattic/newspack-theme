@@ -54,7 +54,8 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary', 'newspack' ),
+				'menu-1' => __( 'Primary Menu', 'newspack' ),
+				'menu-2' => __( 'Secondary Menu', 'newspack' ),
 				'footer' => __( 'Footer Menu', 'newspack' ),
 				'social' => __( 'Social Links Menu', 'newspack' ),
 			)

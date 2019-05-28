@@ -1,14 +1,10 @@
 /** === Main menu === */
 
 .main-navigation {
-
-	margin-top: #{0.25 * $size__spacing-unit};
 	display: flex;
-
-	@include media(tablet) {
-		margin-left: $size__site-margins;
-		margin-right: $size__site-margins;
-	}
+	margin: #{0.25 * $size__spacing-unit} auto 0;
+	max-width: 90%;
+	width: $size__site-main;
 
 	/* Un-style buttons */
 	button {
@@ -44,7 +40,6 @@
 	}
 
 	.main-menu {
-
 		display: inline-block;
 		margin: 0;
 		padding: 0;
