@@ -913,8 +913,10 @@ a:focus {
 --------------------------------------------------------------*/
 /** === Main menu === */
 .main-navigation {
-  margin-top: 0.25rem;
   display: flex;
+  margin: 0.25rem auto 0;
+  max-width: 90%;
+  width: 1200px;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles
@@ -928,13 +930,6 @@ a:focus {
   /**
 	 * Off-canvas touch device styles
 	 */
-}
-
-@media only screen and (min-width: 768px) {
-  .main-navigation {
-    margin-left: calc(10% + 60px);
-    margin-right: calc(10% + 60px);
-  }
 }
 
 .main-navigation button {
@@ -1481,31 +1476,58 @@ a:focus {
   }
 }
 
+.top-nav-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%;
+  width: 1200px;
+}
+
 @media only screen and (min-width: 768px) {
   .top-nav-contain {
-    margin: 0 calc(10% + 60px);
+    flex-wrap: nowrap;
   }
+}
+
+.secondary-menu {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.88889em;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary-menu {
+    padding: 0;
+  }
+}
+
+.secondary-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-menu > li > a {
+  margin-right: 0.5rem;
 }
 
 /* Social menu */
 .social-navigation {
-  margin-top: calc(1rem / 2);
   text-align: left;
 }
 
 .social-navigation ul.social-links-menu {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  display: inline-block;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .social-navigation ul.social-links-menu li {
-  display: inline-block;
-  vertical-align: bottom;
-  vertical-align: -webkit-baseline-middle;
   list-style: none;
 }
 
@@ -1541,13 +1563,6 @@ a:focus {
 
 .social-navigation ul.social-links-menu li a svg#ui-icon-link {
   transform: rotate(-45deg);
-}
-
-@media only screen and (min-width: 768px) {
-  .site-title + .social-navigation,
-  .site-description + .social-navigation {
-    margin-top: calc(1rem / 5);
-  }
 }
 
 /** === Footer menu === */
@@ -1988,7 +2003,7 @@ a:focus {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2004,8 +2019,15 @@ a:focus {
   justify-content: space-between;
   margin: auto;
   max-width: 90%;
+  padding: 1rem 0;
   position: relative;
   width: 1200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-branding {
+    padding: 2rem 0;
+  }
 }
 
 .site-logo {

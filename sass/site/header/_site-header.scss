@@ -16,7 +16,7 @@
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 3rem 0;
+		padding: 1rem 0 3rem;
 
 		&.featured-image {
 			min-height: 100vh;
@@ -35,8 +35,13 @@
 	justify-content: space-between;
 	margin: auto;
 	max-width: 90%;
+	padding: $size__spacing-unit 0;
 	position: relative;
 	width: $size__site-main;
+
+	@include media(tablet) {
+		padding: #{$size__spacing-unit * 2} 0;
+	}
 }
 
 // Site logo

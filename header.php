@@ -24,6 +24,20 @@
 		<header id="masthead" class="site-header">
 
 			<div class="top-nav-contain">
+				<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
+					<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'secondary-menu',
+								'menu_class'     => 'secondary-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'          => 1,
+							)
+						);
+						?>
+					</nav>
+				<?php endif; ?>
 				<?php if ( has_nav_menu( 'social' ) ) : ?>
 					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
 						<?php
@@ -45,12 +59,12 @@
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 			</div><!-- .layout-wrap -->
 
-			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+			<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'menu-1',
+							'theme_location' => 'primary-menu',
 							'menu_class'     => 'main-menu',
 							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						)

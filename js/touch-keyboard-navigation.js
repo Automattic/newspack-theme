@@ -329,7 +329,7 @@
 	 * Run our sub-menu function on selective refresh in the customizer
 	 */
 	document.addEventListener( 'customize-preview-menu-refreshed', function( e, params ) {
-		if ( 'menu-1' === params.wpNavMenuArgs.theme_location ) {
+		if ( 'primary-menu' === params.wpNavMenuArgs.theme_location ) {
 			toggleSubmenuDisplay();
 		}
 	});
