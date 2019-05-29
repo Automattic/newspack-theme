@@ -56,6 +56,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			array(
 				'primary-menu'   => __( 'Primary Menu', 'newspack' ),
 				'secondary-menu' => __( 'Secondary Menu', 'newspack' ),
+				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
 				'footer'         => __( 'Footer Menu', 'newspack' ),
 				'social'         => __( 'Social Links Menu', 'newspack' ),
 			)

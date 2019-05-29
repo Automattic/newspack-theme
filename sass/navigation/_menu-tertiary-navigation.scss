@@ -1,0 +1,26 @@
+/** === Tertiary menu === */
+
+.tertiary-menu {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 #{0.5 * $size__spacing-unit};
+
+	@include media(tablet) {
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	> li {
+		> a {
+			margin-right: #{0.5 * $size__spacing-unit};
+		}
+	}
+}
