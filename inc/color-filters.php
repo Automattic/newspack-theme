@@ -24,7 +24,7 @@ function newspack_get_primary_color() {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string NEWSPACK_DEFAULT_PRIMARY Default hexidecimal value.
+	 * @param string $value Sets a hexidecimal color; uses theme default defined above.
 	 */
 	return apply_filters( 'newspack_primary_color', NEWSPACK_DEFAULT_PRIMARY );
 }
@@ -42,7 +42,7 @@ function newspack_get_secondary_color() {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string NEWSPACK_DEFAULT_SECONDARY Default hexidecimal value.
+	 * @param string $value Sets a hexidecimal color; uses theme default defined above.
 	 */
 	return apply_filters( 'newspack_secondary_color', NEWSPACK_DEFAULT_SECONDARY );
 }
