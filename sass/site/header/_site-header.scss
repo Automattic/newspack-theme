@@ -3,25 +3,9 @@
 .site-header {
 	padding: 1em;
 
-	&.featured-image {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: 90vh;
-
-		.site-branding-container {
-			margin-bottom: auto;
-		}
-	}
-
 	@include media(tablet) {
 		margin: 0;
 		padding: 1rem 0 3rem;
-
-		&.featured-image {
-			min-height: 100vh;
-			margin-bottom: 3rem;
-		}
 	}
 }
 
@@ -77,14 +61,6 @@
 
 		&:hover {
 			color: $color__text-hover;
-		}
-	}
-
-	.featured-image & {
-		margin: 0;
-
-		@include media(tablet) {
-			display: inline-block;
 		}
 	}
 
