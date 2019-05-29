@@ -2491,7 +2491,7 @@ a:focus {
 }
 
 /* Hide page title on the homepage */
-.newpack-front-page.hide-homepage-title .entry-header {
+.newspack-front-page.hide-homepage-title .entry-header {
   display: none;
 }
 
