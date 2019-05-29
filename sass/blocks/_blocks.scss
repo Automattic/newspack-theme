@@ -70,8 +70,6 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		@include postContentMaxWidth();
-
 		@include media(tablet) {
 			margin-left: 0;
 			margin-right: 0;
@@ -501,8 +499,6 @@
 		}
 
 		.aligncenter {
-
-			@include postContentMaxWidth();
 
 			@include media(tablet) {
 				margin: 0;

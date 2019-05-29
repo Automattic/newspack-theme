@@ -3283,20 +3283,6 @@ a:focus {
 @media only screen and (min-width: 768px) {
   .entry .entry-content > *.aligncenter,
   .entry .entry-summary > *.aligncenter {
-    max-width: 65%;
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .entry .entry-content > *.aligncenter,
-  .entry .entry-summary > *.aligncenter {
-    max-width: 65%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .entry .entry-content > *.aligncenter,
-  .entry .entry-summary > *.aligncenter {
     margin-left: 0;
     margin-right: 0;
   }
