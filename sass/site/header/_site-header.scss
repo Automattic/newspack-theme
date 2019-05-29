@@ -36,7 +36,9 @@
 	max-width: 90%;
 	padding: $size__spacing-unit 0;
 	width: $size__site-main;
+
 	@include media(tablet) {
+		flex-wrap: nowrap;
 		padding: #{$size__spacing-unit * 2} 0;
 	}
 }

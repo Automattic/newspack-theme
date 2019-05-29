@@ -2044,6 +2044,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .site-branding-container {
+    flex-wrap: nowrap;
     padding: 2rem 0;
   }
 }
