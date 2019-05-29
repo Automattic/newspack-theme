@@ -54,10 +54,10 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary Menu', 'newspack' ),
-				'menu-2' => __( 'Secondary Menu', 'newspack' ),
-				'footer' => __( 'Footer Menu', 'newspack' ),
-				'social' => __( 'Social Links Menu', 'newspack' ),
+				'primary-menu'   => __( 'Primary Menu', 'newspack' ),
+				'secondary-menu' => __( 'Secondary Menu', 'newspack' ),
+				'footer'         => __( 'Footer Menu', 'newspack' ),
+				'social'         => __( 'Social Links Menu', 'newspack' ),
 			)
 		);
 
@@ -223,7 +223,7 @@ function newspack_scripts() {
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
-	if ( has_nav_menu( 'menu-1' ) ) {
+	if ( has_nav_menu( 'primary-menu' ) ) {
 		wp_enqueue_script( 'newspack-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '1.1', true );
 		wp_enqueue_script( 'newspack-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
