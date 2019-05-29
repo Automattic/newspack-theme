@@ -51,14 +51,14 @@
 
 		> li {
 
-			color: $color__link;
+			color: $color__primary;
 			display: inline;
 			position: relative;
 
 			> a {
 
 				font-weight: 700;
-				color: $color__link;
+				color: $color__primary;
 				margin-right: #{0.5 * $size__spacing-unit};
 
 				+ svg {
@@ -67,7 +67,7 @@
 
 				&:hover,
 				&:hover + svg {
-					color: $color__link-hover;
+					color: $color__primary-variation;
 				}
 			}
 
@@ -137,7 +137,7 @@
 
 	.sub-menu {
 
-		background-color: $color__link;
+		background-color: $color__primary;
 		color: $color__background-body;
 		list-style: none;
 		padding-left: 0;
@@ -205,10 +205,10 @@
 
 				&:hover,
 				&:focus {
-					background: $color__link-hover;
+					background: $color__primary-variation;
 
 					&:after {
-						background: $color__link-hover;
+						background: $color__primary-variation;
 					}
 				}
 			}

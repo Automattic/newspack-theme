@@ -366,7 +366,7 @@
 		}
 
 		&.is-style-solid-color {
-			background-color: $color__link;
+			background-color: $color__primary;
 			padding-left: 0;
 			padding-right: 0;
 
@@ -854,12 +854,12 @@
 
 	.has-primary-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-primary-background-color {
-		background-color: $color__link;
+		background-color: $color__primary;
 	}
 
 	.has-primary-variation-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-primary-variation-background-color {
-		background-color: $color__border-link-hover;
+		background-color: $color__primary-variation;
 	}
 
 	.has-secondary-background-color,
@@ -881,25 +881,25 @@
 	.has-primary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p {
-		color: $color__link;
+		color: $color__primary;
 	}
 
 	.has-primary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p {
-		color: $color__border-link-hover;
+		color: $color__primary-variation;
 	}
 
 	.has-secondary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
-		color: $color__link;
+		color: $color__secondary;
 	}
 
 	.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
-		color: $color__border-link-hover;
+		color: $color__secondary-variation;
 	}
 
 	.has-white-color,

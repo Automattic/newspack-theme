@@ -671,7 +671,7 @@ a {
 
 a:hover,
 a:active {
-  color: #005177;
+  color: #4d4d4d;
   outline: 0;
   text-decoration: none;
 }
@@ -894,11 +894,11 @@ a {
 }
 
 a:visited {
-  color: #0073aa;
+  color: #666;
 }
 
 a:hover, a:active {
-  color: #005177;
+  color: #4d4d4d;
   outline: 0;
   text-decoration: none;
 }
@@ -991,7 +991,7 @@ a:focus {
 
 .main-navigation .main-menu > li > a:hover,
 .main-navigation .main-menu > li > a:hover + svg {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .main-navigation .main-menu > li.menu-item-has-children {
@@ -1116,13 +1116,13 @@ a:focus {
 .main-navigation .sub-menu > li > a:hover, .main-navigation .sub-menu > li > a:focus,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus {
-  background: #005177;
+  background: #4d4d4d;
 }
 
 .main-navigation .sub-menu > li > a:hover:after, .main-navigation .sub-menu > li > a:focus:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus:after {
-  background: #005177;
+  background: #4d4d4d;
 }
 
 .main-navigation .sub-menu > li > .menu-item-link-return {
@@ -1618,7 +1618,7 @@ a:focus {
 }
 
 .post-navigation .nav-links a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 @media only screen and (min-width: 1168px) {
@@ -2518,7 +2518,7 @@ a:focus {
 }
 
 .author-bio .author-description .author-link:hover {
-  color: #005177;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -2748,7 +2748,7 @@ a:focus {
 }
 
 .comment .comment-author .fn a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .comment .comment-author .post-author-badge {
@@ -2791,7 +2791,7 @@ a:focus {
 
 .comment .comment-metadata > a:hover,
 .comment .comment-metadata .comment-edit-link:hover {
-  color: #005177;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -2863,7 +2863,7 @@ a:focus {
 
 .comment-reply-link:hover,
 #cancel-comment-reply-link:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .discussion-avatar-list {
@@ -3071,7 +3071,7 @@ a:focus {
 }
 
 .widget a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .widget_archive ul,
@@ -4097,7 +4097,7 @@ a:focus {
 
 .entry .entry-content .has-primary-background-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color.has-primary-background-color {
-  background-color: #666;
+  background-color: #0073aa;
 }
 
 .entry .entry-content .has-primary-variation-background-color,
@@ -4123,7 +4123,7 @@ a:focus {
 .entry .entry-content .has-primary-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p {
-  color: #666;
+  color: #0073aa;
 }
 
 .entry .entry-content .has-primary-variation-color,
@@ -4141,7 +4141,7 @@ a:focus {
 .entry .entry-content .has-secondary-variation-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .entry .entry-content .has-white-color,

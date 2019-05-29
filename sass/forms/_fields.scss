@@ -25,8 +25,8 @@ textarea {
 	border-radius: 0;
 
 	&:focus {
-		border-color: $color__link;
-		outline: thin solid rgba( $color__link, 0.15 );
+		border-color: $color__primary;
+		outline: thin solid rgba( $color__primary, 0.15 );
 		outline-offset: -4px;
 	}
 }
