@@ -8,7 +8,6 @@
 /**
  * Define default color filters.
  */
-
 define( 'NEWSPACK_DEFAULT_PRIMARY', '#0073a8' ); // Hex
 define( 'NEWSPACK_DEFAULT_SECONDARY', '#666666' ); // Hex
 
@@ -18,6 +17,15 @@ define( 'NEWSPACK_DEFAULT_SECONDARY', '#666666' ); // Hex
  * @return string the default hexidecimal color.
  */
 function newspack_get_primary_color() {
+	/**
+	 * Default primary color.
+	 *
+	 * Sets the default primary color for the theme's custom colors.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string NEWSPACK_DEFAULT_PRIMARY Default hexidecimal value.
+	 */
 	return apply_filters( 'newspack_primary_color', NEWSPACK_DEFAULT_PRIMARY );
 }
 
@@ -27,6 +35,15 @@ function newspack_get_primary_color() {
  * @return string the default hexidecimal color.
  */
 function newspack_get_secondary_color() {
+	/**
+	 * Default secondary color.
+	 *
+	 * Sets the default secondary color for the theme's custom colors.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string NEWSPACK_DEFAULT_SECONDARY Default hexidecimal value.
+	 */
 	return apply_filters( 'newspack_secondary_color', NEWSPACK_DEFAULT_SECONDARY );
 }
 
