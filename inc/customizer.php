@@ -40,7 +40,6 @@ function newspack_customize_register( $wp_customize ) {
 		'theme_colors',
 		array(
 			'default'           => 'default',
-			'transport'         => 'postMessage',
 			'sanitize_callback' => 'newspack_sanitize_color_option',
 		)
 	);
@@ -64,7 +63,6 @@ function newspack_customize_register( $wp_customize ) {
 		'primary_color_hex',
 		array(
 			'default'           => newspack_get_primary_color(),
-			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -74,7 +72,27 @@ function newspack_customize_register( $wp_customize ) {
 			$wp_customize,
 			'primary_color_hex',
 			array(
-				'description' => __( 'Apply a custom color for buttons, links, featured images, etc.', 'newspack' ),
+				'description' => __( 'Apply a primary custom color.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	// Add secondary color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'secondary_color_hex',
+		array(
+			'default'           => newspack_get_secondary_color(),
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'secondary_color_hex',
+			array(
+				'description' => __( 'Apply a secondary custom color.', 'newspack' ),
 				'section'     => 'colors',
 			)
 		)

@@ -405,8 +405,8 @@
 				&.has-text-color a,
 				&.has-primary-color,
 				&.has-primary-variation-color,
-				&.has-dark-gray-color,
-				&.has-light-gray-color,
+				&.has-secondary-color,
+				&.has-secondary-variation-color,
 				&.has-white-color {
 					color: inherit;
 				}
@@ -818,8 +818,8 @@
 	//! Custom background colors
 	.has-primary-background-color,
 	.has-primary-variation-background-color,
-	.has-dark-gray-background-color,
-	.has-light-gray-background-color {
+	.has-secondary-background-color,
+	.has-secondary-variation-background-color {
 
 		// Use white text against these backgrounds by default.
 		color: $color__background-body;
@@ -862,14 +862,14 @@
 		background-color: $color__border-link-hover;
 	}
 
-	.has-dark-gray-background-color,
-	.wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
-		background-color: $color__text-main;
+	.has-secondary-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
+		background-color: $color__secondary;
 	}
 
-	.has-light-gray-background-color,
-	.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
-		background-color: $color__text-light;
+	.has-secondary-variation-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-secondary-variation-background-color {
+		background-color: $color__secondary-variation;
 	}
 
 	.has-white-background-color,
@@ -890,16 +890,16 @@
 		color: $color__border-link-hover;
 	}
 
-	.has-dark-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
-		color: $color__text-main;
+	.has-secondary-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
+		color: $color__link;
 	}
 
-	.has-light-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color p {
-		color: $color__text-light;
+	.has-secondary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
+		color: $color__border-link-hover;
 	}
 
 	.has-white-color,

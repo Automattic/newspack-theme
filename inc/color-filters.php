@@ -10,6 +10,7 @@
  */
 
 define( 'NEWSPACK_DEFAULT_PRIMARY', '#0073a8' ); // Hex
+define( 'NEWSPACK_DEFAULT_SECONDARY', '#666666' ); // Hex
 
 /**
  * The default color used for the primary color throughout this theme
@@ -21,10 +22,30 @@ function newspack_get_primary_color() {
 }
 
 /**
- * Tests the current default hue against NEWSPACK_DEFAULT_HEX.
+ * The default color used for the secondary color throughout this theme
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_secondary_color() {
+	return apply_filters( 'newspack_secondary_color', NEWSPACK_DEFAULT_SECONDARY );
+}
+
+/**
+ * Tests the current default hue against NEWSPACK_DEFAULT_PRIMARY.
  *
  * @return bool
  */
 function newspack_has_custom_primary_color() {
 	return newspack_get_primary_color() !== NEWSPACK_DEFAULT_PRIMARY;
 }
+
+/**
+ * Tests the current default hue against NEWSPACK_DEFAULT_SECONDARY.
+ *
+ * @return bool
+ */
+function newspack_has_custom_secondary_color() {
+	return newspack_get_secondary_color() !== NEWSPACK_DEFAULT_SECONDARY;
+}
+
+
