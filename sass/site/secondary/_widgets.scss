@@ -7,10 +7,10 @@
 	}
 
 	a {
-		color: $color__link;
+		color: $color__primary;
 
 		&:hover {
-			color: $color__link-hover;
+			color: $color__primary-variation;
 		}
 	}
 }

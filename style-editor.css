@@ -127,11 +127,11 @@ h6 {
 
 a {
   transition: color 110ms ease-in-out;
-  color: #0073aa;
+  color: #666;
 }
 
 a:hover, a:active {
-  color: #005177;
+  color: #4d4d4d;
   outline: 0;
   text-decoration: none;
 }
@@ -143,8 +143,8 @@ a:focus {
 
 .has-primary-background-color,
 .has-primary-variation-background-color,
-.has-dark-gray-background-color,
-.has-light-gray-background-color {
+.has-secondary-background-color,
+.has-secondary-variation-background-color {
   color: #fff;
 }
 
@@ -164,22 +164,22 @@ a:focus {
 .has-primary-variation-background-color h5,
 .has-primary-variation-background-color h6,
 .has-primary-variation-background-color a,
-.has-dark-gray-background-color p,
-.has-dark-gray-background-color h1,
-.has-dark-gray-background-color h2,
-.has-dark-gray-background-color h3,
-.has-dark-gray-background-color h4,
-.has-dark-gray-background-color h5,
-.has-dark-gray-background-color h6,
-.has-dark-gray-background-color a,
-.has-light-gray-background-color p,
-.has-light-gray-background-color h1,
-.has-light-gray-background-color h2,
-.has-light-gray-background-color h3,
-.has-light-gray-background-color h4,
-.has-light-gray-background-color h5,
-.has-light-gray-background-color h6,
-.has-light-gray-background-color a {
+.has-secondary-background-color p,
+.has-secondary-background-color h1,
+.has-secondary-background-color h2,
+.has-secondary-background-color h3,
+.has-secondary-background-color h4,
+.has-secondary-background-color h5,
+.has-secondary-background-color h6,
+.has-secondary-background-color a,
+.has-secondary-variation-background-color p,
+.has-secondary-variation-background-color h1,
+.has-secondary-variation-background-color h2,
+.has-secondary-variation-background-color h3,
+.has-secondary-variation-background-color h4,
+.has-secondary-variation-background-color h5,
+.has-secondary-variation-background-color h6,
+.has-secondary-variation-background-color a {
   color: #fff;
 }
 
@@ -373,7 +373,7 @@ figcaption,
 /** === Blockquote === */
 .wp-block-quote:not(.is-large):not(.is-style-large) {
   border-width: 2px;
-  border-color: #0073aa;
+  border-color: #666;
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
@@ -438,7 +438,7 @@ figcaption,
 }
 
 .wp-block-pullquote.is-style-solid-color:not(.has-background-color) {
-  background-color: #0073aa;
+  background-color: #666;
 }
 
 .wp-block[data-type="core/pullquote"] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
@@ -526,11 +526,11 @@ figcaption,
 
 .wp-block-file .wp-block-file__textlink {
   text-decoration: underline;
-  color: #0073aa;
+  color: #666;
 }
 
 .wp-block-file .wp-block-file__textlink:hover {
-  color: #005177;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -539,7 +539,7 @@ figcaption,
   line-height: 1.8;
   font-size: 0.88889em;
   font-weight: bold;
-  background-color: #0073aa;
+  background-color: #666;
   border-radius: 5px;
 }
 
@@ -714,7 +714,7 @@ ul.wp-block-archives li ul,
 }
 
 .wp-block-freeform blockquote {
-  border-left: 2px solid #0073aa;
+  border-left: 2px solid #666;
 }
 
 .wp-block-freeform blockquote cite {

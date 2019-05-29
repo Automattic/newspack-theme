@@ -11,25 +11,17 @@
 function newspack_custom_colors_css() {
 
 	$primary_color = newspack_get_primary_color();
+	$secondary_color = newspack_get_secondary_color();
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
+		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 	}
 
 
 	$theme_css = '
-		/*
-		 * Set background for:
-		 * - featured image :before
-		 * - featured image :before
-		 * - post thumbmail :before
-		 * - post thumbmail :before
-		 * - Submenu
-		 * - Sticky Post
-		 * - buttons
-		 * - WP Block Button
-		 * - Blocks
-		 */
+		/* Set primary background color */
+
 		.main-navigation .sub-menu,
 		.sticky-post,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
@@ -43,21 +35,8 @@ function newspack_custom_colors_css() {
 			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		/*
-		 * Set Color for:
-		 * - all links
-		 * - main navigation links
-		 * - Post navigation links
-		 * - Post entry meta hover
-		 * - Post entry header more-link hover
-		 * - main navigation svg
-		 * - comment navigation
-		 * - Comment edit link hover
-		 * - Site Footer Link hover
-		 * - Widget links
-		 */
-		a,
-		a:visited,
+		/* Set primary color */
+
 		.main-navigation .main-menu > li,
 		.main-navigation ul.main-menu > li > a,
 		.post-navigation .post-title,
@@ -68,7 +47,7 @@ function newspack_custom_colors_css() {
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		#colophon .site-info a:hover,
-		.widget a,
+		.widget a, .widget a:visited,
 		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 		.entry .entry-content > .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-color,
@@ -77,11 +56,8 @@ function newspack_custom_colors_css() {
 			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		/*
-		 * Set border color for:
-		 * wp block quote
-		 * :focus
-		 */
+		/* Set primary border color */
+
 		blockquote,
 		.entry .entry-content blockquote,
 		.entry .entry-content .wp-block-quote:not(.is-large),
@@ -109,8 +85,44 @@ function newspack_custom_colors_css() {
 			box-shadow: 0 0 0 2px ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		/* Hover colors */
-		a:hover, a:active,
+		/* Set secondary background color */
+
+		.entry .entry-content > .has-secondary-background-color,
+		.entry .entry-content > *[class^="wp-block-"].has-secondary-background-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-secondary-background-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
+			background-color:' . $secondary_color . '; /* base: #666 */
+		}
+
+		/* Set secondary color */
+
+		a, a:visited,
+		.entry .entry-content > .has-secondary-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-secondary-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p {
+			color:' . $secondary_color . '; /* base: #666 */
+		}
+
+		/* Set primary variation background color */
+
+		.main-navigation .sub-menu > li > a:hover,
+		.main-navigation .sub-menu > li > a:focus,
+		.main-navigation .sub-menu > li > a:hover:after,
+		.main-navigation .sub-menu > li > a:focus:after,
+		.main-navigation .sub-menu > li > .menu-item-link-return:hover,
+		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
+		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
+		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
+		.entry .entry-content > .has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color {
+			background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
+		}
+
+		/* Set primary variation color */
+
 		.main-navigation .main-menu > li > a:hover,
 		.main-navigation .main-menu > li > a:hover + svg,
 		.post-navigation .nav-links a:hover,
@@ -129,22 +141,27 @@ function newspack_custom_colors_css() {
 			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #0073a8; */
 		}
 
-		.main-navigation .sub-menu > li > a:hover,
-		.main-navigation .sub-menu > li > a:focus,
-		.main-navigation .sub-menu > li > a:hover:after,
-		.main-navigation .sub-menu > li > a:focus:after,
-		.main-navigation .sub-menu > li > .menu-item-link-return:hover,
-		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
-		.entry .entry-content > .has-primary-variation-background-color,
-		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
-		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,
-		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color {
-			background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
+		/* Set secondary variation background color */
+
+		.entry .entry-content > .has-secondary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].has-secondary-variation-ackground-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-secondary-variation-background-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color {
+			background-color:' . newspack_adjust_brightness( $secondary_color, -40 ) . '; /* base: #666 */
+		}
+
+		/* Set secondary variation color */
+
+		a:hover, a:active,
+		.entry .entry-content > .has-secondary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"] .has-secondary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p {
+			color:' . newspack_adjust_brightness( $secondary_color, -40 ) . '; /* base: #666 */
 		}
 
 		/* Text selection colors */
+
 		::selection {
 			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}

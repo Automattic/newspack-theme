@@ -138,7 +138,8 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
-		$primary_color = newspack_get_primary_color();
+		$primary_color   = newspack_get_primary_color();
+		$secondary_color = newspack_get_secondary_color();
 
 		// Editor color palette.
 		add_theme_support(
@@ -147,22 +148,30 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'newspack' ),
 					'slug'  => 'primary',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ? $primary_color : get_theme_mod( 'primary_color_hex', $primary_color ),
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
+						$primary_color :
+						get_theme_mod( 'primary_color_hex', $primary_color ),
 				),
 				array(
 					'name'  => __( 'Primary Variation', 'newspack' ),
 					'slug'  => 'primary-variation',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ? newspack_adjust_brightness( $primary_color, -40 ) : newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
+						newspack_adjust_brightness( $primary_color, -40 ) :
+						newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
 				),
 				array(
-					'name'  => __( 'Dark Gray', 'newspack' ),
-					'slug'  => 'dark-gray',
-					'color' => '#111',
+					'name'  => __( 'Secondary', 'newspack' ),
+					'slug'  => 'secondary',
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
+						$secondary_color :
+						get_theme_mod( 'secondary_color_hex', $secondary_color ),
 				),
 				array(
-					'name'  => __( 'Light Gray', 'newspack' ),
-					'slug'  => 'light-gray',
-					'color' => '#767676',
+					'name'  => __( 'Secondary Variation', 'newspack' ),
+					'slug'  => 'secondary-variation',
+					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
+						newspack_adjust_brightness( $secondary_color, -40 ) :
+						newspack_adjust_brightness( get_theme_mod( 'secondary_color_hex', $secondary_color ), -40 ),
 				),
 				array(
 					'name'  => __( 'White', 'newspack' ),

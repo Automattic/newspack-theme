@@ -24,6 +24,18 @@
 				visibility();
 				setting.bind( visibility );
 			});
+			wp.customize.control( 'secondary_color_hex', function( control ) {
+				var visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+
+				visibility();
+				setting.bind( visibility );
+			});
 		});
 	});
 

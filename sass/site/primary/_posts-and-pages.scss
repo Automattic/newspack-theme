@@ -73,7 +73,7 @@
 
 			&:hover {
 				text-decoration: none;
-				color: $color__link;
+				color: $color__primary-variation;
 			}
 		}
 
@@ -150,7 +150,7 @@
 			}
 
 			&:hover {
-				color: $color__link;
+				color: $color__primary-variation;
 				text-decoration: none;
 			}
 		}
@@ -252,7 +252,7 @@
 			display: inline-block;
 
 			&:hover {
-				color: $color__link-hover;
+				color: $color__primary-variation;
 				text-decoration: none;
 			}
 		}

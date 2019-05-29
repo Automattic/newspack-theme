@@ -666,12 +666,12 @@ body {
 
 a {
   transition: color 110ms ease-in-out;
-  color: #0073aa;
+  color: #666;
 }
 
 a:hover,
 a:active {
-  color: #005177;
+  color: #4d4d4d;
   outline: 0;
   text-decoration: none;
 }
@@ -743,7 +743,7 @@ figure {
 }
 
 blockquote {
-  border-right: 2px solid #0073aa;
+  border-right: 2px solid #666;
   margin-right: 0;
   padding: 0 1rem 0 0;
 }
@@ -863,8 +863,8 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: #0073aa;
-  outline: thin solid rgba(0, 115, 170, 0.15);
+  border-color: #666;
+  outline: thin solid rgba(102, 102, 102, 0.15);
   outline-offset: -4px;
 }
 
@@ -890,15 +890,15 @@ form p {
 --------------------------------------------------------------*/
 a {
   transition: color 110ms ease-in-out;
-  color: #0073aa;
+  color: #666;
 }
 
 a:visited {
-  color: #0073aa;
+  color: #666;
 }
 
 a:hover, a:active {
-  color: #005177;
+  color: #4d4d4d;
   outline: 0;
   text-decoration: none;
 }
@@ -969,14 +969,14 @@ a:focus {
 }
 
 .main-navigation .main-menu > li {
-  color: #0073aa;
+  color: #666;
   display: inline;
   position: relative;
 }
 
 .main-navigation .main-menu > li > a {
   font-weight: 700;
-  color: #0073aa;
+  color: #666;
   margin-left: 0.5rem;
 }
 
@@ -986,7 +986,7 @@ a:focus {
 
 .main-navigation .main-menu > li > a:hover,
 .main-navigation .main-menu > li > a:hover + svg {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .main-navigation .main-menu > li.menu-item-has-children {
@@ -1047,7 +1047,7 @@ a:focus {
 }
 
 .main-navigation .sub-menu {
-  background-color: #0073aa;
+  background-color: #666;
   color: #fff;
   list-style: none;
   padding-right: 0;
@@ -1111,13 +1111,13 @@ a:focus {
 .main-navigation .sub-menu > li > a:hover, .main-navigation .sub-menu > li > a:focus,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus {
-  background: #005177;
+  background: #4d4d4d;
 }
 
 .main-navigation .sub-menu > li > a:hover:after, .main-navigation .sub-menu > li > a:focus:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus:after {
-  background: #005177;
+  background: #4d4d4d;
 }
 
 .main-navigation .sub-menu > li > .menu-item-link-return {
@@ -1633,7 +1633,7 @@ a:focus {
 }
 
 .post-navigation .nav-links a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 @media only screen and (min-width: 1168px) {
@@ -2345,7 +2345,7 @@ a:focus {
 .entry .entry-meta a:hover,
 .entry .entry-footer a:hover {
   text-decoration: none;
-  color: #0073aa;
+  color: #666;
 }
 
 .entry .entry-meta .svg-icon,
@@ -2426,7 +2426,7 @@ a:focus {
 }
 
 .entry .entry-content .more-link:hover {
-  color: #0073aa;
+  color: #666;
   text-decoration: none;
 }
 
@@ -2540,7 +2540,7 @@ a:focus {
 }
 
 .author-bio .author-description .author-link:hover {
-  color: #005177;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -2770,7 +2770,7 @@ a:focus {
 }
 
 .comment .comment-author .fn a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .comment .comment-author .post-author-badge {
@@ -2778,7 +2778,7 @@ a:focus {
   display: block;
   height: 18px;
   position: absolute;
-  background: #008fd3;
+  background: #7a7a7a;
   left: calc(100% - 2.5rem);
   top: -3px;
   width: 18px;
@@ -2813,7 +2813,7 @@ a:focus {
 
 .comment .comment-metadata > a:hover,
 .comment .comment-metadata .comment-edit-link:hover {
-  color: #005177;
+  color: #4d4d4d;
   text-decoration: none;
 }
 
@@ -2845,7 +2845,7 @@ a:focus {
 }
 
 .comment .comment-metadata .comment-edit-link:hover {
-  color: #0073aa;
+  color: #666;
 }
 
 .comment .comment-content {
@@ -2885,7 +2885,7 @@ a:focus {
 
 .comment-reply-link:hover,
 #cancel-comment-reply-link:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .discussion-avatar-list {
@@ -3070,7 +3070,7 @@ a:focus {
 
 #colophon .site-info a:hover {
   text-decoration: none;
-  color: #0073aa;
+  color: #666;
 }
 
 #colophon .site-info .imprint,
@@ -3089,11 +3089,11 @@ a:focus {
 }
 
 .widget a {
-  color: #0073aa;
+  color: #666;
 }
 
 .widget a:hover {
-  color: #005177;
+  color: #4d4d4d;
 }
 
 .widget_archive ul,
@@ -3581,7 +3581,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color {
-  background-color: #0073aa;
+  background-color: #666;
   padding-right: 0;
   padding-left: 0;
 }
@@ -3623,7 +3623,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-text-color p,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-text-color a, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
+.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-text-color a, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color, .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
   color: inherit;
 }
 
@@ -3649,7 +3649,7 @@ a:focus {
 
 .entry .entry-content .wp-block-quote:not(.is-large), .entry .entry-content .wp-block-quote:not(.is-style-large) {
   border-width: 2px;
-  border-color: #0073aa;
+  border-color: #666;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -4062,8 +4062,8 @@ a:focus {
 
 .entry .entry-content .has-primary-background-color,
 .entry .entry-content .has-primary-variation-background-color,
-.entry .entry-content .has-dark-gray-background-color,
-.entry .entry-content .has-light-gray-background-color {
+.entry .entry-content .has-secondary-background-color,
+.entry .entry-content .has-secondary-variation-background-color {
   color: #fff;
 }
 
@@ -4083,22 +4083,22 @@ a:focus {
 .entry .entry-content .has-primary-variation-background-color h5,
 .entry .entry-content .has-primary-variation-background-color h6,
 .entry .entry-content .has-primary-variation-background-color a,
-.entry .entry-content .has-dark-gray-background-color p,
-.entry .entry-content .has-dark-gray-background-color h1,
-.entry .entry-content .has-dark-gray-background-color h2,
-.entry .entry-content .has-dark-gray-background-color h3,
-.entry .entry-content .has-dark-gray-background-color h4,
-.entry .entry-content .has-dark-gray-background-color h5,
-.entry .entry-content .has-dark-gray-background-color h6,
-.entry .entry-content .has-dark-gray-background-color a,
-.entry .entry-content .has-light-gray-background-color p,
-.entry .entry-content .has-light-gray-background-color h1,
-.entry .entry-content .has-light-gray-background-color h2,
-.entry .entry-content .has-light-gray-background-color h3,
-.entry .entry-content .has-light-gray-background-color h4,
-.entry .entry-content .has-light-gray-background-color h5,
-.entry .entry-content .has-light-gray-background-color h6,
-.entry .entry-content .has-light-gray-background-color a {
+.entry .entry-content .has-secondary-background-color p,
+.entry .entry-content .has-secondary-background-color h1,
+.entry .entry-content .has-secondary-background-color h2,
+.entry .entry-content .has-secondary-background-color h3,
+.entry .entry-content .has-secondary-background-color h4,
+.entry .entry-content .has-secondary-background-color h5,
+.entry .entry-content .has-secondary-background-color h6,
+.entry .entry-content .has-secondary-background-color a,
+.entry .entry-content .has-secondary-variation-background-color p,
+.entry .entry-content .has-secondary-variation-background-color h1,
+.entry .entry-content .has-secondary-variation-background-color h2,
+.entry .entry-content .has-secondary-variation-background-color h3,
+.entry .entry-content .has-secondary-variation-background-color h4,
+.entry .entry-content .has-secondary-variation-background-color h5,
+.entry .entry-content .has-secondary-variation-background-color h6,
+.entry .entry-content .has-secondary-variation-background-color a {
   color: #fff;
 }
 
@@ -4127,14 +4127,14 @@ a:focus {
   background-color: #005177;
 }
 
-.entry .entry-content .has-dark-gray-background-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
-  background-color: #111;
+.entry .entry-content .has-secondary-background-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
+  background-color: #666;
 }
 
-.entry .entry-content .has-light-gray-background-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
-  background-color: #767676;
+.entry .entry-content .has-secondary-variation-background-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color.has-secondary-variation-background-color {
+  background-color: #4d4d4d;
 }
 
 .entry .entry-content .has-white-background-color,
@@ -4154,16 +4154,16 @@ a:focus {
   color: #005177;
 }
 
-.entry .entry-content .has-dark-gray-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
-  color: #111;
+.entry .entry-content .has-secondary-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
+  color: #666;
 }
 
-.entry .entry-content .has-light-gray-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
-.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color p {
-  color: #767676;
+.entry .entry-content .has-secondary-variation-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
+.entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
+  color: #4d4d4d;
 }
 
 .entry .entry-content .has-white-color,
@@ -4344,5 +4344,5 @@ svg {
 }
 
 .gallery-item > div > a:focus {
-  box-shadow: 0 0 0 2px #0073aa;
+  box-shadow: 0 0 0 2px #666666;
 }
