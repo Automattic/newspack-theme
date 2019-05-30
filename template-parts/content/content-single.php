@@ -10,12 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-	</header>
-
-	<?php newspack_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content(

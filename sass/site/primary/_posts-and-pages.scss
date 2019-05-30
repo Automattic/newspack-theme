@@ -179,11 +179,25 @@
 
 /* Single Post */
 
-.single-post .entry-title {
-	font-size: $font__size-xxxl;
+.single-post {
+	.entry-header {
+		width: 100%;
+	}
 
-	@include media(desktop) {
-		font-size: $font__size-xxxxl;
+	.entry-title {
+		font-size: $font__size-xxxl;
+
+		@include media(desktop) {
+			font-size: $font__size-xxxxl;
+		}
+	}
+
+	.main-content {
+		flex-basis: 65%;
+	}
+
+	#secondary {
+		flex-basis: 35%;
 	}
 }
 

@@ -1969,6 +1969,12 @@ a:focus {
 }
 
 .site-content {
+  overflow: hidden;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   max-width: 90%;
   width: 1200px;
@@ -2249,6 +2255,10 @@ a:focus {
 }
 
 /* Single Post */
+.single-post .entry-header {
+  width: 100%;
+}
+
 .single-post .entry-title {
   font-size: 2.8125em;
 }
@@ -2257,6 +2267,14 @@ a:focus {
   .single-post .entry-title {
     font-size: 3.09375em;
   }
+}
+
+.single-post .main-content {
+  flex-basis: 65%;
+}
+
+.single-post #secondary {
+  flex-basis: 35%;
 }
 
 .page.home .entry .entry-content {
