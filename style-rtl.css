@@ -436,7 +436,6 @@ textarea {
 .page-links,
 .page-description,
 .pagination .nav-links,
-.sticky-post,
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
@@ -2270,19 +2269,6 @@ a:focus {
 --------------------------------------------------------------*/
 .sticky {
   display: block;
-}
-
-.sticky-post {
-  background: #0073aa;
-  color: #fff;
-  display: inline-block;
-  font-weight: bold;
-  line-height: 1;
-  padding: .25rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: -1rem;
-  z-index: 1;
 }
 
 .updated:not(.published) {
