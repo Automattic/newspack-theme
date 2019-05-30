@@ -393,14 +393,14 @@ template {
 
 /* Typography */
 html {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #111;
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.6;
@@ -414,7 +414,7 @@ select,
 optgroup,
 textarea {
   color: #111;
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: 400;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -473,7 +473,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
 }
 
 .site-branding,
@@ -485,12 +485,12 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 1.6875em;
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.8125em;
+    font-size: 2.25em;
   }
 }
 
@@ -499,7 +499,7 @@ h1 {
 .error-404 .page-title,
 .has-larger-font-size,
 h2 {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -508,7 +508,7 @@ h2 {
   .error-404 .page-title,
   .has-larger-font-size,
   h2 {
-    font-size: 2.25em;
+    font-size: 1.6875em;
   }
 }
 
@@ -516,7 +516,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 h3 {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
 }
 
 .site-title,
@@ -1122,7 +1122,7 @@ a:focus {
 
 .main-navigation .sub-menu > li > .menu-item-link-return {
   width: 100%;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   text-align: right;
 }
@@ -1275,14 +1275,14 @@ a:focus {
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -1378,7 +1378,7 @@ a:focus {
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu .sub-menu > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -2308,6 +2308,17 @@ a:focus {
   }
 }
 
+/* Single Post */
+.single-post .entry-title {
+  font-size: 2.8125em;
+}
+
+@media only screen and (min-width: 1168px) {
+  .single-post .entry-title {
+    font-size: 3.09375em;
+  }
+}
+
 .page.home .entry .entry-content {
   max-width: 100%;
 }
@@ -2462,7 +2473,7 @@ a:focus {
 
 #respond > small {
   display: block;
-  font-size: 22px;
+  font-size: 20px;
   position: absolute;
   right: calc(1rem + 100%);
   top: calc(-3.5 * 1rem);
@@ -2519,7 +2530,7 @@ a:focus {
 .comment-list .pingback .comment-body a:not(.comment-edit-link),
 .comment-list .trackback .comment-body a:not(.comment-edit-link) {
   font-weight: bold;
-  font-size: 19.55556px;
+  font-size: 17.77778px;
   line-height: 1.5;
   padding-left: 0.5rem;
   display: block;
@@ -2940,7 +2951,7 @@ a:focus {
 .widget_rss ul li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(22px * 1.125);
+  font-size: calc(20px * 1.125);
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.5rem;
@@ -2966,7 +2977,7 @@ a:focus {
 .widget_recent_comments ul ul > li > a::before,
 .widget_recent_entries ul ul > li > a::before,
 .widget_rss ul ul > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3257,7 +3268,7 @@ a:focus {
 .entry .entry-content .wp-block-latest-posts li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(22px * 1.125);
+  font-size: calc(20px * 1.125);
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 0.75rem;
@@ -3296,7 +3307,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-categories ul > li > a::before {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3327,14 +3338,14 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-verse {
-  font-family: "Baskerville Old Face", Garamond, "Times New Roman", serif;
-  font-size: 22px;
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+  font-size: 20px;
   line-height: 1.8;
 }
 
 .entry .entry-content .has-drop-cap:not(:focus):first-letter {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 3.375em;
+  font-size: 2.8125em;
   line-height: 1;
   font-weight: bold;
   margin: 0 0 0 0.25em;
@@ -3356,7 +3367,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote p {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
   font-style: italic;
   line-height: 1.3;
   margin-bottom: 0.5em;
@@ -3369,7 +3380,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-pullquote p {
-    font-size: 2.25em;
+    font-size: 1.6875em;
   }
 }
 
@@ -3416,7 +3427,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
   line-height: 1.3;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
@@ -3424,7 +3435,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-    font-size: 2.25em;
+    font-size: 1.6875em;
   }
 }
 
@@ -3497,7 +3508,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-quote.is-large p, .entry .entry-content .wp-block-quote.is-style-large p {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
   line-height: 1.4;
   font-style: italic;
 }
@@ -3518,7 +3529,7 @@ a:focus {
     padding: 1rem 0;
   }
   .entry .entry-content .wp-block-quote.is-large p, .entry .entry-content .wp-block-quote.is-style-large p {
-    font-size: 1.6875em;
+    font-size: 1.40625em;
   }
 }
 
@@ -3595,7 +3606,7 @@ a:focus {
 .entry .entry-content .wp-block-cover .wp-block-cover-text,
 .entry .entry-content .wp-block-cover h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.6875em;
+  font-size: 1.40625em;
   font-weight: bold;
   line-height: 1.25;
   padding: 0;
@@ -3609,7 +3620,7 @@ a:focus {
   .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
   .entry .entry-content .wp-block-cover .wp-block-cover-text,
   .entry .entry-content .wp-block-cover h2 {
-    font-size: 2.25em;
+    font-size: 1.6875em;
     max-width: 100%;
   }
 }
@@ -3746,7 +3757,7 @@ a:focus {
 .entry .entry-content .wp-block-separator.is-style-dots:before,
 .entry .entry-content hr.is-style-dots:before {
   color: #767676;
-  font-size: 1.6875em;
+  font-size: 1.40625em;
   letter-spacing: 0.88889em;
   padding-right: 0.88889em;
 }
@@ -3778,7 +3789,7 @@ a:focus {
   border-radius: 5px;
   background: #0073aa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
   text-decoration: none;
   font-weight: bold;
@@ -3790,7 +3801,7 @@ a:focus {
 
 @media only screen and (min-width: 1168px) {
   .entry .entry-content .wp-block-file .wp-block-file__button {
-    font-size: 22px;
+    font-size: 20px;
     padding: 0.875rem 1.5rem;
   }
 }
@@ -3866,6 +3877,10 @@ a:focus {
   font-size: 0.71111em;
 }
 
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 .entry .entry-content .has-small-font-size {
   font-size: 0.88889em;
 }
@@ -3875,11 +3890,11 @@ a:focus {
 }
 
 .entry .entry-content .has-large-font-size {
-  font-size: 1.6875em;
+  font-size: 1.40625em;
 }
 
 .entry .entry-content .has-huge-font-size {
-  font-size: 2.25em;
+  font-size: 1.6875em;
 }
 
 .entry .entry-content .has-primary-background-color,

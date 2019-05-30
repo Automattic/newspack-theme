@@ -798,6 +798,14 @@
 		}
 	}
 
+	//! Newspack Block
+
+	.wp-block-newspack-blocks-homepage-articles {
+		.article-meta {
+			font-family: $font__heading;
+		}
+	}
+
 	//! Font Sizes
 	.has-small-font-size {
 		font-size: $font__size-sm;
