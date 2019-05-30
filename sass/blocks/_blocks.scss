@@ -492,7 +492,6 @@
 
 	//! Image
 	.wp-block-image {
-		max-width: 100%;
 
 		img {
 			display: block;
@@ -518,13 +517,11 @@
 
 		&.alignfull img {
 			width: 100vw;
-			max-width: calc( 100% + (2 * #{$size__spacing-unit}));
+			max-width: 100vw;
+		}
 
-			@include media(tablet) {
-				max-width: calc( 125% + 150px );
-				margin-left: auto;
-				margin-right: auto;
-			}
+		&.alignwide {
+			max-width: 100vw;
 		}
 	}
 
