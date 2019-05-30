@@ -56,16 +56,6 @@
 		color: $color__text-light;
 		font-weight: 500;
 
-		> span {
-
-			margin-right: $size__spacing-unit;
-			display: inline-block;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-
 		a {
 
 			@include link-transition;
@@ -87,6 +77,15 @@
 
 	.entry-meta {
 		margin: $size__spacing-unit 0;
+
+		.author-avatar {
+			float: left;
+			margin-right: #{ $size__spacing-unit * 0.5 };
+		}
+
+		.byline {
+			display: block;
+		}
 	}
 
 	.entry-footer {
@@ -100,6 +99,16 @@
 
 		@include media(desktop) {
 			max-width: $size__site-desktop-content;
+		}
+
+		> span {
+
+			margin-right: $size__spacing-unit;
+			display: inline-block;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 

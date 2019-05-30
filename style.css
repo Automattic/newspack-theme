@@ -2331,17 +2331,6 @@ a:focus {
   font-weight: 500;
 }
 
-.entry .entry-meta > span,
-.entry .entry-footer > span {
-  margin-right: 1rem;
-  display: inline-block;
-}
-
-.entry .entry-meta > span:last-child,
-.entry .entry-footer > span:last-child {
-  margin-right: 0;
-}
-
 .entry .entry-meta a,
 .entry .entry-footer a {
   transition: color 110ms ease-in-out;
@@ -2366,6 +2355,15 @@ a:focus {
   margin: 1rem 0;
 }
 
+.entry .entry-meta .author-avatar {
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.entry .entry-meta .byline {
+  display: block;
+}
+
 .entry .entry-footer {
   margin: calc(2 * 1rem) 0 1rem;
 }
@@ -2381,6 +2379,15 @@ a:focus {
   .entry .entry-footer {
     max-width: 65%;
   }
+}
+
+.entry .entry-footer > span {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.entry .entry-footer > span:last-child {
+  margin-right: 0;
 }
 
 .entry .post-thumbnail {
