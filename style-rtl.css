@@ -1516,6 +1516,32 @@ a:focus {
   margin-left: 0.5rem;
 }
 
+/** === Tertiary menu === */
+.tertiary-menu {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.88889em;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .tertiary-menu {
+    padding: 0;
+  }
+}
+
+.tertiary-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.tertiary-menu > li > a {
+  margin-left: 0.5rem;
+}
+
 /* Social menu */
 .social-navigation {
   text-align: right;
@@ -2005,23 +2031,31 @@ a:focus {
   }
 }
 
-.site-branding {
+.site-branding-container {
   align-items: center;
-  color: #767676;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
   max-width: 90%;
   padding: 1rem 0;
-  position: relative;
   width: 1200px;
 }
 
 @media only screen and (min-width: 768px) {
-  .site-branding {
+  .site-branding-container {
+    flex-wrap: nowrap;
     padding: 2rem 0;
   }
+}
+
+.site-branding {
+  align-items: center;
+  color: #767676;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 .site-logo {

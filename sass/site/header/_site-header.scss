@@ -27,21 +27,29 @@
 
 // Site branding
 
-.site-branding {
+.site-branding-container {
 	align-items: center;
-	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: auto;
 	max-width: 90%;
 	padding: $size__spacing-unit 0;
-	position: relative;
 	width: $size__site-main;
 
 	@include media(tablet) {
+		flex-wrap: nowrap;
 		padding: #{$size__spacing-unit * 2} 0;
 	}
+}
+
+.site-branding {
+	align-items: center;
+	color: $color__text-light;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
 }
 
 // Site logo

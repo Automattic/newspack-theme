@@ -57,7 +57,22 @@
 
 			<div class="site-branding-container">
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-			</div><!-- .layout-wrap -->
+
+				<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'tertiary-menu',
+								'menu_class'     => 'tertiary-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'          => 1,
+							)
+						);
+						?>
+					</nav>
+				<?php endif; ?>
+			</div><!-- .site-branding-container -->
 
 			<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
