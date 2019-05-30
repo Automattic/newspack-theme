@@ -95,11 +95,6 @@
 
 		@include media(tablet) {
 			margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
-			max-width: $size__site-tablet-content;
-		}
-
-		@include media(desktop) {
-			max-width: $size__site-desktop-content;
 		}
 	}
 
@@ -118,17 +113,6 @@
 				display: block;
 				width: 100%;
 			}
-		}
-	}
-
-	.entry-content,
-	.entry-summary {
-		@include media(tablet) {
-			max-width: $size__site-tablet-content;
-		}
-
-		@include media(desktop) {
-			max-width: $size__site-desktop-content;
 		}
 	}
 
@@ -176,17 +160,8 @@
 
 		// Overwrite iframe embeds that have inline styles.
 		> iframe[style] {
-
 			margin: 32px 0 !important;
 			max-width: 100% !important;
-
-			@include media(tablet) {
-				max-width: $size__site-tablet-content !important;
-			}
-
-			@include media(desktop) {
-				max-width: $size__site-desktop-content !important;
-			}
 		}
 
 		// Page links
@@ -198,14 +173,6 @@
 		// Classic editor audio embeds.
 		.wp-audio-shortcode {
 			max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
-
-			@include media(tablet) {
-				max-width: $size__site-tablet-content;
-			}
-
-			@include media(desktop) {
-				max-width: $size__site-desktop-content;
-			}
 		}
 	}
 }
@@ -226,8 +193,6 @@
 
 .author-bio {
 	margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
-
-	@include postContentMaxWidth();
 
 	@include media(tablet) {
 		margin: calc(3 * #{$size__spacing-unit}) auto;

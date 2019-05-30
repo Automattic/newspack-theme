@@ -2,16 +2,16 @@
 /** === Layout === */
 
 #page {
+	overflow: hidden;
 	width: 100%;
 }
 
 .site-content {
-	overflow: hidden;
-}
-
-#main {
 	margin: auto;
-	width: $size__site-main;
 	max-width: 90%;
+	width: $size__site-main;
 }
 
+body:not(.newspack-front-page) #main {
+	@include postContentMaxWidth();
+}
