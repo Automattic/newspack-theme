@@ -24,8 +24,7 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 		);
 
 		printf(
-			'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
-			newspack_get_icon_svg( 'watch', 16 ),
+			'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
 			esc_url( get_permalink() ),
 			$time_string
 		);
@@ -38,10 +37,10 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	 */
 	function newspack_posted_by() {
 		printf(
-			/* translators: 1: SVG icon. 2: post author, only visible to screen readers. 3: author link. */
-			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			newspack_get_icon_svg( 'person', 16 ),
-			__( 'Posted by', 'newspack' ),
+			/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
+			'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
+			get_avatar( get_the_author_meta( 'ID' ) ),
+			esc_html__( 'by', 'newspack' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
 		);

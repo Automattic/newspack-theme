@@ -2069,11 +2069,8 @@ a:focus {
 
 .site-logo {
   line-height: 1;
-  height: auto;
   margin: 0 0 0 1rem;
   max-width: 80%;
-  max-height: 20px;
-  width: auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -2094,7 +2091,10 @@ a:focus {
 }
 
 .site-logo .custom-logo-link .custom-logo {
+  height: auto;
   min-height: inherit;
+  max-height: 150px;
+  width: auto;
 }
 
 .site-title {
@@ -2130,19 +2130,6 @@ a:focus {
 --------------------------------------------------------------*/
 .sticky {
   display: block;
-}
-
-.sticky-post {
-  background: #0073aa;
-  color: #fff;
-  display: inline-block;
-  font-weight: bold;
-  line-height: 1;
-  padding: .25rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: -1rem;
-  z-index: 1;
 }
 
 .updated:not(.published) {
@@ -2185,17 +2172,6 @@ a:focus {
   font-weight: 500;
 }
 
-.entry-meta > span,
-.entry-footer > span {
-  margin-left: 1rem;
-  display: inline-block;
-}
-
-.entry-meta > span:last-child,
-.entry-footer > span:last-child {
-  margin-left: 0;
-}
-
 .entry-meta a,
 .entry-footer a {
   transition: color 110ms ease-in-out;
@@ -2221,18 +2197,48 @@ a:focus {
   margin-left: 0.5em;
 }
 
-.entry-meta {
+.entry-meta .svg-icon .entry-meta,
+.entry-footer .svg-icon .entry-meta {
   margin: 1rem 0;
 }
 
-.entry-footer {
+.entry-meta .svg-icon .entry-meta .author-avatar,
+.entry-footer .svg-icon .entry-meta .author-avatar {
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.entry-meta .svg-icon .entry-meta .byline,
+.entry-footer .svg-icon .entry-meta .byline {
+  display: block;
+}
+
+.entry-meta .entry-meta,
+.entry-footer .entry-meta {
+  margin: 1rem 0;
+}
+
+.entry-meta .entry-footer,
+.entry-footer .entry-footer {
   margin: calc(2 * 1rem) 0 1rem;
 }
 
-@media only screen and (min-width: 768px) {
-  .entry-footer {
-    margin: 1rem 0 calc(3 * 1rem);
+@media only screen and (min-width: 1168px) {
+  .entry-meta .entry-footer,
+  .entry-footer .entry-footer {
+    max-width: 65%;
   }
+}
+
+.entry-meta .entry-footer > span,
+.entry-footer .entry-footer > span {
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.entry-meta .entry-footer > span:last-child,
+.entry-footer .entry-footer > span:last-child {
+  margin-left: 0;
 }
 
 .post-thumbnail {
