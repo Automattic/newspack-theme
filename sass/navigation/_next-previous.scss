@@ -5,14 +5,6 @@
 
 	margin: calc(3 * 1rem) 0;
 
-	@include media(tablet) {
-		max-width: $size__site-tablet-content;
-	}
-
-	@include media(desktop) {
-		max-width: $size__site-desktop-content;
-	}
-
 	.nav-links {
 		display: flex;
 		flex-direction: column;
@@ -92,8 +84,6 @@
 .pagination {
 
 	.nav-links {
-
-		@include postContentMaxWidth();
 
 		display: flex;
 		flex-wrap: wrap;
