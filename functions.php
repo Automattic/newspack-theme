@@ -303,6 +303,7 @@ function newspack_colors_css_wrap() {
 	<?php
 }
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
+
 /**
  * SVG Icons class.
  */
@@ -312,6 +313,11 @@ require get_template_directory() . '/classes/class-newspack-svg-icons.php';
  * Custom Comment Walker template.
  */
 require get_template_directory() . '/classes/class-newspack-walker-comment.php';
+
+/**
+ * Style pack class.
+ */
+require get_template_directory() . '/classes/class-newspack-style-packs-core.php';
 
 /**
  * Enhance the theme by hooking into WordPress.
