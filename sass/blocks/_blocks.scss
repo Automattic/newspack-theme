@@ -102,6 +102,7 @@
  */
 .entry .entry-content,
 .entry .entry-summary {
+
 	.entry-content,
 	.entry-summary,
 	.entry {
@@ -118,6 +119,7 @@
 }
 
 .entry .entry-content {
+
 	//! Paragraphs
 	p.has-background {
 		padding: 20px 30px;
@@ -125,6 +127,7 @@
 
 	//! Audio
 	.wp-block-audio {
+
 		width: 100%;
 
 		audio {
@@ -133,6 +136,7 @@
 
 		&.alignleft audio,
 		&.alignright audio {
+
 			max-width: (0.33 * $mobile_width);
 
 			@include media(tablet) {
@@ -147,6 +151,7 @@
 
 	//! Video
 	.wp-block-video {
+
 		video {
 			width: 100%;
 		}
@@ -154,6 +159,7 @@
 
 	//! Button
 	.wp-block-button {
+
 		.wp-block-button__link {
 			@include button-transition;
 			border: none;
@@ -163,7 +169,7 @@
 			box-sizing: border-box;
 			font-weight: bold;
 			text-decoration: none;
-			padding: ($size__spacing-unit * 0.76) $size__spacing-unit;
+			padding: ($size__spacing-unit * .76) $size__spacing-unit;
 			outline: none;
 			outline: none;
 
@@ -232,7 +238,7 @@
 			font-size: calc(#{$font__size_base} * #{$font__size-ratio});
 			font-weight: bold;
 			line-height: $font__line-height-heading;
-			padding-bottom: (0.75 * $size__spacing-unit);
+			padding-bottom: ( .75 * $size__spacing-unit );
 
 			&.menu-item-has-children,
 			&:last-child {
@@ -247,6 +253,7 @@
 
 	.wp-block-archives,
 	.wp-block-categories {
+
 		&.aligncenter {
 			text-align: center;
 		}
@@ -254,8 +261,9 @@
 
 	//! Latest categories
 	.wp-block-categories {
+
 		ul {
-			padding-top: (0.75 * $size__spacing-unit);
+			padding-top: ( .75 * $size__spacing-unit );
 		}
 
 		li ul {
@@ -274,13 +282,13 @@
 			margin-bottom: (2 * $size__spacing-unit);
 			a {
 				&:after {
-					content: "";
+					content: '';
 				}
 			}
 			&:last-child {
 				margin-bottom: auto;
 				a:after {
-					content: "";
+					content: '';
 				}
 			}
 		}
@@ -320,8 +328,8 @@
 		blockquote {
 			color: $color__text-main;
 			border: none;
-			margin-top: calc(4 * #{$size__spacing-unit});
-			margin-bottom: calc(4.33 * #{$size__spacing-unit});
+			margin-top: calc(4 * #{ $size__spacing-unit});
+			margin-bottom: calc(4.33 * #{ $size__spacing-unit});
 			margin-right: 0;
 			padding-left: 0;
 		}
@@ -427,20 +435,17 @@
 
 			&.alignright,
 			&.alignleft {
+
 				@include media(tablet) {
-					padding: $size__spacing-unit
-						calc(2 * #{$size__spacing-unit});
+					padding: $size__spacing-unit calc(2 * #{$size__spacing-unit});
 				}
 			}
 
 			&.alignfull {
+
 				@include media(tablet) {
-					padding-left: calc(
-						10% + 58px + (2 * #{$size__spacing-unit})
-					);
-					padding-right: calc(
-						10% + 58px + (2 * #{$size__spacing-unit})
-					);
+					padding-left: calc(10% + 58px + (2 * #{$size__spacing-unit}));
+					padding-right: calc(10% + 58px + (2 * #{$size__spacing-unit}));
 				}
 			}
 		}
@@ -448,6 +453,7 @@
 
 	//! Blockquote
 	.wp-block-quote {
+
 		&:not(.is-large),
 		&:not(.is-style-large) {
 			border-width: 2px;
@@ -504,11 +510,13 @@
 
 	//! Image
 	.wp-block-image {
+
 		img {
 			display: block;
 		}
 
 		.aligncenter {
+
 			@include media(tablet) {
 				margin: 0;
 
@@ -518,6 +526,7 @@
 			}
 
 			@include media(desktop) {
+
 				img {
 					margin: 0 auto;
 				}
@@ -571,6 +580,7 @@
 		}
 
 		&.alignfull {
+
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
@@ -578,6 +588,7 @@
 			}
 
 			@include media(tablet) {
+
 				.wp-block-cover-image-text,
 				.wp-block-cover-text,
 				h2 {
@@ -616,7 +627,7 @@
 		font-size: $font__size-xs;
 		line-height: $font__line-height-pre;
 		margin: 0;
-		padding: ($size__spacing-unit * 0.5);
+		padding: ( $size__spacing-unit * .5 );
 		text-align: center;
 	}
 
@@ -654,6 +665,7 @@
 		 * is followed by an H1, or H2 */
 		& + h1,
 		& + h2 {
+
 			&:before {
 				display: none;
 			}
@@ -667,6 +679,7 @@
 
 	//! Table
 	.wp-block-table {
+
 		th,
 		td {
 			border-color: $color__text-light;
@@ -688,15 +701,14 @@
 			line-height: $font__line-height-heading;
 			text-decoration: none;
 			font-weight: bold;
-			padding: ($size__spacing-unit * 0.75) $size__spacing-unit;
+			padding: ($size__spacing-unit * .75) $size__spacing-unit;
 			color: #fff;
 			margin-left: 0;
 			margin-top: calc(0.75 * #{$size__spacing-unit});
 
 			@include media(desktop) {
 				font-size: $font__size-base;
-				padding: ($size__spacing-unit * 0.875)
-					($size__spacing-unit * 1.5);
+				padding: ($size__spacing-unit * .875) ($size__spacing-unit * 1.5);
 			}
 
 			&:hover {
@@ -719,12 +731,13 @@
 		code {
 			font-size: $font__size-md;
 			white-space: pre-wrap;
-			word-break: break-word;
+    	                word-break: break-word;
 		}
 	}
 
 	//! Columns
 	.wp-block-columns {
+
 		&.alignfull {
 			padding-left: $size__spacing-unit;
 			padding-right: $size__spacing-unit;
@@ -736,6 +749,7 @@
 
 		@include media(tablet) {
 			.wp-block-column > * {
+
 				&:first-child {
 					margin-top: 0;
 				}
@@ -745,7 +759,7 @@
 				}
 			}
 
-			&[class*="has-"] > * {
+			&[class*='has-'] > * {
 				margin-right: $size__spacing-unit;
 
 				&:last-child {
@@ -763,6 +777,7 @@
 
 	//! Latest Comments
 	.wp-block-latest-comments {
+
 		.wp-block-latest-comments__comment-meta {
 			font-family: $font__heading;
 			font-weight: bold;
@@ -779,15 +794,18 @@
 		}
 
 		&.has-avatars {
+
 		}
 
 		&.has-dates {
+
 			.wp-block-latest-comments__comment-date {
 				font-size: $font__size-xs;
 			}
 		}
 
 		&.has-excerpts {
+
 		}
 	}
 
@@ -821,6 +839,7 @@
 	.has-primary-variation-background-color,
 	.has-secondary-background-color,
 	.has-secondary-variation-background-color {
+
 		// Use white text against these backgrounds by default.
 		color: $color__background-body;
 
@@ -874,7 +893,7 @@
 
 	.has-white-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-white-background-color {
-		background-color: #fff;
+		background-color: #FFF;
 	}
 
 	//! Custom foreground colors
@@ -885,11 +904,8 @@
 	}
 
 	.has-primary-variation-color,
-	.wp-block-pullquote.is-style-solid-color
-		blockquote.has-primary-variation-color,
-	.wp-block-pullquote.is-style-solid-color
-		blockquote.has-primary-variation-color
-		p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p {
 		color: $color__primary-variation;
 	}
 
@@ -900,16 +916,13 @@
 	}
 
 	.has-secondary-variation-color,
-	.wp-block-pullquote.is-style-solid-color
-		blockquote.has-secondary-variation-color,
-	.wp-block-pullquote.is-style-solid-color
-		blockquote.has-secondary-variation-color
-		p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
 		color: $color__secondary-variation;
 	}
 
 	.has-white-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
-		color: #fff;
+		color: #FFF;
 	}
 }
