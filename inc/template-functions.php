@@ -36,6 +36,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hide-homepage-title';
 	}
 
+	// Adds a class of has-sidebar when there is a sidebar present.
+	if ( is_active_sidebar( 'sidebar-1' ) && is_single() ) {
+		$classes[] = 'has-sidebar';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );

@@ -908,3 +908,26 @@
 		color: #FFF;
 	}
 }
+
+.single.has-sidebar {
+	.entry .entry-content > *,
+	.entry .entry-summary > * {
+		&.alignwide {
+			@include media(tablet) {
+				margin-right: 0;
+				max-width: 100%;
+			}
+		}
+
+		&.alignfull {
+			margin-left: 0;
+			margin-right: 0;
+			max-width: 100%;
+			width: 100%;
+
+			@include media(tablet) {
+				margin-left: 0;
+			}
+		}
+	}
+}

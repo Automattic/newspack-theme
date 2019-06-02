@@ -11,13 +11,17 @@
 }
 
 #main {
-	display: flex;
-	flex-wrap: wrap;
 	margin: auto;
 	max-width: 90%;
 	width: $size__site-main;
 }
 
-body:not(.newspack-front-page) #main {
+.single #main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+body:not(.newspack-front-page):not(.has-sidebar) .main-content {
 	@include postContentMaxWidth();
 }
