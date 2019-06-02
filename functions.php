@@ -210,7 +210,7 @@ function newspack_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => __( 'Footer', 'newspack' ),
-			'id'            => 'sidebar-2',
+			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'newspack' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
