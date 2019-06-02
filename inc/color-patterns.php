@@ -52,7 +52,8 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
-		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
+		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
+		.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
 			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 

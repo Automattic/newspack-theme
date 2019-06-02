@@ -3774,8 +3774,19 @@ a:focus {
   font-size: 0.71111em;
 }
 
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+  border-bottom: 4px solid #ddd;
+  color: #0073aa;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .author-name .author {
+  font-weight: bold;
 }
 
 .entry .entry-content .has-small-font-size {
