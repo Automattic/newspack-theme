@@ -1518,22 +1518,22 @@ a:focus {
 
 /** === Tertiary menu === */
 .tertiary-menu {
-  display: flex;
-  flex-wrap: wrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
   list-style: none;
   margin: 0;
-  padding: 0 0 0.5rem;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
   .tertiary-menu {
     padding: 0;
+    text-align: left;
   }
 }
 
 .tertiary-menu li {
+  display: inline;
   margin: 0;
   padding: 0;
 }
@@ -3732,8 +3732,19 @@ a:focus {
   font-size: 0.71111em;
 }
 
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+  border-bottom: 4px solid #ddd;
+  color: #0073aa;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .author-name .author {
+  font-weight: bold;
 }
 
 .entry .entry-content .has-small-font-size {

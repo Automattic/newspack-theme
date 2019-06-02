@@ -794,8 +794,20 @@
 	//! Newspack Block
 
 	.wp-block-newspack-blocks-homepage-articles {
+
+		.article-section-title {
+			border-bottom: 4px solid #ddd;
+			color: $color__primary;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
 		.article-meta {
 			font-family: $font__heading;
+		}
+
+		.author-name .author {
+			font-weight: bold;
 		}
 	}
 
