@@ -2162,7 +2162,12 @@ a:focus {
 .entry-meta a,
 .entry-footer a {
   transition: color 110ms ease-in-out;
-  color: currentColor;
+  color: inherit;
+}
+
+.entry-meta a:visited,
+.entry-footer a:visited {
+  color: inherit;
 }
 
 .entry-meta a:hover,

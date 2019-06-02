@@ -70,7 +70,11 @@
 	a {
 
 		@include link-transition;
-		color: currentColor;
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
 
 		&:hover {
 			text-decoration: none;
