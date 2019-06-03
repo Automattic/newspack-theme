@@ -59,7 +59,18 @@ body {
 	max-width: 100%;
 
 	@include media(tablet) {
-		width: 780px;
+		width: 866px; // 780px + ( 43px x 2 ) for padding
+	}
+
+	// Only the top level blocks need specific widths, therefore override for every nested block.
+	.wp-block {
+		width: 100%;
+	}
+}
+
+.newspack-static-front-page .wp-block {
+	@include media(tablet) {
+		width: 1286px; // 1200px + ( 43px x 2 ) for padding
 	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.

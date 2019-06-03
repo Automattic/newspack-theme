@@ -51,11 +51,21 @@ body .wp-block[data-align="full"] {
 
 @media only screen and (min-width: 768px) {
   .wp-block {
-    width: 780px;
+    width: 866px;
   }
 }
 
 .wp-block .wp-block {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .newspack-static-front-page .wp-block {
+    width: 1286px;
+  }
+}
+
+.newspack-static-front-page .wp-block .wp-block {
   width: 100%;
 }
 

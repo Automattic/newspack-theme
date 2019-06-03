@@ -276,8 +276,19 @@ function newspack_editor_customizer_styles() {
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		wp_add_inline_style( 'newspack-editor-customizer-styles', newspack_custom_colors_css() );
 	}
+
+	// Add a class to style the static front page differently in the editor.
+	// A hacky work around for: https://github.com/WordPress/gutenberg/issues/10640
+	$frontpage_id = get_option( 'page_on_front' );
+	global $post;
+	$page_id = $post->ID;
+
+	if ( $frontpage_id == $page_id ) {
+		wp_enqueue_script( 'newspack-editor-classes', get_theme_file_uri( '/js/homepage-editor-class.js' ), array(), '1.0', true );
+	}
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' );
+
 
 /**
  * Display custom color CSS in customizer and on frontend.
