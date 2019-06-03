@@ -28,8 +28,7 @@ body .wp-block[data-align="full"] {
   body .editor-post-title__block,
   body .editor-default-block-appender,
   body .editor-block-list__block {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
   }
   body .wp-block[data-align="wide"] {
     width: 100%;
@@ -47,19 +46,12 @@ body .wp-block[data-align="full"] {
 
 /** === Content Width === */
 .wp-block {
-  width: calc(100vw - (2 * 1rem));
   max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
   .wp-block {
-    width: calc(8 * (100vw / 12));
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .wp-block {
-    width: calc(6 * (100vw / 12 ));
+    width: 780px;
   }
 }
 
