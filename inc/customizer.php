@@ -128,16 +128,15 @@ add_action( 'customize_register', 'newspack_customize_register' );
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-
 function newspack_customize_typography_register( $wp_customize ) {
 
 	require_once get_parent_theme_file_path( '/inc/typography.php' );
 
 	$wp_customize->add_section(
-		'newspack_typography' ,
+		'newspack_typography',
 		array(
-		    'title'      => __( 'Typography', 'newspack' ),
-		    'priority'   => 50,
+			'title'    => __( 'Typography', 'newspack' ),
+			'priority' => 50,
 		)
 	);
 
@@ -150,81 +149,81 @@ function newspack_customize_typography_register( $wp_customize ) {
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'custom_font_import_code',
-	        array(
-	            'label'       => __( 'Font import code', 'newspack' ),
-	            'description' => __( 'Paste the import tag provided by the font service. Supported services are Fonts.com, Typekit, Google Fonts, and Typography.com.'),
-	            'section'     => 'newspack_typography',
-	            'type'        => 'text',
-	        )
-	    )
+			$wp_customize,
+			'custom_font_import_code',
+			array(
+				'label'       => __( 'Font import code', 'newspack' ),
+				'description' => __( 'Paste the import tag provided by the font service. Supported services are Fonts.com, Typekit, Google Fonts, and Typography.com.' ),
+				'section'     => 'newspack_typography',
+				'type'        => 'text',
+			)
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'custom_font_import_code_alternate',
-	        array(
-	            'label'       => __( 'Font import code (alternate)', 'newspack' ),
-	            'section'     => 'newspack_typography',
-	            'type'        => 'text',
-	        )
-	    )
+			$wp_customize,
+			'custom_font_import_code_alternate',
+			array(
+				'label'   => __( 'Font import code (alternate)', 'newspack' ),
+				'section' => 'newspack_typography',
+				'type'    => 'text',
+			)
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'font_header',
-	        array(
-	            'label'    => __( 'Header font', 'newspack' ),
-	            'section'  => 'newspack_typography',
-	            'type'     => 'text',
-	        )
-	    )
+			$wp_customize,
+			'font_header',
+			array(
+				'label'   => __( 'Header font', 'newspack' ),
+				'section' => 'newspack_typography',
+				'type'    => 'text',
+			)
+		)
 	);
 
 	$font_stacks = newspack_get_font_stacks_as_select_choices();
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'font_header_stack',
-	        array(
-	            'label'    => __( 'Header font fallback stack', 'newspack' ),
-	            'default'  => 'serif',
-	            'section'  => 'newspack_typography',
-	            'type'     => 'select',
-	            'choices'  => $font_stacks
-	        )
-	    )
+			$wp_customize,
+			'font_header_stack',
+			array(
+				'label'   => __( 'Header font fallback stack', 'newspack' ),
+				'default' => 'serif',
+				'section' => 'newspack_typography',
+				'type'    => 'select',
+				'choices' => $font_stacks,
+			)
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'font_body',
-	        array(
-	            'label'    => __( 'Body font family', 'newspack' ),
-	            'section'  => 'newspack_typography',
-	            'type'     => 'text',
-	        )
-	    )
+			$wp_customize,
+			'font_body',
+			array(
+				'label'   => __( 'Body font family', 'newspack' ),
+				'section' => 'newspack_typography',
+				'type'    => 'text',
+			)
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-	        $wp_customize,
-	        'font_body_stack',
-	        array(
-	            'label'    => __( 'Header font fallback stack', 'newspack' ),
-	            'default'  => 'serif',
-	            'section'  => 'newspack_typography',
-	            'type'     => 'select',
-	            'choices'  => $font_stacks
-	        )
-	    )
+			$wp_customize,
+			'font_body_stack',
+			array(
+				'label'   => __( 'Header font fallback stack', 'newspack' ),
+				'default' => 'serif',
+				'section' => 'newspack_typography',
+				'type'    => 'select',
+				'choices' => $font_stacks,
+			)
+		)
 	);
 }
 

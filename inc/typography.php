@@ -14,7 +14,7 @@ function newspack_custom_typography_css() {
 		$theme_css = $editor_css;
 	}
 
-	$font_body = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack' ) );
+	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack' ) );
 	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack' ) );
 
 	$theme_css = "
@@ -149,7 +149,7 @@ function newspack_custom_typography_link( $theme_mod ) {
 
 	$provider_url = isset( $matches, $matches[0], $matches[0][0] ) ? $matches[0][0] : null;
 
-	if ( newspack_verify_url_for_service( $provider_url) ) {
+	if ( newspack_verify_url_for_service( $provider_url ) ) {
 		return "<link rel='stylesheet' href='$provider_url'>";
 	}
 
@@ -162,12 +162,13 @@ function newspack_custom_typography_link( $theme_mod ) {
  */
 function newspack_verify_url_for_service( $url ) {
 	$newspack_service_hosts = array(
-		'google' => 'fonts.googleapis.com',
-		'fonts' => 'fast.fonts.net',
-		'typekit' => 'use.typekit.net',
+		'google'     => 'fonts.googleapis.com',
+		'fonts'      => 'fast.fonts.net',
+		'typekit'    => 'use.typekit.net',
 		'typography' => 'cloud.typography.com',
 	);
-	$url_info = parse_url( $url );
+
+	$url_info = wp_parse_url( $url );
 	return ( isset( $url_info['host'] ) && in_array( $url_info['host'], array_values( $newspack_service_hosts ) ) );
 }
 
@@ -176,8 +177,8 @@ function newspack_verify_url_for_service( $url ) {
  */
 function newspack_get_font_stacks() {
 	return array(
-		'serif' => array(
-			'name' => __( 'Serif' ),
+		'serif'     => array(
+			'name'  => __( 'Serif' ),
 			'fonts' => array(
 				'TimesNewRoman',
 				'Times New Roman',
@@ -185,10 +186,10 @@ function newspack_get_font_stacks() {
 				'Baskerville',
 				'Georgia',
 				'serif',
-			)
+			),
 		),
 		'san_serif' => array(
-			'name' => __( 'San Serif' ),
+			'name'  => __( 'San Serif' ),
 			'fonts' => array(
 				'Arial',
 				'Helvetica Neue',
@@ -205,7 +206,7 @@ function newspack_get_font_stacks() {
 function newspack_get_font_stacks_as_select_choices() {
 	$stacks = array();
 	foreach ( newspack_get_font_stacks() as $key => $value ) {
-		$stacks[ $key ] = $value[ 'name' ];
+		$stacks[ $key ] = $value['name'];
 	}
 	return $stacks;
 }
@@ -215,7 +216,7 @@ function newspack_get_font_stacks_as_select_choices() {
  */
 function newspack_font_stack( $primary_font, $fallback_id ) {
 	$stacks = newspack_get_font_stacks();
-	$fonts = isset( $stacks[ $fallback_id ] ) ? $stacks[ $fallback_id ][ "fonts" ] : array();
+	$fonts  = isset( $stacks[ $fallback_id ] ) ? $stacks[ $fallback_id ]['fonts'] : array();
 	array_unshift( $fonts, $primary_font );
 	return implode( ',', $fonts );
 }
