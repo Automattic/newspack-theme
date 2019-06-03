@@ -345,6 +345,28 @@ function newspack_colors_css_wrap() {
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
 
 /**
+ * Display custom color CSS in customizer and on frontend.
+ */
+function newspack_typography_css_wrap() {
+
+	if ( is_admin() ) {
+		return;
+	}
+
+	require_once get_parent_theme_file_path( '/inc/typography.php' );
+
+	?>
+	<?php echo newspack_custom_typography_link( 'custom_font_import_code' ); ?>
+	<?php echo newspack_custom_typography_link( 'custom_font_import_code_alternate' ); ?>
+
+	<style type="text/css" id="custom-typography">
+		<?php echo newspack_custom_typography_css(); ?>
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'newspack_typography_css_wrap' );
+
+/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
