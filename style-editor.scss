@@ -23,11 +23,11 @@ body {
 		}
 	}
 
-	@include media(tablet) {
+	@include media(desktop) {
 
 		.editor-writing-flow {
-			max-width: 80%;
-			margin: 0 10%;
+			max-width: 1322px;
+			margin: 0 auto;
 		}
 
 		.editor-post-title__block,
@@ -59,7 +59,7 @@ body {
 	max-width: 100%;
 
 	@include media(tablet) {
-		width: 866px; // 780px + ( 43px x 2 ) for padding
+		width: 810px; // 780px + 30px to offset padding
 	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.
@@ -70,7 +70,7 @@ body {
 
 .newspack-static-front-page .wp-block {
 	@include media(tablet) {
-		width: 1286px; // 1200px + ( 43px x 2 ) for padding
+		width: 1230px; // 1200px + 30px to offset padding
 	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.

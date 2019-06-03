@@ -20,10 +20,10 @@ body .wp-block[data-align="full"] {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1168px) {
   body .editor-writing-flow {
-    max-width: 80%;
-    margin: 0 10%;
+    max-width: 1322px;
+    margin: 0 auto;
   }
   body .editor-post-title__block,
   body .editor-default-block-appender,
@@ -51,7 +51,7 @@ body .wp-block[data-align="full"] {
 
 @media only screen and (min-width: 768px) {
   .wp-block {
-    width: 866px;
+    width: 810px;
   }
 }
 
@@ -61,7 +61,7 @@ body .wp-block[data-align="full"] {
 
 @media only screen and (min-width: 768px) {
   .newspack-static-front-page .wp-block {
-    width: 1286px;
+    width: 1230px;
   }
 }
 
