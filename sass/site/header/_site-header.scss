@@ -28,7 +28,7 @@
 }
 
 .site-branding {
-	align-items: center;
+	align-items: baseline;
 	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
@@ -72,16 +72,14 @@
 		}
 	}
 
-	&:not(:empty) + .site-description:not(:empty):before {
-		content: "\2014";
-		margin: 0 .2em;
+	&:not(:empty) + .site-description:not(:empty) {
+		margin-left: 0.5em;
 	}
 }
 
 // Site description
 
 .site-description {
-
 	color: $color__text-light;
 	flex: 1 1 auto;
 	font-weight: normal;

@@ -20,6 +20,7 @@
 				display: block;
 				color: $color__text-main;
 				margin-bottom: -1px;
+				padding: 0 0.25em;
 				transition: opacity $link_transition ease-in-out;
 
 				&:hover,
@@ -36,8 +37,8 @@
 
 				svg {
 					display: block;
-					width: 32px;
-					height: 32px;
+					width: 24px;
+					height: 24px;
 
 					// Prevent icons from jumping in Safari using hardware acceleration.
 					transform: translateZ(0);

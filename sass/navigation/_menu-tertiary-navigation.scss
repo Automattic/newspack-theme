@@ -23,4 +23,8 @@
 			margin-right: #{0.5 * $size__spacing-unit};
 		}
 	}
+
+	a, a:visited {
+		color: $color__text-light;
+	}
 }

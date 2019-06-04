@@ -449,7 +449,6 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.main-navigation,
 .page-description,
 .author-description .author-link,
 .not-found .page-title,
@@ -467,6 +466,12 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-navigation {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -521,7 +526,6 @@ h3 {
 
 .site-title,
 .site-description,
-.main-navigation,
 .nav-links,
 .page-title,
 .page-description,
@@ -533,6 +537,7 @@ h4 {
   font-size: 1.125em;
 }
 
+.main-navigation,
 .pagination .nav-links,
 .comment-content,
 h5 {
@@ -938,7 +943,6 @@ a:focus {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
   background: transparent;
@@ -975,7 +979,6 @@ a:focus {
 }
 
 .main-navigation .main-menu > li > a {
-  font-weight: 700;
   color: #0073aa;
   margin-left: 0.5rem;
 }
@@ -1542,6 +1545,10 @@ a:focus {
   margin-left: 0.5rem;
 }
 
+.tertiary-menu a {
+  color: #767676;
+}
+
 /* Social menu */
 .social-navigation {
   text-align: right;
@@ -1566,6 +1573,7 @@ a:focus {
   display: block;
   color: #111;
   margin-bottom: -1px;
+  padding: 0 0.25em;
   transition: opacity 110ms ease-in-out;
 }
 
@@ -1582,8 +1590,8 @@ a:focus {
 
 .social-navigation ul.social-links-menu li a svg {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   transform: translateZ(0);
 }
 
@@ -2030,7 +2038,7 @@ a:focus {
 }
 
 .site-branding {
-  align-items: center;
+  align-items: baseline;
   color: #767676;
   display: flex;
   flex-wrap: wrap;
@@ -2069,9 +2077,8 @@ a:focus {
   color: #4a4a4a;
 }
 
-.site-title:not(:empty) + .site-description:not(:empty):before {
-  content: "\2014";
-  margin: 0 .2em;
+.site-title:not(:empty) + .site-description:not(:empty) {
+  margin-right: 0.5em;
 }
 
 .site-description {
