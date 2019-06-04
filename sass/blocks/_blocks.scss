@@ -77,6 +77,24 @@
 	}
 }
 
+// Wide and full widths need adjustment for the homepage
+.newspack-front-page {
+	.entry .entry-content > * {
+		&.alignwide {
+			@include media(tablet) {
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
+			}
+		}
+		&.alignfull {
+			@include media(tablet) {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+			}
+		}
+	}
+}
+
 /*
  * Unset nested content selector styles
  * - Prevents layout styles from cascading too deeply
