@@ -1,0 +1,29 @@
+/* !Newspack Block styles */
+
+.entry .entry-content {
+
+	/* !Homepage article blocks */
+	.wp-block-newspack-blocks-homepage-articles {
+
+		.article-section-title {
+			border-bottom: 4px solid #ddd;
+			color: $color__primary;
+			display: inline-block;
+			text-transform: uppercase;
+
+			span {
+				border-bottom: 4px solid #666;
+				display: inline-block;
+				margin-bottom: -4px;
+			}
+		}
+
+		.article-meta {
+			font-family: $font__heading;
+		}
+
+		.author-name .author {
+			font-weight: bold;
+		}
+	}
+}

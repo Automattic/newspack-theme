@@ -742,7 +742,8 @@
 			}
 
 			&[class*='has-'] > * {
-				margin-right: $size__spacing-unit;
+				margin-left: 0;
+				margin-right: calc(2 * #{$size__spacing-unit});
 
 				&:last-child {
 					margin-right: 0;
@@ -788,26 +789,6 @@
 
 		&.has-excerpts {
 
-		}
-	}
-
-	//! Newspack Block
-
-	.wp-block-newspack-blocks-homepage-articles {
-
-		.article-section-title {
-			border-bottom: 4px solid #ddd;
-			color: $color__primary;
-			display: inline-block;
-			text-transform: uppercase;
-		}
-
-		.article-meta {
-			font-family: $font__heading;
-		}
-
-		.author-name .author {
-			font-weight: bold;
 		}
 	}
 
