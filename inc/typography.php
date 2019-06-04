@@ -17,7 +17,7 @@ function newspack_custom_typography_css() {
 
 	if ( get_theme_mod( 'font_header' ) ) {
 		$css_blocks[] = "
-		/* _headings.scssc */
+		/* _headings.scss */
 		.author-description .author-link,
 		.comment-metadata,
 		.comment-reply-link,
