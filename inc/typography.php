@@ -172,8 +172,8 @@ function newspack_get_font_stacks() {
 				'serif',
 			),
 		),
-		'san_serif' => array(
-			'name'  => __( 'San Serif' ),
+		'sans_serif' => array(
+			'name'  => __( 'Sans Serif' ),
 			'fonts' => array(
 				'Arial',
 				'Helvetica Neue',
