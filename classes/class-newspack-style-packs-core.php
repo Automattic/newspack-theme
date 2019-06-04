@@ -2,6 +2,9 @@
 /**
  * Style Packs core functionality.
  *
+ * Based on functionality in Radcliffe 2:
+ * https://github.com/Automattic/themes/blob/master/radcliffe-2/inc/style-packs-core.php
+ *
  * @package Newspack
  */
 /**
