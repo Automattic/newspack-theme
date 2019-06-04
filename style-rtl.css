@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Posts and pages
 	## Comments
 # Blocks
+	## Newpack blocks
 # Media
 	## Captions
 	## Galleries
@@ -1154,6 +1155,17 @@ a:focus {
   /* Nested sub-menu dashes */
 }
 
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
+  display: block;
+  right: 0;
+  margin-top: 0;
+  opacity: 1;
+  width: auto;
+  min-width: 100%;
+  /* Non-mobile position */
+  /* Nested sub-menu dashes */
+}
+
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu {
   display: block;
   right: 0;
@@ -1166,6 +1178,21 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    height: auto;
+    min-width: -moz-max-content;
+    min-width: -webkit-max-content;
+    min-width: max-content;
+    transform: none;
+  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu {
     display: block;
     margin-top: 0;
@@ -1205,6 +1232,13 @@ a:focus {
   position: absolute;
 }
 
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu.hidden-links {
+  right: 0;
+  width: 100%;
+  display: table;
+  position: absolute;
+}
+
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu.hidden-links {
   right: 0;
   width: 100%;
@@ -1213,6 +1247,12 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu.hidden-links {
+    left: 0;
+    right: auto;
+    display: block;
+    width: max-content;
+  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu.hidden-links {
     left: 0;
     right: auto;
@@ -1231,8 +1271,22 @@ a:focus {
   display: none;
 }
 
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .submenu-expand {
+  display: none;
+}
+
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .submenu-expand {
   display: none;
+}
+
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
+  display: block;
+  margin-top: inherit;
+  position: relative;
+  width: 100%;
+  right: 0;
+  opacity: 1;
+  /* Non-mobile position */
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
@@ -1260,6 +1314,10 @@ a:focus {
     float: none;
     max-width: 100%;
   }
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
+    float: none;
+    max-width: 100%;
+  }
   .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu {
     float: none;
     max-width: 100%;
@@ -1270,8 +1328,19 @@ a:focus {
   counter-reset: submenu;
 }
 
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu {
+  counter-reset: submenu;
+}
+
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu {
   counter-reset: submenu;
+}
+
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+  font-weight: normal;
+  content: "– " counters(submenu, "– ", none);
+  counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
@@ -3743,7 +3812,8 @@ a:focus {
     margin-bottom: 0;
   }
   .entry .entry-content .wp-block-columns[class*='has-'] > * {
-    margin-left: 1rem;
+    margin-right: 0;
+    margin-left: calc(2 * 1rem);
   }
   .entry .entry-content .wp-block-columns[class*='has-'] > *:last-child {
     margin-left: 0;
@@ -3772,21 +3842,6 @@ a:focus {
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
   font-size: 0.71111em;
-}
-
-.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
-  border-bottom: 4px solid #ddd;
-  color: #0073aa;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-.entry .entry-content .wp-block-newspack-blocks-homepage-articles .author-name .author {
-  font-weight: bold;
 }
 
 .entry .entry-content .has-small-font-size {
@@ -3937,6 +3992,32 @@ a:focus {
   .single.has-sidebar .entry .entry-summary > *.alignfull {
     margin-right: 0;
   }
+}
+
+/* !Newspack Block styles */
+.entry .entry-content {
+  /* !Homepage article blocks */
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+  border-bottom: 4px solid #ddd;
+  color: #0073aa;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-section-title span {
+  border-bottom: 4px solid #666;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.entry .entry-content .wp-block-newspack-blocks-homepage-articles .author-name .author {
+  font-weight: bold;
 }
 
 /* Media */
