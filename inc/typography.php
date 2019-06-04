@@ -190,7 +190,7 @@ function newspack_get_font_stacks() {
 function newspack_get_font_stacks_as_select_choices() {
 	$stacks = array();
 	foreach ( newspack_get_font_stacks() as $key => $value ) {
-		$stacks[ $key ] = $value['name'];
+		$stacks[ $key ] = wp_kses( $value['name'], null );
 	}
 	return $stacks;
 }
