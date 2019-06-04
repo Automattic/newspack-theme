@@ -31,159 +31,179 @@
 	&:first-of-type {
 		margin-top: 0;
 	}
+}
 
-	.entry-header {
-		margin: calc(3 * #{ $size__spacing-unit}) 0 $size__spacing-unit;
+.entry-header {
+	margin: calc(3 * #{ $size__spacing-unit}) 0 $size__spacing-unit;
+	position: relative;
+}
+
+.entry-title {
+
+	margin: 0;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $color__text-hover;
+		}
+	}
+}
+
+.entry-meta,
+.entry-footer {
+
+	color: $color__text-light;
+	font-weight: 500;
+
+	> span {
+
+		margin-right: $size__spacing-unit;
+		display: inline-block;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	a {
+
+		@include link-transition;
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $color__primary-variation;
+		}
+	}
+
+	.svg-icon {
 		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0.5em;
+	}
+}
+
+.entry-meta {
+	margin: $size__spacing-unit 0;
+}
+
+.entry-footer {
+
+	margin: calc(2 * #{$size__spacing-unit}) 0 $size__spacing-unit;
+
+	@include media(tablet) {
+		margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
+	}
+}
+
+.post-thumbnail {
+	margin: $size__spacing-unit 0;
+
+	&:focus {
+		outline: none;
 	}
 
-	.entry-title {
+	.post-thumbnail-inner {
+		display: block;
 
-		margin: 0;
-
-		a {
-			color: inherit;
-
-			&:hover {
-				color: $color__text-hover;
-			}
-		}
-	}
-
-	.entry-meta,
-	.entry-footer {
-
-		color: $color__text-light;
-		font-weight: 500;
-
-		> span {
-
-			margin-right: $size__spacing-unit;
-			display: inline-block;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-
-		a {
-
-			@include link-transition;
-			color: currentColor;
-
-			&:hover {
-				text-decoration: none;
-				color: $color__primary-variation;
-			}
-		}
-
-		.svg-icon {
+		img {
 			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 0.5em;
-		}
-	}
-
-	.entry-meta {
-		margin: $size__spacing-unit 0;
-	}
-
-	.entry-footer {
-
-		margin: calc(2 * #{$size__spacing-unit}) 0 $size__spacing-unit;
-
-		@include media(tablet) {
-			margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
-		}
-	}
-
-	.post-thumbnail {
-		margin: $size__spacing-unit 0;
-
-		&:focus {
-			outline: none;
-		}
-
-		.post-thumbnail-inner {
 			display: block;
+			width: 100%;
+		}
+	}
+}
 
-			img {
-				position: relative;
-				display: block;
-				width: 100%;
-			}
+.entry-content {
+
+	p {
+		word-wrap: break-word;
+	}
+
+	.more-link {
+		@include link-transition;
+		display: inline;
+		color: inherit;
+
+		&:after {
+			content: "\02192";
+			display: inline-block;
+			margin-left: 0.5em;
+		}
+
+		&:hover {
+			color: $color__primary-variation;
+			text-decoration: none;
 		}
 	}
 
-	.entry-content {
+	a {
+		text-decoration: underline;
 
-		p {
-			word-wrap: break-word;
-		}
-
-		.more-link {
-			@include link-transition;
-			display: inline;
-			color: inherit;
-
-			&:after {
-				content: "\02192";
-				display: inline-block;
-				margin-left: 0.5em;
-			}
-
-			&:hover {
-				color: $color__primary-variation;
-				text-decoration: none;
-			}
-		}
-
-		a {
-			text-decoration: underline;
-
-			&.button,
-			&:hover {
-				text-decoration: none;
-			}
-
-			&.button {
-				display: inline-block;
-			}
-
-			&.button:hover {
-				background: $color__background-button-hover;
-				color: $color__background-body;
-				cursor: pointer;
-			}
-		}
-
-		// Overwrite iframe embeds that have inline styles.
-		> iframe[style] {
-			margin: 32px 0 !important;
-			max-width: 100% !important;
-		}
-
-		// Page links
-		.page-links a {
-			margin: calc(0.5 * #{$size__spacing-unit});
+		&.button,
+		&:hover {
 			text-decoration: none;
 		}
 
-		// Classic editor audio embeds.
-		.wp-audio-shortcode {
-			max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
+		&.button {
+			display: inline-block;
 		}
+
+		&.button:hover {
+			background: $color__background-button-hover;
+			color: $color__background-body;
+			cursor: pointer;
+		}
+	}
+
+	// Overwrite iframe embeds that have inline styles.
+	> iframe[style] {
+		margin: 32px 0 !important;
+		max-width: 100% !important;
+	}
+
+	// Page links
+	.page-links a {
+		margin: calc(0.5 * #{$size__spacing-unit});
+		text-decoration: none;
+	}
+
+	// Classic editor audio embeds.
+	.wp-audio-shortcode {
+		max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
 	}
 }
 
 /* Single Post */
 
-.single-post .entry-title {
-	font-size: $font__size-xxxl;
+.single-post {
+	.entry-header {
+		width: 100%;
+	}
 
-	@include media(desktop) {
-		font-size: $font__size-xxxxl;
+	.entry-title {
+		font-size: $font__size-xxxl;
+
+		@include media(desktop) {
+			font-size: $font__size-xxxxl;
+		}
+	}
+
+	@include media(tablet) {
+		.main-content {
+			flex-basis: calc( 65% - 24px );
+		}
+
+		#secondary {
+			flex-basis: calc( 35% - 24px );
+		}
 	}
 }
 
