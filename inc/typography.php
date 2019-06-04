@@ -131,16 +131,7 @@ function newspack_custom_typography_css() {
 		$theme_css = '';
 	}
 
-	/**
-	 * Filters Newspack Theme custom colors CSS.
-	 *
-	 * @since Newspack Theme 1.0
-	 *
-	 * @param string $css           Base theme colors CSS.
-	 * @param int    $primary_color The user's selected color hex.
-	 * @param string $saturation    Filtered theme color saturation level.
-	 */
-	return apply_filters( 'newspack_custom_typography_css', $theme_css, $font_header, $font_body );
+	return $theme_css;
 }
 
 /**
