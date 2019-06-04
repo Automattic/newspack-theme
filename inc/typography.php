@@ -151,7 +151,7 @@ function newspack_custom_typography_link( $theme_mod ) {
 	$font_code = get_theme_mod( $theme_mod );
 
 	if ( $font_code ) {
-		return "<link rel='stylesheet' href='$font_code'>";
+		return "<link rel='stylesheet' href='" . esc_url( $font_code ) . "'>";
 	}
 	return '';
 }
