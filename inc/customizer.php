@@ -230,7 +230,7 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'font_body_stack',
 		array(
-			'label'   => __( 'Header font fallback stack', 'newspack' ),
+			'label'   => __( 'Body font fallback stack', 'newspack' ),
 			'default' => 'serif',
 			'section' => 'newspack_typography',
 			'type'    => 'select',
