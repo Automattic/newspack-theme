@@ -161,23 +161,28 @@ function newspack_custom_typography_link( $theme_mod ) {
  */
 function newspack_get_font_stacks() {
 	return array(
-		'serif'     => array(
+		'serif'      => array(
 			'name'  => __( 'Serif' ),
 			'fonts' => array(
-				'TimesNewRoman',
-				'Times New Roman',
-				'Times',
-				'Baskerville',
 				'Georgia',
+				'Garamond',
+				'Times New Roman',
 				'serif',
 			),
 		),
 		'sans_serif' => array(
 			'name'  => __( 'Sans Serif' ),
 			'fonts' => array(
-				'Arial',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'Segoe UI',
+				'Roboto',
+				'Oxygen',
+				'Ubuntu',
+				'Cantarell',
+				'Fira Sans',
+				'Droid Sans',
 				'Helvetica Neue',
-				'Helvetica',
 				'sans-serif',
 			),
 		),
