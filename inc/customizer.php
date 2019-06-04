@@ -182,8 +182,8 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'custom_font_import_code',
 		array(
-			'label'       => __( 'Font import code', 'newspack' ),
-			'description' => __( 'Paste the import tag provided by the font service. Supported services are Fonts.com, Typekit, Google Fonts, and Typography.com.' ),
+			'label'       => __( 'Font Provider Import Code or URL', 'newspack' ),
+			'description' => __( 'Example: &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"&gt; or https://fonts.googleapis.com/css?family=Open+Sans' ),
 			'section'     => 'newspack_typography',
 			'type'        => 'text',
 		)
@@ -192,7 +192,7 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'custom_font_import_code_alternate',
 		array(
-			'label'   => __( 'Font import code (alternate)', 'newspack' ),
+			'label'   => __( 'Secondary Font Provider Import Code or URL', 'newspack' ),
 			'section' => 'newspack_typography',
 			'type'    => 'text',
 		)
@@ -201,9 +201,10 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'font_header',
 		array(
-			'label'   => __( 'Header font', 'newspack' ),
-			'section' => 'newspack_typography',
-			'type'    => 'text',
+			'label'       => __( 'Header Font', 'newspack' ),
+			'description' => __( 'Example: Open Sans' ),
+			'section'     => 'newspack_typography',
+			'type'        => 'text',
 		)
 	);
 
@@ -212,7 +213,7 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'font_header_stack',
 		array(
-			'label'   => __( 'Header font fallback stack', 'newspack' ),
+			'label'   => __( 'Header Font Fallback Stack', 'newspack' ),
 			'section' => 'newspack_typography',
 			'type'    => 'select',
 			'choices' => $font_stacks,
@@ -222,7 +223,7 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'font_body',
 		array(
-			'label'   => __( 'Body font family', 'newspack' ),
+			'label'   => __( 'Body Font', 'newspack' ),
 			'section' => 'newspack_typography',
 			'type'    => 'text',
 		)
@@ -231,7 +232,7 @@ function newspack_customize_typography_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'font_body_stack',
 		array(
-			'label'   => __( 'Body font fallback stack', 'newspack' ),
+			'label'   => __( 'Body Font Fallback Stack', 'newspack' ),
 			'section' => 'newspack_typography',
 			'type'    => 'select',
 			'choices' => $font_stacks,
