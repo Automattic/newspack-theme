@@ -10,10 +10,6 @@
  */
 function newspack_custom_typography_css() {
 
-	if ( function_exists( 'register_block_type' ) && is_admin() ) {
-		$theme_css = $editor_css;
-	}
-
 	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack' ) );
 	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack' ) );
 
