@@ -1,0 +1,27 @@
+@import "variables-style/variables-style";
+@import "../../../style-base.scss";
+
+/* Style pack-specific overrides */
+
+.site-content {
+	@include media(tablet) {
+	//	margin-top: -100px;
+	}
+}
+
+#colophon {
+	.widget-title {
+		border-bottom: 4px solid;
+		font-family: $font__body;
+		font-size: 1em;
+		display: inline-block;
+	}
+
+	.site-info {
+		a,
+		a:hover {
+			color: #bfbbbc;
+		}
+	}
+}
+
