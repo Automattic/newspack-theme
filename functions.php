@@ -355,14 +355,21 @@ function newspack_typography_css_wrap() {
 
 	require_once get_parent_theme_file_path( '/inc/typography.php' );
 
-	?>
-	<?php echo newspack_custom_typography_link( 'custom_font_import_code' ); ?>
-	<?php echo newspack_custom_typography_link( 'custom_font_import_code_alternate' ); ?>
+	$allowed_html = array(
+		'link'  => array(
+			'href' => true,
+			'rel'  => true,
+		),
+		'style' => array(
+			'type' => true,
+			'id'   => true,
+		),
+	);
 
-	<style type="text/css" id="custom-typography">
-		<?php echo newspack_custom_typography_css(); ?>
-	</style>
-	<?php
+	echo wp_kses( newspack_custom_typography_link( 'custom_font_import_code' ), $allowed_html );
+	echo wp_kses( newspack_custom_typography_link( 'custom_font_import_code_alternate' ), $allowed_html );
+	echo wp_kses( newspack_custom_typography_css(), $allowed_html );
+
 }
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
 

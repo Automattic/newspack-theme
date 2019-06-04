@@ -17,8 +17,10 @@ function newspack_custom_typography_css() {
 	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack' ) );
 	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack' ) );
 
-	$theme_css = "
+	$css_blocks = array();
 
+	if ( get_theme_mod( 'font_header' ) ) {
+		$css_blocks[] = "
 		/* _headings.scssc */
 		.author-description .author-link,
 		.comment-metadata,
@@ -107,8 +109,10 @@ function newspack_custom_typography_css() {
 
 		{
 			font-family: $font_header;
-		}
-
+		}";
+	}
+	if ( get_theme_mod( 'font_body' ) ) {
+		$css_blocks[] = "
 		/* _typography.scss */
 		body,
 		button,
@@ -123,7 +127,13 @@ function newspack_custom_typography_css() {
 		{
 			font-family: $font_body;
 		}
-	";
+		";
+	}
+	if ( count( $css_blocks ) > 0 ) {
+		$theme_css = "<style type='text/css' id='custom-typography'>\n" . implode( '', $css_blocks ) . "\n</style>";
+	} else {
+		$theme_css = '';
+	}
 
 	/**
 	 * Filters Newspack Theme custom colors CSS.
@@ -147,7 +157,7 @@ function newspack_custom_typography_link( $theme_mod ) {
 	if ( $font_code ) {
 		return "<link rel='stylesheet' href='$font_code'>";
 	}
-	return null;
+	return '';
 }
 
 /**
