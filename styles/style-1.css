@@ -347,7 +347,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #111;
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.6;
@@ -361,7 +361,7 @@ select,
 optgroup,
 textarea {
   color: #111;
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 400;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -393,7 +393,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 .main-navigation,
@@ -420,7 +420,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 .site-branding,
@@ -541,7 +541,7 @@ i {
 }
 
 blockquote cite {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.71111em;
   font-style: normal;
 }
@@ -594,11 +594,11 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #f2d9bf;
+  background-color: #bfdcea;
 }
 
 ::selection {
-  background-color: #f2d9bf;
+  background-color: #bfdcea;
 }
 
 *,
@@ -608,7 +608,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 a {
@@ -690,7 +690,7 @@ figure {
 }
 
 blockquote {
-  border-left: 2px solid #c60;
+  border-left: 2px solid #0073aa;
   margin-left: 0;
   padding: 0 0 0 1rem;
 }
@@ -707,7 +707,7 @@ table {
   margin: 0 0 1rem;
   border-collapse: collapse;
   width: 100%;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 table td,
@@ -724,12 +724,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   transition: background 150ms ease-in-out;
-  background: #c60;
+  background: #0073aa;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  color: #fff;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  color: #eee;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.88889em;
   font-weight: 700;
   line-height: 1.2;
@@ -753,7 +753,7 @@ button:visited,
 input[type="button"]:visited,
 input[type="reset"]:visited,
 input[type="submit"]:visited {
-  color: #fff;
+  color: #eee;
   text-decoration: none;
 }
 
@@ -810,8 +810,8 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: #c60;
-  outline: thin solid rgba(204, 102, 0, 0.15);
+  border-color: #0073aa;
+  outline: thin solid rgba(0, 115, 170, 0.15);
   outline-offset: -4px;
 }
 
@@ -884,7 +884,7 @@ a:focus {
   border: none;
   padding: 0;
   margin: 0;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -916,14 +916,14 @@ a:focus {
 }
 
 .main-navigation .main-menu > li {
-  color: #c60;
+  color: #0073aa;
   display: inline;
   position: relative;
 }
 
 .main-navigation .main-menu > li > a {
   font-weight: 700;
-  color: #c60;
+  color: #0073aa;
   margin-right: 0.5rem;
 }
 
@@ -933,7 +933,7 @@ a:focus {
 
 .main-navigation .main-menu > li > a:hover,
 .main-navigation .main-menu > li > a:hover + svg {
-  color: #994d00;
+  color: #005177;
 }
 
 .main-navigation .main-menu > li.menu-item-has-children {
@@ -994,8 +994,8 @@ a:focus {
 }
 
 .main-navigation .sub-menu {
-  background-color: #c60;
-  color: #fff;
+  background-color: #0073aa;
+  color: #eee;
   list-style: none;
   padding-left: 0;
   position: absolute;
@@ -1047,7 +1047,7 @@ a:focus {
 
 .main-navigation .sub-menu > li > a,
 .main-navigation .sub-menu > li > .menu-item-link-return {
-  color: #fff;
+  color: #eee;
   display: block;
   line-height: 1.2;
   text-shadow: none;
@@ -1058,13 +1058,13 @@ a:focus {
 .main-navigation .sub-menu > li > a:hover, .main-navigation .sub-menu > li > a:focus,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus {
-  background: #994d00;
+  background: #005177;
 }
 
 .main-navigation .sub-menu > li > a:hover:after, .main-navigation .sub-menu > li > a:focus:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:hover:after,
 .main-navigation .sub-menu > li > .menu-item-link-return:focus:after {
-  background: #994d00;
+  background: #005177;
 }
 
 .main-navigation .sub-menu > li > .menu-item-link-return {
@@ -1222,14 +1222,14 @@ a:focus {
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu > li > a::before {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -1325,7 +1325,7 @@ a:focus {
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu .sub-menu > li > a::before {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -1441,7 +1441,7 @@ a:focus {
 .secondary-menu {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.88889em;
   list-style: none;
   margin: 0;
@@ -1465,7 +1465,7 @@ a:focus {
 
 /** === Tertiary menu === */
 .tertiary-menu {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.88889em;
   list-style: none;
   margin: 0;
@@ -1594,7 +1594,7 @@ a:focus {
 }
 
 .post-navigation .nav-links a:hover {
-  color: #994d00;
+  color: #005177;
 }
 
 @media only screen and (min-width: 1168px) {
@@ -1699,7 +1699,7 @@ a:focus {
 .comment-navigation .nav-next {
   min-width: 50%;
   width: 100%;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: bold;
 }
 
@@ -1768,12 +1768,12 @@ a:focus {
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
   transition: background 150ms ease-in-out;
-  background: #c60;
+  background: #0073aa;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  color: #fff;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  color: #eee;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   outline: none;
@@ -1792,7 +1792,7 @@ a:focus {
 .site-main #infinite-handle span button:visited,
 .site-main #infinite-handle span button:hover:visited,
 .site-main #infinite-handle span button:focus:visited {
-  color: #fff;
+  color: #eee;
   text-decoration: none;
 }
 
@@ -2033,7 +2033,7 @@ a:focus {
 }
 
 .sticky-post {
-  background: #c60;
+  background: #0073aa;
   color: #fff;
   display: inline-block;
   font-weight: bold;
@@ -2105,7 +2105,7 @@ a:focus {
 .entry .entry-meta a:hover,
 .entry .entry-footer a:hover {
   text-decoration: none;
-  color: #994d00;
+  color: #005177;
 }
 
 .entry .entry-meta .svg-icon,
@@ -2165,7 +2165,7 @@ a:focus {
 }
 
 .entry .entry-content .more-link:hover {
-  color: #994d00;
+  color: #005177;
   text-decoration: none;
 }
 
@@ -2183,7 +2183,7 @@ a:focus {
 
 .entry .entry-content a.button:hover {
   background: #111;
-  color: #fff;
+  color: #eee;
   cursor: pointer;
 }
 
@@ -2254,7 +2254,7 @@ a:focus {
 }
 
 .author-bio .author-description .author-link:hover {
-  color: #994d00;
+  color: #005177;
   text-decoration: none;
 }
 
@@ -2389,7 +2389,7 @@ a:focus {
 .comment-list .pingback .comment-body,
 .comment-list .trackback .comment-body {
   color: #767676;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.71111em;
   font-weight: 500;
   margin-top: 1rem;
@@ -2408,7 +2408,7 @@ a:focus {
 .comment-list .pingback .comment-body .comment-edit-link,
 .comment-list .trackback .comment-body .comment-edit-link {
   color: #767676;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 500;
 }
 
@@ -2472,7 +2472,7 @@ a:focus {
 }
 
 .comment .comment-author .fn a:hover {
-  color: #994d00;
+  color: #005177;
 }
 
 .comment .comment-author .post-author-badge {
@@ -2480,7 +2480,7 @@ a:focus {
   display: block;
   height: 18px;
   position: absolute;
-  background: #f57a00;
+  background: #008fd3;
   right: calc(100% - 2.5rem);
   top: -3px;
   width: 18px;
@@ -2515,7 +2515,7 @@ a:focus {
 
 .comment .comment-metadata > a:hover,
 .comment .comment-metadata .comment-edit-link:hover {
-  color: #994d00;
+  color: #005177;
   text-decoration: none;
 }
 
@@ -2547,7 +2547,7 @@ a:focus {
 }
 
 .comment .comment-metadata .comment-edit-link:hover {
-  color: #c60;
+  color: #0073aa;
 }
 
 .comment .comment-content {
@@ -2587,7 +2587,7 @@ a:focus {
 
 .comment-reply-link:hover,
 #cancel-comment-reply-link:hover {
-  color: #994d00;
+  color: #005177;
 }
 
 .discussion-avatar-list {
@@ -2624,7 +2624,7 @@ a:focus {
 
 .comment-form .comment-notes,
 .comment-form label {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.71111em;
   color: #767676;
 }
@@ -2772,7 +2772,7 @@ a:focus {
 
 #colophon .site-info a:hover {
   text-decoration: none;
-  color: #994d00;
+  color: #005177;
 }
 
 #colophon .site-info .imprint,
@@ -2791,11 +2791,11 @@ a:focus {
 }
 
 .widget a {
-  color: #c60;
+  color: #0073aa;
 }
 
 .widget a:hover {
-  color: #994d00;
+  color: #005177;
 }
 
 .widget_archive ul,
@@ -2819,7 +2819,7 @@ a:focus {
 .widget_recent_entries ul li,
 .widget_rss ul li {
   color: #767676;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: calc(20px * 1.125);
   font-weight: 700;
   line-height: 1.2;
@@ -2846,14 +2846,14 @@ a:focus {
 .widget_recent_comments ul ul > li > a::before,
 .widget_recent_entries ul ul > li > a::before,
 .widget_rss ul ul > li > a::before {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .widget_tag_cloud .tagcloud {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 700;
 }
 
@@ -3051,7 +3051,7 @@ a:focus {
 .entry .entry-content .wp-block-button .wp-block-button__link {
   transition: background 150ms ease-in-out;
   border: none;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.88889em;
   line-height: 1.2;
   box-sizing: border-box;
@@ -3063,7 +3063,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: #c60;
+  background-color: #0073aa;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color) {
@@ -3104,7 +3104,7 @@ a:focus {
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color) {
-  color: #c60;
+  color: #0073aa;
   border-color: currentColor;
 }
 
@@ -3128,7 +3128,7 @@ a:focus {
 .entry .entry-content .wp-block-categories li,
 .entry .entry-content .wp-block-latest-posts li {
   color: #767676;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: calc(20px * 1.125);
   font-weight: bold;
   line-height: 1.2;
@@ -3168,7 +3168,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-categories ul > li > a::before {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3199,13 +3199,13 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-verse {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 20px;
   line-height: 1.8;
 }
 
 .entry .entry-content .has-drop-cap:not(:focus):first-letter {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 2.8125em;
   line-height: 1;
   font-weight: bold;
@@ -3247,7 +3247,7 @@ a:focus {
 
 .entry .entry-content .wp-block-pullquote cite {
   display: inline-block;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   line-height: 1.6;
   text-transform: none;
   color: #767676;
@@ -3275,7 +3275,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color {
-  background-color: #c60;
+  background-color: #0073aa;
   padding-left: 0;
   padding-right: 0;
 }
@@ -3301,7 +3301,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color a {
-  color: #fff;
+  color: #eee;
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color cite {
@@ -3310,7 +3310,7 @@ a:focus {
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
   max-width: 100%;
-  color: #fff;
+  color: #eee;
   padding-left: 0;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -3442,7 +3442,7 @@ a:focus {
 .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
 .entry .entry-content .wp-block-cover .wp-block-cover-text,
 .entry .entry-content .wp-block-cover h2 {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 1.40625em;
   font-weight: bold;
   line-height: 1.25;
@@ -3533,7 +3533,7 @@ a:focus {
 .entry .entry-content .wp-block-image figcaption,
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.71111em;
   line-height: 1.6;
   margin: 0;
@@ -3593,7 +3593,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-file {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button {
@@ -3601,8 +3601,8 @@ a:focus {
   transition: background 150ms ease-in-out;
   border: none;
   border-radius: 5px;
-  background: #c60;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  background: #0073aa;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 20px;
   line-height: 1.2;
   text-decoration: none;
@@ -3673,7 +3673,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: bold;
 }
 
@@ -3692,7 +3692,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 .entry .entry-content .has-small-font-size {
@@ -3715,7 +3715,7 @@ a:focus {
 .entry .entry-content .has-primary-variation-background-color,
 .entry .entry-content .has-secondary-background-color,
 .entry .entry-content .has-secondary-variation-background-color {
-  color: #fff;
+  color: #eee;
 }
 
 .entry .entry-content .has-primary-background-color p,
@@ -3750,7 +3750,7 @@ a:focus {
 .entry .entry-content .has-secondary-variation-background-color h5,
 .entry .entry-content .has-secondary-variation-background-color h6,
 .entry .entry-content .has-secondary-variation-background-color a {
-  color: #fff;
+  color: #eee;
 }
 
 .entry .entry-content .has-white-background-color {
@@ -3770,12 +3770,12 @@ a:focus {
 
 .entry .entry-content .has-primary-background-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color.has-primary-background-color {
-  background-color: #c60;
+  background-color: #0073aa;
 }
 
 .entry .entry-content .has-primary-variation-background-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color.has-primary-variation-background-color {
-  background-color: #994d00;
+  background-color: #005177;
 }
 
 .entry .entry-content .has-secondary-background-color,
@@ -3796,13 +3796,13 @@ a:focus {
 .entry .entry-content .has-primary-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p {
-  color: #c60;
+  color: #0073aa;
 }
 
 .entry .entry-content .has-primary-variation-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p {
-  color: #994d00;
+  color: #005177;
 }
 
 .entry .entry-content .has-secondary-color,
@@ -3885,7 +3885,7 @@ svg {
 .wp-caption-text {
   color: #767676;
   font-size: 0.71111em;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -3981,7 +3981,7 @@ svg {
 
 .gallery-caption {
   display: block;
-  font-family: "Lato", -apple-system, "Helvetica Neue", sans-serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.71111em;
   line-height: 1.6;
   margin: 0;
@@ -3995,18 +3995,18 @@ svg {
 }
 
 .gallery-item > div > a:focus {
-  box-shadow: 0 0 0 2px #cc6600;
+  box-shadow: 0 0 0 2px #0073aa;
 }
 
 /* Style pack-specific overrides */
-#colophon .widget-title {
+#colophon .widget-title,
+.article-section-title {
   border-bottom: 4px solid;
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 1em;
-  display: inline-block;
 }
 
-#colophon .site-info a,
-#colophon .site-info a:hover {
-  color: #bfbbbc;
+.wp-block-newspack-blocks-homepage-articles:not(.is-grid) article:not(:last-of-type) {
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 1em;
 }

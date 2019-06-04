@@ -25,8 +25,7 @@ new Newspack_Style_Packs_Core(
 		// Style fonts
 		'fonts'              => array(
 			'style-1' => array(
-				'Lato'       => 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,900',
-				'Noto Serif' => 'https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700',
+				'IBM Plex Serif' => 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i',
 			),
 		),
 	)
