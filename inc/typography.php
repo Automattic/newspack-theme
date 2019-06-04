@@ -144,32 +144,10 @@ function newspack_custom_typography_link( $theme_mod ) {
 
 	$font_code = get_theme_mod( $theme_mod );
 
-	$regex = '/\/\/[^\" \n]+/i';
-	preg_match_all( $regex, $font_code, $matches );
-
-	$provider_url = isset( $matches, $matches[0], $matches[0][0] ) ? $matches[0][0] : null;
-
-	if ( newspack_verify_url_for_service( $provider_url ) ) {
-		return "<link rel='stylesheet' href='$provider_url'>";
+	if ( $font_code ) {
+		return "<link rel='stylesheet' href='$font_code'>";
 	}
-
 	return null;
-
-}
-
-/**
- * Check that provider URL looks like a match for the specified provider.
- */
-function newspack_verify_url_for_service( $url ) {
-	$newspack_service_hosts = array(
-		'google'     => 'fonts.googleapis.com',
-		'fonts'      => 'fast.fonts.net',
-		'typekit'    => 'use.typekit.net',
-		'typography' => 'cloud.typography.com',
-	);
-
-	$url_info = wp_parse_url( $url );
-	return ( isset( $url_info['host'] ) && in_array( $url_info['host'], array_values( $newspack_service_hosts ) ) );
 }
 
 /**
@@ -218,5 +196,8 @@ function newspack_font_stack( $primary_font, $fallback_id ) {
 	$stacks = newspack_get_font_stacks();
 	$fonts  = isset( $stacks[ $fallback_id ] ) ? $stacks[ $fallback_id ]['fonts'] : array();
 	array_unshift( $fonts, $primary_font );
+	foreach ( $fonts as &$font ) {
+		$font = '"' . $font . '"';
+	}
 	return implode( ',', $fonts );
 }
