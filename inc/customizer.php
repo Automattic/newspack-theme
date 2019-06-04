@@ -168,12 +168,14 @@ function newspack_customize_typography_register( $wp_customize ) {
 		'font_body_stack',
 		array(
 			'sanitize_callback' => 'newspack_sanitize_font_stack',
+			'default'           => 'serif',
 		)
 	);
 	$wp_customize->add_setting(
 		'font_header_stack',
 		array(
 			'sanitize_callback' => 'newspack_sanitize_font_stack',
+			'default'           => 'serif',
 		)
 	);
 
@@ -211,7 +213,6 @@ function newspack_customize_typography_register( $wp_customize ) {
 		'font_header_stack',
 		array(
 			'label'   => __( 'Header font fallback stack', 'newspack' ),
-			'default' => 'serif',
 			'section' => 'newspack_typography',
 			'type'    => 'select',
 			'choices' => $font_stacks,
@@ -231,7 +232,6 @@ function newspack_customize_typography_register( $wp_customize ) {
 		'font_body_stack',
 		array(
 			'label'   => __( 'Body font fallback stack', 'newspack' ),
-			'default' => 'serif',
 			'section' => 'newspack_typography',
 			'type'    => 'select',
 			'choices' => $font_stacks,

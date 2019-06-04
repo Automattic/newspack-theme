@@ -10,8 +10,8 @@
  */
 function newspack_custom_typography_css() {
 
-	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack' ) );
-	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack' ) );
+	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack', 'serif' ) );
+	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack', 'serif' ) );
 
 	$css_blocks = array();
 
