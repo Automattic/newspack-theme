@@ -77,6 +77,24 @@
 	}
 }
 
+// Wide and full widths need adjustment for the homepage
+.newspack-front-page {
+	.entry .entry-content > * {
+		&.alignwide {
+			@include media(tablet) {
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
+			}
+		}
+		&.alignfull {
+			@include media(tablet) {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+			}
+		}
+	}
+}
+
 /*
  * Unset nested content selector styles
  * - Prevents layout styles from cascading too deeply
@@ -906,5 +924,28 @@
 	.has-white-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
 		color: #FFF;
+	}
+}
+
+.single.has-sidebar {
+	.entry .entry-content > *,
+	.entry .entry-summary > * {
+		&.alignwide {
+			@include media(tablet) {
+				margin-right: 0;
+				max-width: 100%;
+			}
+		}
+
+		&.alignfull {
+			margin-left: 0;
+			margin-right: 0;
+			max-width: 100%;
+			width: 100%;
+
+			@include media(tablet) {
+				margin-left: 0;
+			}
+		}
 	}
 }
