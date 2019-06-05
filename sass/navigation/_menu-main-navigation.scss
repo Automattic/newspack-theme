@@ -52,6 +52,7 @@
 			> a {
 
 				color: $color__primary;
+				font-weight: 700;
 				margin-right: #{0.5 * $size__spacing-unit};
 
 				+ svg {
@@ -93,13 +94,12 @@
 
 					/* Priority+ Menu */
 					&.main-menu-more-toggle {
-
 						position: relative;
 						height: 24px;
 						line-height: $font__line-height-heading;
 						width: 24px;
 						padding: 0;
-						margin-left: #{0.5 * $size__spacing-unit};
+						margin: #{0.25 * $size__spacing-unit} 0 0 #{0.5 * $size__spacing-unit};
 
 						svg {
 							height: 24px;
