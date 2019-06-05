@@ -330,7 +330,7 @@ function newspack_sanitize_checkbox( $input ) {
  * @return string Return a valid font provider URL if found or false if not.
  */
 function newspack_sanitize_font_provider_url( $code ) {
-	if ( trim( $code ) === '' ) {
+	if ( '' === trim( $code ) ) {
 		return '';
 	}
 	$font_service_urls = array(
