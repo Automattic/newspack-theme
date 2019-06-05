@@ -7,22 +7,33 @@
 
 if ( (bool) get_the_author_meta( 'description' ) ) : ?>
 <div class="author-bio">
-	<h2 class="author-title">
-		<span class="author-heading">
-			<?php
-			printf(
-				/* translators: %s: post author */
-				__( 'Published by %s', 'newspack' ),
-				esc_html( get_the_author() )
+	<?php
+		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
+		if ( $author_avatar ) :
+			echo wp_kses(
+				$author_avatar,
+				array(
+					'img' => array(
+						'src'    => array(),
+						'alt'    => array(),
+						'class'  => array(),
+						'width'  => array(),
+						'height' => array(),
+					),
+				)
 			);
-			?>
-		</span>
-	</h2>
-	<p class="author-description">
-		<?php the_author_meta( 'description' ); ?>
+		endif;
+	?>
+
+	<div class="author-bio-text">
+		<h2 class="author-title">
+			<?php esc_html( get_the_author() ); ?>
+		</h2>
+		<p class="author-description">
+			<?php the_author_meta( 'description' ); ?>
+		</p><!-- .author-description -->
 		<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-			<?php _e( 'View more posts', 'newspack' ); ?>
+			<?php esc_html_e( 'View more posts', 'newspack' ); ?>
 		</a>
-	</p><!-- .author-description -->
 </div><!-- .author-bio -->
 <?php endif; ?>
