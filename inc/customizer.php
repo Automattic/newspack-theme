@@ -124,6 +124,129 @@ function newspack_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'newspack_customize_register' );
 
 /**
+ * Add custom font support in the Customizer
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function newspack_customize_typography_register( $wp_customize ) {
+
+	require_once get_parent_theme_file_path( '/inc/typography.php' );
+
+	$wp_customize->add_section(
+		'newspack_typography',
+		array(
+			'title'    => __( 'Typography', 'newspack' ),
+			'priority' => 50,
+		)
+	);
+
+	$wp_customize->add_setting(
+		'custom_font_import_code',
+		array(
+			'sanitize_callback' => 'newspack_sanitize_font_provider_url',
+		)
+	);
+	$wp_customize->add_setting(
+		'custom_font_import_code_alternate',
+		array(
+			'sanitize_callback' => 'newspack_sanitize_font_provider_url',
+		)
+	);
+	$wp_customize->add_setting(
+		'font_body',
+		array(
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		)
+	);
+	$wp_customize->add_setting(
+		'font_header',
+		array(
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		)
+	);
+	$wp_customize->add_setting(
+		'font_body_stack',
+		array(
+			'sanitize_callback' => 'newspack_sanitize_font_stack',
+			'default'           => 'serif',
+		)
+	);
+	$wp_customize->add_setting(
+		'font_header_stack',
+		array(
+			'sanitize_callback' => 'newspack_sanitize_font_stack',
+			'default'           => 'serif',
+		)
+	);
+
+	$wp_customize->add_control(
+		'custom_font_import_code',
+		array(
+			'label'       => __( 'Font Provider Import Code or URL', 'newspack' ),
+			'description' => __( 'Example: &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"&gt; or https://fonts.googleapis.com/css?family=Open+Sans' ),
+			'section'     => 'newspack_typography',
+			'type'        => 'text',
+		)
+	);
+
+	$wp_customize->add_control(
+		'custom_font_import_code_alternate',
+		array(
+			'label'   => __( 'Secondary Font Provider Import Code or URL', 'newspack' ),
+			'section' => 'newspack_typography',
+			'type'    => 'text',
+		)
+	);
+
+	$wp_customize->add_control(
+		'font_header',
+		array(
+			'label'       => __( 'Header Font', 'newspack' ),
+			'description' => __( 'Example: Open Sans' ),
+			'section'     => 'newspack_typography',
+			'type'        => 'text',
+		)
+	);
+
+	$font_stacks = newspack_get_font_stacks_as_select_choices();
+
+	foreach ( $font_stacks as $key => &$stack ) {
+		$stack = wp_kses( $stack, null );
+	}
+
+	$wp_customize->add_control(
+		'font_header_stack',
+		array(
+			'label'   => __( 'Header Font Fallback Stack', 'newspack' ),
+			'section' => 'newspack_typography',
+			'type'    => 'select',
+			'choices' => $font_stacks,
+		)
+	);
+
+	$wp_customize->add_control(
+		'font_body',
+		array(
+			'label'   => __( 'Body Font', 'newspack' ),
+			'section' => 'newspack_typography',
+			'type'    => 'text',
+		)
+	);
+
+	$wp_customize->add_control(
+		'font_body_stack',
+		array(
+			'label'   => __( 'Body Font Fallback Stack', 'newspack' ),
+			'section' => 'newspack_typography',
+			'type'    => 'select',
+			'choices' => $font_stacks,
+		)
+	);
+}
+
+add_action( 'customize_register', 'newspack_customize_typography_register' );
+
+/**
  * Render the site title for the selective refresh partial.
  *
  * @return void
@@ -197,4 +320,45 @@ function newspack_sanitize_checkbox( $input ) {
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Sanitize font provider embed URL.
+ *
+ * @param string $code Font provider embed code.
+ *
+ * @return string Return a valid font provider URL if found or false if not.
+ */
+function newspack_sanitize_font_provider_url( $code ) {
+	$font_service_urls = array(
+		'google'     => 'fonts.googleapis.com',
+		'fonts'      => 'fast.fonts.net',
+		'typekit'    => 'use.typekit.net',
+		'typography' => 'cloud.typography.com',
+	);
+
+	$regex = '/\/\/[^\("\') \n]+/i';
+	preg_match( $regex, $code, $matches );
+	$url = isset( $matches[0] ) ? $matches[0] : null;
+
+	$url_info = wp_parse_url( $url );
+	if ( isset( $url_info['host'] ) && in_array( $url_info['host'], array_values( $font_service_urls ) ) ) {
+		return $url;
+	}
+	return null;
+}
+
+/**
+ * Sanitize font stack ID.
+ *
+ * @param string $stack_id Font stack ID.
+ *
+ * @return string Return a valid font stack ID or null.
+ */
+function newspack_sanitize_font_stack( $stack_id ) {
+	$stacks = newspack_get_font_stacks();
+	if ( in_array( $stack_id, array_keys( $stacks ) ) ) {
+		return $stack_id;
+	}
+	return null;
 }
