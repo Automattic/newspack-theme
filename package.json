@@ -40,6 +40,7 @@
     "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
     "build:style-woocommerce": "node-sass sass/plugins/woocommerce.scss woocommerce.css --output-style expanded && postcss -r woocommerce.css",
     "build:rtl": "rtlcss style.css style-rtl.css",
+    "build:rtl-style-1": "rtlcss styles/style-1.css styles/style-1-rtl.css",
     "build:rtl-woocommerce": "rtlcss woocommerce.css woocommerce-rtl.css",
     "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
     "build": "run-p \"build:*\"",
