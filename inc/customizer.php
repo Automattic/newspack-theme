@@ -210,6 +210,10 @@ function newspack_customize_typography_register( $wp_customize ) {
 
 	$font_stacks = newspack_get_font_stacks_as_select_choices();
 
+	foreach ( $font_stacks as $key => &$stack ) {
+		$stack = wp_kses( $stack, null );
+	}
+
 	$wp_customize->add_control(
 		'font_header_stack',
 		array(
