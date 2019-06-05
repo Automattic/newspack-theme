@@ -92,6 +92,20 @@
 				margin-right: calc(50% - 50vw);
 			}
 		}
+
+		//! Group Block
+		&.wp-block-group {
+			padding-left: 0;
+			padding-right: 0;
+			&.alignfull,
+			&.alignwide {
+				> * {
+					max-width: 90%;
+					width: 1200px;
+				}
+
+			}
+		}
 	}
 }
 

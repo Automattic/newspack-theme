@@ -3103,6 +3103,11 @@ a:focus {
   }
 }
 
+.newspack-front-page .entry .entry-content > *.wp-block-group.alignfull > *, .newspack-front-page .entry .entry-content > *.wp-block-group.alignwide > * {
+  max-width: 90%;
+  width: 1200px;
+}
+
 /*
  * Unset nested content selector styles
  * - Prevents layout styles from cascading too deeply
