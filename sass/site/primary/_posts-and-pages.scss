@@ -216,34 +216,35 @@
 /* Author description */
 
 .author-bio {
-	margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
+	display: flex;
+	margin: calc(2 * #{$size__spacing-unit}) auto $size__spacing-unit;
+	font-size: $font__size-sm;
 
-	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) auto;
-	}
+	.avatar {
+		display: none;
+		height: 80px;
+		margin-right: $size__spacing-unit;
+		width: 80px;
 
-	@include media(desktop) {
-		margin: calc(3 * #{$size__spacing-unit}) auto;
+		@include media(mobile) {
+			display: inline;
+		}
 	}
 
 	.author-title {
-		display: inline;
+		margin: calc(#{$size__spacing-unit} / 2 ) 0 0;
 	}
 
 	.author-description {
+		border-top: 2px solid $color__primary;
+		margin: calc(#{$size__spacing-unit} / 2 ) 0 0;
+		padding-top: calc(#{$size__spacing-unit} / 3 );
+	}
 
-		display: inline;
-		color: $color__text-light;
-		font-size: $font__size-md;
-		line-height: $font__line-height-heading;
-
-		.author-link {
-			display: inline-block;
-
-			&:hover {
-				color: $color__primary-variation;
-				text-decoration: none;
-			}
+	.author-link {
+		font-weight: bold;
+		&:hover {
+			color: $color__primary-variation;
 		}
 	}
 }

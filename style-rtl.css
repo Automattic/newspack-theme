@@ -420,11 +420,14 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 
+<<<<<<< HEAD
 .use-body-font {
   font-family: Georgia, Garamond, "Times New Roman", serif;
 }
 
 .author-description .author-link,
+=======
+>>>>>>> Update styles for author bio, and add author avatar.
 .comment-metadata,
 .comment-reply-link,
 .comments-title,
@@ -443,7 +446,7 @@ textarea {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
-.use-heading-font,
+.use-header-font,
 h1,
 h2,
 h3,
@@ -454,7 +457,6 @@ h6 {
 }
 
 .page-description,
-.author-description .author-link,
 .not-found .page-title,
 .error-404 .page-title,
 .post-navigation .post-title,
@@ -2337,39 +2339,40 @@ a:focus {
 
 /* Author description */
 .author-bio {
-  margin: calc(2 * 1rem) 1rem 1rem;
+  display: flex;
+  margin: calc(2 * 1rem) auto 1rem;
+  font-size: 0.88889em;
 }
 
-@media only screen and (min-width: 768px) {
-  .author-bio {
-    margin: calc(3 * 1rem) auto;
-  }
+.author-bio .avatar {
+  display: none;
+  height: 80px;
+  margin-left: 1rem;
+  width: 80px;
 }
 
-@media only screen and (min-width: 1168px) {
-  .author-bio {
-    margin: calc(3 * 1rem) auto;
+@media only screen and (min-width: 600px) {
+  .author-bio .avatar {
+    display: inline;
   }
 }
 
 .author-bio .author-title {
-  display: inline;
+  margin: calc(1rem / 2) 0 0;
 }
 
 .author-bio .author-description {
-  display: inline;
-  color: #767676;
-  font-size: 1.125em;
-  line-height: 1.2;
+  border-top: 2px solid #0073aa;
+  margin: calc(1rem / 2) 0 0;
+  padding-top: calc(1rem / 3);
 }
 
-.author-bio .author-description .author-link {
-  display: inline-block;
+.author-bio .author-link {
+  font-weight: bold;
 }
 
-.author-bio .author-description .author-link:hover {
+.author-bio .author-link:hover {
   color: #005177;
-  text-decoration: none;
 }
 
 /*--------------------------------------------------------------

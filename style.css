@@ -424,7 +424,6 @@ textarea {
   font-family: Georgia, Garamond, "Times New Roman", serif;
 }
 
-.author-description .author-link,
 .comment-metadata,
 .comment-reply-link,
 .comments-title,
@@ -454,7 +453,6 @@ h6 {
 }
 
 .page-description,
-.author-description .author-link,
 .not-found .page-title,
 .error-404 .page-title,
 .post-navigation .post-title,
@@ -2343,39 +2341,40 @@ a:focus {
 
 /* Author description */
 .author-bio {
-  margin: calc(2 * 1rem) 1rem 1rem;
+  display: flex;
+  margin: calc(2 * 1rem) auto 1rem;
+  font-size: 0.88889em;
 }
 
-@media only screen and (min-width: 768px) {
-  .author-bio {
-    margin: calc(3 * 1rem) auto;
-  }
+.author-bio .avatar {
+  display: none;
+  height: 80px;
+  margin-right: 1rem;
+  width: 80px;
 }
 
-@media only screen and (min-width: 1168px) {
-  .author-bio {
-    margin: calc(3 * 1rem) auto;
+@media only screen and (min-width: 600px) {
+  .author-bio .avatar {
+    display: inline;
   }
 }
 
 .author-bio .author-title {
-  display: inline;
+  margin: calc(1rem / 2) 0 0;
 }
 
 .author-bio .author-description {
-  display: inline;
-  color: #767676;
-  font-size: 1.125em;
-  line-height: 1.2;
+  border-top: 2px solid #0073aa;
+  margin: calc(1rem / 2) 0 0;
+  padding-top: calc(1rem / 3);
 }
 
-.author-bio .author-description .author-link {
-  display: inline-block;
+.author-bio .author-link {
+  font-weight: bold;
 }
 
-.author-bio .author-description .author-link:hover {
+.author-bio .author-link:hover {
   color: #005177;
-  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
