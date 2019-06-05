@@ -1,0 +1,19 @@
+/*!
+Newspack Theme Static Fron Page Editor Styles
+*/
+/** === Includes === */
+/* If we add the border using a regular CSS border, it won't look good on non-retina devices,
+ * since its edges can look jagged due to lack of antialiasing. In this case, we are several
+ * layers of box-shadow to add the border visually, which will render the border smoother. */
+/* Calculates maximum width for post content */
+/* Nested sub-menu padding: 10 levels deep */
+/** === Content Width === */
+@media only screen and (min-width: 768px) {
+  body.newspack-static-front-page .wp-block {
+    width: 1230px;
+  }
+}
+
+body.newspack-static-front-page .wp-block .wp-block {
+  width: 100%;
+}

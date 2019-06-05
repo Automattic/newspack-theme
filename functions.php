@@ -292,6 +292,34 @@ function newspack_editor_customizer_styles() {
 add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' );
 
 /**
+ * Determine if current editor page is the static front page.
+ */
+function newspack_is_static_front_page() {
+	global $post;
+	$page_on_front = intval( get_option( 'page_on_front' ) );
+	return intval( $post->ID ) === $page_on_front;
+};
+
+/**
+ * Add body class on editor pages if editing the static front page.
+ */
+function newspack_filter_admin_body_class( $classes ) {
+	return newspack_is_static_front_page() ? $classes . ' newspack-static-front-page' : $classes;
+};
+
+/**
+ * Add body class on editor pages if editing the static front page.
+ */
+function newspack_enqueue_editor_static_front_page_assets( $classes ) {
+	if ( newspack_is_static_front_page() ) {
+		wp_enqueue_style( 'newspack-editor-static-front-page-styles', get_theme_file_uri( '/style-editor-static-front-page.css' ), false, '1.1', 'all' );
+	}
+};
+add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
+add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_static_front_page_assets' );
+
+
+/**
  * Display custom color CSS in customizer and on frontend.
  */
 function newspack_colors_css_wrap() {
