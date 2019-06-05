@@ -297,7 +297,7 @@ add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' )
 function newspack_is_static_front_page() {
 	global $post;
 	$page_on_front = intval( get_option( 'page_on_front' ) );
-	return intval( $post->ID ) === $page_on_front;
+	return isset( $post->ID ) && intval( $post->ID ) === $page_on_front;
 };
 
 /**
