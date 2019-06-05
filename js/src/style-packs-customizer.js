@@ -56,12 +56,21 @@
 
 		if ( styleData ) {
 			link = createLink( styleData.id, styleData.uri );
-			document.head.appendChild( link );
+			if ( '' !== stylePacksData.default_css_id ) {
+				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", link );
+			} else {
+				document.head.appendChild( link );
+			}
+
 		}
 
 		_.each( config.fonts[style], function( uri, id ) {
 			var link = createLink( id, uri );
-			document.head.appendChild( link );
+			if ( '' !== stylePacksData.default_css_id ) {
+				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", link );
+			} else {
+				document.head.appendChild( link );
+			}
 		});
 	}
 
@@ -78,10 +87,18 @@
 		var style = config.preview_style,
 			data  = config.styles[style];
 		_.each(config.fonts[style], function( uri, id ) {
-			document.head.appendChild( createLink( id, uri ) );
+			if ( '' !== stylePacksData.default_css_id ) {
+				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", createLink( id, uri ) );
+			} else {
+				document.head.appendChild( createLink( id, uri ) );
+			}
 		} );
 		if ( data ) {
-			document.head.appendChild( createLink( data.id, data.uri ) );
+			if ( '' !== stylePacksData.default_css_id ) {
+				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", createLink( data.id, data.uri ) );
+			} else {
+				document.head.appendChild( createLink( data.id, data.uri ) );
+			}
 		}
 	}
 } )( jQuery );
