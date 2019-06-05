@@ -823,6 +823,19 @@
 		}
 	}
 
+	//! Group Block
+	.wp-block-group {
+		padding-left: 0;
+		padding-right: 0;
+		&.alignfull,
+		&.alignwide {
+			> * {
+				max-width: 780px;
+			}
+
+		}
+	}
+
 	//! Newspack Block
 
 	.wp-block-newspack-blocks-homepage-articles {
