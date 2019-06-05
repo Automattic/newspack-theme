@@ -85,8 +85,8 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 1200,
-				'width'       => 900,
+				'height'      => 400,
+				'width'       => 800,
 				'flex-width'  => true,
 				'flex-height' => true,
 				'header-text' => array( 'site-title' ),

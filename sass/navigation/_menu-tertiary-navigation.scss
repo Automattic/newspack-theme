@@ -4,7 +4,7 @@
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 	list-style: none;
-	margin: 0;
+	margin: 0.5em 0;
 	padding: 0;
 
 	@include media(tablet) {
@@ -16,11 +16,29 @@
 		display: inline;
 		margin: 0;
 		padding: 0;
+
+		&:nth-child(n+2) {
+			margin-left: ($size__spacing-unit * 0.5);
+		}
 	}
 
-	> li {
-		> a {
-			margin-right: #{0.5 * $size__spacing-unit};
-		}
+	a {
+		background-color: lighten($color__text-light, 45%);
+		@include button-transition;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: $font__size-sm;
+		font-weight: 700;
+		padding: ($size__spacing-unit * 0.5) ($size__spacing-unit * 0.75);
+	}
+
+	a,
+	a:visited {
+		color: $color__text-main;
+	}
+
+	a:hover {
+		background-color: $color__text-main;
+		color: #fff;
 	}
 }
