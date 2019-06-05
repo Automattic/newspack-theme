@@ -15,10 +15,6 @@ body {
 }
 
 body .wp-block[data-align="full"] {
-  width: 100%;
-}
-
-body .wp-block[data-align="full"] {
   max-width: 100vw;
   width: auto;
 }
