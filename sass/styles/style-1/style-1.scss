@@ -1,0 +1,19 @@
+@import "variables-style/variables-style";
+@import "../../../style-base.scss";
+
+/* Style pack-specific overrides */
+#colophon .widget-title,
+.article-section-title {
+	border-bottom: 4px solid;
+	font-family: $font__body;
+	font-size: 1em;
+}
+
+.wp-block-newspack-blocks-homepage-articles {
+	&:not(.is-grid) {
+		article:not(:last-of-type) {
+			border-bottom: 2px solid darken( $color__background-body, 5% );
+			padding-bottom: 1em;
+		}
+	}
+}
