@@ -183,7 +183,8 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:hover .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:active .wp-block-button__link:not(.has-text-color),
-		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink {
+		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink,
+		.editor-block-list__layout .editor-block-list__block .wp-block-newspack-blocks-homepage-articles .article-section-title {
 			color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
