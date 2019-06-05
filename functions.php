@@ -276,18 +276,35 @@ function newspack_editor_customizer_styles() {
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		wp_add_inline_style( 'newspack-editor-customizer-styles', newspack_custom_colors_css() );
 	}
-
-	// Add a class to style the static front page differently in the editor.
-	// A hacky work around for: https://github.com/WordPress/gutenberg/issues/10640
-	$frontpage_id = get_option( 'page_on_front' );
-	global $post;
-	$page_id = $post->ID;
-
-	if ( $frontpage_id == $page_id ) {
-		wp_enqueue_script( 'newspack-editor-classes', get_theme_file_uri( '/js/homepage-editor-class.js' ), array(), '1.0', true );
-	}
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' );
+
+/**
+ * Determine if current editor page is the static front page.
+ */
+function newspack_is_static_front_page() {
+	global $post;
+	$page_on_front = intval( get_option( 'page_on_front' ) );
+	return intval( $post->ID ) === $page_on_front;
+};
+
+/**
+ * Add body class on editor pages if editing the static front page.
+ */
+function newspack_filter_admin_body_class( $classes ) {
+	return newspack_is_static_front_page() ? $classes . ' newspack-static-front-page' : $classes;
+};
+
+/**
+ * Add body class on editor pages if editing the static front page.
+ */
+function newspack_enqueue_editor_static_front_page_assets( $classes ) {
+	if ( newspack_is_static_front_page() ) {
+		wp_enqueue_style( 'newspack-editor-static-front-page-styles', get_theme_file_uri( '/style-editor-static-front-page.css' ), false, '1.1', 'all' );
+	}
+};
+add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
+add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_static_front_page_assets' );
 
 
 /**

@@ -35,16 +35,6 @@ body .wp-block[data-align="full"] {
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-  .newspack-static-front-page .wp-block {
-    width: 1230px;
-  }
-}
-
-.newspack-static-front-page .wp-block .wp-block {
-  width: 100%;
-}
-
 /** === Base Typography === */
 body {
   font-size: 20px;
