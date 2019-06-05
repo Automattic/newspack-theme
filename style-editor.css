@@ -695,6 +695,38 @@ ul.wp-block-archives li ul,
   font-size: 0.71111em;
 }
 
+/** === Newspack Block === */
+.wp-block-newspack-blocks-homepage-articles .article-section-title {
+  border-bottom: 4px solid #ddd;
+  color: #0073aa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.wp-block-newspack-blocks-homepage-articles .article-section-title:after {
+  border-bottom: 4px solid #666;
+  bottom: -4px;
+  content: '';
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  width: 100px;
+}
+
+.wp-block-newspack-blocks-homepage-articles .article-title a {
+  color: inherit;
+}
+
+.wp-block-newspack-blocks-homepage-articles .article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.wp-block-newspack-blocks-homepage-articles .author-name .author {
+  font-weight: bold;
+}
+
 /** === Classic Editor === */
 /* Properly center-align captions in the classic-editor block */
 .wp-caption dd {

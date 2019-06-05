@@ -661,23 +661,23 @@ ul.wp-block-archives,
 
 /** === Latest Posts grid view === */
 .wp-block-latest-posts.is-grid {
-		li {
-			border-top: 2px solid $color__border;
-			padding-top: (1 * $size__spacing-unit);
-			margin-bottom: (2 * $size__spacing-unit);
-			a {
-				&:after {
-					content: '';
-				}
+	li {
+		border-top: 2px solid $color__border;
+		padding-top: (1 * $size__spacing-unit);
+		margin-bottom: (2 * $size__spacing-unit);
+		a {
+			&:after {
+				content: '';
 			}
-			&:last-child {
-				margin-bottom: auto;
-				a:after {
-					content: '';
-				}
+		}
+		&:last-child {
+			margin-bottom: auto;
+			a:after {
+				content: '';
 			}
 		}
 	}
+}
 
 /** === Latest Comments === */
 
@@ -700,6 +700,41 @@ ul.wp-block-archives,
 
 	.wp-block-latest-comments__comment-date {
 		font-size: $font__size-xs;
+	}
+}
+
+/** === Newspack Block === */
+.wp-block-newspack-blocks-homepage-articles {
+
+	.article-section-title {
+		border-bottom: 4px solid #ddd;
+		color: $color__primary;
+		font-family: $font__heading;
+		display: inline-block;
+		position: relative;
+		text-transform: uppercase;
+
+		&:after {
+			border-bottom: 4px solid #666;
+			bottom: -4px;
+			content: '';
+			display: inline-block;
+			left: 0;
+			position: absolute;
+			width: 100px;
+		}
+	}
+
+	.article-title a {
+		color: inherit;
+	}
+
+	.article-meta {
+		font-family: $font__heading;
+	}
+
+	.author-name .author {
+		font-weight: bold;
 	}
 }
 
