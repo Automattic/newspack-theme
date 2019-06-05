@@ -2069,11 +2069,8 @@ a:focus {
 
 .site-logo {
   line-height: 1;
-  height: auto;
   margin: 0 0 0 1rem;
   max-width: 80%;
-  max-height: 20px;
-  width: auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -2094,7 +2091,10 @@ a:focus {
 }
 
 .site-logo .custom-logo-link .custom-logo {
+  height: auto;
   min-height: inherit;
+  max-height: 150px;
+  width: auto;
 }
 
 .site-title {
@@ -3108,6 +3108,11 @@ a:focus {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
+}
+
+.newspack-front-page .entry .entry-content > *.wp-block-group {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .newspack-front-page .entry .entry-content > *.wp-block-group.alignfull > *, .newspack-front-page .entry .entry-content > *.wp-block-group.alignwide > * {

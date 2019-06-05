@@ -10,10 +10,13 @@ Newspack Theme Static Fron Page Editor Styles
 /** === Content Width === */
 @media only screen and (min-width: 768px) {
   body.newspack-static-front-page .wp-block {
-    width: 1230px;
+    max-width: 1230px;
   }
 }
 
-body.newspack-static-front-page .wp-block .wp-block {
-  width: 100%;
+@media only screen and (min-width: 768px) {
+  body.newspack-static-front-page .wp-block-group[data-align="wide"] .wp-block:not([data-align="wide"]):not([data-align="full"]),
+  body.newspack-static-front-page .wp-block-group[data-align="full"] .wp-block:not([data-align="wide"]):not([data-align="full"]) {
+    max-width: 1230px;
+  }
 }

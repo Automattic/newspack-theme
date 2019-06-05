@@ -396,7 +396,6 @@ h6 {
   font-family: "IBM Plex Serif", Georgia, serif;
 }
 
-.main-navigation,
 .page-description,
 .author-description .author-link,
 .not-found .page-title,
@@ -414,6 +413,12 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-navigation {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -468,7 +473,6 @@ h3 {
 
 .site-title,
 .site-description,
-.main-navigation,
 .nav-links,
 .page-title,
 .page-description,
@@ -480,6 +484,7 @@ h4 {
   font-size: 1.125em;
 }
 
+.main-navigation,
 .pagination .nav-links,
 .comment-content,
 h5 {
@@ -885,7 +890,6 @@ a:focus {
   padding: 0;
   margin: 0;
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
   background: transparent;
@@ -922,8 +926,8 @@ a:focus {
 }
 
 .main-navigation .main-menu > li > a {
-  font-weight: 700;
   color: #0073aa;
+  font-weight: 700;
   margin-right: 0.5rem;
 }
 
@@ -969,7 +973,7 @@ a:focus {
   line-height: 1.2;
   width: 24px;
   padding: 0;
-  margin-left: 0.5rem;
+  margin: 0.25rem 0 0 0.5rem;
 }
 
 .main-navigation .main-menu > li.menu-item-has-children .submenu-expand.main-menu-more-toggle svg {
@@ -1468,7 +1472,7 @@ a:focus {
   font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 0.88889em;
   list-style: none;
-  margin: 0;
+  margin: 0.5em 0;
   padding: 0;
 }
 
@@ -1485,8 +1489,28 @@ a:focus {
   padding: 0;
 }
 
-.tertiary-menu > li > a {
-  margin-right: 0.5rem;
+.tertiary-menu li:nth-child(n+2) {
+  margin-left: 0.5rem;
+}
+
+.tertiary-menu a {
+  background-color: #e9e9e9;
+  transition: background 150ms ease-in-out;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 0.88889em;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+}
+
+.tertiary-menu a,
+.tertiary-menu a:visited {
+  color: #111;
+}
+
+.tertiary-menu a:hover {
+  background-color: #111;
+  color: #fff;
 }
 
 /* Social menu */
@@ -1505,7 +1529,7 @@ a:focus {
 }
 
 .social-navigation ul.social-links-menu li:nth-child(n+2) {
-  margin-left: 0.1em;
+  margin-left: 0.5em;
 }
 
 .social-navigation ul.social-links-menu li a {
@@ -1529,8 +1553,8 @@ a:focus {
 
 .social-navigation ul.social-links-menu li a svg {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   transform: translateZ(0);
 }
 
@@ -1987,13 +2011,31 @@ a:focus {
   color: #767676;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   position: relative;
 }
 
+@media only screen and (min-width: 768px) {
+  .site-branding {
+    flex-basis: 60%;
+  }
+}
+
 .site-logo {
-  /* margin-bottom: calc(.66 * 1rem); */
-  width: 100%;
+  line-height: 1;
+  margin: 0 1rem 0 0;
+  max-width: 80%;
+}
+
+@media only screen and (min-width: 600px) {
+  .site-logo {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .site-logo {
+    max-width: 40%;
+  }
 }
 
 .site-logo .custom-logo-link {
@@ -2002,12 +2044,18 @@ a:focus {
 }
 
 .site-logo .custom-logo-link .custom-logo {
+  height: auto;
   min-height: inherit;
+  max-height: 150px;
+  width: auto;
 }
 
 .site-title {
   color: #111;
-  margin: 0;
+  font-weight: 700;
+  margin: 0 1rem 0 0;
+  position: relative;
+  top: 2px;
 }
 
 .site-title a {
@@ -2020,11 +2068,6 @@ a:focus {
 
 .site-title a:hover {
   color: #4a4a4a;
-}
-
-.site-title:not(:empty) + .site-description:not(:empty):before {
-  content: "\2014";
-  margin: 0 .2em;
 }
 
 .site-description {
@@ -3026,6 +3069,16 @@ a:focus {
   }
 }
 
+.newspack-front-page .entry .entry-content > *.wp-block-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.newspack-front-page .entry .entry-content > *.wp-block-group.alignfull > *, .newspack-front-page .entry .entry-content > *.wp-block-group.alignwide > * {
+  max-width: 90%;
+  width: 1200px;
+}
+
 /*
  * Unset nested content selector styles
  * - Prevents layout styles from cascading too deeply
@@ -3731,6 +3784,15 @@ a:focus {
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
   font-size: 0.71111em;
+}
+
+.entry .entry-content .wp-block-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.entry .entry-content .wp-block-group.alignfull > *, .entry .entry-content .wp-block-group.alignwide > * {
+  max-width: 780px;
 }
 
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {

@@ -11,13 +11,17 @@ Newspack Theme Static Fron Page Editor Styles
 
 body.newspack-static-front-page {
 	.wp-block {
-			@include media(tablet) {
-				width: 1230px; // 1200px + 30px to offset padding
-			}
+		@include media(tablet) {
+			max-width: 1230px; // 1200px + 30px to offset padding
+		}
+	}
 
-			// Only the top level blocks need specific widths, therefore override for every nested block.
-			.wp-block {
-				width: 100%;
+	.wp-block-group[data-align="wide"],
+	.wp-block-group[data-align="full"] {
+		.wp-block:not([data-align="wide"]):not([data-align="full"]) {
+			@include media(tablet) {
+				max-width: 1230px; // 1200px + 30px to offset padding
 			}
+		}
 	}
 }
