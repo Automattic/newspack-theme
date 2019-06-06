@@ -38,6 +38,7 @@
     "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css",
     "build:style-editor-static-front-page": "node-sass style-editor-static-front-page.scss style-editor-static-front-page.css --output-style expanded && postcss -r style-editor-static-front-page.css",
     "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
+    "build:style-1-editor": "node-sass sass/styles/style-1/style-1-editor.scss styles/style-1-editor.css --output-style expanded && postcss -r styles/style-1-editor.css",
     "build:style-woocommerce": "node-sass sass/plugins/woocommerce.scss woocommerce.css --output-style expanded && postcss -r woocommerce.css",
     "build:rtl": "rtlcss style.css style-rtl.css",
     "build:rtl-style-1": "rtlcss styles/style-1.css styles/style-1-rtl.css",
