@@ -16,7 +16,7 @@ body .wp-block[data-align="full"] {
 
 @media only screen and (min-width: 1168px) {
   body .wp-block[data-align="wide"] {
-    width: 1230px;
+    max-width: 1230px;
   }
 }
 

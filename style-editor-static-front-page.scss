@@ -11,17 +11,17 @@ Newspack Theme Static Fron Page Editor Styles
 
 body.newspack-static-front-page {
 	.wp-block {
-		@include media(tablet) {
-			max-width: 1230px; // 1200px + 30px to offset padding
-		}
+		max-width: 1230px; // 1200px + 30px to offset padding
 	}
 
-	.wp-block-group[data-align="wide"],
-	.wp-block-group[data-align="full"] {
+	[data-type="core/group"][data-align="wide"],
+	[data-type="core/group"][data-align="full"] {
 		.wp-block:not([data-align="wide"]):not([data-align="full"]) {
-			@include media(tablet) {
-				max-width: 1230px; // 1200px + 30px to offset padding
-			}
+			max-width: 1230px; // 1200px + 30px to offset padding
+		}
+
+		.wp-block[data-align="wide"] {
+			max-width: 1430px; // 1400px + 30px to offset padding
 		}
 	}
 }

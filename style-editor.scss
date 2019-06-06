@@ -19,7 +19,7 @@ body {
 	@include media(desktop) {
 
 		.wp-block[data-align="wide"] {
-			width: 1230px;
+			max-width: 1230px;
 		}
 	}
 }
