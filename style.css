@@ -436,7 +436,6 @@ textarea {
 .page-links,
 .page-description,
 .pagination .nav-links,
-.sticky-post,
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
@@ -2138,19 +2137,6 @@ a:focus {
   display: block;
 }
 
-.sticky-post {
-  background: #0073aa;
-  color: #fff;
-  display: inline-block;
-  font-weight: bold;
-  line-height: 1;
-  padding: .25rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: -1rem;
-  z-index: 1;
-}
-
 .updated:not(.published) {
   display: none;
 }
@@ -2191,17 +2177,6 @@ a:focus {
   font-weight: 500;
 }
 
-.entry-meta > span,
-.entry-footer > span {
-  margin-right: 1rem;
-  display: inline-block;
-}
-
-.entry-meta > span:last-child,
-.entry-footer > span:last-child {
-  margin-right: 0;
-}
-
 .entry-meta a,
 .entry-footer a {
   transition: color 110ms ease-in-out;
@@ -2231,14 +2206,32 @@ a:focus {
   margin: 1rem 0;
 }
 
+.entry-meta .author-avatar {
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.entry-meta .byline {
+  display: block;
+}
+
 .entry-footer {
   margin: calc(2 * 1rem) 0 1rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1168px) {
   .entry-footer {
-    margin: 1rem 0 calc(3 * 1rem);
+    max-width: 65%;
   }
+}
+
+.entry-footer > span {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.entry-footer > span:last-child {
+  margin-right: 0;
 }
 
 .post-thumbnail {
