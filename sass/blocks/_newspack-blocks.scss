@@ -8,7 +8,6 @@
 		.article-section-title {
 			border-bottom: 4px solid #ddd;
 			color: $color__primary;
-			font-family: $font__heading;
 			display: inline-block;
 			margin-bottom: calc( #{$size__spacing-unit} / 2 );
 			text-transform: uppercase;
@@ -18,14 +17,6 @@
 				display: inline-block;
 				margin-bottom: -4px;
 			}
-		}
-
-		.article-meta {
-			font-family: $font__heading;
-		}
-
-		.author-name .author {
-			font-weight: bold;
 		}
 	}
 }

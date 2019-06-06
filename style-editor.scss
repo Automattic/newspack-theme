@@ -709,7 +709,6 @@ ul.wp-block-archives,
 	.article-section-title {
 		border-bottom: 4px solid #ddd;
 		color: $color__primary;
-		font-family: $font__heading;
 		display: inline-block;
 		position: relative;
 		text-transform: uppercase;
@@ -727,14 +726,6 @@ ul.wp-block-archives,
 
 	.article-title a {
 		color: inherit;
-	}
-
-	.article-meta {
-		font-family: $font__heading;
-	}
-
-	.author-name .author {
-		font-weight: bold;
 	}
 }
 

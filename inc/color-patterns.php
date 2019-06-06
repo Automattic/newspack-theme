@@ -178,7 +178,6 @@ function newspack_custom_colors_css() {
 		 * - pullquote (solid color)
 		 * - buttons
 		 */
-		.editor-block-list__layout .editor-block-list__block a,
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:hover .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
@@ -203,6 +202,12 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button:not(.is-style-outline) .wp-block-button__link:focus,
 		.editor-block-list__layout .editor-block-list__block .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
 			background-color: ' . $primary_color . '; /* base: #0073a8; */
+		}
+
+		/* Set secondary color */
+
+		.editor-block-list__layout .editor-block-list__block  a {
+			color:' . $secondary_color . '; /* base: #666 */
 		}
 
 		/* Hover colors */
