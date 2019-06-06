@@ -3110,12 +3110,9 @@ a:focus {
   }
 }
 
-.newspack-front-page .entry .entry-content > *.wp-block-group {
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .newspack-front-page .entry .entry-content > *.wp-block-group.alignfull > *, .newspack-front-page .entry .entry-content > *.wp-block-group.alignwide > * {
+  margin-right: auto;
+  margin-left: auto;
   max-width: 90%;
   width: 1200px;
 }
@@ -3825,6 +3822,12 @@ a:focus {
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
   font-size: 0.71111em;
+}
+
+.entry .entry-content .wp-block-group.alignfull > *, .entry .entry-content .wp-block-group.alignwide > * {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 780px;
 }
 
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
