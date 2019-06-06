@@ -8,15 +8,16 @@ Newspack Theme Static Fron Page Editor Styles
 /* Calculates maximum width for post content */
 /* Nested sub-menu padding: 10 levels deep */
 /** === Content Width === */
-@media only screen and (min-width: 768px) {
-  body.newspack-static-front-page .wp-block {
-    max-width: 1230px;
-  }
+body.newspack-static-front-page .wp-block {
+  max-width: 1230px;
 }
 
-@media only screen and (min-width: 768px) {
-  body.newspack-static-front-page .wp-block-group[data-align="wide"] .wp-block:not([data-align="wide"]):not([data-align="full"]),
-  body.newspack-static-front-page .wp-block-group[data-align="full"] .wp-block:not([data-align="wide"]):not([data-align="full"]) {
-    max-width: 1230px;
-  }
+body.newspack-static-front-page [data-type="core/group"][data-align="wide"] .wp-block:not([data-align="wide"]):not([data-align="full"]),
+body.newspack-static-front-page [data-type="core/group"][data-align="full"] .wp-block:not([data-align="wide"]):not([data-align="full"]) {
+  max-width: 1230px;
+}
+
+body.newspack-static-front-page [data-type="core/group"][data-align="wide"] .wp-block[data-align="wide"],
+body.newspack-static-front-page [data-type="core/group"][data-align="full"] .wp-block[data-align="wide"] {
+  max-width: 1430px;
 }
