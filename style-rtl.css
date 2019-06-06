@@ -2196,47 +2196,35 @@ a:focus {
   margin-left: 0.5em;
 }
 
-.entry-meta .svg-icon .entry-meta,
-.entry-footer .svg-icon .entry-meta {
+.entry-meta {
   margin: 1rem 0;
 }
 
-.entry-meta .svg-icon .entry-meta .author-avatar,
-.entry-footer .svg-icon .entry-meta .author-avatar {
+.entry-meta .author-avatar {
   float: right;
   margin-left: 0.5rem;
 }
 
-.entry-meta .svg-icon .entry-meta .byline,
-.entry-footer .svg-icon .entry-meta .byline {
+.entry-meta .byline {
   display: block;
 }
 
-.entry-meta .entry-meta,
-.entry-footer .entry-meta {
-  margin: 1rem 0;
-}
-
-.entry-meta .entry-footer,
-.entry-footer .entry-footer {
+.entry-footer {
   margin: calc(2 * 1rem) 0 1rem;
 }
 
 @media only screen and (min-width: 1168px) {
-  .entry-meta .entry-footer,
-  .entry-footer .entry-footer {
+  .entry-footer {
     max-width: 65%;
   }
 }
 
-.entry-meta .entry-footer > span,
-.entry-footer .entry-footer > span {
+.entry-footer > span {
   margin-left: 1rem;
   display: inline-block;
 }
 
-.entry-meta .entry-footer > span:last-child,
-.entry-footer .entry-footer > span:last-child {
+.entry-footer > span:last-child {
   margin-left: 0;
 }
 
