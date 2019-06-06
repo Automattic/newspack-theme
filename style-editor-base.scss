@@ -5,48 +5,17 @@
 /** === Editor Frame === */
 
 body {
-
 	background-color: $color__background-body;
 
 	.wp-block[data-align="full"] {
-		width: 100%;
+		max-width: 100vw;
+		width: auto;
 	}
 
-	@include media(mobile) {
-
-		.wp-block[data-align="full"] {
-			width: calc( 100% + 90px );
-			max-width: calc( 100% + 90px );
-		}
-	}
-
-	@include media(tablet) {
-
-		.editor-writing-flow {
-			max-width: 80%;
-			margin: 0 10%;
-		}
-
-		.editor-post-title__block,
-		.editor-default-block-appender,
-		.editor-block-list__block {
-			margin-left: auto;
-			margin-right: auto;
-		}
+	@include media(desktop) {
 
 		.wp-block[data-align="wide"] {
-			width: 100%;
-		}
-
-		.wp-block[data-align="full"] {
-			position: relative;
-			left: calc( -12.5% - 14px );
-			width: calc( 125% + 116px );
-			max-width: calc( 125% + 115px ); // Subtract 1px here to avoid the rounding errors that happen due to the usage of percentages.
-		}
-
-		.wp-block[data-align="right"] {
-			max-width: 125%;
+			width: 1230px;
 		}
 	}
 }
@@ -54,15 +23,10 @@ body {
 /** === Content Width === */
 
 .wp-block {
-	width: calc(100vw - (2 * #{$size__spacing-unit}));
 	max-width: 100%;
 
 	@include media(tablet) {
-		width: calc(8 * (100vw / 12));
-	}
-
-	@include media(desktop) {
-		width: calc(6 * (100vw / 12 ));
+		width: 810px; // 780px + 30px to offset padding
 	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.
