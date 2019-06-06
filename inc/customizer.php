@@ -34,6 +34,31 @@ function newspack_customize_register( $wp_customize ) {
 	}
 
 	/**
+	 * Header laypit
+	 */
+	$wp_customize->add_setting(
+		'header_layout',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_header_layout_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_layout',
+		array(
+			'type'    => 'select',
+			'label'   => esc_html__( 'Header Layout', 'newspack' ),
+			'choices' => array(
+				'default'  => esc_html__( 'Default Layout', 'newspack' ),
+				'centered' => esc_html__( 'Centered Layout', 'newspack' ),
+				'solid'    => esc_html__( 'Solid Background', 'newspack' ),
+			),
+			'section' => 'title_tagline',
+		)
+	);
+
+	/**
 	 * Primary color.
 	 */
 	$wp_customize->add_setting(
@@ -298,6 +323,27 @@ function newspack_sanitize_color_option( $choice ) {
 	$valid = array(
 		'default',
 		'custom',
+	);
+
+	if ( in_array( $choice, $valid, true ) ) {
+		return $choice;
+	}
+
+	return 'default';
+}
+
+/**
+ * Sanitize header layout choice.
+ *
+ * @param string $choice Sanitized dropdown value.
+ *
+ * @return string
+ */
+function newspack_sanitize_header_layout_option( $choice ) {
+	$valid = array(
+		'default',
+		'centered',
+		'solid',
 	);
 
 	if ( in_array( $choice, $valid, true ) ) {

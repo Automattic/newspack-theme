@@ -18,6 +18,9 @@ function newspack_custom_colors_css() {
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 	}
 
+	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
+	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
+
 
 	$theme_css = '
 		/* Set primary background color */
@@ -168,6 +171,25 @@ function newspack_custom_colors_css() {
 		::-moz-selection {
 			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}';
+
+	if ( 'solid' === get_theme_mod( 'header_layout', 'default' ) ) {
+		$theme_css .= '
+			.site-header {
+				background-color: ' . $primary_color . ';
+			}
+
+			.site-header,
+			.site-header a, .site-header a:visited,
+			.site-description {
+				color: ' . $primary_color_contrast . ';
+			}
+
+			.main-navigation .main-menu > li,
+			.main-navigation ul.main-menu > li > a {
+				color: inherit;
+			}
+		';
+	}
 
 	$editor_css = '
 		/*

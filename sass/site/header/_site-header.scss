@@ -28,15 +28,8 @@
 }
 
 .site-branding {
-	align-items: center;
 	color: $color__text-light;
-	display: flex;
-	flex-wrap: wrap;
 	position: relative;
-
-	@include media(tablet) {
-		flex-basis: 60%;
-	}
 }
 
 // Site logo
@@ -94,8 +87,37 @@
 
 .site-description {
 	color: $color__text-light;
-	flex: 1 1 auto;
 	font-weight: normal;
 	font-size: $font__size-sm;
 	margin: 7px 0 0;
+}
+
+.default-header-layout,
+.solid-header-layout {
+	.site-branding {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media(tablet) {
+			flex-basis: 60%;
+		}
+	}
+
+	.site-description {
+		flex: 1 1 auto;
+	}
+}
+
+.centered-header-layout {
+	.site-branding {
+		flex-grow: 1;
+		text-align: center;
+	}
+}
+
+.solid-header-layout {
+	.site-header {
+		padding-bottom: 0;
+	}
 }
