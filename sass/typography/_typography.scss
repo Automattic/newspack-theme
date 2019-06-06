@@ -27,6 +27,10 @@ textarea {
 	text-rendering: optimizeLegibility;
 }
 
+.use-body-font {
+	font-family: $font__body;
+}
+
 @import "headings";
 
 @import "copy";

@@ -420,6 +420,10 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 
+.use-body-font {
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+}
+
 .author-description .author-link,
 .comment-metadata,
 .comment-reply-link,
@@ -439,6 +443,7 @@ textarea {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
+.use-header-font,
 h1,
 h2,
 h3,

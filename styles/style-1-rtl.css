@@ -367,6 +367,10 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 
+.use-body-font {
+  font-family: "IBM Plex Serif", Georgia, serif;
+}
+
 .author-description .author-link,
 .comment-metadata,
 .comment-reply-link,
@@ -386,6 +390,7 @@ textarea {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
+.use-heading-font,
 h1,
 h2,
 h3,
