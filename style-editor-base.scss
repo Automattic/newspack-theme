@@ -15,7 +15,7 @@ body {
 	@include media(desktop) {
 
 		.wp-block[data-align="wide"] {
-			width: 1230px;
+			max-width: 1230px;
 		}
 	}
 }
@@ -23,16 +23,7 @@ body {
 /** === Content Width === */
 
 .wp-block {
-	max-width: 100%;
-
-	@include media(tablet) {
-		width: 810px; // 780px + 30px to offset padding
-	}
-
-	// Only the top level blocks need specific widths, therefore override for every nested block.
-	.wp-block {
-		width: 100%;
-	}
+	max-width: 810px; // 780px + 30px to offset padding
 }
 
 /** === Base Typography === */
