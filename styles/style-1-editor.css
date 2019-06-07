@@ -21,23 +21,13 @@ body .wp-block[data-align="full"] {
 
 @media only screen and (min-width: 1168px) {
   body .wp-block[data-align="wide"] {
-    width: 1230px;
+    max-width: 1230px;
   }
 }
 
 /** === Content Width === */
 .wp-block {
-  max-width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .wp-block {
-    width: 810px;
-  }
-}
-
-.wp-block .wp-block {
-  width: 100%;
+  max-width: 810px;
 }
 
 /** === Base Typography === */
