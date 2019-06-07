@@ -2052,9 +2052,7 @@ a:focus {
 .site-title {
   color: #111;
   font-weight: 700;
-  margin: 0 1rem 0 0;
-  position: relative;
-  top: 2px;
+  margin: 0 1rem -3px 0;
 }
 
 .site-title a {
