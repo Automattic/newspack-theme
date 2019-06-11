@@ -367,6 +367,10 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 
+.use-body-font {
+  font-family: "IBM Plex Serif", Georgia, serif;
+}
+
 .author-description .author-link,
 .comment-metadata,
 .comment-reply-link,
@@ -386,6 +390,7 @@ textarea {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
+.use-heading-font,
 h1,
 h2,
 h3,
@@ -3760,10 +3765,6 @@ a:focus {
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
   font-size: 0.71111em;
-}
-
-.entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
-  font-family: "IBM Plex Serif", Georgia, serif;
 }
 
 .entry .entry-content .has-small-font-size {
