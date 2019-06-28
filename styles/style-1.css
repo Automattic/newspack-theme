@@ -423,10 +423,6 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page-title {
-  font-family: "IBM Plex Serif", Georgia, serif;
-}
-
 .site-branding,
 .main-navigation ul.main-menu > li,
 .social-navigation,
@@ -435,13 +431,15 @@ h6 {
   line-height: 1.25;
 }
 
-h1 {
-  font-size: 1.6875em;
+h1,
+.page-description {
+  font-size: 2.25em;
 }
 
 @media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.25em;
+  h1,
+  .page-description {
+    font-size: 2.8125em;
   }
 }
 
@@ -473,8 +471,6 @@ h3 {
 .site-title,
 .site-description,
 .nav-links,
-.page-title,
-.page-description,
 .comment-author .fn,
 .no-comments,
 h2.author-title,
@@ -483,6 +479,7 @@ h4 {
   font-size: 1.125em;
 }
 
+.page-title,
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
@@ -505,12 +502,10 @@ h6 {
   font-size: 0.71111em;
 }
 
-.site-title,
-.page-title {
+.site-title {
   font-weight: normal;
 }
 
-.page-description,
 .page-links a {
   font-weight: bold;
 }
@@ -530,6 +525,18 @@ blockquote {
   .entry-title {
     hyphens: none;
   }
+}
+
+.page-header {
+  width: 100%;
+}
+
+.page-title {
+  text-transform: uppercase;
+}
+
+.page-description {
+  text-transform: none;
 }
 
 p {
@@ -1948,26 +1955,44 @@ a:focus {
   overflow: hidden;
 }
 
-#main {
+#primary {
   margin: auto;
   max-width: 90%;
   width: 1200px;
 }
 
-.single #main {
+.single.has-sidebar #main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.archive.has-sidebar #primary,
+.blog.has-sidebar #primary {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 @media only screen and (min-width: 768px) {
-  body:not(.newspack-front-page):not(.has-sidebar) .main-content {
+  .archive #main,
+  .blog #main {
+    width: 60%;
+  }
+  .archive #secondary,
+  .blog #secondary {
+    width: 29%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .single .main-content {
     max-width: 65%;
   }
 }
 
 @media only screen and (min-width: 1168px) {
-  body:not(.newspack-front-page):not(.has-sidebar) .main-content {
+  .single .main-content {
     max-width: 65%;
   }
 }
@@ -1977,14 +2002,7 @@ a:focus {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-header {
-    margin: 0;
-    padding: 1rem 0 3rem;
-  }
+  padding: 1rem 0 3rem;
 }
 
 .site-branding-container {
@@ -2717,70 +2735,69 @@ a:focus {
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
-.archive .page-header,
-.search .page-header {
-  margin: 1rem 0 calc(3 * 1rem);
-}
-
-@media only screen and (min-width: 768px) {
-  .archive .page-header,
-  .search .page-header {
-    margin: 0 0 calc(10% + 60px);
-  }
-}
-
-.archive .page-header .page-title,
-.search .page-header .page-title {
-  color: #767676;
-  display: inline;
-  letter-spacing: normal;
-}
-
-.archive .page-header .page-title:before,
-.search .page-header .page-title:before {
-  display: none;
-}
-
-.archive .page-header .search-term,
-.archive .page-header .page-description,
-.search .page-header .search-term,
-.search .page-header .page-description {
+.archive .search-term,
+.archive .page-description,
+.search .search-term,
+.search .page-description {
   display: inherit;
   clear: both;
 }
 
-.archive .page-header .search-term:after,
-.archive .page-header .page-description:after,
-.search .page-header .search-term:after,
-.search .page-header .page-description:after {
-  content: ".";
-  font-weight: bold;
-  color: #767676;
+.archive .author-avatar,
+.search .author-avatar {
+  display: none;
 }
 
-.archive .page-header .page-description {
-  display: block;
-  color: #111;
-  font-size: 1em;
+.archive .entry,
+.search .entry {
+  margin-top: calc(3 * 1rem);
 }
 
-/* 404 & Not found */
-.error-404.not-found .page-header,
-.error-404.not-found .page-content,
-.no-results.not-found .page-header,
-.no-results.not-found .page-content {
-  margin: calc(3 * 1rem) 1rem;
+.archive .entry:first-of-type,
+.search .entry:first-of-type {
+  margin-top: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .error-404.not-found .page-header,
-  .error-404.not-found .page-content,
-  .no-results.not-found .page-header,
-  .no-results.not-found .page-content {
-    margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+.archive .entry-header,
+.search .entry-header {
+  margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .archive .has-post-thumbnail,
+  .search .has-post-thumbnail {
+    display: flex;
+  }
+  .archive .post-thumbnail,
+  .search .post-thumbnail {
+    margin: 0 1em 0 0;
+    width: 30%;
+  }
+  .archive .byline,
+  .archive .posted-on,
+  .search .byline,
+  .search .posted-on {
+    display: inline;
+  }
+  .archive .byline,
+  .search .byline {
+    margin-right: 2em;
   }
 }
 
+.archive .page-header {
+  margin: 0 0 3rem;
+}
+
+.archive .page-description {
+  display: block;
+}
+
+.taxonomy-description {
+  font-style: italic;
+}
+
+/* 404 & Not found */
 .error-404.not-found .search-submit,
 .no-results.not-found .search-submit {
   vertical-align: middle;

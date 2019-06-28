@@ -1,12 +1,7 @@
 // Site header
 
 .site-header {
-	padding: 1em;
-
-	@include media(tablet) {
-		margin: 0;
-		padding: 1rem 0 3rem;
-	}
+	padding: 1rem 0 3rem;
 }
 
 // Site branding

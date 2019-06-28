@@ -24,10 +24,6 @@
 				<?php newspack_posted_on(); ?>
 			</div><!-- .meta-info -->
 		<?php endif; ?>
-
-		<div class="entry-content">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-content -->
-	</div><!-- .entry--container -->
+	</div><!-- .entry-container -->
 </article><!-- #post-${ID} -->
 

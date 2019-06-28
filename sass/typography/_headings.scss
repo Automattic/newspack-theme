@@ -54,10 +54,6 @@ h6 {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.page-title {
-	font-family: $font__body;
-}
-
 .site-branding,
 .main-navigation ul.main-menu > li,
 .social-navigation,
@@ -66,11 +62,12 @@ h6 {
 	line-height: 1.25;
 }
 
-h1 {
-	font-size: $font__size-xl;
+h1,
+.page-description {
+	font-size: $font__size-xxl;
 
 	@include media(tablet) {
-		font-size: $font__size-xxl;
+		font-size: $font__size-xxxl;
 	}
 }
 
@@ -96,8 +93,6 @@ h3 {
 .site-title,
 .site-description,
 .nav-links,
-.page-title,
-.page-description,
 .comment-author .fn,
 .no-comments,
 h2.author-title,
@@ -106,6 +101,7 @@ h4 {
 	font-size: $font__size-md;
 }
 
+.page-title,
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
@@ -128,12 +124,10 @@ h6 {
 	font-size: $font__size-xs;
 }
 
-.site-title,
-.page-title {
+.site-title {
 	font-weight: normal;
 }
 
-.page-description,
 .page-links a {
 	font-weight: bold;
 }
@@ -153,4 +147,16 @@ blockquote {
 	@include media(tablet) {
 		hyphens: none;
 	}
+}
+
+.page-header {
+	width: 100%;
+}
+
+.page-title {
+	text-transform: uppercase;
+}
+
+.page-description {
+	text-transform: none;
 }

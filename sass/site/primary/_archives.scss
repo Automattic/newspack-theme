@@ -1,56 +1,66 @@
-.archive .page-header,
-.search .page-header {
-
-	margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
-
-	@include media(tablet) {
-		margin: 0 0 $size__site-margins;
-	}
-
-	.page-title {
-
-		color: $color__text-light;
-		display: inline;
-		letter-spacing: normal;
-
-		&:before {
-			display: none;
-		}
-	}
-
+.archive,
+.search {
 	.search-term,
 	.page-description {
 		display: inherit;
 		clear: both;
+	}
 
-		&:after {
-			content: ".";
-			font-weight: bold;
-			color: $color__text-light;
+	.author-avatar {
+		display: none;
+	}
+
+	.entry {
+		margin-top: calc(3 * #{$size__spacing-unit});
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	.entry-header {
+		margin: 0;
+	}
+
+	@include media( mobile ) {
+		.has-post-thumbnail {
+			display: flex;
+		}
+
+		.post-thumbnail {
+			margin: 0 1em 0 0;
+			width: 30%
+		}
+
+		.byline,
+		.posted-on {
+			display: inline;
+		}
+
+		.byline {
+			margin-right: 2em;
 		}
 	}
 }
 
-.archive .page-header .page-description {
-	display: block;
-	color: $color__text-main;
-	font-size: 1em;
+.archive {
+	.page-header {
+		margin: 0 0 #{ $size__spacing-unit * 3 };
+	}
+
+	.page-description {
+		display: block;
+	}
+}
+
+.taxonomy-description {
+	font-style: italic;
 }
 
 /* 404 & Not found */
 
 .error-404.not-found,
 .no-results.not-found {
-
-	.page-header,
-	.page-content {
-
-		margin: calc(3 * #{$size__spacing-unit}) #{$size__spacing-unit};
-
-		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) $size__site-margins calc(#{ $size__spacing-unit } / 2);
-		}
-	}
 
 	.search-submit {
 		vertical-align: middle;
