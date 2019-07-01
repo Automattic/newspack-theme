@@ -24,7 +24,7 @@
 	}
 
 	.entry-meta {
-		margin: #{ $size__spacing-unit * 0.75 } 0;
+		margin: #{ $size__spacing-unit * 0.5 } 0;
 	}
 }
 
@@ -66,9 +66,17 @@
 		}
 
 		.byline {
-			margin-right: 2em;
+			margin-right: $size__spacing-unit;
 		}
 	}
+}
+
+.page-title {
+	color: $color__primary;
+}
+
+.page-description {
+	color: $color__text-main;
 }
 
 .taxonomy-description {

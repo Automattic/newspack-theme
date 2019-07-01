@@ -536,15 +536,18 @@ h4 {
 }
 
 .page-title,
-.main-navigation,
+.main-navigation {
+  font-size: 20px;
+}
+
+.entry-meta,
+.entry-footer,
 .pagination .nav-links,
 .comment-content,
 h5 {
   font-size: 0.88889em;
 }
 
-.entry-meta,
-.entry-footer,
 .discussion-meta-info,
 .site-info,
 .has-small-font-size,
@@ -588,6 +591,7 @@ blockquote {
 }
 
 .page-title {
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
@@ -2209,14 +2213,6 @@ a:focus {
   color: #005177;
 }
 
-.entry-meta .svg-icon,
-.entry-footer .svg-icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.5em;
-}
-
 .entry-meta {
   margin: 1rem 0;
 }
@@ -2228,6 +2224,11 @@ a:focus {
 
 .entry-meta .byline {
   display: block;
+}
+
+.entry-meta .byline a {
+  color: #0073aa;
+  font-weight: bold;
 }
 
 .entry-footer {
@@ -2817,7 +2818,7 @@ a:focus {
 
 .archive .entry-meta,
 .search .entry-meta {
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 
 .archive .page-header {
@@ -2851,8 +2852,16 @@ a:focus {
     display: inline;
   }
   .archive .byline {
-    margin-left: 2em;
+    margin-left: 1rem;
   }
+}
+
+.page-title {
+  color: #0073aa;
+}
+
+.page-description {
+  color: #111;
 }
 
 .taxonomy-description {

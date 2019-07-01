@@ -104,15 +104,18 @@ h4 {
 }
 
 .page-title,
-.main-navigation,
+.main-navigation {
+	font-size: $font__size_base;
+}
+
+.entry-meta,
+.entry-footer,
 .pagination .nav-links,
 .comment-content,
 h5 {
 	font-size: $font__size-sm;
 }
 
-.entry-meta,
-.entry-footer,
 .discussion-meta-info,
 .site-info,
 .has-small-font-size,
@@ -156,6 +159,7 @@ blockquote {
 }
 
 .page-title {
+	letter-spacing: 0.01em;
 	text-transform: uppercase;
 }
 
