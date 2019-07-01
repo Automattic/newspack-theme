@@ -447,6 +447,7 @@ h1,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
+.archive:not(paged) article.entry:first-of-type .entry-title,
 h2 {
   font-size: 1.40625em;
 }
@@ -456,6 +457,7 @@ h2 {
   .not-found .page-title,
   .error-404 .page-title,
   .has-larger-font-size,
+  .archive:not(paged) article.entry:first-of-type .entry-title,
   h2 {
     font-size: 1.6875em;
   }
@@ -464,6 +466,7 @@ h2 {
 .has-regular-font-size,
 .has-large-font-size,
 .comments-title,
+.archive .entry-title,
 h3 {
   font-size: 1.40625em;
 }
@@ -2759,30 +2762,15 @@ a:focus {
 }
 
 .archive .entry-header,
-.search .entry-header {
+.archive .entry-content > p,
+.search .entry-header,
+.search .entry-content > p {
   margin: 0;
 }
 
-@media only screen and (min-width: 600px) {
-  .archive .has-post-thumbnail,
-  .search .has-post-thumbnail {
-    display: flex;
-  }
-  .archive .post-thumbnail,
-  .search .post-thumbnail {
-    margin: 0 1em 0 0;
-    width: 30%;
-  }
-  .archive .byline,
-  .archive .posted-on,
-  .search .byline,
-  .search .posted-on {
-    display: inline;
-  }
-  .archive .byline,
-  .search .byline {
-    margin-right: 2em;
-  }
+.archive .entry-meta,
+.search .entry-meta {
+  margin: 0.75rem 0;
 }
 
 .archive .page-header {
@@ -2793,7 +2781,35 @@ a:focus {
   display: block;
 }
 
+@media only screen and (min-width: 768px) {
+  .archive .has-post-thumbnail {
+    align-items: flex-start;
+    display: flex;
+  }
+  .archive .has-post-thumbnail .post-thumbnail {
+    margin: 0 1em 0 0;
+    flex-basis: 25%;
+  }
+  .archive .has-post-thumbnail .entry-container {
+    flex-basis: 75%;
+  }
+  .archive:not(paged) article.has-post-thumbnail:first-of-type {
+    display: block;
+  }
+  .archive:not(paged) article.has-post-thumbnail:first-of-type .entry-header {
+    margin: 1rem 0 0;
+  }
+  .archive .byline,
+  .archive .posted-on {
+    display: inline;
+  }
+  .archive .byline {
+    margin-right: 2em;
+  }
+}
+
 .taxonomy-description {
+  color: #767676;
   font-style: italic;
 }
 

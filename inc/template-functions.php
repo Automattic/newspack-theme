@@ -51,10 +51,11 @@ add_filter( 'body_class', 'newspack_body_classes' );
 function newspack_post_classes( $classes, $class, $post_id ) {
 	$classes[] = 'entry';
 
+
+
 	return $classes;
 }
 add_filter( 'post_class', 'newspack_post_classes', 10, 3 );
-
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.

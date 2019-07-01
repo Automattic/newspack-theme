@@ -75,6 +75,7 @@ h1,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
+.archive:not(paged) article.entry:first-of-type .entry-title,
 h2 {
 	font-size: $font__size-lg;
 
@@ -86,6 +87,7 @@ h2 {
 .has-regular-font-size,
 .has-large-font-size,
 .comments-title,
+.archive .entry-title,
 h3 {
 	font-size: $font__size-lg;
 }
