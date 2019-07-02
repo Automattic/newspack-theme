@@ -106,6 +106,9 @@ h4 {
 	font-size: $font__size-md;
 }
 
+.entry-meta,
+.entry-footer,
+.site-info,
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
@@ -113,15 +116,11 @@ h5 {
 	font-size: $font__size-sm;
 }
 
-.entry-meta,
-.entry-footer,
 .discussion-meta-info,
-.site-info,
 .has-small-font-size,
 .comment-reply-link,
 .comment-metadata,
 .comment-notes,
-.sticky-post,
 #cancel-comment-reply-link,
 img:after,
 h6 {
