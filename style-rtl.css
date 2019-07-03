@@ -538,7 +538,6 @@ h4 {
 
 .entry-meta,
 .entry-footer,
-.site-info,
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
@@ -553,8 +552,9 @@ h5 {
 .comment-notes,
 #cancel-comment-reply-link,
 img:after,
+.site-info,
 h6 {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .site-title,
@@ -598,7 +598,7 @@ i {
 
 blockquote cite {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-style: normal;
 }
 
@@ -1497,7 +1497,7 @@ ul.secondary-menu {
   display: flex;
   flex-wrap: wrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.7em;
   list-style: none;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -2120,6 +2120,7 @@ nav.tertiary-menu a:hover {
   flex: 1 1 auto;
   font-weight: normal;
   font-size: 0.8em;
+  font-style: italic;
   margin: 7px 0 0;
 }
 
@@ -2206,6 +2207,12 @@ nav.tertiary-menu a:hover {
 
 .entry-meta .byline {
   display: block;
+}
+
+.entry-meta .byline a {
+  color: #0073aa;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .entry-footer {
@@ -2500,7 +2507,7 @@ nav.tertiary-menu a:hover {
 .comment-list .trackback .comment-body {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -2509,7 +2516,6 @@ nav.tertiary-menu a:hover {
 .comment-list .pingback .comment-body a:not(.comment-edit-link),
 .comment-list .trackback .comment-body a:not(.comment-edit-link) {
   font-weight: bold;
-  font-size: 17.77778px;
   line-height: 1.5;
   padding-left: 0.5rem;
   display: block;
@@ -2735,7 +2741,7 @@ nav.tertiary-menu a:hover {
 .comment-form .comment-notes,
 .comment-form label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: #767676;
 }
 
@@ -2930,7 +2936,6 @@ nav.tertiary-menu a:hover {
 .widget_rss ul li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(20px * 1.125);
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.5rem;
@@ -3254,7 +3259,6 @@ nav.tertiary-menu a:hover {
 .entry .entry-content .wp-block-latest-posts li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(20px * 1.125);
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 0.75rem;
@@ -3318,7 +3322,7 @@ nav.tertiary-menu a:hover {
 }
 
 .entry .entry-content .wp-block-preformatted {
-  font-size: 0.6em;
+  font-size: 0.7em;
   line-height: 1.8;
   padding: 1rem;
 }
@@ -3378,9 +3382,9 @@ nav.tertiary-menu a:hover {
   color: #767676;
   /*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font__size-xs.
 			 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc( 1rem * $font__size-xs);
 }
 
 .entry .entry-content .wp-block-pullquote.alignleft, .entry .entry-content .wp-block-pullquote.alignright {
@@ -3484,7 +3488,7 @@ nav.tertiary-menu a:hover {
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc(1rem * $font__size-sm);
 }
 
 .entry .entry-content .wp-block-quote.is-large, .entry .entry-content .wp-block-quote.is-style-large {
@@ -3506,7 +3510,7 @@ nav.tertiary-menu a:hover {
 				 * This requires a rem-based font size calculation instead of our normal em-based one,
 				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 				 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc(1rem * $font__size-sm);
 }
 
 @media only screen and (min-width: 768px) {
@@ -3659,7 +3663,7 @@ nav.tertiary-menu a:hover {
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -3813,7 +3817,7 @@ nav.tertiary-menu a:hover {
 }
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .entry .entry-content .wp-block-newspack-blocks-homepage-articles .article-meta {
@@ -4032,7 +4036,7 @@ svg {
 
 .wp-caption-text {
   color: #767676;
-  font-size: 0.6em;
+  font-size: 0.7em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -4130,7 +4134,7 @@ svg {
 .gallery-caption {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.7em;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
