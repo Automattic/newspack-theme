@@ -2323,6 +2323,11 @@ a:focus {
   }
 }
 
+.single-post.post-template-single-feature .main-content {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .page.home .entry .entry-content {
   max-width: 100%;
 }

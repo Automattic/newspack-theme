@@ -2276,6 +2276,11 @@ a:focus {
   }
 }
 
+.single-post.post-template-single-feature .main-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page.home .entry .entry-content {
   max-width: 100%;
 }
