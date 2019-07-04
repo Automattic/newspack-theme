@@ -5,6 +5,7 @@
 .comment-author .fn,
 .discussion-meta-info,
 .entry-meta,
+.cat-links,
 .entry-footer,
 .main-navigation,
 .no-comments,
@@ -34,6 +35,7 @@ h6 {
 .post-navigation .post-title,
 .pagination .nav-links,
 .comments-title,
+.cat-links,
 .comment-author .fn,
 .no-comments,
 .site-title,
@@ -103,6 +105,7 @@ h3 {
 .no-comments,
 h2.author-title,
 p.author-bio,
+.tags-links span,
 h4 {
 	font-size: $font__size-md;
 }

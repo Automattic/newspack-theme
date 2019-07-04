@@ -951,6 +951,10 @@
 			@include media(tablet) {
 				margin-left: 0;
 			}
+
+			&.wp-block-image img {
+				width: 100%;
+			}
 		}
 	}
 }

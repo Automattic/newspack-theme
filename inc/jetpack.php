@@ -72,6 +72,15 @@ function newspack_infinite_scroll_render() {
 }
 
 /**
+ * Remove Jetpack Share icons from standard location so they can be moved.
+ */
+function newspack_remove_jetpack_share() {
+	remove_filter( 'the_content', 'sharing_display', 19 );
+	remove_filter( 'the_excerpt', 'sharing_display', 19 );
+}
+add_action( 'loop_start', 'newspack_remove_jetpack_share' );
+
+/**
  * Alter gallery widget default width.
  */
 function newspack_gallery_widget_content_width( $width ) {
