@@ -21,7 +21,8 @@
 }
 
 .entry-header {
-	margin: calc(3 * #{ $size__spacing-unit}) 0 $size__spacing-unit;
+	margin: calc(3 * #{ $size__spacing-unit}) 0 0;
+	padding: 0 0 $size__spacing-unit;
 	position: relative;
 }
 
@@ -39,13 +40,13 @@
 }
 
 .cat-links {
+	display: block;
 	font-size: $font__size-xs;
-	margin: 0 0 calc( #{$size__spacing-unit} * 2 );
+	margin: 0 0 $size__spacing-unit;
 
 	a {
 		background-color: $color__primary;
 		color: #fff;
-		display: inline-block;
 		padding: 0.5em 0.75em;
 		text-transform: uppercase;
 
@@ -98,8 +99,6 @@
 }
 
 .entry-meta {
-	margin: $size__spacing-unit 0;
-
 	.author-avatar {
 		float: left;
 		margin-right: #{ $size__spacing-unit * 0.5 };
@@ -210,8 +209,13 @@
 		width: 100%;
 	}
 
+	&:not(.has-featured-image) .entry-header {
+		border-bottom: 1px solid #ddd;
+	}
+
 	.entry-title {
 		font-size: $font__size-xxxl;
+		margin: 0 0 0.5em;
 
 		@include media(desktop) {
 			font-size: $font__size-xxxxl;
@@ -243,6 +247,13 @@
 
 	div.sharedaddy h3.sd-title {
 		display: none;
+	}
+
+	.sd-content {
+		margin-bottom: -0.7em; // offsets Jetpack's default styles w/out using !important
+		ul li {
+			margin-bottom: 0;
+		}
 	}
 }
 

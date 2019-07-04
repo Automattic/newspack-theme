@@ -2138,7 +2138,8 @@ a:focus {
 }
 
 .entry-header {
-  margin: calc(3 * 1rem) 0 1rem;
+  margin: calc(3 * 1rem) 0 0;
+  padding: 0 0 1rem;
   position: relative;
 }
 
@@ -2155,14 +2156,14 @@ a:focus {
 }
 
 .cat-links {
+  display: block;
   font-size: 0.71111em;
-  margin: 0 0 calc( 1rem * 2);
+  margin: 0 0 1rem;
 }
 
 .cat-links a {
   background-color: #0073aa;
   color: #fff;
-  display: inline-block;
   padding: 0.5em 0.75em;
   text-transform: uppercase;
 }
@@ -2178,6 +2179,7 @@ a:focus {
 
 .tags-links a {
   background-color: #f1f1f1;
+  display: inline-block;
   padding: 0.5em 0.75em;
 }
 
@@ -2210,10 +2212,6 @@ a:focus {
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5em;
-}
-
-.entry-meta {
-  margin: 1rem 0;
 }
 
 .entry-meta .author-avatar {
@@ -2314,8 +2312,13 @@ a:focus {
   width: 100%;
 }
 
+.single-post:not(.has-featured-image) .entry-header {
+  border-bottom: 1px solid #ddd;
+}
+
 .single-post .entry-title {
   font-size: 2.8125em;
+  margin: 0 0 0.5em;
 }
 
 @media only screen and (min-width: 1168px) {
@@ -2347,6 +2350,14 @@ a:focus {
 
 .single-post div.sharedaddy h3.sd-title {
   display: none;
+}
+
+.single-post .sd-content {
+  margin-bottom: -0.7em;
+}
+
+.single-post .sd-content ul li {
+  margin-bottom: 0;
 }
 
 .page.home .entry .entry-content {
