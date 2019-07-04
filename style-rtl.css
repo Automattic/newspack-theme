@@ -588,6 +588,15 @@ blockquote {
   }
 }
 
+.accent-header {
+  border-bottom: 4px solid #ccc;
+  color: #0073aa;
+  font-size: 1em;
+  margin: 0 0 calc( 1rem / 2);
+  padding: 0 0 calc( 1rem / 2);
+  text-transform: uppercase;
+}
+
 p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2357,15 +2366,6 @@ a:focus {
   .author-bio .author-bio-text {
     width: calc( 100% - 80px - 1em);
   }
-}
-
-.author-bio h2 {
-  border-bottom: 4px solid #ccc;
-  color: #0073aa;
-  font-size: 1em;
-  margin: 0 0 calc( 1rem / 2);
-  padding: 0 0 calc( 1rem / 2);
-  text-transform: uppercase;
 }
 
 .author-bio h2 span {
