@@ -84,23 +84,38 @@ if ( ! function_exists( 'newspack_comment_count' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_categories' ) ) :
+	/**
+	 * Prints HTML with the current post's categories.
+	 */
+	function newspack_categories() {
+		$categories_list = get_the_category_list( ' ' );
+		if ( $categories_list ) {
+			printf(
+				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+				'<span class="cat-links"><span class="screen-reader-text">%1$s</span>%2$s</span>',
+				esc_html__( 'Posted in', 'newspack' ),
+				$categories_list
+			); // WPCS: XSS OK.
+		}
+	}
+endif;
+
 if ( ! function_exists( 'newspack_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with meta information for the tags and comments.
 	 */
 	function newspack_entry_footer() {
 
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'newspack' ) );
+			$tags_list = get_the_tag_list( '', ' ' );
 			if ( $tags_list ) {
 				printf(
-					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of tags. */
-					'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s </span>%3$s</span>',
-					newspack_get_icon_svg( 'tag', 16 ),
-					__( 'Tags:', 'newspack' ),
+					/* translators: 1: posted in label, only visible to screen readers. 2: list of tags. */
+					'<span class="tags-links"><span>%1$s </span>%2$s</span>',
+					esc_html__( 'Tagged:', 'newspack' ),
 					$tags_list
 				); // WPCS: XSS OK.
 			}

@@ -17,15 +17,6 @@
 			.meta-nav {
 				color: $color__text-light;
 				user-select: none;
-
-				&:before,
-				&:after {
-					display: none;
-					content: "—";
-					width: 2em;
-					color: $color__text-light;
-					height: 1em;
-				}
 			}
 
 			.post-title {
@@ -46,12 +37,6 @@
 		}
 
 		.nav-previous {
-			order: 2;
-
-			@include media(desktop) {
-				order: 1;
-			}
-
 			+ .nav-next {
 				margin-bottom: $size__spacing-unit;
 			}
@@ -64,10 +49,8 @@
 		}
 
 		.nav-next {
-			order: 1;
 
 			@include media(desktop) {
-				order: 2;
 				padding-left: $size__spacing-unit;
 			}
 
