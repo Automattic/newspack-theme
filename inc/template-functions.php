@@ -41,6 +41,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
+	// Adds class if singular post or page has a featured image.
+	if ( is_singular() && has_post_thumbnail() ) {
+		$classes[] = 'has-featured-image';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
