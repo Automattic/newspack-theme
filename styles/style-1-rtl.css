@@ -340,7 +340,13 @@ template {
 
 /* Typography */
 html {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -3331,7 +3337,7 @@ nav.tertiary-menu a:hover {
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font__size-xs.
 			 */
-  font-size: calc( 1rem * $font__size-xs);
+  font-size: calc( 1rem * 0.7em);
 }
 
 .entry .entry-content .wp-block-pullquote.alignleft, .entry .entry-content .wp-block-pullquote.alignright {
@@ -3435,7 +3441,7 @@ nav.tertiary-menu a:hover {
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-  font-size: calc(1rem * $font__size-sm);
+  font-size: calc(1rem * 0.8em);
 }
 
 .entry .entry-content .wp-block-quote.is-large, .entry .entry-content .wp-block-quote.is-style-large {
@@ -3457,7 +3463,7 @@ nav.tertiary-menu a:hover {
 				 * This requires a rem-based font size calculation instead of our normal em-based one,
 				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 				 */
-  font-size: calc(1rem * $font__size-sm);
+  font-size: calc(1rem * 0.8em);
 }
 
 @media only screen and (min-width: 768px) {
