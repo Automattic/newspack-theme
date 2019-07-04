@@ -555,6 +555,15 @@ blockquote {
   text-transform: none;
 }
 
+.accent-header {
+  border-bottom: 4px solid #ccc;
+  color: #2A7DE1;
+  font-size: 1em;
+  margin: 0 0 calc( 1rem / 2);
+  padding: 0 0 calc( 1rem / 2);
+  text-transform: uppercase;
+}
+
 p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2324,8 +2333,8 @@ nav.tertiary-menu a:hover {
 /* Author description */
 .author-bio {
   display: flex;
+  font-size: calc( 1em * 0.9);
   margin: calc(2 * 1rem) auto 1rem;
-  font-size: 0.8em;
 }
 
 .author-bio .avatar {
@@ -2337,21 +2346,42 @@ nav.tertiary-menu a:hover {
 
 @media only screen and (min-width: 600px) {
   .author-bio .avatar {
-    display: inline;
+    display: block;
   }
 }
 
-.author-bio .author-title {
-  margin: calc(1rem / 2) 0 0;
+@media only screen and (min-width: 600px) {
+  .author-bio .author-bio-text {
+    width: calc( 100% - 80px - 1em);
+  }
 }
 
-.author-bio .author-description {
-  border-top: 2px solid #2A7DE1;
-  margin: calc(1rem / 2) 0 0;
-  padding-top: calc(1rem / 3);
+.author-bio h2 span {
+  color: #767676;
+  display: block;
+  font-size: 0.8em;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .author-bio h2 span {
+    display: inline;
+    margin: 0 0 0 0.5em;
+  }
+}
+
+.author-bio .author-meta,
+.author-bio .author-link {
+  font-size: 0.8em;
+}
+
+.author-bio p {
+  margin: 0.5em 0;
 }
 
 .author-bio .author-link {
+  color: #2A7DE1;
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: bold;
 }
 
