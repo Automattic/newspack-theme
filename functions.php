@@ -270,6 +270,11 @@ add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
  * @link https://git.io/vWdr2
  */
 function newspack_skip_link_focus_fix() {
+	// Bail if this is an AMP page, because AMP already handles this bug.
+	if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) {
+		return;
+	}
+
 	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
 	?>
 	<script>
