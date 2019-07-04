@@ -217,8 +217,8 @@
 
 .author-bio {
 	display: flex;
+	font-size: calc( 1em * 0.9 );
 	margin: calc(2 * #{$size__spacing-unit}) auto $size__spacing-unit;
-	font-size: $font__size-sm;
 
 	.avatar {
 		display: none;
@@ -227,21 +227,42 @@
 		width: 80px;
 
 		@include media(mobile) {
-			display: inline;
+			display: block;
 		}
 	}
 
-	.author-title {
-		margin: calc(#{$size__spacing-unit} / 2 ) 0 0;
+	.author-bio-text {
+		@include media(mobile) {
+			width: calc( 100% - 80px - 1em );
+		}
 	}
 
-	.author-description {
-		border-top: 2px solid $color__primary;
-		margin: calc(#{$size__spacing-unit} / 2 ) 0 0;
-		padding-top: calc(#{$size__spacing-unit} / 3 );
+	h2 {
+		span {
+			color: $color__text-light;
+			display: block;
+			font-size: $font__size-sm;
+			text-transform: none;
+
+			@include media(mobile) {
+				display: inline;
+				margin: 0 0 0 0.5em;
+			}
+		}
+	}
+
+	.author-meta,
+	.author-link {
+		font-size: $font__size-sm;
+	}
+
+	p {
+		margin: 0.5em 0
 	}
 
 	.author-link {
+		color: $color__primary;
+		font-family: $font__heading;
 		font-weight: bold;
 		&:hover {
 			color: $color__primary-variation;

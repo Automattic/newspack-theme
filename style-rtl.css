@@ -420,14 +420,10 @@ textarea {
   text-rendering: optimizeLegibility;
 }
 
-<<<<<<< HEAD
 .use-body-font {
   font-family: Georgia, Garamond, "Times New Roman", serif;
 }
 
-.author-description .author-link,
-=======
->>>>>>> Update styles for author bio, and add author avatar.
 .comment-metadata,
 .comment-reply-link,
 .comments-title,
@@ -2340,8 +2336,8 @@ a:focus {
 /* Author description */
 .author-bio {
   display: flex;
+  font-size: calc( 1em * 0.9);
   margin: calc(2 * 1rem) auto 1rem;
-  font-size: 0.88889em;
 }
 
 .author-bio .avatar {
@@ -2353,21 +2349,51 @@ a:focus {
 
 @media only screen and (min-width: 600px) {
   .author-bio .avatar {
-    display: inline;
+    display: block;
   }
 }
 
-.author-bio .author-title {
-  margin: calc(1rem / 2) 0 0;
+@media only screen and (min-width: 600px) {
+  .author-bio .author-bio-text {
+    width: calc( 100% - 80px - 1em);
+  }
 }
 
-.author-bio .author-description {
-  border-top: 2px solid #0073aa;
-  margin: calc(1rem / 2) 0 0;
-  padding-top: calc(1rem / 3);
+.author-bio h2 {
+  border-bottom: 4px solid #ccc;
+  color: #0073aa;
+  font-size: 1em;
+  margin: 0 0 calc( 1rem / 2);
+  padding: 0 0 calc( 1rem / 2);
+  text-transform: uppercase;
+}
+
+.author-bio h2 span {
+  color: #767676;
+  display: block;
+  font-size: 0.88889em;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .author-bio h2 span {
+    display: inline;
+    margin: 0 0.5em 0 0;
+  }
+}
+
+.author-bio .author-meta,
+.author-bio .author-link {
+  font-size: 0.88889em;
+}
+
+.author-bio p {
+  margin: 0.5em 0;
 }
 
 .author-bio .author-link {
+  color: #0073aa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
 }
 

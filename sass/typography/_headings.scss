@@ -153,3 +153,12 @@ blockquote {
 		hyphens: none;
 	}
 }
+
+.accent-header {
+	border-bottom: 4px solid #ccc;
+	color: $color__primary;
+	font-size: 1em;
+	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
+	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
+	text-transform: uppercase;
+}
