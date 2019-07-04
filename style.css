@@ -431,6 +431,7 @@ textarea {
 .discussion-meta-info,
 .entry-meta,
 .entry-footer,
+.author-bio .author-link,
 .main-navigation,
 .no-comments,
 .not-found .page-title,
@@ -2399,7 +2400,6 @@ a:focus {
 
 .author-bio .author-link {
   color: #0073aa;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
 }
 

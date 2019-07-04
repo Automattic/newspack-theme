@@ -378,6 +378,7 @@ textarea {
 .discussion-meta-info,
 .entry-meta,
 .entry-footer,
+.author-bio .author-link,
 .main-navigation,
 .no-comments,
 .not-found .page-title,
@@ -2340,7 +2341,6 @@ a:focus {
 
 .author-bio .author-link {
   color: #0073aa;
-  font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: bold;
 }
 
