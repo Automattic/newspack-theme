@@ -89,7 +89,7 @@ a.button:hover, a.button:visited {
   top: 0;
   right: 0;
   display: inline-block;
-  background: #0073aa;
+  background: #2A7DE1;
   color: #fff;
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -159,11 +159,11 @@ a.button:hover, a.button:visited {
 }
 
 .woocommerce-info {
-  background: #0073aa;
+  background: #2A7DE1;
 }
 
 .woocommerce-store-notice {
-  background: #0073aa;
+  background: #2A7DE1;
   color: #fff;
   padding: 1rem;
   position: absolute;
@@ -541,8 +541,8 @@ table.variations select {
 }
 
 .woocommerce-tabs ul li.active a {
-  color: #0073aa;
-  box-shadow: 0 2px 0 #0073aa;
+  color: #2A7DE1;
+  box-shadow: 0 2px 0 #2A7DE1;
 }
 
 .woocommerce-tabs .panel > * {

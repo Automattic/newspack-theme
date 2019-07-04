@@ -313,7 +313,7 @@ figcaption,
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link {
-  background: #0073aa;
+  background: #2A7DE1;
 }
 
 .wp-block-button:not(.is-style-squared) .wp-block-button__link {
@@ -322,7 +322,7 @@ figcaption,
 
 .wp-block-button.is-style-outline, .wp-block-button.is-style-outline:hover, .wp-block-button.is-style-outline:focus, .wp-block-button.is-style-outline:active {
   background: transparent;
-  color: #0073aa;
+  color: #2A7DE1;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link, .wp-block-button.is-style-outline:hover .wp-block-button__link, .wp-block-button.is-style-outline:focus .wp-block-button__link, .wp-block-button.is-style-outline:active .wp-block-button__link {
@@ -330,7 +330,7 @@ figcaption,
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), .wp-block-button.is-style-outline:hover .wp-block-button__link:not(.has-text-color), .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color), .wp-block-button.is-style-outline:active .wp-block-button__link:not(.has-text-color) {
-  color: #0073aa;
+  color: #2A7DE1;
 }
 
 /** === Blockquote === */
