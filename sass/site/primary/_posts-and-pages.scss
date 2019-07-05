@@ -77,6 +77,12 @@
 
 	.byline {
 		display: block;
+
+		a {
+			color: $color__primary;
+			font-weight: bold;
+			text-decoration: none;
+		}
 	}
 }
 

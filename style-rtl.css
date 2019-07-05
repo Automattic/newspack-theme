@@ -393,7 +393,13 @@ template {
 
 /* Typography */
 html {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -494,12 +500,12 @@ h6 {
 }
 
 h1 {
-  font-size: 1.6875em;
+  font-size: 1.8em;
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.25em;
+    font-size: 2.2em;
   }
 }
 
@@ -508,7 +514,7 @@ h1 {
 .error-404 .page-title,
 .has-larger-font-size,
 h2 {
-  font-size: 1.40625em;
+  font-size: 1.4em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -517,7 +523,7 @@ h2 {
   .error-404 .page-title,
   .has-larger-font-size,
   h2 {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
@@ -525,7 +531,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 h3 {
-  font-size: 1.40625em;
+  font-size: 1.4em;
 }
 
 .site-title,
@@ -538,29 +544,28 @@ h3 {
 h2.author-title,
 p.author-bio,
 h4 {
-  font-size: 1.125em;
-}
-
-.main-navigation,
-.pagination .nav-links,
-.comment-content,
-h5 {
-  font-size: 0.88889em;
+  font-size: 1.2em;
 }
 
 .entry-meta,
 .entry-footer,
+.main-navigation,
+.pagination .nav-links,
+.comment-content,
+h5 {
+  font-size: 0.8em;
+}
+
 .discussion-meta-info,
-.site-info,
 .has-small-font-size,
 .comment-reply-link,
 .comment-metadata,
 .comment-notes,
-.sticky-post,
 #cancel-comment-reply-link,
 img:after,
+.site-info,
 h6 {
-  font-size: 0.71111em;
+  font-size: 0.7em;
 }
 
 .site-title,
@@ -604,12 +609,12 @@ i {
 
 blockquote cite {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   font-style: normal;
 }
 
 pre {
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
   overflow: auto;
@@ -619,7 +624,7 @@ code,
 kbd,
 tt,
 var {
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-family: Menlo, monaco, Consolas, Lucida Console, monospace;
 }
 
@@ -792,7 +797,7 @@ input[type="submit"] {
   box-sizing: border-box;
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-weight: 700;
   line-height: 1.2;
   outline: none;
@@ -1141,7 +1146,7 @@ a:focus {
 
 .main-navigation .sub-menu > li.mobile-parent-nav-menu-item {
   display: none;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-weight: normal;
 }
 
@@ -1499,73 +1504,73 @@ a:focus {
   }
 }
 
-.secondary-menu {
+ul.secondary-menu {
   display: flex;
   flex-wrap: wrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.88889em;
+  font-size: 0.7em;
   list-style: none;
   margin: 0;
   padding: 0 0 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
-  .secondary-menu {
+  ul.secondary-menu {
     padding: 0;
   }
 }
 
-.secondary-menu li {
+ul.secondary-menu li {
   margin: 0;
   padding: 0;
 }
 
-.secondary-menu > li > a {
+ul.secondary-menu > li > a {
   margin-left: 0.5rem;
 }
 
 /** === Tertiary menu === */
-.tertiary-menu {
+nav.tertiary-menu {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   list-style: none;
   margin: 0.5em 0;
   padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  .tertiary-menu {
+  nav.tertiary-menu {
     padding: 0;
     text-align: left;
   }
 }
 
-.tertiary-menu li {
+nav.tertiary-menu li {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-.tertiary-menu li:nth-child(n+2) {
+nav.tertiary-menu li:nth-child(n+2) {
   margin-right: 0.5rem;
 }
 
-.tertiary-menu a {
+nav.tertiary-menu a {
   background-color: #e9e9e9;
   transition: background 150ms ease-in-out;
   border-radius: 5px;
   display: inline-block;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-weight: 700;
   padding: 0.5rem 0.75rem;
 }
 
-.tertiary-menu a,
-.tertiary-menu a:visited {
+nav.tertiary-menu a,
+nav.tertiary-menu a:visited {
   color: #111;
 }
 
-.tertiary-menu a:hover {
+nav.tertiary-menu a:hover {
   background-color: #111;
   color: #fff;
 }
@@ -1841,7 +1846,7 @@ a:focus {
 .site-main #infinite-handle span {
   background: transparent;
   display: block;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   text-align: center;
 }
 
@@ -2123,7 +2128,8 @@ a:focus {
   color: #767676;
   flex: 1 1 auto;
   font-weight: normal;
-  font-size: 0.88889em;
+  font-size: 0.8em;
+  font-style: italic;
   margin: 7px 0 0;
 }
 
@@ -2210,6 +2216,12 @@ a:focus {
 
 .entry-meta .byline {
   display: block;
+}
+
+.entry-meta .byline a {
+  color: #0073aa;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .entry-footer {
@@ -2308,12 +2320,12 @@ a:focus {
 }
 
 .single-post .entry-title {
-  font-size: 2.8125em;
+  font-size: 2.8em;
 }
 
 @media only screen and (min-width: 1168px) {
   .single-post .entry-title {
-    font-size: 3.09375em;
+    font-size: 3.2em;
   }
 }
 
@@ -2359,7 +2371,7 @@ a:focus {
 .author-bio .author-description {
   display: inline;
   color: #767676;
-  font-size: 1.125em;
+  font-size: 1.2em;
   line-height: 1.2;
 }
 
@@ -2504,7 +2516,7 @@ a:focus {
 .comment-list .trackback .comment-body {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -2513,7 +2525,6 @@ a:focus {
 .comment-list .pingback .comment-body a:not(.comment-edit-link),
 .comment-list .trackback .comment-body a:not(.comment-edit-link) {
   font-weight: bold;
-  font-size: 17.77778px;
   line-height: 1.5;
   padding-left: 0.5rem;
   display: block;
@@ -2739,7 +2750,7 @@ a:focus {
 .comment-form .comment-notes,
 .comment-form label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   color: #767676;
 }
 
@@ -2934,7 +2945,6 @@ a:focus {
 .widget_rss ul li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(20px * 1.125);
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.5rem;
@@ -3181,7 +3191,7 @@ a:focus {
   transition: background 150ms ease-in-out;
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   line-height: 1.2;
   box-sizing: border-box;
   font-weight: bold;
@@ -3258,7 +3268,6 @@ a:focus {
 .entry .entry-content .wp-block-latest-posts li {
   color: #767676;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(20px * 1.125);
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 0.75rem;
@@ -3322,7 +3331,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-preformatted {
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.8;
   padding: 1rem;
 }
@@ -3335,7 +3344,7 @@ a:focus {
 
 .entry .entry-content .has-drop-cap:not(:focus):first-letter {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 2.8125em;
+  font-size: 2.8em;
   line-height: 1;
   font-weight: bold;
   margin: 0 0 0 0.25em;
@@ -3357,7 +3366,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote p {
-  font-size: 1.40625em;
+  font-size: 1.4em;
   font-style: italic;
   line-height: 1.3;
   margin-bottom: 0.5em;
@@ -3370,7 +3379,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-pullquote p {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
@@ -3382,9 +3391,9 @@ a:focus {
   color: #767676;
   /*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font__size-xs.
 			 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc( 1rem * 0.7em);
 }
 
 .entry .entry-content .wp-block-pullquote.alignleft, .entry .entry-content .wp-block-pullquote.alignright {
@@ -3417,7 +3426,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-  font-size: 1.40625em;
+  font-size: 1.4em;
   line-height: 1.3;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
@@ -3425,7 +3434,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
@@ -3488,7 +3497,7 @@ a:focus {
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc(1rem * 0.8em);
 }
 
 .entry .entry-content .wp-block-quote.is-large, .entry .entry-content .wp-block-quote.is-style-large {
@@ -3498,7 +3507,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-quote.is-large p, .entry .entry-content .wp-block-quote.is-style-large p {
-  font-size: 1.40625em;
+  font-size: 1.4em;
   line-height: 1.4;
   font-style: italic;
 }
@@ -3510,7 +3519,7 @@ a:focus {
 				 * This requires a rem-based font size calculation instead of our normal em-based one,
 				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 				 */
-  font-size: calc(1rem / (1.25 * 1.125));
+  font-size: calc(1rem * 0.8em);
 }
 
 @media only screen and (min-width: 768px) {
@@ -3519,7 +3528,7 @@ a:focus {
     padding: 1rem 0;
   }
   .entry .entry-content .wp-block-quote.is-large p, .entry .entry-content .wp-block-quote.is-style-large p {
-    font-size: 1.40625em;
+    font-size: 1.4em;
   }
 }
 
@@ -3572,7 +3581,7 @@ a:focus {
 .entry .entry-content .wp-block-cover .wp-block-cover-text,
 .entry .entry-content .wp-block-cover h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.40625em;
+  font-size: 1.4em;
   font-weight: bold;
   line-height: 1.25;
   padding: 0;
@@ -3586,7 +3595,7 @@ a:focus {
   .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
   .entry .entry-content .wp-block-cover .wp-block-cover-text,
   .entry .entry-content .wp-block-cover h2 {
-    font-size: 1.6875em;
+    font-size: 1.8em;
     max-width: 100%;
   }
 }
@@ -3663,7 +3672,7 @@ a:focus {
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -3700,9 +3709,9 @@ a:focus {
 .entry .entry-content .wp-block-separator.is-style-dots:before,
 .entry .entry-content hr.is-style-dots:before {
   color: #767676;
-  font-size: 1.40625em;
-  letter-spacing: 0.88889em;
-  padding-right: 0.88889em;
+  font-size: 1.4em;
+  letter-spacing: 0.8em;
+  padding-right: 0.8em;
 }
 
 .entry .entry-content .wp-block-separator + h1:before,
@@ -3765,7 +3774,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-code code {
-  font-size: 1.125em;
+  font-size: 1.2em;
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -3817,23 +3826,23 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-latest-comments.has-dates .wp-block-latest-comments__comment-date {
-  font-size: 0.71111em;
+  font-size: 0.7em;
 }
 
 .entry .entry-content .has-small-font-size {
-  font-size: 0.88889em;
+  font-size: 0.8em;
 }
 
 .entry .entry-content .has-normal-font-size {
-  font-size: 1.125em;
+  font-size: 1.2em;
 }
 
 .entry .entry-content .has-large-font-size {
-  font-size: 1.40625em;
+  font-size: 1.4em;
 }
 
 .entry .entry-content .has-huge-font-size {
-  font-size: 1.6875em;
+  font-size: 1.8em;
 }
 
 .entry .entry-content .has-primary-background-color,
@@ -4032,7 +4041,7 @@ svg {
 
 .wp-caption-text {
   color: #767676;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -4130,7 +4139,7 @@ svg {
 .gallery-caption {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
