@@ -54,10 +54,6 @@ h6 {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.page-title {
-	font-family: $font__body;
-}
-
 .site-branding,
 .main-navigation ul.main-menu > li,
 .social-navigation,
@@ -66,11 +62,12 @@ h6 {
 	line-height: 1.25;
 }
 
-h1 {
-	font-size: $font__size-xl;
+h1,
+.page-description {
+	font-size: $font__size-xxl;
 
 	@include media(tablet) {
-		font-size: $font__size-xxl;
+		font-size: $font__size-xxxl;
 	}
 }
 
@@ -78,6 +75,7 @@ h1 {
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
+.archive:not(paged) article.entry:first-of-type .entry-title,
 h2 {
 	font-size: $font__size-lg;
 
@@ -89,6 +87,7 @@ h2 {
 .has-regular-font-size,
 .has-large-font-size,
 .comments-title,
+.archive .entry-title,
 h3 {
 	font-size: $font__size-lg;
 }
@@ -96,8 +95,6 @@ h3 {
 .site-title,
 .site-description,
 .nav-links,
-.page-title,
-.page-description,
 .comment-author .fn,
 .no-comments,
 h2.author-title,
@@ -106,6 +103,13 @@ h4 {
 	font-size: $font__size-md;
 }
 
+.page-title,
+.main-navigation {
+	font-size: $font__size_base;
+}
+
+.entry-meta,
+.entry-footer,
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
@@ -113,27 +117,22 @@ h5 {
 	font-size: $font__size-sm;
 }
 
-.entry-meta,
-.entry-footer,
 .discussion-meta-info,
-.site-info,
 .has-small-font-size,
 .comment-reply-link,
 .comment-metadata,
 .comment-notes,
-.sticky-post,
 #cancel-comment-reply-link,
 img:after,
+.site-info,
 h6 {
 	font-size: $font__size-xs;
 }
 
-.site-title,
-.page-title {
+.site-title {
 	font-weight: normal;
 }
 
-.page-description,
 .page-links a {
 	font-weight: bold;
 }
@@ -162,4 +161,17 @@ blockquote {
 	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
 	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
 	text-transform: uppercase;
+}
+
+.page-header {
+	width: 100%;
+}
+
+.page-title {
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+}
+
+.page-description {
+	text-transform: none;
 }

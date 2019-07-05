@@ -10,18 +10,39 @@
 	overflow: hidden;
 }
 
-#main {
+#primary {
 	margin: auto;
 	max-width: 90%;
 	width: $size__site-main;
 }
 
-.single #main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.single {
+	&.has-sidebar #main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 
-body:not(.newspack-front-page):not(.has-sidebar) .main-content {
+.archive,
+.blog {
+	&.has-sidebar #primary {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@include media(tablet) {
+		#main {
+			width: 60%;
+		}
+
+		#secondary {
+			width: 29%;
+		}
+	}
+}
+
+.single .main-content {
 	@include postContentMaxWidth();
 }

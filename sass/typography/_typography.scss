@@ -1,6 +1,10 @@
 
 html {
-	font-size: $font__size_base;
+	font-size: $font__size_base_sm;
+
+	@include media(mobile) {
+		font-size: $font__size_base;
+	}
 }
 
 body {

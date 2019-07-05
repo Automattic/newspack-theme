@@ -50,42 +50,43 @@ h5,
 h6 {
   font-family: "IBM Plex Serif", Georgia, serif;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 1.6875em;
+  font-size: 1.8em;
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 2.25em;
+    font-size: 2.2em;
   }
 }
 
 h2 {
-  font-size: 1.40625em;
+  font-size: 1.4em;
 }
 
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
 h3 {
-  font-size: 1.40625em;
+  font-size: 1.4em;
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 1.2em;
 }
 
 h5 {
-  font-size: 0.88889em;
+  font-size: 0.8em;
 }
 
 h6 {
-  font-size: 0.71111em;
+  font-size: 0.7em;
 }
 
 a {
@@ -164,14 +165,14 @@ a:focus {
 figcaption,
 .gallery-caption {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   color: #767676;
 }
 
 /** === Post Title === */
 .editor-post-title__block:before {
-  width: 2.25em;
+  width: 2.2em;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 1em;
@@ -181,8 +182,21 @@ figcaption,
 
 .editor-post-title__block .editor-post-title__input {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 2.25em;
+  font-size: 2.2em;
   font-weight: 700;
+}
+
+/** === Post Meta === */
+.entry-meta {
+  color: #767676;
+  font-family: "IBM Plex Serif", Georgia, serif;
+  font-size: 20px;
+}
+
+.entry-meta a {
+  color: #0073aa;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /** === Default Appender === */
@@ -199,7 +213,7 @@ figcaption,
 /** === Paragraph === */
 .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 2.8125em;
+  font-size: 2.8em;
   line-height: 1;
   font-weight: bold;
   margin: 0 0.25em 0 0;
@@ -214,7 +228,7 @@ figcaption,
 .wp-block-cover h2,
 .wp-block-cover .wp-block-cover-text {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 1.40625em;
+  font-size: 1.4em;
   font-weight: bold;
   line-height: 1.4;
   padding-left: 1rem;
@@ -242,7 +256,7 @@ figcaption,
   }
   .wp-block-cover h2,
   .wp-block-cover .wp-block-cover-text {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
@@ -300,7 +314,7 @@ figcaption,
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption,
 .wp-block-gallery .gallery-item .gallery-caption {
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
 }
 
@@ -308,7 +322,7 @@ figcaption,
 .wp-block-button .wp-block-button__link {
   line-height: 1.8;
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
@@ -340,13 +354,13 @@ figcaption,
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-  margin-top: 2.25em;
-  margin-bottom: 2.25em;
+  margin-top: 2.2em;
+  margin-bottom: 2.2em;
 }
 
 .wp-block-quote.is-large p,
 .wp-block-quote.is-style-large p {
-  font-size: 1.40625em;
+  font-size: 1.4em;
   line-height: 1.3;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
@@ -356,7 +370,7 @@ figcaption,
 .wp-block-quote footer,
 .wp-block-quote .wp-block-quote__citation {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   color: #767676;
 }
@@ -413,7 +427,7 @@ figcaption,
 .wp-block[data-type="core/pullquote"][data-align="right"] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
 .wp-block[data-type="core/pullquote"][data-align="right"] blockquote > .editor-rich-text p,
 .wp-block[data-type="core/pullquote"][data-align="right"] p {
-  font-size: 1.40625em;
+  font-size: 1.4em;
   font-style: italic;
   line-height: 1.3;
   margin-bottom: 0.5em;
@@ -430,7 +444,7 @@ figcaption,
   .wp-block[data-type="core/pullquote"][data-align="right"] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
   .wp-block[data-type="core/pullquote"][data-align="right"] blockquote > .editor-rich-text p,
   .wp-block[data-type="core/pullquote"][data-align="right"] p {
-    font-size: 1.6875em;
+    font-size: 1.8em;
   }
 }
 
@@ -438,7 +452,7 @@ figcaption,
 .wp-block[data-type="core/pullquote"][data-align="left"] .wp-block-pullquote__citation,
 .wp-block[data-type="core/pullquote"][data-align="right"] .wp-block-pullquote__citation {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   text-transform: none;
 }
@@ -500,7 +514,7 @@ figcaption,
 .wp-block-file .wp-block-file__button {
   display: table;
   line-height: 1.8;
-  font-size: 0.88889em;
+  font-size: 0.8em;
   font-weight: bold;
   background-color: #666;
   border-radius: 5px;
@@ -534,13 +548,13 @@ figcaption,
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-  width: 1.6875em;
+  width: 1.8em;
   margin-left: 0;
 }
 
 .wp-block-separator.is-style-dots:before {
   color: #767676;
-  font-size: 1.40625em;
+  font-size: 1.4em;
   letter-spacing: calc(2 * 1rem);
   padding-left: calc(2 * 1rem);
 }
@@ -655,7 +669,7 @@ ul.wp-block-archives li ul,
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-date {
-  font-size: 0.71111em;
+  font-size: 0.7em;
 }
 
 /** === Classic Editor === */
@@ -663,7 +677,7 @@ ul.wp-block-archives li ul,
 .wp-caption dd {
   color: #767676;
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -682,7 +696,7 @@ ul.wp-block-archives li ul,
 
 .wp-block-freeform blockquote cite {
   font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 0.71111em;
+  font-size: 0.7em;
   font-style: normal;
   line-height: 1.6;
   color: #767676;
