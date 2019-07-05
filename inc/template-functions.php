@@ -37,7 +37,7 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds a class of has-sidebar when there is a sidebar present.
-	if ( is_active_sidebar( 'sidebar-1' ) && is_single() ) {
+	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';
 	}
 
@@ -56,10 +56,11 @@ add_filter( 'body_class', 'newspack_body_classes' );
 function newspack_post_classes( $classes, $class, $post_id ) {
 	$classes[] = 'entry';
 
+
+
 	return $classes;
 }
 add_filter( 'post_class', 'newspack_post_classes', 10, 3 );
-
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -89,25 +90,25 @@ add_filter( 'comment_form_defaults', 'newspack_comment_form_defaults' );
  */
 function newspack_get_the_archive_title() {
 	if ( is_category() ) {
-		$title = __( 'Category Archives: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = esc_html__( 'Category: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_tag() ) {
-		$title = __( 'Tag Archives: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = esc_html__( 'Tag: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_author() ) {
-		$title = __( 'Author Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
+		$title = esc_html__( 'Author Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
-		$title = __( 'Yearly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
+		$title = esc_html__( 'Yearly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
 	} elseif ( is_month() ) {
-		$title = __( 'Monthly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
+		$title = esc_html__( 'Monthly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
 	} elseif ( is_day() ) {
-		$title = __( 'Daily Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		$title = esc_html__( 'Daily Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
 	} elseif ( is_post_type_archive() ) {
-		$title = __( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
+		$title = esc_html__( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: %s: Taxonomy singular name */
 		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name );
 	} else {
-		$title = __( 'Archives:', 'newspack' );
+		$title = esc_html__( 'Archives:', 'newspack' );
 	}
 	return $title;
 }

@@ -111,7 +111,8 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 		if ( 'post' === get_post_type() ) {
 
 			$tags_list = get_the_tag_list( '', ' ' );
-			if ( $tags_list ) {
+
+      if ( $tags_list ) {
 				printf(
 					/* translators: 1: posted in label, only visible to screen readers. 2: list of tags. */
 					'<span class="tags-links"><span>%1$s </span>%2$s</span>',

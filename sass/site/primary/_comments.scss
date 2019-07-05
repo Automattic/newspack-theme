@@ -133,7 +133,6 @@
 
 			a:not(.comment-edit-link) {
 				font-weight: bold;
-				font-size: $font__size-base / (1 * $font__size-ratio);
 				line-height: 1.5;
 				padding-right: #{0.5 * $size__spacing-unit};
 				display: block;
