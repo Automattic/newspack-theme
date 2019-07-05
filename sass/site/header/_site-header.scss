@@ -67,9 +67,7 @@
 .site-title {
 	color: $color__text-main;
 	font-weight: 700;
-	margin: 0 $size__spacing-unit 0 0;
-	position: relative;
-	top: 2px;
+	margin: 0 $size__spacing-unit -3px 0;
 
 	a {
 		color: $color__text-main;
@@ -92,5 +90,6 @@
 	flex: 1 1 auto;
 	font-weight: normal;
 	font-size: $font__size-sm;
+	font-style: italic;
 	margin: 7px 0 0;
 }

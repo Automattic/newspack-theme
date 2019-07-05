@@ -73,6 +73,7 @@
 		a {
 			color: $color__primary;
 			font-weight: bold;
+			text-decoration: none;
 		}
 	}
 }
@@ -194,6 +195,13 @@
 
 		#secondary {
 			flex-basis: calc( 35% - 24px );
+		}
+	}
+
+	&.post-template-single-feature {
+		.main-content {
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }

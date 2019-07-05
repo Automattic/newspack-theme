@@ -17,6 +17,7 @@
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
+.use-header-font,
 h1,
 h2,
 h3,
@@ -110,6 +111,7 @@ h4 {
 
 .entry-meta,
 .entry-footer,
+.main-navigation,
 .pagination .nav-links,
 .comment-content,
 h5 {
@@ -117,14 +119,13 @@ h5 {
 }
 
 .discussion-meta-info,
-.site-info,
 .has-small-font-size,
 .comment-reply-link,
 .comment-metadata,
 .comment-notes,
-.sticky-post,
 #cancel-comment-reply-link,
 img:after,
+.site-info,
 h6 {
 	font-size: $font__size-xs;
 }

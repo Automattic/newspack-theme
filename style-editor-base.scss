@@ -47,6 +47,7 @@ h5,
 h6 {
 	font-family: $font__heading;
 	font-weight: 700;
+	line-height: $font__line-height-heading;
 }
 
 h1 {
@@ -162,6 +163,20 @@ figcaption,
 		font-family: $font__heading;
 		font-size: $font__size-xxl;
 		font-weight: 700;
+	}
+}
+
+/** === Post Meta === */
+
+.entry-meta {
+	color: $color__text-light;
+	font-family: $font__heading;
+	font-size: $font__size_base;
+
+	a {
+		color: $color__primary;
+		font-weight: bold;
+		text-decoration: none;
 	}
 }
 

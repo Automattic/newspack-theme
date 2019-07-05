@@ -248,7 +248,6 @@
 		li {
 			color: $color__text-light;
 			font-family: $font__heading;
-			font-size: calc(#{$font__size_base} * #{$font__size-ratio});
 			font-weight: bold;
 			line-height: $font__line-height-heading;
 			padding-bottom: ( .75 * $size__spacing-unit );
@@ -372,9 +371,9 @@
 
 			/*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font__size-xs.
 			 */
-			font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+			font-size: calc( 1rem * #{$font__size-xs} );
 		}
 
 		&.alignleft,
@@ -486,7 +485,7 @@
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-			font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+			font-size: calc(1rem * #{$font__size-sm});
 		}
 
 		&.is-large,
@@ -507,7 +506,7 @@
 				 * This requires a rem-based font size calculation instead of our normal em-based one,
 				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 				 */
-				font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+				font-size: calc(1rem * #{$font__size-sm});
 			}
 
 			@include media(tablet) {
@@ -819,14 +818,6 @@
 
 		&.has-excerpts {
 
-		}
-	}
-
-	//! Newspack Block
-
-	.wp-block-newspack-blocks-homepage-articles {
-		.article-meta {
-			font-family: $font__heading;
 		}
 	}
 

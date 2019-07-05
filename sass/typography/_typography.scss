@@ -1,6 +1,10 @@
 
 html {
-	font-size: $font__size_base;
+	font-size: $font__size_base_sm;
+
+	@include media(mobile) {
+		font-size: $font__size_base;
+	}
 }
 
 body {
@@ -25,6 +29,10 @@ textarea {
 	font-weight: 400;
 	line-height: $font__line-height-body;
 	text-rendering: optimizeLegibility;
+}
+
+.use-body-font {
+	font-family: $font__body;
 }
 
 @import "headings";
