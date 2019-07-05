@@ -340,7 +340,7 @@ template {
 
 /* Typography */
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -396,7 +396,7 @@ textarea {
 .site-title,
 .site-info,
 #cancel-comment-reply-link,
-.use-heading-font,
+.use-header-font,
 h1,
 h2,
 h3,
