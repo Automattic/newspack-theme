@@ -1,56 +1,93 @@
-.archive .page-header,
-.search .page-header {
-
-	margin: $size__spacing-unit 0 calc(3 * #{$size__spacing-unit});
-
-	@include media(tablet) {
-		margin: 0 0 $size__site-margins;
-	}
-
-	.page-title {
-
-		color: $color__text-light;
-		display: inline;
-		letter-spacing: normal;
-
-		&:before {
-			display: none;
-		}
-	}
-
+.archive,
+.search {
 	.search-term,
 	.page-description {
 		display: inherit;
 		clear: both;
+	}
 
-		&:after {
-			content: ".";
-			font-weight: bold;
-			color: $color__text-light;
+	.author-avatar {
+		display: none;
+	}
+
+	.entry {
+		margin-top: calc(3 * #{$size__spacing-unit});
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	.entry-header,
+	.entry-content > p {
+		margin: 0;
+	}
+
+	.entry-meta {
+		margin: #{ $size__spacing-unit * 0.5 } 0;
+	}
+}
+
+.archive {
+	.page-header {
+		margin: 0 0 #{ $size__spacing-unit * 3 };
+	}
+
+	.page-description {
+		display: block;
+	}
+
+	@include media( tablet ) {
+		.has-post-thumbnail {
+			align-items: flex-start;
+			display: flex;
+
+			.post-thumbnail {
+				margin: 0 1em 0 0;
+				flex-basis: 25%
+			}
+
+			.entry-container {
+				flex-basis: 75%;
+			}
+		}
+
+		&:not(paged) article.has-post-thumbnail:first-of-type {
+			display: block;
+
+			.entry-header {
+				margin: $size__spacing-unit 0 0;
+			}
+		}
+
+		.byline,
+		.posted-on {
+			display: inline;
+		}
+
+		.byline {
+			margin-right: $size__spacing-unit;
 		}
 	}
 }
 
-.archive .page-header .page-description {
-	display: block;
+.page-title {
+	color: $color__primary;
+}
+
+.page-description {
 	color: $color__text-main;
-	font-size: 1em;
+}
+
+.taxonomy-description {
+	color: $color__text-light;
+	font-style: italic;
 }
 
 /* 404 & Not found */
 
 .error-404.not-found,
 .no-results.not-found {
-
-	.page-header,
-	.page-content {
-
-		margin: calc(3 * #{$size__spacing-unit}) #{$size__spacing-unit};
-
-		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) $size__site-margins calc(#{ $size__spacing-unit } / 2);
-		}
-	}
 
 	.search-submit {
 		vertical-align: middle;

@@ -45,7 +45,6 @@
 	font-weight: 500;
 
 	a {
-
 		@include link-transition;
 		color: inherit;
 
@@ -57,13 +56,6 @@
 			text-decoration: none;
 			color: $color__primary-variation;
 		}
-	}
-
-	.svg-icon {
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 0.5em;
 	}
 }
 

@@ -94,18 +94,6 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 		if ( 'post' === get_post_type() ) {
 
 			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'newspack' ) );
-			if ( $categories_list ) {
-				printf(
-					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of categories. */
-					'<span class="cat-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
-					newspack_get_icon_svg( 'archive', 16 ),
-					__( 'Posted in', 'newspack' ),
-					$categories_list
-				); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma. */
 			$tags_list = get_the_tag_list( '', __( ', ', 'newspack' ) );
 			if ( $tags_list ) {
 				printf(
