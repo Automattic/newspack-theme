@@ -98,6 +98,60 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option to center logo.
+	$wp_customize->add_setting(
+		'header_center_logo',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_center_logo',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Center Logo', 'newspack' ),
+			'description' => esc_html__( 'Check to center the logo in the header.', 'newspack' ),
+			'section'     => 'title_tagline',
+		)
+	);
+
+	// Header - add option for solid background colour.
+	$wp_customize->add_setting(
+		'header_solid_background',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_solid_background',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Solid Background', 'newspack' ),
+			'description' => esc_html__( 'Check to use the primary color as the header background.', 'newspack' ),
+			'section'     => 'title_tagline',
+		)
+	);
+
+	// Header - add option to make header short.
+	$wp_customize->add_setting(
+		'header_short',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_short',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Short Header', 'newspack' ),
+			'description' => esc_html__( 'Check to use a shorter header.', 'newspack' ),
+			'section'     => 'title_tagline',
+		)
+	);
+
 	// Add option to hide page title on static front page.
 	$wp_customize->add_setting(
 		'hide_front_page_title',

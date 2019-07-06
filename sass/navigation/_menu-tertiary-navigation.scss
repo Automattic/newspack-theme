@@ -59,3 +59,10 @@ nav.tertiary-menu {
 		}
 	}
 }
+
+.header-solid-background {
+	.tertiary-menu a {
+		background: transparent;
+		padding: 0;
+	}
+}
