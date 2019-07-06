@@ -25,7 +25,8 @@
 }
 
 .archive,
-.blog {
+.blog,
+.page:not(.newspack-front-page) {
 	&.has-sidebar #primary {
 		display: flex;
 		flex-wrap: wrap;

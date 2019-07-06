@@ -27,7 +27,12 @@
 
 .entry-title {
 
+	font-size: $font__size-xxl;
 	margin: 0;
+
+	@include media(desktop) {
+		font-size: $font__size-xxxl;
+	}
 
 	a {
 		color: inherit;
