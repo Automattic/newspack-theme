@@ -235,6 +235,16 @@
 		}
 	}
 
+	@include media(desktop) {
+		.main-content {
+			flex-basis: calc( 65% - 48px );
+		}
+
+		#secondary {
+			flex-basis: calc( 35% - 48px );
+		}
+	}
+
 	&.post-template-single-feature {
 		.main-content {
 			margin-left: auto;
