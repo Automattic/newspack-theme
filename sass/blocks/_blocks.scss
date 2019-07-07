@@ -931,7 +931,8 @@
 	}
 }
 
-.single.has-sidebar {
+.single.has-sidebar,
+.blog.has-sidebar {
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
 		&.alignwide {

@@ -4013,14 +4013,18 @@ nav.tertiary-menu a:hover {
 
 @media only screen and (min-width: 768px) {
   .single.has-sidebar .entry .entry-content > *.alignwide,
-  .single.has-sidebar .entry .entry-summary > *.alignwide {
+  .single.has-sidebar .entry .entry-summary > *.alignwide,
+  .blog.has-sidebar .entry .entry-content > *.alignwide,
+  .blog.has-sidebar .entry .entry-summary > *.alignwide {
     margin-right: 0;
     max-width: 100%;
   }
 }
 
 .single.has-sidebar .entry .entry-content > *.alignfull,
-.single.has-sidebar .entry .entry-summary > *.alignfull {
+.single.has-sidebar .entry .entry-summary > *.alignfull,
+.blog.has-sidebar .entry .entry-content > *.alignfull,
+.blog.has-sidebar .entry .entry-summary > *.alignfull {
   margin-left: 0;
   margin-right: 0;
   max-width: 100%;
@@ -4029,7 +4033,9 @@ nav.tertiary-menu a:hover {
 
 @media only screen and (min-width: 768px) {
   .single.has-sidebar .entry .entry-content > *.alignfull,
-  .single.has-sidebar .entry .entry-summary > *.alignfull {
+  .single.has-sidebar .entry .entry-summary > *.alignfull,
+  .blog.has-sidebar .entry .entry-content > *.alignfull,
+  .blog.has-sidebar .entry .entry-summary > *.alignfull {
     margin-left: 0;
   }
 }
