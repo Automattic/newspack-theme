@@ -26,3 +26,8 @@ Thumbs.db
 
 # Composer
 /vendor/
+
+# Compiled CSS
+/styles/
+style.css
+style-rtl.css

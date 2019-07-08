@@ -33,17 +33,17 @@
     "extends @wordpress/browserslist-config"
   ],
   "scripts": {
-    "build:style": "node-sass style.scss style.css --output-style expanded && postcss -r style.css",
+    "build:style": "node-sass sass/style.scss style.css --output-style expanded && postcss -r style.css",
     "build:style-1": "node-sass sass/styles/style-1/style-1.scss styles/style-1.css --output-style expanded && postcss -r styles/style-1.css",
-    "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css",
-    "build:style-editor-static-front-page": "node-sass style-editor-static-front-page.scss style-editor-static-front-page.css --output-style expanded && postcss -r style-editor-static-front-page.css",
-    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
+    "build:style-editor": "node-sass sass/style-editor.scss styles/style-editor.css --output-style expanded && postcss -r styles/style-editor.css",
+    "build:style-editor-static-front-page": "node-sass sass/style-editor-static-front-page.scss styles/style-editor-static-front-page.css --output-style expanded && postcss -r styles/style-editor-static-front-page.css",
+    "build:style-editor-customizer": "node-sass sass/style-editor-customizer.scss styles/style-editor-customizer.css --output-style expanded && postcss -r styles/style-editor-customizer.css",
     "build:style-1-editor": "node-sass sass/styles/style-1/style-1-editor.scss styles/style-1-editor.css --output-style expanded && postcss -r styles/style-1-editor.css",
-    "build:style-woocommerce": "node-sass sass/plugins/woocommerce.scss woocommerce.css --output-style expanded && postcss -r woocommerce.css",
+    "build:style-woocommerce": "node-sass sass/plugins/woocommerce.scss styles/woocommerce.css --output-style expanded && postcss -r styles/woocommerce.css",
     "build:rtl": "rtlcss style.css style-rtl.css",
     "build:rtl-style-1": "rtlcss styles/style-1.css styles/style-1-rtl.css",
-    "build:rtl-woocommerce": "rtlcss woocommerce.css woocommerce-rtl.css",
-    "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
+    "build:rtl-woocommerce": "rtlcss styles/woocommerce.css styles/woocommerce-rtl.css",
+    "build:print": "node-sass sass/print.scss styles/print.css --output-style expanded && postcss -r styles/print.css",
     "build": "run-p \"build:*\"",
     "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
   }
