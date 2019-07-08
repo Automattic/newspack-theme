@@ -8,7 +8,7 @@
 /**
  * Define default color filters.
  */
-define( 'NEWSPACK_DEFAULT_PRIMARY', '#0073a8' ); // Hex
+define( 'NEWSPACK_DEFAULT_PRIMARY', '#2A7DE1' ); // Hex
 define( 'NEWSPACK_DEFAULT_SECONDARY', '#666666' ); // Hex
 
 /**
