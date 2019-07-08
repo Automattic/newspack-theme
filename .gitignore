@@ -28,6 +28,6 @@ Thumbs.db
 /vendor/
 
 # Compiled CSS
-/styles/
+styles/
 style.css
 style-rtl.css

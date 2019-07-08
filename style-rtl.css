@@ -53,6 +53,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Mixins */
 /* If we add the border using a regular CSS border, it won't look good on non-retina devices,
  * since its edges can look jagged due to lack of antialiasing. In this case, we are several
  * layers of box-shadow to add the border visually, which will render the border smoother. */
@@ -2237,7 +2238,7 @@ nav.tertiary-menu a:hover {
 }
 
 .entry-meta .byline a {
-  color: #0073aa;
+  color: #2A7DE1;
   font-weight: bold;
   text-decoration: none;
 }
@@ -2872,7 +2873,7 @@ nav.tertiary-menu a:hover {
 }
 
 .page-title {
-  color: #0073aa;
+  color: #2A7DE1;
 }
 
 .page-description {
