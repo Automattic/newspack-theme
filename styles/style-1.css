@@ -568,7 +568,7 @@ blockquote {
 .accent-header {
   border-bottom: 4px solid #ccc;
   color: #2A7DE1;
-  font-size: 1em;
+  font-size: 20px;
   margin: 0 0 calc( 1rem / 2);
   padding: 0 0 calc( 1rem / 2);
   text-transform: uppercase;
@@ -2343,7 +2343,6 @@ nav.tertiary-menu a:hover {
 /* Author description */
 .author-bio {
   display: flex;
-  font-size: calc( 1em * 0.9);
   margin: calc(2 * 1rem) auto 1rem;
 }
 
@@ -2385,7 +2384,12 @@ nav.tertiary-menu a:hover {
   font-size: 0.8em;
 }
 
+.author-bio .author-meta a {
+  color: #767676;
+}
+
 .author-bio p {
+  font-size: calc( 1em * 0.9);
   margin: 0.5em 0;
 }
 

@@ -222,7 +222,6 @@
 
 .author-bio {
 	display: flex;
-	font-size: calc( 1em * 0.9 );
 	margin: calc(2 * #{$size__spacing-unit}) auto $size__spacing-unit;
 
 	.avatar {
@@ -261,8 +260,13 @@
 		font-size: $font__size-sm;
 	}
 
+	.author-meta a {
+		color: $color__text-light;
+	}
+
 	p {
-		margin: 0.5em 0
+		font-size: calc( 1em * 0.9 );
+		margin: 0.5em 0;
 	}
 
 	.author-link {
