@@ -29,5 +29,4 @@ Thumbs.db
 
 # Compiled CSS
 styles/
-style.css
-style-rtl.css
+*.css
