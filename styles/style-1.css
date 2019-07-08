@@ -543,6 +543,15 @@ blockquote {
   }
 }
 
+.accent-header {
+  border-bottom: 4px solid #ccc;
+  color: #2A7DE1;
+  font-size: 1em;
+  margin: 0 0 calc( 1rem / 2);
+  padding: 0 0 calc( 1rem / 2);
+  text-transform: uppercase;
+}
+
 .page-header {
   width: 100%;
 }
