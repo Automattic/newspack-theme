@@ -175,12 +175,3 @@ blockquote {
 .page-description {
 	text-transform: none;
 }
-
-.accent-header {
-	border-bottom: 4px solid #ccc;
-	color: $color__primary;
-	font-size: $font__size_base;
-	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
-	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
-	text-transform: uppercase;
-}
