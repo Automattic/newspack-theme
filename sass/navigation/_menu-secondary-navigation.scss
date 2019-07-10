@@ -1,16 +1,3 @@
-.top-nav-contain {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: auto;
-	max-width: 90%;
-	width: $size__site-main;
-
-	@include media(tablet) {
-		flex-wrap: nowrap;
-	}
-}
-
 ul.secondary-menu {
 	display: flex;
 	flex-wrap: wrap;
@@ -29,9 +16,8 @@ ul.secondary-menu {
 		padding: 0;
 	}
 
-	> li {
-		> a {
-			margin-right: #{0.5 * $size__spacing-unit};
-		}
+	a {
+		color: inherit;
+		margin-right: #{0.5 * $size__spacing-unit};
 	}
 }

@@ -1,10 +1,9 @@
 /** === Main menu === */
 
 .main-navigation {
+
 	display: flex;
-	margin: #{0.25 * $size__spacing-unit} auto 0;
-	max-width: 90%;
-	width: $size__site-main;
+	font-size: $font__size-xs;
 
 	/* Un-style buttons */
 	button {
@@ -13,7 +12,7 @@
 		padding: 0;
 		margin: 0;
 		font-family: $font__heading;
-		line-height: $font__line-height-heading;
+		line-height: 1.2;
 		text-decoration: none;
 		background: transparent;
 		color: inherit;
@@ -44,14 +43,12 @@
 		padding: 0;
 
 		> li {
-
-			color: $color__primary;
+			color: #555;
 			display: inline;
 			position: relative;
 
 			> a {
-
-				color: $color__primary;
+				color: inherit;
 				font-weight: 700;
 				margin-right: #{0.5 * $size__spacing-unit};
 
@@ -90,6 +87,7 @@
 				.submenu-expand {
 
 					display: inline-block;
+					line-height: 0;
 					margin-right: #{0.25 * $size__spacing-unit};
 
 					/* Priority+ Menu */
@@ -218,7 +216,6 @@
 			}
 
 			&.mobile-parent-nav-menu-item {
-
 				display: none;
 				font-size: $font__size-sm;
 				font-weight: normal;
