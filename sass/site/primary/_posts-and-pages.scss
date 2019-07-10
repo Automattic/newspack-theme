@@ -225,17 +225,18 @@
 	margin: calc(2 * #{$size__spacing-unit}) auto $size__spacing-unit;
 
 	.avatar {
-		display: none;
-		height: 80px;
+		height: 60px;
 		margin-right: $size__spacing-unit;
-		width: 80px;
+		width: 60px;
 
 		@include media(mobile) {
-			display: block;
+			height: 80px;
+			width: 80px;
 		}
 	}
 
 	.author-bio-text {
+		width: calc( 100% - 60px - 1em );
 		@include media(mobile) {
 			width: calc( 100% - 80px - 1em );
 		}
