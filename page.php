@@ -30,6 +30,7 @@ get_header();
 			?>
 
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</section><!-- #primary -->
 
 <?php

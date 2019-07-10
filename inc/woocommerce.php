@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  * @return void
  */
 function newspack_woocommerce_scripts() {
-	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/woocommerce.css' );
+	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css' );
 	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );

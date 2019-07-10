@@ -106,7 +106,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'styles/style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -253,7 +253,7 @@ function newspack_scripts() {
 		wp_enqueue_script( 'newspack-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
 
-	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -289,7 +289,7 @@ add_action( 'wp_print_footer_scripts', 'newspack_skip_link_focus_fix' );
  */
 function newspack_editor_customizer_styles() {
 
-	wp_enqueue_style( 'newspack-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
+	wp_enqueue_style( 'newspack-editor-customizer-styles', get_theme_file_uri( '/styles/style-editor-customizer.css' ), false, '1.1', 'all' );
 
 	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
@@ -320,7 +320,7 @@ function newspack_filter_admin_body_class( $classes ) {
  */
 function newspack_enqueue_editor_static_front_page_assets( $classes ) {
 	if ( newspack_is_static_front_page() ) {
-		wp_enqueue_style( 'newspack-editor-static-front-page-styles', get_theme_file_uri( '/style-editor-static-front-page.css' ), false, '1.1', 'all' );
+		wp_enqueue_style( 'newspack-editor-static-front-page-styles', get_theme_file_uri( '/styles/style-editor-static-front-page.css' ), false, '1.1', 'all' );
 	}
 };
 add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
