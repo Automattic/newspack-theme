@@ -80,3 +80,16 @@
 		text-decoration: underline;
 	}
 }
+
+#secondary {
+	section:first-child,
+	section:first-child > div {
+		> *:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.single-post #secondary {
+	padding-top: calc( #{$size__spacing-unit} * 1.5 );
+}

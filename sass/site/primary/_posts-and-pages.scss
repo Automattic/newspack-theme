@@ -27,7 +27,6 @@
 }
 
 .entry-title {
-
 	font-size: $font__size-xxl;
 	margin: 0;
 
@@ -40,6 +39,17 @@
 
 		&:hover {
 			color: $color__text-hover;
+		}
+	}
+}
+
+.page {
+	.entry-title {
+		font-size: $font__size-xl;
+		margin: 0;
+
+		@include media(desktop) {
+			font-size: $font__size-xxl;
 		}
 	}
 }
@@ -222,26 +232,6 @@
 
 		@include media(desktop) {
 			font-size: $font__size-xxxxl;
-		}
-	}
-
-	@include media(tablet) {
-		.main-content {
-			flex-basis: calc( 65% - 24px );
-		}
-
-		#secondary {
-			flex-basis: calc( 35% - 24px );
-		}
-	}
-
-	@include media(desktop) {
-		.main-content {
-			flex-basis: calc( 65% - 48px );
-		}
-
-		#secondary {
-			flex-basis: calc( 35% - 48px );
 		}
 	}
 
