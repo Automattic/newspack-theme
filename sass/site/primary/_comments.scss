@@ -7,10 +7,10 @@
 }
 
 .comments-area {
-	margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
+	margin: calc(2 * #{$size__spacing-unit}) 0;
 
 	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) auto;
+		margin: calc(3 * #{$size__spacing-unit}) 0;
 	}
 
 	& > * {

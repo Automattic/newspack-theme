@@ -43,11 +43,9 @@ get_header();
 						// Previous/next post navigation.
 						the_post_navigation(
 							array(
-								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'newspack' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Next post:', 'newspack' ) . '</span> <br/>' .
+								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next article:', 'newspack' ) . '</span><br/>' .
 									'<span class="post-title">%title</span>',
-								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'newspack' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Previous post:', 'newspack' ) . '</span> <br/>' .
+								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous article:', 'newspack' ) . '</span><br/>' .
 									'<span class="post-title">%title</span>',
 							)
 						);
@@ -58,7 +56,7 @@ get_header();
 						comments_template();
 					}
 					?>
-				</div>
+				</div><!-- .main-content -->
 
 			<?php
 				endwhile;
