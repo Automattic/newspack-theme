@@ -1,9 +1,13 @@
 /** === Main menu === */
 
 .main-navigation {
-
-	display: flex;
+	flex-basis: 90%;
 	font-size: $font__size-xs;
+
+	> div {
+		display: inline;
+	}
+
 
 	/* Un-style buttons */
 	button {
@@ -44,7 +48,8 @@
 
 		> li {
 			color: #555;
-			display: inline;
+			display: inline-block;
+			padding: calc( #{$size__spacing-unit} * 0.2 ) 0 calc( #{$size__spacing-unit} * 0.6 );
 			position: relative;
 
 			> a {
@@ -87,7 +92,6 @@
 				.submenu-expand {
 
 					display: inline-block;
-					line-height: 0;
 					margin-right: #{0.25 * $size__spacing-unit};
 
 					/* Priority+ Menu */
@@ -97,12 +101,13 @@
 						line-height: $font__line-height-heading;
 						width: 24px;
 						padding: 0;
-						margin: #{0.25 * $size__spacing-unit} 0 0 #{0.5 * $size__spacing-unit};
+						top: #{ $size__spacing-unit * 0.25 };
 
 						svg {
 							height: 24px;
 							width: 24px;
 							top: #{-0.125 * $size__spacing-unit};
+							margin-left: #{ $size__spacing-unit * 0.5 };
 							vertical-align: text-bottom;
 						}
 					}
@@ -114,7 +119,7 @@
 
 					svg {
 						position: relative;
-						top: 0.2rem;
+						top: #{ $size__spacing_unit * 0.3 };
 					}
 				}
 			}
@@ -222,7 +227,6 @@
 
 				svg {
 					position: relative;
-					top: 0.2rem;
 					margin-right: calc( .25 * #{$size__spacing-unit} );
 				}
 			}
@@ -244,7 +248,6 @@
 		width: auto;
 		min-width: 100%;
 
-
 		/* Non-mobile position */
 		@include media(tablet) {
 			display: block;
@@ -253,7 +256,7 @@
 			position: absolute;
 			left: 0;
 			right: auto;
-			top: auto;
+			top: 100%;
 			bottom: auto;
 			height: auto;
 			min-width: -moz-max-content;
@@ -329,7 +332,7 @@
 			position: absolute;
 			left: 0;
 			right: auto;
-			top: auto;
+			top: 100%;
 			bottom: auto;
 			height: auto;
 			min-width: -moz-max-content;
