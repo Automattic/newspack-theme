@@ -35,7 +35,6 @@
 		list-style: none;
 
 		li {
-			color: $color__text-light;
 			font-family: $font__heading;
 
 			ul {
@@ -50,9 +49,19 @@
 	li {
 		margin-bottom: 0.5em;
 	}
+}
+
+.widget_recent_entries {
+	a {
+		color: inherit;
+		font-size: 1.1em;
+		font-weight: 700;
+	}
 
 	.post-date {
+		color: $color__text-light;
 		display: block;
+		font-size: 0.9em;
 	}
 }
 

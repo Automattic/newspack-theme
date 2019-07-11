@@ -47,11 +47,11 @@
 .single-post {
 	@include media(tablet) {
 		.main-content {
-			flex-basis: calc( 65% - 24px );
+			flex-basis: 65%;
 		}
 
 		#secondary {
-			flex-basis: calc( 35% - 24px );
+			flex-basis: 30%;
 		}
 	}
 }
