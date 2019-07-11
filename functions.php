@@ -249,7 +249,6 @@ function newspack_scripts() {
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
 	if ( has_nav_menu( 'primary-menu' ) ) {
-		wp_enqueue_script( 'newspack-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '1.1', true );
 		wp_enqueue_script( 'newspack-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
 
