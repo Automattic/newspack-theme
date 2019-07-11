@@ -1,7 +1,11 @@
 // Site header
 
 .site-header {
-	margin: 0 0 3rem;
+	margin: 0 0 $size__spacing-unit;
+
+	@include media(tablet) {
+		margin-bottom: #{ $size__spacing-unit * 1 };
+	}
 
 	.wrapper {
 		display: flex;
