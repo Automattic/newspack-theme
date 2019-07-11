@@ -26,10 +26,6 @@
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	position: relative;
-
-	@include media(tablet) {
-		flex-basis: 60%;
-	}
 }
 
 // Site logo
