@@ -1,4 +1,3 @@
-.author-description .author-link,
 .comment-metadata,
 .comment-reply-link,
 .comments-title,
@@ -7,6 +6,7 @@
 .entry-meta,
 .cat-links,
 .entry-footer,
+.author-bio .author-link,
 .main-navigation,
 .no-comments,
 .not-found .page-title,
@@ -29,7 +29,6 @@ h6 {
 }
 
 .page-description,
-.author-description .author-link,
 .not-found .page-title,
 .error-404 .page-title,
 .post-navigation .post-title,
@@ -156,6 +155,15 @@ blockquote {
 	@include media(tablet) {
 		hyphens: none;
 	}
+}
+
+.accent-header {
+	border-bottom: 4px solid #ccc;
+	color: $color__primary;
+	font-size: 1em;
+	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
+	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
+	text-transform: uppercase;
 }
 
 .page-header {
