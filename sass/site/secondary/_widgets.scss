@@ -1,7 +1,11 @@
 .widget {
 	font-family: $font__heading;
 	font-size: $font__size-sm;
-	margin: 0 0 #{$size__spacing-unit};
+	margin: 0 0 #{$size__spacing-unit * 2};
+
+	@include media( tablet ) {
+		margin: 0 0 #{$size__spacing-unit * 3};
+	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
