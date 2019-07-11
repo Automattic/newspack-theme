@@ -1,6 +1,8 @@
 /** === Tertiary menu === */
 
 nav.tertiary-menu {
+	align-items: center;
+	display: flex;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 	list-style: none;

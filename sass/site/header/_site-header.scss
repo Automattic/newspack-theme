@@ -24,6 +24,7 @@
 	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 	position: relative;
 
 	@include media(tablet) {
@@ -33,29 +34,17 @@
 
 // Site logo
 
-.site-logo {
+.custom-logo-link {
+	box-sizing: content-box;
 	line-height: 1;
 	margin: 0 $size__spacing-unit 0 0;
-	max-width: 80%;
+	overflow: hidden;
 
-	@include media(mobile) {
-		max-width: 60%;
-	}
-
-	@include media(tablet) {
-		max-width: 40%;
-	}
-
-	.custom-logo-link {
-		box-sizing: content-box;
-		overflow: hidden;
-
-		.custom-logo {
-			height: auto;
-			min-height: inherit;
-			max-height: 150px;
-			width: auto;
-		}
+	.custom-logo {
+		height: auto;
+		min-height: inherit;
+		max-height: 150px;
+		width: auto;
 	}
 }
 
@@ -105,7 +94,6 @@
 	align-items: center;
 	padding: $size__spacing-unit 0;
 }
-
 
 // Bottom bar
 
