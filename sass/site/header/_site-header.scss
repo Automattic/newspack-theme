@@ -6,19 +6,6 @@
 	@include media(tablet) {
 		margin-bottom: #{ $size__spacing-unit * 1 };
 	}
-
-	.wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		margin: auto;
-		max-width: 90%;
-		width: $size__site-main;
-
-		@include media(tablet) {
-			flex-wrap: nowrap;
-		}
-	}
 }
 
 // Site branding
