@@ -3,6 +3,7 @@
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 	margin: 0 0 #{$size__spacing-unit * 2};
+	word-wrap: break-word;
 
 	@include media( tablet ) {
 		margin: 0 0 #{$size__spacing-unit * 3};
