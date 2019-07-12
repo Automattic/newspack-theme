@@ -226,6 +226,49 @@ function newspack_widgets_init() {
 add_action( 'widgets_init', 'newspack_widgets_init' );
 
 /**
+ * Counts the number of widgets in a specific sidebar
+ *
+ * @param  string $id the widget area ID.
+ * @return integer number of widgets in the sidebar.
+ */
+function newspack_count_widgets( $id ) {
+	$count            = 0;
+	$sidebars_widgets = wp_get_sidebars_widgets();
+
+	if ( array_key_exists( $id, $sidebars_widgets ) ) {
+
+		foreach ( (array) $sidebars_widgets[ $id ] as $value ) {
+			// Don't count the Cookies or Mailchimp widgets, since they're not visible in the widget area.
+			if ( strpos( $value, 'eu_cookie_law_widget' ) === false && strpos( $value, 'widget_mailchimp_subscriber_popup' ) === false ) {
+				$count++;
+			}
+		}
+	}
+	return $count;
+}
+
+/**
+ * Widget column class helper
+ *
+ * @param  string $widget_id the widget area ID.
+ * @return string grid class.
+ */
+function newspack_widget_column_class( $widget_id ) {
+	$count = newspack_count_widgets( $widget_id );
+	$class = '';
+	if ( $count >= 4 ) {
+		$class .= 'widgets-four';
+	} elseif ( 3 == $count ) {
+		$class .= 'widgets-three';
+	} elseif ( 2 == $count ) {
+		$class .= 'widgets-two';
+	} else {
+		$class .= 'widget-one';
+	}
+	return $class;
+}
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

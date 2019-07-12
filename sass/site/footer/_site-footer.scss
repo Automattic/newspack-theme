@@ -2,32 +2,49 @@
 
 #colophon {
 
-	.widget-area,
-	.site-info {
-		margin: calc(2 * #{$size__spacing-unit}) auto;
-		max-width: 90%;
-		width: $size__site-main;
+	.footer-branding {}
 
-		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) auto;
+	.widget-area {
+
+		.wrapper {
+			justify-content: flex-start;
 		}
-	}
-
-	.widget-column {
-		display: flex;
-		flex-wrap: wrap;
 
 		.widget {
 			width: 100%;
-			@include media(desktop) {
+			@include media(tablet) {
 				margin-right: calc(3 * #{$size__spacing-unit});
-				width: calc(33% - (3 * #{$size__spacing-unit}));
+				width: calc(25% - (3 * #{$size__spacing-unit}));
+			}
+		}
+
+		&.widgets-two {
+			.widget {
+				@include media(tablet) {
+					width: calc(50% - (3 * #{$size__spacing-unit}));
+				}
+			}
+		}
+
+		&.widgets-three {
+			.widget {
+				@include media(tablet) {
+					&:first-child {
+						width: calc(50% - (3 * #{$size__spacing-unit}));
+					}
+				}
 			}
 		}
 	}
 
 	.site-info {
 		color: $color__text-light;
+
+		.wrapper {
+			border-top: 1px solid #ccc;
+			justify-content: flex-start;
+			padding: $size__spacing-unit 0;
+		}
 
 		a {
 			color: inherit;
