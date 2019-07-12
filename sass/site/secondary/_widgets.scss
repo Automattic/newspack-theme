@@ -1,10 +1,15 @@
 .widget {
+	color: $color__text-main;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 	margin: 0 0 #{$size__spacing-unit * 2};
 
 	@include media( tablet ) {
 		margin: 0 0 #{$size__spacing-unit * 3};
+	}
+
+	&:last-child {
+		margin-bottom: 0;
 	}
 
 	/* Make sure select elements fit in widgets. */
@@ -47,21 +52,22 @@
 .widget_recent_comments,
 .widget_recent_entries {
 	li {
-		margin-bottom: 0.5em;
+		margin-bottom: 1em;
 	}
 }
 
 .widget_recent_entries {
 	a {
 		color: inherit;
-		font-size: 1.1em;
+		font-size: $font__size-lg;
 		font-weight: 700;
+		line-height: $font__line-height-heading;
 	}
 
 	.post-date {
 		color: $color__text-light;
+		font-size: $font__size-sm;
 		display: block;
-		font-size: 0.9em;
 	}
 }
 
@@ -69,10 +75,6 @@
 
 	.search-field {
 		width: 100%;
-
-		@include media(mobile) {
-			width: auto;
-		}
 	}
 
 	.search-submit {

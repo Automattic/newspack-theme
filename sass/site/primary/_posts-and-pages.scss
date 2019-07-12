@@ -21,7 +21,7 @@
 }
 
 .entry-header {
-	margin: calc(3 * #{ $size__spacing-unit}) 0 0;
+	margin: 0;
 	padding: 0 0 $size__spacing-unit;
 	position: relative;
 }
@@ -138,7 +138,7 @@
 }
 
 .post-thumbnail {
-	margin: $size__spacing-unit 0;
+	margin: 0;
 
 	&:focus {
 		outline: none;
@@ -219,6 +219,7 @@
 
 .single-post {
 	.entry-header {
+		margin: calc(3 * #{ $size__spacing-unit}) 0 0;
 		width: 100%;
 	}
 
@@ -233,6 +234,11 @@
 		@include media(desktop) {
 			font-size: $font__size-xxxxl;
 		}
+	}
+
+	.main-content,
+	#secondary {
+		margin-top: $size__spacing-unit;
 	}
 
 	&.post-template-single-feature {
