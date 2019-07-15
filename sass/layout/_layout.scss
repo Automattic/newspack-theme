@@ -48,11 +48,23 @@
 
 	@include media(tablet) {
 		#main {
-			width: 60%;
+			flex-basis: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			width: 29%;
+			flex-basis: calc( 35% - #{$size__spacing-unit} );
+		}
+	}
+}
+
+.single-post {
+	@include media(tablet) {
+		.main-content {
+			flex-basis: 65%;
+		}
+
+		#secondary {
+			flex-basis: 30%;
 		}
 	}
 }

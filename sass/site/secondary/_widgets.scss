@@ -1,5 +1,17 @@
 .widget {
-	margin: 0 0 #{$size__spacing-unit};
+	color: $color__text-main;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	margin: 0 0 #{$size__spacing-unit * 2};
+	word-wrap: break-word;
+
+	@include media( tablet ) {
+		margin: 0 0 #{$size__spacing-unit * 3};
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
@@ -29,35 +41,41 @@
 		list-style: none;
 
 		li {
-			color: $color__text-light;
 			font-family: $font__heading;
-			font-weight: 700;
-			line-height: $font__line-height-heading;
-			margin-top: #{0.5 * $size__spacing-unit};
-			margin-bottom: #{0.5 * $size__spacing-unit};
+
+			ul {
+				margin-left: 1.5em;
+			}
 		}
-
-		@include nestedSubMenuPadding();
 	}
 }
 
-.widget_tag_cloud {
+.widget_recent_comments,
+.widget_recent_entries {
+	li {
+		margin-bottom: 1em;
+	}
+}
 
-	.tagcloud {
-		font-family: $font__heading;
+.widget_recent_entries {
+	a {
+		color: inherit;
+		font-size: $font__size-lg;
 		font-weight: 700;
+		line-height: $font__line-height-heading;
+	}
+
+	.post-date {
+		color: $color__text-light;
+		font-size: $font__size-sm;
+		display: block;
 	}
 }
-
 
 .widget_search {
 
 	.search-field {
 		width: 100%;
-
-		@include media(mobile) {
-			width: auto;
-		}
 	}
 
 	.search-submit {
@@ -77,4 +95,17 @@
 	a {
 		text-decoration: underline;
 	}
+}
+
+#secondary {
+	section:first-child,
+	section:first-child > div {
+		> *:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.single-post #secondary {
+	padding-top: calc( #{$size__spacing-unit} * 1.5 );
 }
