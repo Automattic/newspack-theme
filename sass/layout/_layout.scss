@@ -1,6 +1,19 @@
 
 /** === Layout === */
 
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 90%;
+	width: $size__site-main;
+
+	@include media(tablet) {
+		flex-wrap: nowrap;
+	}
+}
+
 #page {
 	overflow: hidden;
 	width: 100%;

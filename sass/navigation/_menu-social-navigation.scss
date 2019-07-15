@@ -18,18 +18,16 @@
 			a {
 				border-bottom: 1px solid transparent;
 				display: block;
-				color: $color__text-main;
+				color: inherit;
 				margin-bottom: -1px;
 				transition: opacity $link_transition ease-in-out;
 
 				&:hover,
 				&:active {
-					color: $color__text-main;
 					opacity: 0.6;
 				}
 
 				&:focus {
-					color: $color__text-main;
 					opacity: 1;
 					border-bottom: 1px solid $color__text-main;
 				}

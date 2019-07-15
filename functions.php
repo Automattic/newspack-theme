@@ -305,7 +305,7 @@ function newspack_is_static_front_page() {
 	global $post;
 	$page_on_front = intval( get_option( 'page_on_front' ) );
 	return isset( $post->ID ) && intval( $post->ID ) === $page_on_front;
-};
+}
 
 /**
  * Add body class on editor pages if editing the static front page.
@@ -325,6 +325,17 @@ function newspack_enqueue_editor_static_front_page_assets( $classes ) {
 add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_static_front_page_assets' );
 
+/**
+ * Use front-page.php when Front page displays is set to a static page.
+ *
+ * @param string $template front-page.php.
+ *
+ * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
+ */
+function newspack_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template', 'newspack_front_page_template' );
 
 /**
  * Display custom color CSS in customizer and on frontend.
