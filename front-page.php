@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying the static front page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
