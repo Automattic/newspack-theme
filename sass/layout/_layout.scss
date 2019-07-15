@@ -35,11 +35,11 @@
 
 	@include media(tablet) {
 		#main {
-			flex-basis: calc( 65% - 24px );
+			flex-basis: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			flex-basis: calc( 35% - 24px );
+			flex-basis: calc( 35% - #{$size__spacing-unit} );
 		}
 	}
 }
