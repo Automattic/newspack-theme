@@ -1,6 +1,8 @@
 /** === Tertiary menu === */
 
 nav.tertiary-menu {
+	align-items: center;
+	display: flex;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 	list-style: none;
@@ -12,33 +14,48 @@ nav.tertiary-menu {
 		text-align: right;
 	}
 
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
 	li {
 		display: inline;
 		margin: 0;
 		padding: 0;
 
-		&:nth-child(n+2) {
-			margin-left: ($size__spacing-unit * 0.5);
+		@include media(tablet) {
+			&:nth-child(n+2) {
+				margin: 0 0 0 #{$size__spacing-unit * 0.5};
+			}
+		}
+
+		&:last-child {
+			a {
+				background-color: $color__primary;
+				color: #fff;
+
+				&:hover {
+					background-color: $color__primary-variation;
+				}
+			}
 		}
 	}
 
 	a {
 		background-color: lighten($color__text-light, 45%);
+		color: $color__text-main;
 		@include button-transition;
 		border-radius: 5px;
 		display: inline-block;
 		font-size: $font__size-sm;
 		font-weight: 700;
+		margin: #{$size__spacing-unit * 0.25} 0;
 		padding: ($size__spacing-unit * 0.5) ($size__spacing-unit * 0.75);
-	}
 
-	a,
-	a:visited {
-		color: $color__text-main;
-	}
-
-	a:hover {
-		background-color: $color__text-main;
-		color: #fff;
+		&:hover {
+			background-color: $color__text-main;
+			color: #fff;
+		}
 	}
 }

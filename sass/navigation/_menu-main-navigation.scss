@@ -1,10 +1,13 @@
 /** === Main menu === */
 
 .main-navigation {
-	display: flex;
-	margin: #{0.25 * $size__spacing-unit} auto 0;
-	max-width: 90%;
-	width: $size__site-main;
+	flex-basis: 90%;
+	font-size: $font__size-xs;
+
+	> div {
+		display: inline;
+	}
+
 
 	/* Un-style buttons */
 	button {
@@ -13,7 +16,7 @@
 		padding: 0;
 		margin: 0;
 		font-family: $font__heading;
-		line-height: $font__line-height-heading;
+		line-height: 1.2;
 		text-decoration: none;
 		background: transparent;
 		color: inherit;
@@ -44,14 +47,13 @@
 		padding: 0;
 
 		> li {
-
-			color: $color__primary;
-			display: inline;
+			color: #555;
+			display: inline-block;
+			padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
 			position: relative;
 
 			> a {
-
-				color: $color__primary;
+				color: inherit;
 				font-weight: 700;
 				margin-right: #{0.5 * $size__spacing-unit};
 
@@ -88,23 +90,22 @@
 				}
 
 				.submenu-expand {
-
 					display: inline-block;
+					height: 18px;
 					margin-right: #{0.25 * $size__spacing-unit};
+					width: 24px;
 
 					/* Priority+ Menu */
 					&.main-menu-more-toggle {
 						position: relative;
 						height: 24px;
 						line-height: $font__line-height-heading;
-						width: 24px;
 						padding: 0;
-						margin: #{0.25 * $size__spacing-unit} 0 0 #{0.5 * $size__spacing-unit};
+						top: #{ $size__spacing-unit * 0.25 };
 
 						svg {
-							height: 24px;
-							width: 24px;
 							top: #{-0.125 * $size__spacing-unit};
+							margin-left: #{ $size__spacing-unit * 0.5 };
 							vertical-align: text-bottom;
 						}
 					}
@@ -116,7 +117,7 @@
 
 					svg {
 						position: relative;
-						top: 0.2rem;
+						top: -0.2em;
 					}
 				}
 			}
@@ -218,14 +219,12 @@
 			}
 
 			&.mobile-parent-nav-menu-item {
-
 				display: none;
 				font-size: $font__size-sm;
 				font-weight: normal;
 
 				svg {
 					position: relative;
-					top: 0.2rem;
 					margin-right: calc( .25 * #{$size__spacing-unit} );
 				}
 			}
@@ -247,7 +246,6 @@
 		width: auto;
 		min-width: 100%;
 
-
 		/* Non-mobile position */
 		@include media(tablet) {
 			display: block;
@@ -256,7 +254,7 @@
 			position: absolute;
 			left: 0;
 			right: auto;
-			top: auto;
+			top: 100%;
 			bottom: auto;
 			height: auto;
 			min-width: -moz-max-content;
@@ -332,7 +330,7 @@
 			position: absolute;
 			left: 0;
 			right: auto;
-			top: auto;
+			top: 100%;
 			bottom: auto;
 			height: auto;
 			min-width: -moz-max-content;
@@ -472,6 +470,10 @@
 	.main-menu-more {
 		&:nth-child(n+3) {
 			display: none;
+		}
+
+		> ul:first-child > li {
+			padding: 0;
 		}
 	}
 

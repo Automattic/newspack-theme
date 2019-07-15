@@ -23,70 +23,78 @@
 
 		<header id="masthead" class="site-header">
 
-			<div class="top-nav-contain">
-				<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
-					<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'secondary-menu',
-								'menu_class'     => 'secondary-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav>
-				<?php endif; ?>
-				<?php if ( has_nav_menu( 'social' ) ) : ?>
-					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav><!-- .social-navigation -->
-				<?php endif; ?>
+			<div class="top-header-contain">
+				<div class="wrapper">
+					<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
+						<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'secondary-menu',
+									'menu_class'     => 'secondary-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav>
+					<?php endif; ?>
+					<?php if ( has_nav_menu( 'social' ) ) : ?>
+						<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'social',
+									'menu_class'     => 'social-links-menu',
+									'link_before'    => '<span class="screen-reader-text">',
+									'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav><!-- .social-navigation -->
+					<?php endif; ?>
+				</div><!-- .wrapper -->
 			</div><!-- .site-menu-container -->
 
-			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+			<div class="middle-header-contain">
+				<div class="wrapper">
+					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-				<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
-					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'tertiary-menu',
-								'menu_class'     => 'tertiary-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav>
-				<?php endif; ?>
+					<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+						<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'tertiary-menu',
+									'menu_class'     => 'tertiary-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav>
+					<?php endif; ?>
+				</div><!-- .wrapper -->
 			</div><!-- .site-branding-container -->
 
-			<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary-menu',
-							'menu_class'     => 'main-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						)
-					);
-					?>
-				</nav><!-- #site-navigation -->
-			<?php endif; ?>
+			<div class="bottom-header-contain">
+				<div class="wrapper">
+					<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
+						<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary-menu',
+									'menu_class'     => 'main-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								)
+							);
+							?>
+						</nav><!-- #site-navigation -->
+					<?php endif; ?>
+				</div><!-- .wrapper -->
+			</div><!-- .bottom-header-contain -->
 
 		</header><!-- #masthead -->
 
