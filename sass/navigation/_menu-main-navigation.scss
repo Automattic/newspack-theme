@@ -95,21 +95,6 @@
 					margin-right: #{0.25 * $size__spacing-unit};
 					width: 24px;
 
-					/* Priority+ Menu */
-					&.main-menu-more-toggle {
-						position: relative;
-						height: 24px;
-						line-height: $font__line-height-heading;
-						padding: 0;
-						top: #{ $size__spacing-unit * 0.25 };
-
-						svg {
-							top: #{-0.125 * $size__spacing-unit};
-							margin-left: #{ $size__spacing-unit * 0.5 };
-							vertical-align: text-bottom;
-						}
-					}
-
 					.wp-customizer-unloading &,
 					&.is-empty {
 						display: none;
@@ -465,18 +450,6 @@
 			}
 		}
 	}
-
-	// Hide duplicate menu-more-link when re-loading a menu in the customizer
-	.main-menu-more {
-		&:nth-child(n+3) {
-			display: none;
-		}
-
-		> ul:first-child > li {
-			padding: 0;
-		}
-	}
-
 }
 
 /* Menu animation */
