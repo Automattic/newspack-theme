@@ -223,7 +223,8 @@
 		width: 100%;
 	}
 
-	&:not(.has-featured-image) .entry-header {
+	&:not(.has-featured-image) .entry-header,
+	&.has-large-featured-image .entry-header {
 		border-bottom: 1px solid #ddd;
 	}
 
@@ -245,6 +246,12 @@
 		.main-content {
 			margin-left: auto;
 			margin-right: auto;
+		}
+	}
+
+	.main-content {
+		.post-thumbnail:first-child {
+			margin-top: #{ 2 * $size__spacing-unit };
 		}
 	}
 

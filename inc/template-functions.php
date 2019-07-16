@@ -46,6 +46,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-featured-image';
 	}
 
+	// Adds a class if singular post has a large featured image
+	$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+	if ( is_single() && has_post_thumbnail() && 1200 > $thumbnail_info['width'] ) {
+		$classes[] = 'has-large-featured-image';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
