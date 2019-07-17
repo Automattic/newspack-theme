@@ -31,38 +31,42 @@ nav.tertiary-menu {
 		}
 
 		&:last-child {
-			a {
-				background-color: $color__primary;
-				color: #fff;
-
-				&:hover {
-					background-color: $color__primary-variation;
-				}
-			}
+			font-weight: 700;
 		}
 	}
 
 	a {
-		background-color: lighten($color__text-light, 45%);
-		color: $color__text-main;
-		@include button-transition;
-		border-radius: 5px;
+		color: inherit;
 		display: inline-block;
-		font-size: $font__size-sm;
-		font-weight: 700;
 		margin: #{$size__spacing-unit * 0.25} 0;
-		padding: ($size__spacing-unit * 0.5) ($size__spacing-unit * 0.75);
-
-		&:hover {
-			background-color: $color__text-main;
-			color: #fff;
-		}
+		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.5};
 	}
 }
 
-.header-solid-background {
-	.tertiary-menu a {
-		background: transparent;
-		padding: 0;
+body:not(.header-solid-background) {
+	nav.tertiary-menu {
+		a {
+			background-color: lighten($color__text-light, 45%);
+			color: $color__text-main;
+			@include button-transition;
+			border-radius: 5px;
+			font-size: $font__size-sm;
+			font-weight: 700;
+			padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
+
+			&:hover {
+				background-color: $color__text-main;
+				color: #fff;
+			}
+		}
+
+		li:last-child a {
+			background-color: $color__primary;
+			color: #fff;
+
+			&:hover {
+				background-color: $color__primary-variation;
+			}
+		}
 	}
 }

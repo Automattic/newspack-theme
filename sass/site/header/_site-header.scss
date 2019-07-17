@@ -1,5 +1,4 @@
 // Site header
-
 .site-header {
 	margin: 0 0 $size__spacing-unit;
 
@@ -9,17 +8,16 @@
 }
 
 // Site branding
-
 .site-branding {
 	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	padding: #{ 2 * $size__spacing-unit } 0;
 	position: relative;
 }
 
 // Site logo
-
 .custom-logo-link {
 	box-sizing: content-box;
 	line-height: 1;
@@ -39,7 +37,6 @@
 }
 
 // Site title
-
 .site-title {
 	color: $color__text-main;
 	font-weight: 700;
@@ -60,7 +57,6 @@
 }
 
 // Site description
-
 .site-description {
 	color: $color__text-light;
 	font-weight: normal;
@@ -70,22 +66,23 @@
 }
 
 // Top bar
-
 .top-header-contain {
 	background-color: #4a4a4a;
 	color: #fff;
-	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
+
+	.wrapper > * {
+		padding-bottom: #{ 0.3 * $size__spacing-unit };
+		padding-top: #{ 0.3 * $size__spacing-unit };
+	}
 }
 
 // Middle bar
-
 .middle-header-contain {
 	align-items: center;
 	padding: $size__spacing-unit 0;
 }
 
 // Bottom bar
-
 .bottom-header-contain {
 	.wrapper {
 		border-bottom: 1px solid #4a4a4a;
@@ -93,7 +90,11 @@
 	}
 }
 
-// Header Customizations
+/**
+ * Header options.
+ */
+
+// Default
 
 body:not(.header-center-logo) {
 	.site-branding {
@@ -111,22 +112,55 @@ body:not(.header-center-logo) {
 	}
 }
 
+// Centred Logo
+
 .header-center-logo {
 	.site-branding {
-		flex-grow: 1;
+		display: block;
+		flex-grow: 2;
 		text-align: center;
 	}
+
+	.social-navigation,
+	nav.tertiary-menu {
+		justify-content: center;
+		width: 100%;
+
+		@include media( tablet ) {
+			justify-content: space-between;
+			width: auto;
+		}
+	}
 }
+
+// Solid Background
 
 .header-solid-background {
 	.site-header {
+		background-color: $color__primary;
 		padding-bottom: 0;
 	}
-}
-
-.header-short {
 	.site-header,
-	.site-branding-container {
-		padding: 0;
+	.site-title a,
+	.site-title a:visited,
+	.site-description,
+	.middle-header-contain {
+		color: #fff;
+	}
+
+	.top-header-contain {
+		background-color: transparent;
+	}
+
+	.bottom-header-contain {
+		background-color: #4a4a4a;
+		.wrapper {
+			border: 0;
+		}
+
+		.main-navigation .main-menu > li,
+		.main-navigation .main-menu > li > a {
+			color: #fff;
+		}
 	}
 }

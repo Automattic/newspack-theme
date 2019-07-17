@@ -468,25 +468,3 @@
 		opacity: 1;
 	}
 }
-
-.header-center-logo {
-	.main-navigation {
-		border-bottom: 1px solid lighten( $color__text-main, 80% );
-		border-top: 1px solid lighten( $color__text-main, 80% );
-		justify-content: center;
-		padding: #{0.25 * $size__spacing-unit} 0 #{0.5 * $size__spacing-unit};
-	}
-}
-
-.header-solid-background {
-	.bottom-nav-contain {
-		background-color: $color__background-body;
-	}
-
-	.main-navigation .main-menu > li {
-		color: $color__text-main;
-		> a {
-			color: $color__text-main;
-		}
-	}
-}

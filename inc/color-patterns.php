@@ -173,15 +173,19 @@ function newspack_custom_colors_css() {
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
 		$theme_css .= '
-			.site-header {
+			.header-solid-background .site-header {
 				background-color: ' . $primary_color . ';
 			}
-			.site-header, .site-header a, .site-header a:visited,
-			.site-title, .site-title a:link, .site-title a:visited,
-			.site-description,
-			.main-navigation .main-menu > li,
-			.main-navigation ul.main-menu > li > a,
-			.main-navigation ul.main-menu > li > a:hover {
+			.header-solid-background .site-header,
+			.header-solid-background .site-title,
+			.header-solid-background .site-title a:link,
+			.header-solid-background .site-title a:visited,
+			.header-solid-background .site-description,
+			.header-solid-background .main-navigation .main-menu > li,
+			.header-solid-background .main-navigation ul.main-menu > li > a,
+			.header-solid-background .main-navigation ul.main-menu > li > a:hover,
+			.header-solid-background .top-header-contain,
+			.header-solid-background .middle-header-contain {
 				color: ' . $primary_color_contrast . ';
 			}
 		';

@@ -1,9 +1,10 @@
 /* Social menu */
 
 .social-navigation {
-	text-align: left;
+	align-items: center;
+	display: flex;
 
-	ul.social-links-menu {
+	ul {
 		display: flex;
 		margin: 0;
 		padding: 0;
