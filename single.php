@@ -8,6 +8,7 @@
  */
 
 get_header();
+$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 ?>
 
 	<section id="primary" class="content-area">
@@ -24,9 +25,21 @@ get_header();
 					<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 				</header>
 
-				<?php newspack_post_thumbnail(); ?>
+				<?php
+				// Place larger featured images above content area.
+				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) {
+					newspack_post_thumbnail();
+				}
+				?>
 
 				<div class="main-content">
+
+					<?php
+					// Place smaller featured images inside of 'content' area.
+					if ( has_post_thumbnail() && 1200 > $thumbnail_info['width'] ) {
+						newspack_post_thumbnail();
+					}
+					?>
 
 					<?php
 					get_template_part( 'template-parts/content/content', 'single' );
