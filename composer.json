@@ -14,7 +14,6 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "brainmaestro/composer-git-hooks": "^2.6",
     "automattic/vipwpcs": "^2.0.0",
-    "wptrt/wpthemereview": "^0.1.0",
     "xwp/wp-dev-lib": "^1.0"
   },
   "scripts": {
