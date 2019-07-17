@@ -32,26 +32,26 @@
 				</a>
 
 				<?php
-				if ( has_nav_menu( 'footer' ) ) :
-				?>
-					<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'newspack' ); ?>">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'footer',
-									'menu_class'     => 'footer-menu',
-									'depth'          => 1,
-								)
-							);
-						?>
-					</nav><!-- .footer-navigation -->
-				<?php
-				endif;
-
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
 				?>
+
+				<?php if ( ! is_active_sidebar( 'footer-1' ) && has_nav_menu( 'social' ) ) : ?>
+					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'social',
+								'menu_class'     => 'social-links-menu',
+								'link_before'    => '<span class="screen-reader-text">',
+								'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
+								'depth'          => 1,
+							)
+						);
+						?>
+					</nav><!-- .social-navigation -->
+				<?php endif; ?>
 			</div><!-- .wrapper -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

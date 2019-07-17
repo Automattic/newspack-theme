@@ -1,39 +1,52 @@
 /* Site footer */
 
 #colophon {
+	margin: #{ 2 * $size__spacing-unit } 0 0;
 
-	.footer-branding {}
+	a {
+		color: $color__text-light;
+	}
+
+	.footer-branding {
+		.wrapper {
+			border-top: 4px solid #ccc;
+			padding-top: $size__spacing-unit;
+		}
+
+		.custom-logo-link {
+			margin-bottom: $size__spacing-unit;
+		}
+	}
 
 	.widget-area {
+		padding: $size__spacing-unit 0 #{ 2 * $size__spacing-unit };
 
 		.wrapper {
-			justify-content: flex-start;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 
 		.widget {
 			width: 100%;
-			@include media(tablet) {
-				margin-right: calc(3 * #{$size__spacing-unit});
-				width: calc(25% - (3 * #{$size__spacing-unit}));
+
+			@include media( mobile ) {
+				flex: 1 0 0;
+				margin-right: $size__spacing-unit;
+				min-width: calc( 50% - #{ $size__spacing-unit } );
+			}
+
+			@include media( tablet ) {
+				min-width: calc( 25% - #{ $size__spacing-unit } );
+			}
+
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 
-		&.widgets-two {
-			.widget {
-				@include media(tablet) {
-					width: calc(50% - (3 * #{$size__spacing-unit}));
-				}
-			}
-		}
-
-		&.widgets-three {
-			.widget {
-				@include media(tablet) {
-					&:first-child {
-						width: calc(50% - (3 * #{$size__spacing-unit}));
-					}
-				}
-			}
+		.widget-title {
+			color: $color__text-light;
+			font-size: inherit;
 		}
 	}
 
@@ -42,7 +55,7 @@
 
 		.wrapper {
 			border-top: 1px solid #ccc;
-			justify-content: flex-start;
+			justify-content: space-between;
 			padding: $size__spacing-unit 0;
 		}
 
