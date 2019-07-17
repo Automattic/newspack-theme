@@ -35,23 +35,11 @@
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
-				?>
 
-				<?php if ( ! is_active_sidebar( 'footer-1' ) && has_nav_menu( 'social' ) ) : ?>
-					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav><!-- .social-navigation -->
-				<?php endif; ?>
+				if ( ! is_active_sidebar( 'footer-1' ) ) {
+					newspack_social_menu();
+				}
+				?>
 			</div><!-- .wrapper -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
