@@ -1,7 +1,6 @@
 /** === Main menu === */
 
 .main-navigation {
-	flex-basis: 90%;
 	font-size: $font__size-xs;
 
 	> div {
@@ -466,5 +465,12 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+.header-center-logo {
+	.main-navigation {
+		flex-basis: 100%;
+		text-align: center;
 	}
 }

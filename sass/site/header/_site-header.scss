@@ -13,7 +13,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	padding: #{ 2 * $size__spacing-unit } 0;
 	position: relative;
 }
 
@@ -79,7 +78,10 @@
 // Middle bar
 .middle-header-contain {
 	align-items: center;
-	padding: $size__spacing-unit 0;
+
+	.wrapper {
+		padding: #{ 2 * $size__spacing-unit } 0;
+	}
 }
 
 // Bottom bar
@@ -156,11 +158,21 @@ body:not(.header-center-logo) {
 		background-color: #4a4a4a;
 		.wrapper {
 			border: 0;
+			padding: #{ 0.15 * $size__spacing-unit } 0;
 		}
 
 		.main-navigation .main-menu > li,
 		.main-navigation .main-menu > li > a {
 			color: #fff;
+		}
+	}
+}
+
+.header-center-logo.header-solid-background {
+	// Middle bar
+	.middle-header-contain {
+		.wrapper {
+			padding: #{ 3 * $size__spacing-unit } 0;
 		}
 	}
 }
