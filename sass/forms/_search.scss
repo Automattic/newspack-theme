@@ -8,17 +8,24 @@
 
 	button {
 		background-color: transparent;
-		bottom: 0;
+		bottom: 2px;
 		color: $color__text-main;
 		position: absolute;
 		margin: 0;
 		padding: 0 #{ 0.5 * $size__spacing-unit };
-		right: 0;
-		top: 0;
+		right: 2px;
+		top: 2px;
 
 		svg {
 			position: relative;
 			top: 2px;
 		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			color: $color__primary;
+		}
+
 	}
 }
