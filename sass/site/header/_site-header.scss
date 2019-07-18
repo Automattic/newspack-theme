@@ -176,3 +176,11 @@ body:not(.header-center-logo) {
 		}
 	}
 }
+
+// Search toggle
+
+#search-toggle {
+	background-color: transparent;
+	color: $color__text-main;
+	padding: #{ 0.25 * $size__spacing-unit };
+}

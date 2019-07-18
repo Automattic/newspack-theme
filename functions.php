@@ -257,6 +257,10 @@ function newspack_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( ! ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) ) {
+		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/amp-fallback.js' ), array(), '1.0', true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 

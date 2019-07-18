@@ -110,9 +110,19 @@
 						?>
 					</nav><!-- #site-navigation -->
 				<?php endif; ?>
+
+				<button id="search-toggle" on="tap:AMP.setState({visible: !visible})">
+					<?php echo wp_kses( newspack_get_icon_svg( 'search', 28 ), newspack_sanitize_svgs() ); ?>
+				</button>
 			</div><!-- .wrapper -->
 		</div><!-- .bottom-header-contain -->
 
 	</header><!-- #masthead -->
+
+	<div id="header-search" [class]="visible ? 'show' : 'hide'" class="hide">
+		<div class="wrapper">
+			<?php get_search_form(); ?>
+		</div><!-- .wrapper -->
+	</div><!-- #header-search -->
 
 	<div id="content" class="site-content">
