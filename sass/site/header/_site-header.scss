@@ -1,5 +1,4 @@
 // Site header
-
 .site-header {
 	margin: 0 0 $size__spacing-unit;
 
@@ -9,9 +8,7 @@
 }
 
 // Site branding
-
 .site-branding {
-	align-items: center;
 	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
@@ -20,7 +17,6 @@
 }
 
 // Site logo
-
 .custom-logo-link {
 	box-sizing: content-box;
 	line-height: 1;
@@ -40,7 +36,6 @@
 }
 
 // Site title
-
 .site-title {
 	color: $color__text-main;
 	font-weight: 700;
@@ -61,10 +56,8 @@
 }
 
 // Site description
-
 .site-description {
 	color: $color__text-light;
-	flex: 1 1 auto;
 	font-weight: normal;
 	font-size: $font__size-sm;
 	font-style: italic;
@@ -72,22 +65,26 @@
 }
 
 // Top bar
-
 .top-header-contain {
 	background-color: #4a4a4a;
 	color: #fff;
-	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
+
+	.wrapper > * {
+		padding-bottom: #{ 0.3 * $size__spacing-unit };
+		padding-top: #{ 0.3 * $size__spacing-unit };
+	}
 }
 
 // Middle bar
-
 .middle-header-contain {
 	align-items: center;
-	padding: $size__spacing-unit 0;
+
+	.wrapper {
+		padding: #{ 2 * $size__spacing-unit } 0;
+	}
 }
 
 // Bottom bar
-
 .bottom-header-contain {
 	.wrapper {
 		border-bottom: 1px solid #4a4a4a;
@@ -95,3 +92,87 @@
 	}
 }
 
+/**
+ * Header options.
+ */
+
+// Default
+
+body:not(.header-center-logo) {
+	.site-branding {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media(tablet) {
+			flex-basis: 60%;
+		}
+	}
+
+	.site-description {
+		flex: 1 1 auto;
+	}
+}
+
+// Centred Logo
+
+.header-center-logo {
+	.site-branding {
+		display: block;
+		flex-grow: 2;
+		text-align: center;
+	}
+
+	.social-navigation,
+	nav.tertiary-menu {
+		justify-content: center;
+		width: 100%;
+
+		@include media( tablet ) {
+			justify-content: space-between;
+			width: auto;
+		}
+	}
+}
+
+// Solid Background
+
+.header-solid-background {
+	.site-header {
+		background-color: $color__primary;
+		padding-bottom: 0;
+	}
+	.site-header,
+	.site-title a,
+	.site-title a:visited,
+	.site-description,
+	.middle-header-contain {
+		color: #fff;
+	}
+
+	.top-header-contain {
+		background-color: transparent;
+	}
+
+	.bottom-header-contain {
+		background-color: #4a4a4a;
+		.wrapper {
+			border: 0;
+			padding: #{ 0.15 * $size__spacing-unit } 0;
+		}
+
+		.main-navigation .main-menu > li,
+		.main-navigation .main-menu > li > a {
+			color: #fff;
+		}
+	}
+}
+
+.header-center-logo.header-solid-background {
+	// Middle bar
+	.middle-header-contain {
+		.wrapper {
+			padding: #{ 3 * $size__spacing-unit } 0;
+		}
+	}
+}
