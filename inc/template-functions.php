@@ -47,6 +47,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'header-center-logo';
 	}
 
+	$header_overlap = get_theme_mod( 'header_overlap', false );
+	if ( true === $header_overlap ) {
+		$classes[] = 'header-overlap';
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';

@@ -191,6 +191,17 @@ function newspack_custom_colors_css() {
 		';
 	}
 
+	if ( true === get_theme_mod( 'header_overlap', false ) ) {
+		$theme_css .= '
+			.header-overlap.header-solid-background .bottom-header-contain {
+				background-color: ' . $primary_color . ';
+			}
+			.header-overlap .site-content #primary {
+				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
+			}
+		';
+	}
+
 	$editor_css = '
 		/*
 		 * Set colors for:
