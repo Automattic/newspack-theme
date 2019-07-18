@@ -184,7 +184,7 @@ body:not(.header-center-logo) {
 			}
 
 			@include media(desktop) {
-				padding: #{ 2.5 * $size__spacing-unit } #{ 4 * $size__spacing-unit } 0;
+				padding: #{ 2 * $size__spacing-unit } #{ 4.5 * $size__spacing-unit } 0;
 			}
 		}
 	}
