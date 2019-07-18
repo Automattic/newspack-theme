@@ -150,6 +150,10 @@ body:not(.header-center-logo) {
 		}
 	}
 
+	.bottom-header-contain .wrapper {
+		border: 0;
+	}
+
 	&.header-solid-background .bottom-header-contain {
 		background-color: $color__primary;
 	}
@@ -180,8 +184,14 @@ body:not(.header-center-logo) {
 			}
 
 			@include media(desktop) {
-				padding: #{ 2 * $size__spacing-unit } #{ 4 * $size__spacing-unit } 0;
+				padding: #{ 2.5 * $size__spacing-unit } #{ 4 * $size__spacing-unit } 0;
 			}
+		}
+	}
+
+	&.newspack-front-page.hide-homepage-title {
+		.entry .entry-content > * {
+			margin-top: 0;
 		}
 	}
 }
