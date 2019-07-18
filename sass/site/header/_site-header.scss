@@ -180,7 +180,7 @@ body:not(.header-center-logo) {
 
 			@include media(tablet) {
 				border-top-width: 4px;
-				padding: #{ 0.5 * $size__spacing-unit } #{ 2.5 * $size__spacing-unit } 0;
+				padding: #{ 1 * $size__spacing-unit } #{ 3 * $size__spacing-unit } 0;
 			}
 
 			@include media(desktop) {
