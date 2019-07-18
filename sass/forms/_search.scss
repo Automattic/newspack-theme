@@ -1,0 +1,24 @@
+.search-form {
+	position: relative;
+
+	input {
+		padding-right: #{ 2.5 * $size__spacing-unit };
+		width: 100%;
+	}
+
+	button {
+		background-color: transparent;
+		bottom: 0;
+		color: $color__text-main;
+		position: absolute;
+		margin: 0;
+		padding: 0 #{ 0.5 * $size__spacing-unit };
+		right: 0;
+		top: 0;
+
+		svg {
+			position: relative;
+			top: 2px;
+		}
+	}
+}
