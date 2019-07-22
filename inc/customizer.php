@@ -152,6 +152,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option for simplified short header.
+	$wp_customize->add_setting(
+		'header_simplified',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_simplified',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Simplified', 'newspack' ),
+			'description' => esc_html__( 'Displays header as a shorter, simplier version.', 'newspack' ),
+			'section'     => 'title_tagline',
+		)
+	);
+
 	// Add option to hide page title on static front page.
 	$wp_customize->add_setting(
 		'hide_front_page_title',

@@ -52,6 +52,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'header-center-logo';
 	}
 
+	$header_simplified = get_theme_mod( 'header_simplified', false );
+	if ( true === $header_simplified ) {
+		$classes[] = 'header-simplified';
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';

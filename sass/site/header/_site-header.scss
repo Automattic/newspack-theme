@@ -219,3 +219,19 @@ body:not(.header-center-logo) {
 		}
 	}
 }
+
+// Simplified Header
+
+.header-simplified {
+	&,
+	&:not(.header-center-logo) {
+		.site-branding {
+			display: block;
+			flex-basis: auto;
+		}
+	}
+
+	.middle-header-contain .wrapper {
+		padding: #{ 0.5 * $size__spacing-unit } 0;
+	}
+}
