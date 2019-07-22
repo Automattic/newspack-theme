@@ -83,18 +83,3 @@
 	color: $color__text-light;
 	font-style: italic;
 }
-
-/* 404 & Not found */
-
-.error-404.not-found,
-.no-results.not-found {
-
-	.search-submit {
-		vertical-align: middle;
-		margin: $size__spacing-unit 0;
-	}
-
-	.search-field {
-		width: 100%;
-	}
-}

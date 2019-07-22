@@ -392,6 +392,36 @@ function newspack_typography_css_wrap() {
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
 
 /**
+ * Returns an array of 'acceptable' SVG tags to use with wp_kses().
+ */
+function newspack_sanitize_svgs() {
+	$svg_args = array(
+		'svg'   => array(
+			'class'           => true,
+			'aria-hidden'     => true,
+			'aria-labelledby' => true,
+			'role'            => true,
+			'xmlns'           => true,
+			'width'           => true,
+			'height'          => true,
+			'viewbox'         => true,
+		),
+		'g'     => array(
+			'fill' => true,
+		),
+		'title' => array(
+			'title' => true,
+		),
+		'path'  => array(
+			'd'    => true,
+			'fill' => true,
+		),
+	);
+
+	return $svg_args;
+}
+
+/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
