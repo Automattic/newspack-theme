@@ -103,6 +103,7 @@ function newspack_customize_register( $wp_customize ) {
 		'header_display_tagline',
 		array(
 			'default'           => true,
+			'transport'         => 'postMessage',
 			'sanitize_callback' => 'newspack_sanitize_checkbox',
 		)
 	);
