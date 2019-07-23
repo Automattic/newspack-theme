@@ -98,6 +98,23 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option to hide tagline.
+	$wp_customize->add_setting(
+		'header_display_tagline',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_display_tagline',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Display Tagline', 'newspack' ),
+			'section' => 'title_tagline',
+		)
+	);
+
 	// Header - add option to center logo.
 	$wp_customize->add_setting(
 		'header_center_logo',

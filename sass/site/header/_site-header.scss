@@ -64,6 +64,11 @@
 	margin: 7px 0 0;
 }
 
+.hide-site-tagline .site-description {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+}
+
 // Top bar
 .top-header-contain {
 	background-color: #4a4a4a;
