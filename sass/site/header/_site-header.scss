@@ -198,7 +198,8 @@ body:not(.header-center-logo) {
 		}
 
 		.main-navigation .main-menu > li,
-		.main-navigation .main-menu > li > a {
+		.main-navigation .main-menu > li > a,
+		#search-toggle {
 			color: #fff;
 		}
 	}
