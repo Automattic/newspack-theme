@@ -20,7 +20,7 @@ nav.tertiary-menu {
 	}
 
 	li {
-		display: inline;
+		display: inline-block;
 		margin: 0;
 		padding: 0;
 
@@ -43,7 +43,7 @@ nav.tertiary-menu {
 	}
 }
 
-body:not(.header-solid-background) {
+body:not(.header-solid-background):not(.header-simplified) {
 	nav.tertiary-menu {
 		a {
 			background-color: lighten($color__text-light, 45%);
@@ -67,6 +67,32 @@ body:not(.header-solid-background) {
 			&:hover {
 				background-color: $color__primary-variation;
 			}
+		}
+	}
+}
+
+.header-simplified {
+	nav.tertiary-menu {
+		font-size: $font__size_base;
+		margin-left: $size__spacing-unit;
+		li {
+			a {
+				font-size: $font__size-xs;
+				padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+			}
+
+			&:last-child a {
+				border: 1px solid currentColor;
+			}
+		}
+	}
+}
+
+.header-center-logo {
+	nav.tertiary-menu {
+		margin-left: 0;
+		@include media(tablet) {
+			text-align: center;
 		}
 	}
 }

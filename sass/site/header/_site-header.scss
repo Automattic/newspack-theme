@@ -5,11 +5,15 @@
 
 // Site branding
 .site-branding {
+	align-items: center;
 	color: $color__text-light;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	position: relative;
+	@include media(tablet) {
+		flex-basis: 60%;
+	}
 }
 
 // Site logo
@@ -55,6 +59,7 @@
 // Site description
 .site-description {
 	color: $color__text-light;
+	//flex: 1 1 auto;
 	font-weight: normal;
 	font-size: $font__size-sm;
 	font-style: italic;
@@ -138,24 +143,6 @@
  * Header options.
  */
 
-// Default
-
-body:not(.header-center-logo) {
-	.site-branding {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-
-		@include media(tablet) {
-			flex-basis: 60%;
-		}
-	}
-
-	.site-description {
-		flex: 1 1 auto;
-	}
-}
-
 // Centred Logo
 
 .header-center-logo {
@@ -188,7 +175,9 @@ body:not(.header-center-logo) {
 	.site-title a,
 	.site-title a:visited,
 	.site-description,
-	.middle-header-contain {
+	.middle-header-contain,
+	.main-navigation .main-menu > li,
+	.main-navigation .main-menu > li > a {
 		color: #fff;
 	}
 
@@ -209,9 +198,10 @@ body:not(.header-center-logo) {
 			color: #fff;
 		}
 	}
+
 }
 
-.header-center-logo.header-solid-background {
+.header-center-logo.header-solid-background:not(.header-simplified) {
 	// Middle bar
 	.middle-header-contain {
 		.wrapper {
@@ -223,15 +213,58 @@ body:not(.header-center-logo) {
 // Simplified Header
 
 .header-simplified {
-	&,
-	&:not(.header-center-logo) {
+	.site-header .wrapper {
+		justify-content: flex-start;
+	}
+
+	.site-branding {
+		display: flex;
+		flex-basis: auto;
+	}
+
+	// Site logo
+	.custom-logo-link .custom-logo {
+		max-height: 50px;
+	}
+
+	.site-branding {
+		flex-grow: 2;
+		margin-right: $size__spacing-unit;
+	}
+
+	.site-description {
+		margin: 0;
+	}
+
+	&.hide-site-tagline {
 		.site-branding {
-			display: block;
-			flex-basis: auto;
+			flex-grow: 0;
+		}
+		.main-navigation {
+			flex-grow: 2;
 		}
 	}
 
 	.middle-header-contain .wrapper {
+		align-items: center;
 		padding: #{ 0.5 * $size__spacing-unit } 0;
+	}
+
+	&.header-center-logo {
+
+		.wrapper > * {
+			flex: 1 0 0;
+			min-width: 33%;
+		}
+
+		.site-branding {
+			flex-wrap: wrap;
+		}
+
+		.custom-logo-link,
+		.site-title,
+		.site-description {
+			width: 100%;
+		}
 	}
 }

@@ -23,7 +23,12 @@
 
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
-		<?php if ( false === get_theme_mod( 'header_simplified', false ) ) : ?>
+		<?php
+			$header_simplified  = get_theme_mod( 'header_simplified', false );
+			$header_center_logo = get_theme_mod( 'header_center_logo', false );
+		?>
+
+		<?php if ( false === $header_simplified ) : ?>
 			<div class="top-header-contain">
 				<div class="wrapper">
 					<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
@@ -54,9 +59,24 @@
 					<?php newspack_social_menu(); ?>
 				<?php endif; ?>
 
+				<?php if ( has_nav_menu( 'tertiary-menu' ) && true === $header_center_logo && true === $header_simplified ) : ?>
+					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'tertiary-menu',
+								'menu_class'     => 'tertiary-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'          => 1,
+							)
+						);
+						?>
+					</nav>
+				<?php endif; ?>
+
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-				<?php if ( has_nav_menu( 'primary-menu' ) && true === get_theme_mod( 'header_simplified', false ) ) : ?>
+				<?php if ( has_nav_menu( 'primary-menu' ) && true === $header_simplified ) : ?>
 					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
 						<?php
 						wp_nav_menu(
@@ -70,7 +90,7 @@
 					</nav><!-- #site-navigation -->
 				<?php endif; ?>
 
-				<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+				<?php if ( has_nav_menu( 'tertiary-menu' ) && ! ( true === $header_center_logo && true === $header_simplified ) ) : ?>
 					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
 						<?php
 						wp_nav_menu(
@@ -87,8 +107,7 @@
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
 
-
-		<?php if ( false === get_theme_mod( 'header_simplified', false ) ) : ?>
+		<?php if ( false === $header_simplified ) : ?>
 			<div class="bottom-header-contain">
 				<div class="wrapper">
 					<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
