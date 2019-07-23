@@ -52,11 +52,11 @@
 
 	@include media(tablet) {
 		#main {
-			flex-basis: calc( 65% - #{$size__spacing-unit} );
+			max-width: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			flex-basis: calc( 35% - #{$size__spacing-unit} );
+			max-width: calc( 35% - #{$size__spacing-unit} );
 		}
 	}
 }
@@ -64,11 +64,11 @@
 .single-post {
 	@include media(tablet) {
 		.main-content {
-			flex-basis: calc( 65% - #{$size__spacing-unit} );
+			max-width: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			flex-basis: calc( 35% - #{$size__spacing-unit} );
+			max-width: calc( 35% - #{$size__spacing-unit} );
 		}
 	}
 }
