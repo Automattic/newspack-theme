@@ -89,7 +89,6 @@
 }
 
 // Search toggle
-
 #search-toggle {
 	background-color: transparent;
 	color: $color__text-main;
@@ -100,13 +99,17 @@
 	}
 }
 
-#header-search {
-	padding: $size__spacing-unit 0;
-	width: 100%;
-	z-index: 2;
+.header-search-contain {
+	position: relative;
 
-	.search-form {
-		width: 100%;
+	#header-search {
+		position: absolute;
+		top: calc( 100% + 2px );
+		width: 300px;
+
+		@include media (tablet) {
+			right: 0;
+		}
 	}
 }
 
@@ -207,10 +210,5 @@ body:not(.header-center-logo) {
 		.wrapper {
 			padding: #{ 3 * $size__spacing-unit } 0;
 		}
-	}
-
-	// Header search
-	#header-search {
-		background-color: #eee;
 	}
 }
