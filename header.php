@@ -21,7 +21,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search' : 'hide-header-search'">
 
 		<div class="top-header-contain">
 			<div class="wrapper">
@@ -111,18 +111,18 @@
 					</nav><!-- #site-navigation -->
 				<?php endif; ?>
 
-				<button id="search-toggle" on="tap:AMP.setState({visible: !visible})">
-					<?php echo wp_kses( newspack_get_icon_svg( 'search', 28 ), newspack_sanitize_svgs() ); ?>
+				<button id="search-toggle" on="tap:AMP.setState({searchVisible: !searchVisible})" aria-controls="search-menu" [aria-expanded]="searchVisible ? 'true' : 'false'" aria-expanded="false">
+					<span class="screen-reader-text" [text]="searchVisible ? '<?php esc_html_e( 'Close Search', 'newspack' ); ?>' : '<?php esc_html_e( 'Open Search', 'newspack' ); ?>'">
+						<?php esc_html_e( 'Open Search', 'newspack' ); ?>
+					</span>
+					<span class="search-icon"><?php echo wp_kses( newspack_get_icon_svg( 'search', 28 ), newspack_sanitize_svgs() ); ?></span>
+					<span class="close-icon"><?php echo wp_kses( newspack_get_icon_svg( 'close', 28 ), newspack_sanitize_svgs() ); ?></span>
 				</button>
 			</div><!-- .wrapper -->
 		</div><!-- .bottom-header-contain -->
 
-	</header><!-- #masthead -->
+		<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
 
-	<div id="header-search" [class]="visible ? 'show' : 'hide'" class="hide">
-		<div class="wrapper">
-			<?php get_search_form(); ?>
-		</div><!-- .wrapper -->
-	</div><!-- #header-search -->
+	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
