@@ -18,7 +18,6 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'tertiary-menu',
-					'menu_class'     => 'tertiary-menu',
 					'container'      => false,
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'depth'          => 1,
