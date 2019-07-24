@@ -1,49 +1,45 @@
 /* Social menu */
 
-.social-navigation {
+.social-links-menu {
 	align-items: center;
 	display: flex;
+	margin: 0;
+	padding: 0;
 
-	ul {
-		display: flex;
-		margin: 0;
-		padding: 0;
+	li {
+		list-style: none;
 
-		li {
-			list-style: none;
+		&:nth-child(n+2) {
+			margin-left: 0.5em;
+		}
 
-			&:nth-child(n+2) {
-				margin-left: 0.5em;
+		a {
+			border-bottom: 1px solid transparent;
+			display: block;
+			color: inherit;
+			margin-bottom: -1px;
+			transition: opacity $link_transition ease-in-out;
+
+			&:hover,
+			&:active {
+				opacity: 0.6;
 			}
 
-			a {
-				border-bottom: 1px solid transparent;
+			&:focus {
+				opacity: 1;
+				border-bottom: 1px solid $color__text-main;
+			}
+
+			svg {
 				display: block;
-				color: inherit;
-				margin-bottom: -1px;
-				transition: opacity $link_transition ease-in-out;
+				width: 24px;
+				height: 24px;
 
-				&:hover,
-				&:active {
-					opacity: 0.6;
-				}
+				// Prevent icons from jumping in Safari using hardware acceleration.
+				transform: translateZ(0);
 
-				&:focus {
-					opacity: 1;
-					border-bottom: 1px solid $color__text-main;
-				}
-
-				svg {
-					display: block;
-					width: 24px;
-					height: 24px;
-
-					// Prevent icons from jumping in Safari using hardware acceleration.
-					transform: translateZ(0);
-
-					&#ui-icon-link {
-						transform: rotate(-45deg);
-					}
+				&#ui-icon-link {
+					transform: rotate(-45deg);
 				}
 			}
 		}
