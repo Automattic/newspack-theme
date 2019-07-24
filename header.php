@@ -18,6 +18,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php get_template_part( 'template-parts/header/mobile', 'sidebar' ); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
@@ -77,6 +80,13 @@
 						);
 						?>
 					</nav>
+				<?php endif; ?>
+
+				<?php if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) : ?>
+					<button class="mobile-menu-toggle" on='tap:mobile-sidebar.toggle'>
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<?php esc_html_e( 'Menu', 'newspack' ); ?>
+					</button>
 				<?php endif; ?>
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
