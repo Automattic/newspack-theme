@@ -43,7 +43,7 @@
 	}
 }
 
-.page {
+body.page {
 	.entry-title {
 		font-size: $font__size-xl;
 		margin: 0;
@@ -57,11 +57,13 @@
 .cat-links {
 	display: block;
 	font-size: $font__size-xs;
-	margin: 0 0 $size__spacing-unit;
+	margin: 0 0 #{ 0.75 * $size__spacing-unit };
 
 	a {
 		background-color: $color__primary;
 		color: #fff;
+		display: inline-block;
+		margin: 0 0 #{ 0.25 * $size__spacing-unit };
 		padding: 0.5em 0.75em;
 		text-transform: uppercase;
 

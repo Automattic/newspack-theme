@@ -28,13 +28,22 @@
 	}
 }
 
-.archive {
+.archive,
+.search {
 	.page-header {
 		margin: 0 0 #{ $size__spacing-unit * 3 };
 	}
 
 	.page-description {
 		display: block;
+	}
+
+	.entry-header {
+		padding: 0;
+	}
+
+	.post-thumbnail {
+		margin: 0 0 #{ 0.5 * $size__spacing-unit };
 	}
 
 	@include media( tablet ) {
@@ -71,7 +80,7 @@
 	}
 }
 
-.page-title {
+.archive .page-title {
 	color: $color__primary;
 }
 
@@ -82,4 +91,13 @@
 .taxonomy-description {
 	color: $color__text-light;
 	font-style: italic;
+}
+
+.search {
+	.cat-links {
+		margin-bottom: 0;
+		a {
+			padding: 0.25em 0.5em;
+		}
+	}
 }
