@@ -1,6 +1,6 @@
 /** === Tertiary menu === */
 
-nav.tertiary-menu {
+.tertiary-menu {
 	align-items: center;
 	display: flex;
 	font-family: $font__heading;
@@ -44,7 +44,7 @@ nav.tertiary-menu {
 }
 
 body:not(.header-solid-background) {
-	nav.tertiary-menu {
+	.tertiary-menu {
 		a {
 			background-color: lighten($color__text-light, 45%);
 			color: $color__text-main;
