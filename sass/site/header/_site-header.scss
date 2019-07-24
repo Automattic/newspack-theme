@@ -55,10 +55,15 @@
 // Site description
 .site-description {
 	color: $color__text-light;
+	display: none;
 	font-weight: normal;
 	font-size: $font__size-sm;
 	font-style: italic;
 	margin: 7px 0 0;
+
+	@include media( mobile ) {
+		display: block;
+	}
 }
 
 .hide-site-tagline .site-description {
@@ -79,10 +84,12 @@
 
 // Middle bar
 .middle-header-contain {
-	align-items: center;
-
 	.wrapper {
-		padding: #{ 2 * $size__spacing-unit } 0;
+		align-items: center;
+		padding: $size__spacing-unit 0;
+		@include media( mobile ) {
+			padding: #{ 2 * $size__spacing-unit } 0;
+		}
 	}
 }
 
