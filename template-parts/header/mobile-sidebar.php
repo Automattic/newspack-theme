@@ -8,7 +8,7 @@
 
 <amp-sidebar id="mobile-sidebar" layout="nodisplay" side="right">
 
-	<button class="hamburger" on='tap:mobile-sidebar.toggle'>
+	<button class="mobile-menu-toggle" on='tap:mobile-sidebar.toggle'>
 		<?php esc_html_e( 'Close', 'newspack' ); ?>
 	</button>
 
