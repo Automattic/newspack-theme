@@ -94,21 +94,6 @@
 .entry-meta,
 .entry-footer {
 	color: $color__text-light;
-	font-weight: 500;
-
-	a {
-		@include link-transition;
-		color: inherit;
-
-		&:visited {
-			color: inherit;
-		}
-
-		&:hover {
-			text-decoration: none;
-			color: $color__primary-variation;
-		}
-	}
 }
 
 .entry-meta {
@@ -129,6 +114,7 @@
 }
 
 .entry-footer {
+	margin: $size__spacing-unit 0 #{ 3 * $size__spacing-unit };
 	> span {
 		margin-right: $size__spacing-unit;
 		display: inline-block;
@@ -140,6 +126,14 @@
 
 	a {
 		color: $color__primary;
+	}
+
+	.edit-link {
+		font-size: $font__size-sm;
+
+		svg {
+			margin: 0 #{ 0.25 * $size__spacing-unit } 0 0;
+		}
 	}
 }
 
@@ -323,6 +317,7 @@
 	}
 
 	h2 {
+		font-size: 1em;
 		span {
 			color: $color__text-light;
 			display: block;

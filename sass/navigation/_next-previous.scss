@@ -2,62 +2,20 @@
 
 // Singular navigation
 .post-navigation {
-
-	margin: calc(3 * 1rem) 0;
+	margin: #{ 3 * $size__spacing-unit } 0 #{ 2 * $size__spacing-unit };
 
 	.nav-links {
 		display: flex;
-		flex-direction: column;
-
-		@include media(desktop) {
-			flex-direction: row;
-		}
-
-		a {
-			.meta-nav {
-				color: $color__text-light;
-				user-select: none;
-			}
-
-			.post-title {
-				hyphens: auto;
-			}
-
-			&:hover {
-				color: $color__primary-variation;
-			}
-		}
+		flex-wrap: wrap;
+		justify-content: space-between;
 
 		.nav-previous,
 		.nav-next {
+			margin-bottom: $size__spacing-unit;
+			width: 100%;
 
-			@include media(desktop) {
-				min-width: calc(50% - 2 * #{$size__spacing-unit});
-			}
-		}
-
-		.nav-previous {
-			+ .nav-next {
-				margin-bottom: $size__spacing-unit;
-			}
-
-			.meta-nav {
-				&:before {
-					display: inline;
-				}
-			}
-		}
-
-		.nav-next {
-
-			@include media(desktop) {
-				padding-left: $size__spacing-unit;
-			}
-
-			.meta-nav {
-				&:after {
-					display: inline;
-				}
+			@include media(tablet) {
+				width: calc( 50% - #{ $size__spacing-unit } );
 			}
 		}
 	}
