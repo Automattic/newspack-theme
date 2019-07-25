@@ -41,6 +41,7 @@
 
 .archive,
 .blog,
+.search,
 .page:not(.newspack-front-page) {
 	&.has-sidebar #primary {
 		@include media(tablet) {

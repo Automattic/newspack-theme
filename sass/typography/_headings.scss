@@ -91,6 +91,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 .archive .entry-title,
+.search .entry-title,
 h3 {
 	font-size: $font__size-lg;
 }
@@ -143,8 +144,6 @@ h6 {
 
 .post-navigation .post-title,
 .entry-title,
-.not-found .page-title,
-.error-404 .page-title,
 .comments-title,
 blockquote {
 	hyphens: auto;

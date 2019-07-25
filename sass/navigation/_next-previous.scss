@@ -65,16 +65,27 @@
 
 // Index/archive navigation
 .pagination {
+	margin: #{ 3 * $size__spacing-unit } 0;
 
 	.nav-links {
-
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0 calc(.5 * #{$size__spacing-unit});
-
+		justify-content: center;
 
 		& > * {
-			padding: calc(.5 * #{$size__spacing-unit});
+			background-color: #eee;
+			margin-right: #{ 0.5 * $size__spacing-unit };
+			padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.dots,
+			&.next,
+			&.prev {
+				background-color: transparent;
+			}
 
 			&.dots,
 			&.prev {
@@ -84,6 +95,11 @@
 			&.dots,
 			&.next {
 				padding-right: 0;
+			}
+
+			&.current {
+				background-color: $color__text-light;
+				color: #fff;
 			}
 		}
 
@@ -108,22 +124,8 @@
 		}
 
 		@include media(tablet) {
-
 			margin-left: 0 auto;
 			padding: 0;
-
-			.prev,
-			.next {
-
-				& > * {
-					display: inline-block;
-					vertical-align: text-bottom;
-				}
-			}
-
-			& > * {
-				padding: $size__spacing-unit;
-			}
 		}
 	}
 }

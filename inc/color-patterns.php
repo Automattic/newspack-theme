@@ -25,7 +25,7 @@ function newspack_custom_colors_css() {
 		/* Set primary background color */
 
 		.main-navigation .sub-menu,
-		.sticky-post,
+		.cat-links a,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content > .has-primary-background-color,
@@ -99,7 +99,6 @@ function newspack_custom_colors_css() {
 
 		/* Set secondary color */
 
-		a, a:visited,
 		.entry .entry-content > .has-secondary-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-secondary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
@@ -117,6 +116,7 @@ function newspack_custom_colors_css() {
 		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
 		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
 		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
+		.cat-links a:hover,
 		.entry .entry-content > .has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,

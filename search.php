@@ -11,15 +11,16 @@ get_header();
 ?>
 
 	<section id="primary" class="content-area">
+
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'newspack' ); ?>
+					<?php esc_html_e( 'Search results', 'newspack' ); ?>
 				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
+				<?php get_search_form(); ?>
 			</header><!-- .page-header -->
 
 			<?php
@@ -47,6 +48,7 @@ get_header();
 		endif;
 		?>
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</section><!-- #primary -->
 
 <?php
