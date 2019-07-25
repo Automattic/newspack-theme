@@ -67,8 +67,13 @@ body.page {
 		padding: 0.5em 0.75em;
 		text-transform: uppercase;
 
+		&:visited {
+			color: #fff;
+		}
+
 		&:hover {
 			background-color: $color__primary-variation;
+			color: #fff;
 		}
 	}
 }
