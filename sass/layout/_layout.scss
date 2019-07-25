@@ -49,27 +49,29 @@
 			justify-content: space-between;
 		}
 	}
+}
 
+.archive #main,
+.blog #main,
+.page:not(.newspack-front-page) #main,
+.single-post .main-content {
 	@include media(tablet) {
-		#main {
-			max-width: calc( 65% - #{$size__spacing-unit} );
-		}
-
-		#secondary {
-			max-width: calc( 35% - #{$size__spacing-unit} );
-		}
+		max-width: calc( 65% - #{ 2 * $size__spacing-unit} );
+	}
+	@include media(desktop) {
+		max-width: calc( 65% - #{ 3 * $size__spacing-unit} );
 	}
 }
 
-.single-post {
+.archive #secondary,
+.blog #secondary,
+.page:not(.newspack-front-page) #secondary,
+.single-post #secondary {
 	@include media(tablet) {
-		.main-content {
-			max-width: calc( 65% - #{$size__spacing-unit} );
-		}
-
-		#secondary {
-			max-width: calc( 35% - #{$size__spacing-unit} );
-		}
+		max-width: calc( 35% - #{ 2 * $size__spacing-unit } );
+	}
+	@include media(desktop) {
+		max-width: calc( 35% - #{ 3 * $size__spacing-unit } );
 	}
 }
 
