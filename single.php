@@ -57,12 +57,13 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 						the_post_navigation(
 							array(
 								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next article:', 'newspack' ) . '</span><br/>' .
-									'<span class="post-title">%title</span>',
+								'<span class="post-title">%title</span>',
 								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous article:', 'newspack' ) . '</span><br/>' .
-									'<span class="post-title">%title</span>',
+								'<span class="post-title">%title</span>',
 							)
 						);
 					}
+
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {

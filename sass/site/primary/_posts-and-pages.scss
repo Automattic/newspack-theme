@@ -72,21 +72,27 @@
 }
 
 .tags-links {
+	& > * {
+		display: inline-block;
+		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
+	}
+
 	span {
 		font-weight: bold;
+		font-size: $font__size-sm;
+		margin-right: $size__spacing-unit;
 		text-transform: uppercase;
 	}
 
 	a {
 		background-color: #f1f1f1;
-		display: inline-block;
-		padding: 0.5em 0.75em;
+		font-size: $font__size-xs;
+		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 	}
 }
 
 .entry-meta,
 .entry-footer {
-
 	color: $color__text-light;
 	font-weight: 500;
 
