@@ -104,7 +104,7 @@
 
 	#header-search {
 		position: absolute;
-		top: calc( 100% + 2px );
+		top: calc( 100% + 4px );
 		width: 300px;
 
 		@include media (tablet) {

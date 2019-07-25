@@ -7,7 +7,7 @@
 ?>
 
 <div class="header-search-contain">
-	<button id="search-toggle" on="tap:AMP.setState({searchVisible: !searchVisible})" aria-controls="search-menu" [aria-expanded]="searchVisible ? 'true' : 'false'" aria-expanded="false">
+	<button id="search-toggle" on="tap:AMP.setState( { searchVisible: !searchVisible } )" aria-controls="search-menu" [aria-expanded]="searchVisible ? 'true' : 'false'" aria-expanded="false">
 		<span class="screen-reader-text" [text]="searchVisible ? '<?php esc_html_e( 'Close Search', 'newspack' ); ?>' : '<?php esc_html_e( 'Open Search', 'newspack' ); ?>'">
 			<?php esc_html_e( 'Open Search', 'newspack' ); ?>
 		</span>
