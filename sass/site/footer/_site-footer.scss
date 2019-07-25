@@ -30,7 +30,7 @@
 			width: 100%;
 
 			@include media( mobile ) {
-				flex: 1 0 0;
+				flex: 1 0 0px;
 				margin-right: $size__spacing-unit;
 				min-width: calc( 50% - #{ $size__spacing-unit } );
 			}
