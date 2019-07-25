@@ -56,10 +56,7 @@
 .page:not(.newspack-front-page) #main,
 .single-post .main-content {
 	@include media(tablet) {
-		max-width: calc( 65% - #{ 2 * $size__spacing-unit} );
-	}
-	@include media(desktop) {
-		max-width: calc( 65% - #{ 3 * $size__spacing-unit} );
+		max-width: 65%;
 	}
 }
 
@@ -73,10 +70,6 @@
 	@include media(desktop) {
 		max-width: calc( 35% - #{ 3 * $size__spacing-unit } );
 	}
-}
-
-.single .main-content {
-	@include postContentMaxWidth();
 }
 
 .hide {
