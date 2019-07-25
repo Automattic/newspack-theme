@@ -57,7 +57,6 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				'primary-menu'   => __( 'Primary Menu', 'newspack' ),
 				'secondary-menu' => __( 'Secondary Menu', 'newspack' ),
 				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
-				'footer'         => __( 'Footer Menu', 'newspack' ),
 				'social'         => __( 'Social Links Menu', 'newspack' ),
 			)
 		);
@@ -390,6 +389,31 @@ function newspack_typography_css_wrap() {
 
 }
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
+
+
+/**
+ * Display social links menu.
+ */
+function newspack_social_menu() {
+	if ( ! has_nav_menu( 'social' ) ) {
+		return;
+	}
+	?>
+	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'social',
+				'menu_class'     => 'social-links-menu',
+				'link_before'    => '<span class="screen-reader-text">',
+				'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
+				'depth'          => 1,
+			)
+		);
+		?>
+	</nav><!-- .social-navigation -->
+<?php
+}
 
 /**
  * Returns an array of 'acceptable' SVG tags to use with wp_kses().

@@ -1,8 +1,7 @@
 .widget {
-	color: $color__text-main;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
-	margin: 0 0 #{$size__spacing-unit * 2};
+	margin: 0 0 $size__spacing-unit;
 	word-wrap: break-word;
 
 	@include media( tablet ) {
@@ -42,9 +41,11 @@
 
 		li {
 			font-family: $font__heading;
+			margin-bottom: #{ 0.25 * $size__spacing-unit };
 
 			ul {
 				margin-left: 1.5em;
+				margin-top: #{ 0.5 * $size__spacing-unit };
 			}
 		}
 	}
@@ -53,7 +54,7 @@
 .widget_recent_comments,
 .widget_recent_entries {
 	li {
-		margin-bottom: 1em;
+		margin-bottom: #{ 0.5 * $size__spacing-unit };
 	}
 }
 

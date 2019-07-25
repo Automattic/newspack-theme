@@ -27,6 +27,7 @@
 		height: auto;
 		min-height: inherit;
 		max-height: 100px;
+		max-width: 200px;
 		width: auto;
 
 		@include media( tablet ) {

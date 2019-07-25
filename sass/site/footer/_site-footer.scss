@@ -1,33 +1,63 @@
 /* Site footer */
 
 #colophon {
+	margin: #{ 2 * $size__spacing-unit } 0 0;
 
-	.widget-area,
-	.site-info {
-		margin: calc(2 * #{$size__spacing-unit}) auto;
-		max-width: 90%;
-		width: $size__site-main;
+	a {
+		color: $color__text-light;
+	}
 
-		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) auto;
+	.footer-branding {
+		.wrapper {
+			border-top: 4px solid #ccc;
+			padding-top: $size__spacing-unit;
+		}
+
+		.custom-logo-link {
+			margin-bottom: $size__spacing-unit;
 		}
 	}
 
-	.widget-column {
-		display: flex;
-		flex-wrap: wrap;
+	.widget-area {
+		padding: $size__spacing-unit 0 #{ 2 * $size__spacing-unit };
+
+		.wrapper {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 
 		.widget {
 			width: 100%;
-			@include media(desktop) {
-				margin-right: calc(3 * #{$size__spacing-unit});
-				width: calc(33% - (3 * #{$size__spacing-unit}));
+
+			@include media( mobile ) {
+				flex: 1 0 0px;
+				margin-right: $size__spacing-unit;
+				min-width: calc( 50% - #{ $size__spacing-unit } );
 			}
+
+			@include media( tablet ) {
+				min-width: calc( 25% - #{ $size__spacing-unit } );
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.widget-title {
+			color: $color__text-light;
+			font-size: inherit;
 		}
 	}
 
 	.site-info {
 		color: $color__text-light;
+
+		.wrapper {
+			border-top: 1px solid #ccc;
+			justify-content: space-between;
+			padding: $size__spacing-unit 0;
+		}
 
 		a {
 			color: inherit;

@@ -8,15 +8,13 @@
 if ( is_active_sidebar( 'footer-1' ) ) : ?>
 
 	<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'newspack' ); ?>">
-		<?php
-		if ( is_active_sidebar( 'footer-1' ) ) {
+		<div class="wrapper">
+			<?php
+			if ( is_active_sidebar( 'footer-1' ) ) {
+				dynamic_sidebar( 'footer-1' );
+			}
 			?>
-					<div class="widget-column footer-widget-1">
-					<?php dynamic_sidebar( 'footer-1' ); ?>
-					</div>
-				<?php
-		}
-		?>
+		</div><!-- .wrapper -->
 	</aside><!-- .widget-area -->
 
 <?php endif; ?>
