@@ -76,3 +76,7 @@
 .single .main-content {
 	@include postContentMaxWidth();
 }
+
+.hide {
+	display: none;
+}

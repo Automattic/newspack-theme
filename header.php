@@ -21,7 +21,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
 		<div class="top-header-contain">
 			<div class="wrapper">
@@ -96,6 +96,8 @@
 						?>
 					</nav><!-- #site-navigation -->
 				<?php endif; ?>
+
+				<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
 			</div><!-- .wrapper -->
 		</div><!-- .bottom-header-contain -->
 
