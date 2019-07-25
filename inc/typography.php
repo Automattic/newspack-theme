@@ -13,7 +13,8 @@ function newspack_custom_typography_css() {
 	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack', 'serif' ) );
 	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack', 'serif' ) );
 
-	$css_blocks = array();
+	$css_blocks        = array();
+	$editor_css_blocks = array();
 
 	if ( get_theme_mod( 'font_header' ) ) {
 		$css_blocks[] = "
@@ -105,7 +106,65 @@ function newspack_custom_typography_css() {
 		{
 			font-family: $font_header;
 		}";
+
+		$editor_css_blocks[] = "
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		figcaption,
+		.gallery-caption,
+
+		/* Post Title */
+		.editor-post-title__block .editor-post-title__input
+		.entry-meta
+
+		/* Paragraph */
+		.wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+
+		/* Table Block */
+		.wp-block-table,
+
+		/* Cover Block */
+		.wp-block-cover h2,
+		.wp-block-cover .wp-block-cover-text,
+
+		/* Button Block */
+		.wp-block-button .wp-block-button__link,
+
+		/* Blockquote Block */
+		.wp-block-quote cite,
+		.wp-block-quote footer,
+		.wp-block-quote .wp-block-quote__citation,
+
+		/* Pullquote Block */
+		.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+		.wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
+		.wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
+
+		/* File Block */
+		.wp-block-file,
+
+		/* Widget blocks */
+		ul.wp-block-archives li,
+		.wp-block-categories li,
+		.wp-block-latest-posts li,
+
+		/* Latest Comments blocks */
+		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+
+		/* Classic Editor */
+		.wp-caption dd,
+		.wp-block-freeform blockquote cite
+
+		{
+			font-family: $font_header;
+		}
+		";
 	}
+
 	if ( get_theme_mod( 'font_body' ) ) {
 		$css_blocks[] = "
 		/* _typography.scss */
@@ -123,11 +182,26 @@ function newspack_custom_typography_css() {
 			font-family: $font_body;
 		}
 		";
+
+		$editor_css_blocks[] = "
+			body,
+			.editor-default-block-appender .editor-default-block-appender__content
+			{
+				font-family: $font_body;
+			}
+		";
 	}
+
 	if ( count( $css_blocks ) > 0 ) {
 		$theme_css = "<style type='text/css' id='custom-typography'>\n" . implode( '', $css_blocks ) . "\n</style>";
 	} else {
 		$theme_css = '';
+	}
+
+	if ( count( $editor_css_blocks ) > 0 ) {
+		$editor_css = "<style type='text/css' id='custom-typography'>\n" . implode( '', $css_blocks ) . "\n</style>";
+	} else {
+		$editor_css = '';
 	}
 
 	return $theme_css;
