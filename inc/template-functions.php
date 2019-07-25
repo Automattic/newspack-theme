@@ -36,6 +36,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hide-homepage-title';
 	}
 
+	$show_tagline = get_theme_mod( 'header_display_tagline', true );
+	if ( false === $show_tagline ) {
+		$classes[] = 'hide-site-tagline';
+	}
+
 	// Adds classes to reflect the header layout
 	$header_solid_background = get_theme_mod( 'header_solid_background', false );
 	if ( true === $header_solid_background ) {
