@@ -46,7 +46,7 @@
 						</nav>
 					<?php endif; ?>
 
-					<?php if ( has_nav_menu( 'social' ) && false === get_theme_mod( 'header_center_logo', false ) ) : ?>
+					<?php if ( has_nav_menu( 'social' ) && false === $header_center_logo ) : ?>
 						<?php newspack_social_menu(); ?>
 					<?php endif; ?>
 				</div><!-- .wrapper -->
@@ -55,7 +55,7 @@
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
-				<?php if ( has_nav_menu( 'social' ) && true === get_theme_mod( 'header_center_logo', false ) ) : ?>
+				<?php if ( has_nav_menu( 'social' ) && true === $header_center_logo && false === $header_simplified ) : ?>
 					<?php newspack_social_menu(); ?>
 				<?php endif; ?>
 
@@ -102,6 +102,9 @@
 							)
 						);
 						?>
+						<?php if ( true === $header_simplified ) : ?>
+							<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+						<?php endif; ?>
 					</nav>
 				<?php endif; ?>
 			</div><!-- .wrapper -->
