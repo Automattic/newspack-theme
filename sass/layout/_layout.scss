@@ -31,9 +31,11 @@
 
 .single {
 	&.has-sidebar #main {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		@include media( tablet ) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 }
 
@@ -41,18 +43,20 @@
 .blog,
 .page:not(.newspack-front-page) {
 	&.has-sidebar #primary {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		@include media(tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 
 	@include media(tablet) {
 		#main {
-			flex-basis: calc( 65% - #{$size__spacing-unit} );
+			max-width: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			flex-basis: calc( 35% - #{$size__spacing-unit} );
+			max-width: calc( 35% - #{$size__spacing-unit} );
 		}
 	}
 }
@@ -60,11 +64,11 @@
 .single-post {
 	@include media(tablet) {
 		.main-content {
-			flex-basis: 65%;
+			max-width: calc( 65% - #{$size__spacing-unit} );
 		}
 
 		#secondary {
-			flex-basis: 30%;
+			max-width: calc( 35% - #{$size__spacing-unit} );
 		}
 	}
 }
