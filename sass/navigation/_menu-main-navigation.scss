@@ -3,11 +3,6 @@
 .main-navigation {
 	font-size: $font__size-xs;
 
-	> div {
-		display: inline;
-	}
-
-
 	/* Un-style buttons */
 	button {
 		display: inline-block;
@@ -43,7 +38,9 @@
 	.main-menu {
 		display: inline-block;
 		margin: 0;
+		overflow: visible;
 		padding: 0;
+		width: 100%;
 
 		> li {
 			color: #555;
@@ -284,13 +281,6 @@
 		.sub-menu {
 			counter-reset: submenu;
 		}
-
-		.sub-menu > li > a::before {
-			font-family: $font__body;
-			font-weight: normal;
-			content: "\2013\00a0" counters(submenu, "\2013\00a0", none);
-			counter-increment: submenu
-		}
 	}
 
 	.main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu,
@@ -359,13 +349,6 @@
 		/* Nested sub-menu dashes */
 		.sub-menu {
 			counter-reset: submenu;
-		}
-
-		.sub-menu > li > a::before {
-			font-family: $font__body;
-			font-weight: normal;
-			content: "\2013\00a0" counters(submenu, "\2013\00a0", none);
-			counter-increment: submenu
 		}
 	}
 

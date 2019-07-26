@@ -18,23 +18,9 @@
 	}
 }
 
-.desktop-navigation {
-	display: none;
-}
-
-@include media( tablet ) {
-	.desktop-navigation {
-		display: block;
-
-		&.tertiary-menu {
-			display: flex;
-		}
-	}
-}
 
 #mobile-sidebar {
 	background-color: $color__primary;
-	font-size: $font__size-sm;
 	padding: $size__spacing-unit;
 
 	& > * {
@@ -58,6 +44,21 @@
 			font-weight: 400;
 			margin-left: $size__spacing-unit;
 		}
+	}
+
+	.main-menu,
+	.main-navigation .main-menu > li,
+	.main-navigation .main-menu > li.menu-item-has-children,
+	.secondary-menu,
+	.tertiary-menu,
+	.tertiary-menu li {
+		display: block;
+	}
+
+	.main-navigation .sub-menu {
+		left: auto;
+		opacity: 1;
+		position: relative;
 	}
 
 	a {
