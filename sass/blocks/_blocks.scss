@@ -363,13 +363,12 @@
 			font-family: $font__heading;
 			line-height: 1.6;
 			text-transform: none;
-			color: $color__text-light;
+			font-size: $font__size-xs;
 
-			/*
-			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font__size-xs.
-			 */
-			font-size: calc( 1rem * #{$font__size-xs} );
+			&:before {
+				content: "\2014";
+				margin-right: #{ 0.25 * $size__spacing-unit };
+			}
 		}
 
 		&.alignfull {
