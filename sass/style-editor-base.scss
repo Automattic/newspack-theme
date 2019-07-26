@@ -18,6 +18,24 @@ body {
 			max-width: 1230px;
 		}
 	}
+
+	.wp-block[data-align="left"] {
+		@include media( desktop ) {
+			left: #{-2 * $size__spacing-unit };
+		}
+		@include media( wide ) {
+			left: #{-4 * $size__spacing-unit };
+		}
+	}
+
+	.wp-block[data-align="right"] {
+		@include media( desktop ) {
+			right: #{-2 * $size__spacing-unit };
+		}
+		@include media( wide ) {
+			right: #{-4 * $size__spacing-unit };
+		}
+	}
 }
 
 /** === Content Width === */
@@ -405,10 +423,6 @@ figcaption,
 		margin: #{ 1.5 * $size__spacing-unit } 0;
 	}
 
-	&:not(.is-style-solid-color) .wp-block-pullquote__citation {
-		color: $color__text-light;
-	}
-
 	&.is-style-solid-color {
 
 		padding: $size__spacing-unit #{ 3 * $size__spacing-unit } #{ 1.25 * $size__spacing-unit };
@@ -455,6 +469,11 @@ figcaption,
 		font-size: $font__size-xs;
 		line-height: 1.6;
 		text-transform: none;
+
+		&:before {
+			content: "\2014";
+			margin-right: #{ 0.25 * $size__spacing-unit };
+		}
 	}
 
 	em {
