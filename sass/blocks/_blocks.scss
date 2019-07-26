@@ -43,6 +43,14 @@
 			/*rtl:ignore*/
 			margin-right: calc(2 * #{$size__spacing-unit});
 		}
+
+		@include media( tablet ) {
+			margin-left: #{ -4 * $size__spacing-unit }
+		}
+
+		@include media( desktop ) {
+			margin-left: #{ -6 * $size__spacing-unit }
+		}
 	}
 
 	&.alignright {
@@ -58,6 +66,14 @@
 			max-width: 50%;
 			/*rtl:ignore*/
 			margin-left: calc(2 * #{$size__spacing-unit});
+		}
+
+		@include media( tablet ) {
+			margin-right: #{ -4 * $size__spacing-unit }
+		}
+
+		@include media( desktop ) {
+			margin-right: #{ -6 * $size__spacing-unit }
 		}
 	}
 	&.aligncenter {
@@ -929,8 +945,22 @@
 .blog.has-sidebar {
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
+		&.alignleft {
+			margin-left: 0;
+
+			@include media(desktop) {
+				margin-left: #{ -2 * $size__spacing-unit };
+			}
+			@include media(wide) {
+				margin-left: #{ -4 * $size__spacing-unit };
+			}
+		}
+		&.alignright {
+			margin-right: 0;
+		}
 		&.alignwide {
 			@include media(tablet) {
+				margin-left: 0;
 				margin-right: 0;
 				max-width: 100%;
 			}
