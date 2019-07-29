@@ -176,20 +176,16 @@ figcaption,
 /** === Post Title === */
 
 .editor-post-title__block {
-
-	&:before {
-		width: $font__size-xxl;
-		margin-top: 0;
-		margin-bottom: 0;
-		margin-left: 1em;
-		position: relative;
-		top: 0.5em;
-	}
+	font-size: $font__size_base; // Set on the title so the font size variables math as expected.
 
 	.editor-post-title__input {
 		font-family: $font__heading;
 		font-size: $font__size-xxl;
 		font-weight: 700;
+
+		@include media(desktop) {
+			font-size: $font__size-xxxl;
+		}
 	}
 }
 

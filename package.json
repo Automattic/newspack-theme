@@ -36,7 +36,7 @@
     "prebuild:style": "node-sass sass/style.scss style.css --output-style expanded && postcss -r style.css",
     "prebuild:style-1": "node-sass sass/styles/style-1/style-1.scss styles/style-1.css --output-style expanded && postcss -r styles/style-1.css",
     "build:style-editor": "node-sass sass/style-editor.scss styles/style-editor.css --output-style expanded && postcss -r styles/style-editor.css",
-    "build:style-editor-static-front-page": "node-sass sass/style-editor-static-front-page.scss styles/style-editor-static-front-page.css --output-style expanded && postcss -r styles/style-editor-static-front-page.css",
+    "build:style-editor-overrides": "node-sass sass/style-editor-overrides.scss styles/style-editor-overrides.css --output-style expanded && postcss -r styles/style-editor-overrides.css",
     "build:style-editor-customizer": "node-sass sass/style-editor-customizer.scss styles/style-editor-customizer.css --output-style expanded && postcss -r styles/style-editor-customizer.css",
     "build:style-1-editor": "node-sass sass/styles/style-1/style-1-editor.scss styles/style-1-editor.css --output-style expanded && postcss -r styles/style-1-editor.css",
     "prebuild:style-woocommerce": "node-sass sass/plugins/woocommerce.scss styles/woocommerce.css --output-style expanded && postcss -r styles/woocommerce.css",
