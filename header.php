@@ -59,19 +59,24 @@
 					<?php newspack_social_menu(); ?>
 				<?php endif; ?>
 
-				<?php if ( has_nav_menu( 'tertiary-menu' ) && true === $header_center_logo && true === $header_simplified ) : ?>
-					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'tertiary-menu',
-								'menu_class'     => 'tertiary-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav>
+				<?php if ( true === $header_simplified && true === $header_center_logo ) : ?>
+
+					<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+						<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'tertiary-menu',
+									'menu_class'     => 'tertiary-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav>
+					<?php else : ?>
+						<div></div>
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
