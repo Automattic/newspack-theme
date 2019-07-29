@@ -54,6 +54,7 @@
 
 .archive #main,
 .blog #main,
+.search #main,
 .page:not(.newspack-front-page) #main,
 .single-post .main-content {
 	@include media(tablet) {
@@ -63,6 +64,7 @@
 
 .archive #secondary,
 .blog #secondary,
+.search #secondary,
 .page:not(.newspack-front-page) #secondary,
 .single-post #secondary {
 	@include media(tablet) {
