@@ -16,7 +16,6 @@ function newspack_jetpack_setup() {
 	add_theme_support(
 		'infinite-scroll',
 		array(
-			'type'      => 'click',
 			'container' => 'main',
 			'render'    => 'newspack_infinite_scroll_render',
 			'footer'    => 'page',
@@ -70,6 +69,18 @@ function newspack_infinite_scroll_render() {
 		get_template_part( 'template-parts/content/content' );
 	}
 }
+
+/**
+ * Toggle between click to load or scroll to load for infinite scroll.
+ */
+function newspack_toggle_infinite_scroll_type() {
+	if ( is_active_sidebar( 'footer-1' ) || ( ( jetpack_is_mobile( '', true ) && is_active_sidebar( 'sidebar-1' ) ) ) ) {
+		return true;
+	}
+	return false;
+}
+add_filter( 'infinite_scroll_has_footer_widgets', 'newspack_toggle_infinite_scroll_type' );
+
 
 /**
  * Remove Jetpack Share icons from standard location so they can be moved.
