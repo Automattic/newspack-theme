@@ -23,10 +23,22 @@
 	overflow: hidden;
 }
 
+#content {
+	margin-top: #{ 1.5 * $size__spacing-unit };
+
+	@include media( tablet ) {
+		margin-top: #{ 4 * $size__spacing-unit }
+	}
+}
+
 #primary {
 	margin: auto;
 	max-width: 90%;
 	width: $size__site-main;
+}
+
+#secondary {
+	margin-top: $size__spacing-unit;
 }
 
 .single {

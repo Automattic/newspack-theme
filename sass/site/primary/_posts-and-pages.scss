@@ -21,8 +21,6 @@
 }
 
 .entry-header {
-	margin: 0;
-	padding: 0 0 $size__spacing-unit;
 	position: relative;
 }
 
@@ -225,7 +223,7 @@ body.page {
 
 .single-post {
 	.entry-header {
-		margin: calc(3 * #{ $size__spacing-unit}) 0 0;
+		padding: 0 0 $size__spacing-unit;
 		width: 100%;
 	}
 
@@ -241,11 +239,6 @@ body.page {
 		@include media(desktop) {
 			font-size: $font__size-xxxxl;
 		}
-	}
-
-	.main-content,
-	#secondary {
-		margin-top: $size__spacing-unit;
 	}
 
 	&.post-template-single-feature {
@@ -290,11 +283,18 @@ body.page {
 	max-width: 100%;
 }
 
-/* Hide page title on the homepage */
+/* Static Front Page. */
 
-.newspack-front-page.hide-homepage-title {
-	.entry-header {
+.newspack-front-page {
+	&.hide-homepage-title .entry-header {
 		display: none;
+	}
+
+	#content {
+		margin-top: 0;
+		@include media(tablet) {
+			margin-top: #{ 0.5 * $size__spacing-unit };
+		}
 	}
 }
 
