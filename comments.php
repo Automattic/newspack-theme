@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 $discussion = newspack_get_discussion_data();
 ?>
 
-
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/styles/comments.css" type="text/css" media="all" />
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
 	<div class="<?php echo $discussion->responses > 0 ? 'comments-title-wrap' : 'comments-title-wrap no-responses'; ?>">
