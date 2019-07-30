@@ -29,6 +29,7 @@
 		width: 100vw;
 	}
 
+	&.wp-block-image .alignleft, // Gah image block, why are you marked up like this??
 	&.alignleft {
 		/*rtl:ignore*/
 		float: left;
@@ -53,6 +54,7 @@
 		}
 	}
 
+	&.wp-block-image .alignright,
 	&.alignright {
 		/*rtl:ignore*/
 		float: right;
@@ -540,6 +542,7 @@
 
 			@include media(tablet) {
 				margin: 0;
+				width: 100%;
 
 				img {
 					margin: 0 auto;
@@ -943,6 +946,7 @@
 .single.post-template-default.has-sidebar {
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
+		&.wp-block-image .alignleft,
 		&.alignleft {
 			margin-left: 0;
 
@@ -953,6 +957,7 @@
 				margin-left: #{ -4 * $size__spacing-unit };
 			}
 		}
+		&.wp-block-image .alignright,
 		&.alignright {
 			margin-right: 0;
 		}
