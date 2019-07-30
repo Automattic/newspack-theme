@@ -328,6 +328,15 @@ figcaption,
 	}
 }
 
+/** === Image === */
+
+.wp-block-image {
+	.block-editor-rich-text__editable {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: $size__spacing-unit;
+	}
+}
+
 /** === Gallery === */
 
 .wp-block-gallery {
