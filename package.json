@@ -35,6 +35,7 @@
   "scripts": {
     "prebuild:style": "node-sass sass/style.scss style.css --output-style expanded && postcss -r style.css",
     "prebuild:style-1": "node-sass sass/styles/style-1/style-1.scss styles/style-1.css --output-style expanded && postcss -r styles/style-1.css",
+    "build:comments": "node-sass sass/site/primary/_comments.scss styles/comments.css --output-style expanded && postcss -r styles/comments.css",
     "build:style-editor": "node-sass sass/style-editor.scss styles/style-editor.css --output-style expanded && postcss -r styles/style-editor.css",
     "build:style-editor-static-front-page": "node-sass sass/style-editor-static-front-page.scss styles/style-editor-static-front-page.css --output-style expanded && postcss -r styles/style-editor-static-front-page.css",
     "build:style-editor-customizer": "node-sass sass/style-editor-customizer.scss styles/style-editor-customizer.css --output-style expanded && postcss -r styles/style-editor-customizer.css",

@@ -22,6 +22,8 @@ if ( post_password_required() ) {
 $discussion = newspack_get_discussion_data();
 ?>
 
+
+
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
 	<div class="<?php echo $discussion->responses > 0 ? 'comments-title-wrap' : 'comments-title-wrap no-responses'; ?>">
 		<h2 class="comments-title">
