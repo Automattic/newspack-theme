@@ -1,4 +1,5 @@
 .archive,
+.blog,
 .search {
 	.page-header {
 		margin: 0 0 #{ $size__spacing-unit * 3 };
@@ -80,6 +81,7 @@
 	}
 }
 
+.blog,
 .search {
 	.cat-links {
 		margin-bottom: 0;

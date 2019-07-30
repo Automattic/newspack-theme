@@ -121,11 +121,6 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 			}
 		}
 
-		// Comment count.
-		if ( ! is_singular() ) {
-			newspack_comment_count();
-		}
-
 		// Edit post link.
 		edit_post_link(
 			sprintf(
