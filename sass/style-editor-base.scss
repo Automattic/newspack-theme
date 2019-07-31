@@ -332,7 +332,7 @@ figcaption,
 
 .wp-block-image {
 	.block-editor-rich-text__editable {
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid $color__border;
 		padding-bottom: $size__spacing-unit;
 		margin: auto;
 		max-width: 780px;
