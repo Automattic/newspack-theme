@@ -20,6 +20,7 @@ function newspack_jetpack_setup() {
 			'container' => 'main',
 			'render'    => 'newspack_infinite_scroll_render',
 			'footer'    => 'page',
+			'wrapper'   => false,
 		)
 	);
 
@@ -67,7 +68,11 @@ add_action( 'after_setup_theme', 'newspack_jetpack_setup' );
 function newspack_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content/content', 'excerpt' );
+		if ( is_archive() ) {
+			get_template_part( 'template-parts/content/content', 'archive' );
+		} else {
+			get_template_part( 'template-parts/content/content', 'excerpt' );
+		}
 	}
 }
 

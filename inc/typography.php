@@ -30,7 +30,6 @@ function newspack_custom_typography_css() {
 		.no-comments,
 		.not-found .page-title,
 		.error-404 .page-title,
-		.post-navigation .post-title,
 		.page-links,
 		.page-description,
 		.pagination .nav-links,

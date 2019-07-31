@@ -41,7 +41,6 @@ function newspack_custom_colors_css() {
 
 		.main-navigation .main-menu > li,
 		.main-navigation ul.main-menu > li > a,
-		.post-navigation .post-title,
 		.entry .entry-meta a:hover,
 		.entry .entry-footer a:hover,
 		.entry .entry-content .more-link:hover,
@@ -128,8 +127,6 @@ function newspack_custom_colors_css() {
 
 		.main-navigation .main-menu > li > a:hover,
 		.main-navigation .main-menu > li > a:hover + svg,
-		.post-navigation .nav-links a:hover,
-		.post-navigation .nav-links a:hover .post-title,
 		.author-bio .author-description .author-link:hover,
 		.entry .entry-content > .has-primary-variation-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-color,
