@@ -152,6 +152,20 @@
 		padding: 20px 30px;
 	}
 
+	//! Captions
+	.wp-block-audio figcaption,
+	.wp-block-video figcaption,
+	.wp-block-image figcaption,
+	.wp-block-gallery .blocks-gallery-image figcaption,
+	.wp-block-gallery .blocks-gallery-item figcaption {
+		font-family: $font__heading;
+		font-size: $font__size-xs;
+		line-height: $font__line-height-pre;
+		margin: 0;
+		padding: ( $size__spacing-unit * .5 );
+		text-align: center;
+	}
+
 	//! Audio
 	.wp-block-audio {
 
@@ -555,6 +569,8 @@
 
 		figcaption {
 			border-bottom: 1px solid #ccc;
+			margin: auto;
+			max-width: 780px;
 		}
 	}
 
@@ -630,20 +646,6 @@
 		figcaption a {
 			color: #fff;
 		}
-	}
-
-	//! Captions
-	.wp-block-audio figcaption,
-	.wp-block-video figcaption,
-	.wp-block-image figcaption,
-	.wp-block-gallery .blocks-gallery-image figcaption,
-	.wp-block-gallery .blocks-gallery-item figcaption {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
-		line-height: $font__line-height-pre;
-		margin: 0;
-		padding: ( $size__spacing-unit * .5 );
-		text-align: center;
 	}
 
 	//! Separator

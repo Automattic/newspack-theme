@@ -334,6 +334,8 @@ figcaption,
 	.block-editor-rich-text__editable {
 		border-bottom: 1px solid #ccc;
 		padding-bottom: $size__spacing-unit;
+		margin: auto;
+		max-width: 780px;
 	}
 }
 
