@@ -29,7 +29,9 @@
 		width: 100vw;
 	}
 
-	&.wp-block-image .alignleft, // Gah image block, why are you marked up like this??
+	// When the image block is aligned left or right, the markup changes,
+	// making a slighly different selector necessary.
+	&.wp-block-image .alignleft,
 	&.alignleft {
 		/*rtl:ignore*/
 		float: left;
@@ -938,13 +940,6 @@
 		&.wp-block-image .alignleft,
 		&.alignleft {
 			margin-left: 0;
-
-			@include media(desktop) {
-				margin-left: #{ -2 * $size__spacing-unit };
-			}
-			@include media(wide) {
-				margin-left: #{ -4 * $size__spacing-unit };
-			}
 		}
 		&.wp-block-image .alignright,
 		&.alignright {
