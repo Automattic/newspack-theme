@@ -71,7 +71,7 @@ function newspack_infinite_scroll_render() {
 		if ( is_archive() ) {
 			get_template_part( 'template-parts/content/content', 'archive' );
 		} else {
-			get_template_part( 'template-parts/content/content' );
+			get_template_part( 'template-parts/content/content', 'excerpt' );
 		}
 	}
 }
