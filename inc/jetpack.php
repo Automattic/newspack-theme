@@ -74,7 +74,10 @@ function newspack_infinite_scroll_render() {
  * Toggle between click to load or scroll to load for infinite scroll.
  */
 function newspack_toggle_infinite_scroll_type() {
-	if ( is_active_sidebar( 'footer-1' ) || ( ( jetpack_is_mobile( '', true ) && is_active_sidebar( 'sidebar-1' ) ) ) ) {
+	if ( is_active_sidebar( 'footer-1' ) ) {
+		return true;
+	}
+	if ( jetpack_is_mobile( '', true ) && is_active_sidebar( 'sidebar-1' ) ) {
 		return true;
 	}
 	return false;
