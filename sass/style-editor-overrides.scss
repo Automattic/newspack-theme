@@ -1,13 +1,15 @@
 /*!
-Newspack Theme Static Fron Page Editor Styles
-*/
+ * Newspack Theme Editor Overrides
+ *
+ * This CSS files contains Gutenberg editor styles that need to reference classes on the body tag.
+ */
 
 /** === Includes === */
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
-/** === Content Width === */
+/** === Static Front Page === */
 
 body.newspack-static-front-page {
 	.wp-block {
@@ -25,3 +27,19 @@ body.newspack-static-front-page {
 		}
 	}
 }
+
+/** === Single Posts === */
+
+body.post-type-post {
+	.editor-post-title__block {
+		max-width: 1200px;
+		.editor-post-title__input {
+			font-size: $font__size-xxxl;
+
+			@include media(desktop) {
+				font-size: $font__size-xxxxl;
+			}
+		}
+	}
+}
+

@@ -321,18 +321,17 @@ function newspack_is_static_front_page() {
  */
 function newspack_filter_admin_body_class( $classes ) {
 	return newspack_is_static_front_page() ? $classes . ' newspack-static-front-page' : $classes;
-};
+}
+add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
+
 
 /**
- * Add body class on editor pages if editing the static front page.
+ * Enqueue CSS styles for the editor that use the <body> tag.
  */
-function newspack_enqueue_editor_static_front_page_assets( $classes ) {
-	if ( newspack_is_static_front_page() ) {
-		wp_enqueue_style( 'newspack-editor-static-front-page-styles', get_theme_file_uri( '/styles/style-editor-static-front-page.css' ), false, '1.1', 'all' );
-	}
-};
-add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
-add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_static_front_page_assets' );
+function newspack_enqueue_editor_override_assets( $classes ) {
+		wp_enqueue_style( 'newspack-editor-overrides', get_theme_file_uri( '/styles/style-editor-overrides.css' ), false, '1.1', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_override_assets' );
 
 /**
  * Use front-page.php when Front page displays is set to a static page.
