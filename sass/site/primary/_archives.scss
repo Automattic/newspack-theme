@@ -3,6 +3,10 @@
 .search {
 	.page-header {
 		margin: 0 0 #{ $size__spacing-unit * 3 };
+
+		h1 {
+			margin-top: 0;
+		}
 	}
 
 	.page-description {
@@ -26,11 +30,6 @@
 		margin: 0 0 #{ 0.5 * $size__spacing-unit };
 	}
 
-	.entry-header {
-		padding: 0;
-	}
-
-	.entry-header,
 	.entry-content > p {
 		margin: 0;
 	}
