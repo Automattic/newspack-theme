@@ -705,6 +705,16 @@
 		td {
 			border-color: $color__text-light;
 		}
+
+		&.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&.alignfull {
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
+		}
 	}
 
 	//! File
@@ -967,6 +977,8 @@
 		&.alignfull {
 			margin-left: 0;
 			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
 			max-width: 100%;
 			width: 100%;
 
