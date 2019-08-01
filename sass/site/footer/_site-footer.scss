@@ -9,7 +9,7 @@
 
 	.footer-branding {
 		.wrapper {
-			border-top: 4px solid #ccc;
+			border-top: 4px solid $color__border;
 			padding-top: $size__spacing-unit;
 		}
 
@@ -54,7 +54,7 @@
 		color: $color__text-light;
 
 		.wrapper {
-			border-top: 1px solid #ccc;
+			border-top: 1px solid $color__border;
 			justify-content: space-between;
 			padding: $size__spacing-unit 0;
 		}

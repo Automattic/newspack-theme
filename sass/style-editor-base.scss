@@ -101,7 +101,7 @@ h6 {
 }
 
 .article-section-title {
-	border-bottom: 4px solid #ccc;
+	border-bottom: 4px solid $color__border;
 	color: $color__primary;
 	font-size: $font__size-sm;
 	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
