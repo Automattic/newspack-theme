@@ -29,6 +29,9 @@
 		width: 100vw;
 	}
 
+	// When the image block is aligned left or right, the markup changes,
+	// making a slighly different selector necessary.
+	&.wp-block-image .alignleft,
 	&.alignleft {
 		/*rtl:ignore*/
 		float: left;
@@ -37,22 +40,25 @@
 		margin-right: 0;
 		/*rtl:ignore*/
 		margin-right: $size__spacing-unit;
+		max-width: 50%;
 
 		@include media(mobile) {
-			max-width: 50%;
 			/*rtl:ignore*/
 			margin-right: calc(2 * #{$size__spacing-unit});
 		}
 
 		@include media( tablet ) {
+			/*rtl:ignore*/
 			margin-left: #{ -4 * $size__spacing-unit }
 		}
 
 		@include media( desktop ) {
+			/*rtl:ignore*/
 			margin-left: #{ -6 * $size__spacing-unit }
 		}
 	}
 
+	&.wp-block-image .alignright,
 	&.alignright {
 		/*rtl:ignore*/
 		float: right;
@@ -61,18 +67,20 @@
 		margin-right: 0;
 		/*rtl:ignore*/
 		margin-left: $size__spacing-unit;
+		max-width: 50%;
 
 		@include media(mobile) {
-			max-width: 50%;
 			/*rtl:ignore*/
 			margin-left: calc(2 * #{$size__spacing-unit});
 		}
 
 		@include media( tablet ) {
+			/*rtl:ignore*/
 			margin-right: #{ -4 * $size__spacing-unit }
 		}
 
 		@include media( desktop ) {
+			/*rtl:ignore*/
 			margin-right: #{ -6 * $size__spacing-unit }
 		}
 	}
@@ -146,6 +154,20 @@
 	//! Paragraphs
 	p.has-background {
 		padding: 20px 30px;
+	}
+
+	//! Captions
+	.wp-block-audio figcaption,
+	.wp-block-video figcaption,
+	.wp-block-image figcaption,
+	.wp-block-gallery .blocks-gallery-image figcaption,
+	.wp-block-gallery .blocks-gallery-item figcaption {
+		font-family: $font__heading;
+		font-size: $font__size-xs;
+		line-height: $font__line-height-pre;
+		margin: 0;
+		padding: ( $size__spacing-unit * .5 );
+		text-align: center;
 	}
 
 	//! Audio
@@ -537,21 +559,7 @@
 		}
 
 		.aligncenter {
-
-			@include media(tablet) {
-				margin: 0;
-
-				img {
-					margin: 0 auto;
-				}
-			}
-
-			@include media(desktop) {
-
-				img {
-					margin: 0 auto;
-				}
-			}
+			margin: 0 auto;
 		}
 
 		&.alignfull img {
@@ -561,6 +569,12 @@
 
 		&.alignwide {
 			max-width: 100vw;
+		}
+
+		figcaption {
+			border-bottom: 1px solid $color__border;
+			margin: auto;
+			max-width: 780px;
 		}
 	}
 
@@ -636,20 +650,6 @@
 		figcaption a {
 			color: #fff;
 		}
-	}
-
-	//! Captions
-	.wp-block-audio figcaption,
-	.wp-block-video figcaption,
-	.wp-block-image figcaption,
-	.wp-block-gallery .blocks-gallery-image figcaption,
-	.wp-block-gallery .blocks-gallery-item figcaption {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
-		line-height: $font__line-height-pre;
-		margin: 0;
-		padding: ( $size__spacing-unit * .5 );
-		text-align: center;
 	}
 
 	//! Separator
@@ -943,17 +943,14 @@
 .single.post-template-default.has-sidebar {
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
+		&.wp-block-image .alignleft,
 		&.alignleft {
+			/*rtl:ignore*/
 			margin-left: 0;
-
-			@include media(desktop) {
-				margin-left: #{ -2 * $size__spacing-unit };
-			}
-			@include media(wide) {
-				margin-left: #{ -4 * $size__spacing-unit };
-			}
 		}
+		&.wp-block-image .alignright,
 		&.alignright {
+			/*rtl:ignore*/
 			margin-right: 0;
 		}
 		&.alignwide {
