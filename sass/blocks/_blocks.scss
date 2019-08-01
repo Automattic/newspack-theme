@@ -13,22 +13,6 @@
 		margin-bottom: 0;
 	}
 
-	&.alignwide {
-		@include media( tablet ) {
-			margin-left: calc(25% - 25vw);
-			margin-right: calc(25% - 25vw);
-			max-width: 100vw;
-		}
-	}
-
-	&.alignfull {
-		margin-left: calc(50% - 50vw);
-		margin-right: calc(50% - 50vw);
-		max-width: 100vw;
-		position: relative;
-		width: 100vw;
-	}
-
 	// When the image block is aligned left or right, the markup changes,
 	// making a slighly different selector necessary.
 	&.wp-block-image .alignleft,
@@ -41,21 +25,6 @@
 		/*rtl:ignore*/
 		margin-right: $size__spacing-unit;
 		max-width: 50%;
-
-		@include media(mobile) {
-			/*rtl:ignore*/
-			margin-right: calc(2 * #{$size__spacing-unit});
-		}
-
-		@include media( tablet ) {
-			/*rtl:ignore*/
-			margin-left: #{ -4 * $size__spacing-unit }
-		}
-
-		@include media( desktop ) {
-			/*rtl:ignore*/
-			margin-left: #{ -6 * $size__spacing-unit }
-		}
 	}
 
 	&.wp-block-image .alignright,
@@ -68,22 +37,8 @@
 		/*rtl:ignore*/
 		margin-left: $size__spacing-unit;
 		max-width: 50%;
-
-		@include media(mobile) {
-			/*rtl:ignore*/
-			margin-left: calc(2 * #{$size__spacing-unit});
-		}
-
-		@include media( tablet ) {
-			/*rtl:ignore*/
-			margin-right: #{ -4 * $size__spacing-unit }
-		}
-
-		@include media( desktop ) {
-			/*rtl:ignore*/
-			margin-right: #{ -6 * $size__spacing-unit }
-		}
 	}
+
 	&.aligncenter {
 		margin-left: auto;
 		margin-right: auto;
@@ -408,11 +363,6 @@
 			}
 		}
 
-		&.alignfull {
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
-		}
-
 		&.alignleft,
 		&.alignright {
 			padding: 0;
@@ -562,15 +512,6 @@
 			margin: 0 auto;
 		}
 
-		&.alignfull img {
-			width: 100vw;
-			max-width: 100vw;
-		}
-
-		&.alignwide {
-			max-width: 100vw;
-		}
-
 		figcaption {
 			border-bottom: 1px solid $color__border;
 			margin: auto;
@@ -612,28 +553,6 @@
 			@include media(tablet) {
 				padding: $size__spacing-unit calc(2 * #{$size__spacing-unit});
 			}
-		}
-
-		&.alignfull {
-
-			.wp-block-cover-image-text,
-			.wp-block-cover-text,
-			h2 {
-				@include postContentMaxWidth();
-			}
-
-			@include media(tablet) {
-
-				.wp-block-cover-image-text,
-				.wp-block-cover-text,
-				h2 {
-					padding: 0;
-				}
-			}
-		}
-
-		&.alignwide {
-			width: auto;
 		}
 	}
 
@@ -710,11 +629,6 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-
-		&.alignfull {
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
-		}
 	}
 
 	//! File
@@ -768,12 +682,6 @@
 
 	//! Columns
 	.wp-block-columns {
-
-		&.alignfull {
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
-		}
-
 		@include media(mobile) {
 			flex-wrap: nowrap;
 		}
@@ -796,12 +704,6 @@
 				&:last-child {
 					margin-right: 0;
 				}
-			}
-
-			&.alignfull,
-			&.alignfull .wp-block-column {
-				padding-left: calc(2 * #{$size__spacing-unit});
-				padding-right: calc(2 * #{$size__spacing-unit});
 			}
 		}
 	}
@@ -950,42 +852,117 @@
 	}
 }
 
-.single.post-template-default.has-sidebar {
+//! 'Feature' alignments
+.post-template-single-feature {
 	.entry .entry-content > *,
 	.entry .entry-summary > * {
-		&.wp-block-image .alignleft,
-		&.alignleft {
-			/*rtl:ignore*/
-			margin-left: 0;
-		}
-		&.wp-block-image .alignright,
-		&.alignright {
-			/*rtl:ignore*/
-			margin-right: 0;
-		}
 		&.alignwide {
-			@include media(tablet) {
-				margin-left: 0;
-				margin-right: 0;
-				max-width: 100%;
+			@include media( tablet ) {
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
+				max-width: 100vw;
 			}
 		}
 
 		&.alignfull {
-			margin-left: 0;
-			margin-right: 0;
-			padding-left: 0;
-			padding-right: 0;
-			max-width: 100%;
-			width: 100%;
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
+			max-width: 100vw;
+			position: relative;
+			width: 100vw;
+		}
+
+		&.alignleft {
+			@include media(mobile) {
+				/*rtl:ignore*/
+				margin-right: calc(2 * #{$size__spacing-unit});
+			}
+
+			@include media( tablet ) {
+				/*rtl:ignore*/
+				margin-left: #{ -4 * $size__spacing-unit }
+			}
+
+			@include media( desktop ) {
+				/*rtl:ignore*/
+				margin-left: #{ -6 * $size__spacing-unit }
+			}
+		}
+
+		&.alignright {
+			@include media(mobile) {
+				/*rtl:ignore*/
+				margin-left: calc(2 * #{$size__spacing-unit});
+			}
+
+			@include media( tablet ) {
+				/*rtl:ignore*/
+				margin-right: #{ -4 * $size__spacing-unit }
+			}
+
+			@include media( desktop ) {
+				/*rtl:ignore*/
+				margin-right: #{ -6 * $size__spacing-unit }
+			}
+		}
+	}
+
+	//! Image Block
+	.wp-block-image {
+		&.alignfull img {
+			width: 100vw;
+			max-width: 100vw;
+		}
+
+		&.alignwide {
+			max-width: 100vw;
+		}
+	}
+
+	//! Cover Block
+	.wp-block-cover,
+	.wp-block-cover-image {
+		&.alignfull {
+
+			.wp-block-cover-image-text,
+			.wp-block-cover-text,
+			h2 {
+				@include postContentMaxWidth();
+			}
 
 			@include media(tablet) {
-				margin-left: 0;
-			}
 
-			&.wp-block-image img {
-				width: 100%;
+				.wp-block-cover-image-text,
+				.wp-block-cover-text,
+				h2 {
+					padding: 0;
+				}
 			}
+		}
+
+		&.alignwide {
+			width: auto;
+		}
+	}
+
+	//! Columns Block
+	.wp-block-columns {
+		@include media( tablet ) {
+			&.alignfull,
+			&.alignfull .wp-block-column {
+				padding-left: calc(2 * #{$size__spacing-unit});
+				padding-right: calc(2 * #{$size__spacing-unit});
+			}
+		}
+	}
+
+	//! Add padding to some fullalign blocks to prevent text cut-offs.
+	.wp-block-pullquote,
+	.wp-block-columns,
+	.wp-block-table {
+		&.alignfull {
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
 		}
 	}
 }
