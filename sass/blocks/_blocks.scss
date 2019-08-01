@@ -872,7 +872,8 @@
 			width: 100vw;
 		}
 
-		&.alignleft {
+		&.alignleft,
+		&.wp-block-image .alignleft {
 			@include media(mobile) {
 				/*rtl:ignore*/
 				margin-right: calc(2 * #{$size__spacing-unit});
@@ -889,7 +890,8 @@
 			}
 		}
 
-		&.alignright {
+		&.alignright,
+		&.wp-block-image .alignright {
 			@include media(mobile) {
 				/*rtl:ignore*/
 				margin-left: calc(2 * #{$size__spacing-unit});
