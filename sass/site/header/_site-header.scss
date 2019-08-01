@@ -102,7 +102,7 @@
 // Search toggle
 #search-toggle {
 	background-color: transparent;
-	color: $color__text-main;
+	color: inherit;
 	padding: #{ 0.25 * $size__spacing-unit } 0 0;
 
 	.search-icon {

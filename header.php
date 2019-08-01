@@ -91,6 +91,10 @@
 								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 							)
 						);
+
+						if ( true === $header_center_logo ) :
+							get_template_part( 'template-parts/header/header', 'search' );
+						endif;
 						?>
 					</nav><!-- #site-navigation -->
 				<?php endif; ?>

@@ -36,6 +36,10 @@ nav.tertiary-menu {
 		margin: #{$size__spacing-unit * 0.25} 0;
 		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.5};
 	}
+
+	#search-toggle {
+		margin-left: #{$size__spacing-unit * 0.5}
+	}
 }
 
 body:not(.header-solid-background):not(.header-simplified) {
