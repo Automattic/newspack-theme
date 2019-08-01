@@ -164,7 +164,7 @@ function newspack_customize_register( $wp_customize ) {
 		'header_simplified',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Simplify Header', 'newspack' ),
+			'label'       => esc_html__( 'Short Header', 'newspack' ),
 			'description' => esc_html__( 'Displays header as a shorter, simpler version.', 'newspack' ),
 			'section'     => 'title_tagline',
 		)
