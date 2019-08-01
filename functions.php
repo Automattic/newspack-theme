@@ -15,6 +15,15 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	return;
 }
 
+/**
+ * Determine whether it is an AMP response.
+ *
+ * @return bool Whether AMP.
+ */
+function newspack_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
 if ( ! function_exists( 'newspack_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -247,7 +256,7 @@ function newspack_scripts() {
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
-	if ( has_nav_menu( 'primary-menu' ) ) {
+	if ( has_nav_menu( 'primary-menu' ) && ! newspack_is_amp() ) {
 		wp_enqueue_script( 'newspack-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
 
@@ -262,7 +271,7 @@ function newspack_scripts() {
 		'close_search' => esc_html__( 'Close Search', 'newspack' ),
 	);
 
-	if ( ! function_exists( 'is_amp_endpoint' ) || ! is_amp_endpoint() ) {
+	if ( ! newspack_is_amp() ) {
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/amp-fallback.js' ), array(), '1.0', true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
@@ -279,7 +288,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
  */
 function newspack_skip_link_focus_fix() {
 	// Bail if this is an AMP page, because AMP already handles this bug.
-	if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) {
+	if ( newspack_is_amp() ) {
 		return;
 	}
 
