@@ -410,7 +410,7 @@ function newspack_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts">
-		<?php echo esc_html( newspack_custom_typography_css() ); ?>
+		<?php echo wp_kses( newspack_custom_typography_css(), '' ); ?>
 	</style>
 
 <?php
