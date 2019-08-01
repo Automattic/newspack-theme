@@ -173,7 +173,8 @@ function newspack_custom_typography_css() {
 		textarea,
 
 		/* _blocks.scss */
-		.wp-block-verse
+		.entry .entry-content .wp-block-verse,
+		.page-title
 		{
 			font-family: $font_body;
 		}
