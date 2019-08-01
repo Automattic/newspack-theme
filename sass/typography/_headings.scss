@@ -154,16 +154,6 @@ blockquote {
 	}
 }
 
-.accent-header,
-.article-section-title {
-	border-bottom: 4px solid #ccc;
-	color: $color__primary;
-	font-size: $font__size-sm;
-	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
-	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
-	text-transform: uppercase;
-}
-
 .page-header {
 	width: 100%;
 }
