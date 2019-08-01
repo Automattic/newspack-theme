@@ -324,6 +324,32 @@ figcaption,
 	}
 }
 
+/** === Image === */
+
+.wp-block-image {
+	.block-editor-rich-text__editable {
+		border-bottom: 1px solid $color__border;
+		padding-bottom: $size__spacing-unit;
+		margin: auto;
+		max-width: 780px;
+	}
+}
+
+.wp-block[data-type="core/image"][data-align="left"].wp-block .block-editor-block-list__block-edit,
+.wp-block[data-type="core/image"][data-align="right"].wp-block .block-editor-block-list__block-edit {
+	max-width: 50%;
+
+	.wp-block-image {
+		table-layout: fixed;
+		max-width: 100%;
+	}
+
+	.wp-block-image > div > div {
+		max-width: 100%;
+		width: 100% !important; // !important to override inline styles.
+	}
+}
+
 /** === Gallery === */
 
 .wp-block-gallery {
