@@ -28,10 +28,6 @@ nav.tertiary-menu {
 				margin: 0 0 0 #{$size__spacing-unit * 0.5};
 			}
 		}
-
-		&:last-child {
-			font-weight: 700;
-		}
 	}
 
 	a {
@@ -58,15 +54,6 @@ body:not(.header-solid-background):not(.header-simplified) {
 				color: #fff;
 			}
 		}
-
-		li:last-child a {
-			background-color: $color__primary;
-			color: #fff;
-
-			&:hover {
-				background-color: $color__primary-variation;
-			}
-		}
 	}
 }
 
@@ -78,10 +65,6 @@ body:not(.header-solid-background):not(.header-simplified) {
 			a {
 				font-size: $font__size-xs;
 				padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
-			}
-
-			&:last-child a {
-				border: 1px solid currentColor;
 			}
 		}
 	}
