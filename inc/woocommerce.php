@@ -80,6 +80,43 @@ add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 
  */
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
+/**
+ * Order details are at the top, so move the payment form to the bottom.
+ */
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment' );
+
+/**
+ * Disable order notes field because it's not useful for digital products.
+ */
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+/**
+ * Add heading above checkout account creation form.
+ */
+function newspack_woo_account_registration_heading() {
+	$checkout = WC_Checkout::instance();
+
+	if ( $checkout->get_checkout_fields( 'account' ) ) :
+		?>
+		<h3><?php echo esc_html__( 'Create an account', 'newspack' ); ?></h3>
+		<?php
+	endif;
+
+}
+add_action( 'woocommerce_before_checkout_registration_form', 'newspack_woo_account_registration_heading' );
+
+/**
+ * Remove sidebar on Checkout page to reduce distractions.
+ */
+function newspack_woo_remove_checkout_sidebar( $is_active ) {
+	if ( is_page( wc_get_page_id( 'checkout' ) ) ) {
+		return false;
+	}
+
+	return $is_active;
+}
+add_filter( 'is_active_sidebar', 'newspack_woo_remove_checkout_sidebar' );
 
 /**
  * Remove default WooCommerce wrapper.
