@@ -10,14 +10,14 @@
  */
 function newspack_custom_typography_css() {
 
-	$font_body   = newspack_font_stack( get_theme_mod( 'font_body' ), get_theme_mod( 'font_body_stack', 'serif' ) );
-	$font_header = newspack_font_stack( get_theme_mod( 'font_header' ), get_theme_mod( 'font_header_stack', 'serif' ) );
+	$font_body   = newspack_font_stack( get_theme_mod( 'font_body', '' ), get_theme_mod( 'font_body_stack', 'serif' ) );
+	$font_header = newspack_font_stack( get_theme_mod( 'font_header', '' ), get_theme_mod( 'font_header_stack', 'serif' ) );
 
-	$css_blocks        = array();
-	$editor_css_blocks = array();
+	$css_blocks        = '';
+	$editor_css_blocks = '';
 
-	if ( get_theme_mod( 'font_header' ) ) {
-		$css_blocks[] = "
+	if ( get_theme_mod( 'font_header', '' ) ) {
+		$css_blocks .= "
 		/* _headings.scss */
 		.author-description .author-link,
 		.comment-metadata,
@@ -107,57 +107,54 @@ function newspack_custom_typography_css() {
 			font-family: $font_header;
 		}";
 
-		$editor_css_blocks[] = "
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		figcaption,
-		.gallery-caption,
+
+		$editor_css_blocks .= "
+		.editor-block-list__layout .editor-block-list__block h1,
+		.editor-block-list__layout .editor-block-list__block h2,
+		.editor-block-list__layout .editor-block-list__block h3,
+		.editor-block-list__layout .editor-block-list__block h4,
+		.editor-block-list__layout .editor-block-list__block h5,
+		.editor-block-list__layout .editor-block-list__block h6,
+		.editor-block-list__layout .editor-block-list__block figcaption,
+		.editor-block-list__layout .editor-block-list__block .gallery-caption,
 
 		/* Post Title */
-		.editor-post-title__block .editor-post-title__input
-		.entry-meta
-
-		/* Paragraph */
-		.wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+		.editor-styles-wrapper .editor-post-title .editor-post-title__block .editor-post-title__input,
 
 		/* Table Block */
-		.wp-block-table,
+		.editor-block-list__layout .editor-block-list__block .wp-block-table,
 
 		/* Cover Block */
-		.wp-block-cover h2,
-		.wp-block-cover .wp-block-cover-text,
+		.editor-block-list__layout .editor-block-list__block .wp-block-cover h2,
+		.editor-block-list__layout .editor-block-list__block .wp-block-cover .wp-block-cover-text,
 
 		/* Button Block */
-		.wp-block-button .wp-block-button__link,
+		.editor-block-list__layout .editor-block-list__block .wp-block-button .wp-block-button__link,
 
 		/* Blockquote Block */
-		.wp-block-quote cite,
-		.wp-block-quote footer,
-		.wp-block-quote .wp-block-quote__citation,
+		.editor-block-list__layout .editor-block-list__block .wp-block-quote cite,
+		.editor-block-list__layout .editor-block-list__block .wp-block-quote footer,
+		.editor-block-list__layout .editor-block-list__block .wp-block-quote .wp-block-quote__citation,
 
 		/* Pullquote Block */
-		.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-		.wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
-		.wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
+		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
+		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
 
 		/* File Block */
-		.wp-block-file,
+		.editor-block-list__layout .editor-block-list__block .wp-block-file,
 
 		/* Widget blocks */
-		ul.wp-block-archives li,
-		.wp-block-categories li,
-		.wp-block-latest-posts li,
+		.editor-block-list__layout .editor-block-list__block ul.wp-block-archives li,
+		.editor-block-list__layout .editor-block-list__block .wp-block-categories li,
+		.editor-block-list__layout .editor-block-list__block .wp-block-latest-posts li,
 
 		/* Latest Comments blocks */
-		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+		.editor-block-list__layout .editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 
 		/* Classic Editor */
-		.wp-caption dd,
-		.wp-block-freeform blockquote cite
+		.editor-block-list__layout .editor-block-list__block .wp-caption dd,
+		.editor-block-list__layout .editor-block-list__block .wp-block-freeform blockquote cite
 
 		{
 			font-family: $font_header;
@@ -165,8 +162,8 @@ function newspack_custom_typography_css() {
 		";
 	}
 
-	if ( get_theme_mod( 'font_body' ) ) {
-		$css_blocks[] = "
+	if ( get_theme_mod( 'font_body', '' ) ) {
+		$css_blocks .= "
 		/* _typography.scss */
 		body,
 		button,
@@ -176,15 +173,14 @@ function newspack_custom_typography_css() {
 		textarea,
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-verse,
-		.page-title
+		.wp-block-verse
 		{
 			font-family: $font_body;
 		}
 		";
 
-		$editor_css_blocks[] = "
-			body,
+		$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block,
 			.editor-default-block-appender .editor-default-block-appender__content
 			{
 				font-family: $font_body;
@@ -192,16 +188,20 @@ function newspack_custom_typography_css() {
 		";
 	}
 
-	if ( count( $css_blocks ) > 0 ) {
-		$theme_css = "<style type='text/css' id='custom-typography'>\n" . implode( '', $css_blocks ) . "\n</style>";
+	if ( '' !== $css_blocks ) {
+		$theme_css = $css_blocks;
 	} else {
 		$theme_css = '';
 	}
 
-	if ( count( $editor_css_blocks ) > 0 ) {
-		$editor_css = "<style type='text/css' id='custom-typography'>\n" . implode( '', $css_blocks ) . "\n</style>";
+	if ( '' !== $editor_css_blocks ) {
+		$editor_css = $editor_css_blocks;
 	} else {
 		$editor_css = '';
+	}
+
+	if ( function_exists( 'register_block_type' ) && is_admin() ) {
+		$theme_css = $editor_css;
 	}
 
 	return $theme_css;
@@ -211,13 +211,11 @@ function newspack_custom_typography_css() {
  * Generate link elements for custom typography stylesheets.
  */
 function newspack_custom_typography_link( $theme_mod ) {
-
-	$font_code = get_theme_mod( $theme_mod );
-
-	if ( $font_code ) {
-		return "<link rel='stylesheet' href='" . esc_url( $font_code ) . "'>";
+	$font_code = get_theme_mod( $theme_mod, '' );
+	if ( ! $font_code ) {
+		return false;
 	}
-	return '';
+	return $font_code;
 }
 
 /**
