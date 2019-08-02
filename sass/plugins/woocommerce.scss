@@ -59,7 +59,7 @@ a.button {
 		.required {
 			color: firebrick;
 			text-decoration: none;
-			visibility: hidden; // Only show optional by default.
+			display: none; // Only show optional by default.
 
 			&[title] {
 				border: 0 !important;
@@ -137,7 +137,7 @@ a.button {
 .woocommerce-info {
 	margin-bottom: 1.5rem;
 	padding: 1rem;
-	background: #eee;
+	background: $color__background-pre;
 	font-size: 0.88889em;
 	font-family: $headings;
 	list-style: none;
@@ -145,7 +145,7 @@ a.button {
 }
 
 .woocommerce-message {
-	background: #eee;
+	background: $color__background-pre;
 	color: $body-color;
 }
 
@@ -213,6 +213,18 @@ a.button {
 
 		th {
 			text-align: left;
+		}
+	}
+
+	table.shop_table {
+		font-weight: bold;
+		font-size: $font__size-sm;
+
+		thead,
+		.recurring-totals {
+			th {
+				font-weight: normal;
+			}
 		}
 	}
 }
@@ -1100,6 +1112,26 @@ table.variations {
 }
 
 .woocommerce-checkout {
+	h3 {
+		font-size: $font__size-md;
+		margin-bottom: $size__spacing-unit;
+		margin-top: 2 * $size__spacing-unit;
+	}
+
+	.woocommerce-billing-fields,
+	.woocommerce-account-fields,
+	.woocommerce-shipping-fields {
+		label {
+			font-size: $font__size-sm;
+		}
+	}
+
+	.woocommerce-billing-fields {
+		h3 {
+			margin-bottom: 0;
+		}
+	}
+
 	.woocommerce-input-wrapper {
 		.description {
 			background: royalblue;
@@ -1158,6 +1190,8 @@ table.variations {
 }
 
 .woocommerce-checkout-review-order-table {
+	background: $color__background-pre;
+
 	td {
 		padding: 1rem 0.5rem;
 	}
@@ -1178,12 +1212,17 @@ table.variations {
 	}
 }
 
+.wc_payment_methods {
+	padding-left: 0;
+}
+
 .wc_payment_method {
 	list-style: none;
 
 	.payment_box {
 		padding: 1rem;
-		background: #eee;
+		background: $color__background-pre;
+		font-size: $font__size-sm;
 
 		ul,
 		ol {
@@ -1193,10 +1232,8 @@ table.variations {
 		}
 
 		fieldset {
-			padding: 1.5rem;
-			padding-bottom: 0;
+			padding: 0;
 			border: 0;
-			background: #f6f6f6;
 		}
 
 		li {
@@ -1264,6 +1301,15 @@ table.variations {
 	margin-bottom: 2rem;
 }
 
+.woocommerce-terms-and-conditions-wrapper {
+	font-size: $font__size-sm;
+	margin-bottom: 2 * $size__spacing-unit;
+
+	input[type='checkbox'] {
+		margin-right: .5 * $size__spacing-unit;
+	}
+}
+
 /**
  * Layout stuff
  */
@@ -1306,14 +1352,20 @@ table.variations {
 
 	.woocommerce-breadcrumb,
 	.woocommerce-product-gallery .woocommerce-product-gallery__wrapper,
-	.woocommerce-tabs ul,
-	.woocommerce-checkout {
+	.woocommerce-tabs ul {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
 
 	.woocommerce-product-gallery__trigger {
 		right: 1rem;
+	}
+
+	.wc_payment_method {
+		> label:first-of-type img {
+			float: none;
+			margin-left: .5 * $size__spacing-unit;
+		}
 	}
 }
 

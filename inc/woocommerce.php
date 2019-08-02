@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  * @return void
  */
 function newspack_woocommerce_scripts() {
-	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css' );
+	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
 	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
@@ -85,6 +85,16 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
  */
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment' );
+
+/**
+ * Add heading above payment info form.
+ */
+function newspack_woo_payment_heading() {
+	?>
+	<h3><?php echo esc_html__( 'Payment info', 'newspack' ); ?></h3>
+	<?php
+}
+add_action( 'woocommerce_review_order_before_payment', 'newspack_woo_payment_heading' );
 
 /**
  * Disable order notes field because it's not useful for digital products.
