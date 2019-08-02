@@ -42,25 +42,6 @@ nav.tertiary-menu {
 	}
 }
 
-body:not(.header-solid-background):not(.header-simplified) {
-	nav.tertiary-menu {
-		a {
-			background-color: lighten($color__text-light, 45%);
-			color: $color__text-main;
-			@include button-transition;
-			border-radius: 5px;
-			font-size: $font__size-sm;
-			font-weight: 700;
-			padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
-
-			&:hover {
-				background-color: $color__text-main;
-				color: #fff;
-			}
-		}
-	}
-}
-
 .header-simplified {
 	nav.tertiary-menu {
 		font-size: $font__size_base;
