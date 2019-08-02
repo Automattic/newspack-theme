@@ -23,48 +23,83 @@
 
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
-		<div class="top-header-contain">
-			<div class="wrapper">
-				<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
-					<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'secondary-menu',
-								'menu_class'     => 'secondary-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav>
-				<?php endif; ?>
+		<?php
+			$header_simplified  = get_theme_mod( 'header_simplified', false );
+			$header_center_logo = get_theme_mod( 'header_center_logo', false );
+		?>
 
-				<?php newspack_social_menu(); ?>
-			</div><!-- .wrapper -->
-		</div><!-- .top-header-contain -->
+		<?php if ( false === $header_simplified ) : ?>
+			<div class="top-header-contain">
+				<div class="wrapper">
+					<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
+						<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'secondary-menu',
+									'menu_class'     => 'secondary-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav>
+					<?php endif; ?>
+
+					<?php if ( has_nav_menu( 'social' ) && false === $header_center_logo ) : ?>
+						<?php newspack_social_menu(); ?>
+					<?php endif; ?>
+				</div><!-- .wrapper -->
+			</div><!-- .top-header-contain -->
+		<?php endif; ?>
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
-				<?php if ( has_nav_menu( 'social' ) && true === get_theme_mod( 'header_center_logo', false ) ) : ?>
-					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
-								'depth'          => 1,
-							)
-						);
-						?>
-					</nav><!-- .social-navigation -->
+				<?php if ( has_nav_menu( 'social' ) && true === $header_center_logo && false === $header_simplified ) : ?>
+					<?php newspack_social_menu(); ?>
+				<?php endif; ?>
+
+				<?php if ( true === $header_simplified && true === $header_center_logo ) : ?>
+
+					<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+						<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'tertiary-menu',
+									'menu_class'     => 'tertiary-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+							?>
+						</nav>
+					<?php else : ?>
+						<div></div>
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-				<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
+				<?php if ( has_nav_menu( 'primary-menu' ) && true === $header_simplified ) : ?>
+					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary-menu',
+								'menu_class'     => 'main-menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							)
+						);
+
+						if ( true === $header_center_logo ) :
+							get_template_part( 'template-parts/header/header', 'search' );
+						endif;
+						?>
+					</nav><!-- #site-navigation -->
+				<?php endif; ?>
+
+				<?php if ( has_nav_menu( 'tertiary-menu' ) && ! ( true === $header_center_logo && true === $header_simplified ) ) : ?>
 					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
 						<?php
 						wp_nav_menu(
@@ -76,30 +111,34 @@
 							)
 						);
 						?>
+						<?php if ( true === $header_simplified ) : ?>
+							<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+						<?php endif; ?>
 					</nav>
 				<?php endif; ?>
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
 
-		<div class="bottom-header-contain">
-			<div class="wrapper">
-				<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
-					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary-menu',
-								'menu_class'     => 'main-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							)
-						);
-						?>
-					</nav><!-- #site-navigation -->
-				<?php endif; ?>
-
-				<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
-			</div><!-- .wrapper -->
-		</div><!-- .bottom-header-contain -->
+		<?php if ( false === $header_simplified ) : ?>
+			<div class="bottom-header-contain">
+				<div class="wrapper">
+					<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
+						<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary-menu',
+									'menu_class'     => 'main-menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								)
+							);
+							?>
+						</nav><!-- #site-navigation -->
+					<?php endif; ?>
+					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+				</div><!-- .wrapper -->
+			</div><!-- .bottom-header-contain -->
+		<?php endif; ?>
 
 	</header><!-- #masthead -->
 

@@ -130,6 +130,11 @@ a {
 	}
 }
 
+table td,
+table th {
+	font-size: $font__size-sm;
+}
+
 // Use white text against these backgrounds by default.
 .has-primary-background-color,
 .has-primary-variation-background-color,
@@ -579,6 +584,7 @@ figcaption,
 
 .wp-block-verse,
 .wp-block-verse pre {
+	font-style: italic;
 	padding: 0;
 }
 
