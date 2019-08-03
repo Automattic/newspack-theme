@@ -218,7 +218,7 @@ a.button {
 
 	table.shop_table {
 		font-weight: bold;
-		font-size: $font__size-sm;
+		// font-size: $font__size-sm;
 
 		thead,
 		.recurring-totals {
@@ -1190,7 +1190,6 @@ table.variations {
 }
 
 .woocommerce-checkout-review-order-table {
-	background: $color__background-pre;
 
 	td {
 		padding: 1rem 0.5rem;
@@ -1202,6 +1201,29 @@ table.variations {
 		p {
 			margin: 0;
 		}
+	}
+
+	thead,
+	.recurring-totals {
+		th,
+		td {
+			background-color: $color__background-pre;
+			font-weight: bold;
+		}
+	}
+
+	.cart-subtotal,
+	.woocommerce-shipping-totals.shipping,
+	.shipping.recurring-total {
+		th,
+		td {
+			font-size: calc( $font__size-sm * 1rem );
+			font-weight: normal;
+		}
+	}
+
+	.cart-subtotal.recurring-total {
+		font-weight: bold;
 	}
 }
 
@@ -1379,7 +1401,7 @@ table.variations {
 		table.shop_attributes {
 			tbody {
 				tr {
-					font-size: 0.88889em;
+					// font-size: 0.88889em;
 				}
 			}
 		}
