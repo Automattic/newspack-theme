@@ -275,6 +275,15 @@ function newspack_scripts() {
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/amp-fallback.js' ), array(), '1.0', true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
+	// Load custom fonts, if any.
+	if ( get_theme_mod( 'custom_font_import_code', '' ) ) {
+		wp_enqueue_style( 'newspack-font-import', newspack_custom_typography_link( 'custom_font_import_code' ), array(), null );
+	}
+
+	if ( get_theme_mod( 'custom_font_import_code_alternate', '' ) ) {
+		wp_enqueue_style( 'newspack-font-alternative-import', newspack_custom_typography_link( 'custom_font_import_code_alternate' ), array(), null );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 
@@ -308,11 +317,31 @@ function newspack_editor_customizer_styles() {
 
 	wp_enqueue_style( 'newspack-editor-customizer-styles', get_theme_file_uri( '/styles/style-editor-customizer.css' ), false, '1.1', 'all' );
 
+	// Check for color or font customizations.
+	$theme_customizations = '';
 	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-		wp_add_inline_style( 'newspack-editor-customizer-styles', newspack_custom_colors_css() );
+		$theme_customizations .= newspack_custom_colors_css();
 	}
+
+	if ( get_theme_mod( 'font_body', '' ) || get_theme_mod( 'font_header', '' ) ) {
+		$theme_customizations .= newspack_custom_typography_css();
+	}
+
+	// If there are any, add those styles inline.
+	if ( $theme_customizations ) {
+		wp_add_inline_style( 'newspack-editor-customizer-styles', $theme_customizations );
+	}
+
+	// If custom fonts are assigned, enqueue them as well.
+	if ( get_theme_mod( 'custom_font_import_code', '' ) ) {
+		wp_enqueue_style( 'newspack-font-import', newspack_custom_typography_link( 'custom_font_import_code' ), array(), null );
+	}
+	if ( get_theme_mod( 'custom_font_import_code_alternate', '' ) ) {
+		wp_enqueue_style( 'newspack-font-alternative-import', newspack_custom_typography_link( 'custom_font_import_code_alternate' ), array(), null );
+	}
+
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' );
 
@@ -380,31 +409,20 @@ function newspack_colors_css_wrap() {
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
 
 /**
- * Display custom color CSS in customizer and on frontend.
+ * Display custom font CSS in customizer and on frontend.
  */
 function newspack_typography_css_wrap() {
 
-	if ( is_admin() ) {
+	if ( is_admin() || ( ! get_theme_mod( 'font_body', '' ) && ! get_theme_mod( 'font_header', '' ) ) ) {
 		return;
 	}
+	?>
 
-	require_once get_parent_theme_file_path( '/inc/typography.php' );
+	<style type="text/css" id="custom-theme-fonts">
+		<?php echo wp_kses( newspack_custom_typography_css(), '' ); ?>
+	</style>
 
-	$allowed_html = array(
-		'link'  => array(
-			'href' => true,
-			'rel'  => true,
-		),
-		'style' => array(
-			'type' => true,
-			'id'   => true,
-		),
-	);
-
-	echo wp_kses( newspack_custom_typography_link( 'custom_font_import_code' ), $allowed_html );
-	echo wp_kses( newspack_custom_typography_link( 'custom_font_import_code_alternate' ), $allowed_html );
-	echo wp_kses( newspack_custom_typography_css(), $allowed_html );
-
+<?php
 }
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
 
@@ -489,6 +507,10 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/color-filters.php';
 
+/**
+ * Custom typography functions.
+ */
+require get_template_directory() . '/inc/typography.php';
 
 /**
  * SVG Icons related functions.
