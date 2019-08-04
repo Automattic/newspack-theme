@@ -89,7 +89,8 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	 * Prints HTML with the current post's categories.
 	 */
 	function newspack_categories() {
-		$categories_list = get_the_category_list( ' ' );
+		/* translators: used between list items */
+		$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '</span> ' );
 		if ( $categories_list ) {
 			printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
