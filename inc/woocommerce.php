@@ -91,7 +91,7 @@ add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout
  */
 function newspack_woo_payment_heading() {
 	?>
-	<h3><?php echo esc_html__( 'Payment info', 'newspack' ); ?></h3>
+	<h3><?php esc_html_e( 'Payment info', 'newspack' ); ?></h3>
 	<?php
 }
 add_action( 'woocommerce_review_order_before_payment', 'newspack_woo_payment_heading' );
@@ -109,7 +109,7 @@ function newspack_woo_account_registration_heading() {
 
 	if ( $checkout->get_checkout_fields( 'account' ) ) :
 		?>
-		<h3><?php echo esc_html__( 'Create an account', 'newspack' ); ?></h3>
+		<h3><?php esc_html_e( 'Create an account', 'newspack' ); ?></h3>
 		<?php
 	endif;
 
