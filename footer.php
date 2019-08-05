@@ -11,6 +11,8 @@
 
 ?>
 
+	<?php do_action( 'before_footer' ); ?>
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">

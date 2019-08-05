@@ -18,6 +18,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php do_action( 'before_header' ); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
@@ -143,3 +146,5 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+	<?php do_action( 'after_header' ); ?>
