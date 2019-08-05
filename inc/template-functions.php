@@ -231,38 +231,6 @@ function newspack_get_discussion_data() {
 }
 
 /**
- * Add an extra menu to our nav for our priority+ navigation to use
- *
- * @param object $nav_menu  Nav menu.
- * @param object $args      Nav menu args.
- * @return string More link for hidden menu items.
- */
-function newspack_add_ellipses_to_nav( $nav_menu, $args ) {
-	if ( 'primary-menu' === $args->theme_location ) :
-		$nav_menu .= '<div class="main-menu-more">';
-		$nav_menu .= '<ul class="main-menu">';
-		$nav_menu .= '<li class="menu-item menu-item-has-children">';
-		$nav_menu .= '<button class="submenu-expand main-menu-more-toggle is-empty" tabindex="-1" aria-label="More" aria-haspopup="true" aria-expanded="false">';
-		$nav_menu .= '<span class="screen-reader-text">' . esc_html__( 'More', 'newspack' ) . '</span>';
-		$nav_menu .= newspack_get_icon_svg( 'arrow_drop_down_ellipsis' );
-		$nav_menu .= '</button>';
-		$nav_menu .= '<ul class="sub-menu hidden-links">';
-		$nav_menu .= '<li id="menu-item--1" class="mobile-parent-nav-menu-item menu-item--1">';
-		$nav_menu .= '<button class="menu-item-link-return">';
-		$nav_menu .= newspack_get_icon_svg( 'chevron_left' );
-		$nav_menu .= esc_html__( 'Back', 'newspack' );
-		$nav_menu .= '</button>';
-		$nav_menu .= '</li>';
-		$nav_menu .= '</ul>';
-		$nav_menu .= '</li>';
-		$nav_menu .= '</ul>';
-		$nav_menu .= '</div>';
-	endif;
-	return $nav_menu;
-}
-add_filter( 'wp_nav_menu', 'newspack_add_ellipses_to_nav', 10, 2 );
-
-/**
  * WCAG 2.0 Attributes for Dropdown Menus
  *
  * Adjustments to menu attributes tot support WCAG 2.0 recommendations
@@ -300,31 +268,7 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		return $output;
 	}
 
-	if ( in_array( 'mobile-parent-nav-menu-item', $item->classes, true ) && isset( $item->original_id ) ) {
-		// Inject the keyboard_arrow_left SVG inside the parent nav menu item, and let the item link to the parent item.
-		// @todo Only do this for nested submenus? If on a first-level submenu, then really the link could be "#" since the desire is to remove the target entirely.
-		$link = sprintf(
-			'<button class="menu-item-link-return" tabindex="-1">%s',
-			newspack_get_icon_svg( 'chevron_left', 24 )
-		);
-
-		// replace opening <a> with <button>
-		$output = preg_replace(
-			'/<a\s.*?>/',
-			$link,
-			$output,
-			1 // Limit.
-		);
-
-		// replace closing </a> with </button>
-		$output = preg_replace(
-			'#</a>#i',
-			'</button>',
-			$output,
-			1 // Limit.
-		);
-
-	} elseif ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
@@ -339,37 +283,6 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
 
-/**
- * Create a nav menu item to be displayed on mobile to navigate from submenu back to the parent.
- *
- * This duplicates each parent nav menu item and makes it the first child of itself.
- *
- * @param array  $sorted_menu_items Sorted nav menu items.
- * @param object $args              Nav menu args.
- * @return array Amended nav menu items.
- */
-function newspack_add_mobile_parent_nav_menu_items( $sorted_menu_items, $args ) {
-	static $pseudo_id = 0;
-	if ( ! isset( $args->theme_location ) || 'primary-menu' !== $args->theme_location ) {
-		return $sorted_menu_items;
-	}
-	$amended_menu_items = array();
-	foreach ( $sorted_menu_items as $nav_menu_item ) {
-		$amended_menu_items[] = $nav_menu_item;
-		if ( in_array( 'menu-item-has-children', $nav_menu_item->classes, true ) ) {
-			$parent_menu_item                   = clone $nav_menu_item;
-			$parent_menu_item->original_id      = $nav_menu_item->ID;
-			$parent_menu_item->ID               = --$pseudo_id;
-			$parent_menu_item->db_id            = $parent_menu_item->ID;
-			$parent_menu_item->object_id        = $parent_menu_item->ID;
-			$parent_menu_item->classes          = array( 'mobile-parent-nav-menu-item' );
-			$parent_menu_item->menu_item_parent = $nav_menu_item->ID;
-			$amended_menu_items[]               = $parent_menu_item;
-		}
-	}
-	return $amended_menu_items;
-}
-add_filter( 'wp_nav_menu_objects', 'newspack_add_mobile_parent_nav_menu_items', 10, 2 );
 
 /**
  * Adjust a hexidecimal colour value to lighten or darken it.

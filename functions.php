@@ -256,10 +256,6 @@ function newspack_scripts() {
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
-	if ( has_nav_menu( 'primary-menu' ) && ! newspack_is_amp() ) {
-		wp_enqueue_script( 'newspack-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
-	}
-
 	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
