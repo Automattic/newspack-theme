@@ -30,3 +30,41 @@ body:not(.header-solid-background):not(.header-simplified) {
 		}
 	}
 }
+
+/* Posts and pages */
+
+.cat-links {
+	a {
+		background-color: $color__primary;
+		color: #fff;
+		display: inline-block;
+		margin: 0 0 #{ 0.25 * $size__spacing-unit };
+		padding: 0.5em 0.75em;
+		text-transform: uppercase;
+
+		&:visited {
+			color: #fff;
+		}
+
+		&:hover {
+			background-color: $color__primary-variation;
+			color: #fff;
+		}
+	}
+
+	.sep {
+		display: none;
+	}
+}
+
+/* Archives */
+
+.blog,
+.search {
+	.cat-links {
+		margin-bottom: 0;
+		a {
+			padding: 0.25em 0.5em;
+		}
+	}
+}
