@@ -66,8 +66,6 @@
 			}
 
 			&.menu-item-has-children {
-
-				display: inline-block;
 				position: inherit;
 
 				@include media(tablet) {
