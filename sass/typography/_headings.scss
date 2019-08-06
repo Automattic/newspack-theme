@@ -8,6 +8,8 @@
 .entry-footer,
 .author-bio .author-link,
 .main-navigation,
+.secondary-menu,
+.tertiary-menu,
 .no-comments,
 .not-found .page-title,
 .error-404 .page-title,
@@ -19,6 +21,7 @@
 .site-info,
 #cancel-comment-reply-link,
 .use-header-font,
+#mobile-sidebar,
 h1,
 h2,
 h3,
@@ -107,13 +110,11 @@ h4 {
 	font-size: $font__size-md;
 }
 
-.page-title,
-.main-navigation {
+.page-title {
 	font-size: $font__size_base;
 }
 
 .entry-meta,
-.main-navigation,
 .pagination .nav-links,
 .comment-content,
 h5 {

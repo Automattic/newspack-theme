@@ -1,27 +1,39 @@
 /** === Tertiary menu === */
 
-nav.tertiary-menu {
+.tertiary-menu {
 	align-items: center;
 	display: flex;
-	font-family: $font__heading;
-	font-size: $font__size-sm;
 	list-style: none;
 	padding: 0;
 
-	@include media(tablet) {
-		padding: 0;
-		text-align: right;
-	}
-
-	ul {
+	ul,
+	li {
+		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	a {
+		color: inherit;
+		display: inline-block;
+	}
+
+	#search-toggle {
+		margin-left: #{$size__spacing-unit * 0.5}
+	}
+}
+
+
+// Styles for when menu items appear in the site-header.
+.site-header .tertiary-menu {
+	font-size: $font__size-sm;
+
+	@include media( tablet ) {
+		text-align: right;
 	}
 
 	li {
 		display: inline-block;
-		margin: 0;
-		padding: 0;
 
 		@include media(tablet) {
 			&:nth-child(n+2) {
@@ -31,19 +43,12 @@ nav.tertiary-menu {
 	}
 
 	a {
-		color: inherit;
-		display: inline-block;
 		margin: #{$size__spacing-unit * 0.25} 0;
 		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.5};
 	}
 
-	#search-toggle {
-		margin-left: #{$size__spacing-unit * 0.5}
-	}
-}
-
-.header-simplified {
-	nav.tertiary-menu {
+	// Short header
+	.header-simplified & {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
 		li {
@@ -53,10 +58,9 @@ nav.tertiary-menu {
 			}
 		}
 	}
-}
 
-.header-center-logo {
-	nav.tertiary-menu {
+	// Centered logo.
+	.header-center-logo & {
 		margin-left: 0;
 		@include media(tablet) {
 			text-align: center;
