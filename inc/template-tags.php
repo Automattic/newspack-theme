@@ -215,3 +215,117 @@ if ( ! function_exists( 'newspack_the_posts_navigation' ) ) :
 		);
 	}
 endif;
+
+/**
+ * Displays primary menu; created a function to reduce duplication.
+ */
+function newspack_primary_menu() {
+	if ( ! has_nav_menu( 'primary-menu' ) ) {
+		return;
+	}
+	?>
+	<nav toolbar="(min-width: 767px)" toolbar-target="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary-menu',
+				'menu_class'     => 'main-menu',
+				'container'      => false,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			)
+		);
+		?>
+	</nav>
+<?php
+}
+
+/**
+ * Displays secondary menu; created a function to reduce duplication.
+ */
+function newspack_secondary_menu() {
+	if ( ! has_nav_menu( 'secondary-menu' ) ) {
+		return;
+	}
+	?>
+	<nav toolbar="(min-width: 767px)" toolbar-target="secondary-nav-contain" class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'secondary-menu',
+				'menu_class'     => 'secondary-menu',
+				'container'      => false,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'          => 1,
+			)
+		);
+		?>
+	</nav>
+<?php
+}
+
+/**
+ * Displays tertiary menu; created a function to reduce duplication.
+ */
+function newspack_tertiary_menu() {
+	if ( ! has_nav_menu( 'tertiary-menu' ) ) {
+		return;
+	}
+	?>
+		<nav toolbar="(min-width: 767px)" toolbar-target="tertiary-nav-contain" class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'tertiary-menu',
+					'container'      => false,
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth'          => 1,
+				)
+			);
+			?>
+		</nav>
+<?php
+}
+
+/**
+ * Displays social links menu; create a function for the wp_nav_menu settings to reduce duplication.
+ */
+function newspack_social_menu_settings() {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'social',
+			'menu_class'     => 'social-links-menu',
+			'container'      => false,
+			'link_before'    => '<span class="screen-reader-text">',
+			'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
+			'depth'          => 1,
+		)
+	);
+}
+
+/**
+ * Displays social links menu for the header; includes AMP toolbar and toolbar-target attributes.
+ */
+function newspack_social_menu_header() {
+	if ( ! has_nav_menu( 'social' ) ) {
+		return;
+	}
+	?>
+	<nav toolbar="(min-width: 767px)" toolbar-target="social-nav-contain" class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+		<?php newspack_social_menu_settings(); ?>
+	</nav><!-- .social-navigation -->
+<?php
+}
+
+/**
+ * Displays social links menu for the footer; without AMP-related attributes, to prevent duplication errors.
+ */
+function newspack_social_menu_footer() {
+	if ( ! has_nav_menu( 'social' ) ) {
+		return;
+	}
+	?>
+	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+		<?php newspack_social_menu_settings(); ?>
+	</nav><!-- .social-navigation -->
+<?php
+}
