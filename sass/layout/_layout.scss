@@ -70,7 +70,7 @@
 .page:not(.newspack-front-page) #main,
 .single-post .main-content {
 	@include media(tablet) {
-		max-width: 65%;
+		width: 65%;
 	}
 }
 
@@ -80,10 +80,10 @@
 .page:not(.newspack-front-page) #secondary,
 .single-post #secondary {
 	@include media(tablet) {
-		max-width: calc( 35% - #{ 2 * $size__spacing-unit } );
+		width: calc( 35% - #{ 2 * $size__spacing-unit } );
 	}
 	@include media(desktop) {
-		max-width: calc( 35% - #{ 3 * $size__spacing-unit } );
+		width: calc( 35% - #{ 3 * $size__spacing-unit } );
 	}
 }
 
