@@ -21,6 +21,6 @@
 
 	<?php newspack_secondary_menu(); ?>
 
-	<?php newspack_social_menu(); ?>
+	<?php newspack_social_menu_header(); ?>
 
 </amp-sidebar>
