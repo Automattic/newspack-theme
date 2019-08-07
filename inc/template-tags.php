@@ -89,8 +89,8 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	 * Prints HTML with the current post's categories.
 	 */
 	function newspack_categories() {
-		/* translators: used between list items */
-		$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '</span> ' );
+		/* translators: used between list items; followed by a space. */
+		$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
 		if ( $categories_list ) {
 			printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
@@ -110,8 +110,8 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-
-			$tags_list = get_the_tag_list( '', ' ' );
+			/* translators: used between list items; followed by a space. */
+			$tags_list = get_the_tag_list( '', '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
 			if ( $tags_list ) {
 				printf(
 					/* translators: 1: posted in label, only visible to screen readers. 2: list of tags. */
