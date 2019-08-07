@@ -7,16 +7,23 @@ Newspack Theme Editor Styles - Style Pack 1
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
-.wp-block-newspack-blocks-homepage-articles {
+.accent-header,
+.article-section-title {
+	color: #666;
+	font-family: $font__heading;
+	text-transform: uppercase;
 
-	&:not(.is-grid) {
-		article:not(:last-of-type) {
-			border-bottom: 2px solid darken( $color__background-body, 5% );
-			padding-bottom: 1em;
-		}
+	&:before {
+		background-color: $color__primary;
+		content: "";
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 0.5em 0 0;
+		width: 0.75em;
 	}
 }
 
 .entry-meta .byline a {
 	color: $color__text-light;
 }
+
