@@ -105,18 +105,23 @@
 				// Short header:
 				if ( true === $header_simplified ) :
 				?>
-					<div id="site-navigation">
-						<?php
-						if ( ! newspack_is_amp() ) {
-							newspack_primary_menu();
-						}
+					<div class="nav-wrapper">
+						<div id="site-navigation">
+							<?php
+							if ( ! newspack_is_amp() ) {
+								newspack_primary_menu();
+							}
+							?>
+						</div><!-- #site-navigation -->
 
+						<?php
 						// Centered logo:
 						if ( true === $header_center_logo ) {
 							get_template_part( 'template-parts/header/header', 'search' );
 						}
 						?>
-					</div>
+					</div><!-- .nav-wrapper -->
+
 				<?php endif; ?>
 
 
@@ -124,18 +129,22 @@
 				// Logo NOT centered and header NOT short:
 				if ( ! ( true === $header_center_logo && true === $header_simplified ) ) :
 				?>
-					<div id="tertiary-nav-contain">
-						<?php
-						if ( ! newspack_is_amp() ) {
-							newspack_tertiary_menu();
-						}
+					<div class="nav-wrapper">
+						<div id="tertiary-nav-contain">
+							<?php
+							if ( ! newspack_is_amp() ) {
+								newspack_tertiary_menu();
+							}
+							?>
+						</div><!-- #tertiary-nav-contain -->
 
+						<?php
 						// Header simplified:
 						if ( true === $header_simplified ) {
 							get_template_part( 'template-parts/header/header', 'search' );
 						}
 						?>
-					</div>
+					</div><!-- .nav-wrapper -->
 				<?php endif; ?>
 
 				<?php if ( newspack_is_amp() ) : ?>
@@ -155,7 +164,6 @@
 		?>
 			<div class="bottom-header-contain">
 				<div class="wrapper">
-
 					<div id="site-navigation">
 						<?php
 						if ( ! newspack_is_amp() ) {
