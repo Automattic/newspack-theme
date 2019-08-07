@@ -21,6 +21,12 @@
 
 <?php do_action( 'before_header' ); ?>
 
+<?php
+	if ( newspack_is_amp() ) {
+		get_template_part( 'template-parts/header/mobile', 'sidebar' );
+	}
+?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
@@ -31,113 +37,132 @@
 			$header_center_logo = get_theme_mod( 'header_center_logo', false );
 		?>
 
-		<?php if ( false === $header_simplified ) : ?>
+		<?php
+		// Header is NOT short:
+		if ( false === $header_simplified ) :
+		?>
 			<div class="top-header-contain">
 				<div class="wrapper">
-					<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
-						<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'secondary-menu',
-									'menu_class'     => 'secondary-menu',
-									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'depth'          => 1,
-								)
-							);
-							?>
-						</nav>
-					<?php endif; ?>
+					<div id="secondary-nav-contain">
+						<?php
+						if ( ! newspack_is_amp() ) {
+							newspack_secondary_menu();
+						}
+						?>
+					</div>
 
-					<?php if ( has_nav_menu( 'social' ) && false === $header_center_logo ) : ?>
-						<?php newspack_social_menu(); ?>
+					<?php
+					// Logo is NOT centered:
+					if ( false === $header_center_logo ) :
+					?>
+						<div id="social-nav-contain">
+							<?php
+							if ( ! newspack_is_amp() ) {
+								newspack_social_menu_header();
+							}
+							?>
+						</div>
 					<?php endif; ?>
 				</div><!-- .wrapper -->
 			</div><!-- .top-header-contain -->
 		<?php endif; ?>
 
+
+
+
 		<div class="middle-header-contain">
 			<div class="wrapper">
-				<?php if ( has_nav_menu( 'social' ) && true === $header_center_logo && false === $header_simplified ) : ?>
-					<?php newspack_social_menu(); ?>
+				<?php
+				// Centered logo AND NOT short header.
+				if ( true === $header_center_logo && false === $header_simplified ) :
+				?>
+					<div id="social-nav-contain">
+						<?php
+						if ( ! newspack_is_amp() ) {
+							newspack_social_menu_header();
+						}
+						?>
+					</div>
 				<?php endif; ?>
 
-				<?php if ( true === $header_simplified && true === $header_center_logo ) : ?>
-
-					<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
-						<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'tertiary-menu',
-									'menu_class'     => 'tertiary-menu',
-									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'depth'          => 1,
-								)
-							);
-							?>
-						</nav>
-					<?php else : ?>
-						<div></div>
-					<?php endif; ?>
+				<?php
+				// Centered logo AND short header.
+				if ( true === $header_center_logo && true === $header_simplified ) :
+				?>
+					<div id="tertiary-nav-contain">
+						<?php
+						if ( ! newspack_is_amp() ) {
+							newspack_tertiary_menu();
+						}
+						?>
+					</div>
 				<?php endif; ?>
+
 
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-				<?php if ( has_nav_menu( 'primary-menu' ) && true === $header_simplified ) : ?>
-					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+				<?php
+				// Short header:
+				if ( true === $header_simplified ) :
+				?>
+					<div id="site-navigation">
 						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary-menu',
-								'menu_class'     => 'main-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							)
-						);
+						if ( ! newspack_is_amp() ) {
+							newspack_primary_menu();
+						}
 
-						if ( true === $header_center_logo ) :
+						// Centered logo:
+						if ( true === $header_center_logo ) {
 							get_template_part( 'template-parts/header/header', 'search' );
-						endif;
+						}
 						?>
-					</nav><!-- #site-navigation -->
+					</div>
 				<?php endif; ?>
 
-				<?php if ( has_nav_menu( 'tertiary-menu' ) && ! ( true === $header_center_logo && true === $header_simplified ) ) : ?>
-					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+
+				<?php
+				// Logo NOT centered and header NOT short:
+				if ( ! ( true === $header_center_logo && true === $header_simplified ) ) :
+				?>
+					<div id="tertiary-nav-contain">
 						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'tertiary-menu',
-								'menu_class'     => 'tertiary-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'          => 1,
-							)
-						);
+						if ( ! newspack_is_amp() ) {
+							newspack_tertiary_menu();
+						}
+
+						// Header simplified:
+						if ( true === $header_simplified ) {
+							get_template_part( 'template-parts/header/header', 'search' );
+						}
 						?>
-						<?php if ( true === $header_simplified ) : ?>
-							<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
-						<?php endif; ?>
-					</nav>
+					</div>
 				<?php endif; ?>
+
+				<?php if ( newspack_is_amp() ) : ?>
+					<button class="mobile-menu-toggle" on='tap:mobile-sidebar.toggle'>
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<?php esc_html_e( 'Menu', 'newspack' ); ?>
+					</button>
+				<?php endif; ?>
+
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
 
-		<?php if ( false === $header_simplified ) : ?>
+
+		<?php
+		// Header is NOT short:
+		if ( false === $header_simplified ) :
+		?>
 			<div class="bottom-header-contain">
 				<div class="wrapper">
-					<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
-						<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'primary-menu',
-									'menu_class'     => 'main-menu',
-									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								)
-							);
-							?>
-						</nav><!-- #site-navigation -->
-					<?php endif; ?>
+
+					<div id="site-navigation">
+						<?php
+						if ( ! newspack_is_amp() ) {
+							newspack_primary_menu();
+						}
+						?>
+					</div>
 					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
 				</div><!-- .wrapper -->
 			</div><!-- .bottom-header-contain -->

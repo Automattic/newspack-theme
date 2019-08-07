@@ -39,7 +39,7 @@
 				}
 
 				if ( ! is_active_sidebar( 'footer-1' ) ) {
-					newspack_social_menu();
+					newspack_social_menu_footer();
 				}
 				?>
 			</div><!-- .wrapper -->

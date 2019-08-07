@@ -1,0 +1,60 @@
+.mobile-menu-toggle {
+	background-color: transparent;
+	color: inherit;
+	padding: 0;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+
+	.svg-icon {
+		position: relative;
+		top: 4px;
+	}
+}
+
+.site-header .mobile-menu-toggle {
+	@include media(tablet) {
+		display: none;
+	}
+}
+
+
+#mobile-sidebar {
+	background-color: $color__primary;
+	color: #fff;
+	font-size: $font__size-sm;
+	width: 90%;
+	padding: $size__spacing-unit;
+
+	@include media(tablet) {
+		width: 33%;
+	}
+
+	& > * {
+		clear: both;
+		margin-bottom: #{ 2 * $size__spacing-unit };
+	}
+
+	.mobile-menu-toggle {
+		font-size: 1em;
+		float: right;
+		margin: 0 0 $size__spacing-unit;
+		padding: 0;
+	}
+
+	ul ul {
+		margin-left: $size__spacing-unit;
+	}
+
+	a {
+		color: #fff;
+		display: inline-block;
+		padding: #{ 0.5 * $size__spacing-unit } 0;
+	}
+
+	.submenu-expand {
+		display: none;
+	}
+}

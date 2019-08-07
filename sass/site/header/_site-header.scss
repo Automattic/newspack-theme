@@ -26,7 +26,7 @@
 	.custom-logo {
 		height: auto;
 		min-height: inherit;
-		max-height: 100px;
+		max-height: 75px;
 		max-width: 200px;
 		width: auto;
 
@@ -59,11 +59,16 @@
 // Site description
 .site-description {
 	color: $color__text-light;
+	display: none;
 	//flex: 1 1 auto;
 	font-weight: normal;
 	font-size: $font__size-sm;
 	font-style: italic;
 	margin: 7px 0 0;
+
+	@include media( mobile ) {
+		display: block;
+	}
 }
 
 .hide-site-tagline .site-description {
@@ -84,18 +89,23 @@
 
 // Middle bar
 .middle-header-contain {
-	align-items: center;
 
 	.wrapper {
-		padding: #{ 2 * $size__spacing-unit } 0;
+		align-items: center;
+		padding: $size__spacing-unit 0;
+		@include media( mobile ) {
+			padding: #{ 2 * $size__spacing-unit } 0;
+		}
 	}
 }
 
 // Bottom bar
 .bottom-header-contain {
 	.wrapper {
-		border-bottom: 1px solid #4a4a4a;
-		border-top: 1px solid #4a4a4a;
+		@include media( tablet ) {
+			border-bottom: 1px solid #4a4a4a;
+			border-top: 1px solid #4a4a4a;
+		}
 	}
 }
 
@@ -111,7 +121,12 @@
 }
 
 .header-search-contain {
+	display: none;
 	position: relative;
+
+	@include media( tablet ) {
+		display: block;
+	}
 
 	#header-search {
 		position: absolute;
@@ -146,20 +161,11 @@
 // Centred Logo
 
 .header-center-logo {
-	.site-branding {
-		display: block;
-		flex-grow: 2;
-		text-align: center;
-	}
-
-	.social-navigation,
-	nav.tertiary-menu {
-		justify-content: center;
-		width: 100%;
-
-		@include media( tablet ) {
-			justify-content: space-between;
-			width: auto;
+	@include media( tablet ) {
+		.site-branding {
+			display: block;
+			flex-grow: 2;
+			text-align: center;
 		}
 	}
 }
@@ -201,15 +207,6 @@
 
 }
 
-.header-center-logo.header-solid-background:not(.header-simplified) {
-	// Middle bar
-	.middle-header-contain {
-		.wrapper {
-			padding: #{ 3 * $size__spacing-unit } 0;
-		}
-	}
-}
-
 // Simplified Header
 
 .header-simplified {
@@ -219,30 +216,28 @@
 
 	.site-branding {
 		display: flex;
+		flex-grow: 2;
 		flex-basis: auto;
+		margin-right: $size__spacing-unit;
 	}
 
-	// Site logo
 	.custom-logo-link .custom-logo {
 		max-height: 50px;
-	}
-
-	.site-branding {
-		flex-grow: 2;
-		margin-right: $size__spacing-unit;
 	}
 
 	.site-description {
 		margin: 0;
 	}
 
-	&.hide-site-tagline {
-		.site-branding {
-			flex-grow: 0;
-		}
-		.main-navigation {
-			flex-grow: 2;
-		}
+	&:not(.header-center-logo).hide-site-tagline .main-navigation {
+		flex-grow: 2;
+	}
+
+	&:not(.header-center-logo) #tertiary-nav-contain {
+		// Add flexbox; the search appears here.
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	.middle-header-contain .wrapper {
@@ -250,21 +245,35 @@
 		padding: #{ 0.5 * $size__spacing-unit } 0;
 	}
 
+	.header-search-contain {
+		margin-left: $size__spacing-unit;
+	}
+
 	&.header-center-logo {
 
-		.wrapper > * {
-			flex: 1 0 0;
-			min-width: 33%;
-		}
+		@include media( tablet ) {
+			.wrapper > * {
+				flex: 1 0 0;
+				min-width: 33%;
+			}
 
-		.site-branding {
-			flex-wrap: wrap;
-		}
+			.site-branding {
+				flex-wrap: wrap;
+			}
 
-		.custom-logo-link,
-		.site-title,
-		.site-description {
-			width: 100%;
+			.custom-logo-link,
+			.site-title,
+			.site-description {
+				width: 100%;
+			}
+
+			// Add flexbox; the search appears here.
+			#site-navigation {
+				align-items: center;
+				display: flex;
+				justify-content: flex-end;
+			}
+
 		}
 	}
 }

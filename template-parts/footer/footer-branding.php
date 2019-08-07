@@ -13,7 +13,7 @@ if ( is_active_sidebar( 'footer-1' ) ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php
 			endif;
-			newspack_social_menu();
+			newspack_social_menu_footer();
 			?>
 		</div><!-- .wrapper -->
 	</div><!-- .footer-branding -->
