@@ -136,41 +136,6 @@ table th {
 	font-size: $font__size-sm;
 }
 
-// Use white text against these backgrounds by default.
-.has-primary-background-color,
-.has-primary-variation-background-color,
-.has-secondary-background-color,
-.has-secondary-variation-background-color {
-	color: $color__background-body;
-
-	p,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	a {
-		color: $color__background-body;
-	}
-}
-
-// Use dark gray text against this background by default.
-.has-white-background-color {
-	color: $color__text-main;
-
-	p,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	a {
-		color: $color__text-main;
-	}
-}
-
 figcaption,
 .gallery-caption {
 	font-family: $font__heading;
