@@ -40,7 +40,7 @@ body:not(.header-solid-background):not(.header-simplified) {
 		background-color: $color__primary;
 		color: #fff;
 		display: inline-block;
-		margin: 0 0 #{ 0.25 * $size__spacing-unit };
+		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
 		padding: 0.5em 0.75em;
 		text-transform: uppercase;
 
