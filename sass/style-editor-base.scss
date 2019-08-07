@@ -428,10 +428,6 @@ figcaption,
 			&.has-text-color a {
 				color: inherit;
 			}
-
-			&:not(.has-text-color) {
-				color: $color__background-body;
-			}
 		}
 
 		&:not(.has-background-color) {
