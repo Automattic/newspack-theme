@@ -81,3 +81,9 @@ body:not(.header-solid-background):not(.header-simplified) {
 		}
 	}
 }
+
+/* Footer */
+
+#colophon .footer-branding .wrapper {
+	border-top: 4px solid $color__border;
+}
