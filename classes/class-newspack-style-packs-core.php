@@ -64,20 +64,27 @@ class Newspack_Style_Packs_Core {
 	 * Gets active Style Pack and loads appropriate stylesheet.
 	 */
 	public function init() {
-		$this->style = get_theme_mod( 'active_style_pack' );
+		$this->style = get_theme_mod( 'active_style_pack', 'default' );
 		if ( is_customize_preview() ) {
 			$preview_style = $this->get_preview_style();
 			if ( ! empty( $preview_style ) ) {
 				$this->style = $preview_style;
 			}
-		} elseif ( ! empty( $this->style ) ) {
+		} elseif ( 'default' !== $this->style ) {
+			/**
+			 * Dequeue and deregister default styles.
+			 */
+			function remove_default_styles() {
+				wp_dequeue_style( 'newspack-style' );
+				wp_deregister_style( 'newspack-style' );
+			}
+			add_action( 'wp_print_styles', 'remove_default_styles', 20 );
+
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ), 20 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ), 20 );
-			// If not the default styles, remove original editor styles and add new ones.
-			if ( 'default' !== $this->style ) {
-				remove_editor_styles();
-				add_editor_style( 'styles/' . $this->style . '-editor.css' );
-			}
+
+			remove_editor_styles();
+			add_editor_style( 'styles/' . $this->style . '-editor.css' );
 		}
 	}
 	/**
@@ -111,8 +118,6 @@ class Newspack_Style_Packs_Core {
 			wp_enqueue_style( $this->get_style_pack_id( $this->style ), $stylesheet, array(), $this->theme_version );
 			// Include generated RTL styles.
 			wp_style_add_data( $this->get_style_pack_id( $this->style ), 'rtl', 'replace' );
-			// Dequeue style.css
-			wp_dequeue_style( 'newspack-style' );
 		}
 	}
 	/**
