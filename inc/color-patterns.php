@@ -265,10 +265,8 @@ function newspack_custom_colors_css() {
 
 		if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$editor_css .= '
-			.accent-header:before,
-			.article-section-title:before,
-			.cat-links:before,
-			.page-title:before {
+			.editor-block-list__layout .editor-block-list__block .accent-header:before,
+			.editor-block-list__layout .editor-block-list__block .article-section-title:before {
 				background-color: ' . $primary_color . ';
 			}
 		';
