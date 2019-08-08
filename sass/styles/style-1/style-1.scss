@@ -21,6 +21,11 @@
 	}
 }
 
+.cat-links {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+}
+
 #secondary .widget-title {
 	font-size: $font__size-lg;
 	text-transform: uppercase;
@@ -28,9 +33,12 @@
 
 /* Posts & Pages */
 
-.cat-links {
-	font-family: $font__heading;
+.single .cat-links {
 	font-size: $font__size_base;
+}
+
+.search .cat-links:before {
+	display: none;
 }
 
 .entry-meta .byline a {
