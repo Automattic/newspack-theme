@@ -37,8 +37,11 @@
 	font-size: $font__size_base;
 }
 
-.search .cat-links:before {
-	display: none;
+.search,
+.blog {
+	.cat-links:before {
+		display: none;
+	}
 }
 
 .entry-meta .byline a {
