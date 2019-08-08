@@ -16,7 +16,7 @@ new Newspack_Style_Packs_Core(
 		'styles'             => array(
 			'default' => esc_html__( 'Default Style', 'newspack' ),
 			'style-1' => esc_html__( 'Style 1', 'newspack' ),
-			'style-2' => esc_html__( 'Style 1', 'newspack' ),
+			'style-2' => esc_html__( 'Style 2', 'newspack' ),
 		),
 		// Style descriptions
 		'style_descriptions' => array(
