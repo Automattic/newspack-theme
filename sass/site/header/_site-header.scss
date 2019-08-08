@@ -88,14 +88,11 @@
 }
 
 // Middle bar
-.middle-header-contain {
-
-	.wrapper {
-		align-items: center;
-		padding: $size__spacing-unit 0;
-		@include media( mobile ) {
-			padding: #{ 2 * $size__spacing-unit } 0;
-		}
+.middle-header-contain .wrapper {
+	align-items: center;
+	padding: $size__spacing-unit 0;
+	@include media( mobile ) {
+		padding: #{ 1.5 * $size__spacing-unit } 0;
 	}
 }
 
@@ -191,6 +188,12 @@
 		background-color: transparent;
 	}
 
+	.middle-header-contain .wrapper {
+		@include media( tablet ) {
+			padding: #{ 1.5 * $size__spacing-unit } 0 #{ 2 * $size__spacing-unit };
+		}
+	}
+
 	.bottom-header-contain {
 		background-color: #4a4a4a;
 		.wrapper {
@@ -204,7 +207,6 @@
 			color: #fff;
 		}
 	}
-
 }
 
 // Simplified Header

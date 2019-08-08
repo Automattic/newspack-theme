@@ -23,7 +23,7 @@
 	overflow: hidden;
 }
 
-#content {
+.site-content {
 	margin-top: #{ 1.5 * $size__spacing-unit };
 
 	@include media( tablet ) {

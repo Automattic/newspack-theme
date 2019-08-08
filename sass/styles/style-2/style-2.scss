@@ -7,6 +7,88 @@ Newspack Theme Styles - Style Pack 2
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+// Header Overlap
+
+.site-header,
+.header-solid-background .site-header {
+	padding-bottom: $size__spacing-unit;
+
+	@include media(tablet) {
+		padding-bottom: #{ 4 * $size__spacing-unit };
+	}
+
+	@include media( desktop ) {
+		padding-bottom: #{ 7 * $size__spacing-unit };
+	}
+}
+
+.header-simplified .site-header {
+	@include media( tablet ) {
+		padding-top: #{ 0.5 * $size__spacing-unit };
+	}
+
+	@include media( desktop ) {
+		padding: $size__spacing-unit 0 #{ 10 * $size__spacing-unit };
+	}
+}
+
+.header-simplified .site-content {
+	@include media( tablet ) {
+		margin-top: #{ -2 * $size__spacing-unit };
+	}
+}
+
+.site-content,
+.newspack-front-page.hide-homepage-title .site-content {
+	margin-top: #{ -1 * $size__spacing-unit };
+
+	@include media(tablet) {
+		margin-top: #{ -3.5 * $size__spacing-unit };
+	}
+
+	@include media(desktop) {
+		margin-top: #{ -6 * $size__spacing-unit };
+	}
+}
+
+// Header
+
+.bottom-header-contain .wrapper {
+	border: 0;
+}
+
+.header-solid-background .bottom-header-contain {
+	background-color: transparent;
+
+	.main-navigation .main-menu > li,
+	.main-navigation .main-menu > li > a,
+	#search-toggle {
+		color: inherit;
+	}
+}
+
+body:not(.header-solid-background) .site-header {
+	background-color: #efefef;
+}
+
+// Content Area
+
+#primary {
+	background-color: $color__background-body;
+	border-top: 2px solid $color__primary-variation;
+	padding: 0 #{ 0.5 * $size__spacing-unit };
+
+	@include media(tablet) {
+		border-top-width: 4px;
+		padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
+	}
+
+	@include media(desktop) {
+		padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
+	}
+}
+
+
 // Site header
 
 .main-navigation > ul > li,

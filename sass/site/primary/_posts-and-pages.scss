@@ -269,7 +269,7 @@ body.page {
 		display: none;
 	}
 
-	#content {
+	.site-content {
 		margin-top: 0;
 		@include media(tablet) {
 			margin-top: #{ 0.5 * $size__spacing-unit };
