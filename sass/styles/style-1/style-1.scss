@@ -48,6 +48,12 @@
 	color: $color__text-light;
 }
 
+/* Avatar */
+.avatar,
+.entry-content .wp-block-newspack-blocks-homepage-articles .avatar {
+	border-radius: 0;
+}
+
 /* Author Bio */
 
 .author-bio .accent-header {
