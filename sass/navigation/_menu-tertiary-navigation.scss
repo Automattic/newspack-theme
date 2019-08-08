@@ -37,14 +37,13 @@
 
 		@include media(tablet) {
 			&:nth-child(n+2) {
-				margin: 0 0 0 #{$size__spacing-unit * 0.5};
+				margin: 0 0 0 #{$size__spacing-unit * 0.75};
 			}
 		}
 	}
 
 	a {
 		margin: #{$size__spacing-unit * 0.25} 0;
-		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.5};
 	}
 
 	// Short header
@@ -54,7 +53,6 @@
 		li {
 			a {
 				font-size: $font__size-xs;
-				padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 			}
 		}
 	}
