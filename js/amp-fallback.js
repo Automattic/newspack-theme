@@ -6,6 +6,8 @@
 
 (function() {
 
+
+	// Search toggle.
 	var headerContain           = document.getElementById( 'masthead' ),
 		headerSearch            = document.getElementById( 'header-search' ),
 		headerSearchInput       = headerSearch.getElementsByTagName( 'input' )[0],
@@ -33,6 +35,18 @@
 		}
 
 	}, false );
+
+
+	// Mobile menu fallback.
+
+	var menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
+		body = document.getElementsByTagName( 'body' )[0];
+
+	for ( var i = 0; i < menuToggle.length; i++ ) {
+		menuToggle[i].addEventListener( 'click', function() {
+			body.classList.toggle( 'menu-opened' );
+		}, false );
+	}
 
 
 } )();
