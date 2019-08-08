@@ -25,11 +25,11 @@
 	background-color: $color__primary;
 	color: #fff;
 	font-size: $font__size-sm;
-	width: 90%;
+	width: 80vw;
 	padding: $size__spacing-unit;
 
 	@include media(tablet) {
-		width: 33%;
+		width: 33vw;
 	}
 
 	& > * {
@@ -68,18 +68,10 @@
 	right: -100%;
 	top: 0;
 	transition: right 0.2s;
-	z-index: 100;
+	z-index: 999999;
 
 	.menu-opened & {
 		right: 0;
-	}
-
-	.admin-bar & {
-		top: 32px;
-
-		@media only screen and (max-width: 782px) {
-			top: 46px;
-		}
 	}
 }
 
