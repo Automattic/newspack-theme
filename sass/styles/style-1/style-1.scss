@@ -97,6 +97,7 @@
 
 		blockquote {
 			background-color: inherit;
+			border-color: inherit;
 			text-align: center;
 
 			&:before {
@@ -125,7 +126,7 @@
 				content: "";
 				display: block;
 				position: absolute;
-				opacity: 0.7;
+				opacity: 0.5;
 				left: 15%;
 				right: 15%;
 				top: #{ 2 * $size__spacing-unit };
