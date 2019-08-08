@@ -15,17 +15,18 @@ Newspack Theme Styles - Style Pack 2
 	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
-	margin-bottom: $size__spacing-unit;
 	text-transform: uppercase;
 }
 
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
 		margin-bottom: #{ 1.5 * $size__spacing-unit };
 	}
 }
 
 .single .cat-links {
+	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
 		margin-bottom: #{ 2.5 * $size__spacing-unit };
 	}
