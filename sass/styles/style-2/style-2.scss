@@ -15,6 +15,7 @@ Newspack Theme Styles - Style Pack 2
 	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
+	letter-spacing: 0.05em;
 	text-transform: uppercase;
 }
 
@@ -35,6 +36,7 @@ Newspack Theme Styles - Style Pack 2
 #secondary .accent-header {
 	color: inherit;
 	font-size: $font__size-lg;
+	letter-spacing: 0;
 	text-transform: none;
 
 	@include media( tablet ) {
@@ -46,11 +48,13 @@ Newspack Theme Styles - Style Pack 2
 	 h2 {
 		color: inherit;
 		font-size: $font__size-md;
+		letter-spacing: 0;
 		margin: 0 0 #{ 0.5 * $size__spacing-unit };
 		text-transform: none;
 
 		span {
 			color: $color__text-light;
+			letter-spacing: 0.05em;
 			font-size: $font__size-xs;
 			text-transform: uppercase;
 		}
