@@ -320,15 +320,13 @@
 	.wp-block-pullquote {
 		border-color: transparent;
 		border-width: 4px 0 2px;
+		color: inherit;
 		padding: $size__spacing-unit 0;
 		text-align: left;
 
 		blockquote {
-			color: $color__text-main;
 			border: none;
-			margin-top: $size__spacing-unit;
-			margin-bottom: calc(1.25 * #{ $size__spacing-unit});
-			margin-right: 0;
+			margin: $size__spacing-unit 0 calc(1.25 * #{ $size__spacing-unit});
 			padding-left: 0;
 		}
 
