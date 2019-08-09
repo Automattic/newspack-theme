@@ -18,6 +18,7 @@ new Newspack_Style_Packs_Core(
 			'style-1' => esc_html__( 'Style 1', 'newspack' ),
 			'style-2' => esc_html__( 'Style 2', 'newspack' ),
 			'style-3' => esc_html__( 'Style 3', 'newspack' ),
+			'style-4' => esc_html__( 'Style 4', 'newspack' ),
 		),
 		// Style descriptions
 		'style_descriptions' => array(
@@ -25,6 +26,7 @@ new Newspack_Style_Packs_Core(
 			'style-1' => esc_html__( 'The description for style 1.', 'newspack' ),
 			'style-2' => esc_html__( 'The description for style 2.', 'newspack' ),
 			'style-3' => esc_html__( 'The description for style 3.', 'newspack' ),
+			'style-4' => esc_html__( 'The description for style 4.', 'newspack' ),
 		),
 		// Style fonts
 		'fonts'              => array(
@@ -36,6 +38,9 @@ new Newspack_Style_Packs_Core(
 			),
 			'style-3' => array(
 				'Barlow' => 'https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i&display=swap',
+			),
+			'style-4' => array(
+				'IBM Plex Serif' => 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i',
 			),
 		),
 	)
