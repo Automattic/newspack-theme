@@ -82,6 +82,7 @@ class Newspack_Style_Packs_Core {
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ), 20 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ), 20 );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_fonts' ), 20 );
 
 			remove_editor_styles();
 			add_editor_style( 'styles/' . $this->style . '-editor.css' );
