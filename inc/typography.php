@@ -107,6 +107,12 @@ function newspack_custom_typography_css() {
 			font-family: $font_header;
 		}";
 
+		if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+			$css_blocks .= "
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+				font-family: $font_header;
+			}";
+		}
 
 		$editor_css_blocks .= "
 		.editor-block-list__layout .editor-block-list__block h1,
@@ -160,6 +166,16 @@ function newspack_custom_typography_css() {
 			font-family: $font_header;
 		}
 		";
+
+		if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+			$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+
+			{
+				font-family: $font_header;
+			}
+			";
+		}
 	}
 
 	if ( get_theme_mod( 'font_body', '' ) ) {

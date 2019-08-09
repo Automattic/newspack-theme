@@ -34,3 +34,13 @@ Newspack Theme Editor Styles - Style Pack 1
 .avatar {
 	border-radius: 0;
 }
+
+/** === Paragraph === */
+
+.wp-block-paragraph {
+
+	&.has-drop-cap:not(:focus)::first-letter {
+		font-family: $font__heading;
+		font-weight: bold;
+	}
+}
