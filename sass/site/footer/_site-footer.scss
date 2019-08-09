@@ -9,7 +9,6 @@
 
 	.footer-branding {
 		.wrapper {
-			border-top: 4px solid $color__border;
 			padding-top: $size__spacing-unit;
 		}
 
@@ -25,29 +24,29 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
+	}
 
-		.widget {
-			width: 100%;
+	.widget {
+		width: 100%;
 
-			@include media( mobile ) {
-				flex: 1 0 0px;
-				margin-right: $size__spacing-unit;
-				min-width: calc( 50% - #{ $size__spacing-unit } );
-			}
-
-			@include media( tablet ) {
-				min-width: calc( 25% - #{ $size__spacing-unit } );
-			}
-
-			&:last-child {
-				margin-right: 0;
-			}
+		@include media( mobile ) {
+			flex: 1 0 0px;
+			margin-right: $size__spacing-unit;
+			min-width: calc( 50% - #{ $size__spacing-unit } );
 		}
 
-		.widget-title {
-			color: $color__text-light;
-			font-size: inherit;
+		@include media( tablet ) {
+			min-width: calc( 25% - #{ $size__spacing-unit } );
 		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.widget-title {
+		color: $color__text-light;
+		font-size: inherit;
 	}
 
 	.site-info {
