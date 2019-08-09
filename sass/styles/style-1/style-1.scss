@@ -1,7 +1,6 @@
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
-
 /* Style pack-specific overrides */
 
 .accent-header:not(.widget-title),
@@ -69,5 +68,29 @@
 
 	&:before {
 		display: none;
+	}
+}
+
+/* Footer */
+
+#colophon {
+	&,
+	.social-navigation a {
+		color: $color__text-main;
+	}
+
+	.footer-branding .wrapper {
+		border-top: 3px solid currentColor;
+	}
+
+	.widget-title {
+		color: $color__text-main;
+		font-size: $font__size_base;
+		text-transform: uppercase;
+	}
+
+	.widget,
+	.site-info {
+		font-family: $font__heading;
 	}
 }
