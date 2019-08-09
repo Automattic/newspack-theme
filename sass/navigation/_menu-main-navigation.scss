@@ -48,12 +48,12 @@
 
 		> li {
 			color: #555;
+			margin-right: #{0.75 * $size__spacing-unit};
 			position: relative;
 
 			> a {
 				color: inherit;
 				font-weight: 700;
-				margin-right: #{0.5 * $size__spacing-unit};
 
 				+ svg {
 					margin-right: #{0.5 * $size__spacing-unit};
@@ -88,7 +88,6 @@
 				.submenu-expand {
 					display: inline-block;
 					height: 18px;
-					margin-right: #{0.25 * $size__spacing-unit};
 					width: 24px;
 
 					.wp-customizer-unloading &,
@@ -101,11 +100,6 @@
 						top: -0.2em;
 					}
 				}
-			}
-
-			&:last-child > a,
-			&:last-child.menu-item-has-children .submenu-expand {
-				margin-right: 0;
 			}
 		}
 	}

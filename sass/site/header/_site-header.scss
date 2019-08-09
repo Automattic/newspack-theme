@@ -239,7 +239,7 @@
 	}
 
 	.header-search-contain {
-		margin-left: $size__spacing-unit;
+		margin-left: #{ 0.75 * $size__spacing-unit };
 	}
 
 	// Wrapper used to align search with menus.
