@@ -326,9 +326,7 @@
 
 		blockquote {
 			border: none;
-			margin-top: $size__spacing-unit;
-			margin-bottom: calc(1.25 * #{ $size__spacing-unit});
-			margin-right: 0;
+			margin: $size__spacing-unit 0 calc(1.25 * #{ $size__spacing-unit});
 			padding-left: 0;
 		}
 
