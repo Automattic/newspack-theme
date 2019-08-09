@@ -1,6 +1,67 @@
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+
+/* Style pack-specific overrides */
+
+.accent-header:not(.widget-title),
+.article-section-title,
+.cat-links,
+.page-title {
+	color: #666;
+	text-transform: uppercase;
+
+	&:before {
+		background-color: $color__primary;
+		content: "";
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 0.5em 0 0;
+		width: 0.75em;
+	}
+}
+
+.cat-links {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+}
+
+#secondary .widget-title {
+	font-size: $font__size-lg;
+	text-transform: uppercase;
+}
+
+/* Posts & Pages */
+
+.single .cat-links {
+	font-size: $font__size_base;
+}
+
+.search,
+.blog {
+	.cat-links:before {
+		display: none;
+	}
+}
+
 .entry-meta .byline a {
 	color: $color__text-light;
+}
+
+/* Author Bio */
+
+.author-bio .accent-header {
+	color: $color__text-main;
+	font-size: $font__size-md;
+	margin: 0 0 #{ 0.25 * $size__spacing-unit };
+	text-transform: none;
+
+	span {
+		font-size: $font__size-xs;
+		text-transform: uppercase;
+	}
+
+	&:before {
+		display: none;
+	}
 }
