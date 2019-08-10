@@ -71,10 +71,6 @@ Newspack Theme Styles - Style Pack 2
 	background-color: $color__primary;
 	color: $color__background-body;
 
-	@include media( tablet ) {
-		padding-top: #{ 2 * $size__spacing-unit };
-	}
-
 	a,
 	a:hover,
 	a:visited,
@@ -92,10 +88,15 @@ Newspack Theme Styles - Style Pack 2
 }
 
 .footer-branding {
+	margin-bottom: #{ 2 * $size__spacing-unit };
+
+	@include media( tablet ) {
+		padding-top: #{ 2 * $size__spacing-unit };
+	}
+
 	.wrapper {
 		border-bottom: 1px solid currentColor;
 	}
-	margin-bottom: #{ 2 * $size__spacing-unit };
 }
 
 .site-info {
