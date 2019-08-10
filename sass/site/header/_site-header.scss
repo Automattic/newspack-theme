@@ -229,7 +229,7 @@
 		margin: 0;
 	}
 
-	&:not(.header-center-logo).hide-site-tagline .main-navigation {
+	&.header-left-logo.hide-site-tagline .main-navigation {
 		flex-grow: 2;
 	}
 
@@ -245,7 +245,7 @@
 	&.header-center-logo {
 
 		@include media( tablet ) {
-			.wrapper > * {
+			.site-header .wrapper > * {
 				flex: 1 0 0;
 				min-width: 33%;
 			}
