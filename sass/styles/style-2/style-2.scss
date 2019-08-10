@@ -45,7 +45,14 @@ Newspack Theme Styles - Style Pack 2
 }
 
 .author-bio {
-	 h2 {
+	border-top: 8px solid $color__text-main;
+	padding-top: #{ 1.5 * $size__spacing-unit };
+
+	@include media( tablet ) {
+		border-top-width: 10px;
+	}
+
+	h2 {
 		color: inherit;
 		font-size: $font__size-md;
 		letter-spacing: 0;
