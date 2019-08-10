@@ -31,6 +31,10 @@ Newspack Theme Editor Styles - Style Pack 2
 
 // Blocks
 
+.wp-block-newspack-blocks-homepage-articles article .entry-meta {
+	font-size: #{ 0.7 * $font__size_base };
+}
+
 .wp-block[data-type="core/pullquote"] {
 
 	.wp-block-pullquote {

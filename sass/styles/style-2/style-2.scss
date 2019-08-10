@@ -85,6 +85,11 @@ Newspack Theme Styles - Style Pack 2
 // Blocks
 
 .entry .entry-content {
+
+	.wp-block-newspack-blocks-homepage-articles article .entry-meta {
+		font-size: #{ 0.7 * $font__size_base };
+	}
+
 	.wp-block-pullquote {
 		border-width: 16px 0 4px;
 
