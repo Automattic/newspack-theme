@@ -45,16 +45,22 @@ function newspack_body_classes( $classes ) {
 	$header_solid_background = get_theme_mod( 'header_solid_background', false );
 	if ( true === $header_solid_background ) {
 		$classes[] = 'header-solid-background';
+	} else {
+		$classes[] = 'header-default-background';
 	}
 
 	$header_center_logo = get_theme_mod( 'header_center_logo', false );
 	if ( true === $header_center_logo ) {
 		$classes[] = 'header-center-logo';
+	} else {
+		$classes[] = 'header-left-logo';
 	}
 
 	$header_simplified = get_theme_mod( 'header_simplified', false );
 	if ( true === $header_simplified ) {
 		$classes[] = 'header-simplified';
+	} else {
+		$classes[] = 'header-default-height';
 	}
 
 	// Adds a class of has-sidebar when there is a sidebar present.

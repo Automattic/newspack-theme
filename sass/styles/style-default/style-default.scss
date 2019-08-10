@@ -12,7 +12,7 @@
 
 /* Navigation */
 
-body:not(.header-solid-background):not(.header-simplified) {
+body.header-default-background.header-default-height {
 	.site-header {
 		.tertiary-menu {
 			a {
