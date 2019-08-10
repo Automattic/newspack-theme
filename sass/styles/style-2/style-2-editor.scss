@@ -23,6 +23,12 @@ Newspack Theme Editor Styles - Style Pack 2
 	}
 }
 
+.entry-meta .byline a {
+	color: $color__text-light;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
 // Blocks
 
 .wp-block[data-type="core/pullquote"] {
