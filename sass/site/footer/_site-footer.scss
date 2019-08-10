@@ -1,6 +1,6 @@
 /* Site footer */
 
-#colophon {
+.site-footer {
 	margin: #{ 2 * $size__spacing-unit } 0 0;
 
 	a {
@@ -48,28 +48,28 @@
 		color: $color__text-light;
 		font-size: inherit;
 	}
+}
 
-	.site-info {
-		color: $color__text-light;
+.site-info {
+	color: $color__text-light;
 
-		.wrapper {
-			border-top: 1px solid $color__border;
-			justify-content: space-between;
-			padding: $size__spacing-unit 0;
+	.wrapper {
+		border-top: 1px solid $color__border;
+		justify-content: space-between;
+		padding: $size__spacing-unit 0;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+			color: $color__primary-variation;
 		}
+	}
 
-		a {
-			color: inherit;
-
-			&:hover {
-				text-decoration: none;
-				color: $color__primary-variation;
-			}
-		}
-
-		.imprint,
-		.privacy-policy-link {
-			margin-right: $size__spacing-unit;
-		}
+	.imprint,
+	.privacy-policy-link {
+		margin-right: $size__spacing-unit;
 	}
 }
