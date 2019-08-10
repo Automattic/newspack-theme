@@ -31,6 +31,7 @@ Newspack Theme Editor Styles - Style Pack 2
 
 // Blocks
 
+
 .wp-block-newspack-blocks-homepage-articles {
 	article .entry-meta {
 		font-size: #{ 0.7 * $font__size_base };
@@ -43,6 +44,16 @@ Newspack Theme Editor Styles - Style Pack 2
 		article .entry-meta {
 			font-size: #{ 0.6 * $font__size_base };
 		}
+	}
+}
+
+.wp-block-paragraph {
+	&.has-drop-cap:not(:focus)::first-letter {
+		border: 7px solid $color__primary;
+		font-family: $font__heading;
+		font-weight: bold;
+		font-size: $font__size-xxl;
+		padding: 0.4em;
 	}
 }
 
