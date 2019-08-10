@@ -24,6 +24,8 @@
 <?php
 	if ( newspack_is_amp() ) {
 		get_template_part( 'template-parts/header/mobile', 'sidebar' );
+	} else {
+		get_template_part( 'template-parts/header/mobile', 'sidebar-fallback' );
 	}
 ?>
 
@@ -41,7 +43,7 @@
 		// Header is NOT short:
 		if ( false === $header_simplified ) :
 		?>
-			<div class="top-header-contain">
+			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
 					<div id="secondary-nav-contain">
 						<?php
@@ -67,16 +69,13 @@
 			</div><!-- .top-header-contain -->
 		<?php endif; ?>
 
-
-
-
 		<div class="middle-header-contain">
 			<div class="wrapper">
 				<?php
 				// Centered logo AND NOT short header.
 				if ( true === $header_center_logo && false === $header_simplified ) :
 				?>
-					<div id="social-nav-contain">
+					<div id="social-nav-contain" class="desktop-only">
 						<?php
 						if ( ! newspack_is_amp() ) {
 							newspack_social_menu_header();
@@ -89,7 +88,7 @@
 				// Centered logo AND short header.
 				if ( true === $header_center_logo && true === $header_simplified ) :
 				?>
-					<div id="tertiary-nav-contain">
+					<div id="tertiary-nav-contain" class="desktop-only">
 						<?php
 						if ( ! newspack_is_amp() ) {
 							newspack_tertiary_menu();
@@ -105,7 +104,8 @@
 				// Short header:
 				if ( true === $header_simplified ) :
 				?>
-					<div class="nav-wrapper">
+
+					<div class="nav-wrapper desktop-only">
 						<div id="site-navigation">
 							<?php
 							if ( ! newspack_is_amp() ) {
@@ -129,7 +129,7 @@
 				// Logo NOT centered and header NOT short:
 				if ( ! ( true === $header_center_logo && true === $header_simplified ) ) :
 				?>
-					<div class="nav-wrapper">
+					<div class="nav-wrapper desktop-only">
 						<div id="tertiary-nav-contain">
 							<?php
 							if ( ! newspack_is_amp() ) {
@@ -147,12 +147,10 @@
 					</div><!-- .nav-wrapper -->
 				<?php endif; ?>
 
-				<?php if ( newspack_is_amp() ) : ?>
-					<button class="mobile-menu-toggle" on='tap:mobile-sidebar.toggle'>
-						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-						<?php esc_html_e( 'Menu', 'newspack' ); ?>
-					</button>
-				<?php endif; ?>
+				<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
+					<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+					<?php esc_html_e( 'Menu', 'newspack' ); ?>
+				</button>
 
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
@@ -162,7 +160,7 @@
 		// Header is NOT short:
 		if ( false === $header_simplified ) :
 		?>
-			<div class="bottom-header-contain">
+			<div class="bottom-header-contain desktop-only">
 				<div class="wrapper">
 					<div id="site-navigation">
 						<?php

@@ -21,15 +21,15 @@
 }
 
 
-#mobile-sidebar {
+.mobile-sidebar {
 	background-color: $color__primary;
 	color: #fff;
 	font-size: $font__size-sm;
-	width: 90%;
+	width: 80vw;
 	padding: $size__spacing-unit;
 
 	@include media(tablet) {
-		width: 33%;
+		width: 33vw;
 	}
 
 	& > * {
@@ -54,7 +54,34 @@
 		padding: #{ 0.5 * $size__spacing-unit } 0;
 	}
 
+	.main-navigation .main-menu > li.menu-item-has-children .submenu-expand svg,
+	.main-navigation .sub-menu > li.menu-item-has-children .submenu-expand,
 	.submenu-expand {
 		display: none;
 	}
+}
+
+#mobile-sidebar-fallback {
+	bottom: 0;
+	overflow: auto;
+	position: fixed;
+	right: -100%;
+	top: 0;
+	transition: right 0.2s;
+	z-index: 999999;
+
+	.menu-opened & {
+		right: 0;
+	}
+}
+
+.menu-opened:after {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 99;
 }

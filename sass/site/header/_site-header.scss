@@ -242,13 +242,6 @@
 		margin-left: #{ 0.75 * $size__spacing-unit };
 	}
 
-	// Wrapper used to align search with menus.
-	.nav-wrapper {
-		align-items: center;
-		display: flex;
-		justify-content: flex-end;
-	}
-
 	&.header-center-logo {
 
 		@include media( tablet ) {
@@ -269,3 +262,19 @@
 		}
 	}
 }
+
+// Wrapper used to align search with menus.
+.nav-wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.desktop-only {
+	display: none;
+
+	@include media( tablet ) {
+		display: inherit;
+	}
+}
+
