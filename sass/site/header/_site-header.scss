@@ -252,7 +252,7 @@
 	&.header-center-logo {
 
 		@include media( tablet ) {
-			.wrapper > * {
+			.site-header .wrapper > * {
 				flex: 1 0 0;
 				min-width: 33%;
 			}
