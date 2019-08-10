@@ -34,7 +34,7 @@ new Newspack_Style_Packs_Core(
 				'Fira Sans Condensed' => 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,600,600i',
 			),
 			'style-2' => array(
-				'Montserrat' => 'https://fonts.googleapis.com/css?family=Montserrat:400,700,900',
+				'Montserrat' => 'https://fonts.googleapis.com/css?family=Montserrat:500,700,900',
 			),
 			'style-3' => array(
 				'Barlow' => 'https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i&display=swap',
