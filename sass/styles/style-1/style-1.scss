@@ -47,6 +47,17 @@
 	color: $color__text-light;
 }
 
+.single .entry-meta {
+	@include media( tablet ) {
+		align-items: center;
+		display: flex;
+
+		.posted-on {
+			margin-left: #{ 1.5 * $size__spacing-unit };
+		}
+	}
+}
+
 /* Avatar */
 .avatar,
 .entry-content .wp-block-newspack-blocks-homepage-articles .avatar {
