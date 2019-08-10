@@ -7,6 +7,18 @@ Newspack Theme Styles - Style Pack 2
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+// Site header
+
+.main-navigation > ul > li,
+.tertiary-menu {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.site-header .tertiary-menu {
+	font-size: $font__size-xs;
+}
+
 // Accent headers
 
 .accent-header,
