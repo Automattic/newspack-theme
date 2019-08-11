@@ -1,0 +1,51 @@
+#$ composer require --dev phpstan/phpstan-shim szepeviktor/phpstan-wordpress
+#$ vendor/bin/phpstan analyse
+
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+# TODO    level: max
+    level: 4
+    inferPrivatePropertyTypeFromConstructor: true
+    paths:
+        - %currentWorkingDirectory%/
+    excludes_analyse:
+        - %currentWorkingDirectory%/woocommerce/checkout/
+        - %currentWorkingDirectory%/tests/
+        - %currentWorkingDirectory%/vendor/
+    autoload_files:
+        # Stubs
+        - %currentWorkingDirectory%/tests/bootstrap.php
+        - %currentWorkingDirectory%/tests/functions-stubs.php
+        # Files loaded from functions.php
+        - %currentWorkingDirectory%/inc/back-compat.php
+        - %currentWorkingDirectory%/inc/color-patterns.php
+        - %currentWorkingDirectory%/inc/color-patterns.php
+        - %currentWorkingDirectory%/classes/class-newspack-svg-icons.php
+        - %currentWorkingDirectory%/classes/class-newspack-walker-comment.php
+        - %currentWorkingDirectory%/classes/class-newspack-style-packs-core.php
+        - %currentWorkingDirectory%/inc/template-functions.php
+        - %currentWorkingDirectory%/inc/color-filters.php
+        - %currentWorkingDirectory%/inc/typography.php
+        - %currentWorkingDirectory%/inc/icon-functions.php
+        - %currentWorkingDirectory%/inc/template-tags.php
+        - %currentWorkingDirectory%/inc/customizer.php
+        - %currentWorkingDirectory%/inc/jetpack.php
+        - %currentWorkingDirectory%/inc/woocommerce.php
+        # Nothing to load
+        #- %currentWorkingDirectory%/inc/style-packs.php
+    ignoreErrors:
+        # Uses func_get_args()
+        - '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
+        - '#^Function add_theme_support invoked with [2345] parameters, 1 required\.$#'
+        # WP nav menu
+        -
+            path: %currentWorkingDirectory%/inc/icon-functions.php
+            message: '#^Cannot access property \$theme_location on array\.$#'
+        -
+            path: %currentWorkingDirectory%/inc/icon-functions.php
+            message: '#^Access to an undefined property WP_Post::\$url\.$#'
+        -
+            path: %currentWorkingDirectory%/inc/icon-functions.php
+            message: '#^Cannot access property \$link_after on array\.$#'
