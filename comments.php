@@ -73,7 +73,7 @@ $discussion = newspack_get_discussion_data();
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new newspack_Walker_Comment(),
+					'walker'      => new Newspack_Walker_Comment(),
 					'avatar_size' => newspack_get_avatar_size(),
 					'short_ping'  => true,
 					'style'       => 'ol',

@@ -9,21 +9,21 @@
  * Gets the SVG code for a given icon.
  */
 function newspack_get_icon_svg( $icon, $size = 24 ) {
-	return newspack_SVG_Icons::get_svg( 'ui', $icon, $size );
+	return Newspack_SVG_Icons::get_svg( 'ui', $icon, $size );
 }
 
 /**
  * Gets the SVG code for a given social icon.
  */
 function newspack_get_social_icon_svg( $icon, $size = 24 ) {
-	return newspack_SVG_Icons::get_svg( 'social', $icon, $size );
+	return Newspack_SVG_Icons::get_svg( 'social', $icon, $size );
 }
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
  */
 function newspack_get_social_link_svg( $uri, $size = 24 ) {
-	return newspack_SVG_Icons::get_social_link_svg( $uri, $size );
+	return Newspack_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
 /**

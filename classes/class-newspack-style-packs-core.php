@@ -26,9 +26,15 @@ class Newspack_Style_Packs_Core {
 	 */
 	var $style;
 	/**
+	 * Stores current theme version.
+	 *
+	 * @var string
+	 */
+	var $theme_version;
+	/**
 	 * Newspack_Style_Packs_Core class instance
 	 *
-	 * @var singleton
+	 * @var self
 	 **/
 	static $instance;
 	/**
@@ -71,14 +77,7 @@ class Newspack_Style_Packs_Core {
 				$this->style = $preview_style;
 			}
 		} elseif ( 'default' !== $this->style ) {
-			/**
-			 * Dequeue and deregister default styles.
-			 */
-			function remove_default_styles() {
-				wp_dequeue_style( 'newspack-style' );
-				wp_deregister_style( 'newspack-style' );
-			}
-			add_action( 'wp_print_styles', 'remove_default_styles', 20 );
+			add_action( 'wp_print_styles', array( $this, 'remove_default_styles' ), 20 );
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts' ), 20 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ), 20 );
@@ -87,6 +86,13 @@ class Newspack_Style_Packs_Core {
 			remove_editor_styles();
 			add_editor_style( 'styles/' . $this->style . '-editor.css' );
 		}
+	}
+	/**
+	 * Dequeue and deregister default styles.
+	 */
+	public function remove_default_styles() {
+		wp_dequeue_style( 'newspack-style' );
+		wp_deregister_style( 'newspack-style' );
 	}
 	/**
 	 * Specifically gets active stylesheet to preview in Customizer.
