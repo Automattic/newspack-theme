@@ -34,6 +34,70 @@ function newspack_customize_register( $wp_customize ) {
 	}
 
 	/**
+	 * Header Options
+	 */
+	$wp_customize->add_section(
+		'newspack_header_options',
+		array(
+			'title' => esc_html__( 'Site Header Settings', 'newspack' ),
+		)
+	);
+
+	// Header - add option to center logo.
+	$wp_customize->add_setting(
+		'header_center_logo',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_center_logo',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Center Logo', 'newspack' ),
+			'description' => esc_html__( 'Check to center the logo in the header.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - add option for solid background colour.
+	$wp_customize->add_setting(
+		'header_solid_background',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_solid_background',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Solid Background', 'newspack' ),
+			'description' => esc_html__( 'Check to use the primary color as the header background.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - add option for simplified short header.
+	$wp_customize->add_setting(
+		'header_simplified',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_simplified',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Short Header', 'newspack' ),
+			'description' => esc_html__( 'Displays header as a shorter, simpler version.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	/**
 	 * Primary color.
 	 */
 	$wp_customize->add_setting(
@@ -113,60 +177,6 @@ function newspack_customize_register( $wp_customize ) {
 			'type'    => 'checkbox',
 			'label'   => esc_html__( 'Display Tagline', 'newspack' ),
 			'section' => 'title_tagline',
-		)
-	);
-
-	// Header - add option to center logo.
-	$wp_customize->add_setting(
-		'header_center_logo',
-		array(
-			'default'           => false,
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'header_center_logo',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Center Logo', 'newspack' ),
-			'description' => esc_html__( 'Check to center the logo in the header.', 'newspack' ),
-			'section'     => 'title_tagline',
-		)
-	);
-
-	// Header - add option for solid background colour.
-	$wp_customize->add_setting(
-		'header_solid_background',
-		array(
-			'default'           => false,
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'header_solid_background',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Solid Background', 'newspack' ),
-			'description' => esc_html__( 'Check to use the primary color as the header background.', 'newspack' ),
-			'section'     => 'title_tagline',
-		)
-	);
-
-	// Header - add option for simplified short header.
-	$wp_customize->add_setting(
-		'header_simplified',
-		array(
-			'default'           => false,
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'header_simplified',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Short Header', 'newspack' ),
-			'description' => esc_html__( 'Displays header as a shorter, simpler version.', 'newspack' ),
-			'section'     => 'title_tagline',
 		)
 	);
 
