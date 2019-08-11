@@ -40,8 +40,6 @@ function newspack_custom_colors_css() {
 
 		.main-navigation .main-menu > li,
 		.main-navigation ul.main-menu > li > a,
-		.entry .entry-meta a:hover,
-		.entry .entry-footer a:hover,
 		.entry .entry-content .more-link:hover,
 		.main-navigation .main-menu > li > a + svg,
 		.comment .comment-metadata > a:hover,
@@ -177,7 +175,9 @@ function newspack_custom_colors_css() {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 				color: ' . $primary_color_contrast . ';
 			}
-			.accent-header, .article-section-title {
+			.accent-header, .article-section-title,
+			.entry .entry-meta a:hover,
+			.entry .entry-footer a:hover {
 				color: ' . $primary_color . ';
 			}
 		';
