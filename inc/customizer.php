@@ -39,7 +39,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'newspack_header_options',
 		array(
-			'title' => esc_html__( 'Site Header Settings', 'newspack' ),
+			'title' => esc_html__( 'Header Settings', 'newspack' ),
 		)
 	);
 
