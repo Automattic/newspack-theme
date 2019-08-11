@@ -68,7 +68,10 @@ Newspack Theme Styles - Style Pack 3
 
 // Posts & Pages
 
-.entry .entry-footer,
+.entry .entry-footer {
+	color: $color__primary;
+}
+
 .entry .entry-footer a,
 .entry .entry-footer a:hover {
 	color: $color__text-main;
