@@ -7,6 +7,15 @@ Newspack Theme Styles - Style Pack 3
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+// Header
+
+.header-solid-background {
+	.site-header,
+	.site-header .main-navigation .main-menu .sub-menu {
+		background-color: $color__secondary;
+	}
+}
+
 // Accent headers
 
 .accent-header,

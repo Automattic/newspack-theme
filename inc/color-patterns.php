@@ -218,6 +218,10 @@ function newspack_custom_colors_css() {
 
 	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$theme_css .= '
+			.site-content #primary {
+				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
+			}
+
 			.site-footer {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
@@ -267,15 +271,8 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
-		$theme_css .= '
-			.site-content #primary {
-				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
-			}
-		';
-	}
+	if ( true === get_theme_mod( 'header_solid_background', false ) && 'style-3' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
 
-	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
 		$theme_css .= '
 			.header-solid-background .site-header {
 				background-color: ' . $primary_color . ';
@@ -289,8 +286,30 @@ function newspack_custom_colors_css() {
 			.header-solid-background .main-navigation ul.main-menu > li > a,
 			.header-solid-background .main-navigation ul.main-menu > li > a:hover,
 			.header-solid-background .top-header-contain,
-			.header-solid-background .middle-header-contain {
+			.header-solid-background .middle-header-contain,
+			.main-navigation .sub-menu a {
 				color: ' . $primary_color_contrast . ';
+			}
+		';
+	}
+
+	if ( true === get_theme_mod( 'header_solid_background', false ) && 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+		$theme_css .= '
+			.header-solid-background .site-header,
+			.site-header .main-navigation .main-menu .sub-menu {
+				background-color: ' . $secondary_color . ';
+			}
+			.header-solid-background .site-header,
+			.header-solid-background .site-title,
+			.header-solid-background .site-title a:link,
+			.header-solid-background .site-title a:visited,
+			.header-solid-background .site-description,
+			.header-solid-background .main-navigation .main-menu > li,
+			.header-solid-background .main-navigation ul.main-menu > li > a,
+			.header-solid-background .main-navigation ul.main-menu > li > a:hover,
+			.header-solid-background .top-header-contain,
+			.header-solid-background .middle-header-contain {
+				color: ' . $secondary_color_contrast . ';
 			}
 		';
 	}
