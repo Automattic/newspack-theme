@@ -216,6 +216,10 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
+
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+				border-color: ' . $primary_color . ';
+			}
 		';
 	}
 
@@ -350,6 +354,15 @@ function newspack_custom_colors_css() {
 		';
 	}
 
+
+	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+		$editor_css .= '
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+				border-color: ' . $primary_color . ';
+			}
+		';
+	}
+
 	if ( 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .accent-header,
@@ -372,9 +385,7 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color . ';
 			}
 		';
-	}
 
-	if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
 				background-color: ' . $primary_color . ';
