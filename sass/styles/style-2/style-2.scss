@@ -56,6 +56,35 @@ Newspack Theme Styles - Style Pack 2
 	}
 }
 
+// Posts & Pages
+
+.entry .entry-footer,
+.entry .entry-footer a,
+.entry .entry-footer a:hover {
+	color: $color__text-main;
+}
+
+.tags-links {
+	a {
+		background: $color__background-pre;
+		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
+		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		text-transform: uppercase;
+
+		&:hover {
+			background: lighten( $color__background-pre, 5% );
+		}
+	}
+
+	.sep {
+		display: none;
+	}
+}
+
+.post-edit-link {
+	text-transform: uppercase;
+}
+
 // Blocks
 
 .entry .entry-content {
