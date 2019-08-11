@@ -7,7 +7,6 @@ Newspack Theme Editor Styles - Style Pack 3
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
-
 .accent-header,
 .article-section-title {
 	color: $color__primary;
@@ -36,6 +35,17 @@ Newspack Theme Editor Styles - Style Pack 3
 	.byline a,
 	.entry-date {
 		text-transform: uppercase;
+	}
+}
+
+.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright) {
+	.post-has-image .entry-title {
+		background-color: $color__background-body;
+		margin-top: -1.75em;
+		padding: 0.5em 0.25em 0 0;
+		position: relative;
+		width: 85%;
+		z-index: 1;
 	}
 }
 
@@ -121,5 +131,6 @@ Newspack Theme Editor Styles - Style Pack 3
 		height: 5px;
 		margin-top: #{ 1.25 * $size__spacing-unit };
 		width: 32px;
+
 	}
 }
