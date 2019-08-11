@@ -7,6 +7,7 @@ Newspack Theme Editor Styles - Style Pack 3
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
+
 .accent-header,
 .article-section-title {
 	color: $color__primary;
@@ -97,5 +98,21 @@ Newspack Theme Editor Styles - Style Pack 3
 		&:before {
 			border-left: 0;
 		}
+	}
+}
+
+.wp-block-image figcaption.block-editor-rich-text__editable {
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: left;
+
+	&:after {
+		background-color: $color__primary;
+		content: "";
+		display: block;
+		height: 5px;
+		margin-top: #{ 1.25 * $size__spacing-unit };
+		width: 32px;
 	}
 }
