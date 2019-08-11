@@ -9,6 +9,7 @@
 	<!-- Exclude patterns -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
 	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/tests/*</exclude-pattern>
 
 	<!-- Include the WordPress ruleset, with space for exclusions if necessary. -->
 	<rule ref="WordPress-Core">
