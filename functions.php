@@ -354,7 +354,16 @@ function newspack_is_static_front_page() {
  * Add body class on editor pages if editing the static front page.
  */
 function newspack_filter_admin_body_class( $classes ) {
-	return newspack_is_static_front_page() ? $classes . ' newspack-static-front-page' : $classes;
+
+	if ( newspack_is_static_front_page() ) {
+		$classes .= ' newspack-static-front-page';
+	}
+
+	if ( 'default' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
+		$classes .= ' style-pack-' . get_theme_mod( 'active_style_pack', 'default' );
+	}
+
+	return $classes;
 }
 add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
 
