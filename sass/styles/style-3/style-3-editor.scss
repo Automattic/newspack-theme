@@ -6,3 +6,20 @@ Newspack Theme Editor Styles - Style Pack 3
 
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
+
+.accent-header,
+.article-section-title {
+	color: $color__primary;
+	font-size: $font__size-xs;
+	margin: 0 0 #{ 2 * $size__spacing-unit };
+	text-transform: uppercase;
+
+	&:before {
+		background-color: $color__primary;
+		content: "";
+		display: block;
+		height: 5px;
+		margin: 0 0 $size__spacing-unit;
+		width: 32px;
+	}
+}
