@@ -53,6 +53,13 @@ Newspack Theme Styles - Style Pack 4
 	}
 }
 
+.blog,
+.search {
+	.cat-links {
+		text-align: left;
+	}
+}
+
 .author-bio {
 	h2 {
 		color: $color__text-main;
