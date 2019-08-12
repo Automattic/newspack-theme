@@ -146,11 +146,14 @@ Newspack Theme Styles - Style Pack 4
 	.entry-subhead {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;
+		display: block;
 		margin-bottom: $size__spacing-unit;
 		padding: #{ 0.75 * $size__spacing-unit } 0;
 		text-align: center;
 
-		@include media( tablet ) {
+
+		@include media( mobile ) {
+			display: flex;
 			margin-bottom: #{ 2 * $size__spacing-unit };
 			text-align: left;
 		}
@@ -162,7 +165,7 @@ Newspack Theme Styles - Style Pack 4
 		.author-avatar {
 			display: none;
 
-			@include media( tablet ) {
+			@include media( mobile ) {
 				display: block;
 			}
 		}
