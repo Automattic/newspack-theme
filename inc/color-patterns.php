@@ -240,7 +240,8 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.accent-header,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
-			.cat-links {
+			.cat-links,
+			.entry .entry-footer {
 				color: ' . $primary_color . ';
 			}
 
