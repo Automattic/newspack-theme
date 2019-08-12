@@ -107,3 +107,11 @@ Newspack Theme Styles - Style Pack 4
 		}
 	}
 }
+
+.entry .entry-content {
+	.has-drop-cap:not(:focus)::first-letter {
+		color: $color__primary;
+		font-family: $font__heading;
+		font-weight: bold;
+	}
+}

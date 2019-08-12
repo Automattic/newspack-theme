@@ -240,7 +240,8 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.accent-header,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
-			.cat-links {
+			.cat-links,
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
 				color: ' . $primary_color . ';
 			}
 		';
@@ -366,6 +367,15 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color . ';
 			}
 		';
+	}
+
+	if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+		$editor_css .= '
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+				color: ' . $primary_color . ';
+			}
+		';
+
 	}
 
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {
