@@ -203,13 +203,18 @@ function newspack_custom_colors_css() {
 			.page-title:before {
 				background-color: ' . $primary_color . ';
 			}
+
+			.entry .entry-content .wp-block-pullquote blockquote:before {
+				color: ' . $primary_color . ';
+			}
 		';
 	}
 
-	if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$theme_css .= '
-			.entry .entry-content .wp-block-pullquote blockquote:before {
-				color: ' . $primary_color . ';
+			.site-footer {
+				background-color: ' . $primary_color . ';
+				color: ' . $primary_color_contrast . ';
 			}
 		';
 	}
