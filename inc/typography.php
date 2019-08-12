@@ -125,7 +125,12 @@ function newspack_custom_typography_css() {
 			$css_blocks .= "
 			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
 				font-family: $font_header;
-			}";
+			}
+
+			.taxonomy-description {
+				font-family: $font_header;
+			}
+			";
 		}
 
 		$editor_css_blocks .= "
