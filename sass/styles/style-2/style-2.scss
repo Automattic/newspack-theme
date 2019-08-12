@@ -58,6 +58,30 @@ Newspack Theme Styles - Style Pack 2
 
 // Posts & Pages
 
+.entry-meta {
+	.byline a {
+		color: $color__text-light;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+}
+
+.single-post {
+	&:not(.has-featured-image) .entry-header,
+	.has-large-featured-image .entry-header {
+		border-bottom: 2px solid $color__text-main;
+
+		@include media( tablet ) {
+			padding-bottom: #{ 2 * $size__spacing-unit };
+			margin-bottom: $size__spacing-unit;
+		}
+	}
+
+	.entry-meta {
+		font-size: $font__size-xs;
+	}
+}
+
 .entry .entry-footer,
 .entry .entry-footer a,
 .entry .entry-footer a:hover {
@@ -88,6 +112,22 @@ Newspack Theme Styles - Style Pack 2
 // Blocks
 
 .entry .entry-content {
+
+	.wp-block-newspack-blocks-homepage-articles {
+		 article .entry-meta {
+			font-size: #{ 0.7 * $font__size_base };
+		}
+
+		&.type-scale1,
+		&.type-scale2,
+		&.type-scale3,
+		&.type-scale4 {
+			article .entry-meta {
+				font-size: #{ 0.6 * $font__size_base };
+			}
+		}
+	}
+
 	.wp-block-pullquote {
 		border-width: 16px 0 4px;
 
@@ -140,7 +180,6 @@ Newspack Theme Styles - Style Pack 2
 		}
 	}
 }
-
 
 // Author Bio
 
