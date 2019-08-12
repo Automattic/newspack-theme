@@ -187,7 +187,8 @@ function newspack_custom_colors_css() {
 	if ( 'default' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$theme_css .= '
 			.cat-links a,
-			.cat-links a:visited {
+			.cat-links a:visited,
+			body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
