@@ -146,15 +146,17 @@ Newspack Theme Styles - Style Pack 4
 	.entry-subhead {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;
+		margin-bottom: $size__spacing-unit;
 		padding: #{ 0.75 * $size__spacing-unit } 0;
 		text-align: center;
 
-		.sd-content {
-			text-align: inherit;
+		@include media( tablet ) {
+			margin-bottom: #{ 2 * $size__spacing-unit };
+			text-align: left;
 		}
 
-		@include media( tablet ) {
-			text-align: left;
+		.sd-content {
+			text-align: inherit;
 		}
 
 		.author-avatar {
