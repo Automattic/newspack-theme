@@ -52,3 +52,68 @@ Newspack Theme Editor Styles - Style Pack 4
 .wp-block-image figcaption.block-editor-rich-text__editable {
 	font-weight: bold;
 }
+
+blockquote,
+cite {
+	font-family: $font__heading;
+	font-style: italic;
+	text-align: center;
+
+	em,
+	i {
+		font-style: normal;
+	}
+}
+
+.wp-block[data-type="core/pullquote"] {
+
+	.wp-block-pullquote {
+		border-width: 2px 0;
+	}
+
+	blockquote {
+		margin: #{ 2 * $size__spacing-unit } 0;
+	}
+
+	blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+	blockquote > .editor-rich-text p,
+	p {
+		font-size: $font__size-lg;
+		font-family: $font__heading;
+		text-align: center;
+
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
+	.wp-block-pullquote__citation {
+		font-family: $font__heading;
+		font-style: italic;
+		text-align: center;
+
+		em,
+		i {
+			font-style: normal;
+		}
+	}
+
+	&[data-align="left"] .wp-block-pullquote,
+	&[data-align="right"] .wp-block-pullquote {
+		margin-top: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
+
+		@include media( tablet ) {
+			blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+			blockquote > .editor-rich-text p,
+			p {
+				font-size: $font__size-md;
+				text-align: left;
+			}
+		}
+
+		.wp-block-pullquote__citation {
+			text-align: left;
+		}
+	}
+}
