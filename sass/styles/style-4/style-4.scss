@@ -60,10 +60,50 @@ Newspack Theme Styles - Style Pack 4
 	}
 }
 
+// Author bio
+
 .author-bio {
+	display: block;
+	text-align: center;
+
 	h2 {
 		color: $color__text-main;
 		margin: 0 0 #{ 0.5 * $size__spacing-unit };
 		text-align: left;
+	}
+
+	.avatar {
+		height: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60px;
+
+		@include media( tablet ) {
+			margin-left: 0;
+			margin-right: $size__spacing-unit;
+		}
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	.author-bio-text {
+		width: 100%;
+
+		@include media( tablet ) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+		}
+	}
+
+	.author-bio-header {
+		@include media( tablet ) {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			text-align: left;
+		}
 	}
 }
