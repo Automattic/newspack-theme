@@ -7,3 +7,56 @@ Newspack Theme Styles - Style Pack 4
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+// Accent headers
+
+.accent-header,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.cat-links {
+	color: $color__primary;
+	text-align: center;
+}
+
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.widget-title.accent-header {
+	margin-bottom: $size__spacing-unit;
+	overflow: hidden;
+
+	span {
+		display: inline-block;
+		position: relative;
+
+		&:before,
+		&:after {
+			border-top: 1px solid $color__border;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 600px;
+		}
+
+		&:before {
+			right: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		}
+
+		&:after {
+			left: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		}
+	}
+}
+
+.cat-links {
+	font-size: $font__size-sm;
+
+	a {
+		color: inherit;
+	}
+}
+
+.author-bio {
+	h2 {
+		color: $color__text-main;
+		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		text-align: left;
+	}
+}

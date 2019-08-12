@@ -213,8 +213,8 @@ function newspack_widgets_init() {
 			'description'   => __( 'Add widgets here to appear in your sidebar.', 'newspack' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title accent-header">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h2 class="widget-title accent-header"><span>',
+			'after_title'   => '</span></h2>',
 		)
 	);
 
