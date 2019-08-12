@@ -68,6 +68,18 @@ Newspack Theme Styles - Style Pack 3
 
 // Posts & Pages
 
+.entry-meta {
+	.byline a,
+	.entry-date {
+		text-transform: uppercase;
+	}
+}
+
+.single-post:not(.has-featured-image) .entry-header,
+.single-post.has-large-featured-image .entry-header {
+	border-bottom: 1px dotted $color__text-main;
+}
+
 .entry .entry-footer {
 	color: $color__primary;
 }
@@ -178,3 +190,4 @@ Newspack Theme Styles - Style Pack 3
 		}
 	}
 }
+

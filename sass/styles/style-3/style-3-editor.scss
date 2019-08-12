@@ -32,6 +32,13 @@ Newspack Theme Editor Styles - Style Pack 3
 	}
 }
 
+.entry-meta {
+	.byline a,
+	.entry-date {
+		text-transform: uppercase;
+	}
+}
+
 .wp-block[data-type="core/pullquote"] {
 
 	.wp-block-pullquote {
