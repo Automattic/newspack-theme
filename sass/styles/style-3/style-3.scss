@@ -220,3 +220,49 @@ Newspack Theme Styles - Style Pack 3
 		margin-top: $size__spacing-unit;
 	}
 }
+
+// Site Footer
+
+.site-footer {
+	background-color: $color__background-dark;
+	color: $color__background-body;
+
+	a,
+	a:hover,
+	a:visited,
+	.widget a,
+	.widget a:hover,
+	.widget a:visited,
+	.widget-title {
+		color: inherit;
+	}
+
+	.widget-title {
+		text-transform: uppercase;
+	}
+}
+
+.footer-branding {
+	margin-bottom: #{ 2 * $size__spacing-unit };
+
+	@include media( tablet ) {
+		padding-top: #{ 2 * $size__spacing-unit };
+	}
+
+	.wrapper {
+		border-bottom: 1px solid rgba( 255, 255, 255, 0.25 );
+	}
+}
+
+.site-info {
+	color: $color__background-body;
+	text-transform: uppercase;
+
+	.wrapper {
+		border: 0;
+	}
+
+	a {
+		color: inherit;
+	}
+}
