@@ -53,7 +53,7 @@ if ( (bool) get_the_author_meta( 'description' ) ) : ?>
 			<div>
 				<h2 class="accent-header">
 					<?php echo esc_html( get_the_author() ); ?>
-					<span><?php esc_html_e( 'Staff Writer', 'newspack-theme' ); ?></span>
+					<span><?php // TODO: Add Job title ?></span>
 				</h2>
 				<div class="author-meta">
 					<a href="<?php echo 'mailto:' . esc_attr( get_the_author_meta( 'user_email' ) ); ?>"><?php the_author_meta( 'user_email' ); ?></a>
