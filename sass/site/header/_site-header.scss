@@ -262,8 +262,19 @@
 	}
 
 	&.header-left-logo {
-		&.hide-site-tagline.has-tertiary-menu .nav-wrapper + .nav-wrapper {
+		&.hide-site-tagline .nav-wrapper {
 			margin-left: auto;
+
+			& + .nav-wrapper {
+				margin-left: 0;
+			}
+		}
+
+		&.hide-site-tagline.has-tertiary-menu .nav-wrapper {
+			margin-left: 0;
+			& + .nav-wrapper {
+				margin-left: auto;
+			}
 		}
 
 		&.show-site-tagline .site-branding {
