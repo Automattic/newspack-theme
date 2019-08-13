@@ -25,6 +25,7 @@ function newspack_custom_colors_css() {
 		/* Set primary background color */
 
 		.main-navigation .sub-menu,
+		.mobile-sidebar,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content > .has-primary-background-color,
@@ -52,6 +53,10 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
 			color: ' . $primary_color . '; /* base: #0073a8; */
+		}
+
+		.mobile-sidebar {
+			color: ' . $primary_color_contrast . ';
 		}
 
 		/* Set primary border color */
@@ -103,14 +108,14 @@ function newspack_custom_colors_css() {
 
 		/* Set primary variation background color */
 
-		.main-navigation .sub-menu > li > a:hover,
-		.main-navigation .sub-menu > li > a:focus,
-		.main-navigation .sub-menu > li > a:hover:after,
-		.main-navigation .sub-menu > li > a:focus:after,
-		.main-navigation .sub-menu > li > .menu-item-link-return:hover,
-		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
+		.site-header .main-navigation .sub-menu > li > a:hover,
+		.site-header .main-navigation .sub-menu > li > a:focus,
+		.site-header .main-navigation .sub-menu > li > a:hover:after,
+		.site-header .main-navigation .sub-menu > li > a:focus:after,
+		.site-header .main-navigation .sub-menu > li > .menu-item-link-return:hover,
+		.site-header .main-navigation .sub-menu > li > .menu-item-link-return:focus,
+		.site-header .main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
+		.site-header .main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
 		.entry .entry-content > .has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,

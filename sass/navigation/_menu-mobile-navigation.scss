@@ -48,10 +48,20 @@
 		margin-left: $size__spacing-unit;
 	}
 
+	a,
+	a:visited,
+	.main-navigation .sub-menu > li > a {
+		color: inherit;
+	}
+
 	a {
-		color: #fff;
 		display: inline-block;
 		padding: #{ 0.5 * $size__spacing-unit } 0;
+	}
+
+	a:hover {
+		background: transparent;
+		text-decoration: underline;
 	}
 
 	.main-navigation .main-menu > li.menu-item-has-children .submenu-expand svg,
