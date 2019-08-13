@@ -109,7 +109,9 @@ function newspack_custom_typography_css() {
 
 		if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 			$css_blocks .= "
-			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
+			.entry .entry-content .wp-block-pullquote,
+			.entry .entry-content .wp-block-pullquote cite {
 				font-family: $font_header;
 			}";
 		}
