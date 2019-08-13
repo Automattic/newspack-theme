@@ -65,6 +65,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'header-default-height';
 	}
 
+	// Adds classes if menus are assigned
+	if ( has_nav_menu( 'tertiary-menu' ) ) {
+		$classes[] = 'has-tertiary-menu';
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';
