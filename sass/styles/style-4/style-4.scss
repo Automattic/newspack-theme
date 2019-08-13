@@ -289,3 +289,44 @@ Newspack Theme Styles - Style Pack 4
 		text-align: center;
 	}
 }
+
+
+.site-footer {
+	background-color: #f1f1f1;
+	color: $color__text-main;
+
+	.widget .widget-title {
+		color: $color__primary;
+		font-weight: bold;
+	}
+
+	.widget a,
+	.widget a:visited,
+	a,
+	a:visited {
+		color: inherit;
+	}
+}
+
+.footer-branding {
+	padding-top: $size__spacing-unit;
+
+	@include media( tablet ) {
+		padding-top: #{ 2 * $size__spacing-unit };
+	}
+}
+
+.site-info {
+	background-color: $color__text-main;
+
+	.wrapper {
+		border: 0;
+	}
+
+	&,
+	a,
+	a:hover,
+	a:visited {
+		color: $color__background-body;
+	}
+}

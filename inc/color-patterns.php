@@ -253,6 +253,10 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
+
+			.site-footer .widget .widget-title {
+				color: ' . $primary_color . ';
+			}
 		';
 	}
 
