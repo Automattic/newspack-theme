@@ -70,6 +70,10 @@
 	.submenu-expand {
 		display: none;
 	}
+
+	.tertiary-menu a {
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+	}
 }
 
 #mobile-sidebar-fallback {

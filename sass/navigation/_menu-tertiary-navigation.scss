@@ -16,7 +16,7 @@
 	a {
 		color: inherit;
 		display: inline-block;
-		padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		padding: #{ 0.125 * $size__spacing-unit } 0;
 	}
 
 	#search-toggle {
@@ -27,14 +27,13 @@
 
 // Styles for when menu items appear in the site-header.
 .site-header .tertiary-menu {
-	font-size: $font__size-sm;
-
 	@include media( tablet ) {
 		text-align: right;
 	}
 
 	li {
 		display: inline-block;
+		font-size: $font__size-sm;
 
 		@include media(tablet) {
 			&:nth-child(n+2) {
