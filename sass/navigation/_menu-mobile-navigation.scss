@@ -60,10 +60,6 @@
 		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit }
 	}
 
-	ul ul a {
-		margin: #{ 0.75 * $size__spacing-unit } 0;
-	}
-
 	a:hover {
 		background: transparent;
 		text-decoration: underline;

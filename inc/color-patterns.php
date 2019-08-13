@@ -308,6 +308,9 @@ function newspack_custom_colors_css() {
 			.header-solid-background .site-title a:link,
 			.header-solid-background .site-title a:visited,
 			.header-solid-background .site-description,
+			.header-solid-background.header-simplified .main-navigation .main-menu > li,
+			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a,
+			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a:hover,
 			.header-solid-background .top-header-contain,
 			.header-solid-background .middle-header-contain,
 			.main-navigation .sub-menu a {
