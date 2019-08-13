@@ -300,7 +300,10 @@ Newspack Theme Styles - Style Pack 4
 		font-weight: bold;
 	}
 
-	a {
+	.widget a,
+	.widget a:visited,
+	a,
+	a:visited {
 		color: inherit;
 	}
 }

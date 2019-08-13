@@ -250,7 +250,7 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color_contrast . ';
 			}
 
-			.site-footer  .widget .widget-title {
+			.site-footer .widget .widget-title {
 				color: ' . $primary_color . ';
 			}
 		';
