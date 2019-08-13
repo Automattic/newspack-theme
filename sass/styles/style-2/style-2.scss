@@ -301,6 +301,34 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
+// Archives
+
+.archive {
+	.page-header {
+		border-bottom: 2px solid $color__text-main;
+		padding-bottom: #{ 2 * $size__spacing-unit };
+
+		@include media( tablet ) {
+			padding-bottom: #{ 4 * $size__spacing-unit };
+		}
+	}
+
+	.page-title {
+		color: $color__text-light;
+		font-size: $font__size-sm;
+	}
+}
+
+.page-description {
+	font-size: $font__size-xxxxxl;
+	margin-top: $size__spacing-unit;
+}
+
+.taxonomy-description {
+	font-family: $font__heading;
+	font-style: normal;
+}
+
 // Footer
 
 .site-footer {
