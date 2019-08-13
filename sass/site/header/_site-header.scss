@@ -268,7 +268,7 @@
 			}
 		}
 
-		&:not( .hide-site-tagline) .site-branding {
+		&.show-site-tagline .site-branding {
 			margin-right: auto;
 		}
 	}

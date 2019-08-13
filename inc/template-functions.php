@@ -39,6 +39,8 @@ function newspack_body_classes( $classes ) {
 	$show_tagline = get_theme_mod( 'header_display_tagline', true );
 	if ( false === $show_tagline ) {
 		$classes[] = 'hide-site-tagline';
+	} else {
+		$classes[] = 'show-site-tagline';
 	}
 
 	// Adds classes to reflect the header layout
