@@ -178,3 +178,35 @@ Newspack Theme Styles - Style Pack 4
 		}
 	}
 }
+
+.entry .entry-footer {
+	color: $color__primary;
+	text-align: center;
+
+	a,
+	a:hover {
+		color: $color__text-main;
+	}
+}
+
+.tags-links {
+
+	span:first-child {
+		text-transform: none;
+	}
+
+	a {
+		background: $color__background-pre;
+		color: $color__text-main;
+		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
+		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+
+		&:hover {
+			background: lighten( $color__background-pre, 5% );
+		}
+	}
+
+	.sep {
+		display: none;
+	}
+}
