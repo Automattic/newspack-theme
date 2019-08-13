@@ -108,6 +108,12 @@ Newspack Theme Styles - Style Pack 4
 	}
 }
 
+.entry-title {
+	font-weight: normal;
+}
+
+// Posts & Pages
+
 .entry .entry-content {
 	.has-drop-cap:not(:focus)::first-letter {
 		background-color: $color__primary;
@@ -116,5 +122,59 @@ Newspack Theme Styles - Style Pack 4
 		font-weight: bold;
 		font-size: $font__size-xxl;
 		padding: 0.4em;
+	}
+}
+
+.single-post {
+	.cat-links {
+		text-align: center;
+	}
+
+	.entry-header .entry-title {
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		margin-top: $size__spacing-unit;
+		text-align: center;
+
+		@include media( tablet ) {
+			margin-bottom: #{ 3 * $size__spacing-unit };
+			margin-left: auto;
+			margin-right: auto;
+			width: 85%;
+		}
+	}
+
+	.entry-subhead {
+		border-bottom: 1px solid $color__border;
+		border-top: 1px solid $color__border;
+		display: block;
+		margin-bottom: $size__spacing-unit;
+		padding: #{ 0.75 * $size__spacing-unit } 0;
+		text-align: center;
+
+
+		@include media( mobile ) {
+			display: flex;
+			margin-bottom: #{ 2 * $size__spacing-unit };
+			text-align: left;
+		}
+
+		.sd-content {
+			text-align: inherit;
+		}
+
+		.author-avatar {
+			display: none;
+
+			@include media( mobile ) {
+				display: block;
+			}
+		}
+	}
+
+	&:not(.has-featured-image),
+	&.has-large-featured-image {
+		.entry-header {
+			border-bottom: 0;
+		}
 	}
 }
