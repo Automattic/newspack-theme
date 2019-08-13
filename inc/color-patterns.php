@@ -188,6 +188,7 @@ function newspack_custom_colors_css() {
 		'style-4' === get_theme_mod( 'active_style_pack', 'default' )
 	) {
 		$theme_css .= '
+			.archive .page-title,
 			.entry-meta .byline a,
 			.entry .entry-meta a:hover {
 				color: ' . $primary_color . ';
