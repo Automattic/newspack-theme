@@ -76,15 +76,27 @@ body:not(.header-solid-background) .site-header {
 #primary {
 	background-color: $color__background-body;
 	border-top: 2px solid $color__primary-variation;
-	padding: 0 #{ 0.5 * $size__spacing-unit };
+	padding: #{ 2 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 
 	@include media(tablet) {
 		border-top-width: 4px;
-		padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
+		padding: #{ 3 * $size__spacing-unit } #{ 3 * $size__spacing-unit } 0;
 	}
 
 	@include media(desktop) {
-		padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
+		padding: #{ 3.5 * $size__spacing-unit } #{ 4.5 * $size__spacing-unit } 0;
+	}
+}
+
+.newspack-front-page #primary {
+	padding-top: 0;
+
+	@include media(tablet) {
+		padding-top: $size__spacing-unit;
+	}
+
+	@include media(desktop) {
+		padding-top: $size__spacing-unit;
 	}
 }
 
@@ -149,12 +161,19 @@ body:not(.header-solid-background) .site-header {
 }
 
 .single-post {
+	.entry-header {
+		padding-bottom: #{ 2 * $size__spacing-unit };
+
+		@include media( tablet ) {
+			padding-bottom: #{ 3 * $size__spacing-unit };
+		}
+	}
+
 	&:not(.has-featured-image) .entry-header,
 	.has-large-featured-image .entry-header {
 		border-bottom: 2px solid $color__text-main;
 
 		@include media( tablet ) {
-			padding-bottom: #{ 2 * $size__spacing-unit };
 			margin-bottom: $size__spacing-unit;
 		}
 	}
