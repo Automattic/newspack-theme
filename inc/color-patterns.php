@@ -243,6 +243,11 @@ function newspack_custom_colors_css() {
 			.cat-links {
 				color: ' . $primary_color . ';
 			}
+
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+				background-color: ' . $primary_color . ';
+				color: ' . $primary_color_contrast . ';
+			}
 		';
 	}
 
@@ -366,6 +371,16 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color . ';
 			}
 		';
+	}
+
+	if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+		$editor_css .= '
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+				background-color: ' . $primary_color . ';
+				color: ' . $primary_color_contrast . ';
+			}
+		';
+
 	}
 
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {

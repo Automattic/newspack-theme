@@ -121,6 +121,13 @@ function newspack_custom_typography_css() {
 			}";
 		}
 
+		if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+			$css_blocks .= "
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+				font-family: $font_header;
+			}";
+		}
+
 		$editor_css_blocks .= "
 		.editor-block-list__layout .editor-block-list__block h1,
 		.editor-block-list__layout .editor-block-list__block h2,
@@ -185,6 +192,16 @@ function newspack_custom_typography_css() {
 		}
 
 		if ( 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+			$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+
+			{
+				font-family: $font_header;
+			}
+			";
+		}
+
+		if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 			$editor_css_blocks .= "
 			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
 

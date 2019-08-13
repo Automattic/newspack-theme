@@ -36,3 +36,15 @@ Newspack Theme Editor Styles - Style Pack 4
 		left: 0;
 	}
 }
+
+.wp-block-paragraph {
+
+	&.has-drop-cap:not(:focus)::first-letter {
+		background-color: $color__primary;
+		color: #fff;
+		font-family: $font__heading;
+		font-weight: bold;
+		font-size: $font__size-xxl;
+		padding: 0.4em;
+	}
+}
