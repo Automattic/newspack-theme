@@ -123,7 +123,8 @@ function newspack_custom_typography_css() {
 
 		if ( 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 			$css_blocks .= "
-			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
+			.taxonomy-description {
 				font-family: $font_header;
 			}";
 		}

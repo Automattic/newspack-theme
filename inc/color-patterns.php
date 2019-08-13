@@ -235,6 +235,7 @@ function newspack_custom_colors_css() {
 			.accent-header:before,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title:before,
 			.cat-links:before,
+			.archive .page-title:before,
 			.entry .entry-content .wp-block-image figcaption:after {
 				background-color: ' . $primary_color . ';
 			}
