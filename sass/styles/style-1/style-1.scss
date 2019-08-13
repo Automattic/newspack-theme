@@ -91,7 +91,7 @@
 	}
 
 	.wp-block-pullquote {
-		background-color: #fff;
+		background-color: $color__background-body;
 		border-width: 0;
 		font-family: $font__heading;
 		font-weight: bold;
@@ -149,9 +149,6 @@
 			font-weight: normal;
 			text-transform: uppercase;
 		}
-
-
-
 
 		&.is-style-solid-color {
 			blockquote:before {
