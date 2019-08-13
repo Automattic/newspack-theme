@@ -75,6 +75,10 @@ Newspack Theme Styles - Style Pack 4
 		font-size: $font__size-xxl;
 		padding: 0.4em;
 	}
+
+	.wp-block-image figcaption {
+		font-weight: bold;
+	}
 }
 
 .single-post {
