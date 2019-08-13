@@ -70,7 +70,11 @@ function newspack_custom_colors_css() {
 			color: ' . $primary_color . ';
 		}
 
-		.mobile-sidebar {
+		.mobile-sidebar,
+		.mobile-sidebar a,
+		.mobile-sidebar a:visited,
+		.mobile-sidebar .main-navigation .sub-menu > li > a,
+		.mobile-sidebar .main-navigation ul.main-menu > li > a {
 			color: ' . $primary_color_contrast . ';
 		}
 

@@ -8,6 +8,7 @@ nav.secondary-menu {
 
 	a {
 		color: inherit;
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit };
 	}
 }
 

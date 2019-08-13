@@ -16,6 +16,7 @@
 	a {
 		color: inherit;
 		display: inline-block;
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 	}
 
 	#search-toggle {
