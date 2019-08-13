@@ -409,7 +409,7 @@ function newspack_sanitize_checkbox( $input ) {
  *
  * @param string $code Font provider embed code.
  *
- * @return string Return a valid font provider URL if found or false if not.
+ * @return string|null Return a valid font provider URL if found or null if not.
  */
 function newspack_sanitize_font_provider_url( $code ) {
 	if ( '' === trim( $code ) ) {
@@ -438,7 +438,7 @@ function newspack_sanitize_font_provider_url( $code ) {
  *
  * @param string $stack_id Font stack ID.
  *
- * @return string Return a valid font stack ID or null.
+ * @return string|null Return a valid font stack ID or null.
  */
 function newspack_sanitize_font_stack( $stack_id ) {
 	$stacks = newspack_get_font_stacks();

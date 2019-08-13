@@ -160,7 +160,7 @@ function newspack_can_show_post_thumbnail() {
  * @origin Newspack Theme 1.0
  *
  * @param array $attr  Attributes for the image markup.
- * @return string Value for use in post thumbnail 'sizes' attribute.
+ * @return array Value for use in post thumbnail 'sizes' attribute.
  */
 function newspack_post_thumbnail_sizes_attr( $attr ) {
 
