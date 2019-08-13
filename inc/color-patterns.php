@@ -240,7 +240,10 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.accent-header,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
-			.cat-links,
+			.cat-links {
+				color: ' . $primary_color . ';
+			}
+
 			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
