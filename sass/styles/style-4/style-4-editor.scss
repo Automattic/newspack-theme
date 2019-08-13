@@ -7,6 +7,10 @@ Newspack Theme Editor Styles - Style Pack 4
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
+.editor-post-title__block .editor-post-title__input {
+	font-weight: normal;
+}
+
 .accent-header,
 .article-section-title {
 	color: $color__primary;
