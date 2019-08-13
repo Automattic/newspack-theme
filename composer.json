@@ -1,14 +1,14 @@
 {
-  "name"       : "automattic/newspack-theme",
+  "name": "automattic/newspack-theme",
   "description": "A theme for Newspack. https://newspack.blog/",
-  "homepage"   : "https://newspack.blog/",
-  "type"       : "package",
-  "license"    : "GPL-2.0-or-later",
-  "support"    : {
+  "homepage": "https://newspack.blog/",
+  "type": "package",
+  "license": "GPL-2.0-or-later",
+  "support": {
     "issues": "https://github.com/Automattic/newspack-theme/issues"
   },
-  "require"    : {
-      "composer/installers": "~1.6"
+  "require": {
+    "composer/installers": "~1.6"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
@@ -20,9 +20,9 @@
     "szepeviktor/phpstan-wordpress": "^0.2.0"
   },
   "scripts": {
-		"phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
-		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
-		"format": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+    "phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
+    "lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "format": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
     "post-install-cmd": [
       "vendor/bin/cghooks add --no-lock",
       "PHPStan\\WordPress\\Composer\\FixWpStubs::php73Polyfill"
@@ -31,7 +31,7 @@
       "vendor/bin/cghooks update",
       "PHPStan\\WordPress\\Composer\\FixWpStubs::php73Polyfill"
     ]
-	},
+  },
   "extra": {
     "hooks": {
       "pre-commit": "./vendor/xwp/wp-dev-lib/scripts/pre-commit"
