@@ -364,6 +364,9 @@ function newspack_custom_colors_css() {
 			.editor-block-list__layout .editor-block-list__block .article-section-title:before {
 				background-color: ' . $primary_color . ';
 			}
+			.editor-styles-wrapper .wp-block[data-type="core/pullquote"] .wp-block-pullquote:not(.is-style-solid-color) blockquote::before {
+				color: ' . $primary_color . ';
+			}
 		';
 	}
 

@@ -193,7 +193,11 @@ function newspack_custom_typography_css() {
 
 		if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p,
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote::before
 
 			{
 				font-family: $font_header;
