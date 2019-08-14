@@ -335,4 +335,8 @@
 .header-center-logo.header-default-height .site-header #site-navigation {
 	flex-basis: 100%;
 	text-align: center;
+
+	ul ul {
+		text-align: left;
+	}
 }
