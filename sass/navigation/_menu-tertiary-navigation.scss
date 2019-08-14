@@ -33,7 +33,7 @@
 
 	li {
 		display: inline-block;
-		font-size: $font__size-sm;
+		font-size: $font__size-xs;
 
 		@include media(tablet) {
 			&:nth-child(n+2) {
@@ -50,11 +50,6 @@
 	.header-simplified & {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
-		li {
-			a {
-				font-size: $font__size-xs;
-			}
-		}
 	}
 
 	// Centered logo.
