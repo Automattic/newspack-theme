@@ -286,7 +286,11 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( true === get_theme_mod( 'header_solid_background', false ) && 'style-3' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if (
+		true === get_theme_mod( 'header_solid_background', false ) &&
+		'style-3' !== get_theme_mod( 'active_style_pack', 'default' ) &&
+		'style-4' !== get_theme_mod( 'active_style_pack', 'default' )
+		) {
 
 		$theme_css .= '
 			.header-solid-background .site-header {
