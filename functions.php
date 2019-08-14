@@ -342,6 +342,14 @@ function newspack_editor_customizer_styles() {
 add_action( 'enqueue_block_editor_assets', 'newspack_editor_customizer_styles' );
 
 /**
+ * Enqueue Block Styles Script for the Columns block
+ */
+function newspack_columns_block_style_javascript() {
+	wp_enqueue_script( 'newspack-columns-block-styles-script', get_theme_file_uri( '/js/blocks-columns-style.js' ), array( 'wp-blocks' ), '1.0', true );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_columns_block_style_javascript' );
+
+/**
  * Determine if current editor page is the static front page.
  */
 function newspack_is_static_front_page() {

@@ -179,6 +179,30 @@ figcaption,
 		font-weight: bolder;
 	}
 }
+
+/** === Columns === */
+
+.wp-block-columns {
+	@include media(mobile) {
+		&[class*='is-style-first-col-to'] [data-type="core/column"] {
+			margin-left: 46px;
+		}
+
+		&[class*='is-style-first-col-to'] [data-type="core/column"]:nth-child(2) {
+			margin-left: 0;
+		}
+
+		&.is-style-first-col-to-second [data-type="core/column"]:nth-child(2) {
+		order: -1;
+		}
+
+		&.is-style-first-col-to-third [data-type="core/column"]:nth-child(2),
+		&.is-style-first-col-to-third [data-type="core/column"]:nth-child(3) {
+			order: -1;
+		}
+	}
+}
+
 /** === Paragraph === */
 
 .wp-block-paragraph {

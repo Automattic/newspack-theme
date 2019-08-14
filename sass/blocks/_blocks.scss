@@ -680,6 +680,23 @@
 	.wp-block-columns {
 		@include media(mobile) {
 			flex-wrap: nowrap;
+
+			&[class*='is-style-first-col-to'] .wp-block-column {
+				margin-left: 32px;
+			}
+
+			&[class*='is-style-first-col-to'] .wp-block-column:nth-child(2) {
+				margin-left: 0;
+			}
+
+			&.is-style-first-col-to-second .wp-block-column:nth-child(2) {
+			order: -1;
+			}
+
+			&.is-style-first-col-to-third .wp-block-column:nth-child(2),
+			&.is-style-first-col-to-third .wp-block-column:nth-child(3) {
+				order: -1;
+			}
 		}
 
 		@include media(tablet) {
