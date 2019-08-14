@@ -101,10 +101,7 @@ body:not(.header-solid-background) .site-header {
 			padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
 		}
 	}
-
-
 }
-
 
 // Site header
 
@@ -112,10 +109,6 @@ body:not(.header-solid-background) .site-header {
 .tertiary-menu {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-}
-
-.site-header .tertiary-menu {
-	font-size: $font__size-xs;
 }
 
 // Accent headers
