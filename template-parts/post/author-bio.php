@@ -9,7 +9,7 @@ if ( (bool) get_the_author_meta( 'description' ) ) : ?>
 <div class="author-bio">
 
 	<?php
-	if ( newspack_is_active_style_pack( 'style-4' ) ) :
+	if ( ! newspack_is_active_style_pack( 'style-4' ) ) :
 		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 		if ( $author_avatar ) :
 			echo wp_kses(
