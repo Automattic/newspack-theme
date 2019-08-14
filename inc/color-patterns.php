@@ -18,20 +18,18 @@ function newspack_custom_colors_css() {
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 	}
 
-	// Create some variables to use in cases where the colours are against a white background.
-	$primary_color_text   = $primary_color;
-	$secondary_color_text = $secondary_color;
-
 	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
 	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
 
-	// Check if each custom colour has sufficient contrast against white; if not, change it to a mid-gray.
-	if ( '#000' === $primary_color_contrast ) {
-		$primary_color_text = '#5a5a5a';
-	}
-
-	if ( '#000' === $secondary_color_contrast ) {
-		$secondary_color_text = '#5a5a5a';
+	/**
+	 * Checks if color has sufficient contrast against white; if no, replaces it.
+	 */
+	function newspack_color_with_contrast( $color ) {
+		$contrast = newspack_get_color_contrast( $color );
+		if ( '#000' === $contrast ) {
+			return '#5a5a5a';
+		}
+		return $color;
 	}
 
 	$theme_css = '
@@ -60,7 +58,7 @@ function newspack_custom_colors_css() {
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,
 		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
-			color: ' . $primary_color_text . ';
+			color: ' . newspack_color_with_contrast( $primary_color ) . ';
 		}
 
 		/* Set primary color */
@@ -199,7 +197,7 @@ function newspack_custom_colors_css() {
 			}
 			.accent-header, .article-section-title,
 			.entry .entry-footer a:hover {
-				color: ' . $primary_color_text . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
@@ -213,7 +211,7 @@ function newspack_custom_colors_css() {
 			.archive .page-title,
 			.entry-meta .byline a,
 			.entry .entry-meta a:hover {
-				color: ' . $primary_color_text . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
@@ -325,7 +323,7 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:active .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink {
-			color: ' . $primary_color_text . '; /* base: #0073a8; */
+			color: ' . newspack_color_with_contrast( $primary_color ) . '; /* base: #0073a8; */
 		}
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large),
@@ -366,7 +364,7 @@ function newspack_custom_colors_css() {
 	) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .entry-meta .byline a {
-				color: ' . $primary_color_text . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
@@ -374,7 +372,7 @@ function newspack_custom_colors_css() {
 	if ( 'default' === get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .article-section-title {
-				color: ' . $primary_color_text . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
