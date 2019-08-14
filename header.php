@@ -136,11 +136,12 @@
 								newspack_tertiary_menu();
 							}
 							?>
+
 						</div><!-- #tertiary-nav-contain -->
 
 						<?php
-						// Header simplified:
-						if ( true === $header_simplified ) {
+						// Header simplified OR centered logo:
+						if ( true === $header_simplified || true === $header_center_logo ) {
 							get_template_part( 'template-parts/header/header', 'search' );
 						}
 						?>
@@ -169,7 +170,13 @@
 						}
 						?>
 					</div>
-					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+
+					<?php
+					// If logo is not centered.
+					if ( false === $header_center_logo ) {
+						get_template_part( 'template-parts/header/header', 'search' );
+					}
+					?>
 				</div><!-- .wrapper -->
 			</div><!-- .bottom-header-contain -->
 		<?php endif; ?>

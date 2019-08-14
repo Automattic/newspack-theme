@@ -65,6 +65,10 @@
 				}
 			}
 
+			&:last-child {
+				margin-right: 0;
+			}
+
 			&.menu-item-has-children {
 				position: inherit;
 
