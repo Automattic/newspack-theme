@@ -38,6 +38,7 @@ function newspack_custom_colors_css() {
 		.main-navigation .sub-menu,
 		.mobile-sidebar,
 		.site-header .main-navigation .main-menu .sub-menu,
+		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content > .has-primary-background-color,
@@ -76,7 +77,8 @@ function newspack_custom_colors_css() {
 		.mobile-sidebar a:visited,
 		.mobile-sidebar .main-navigation .sub-menu > li > a,
 		.mobile-sidebar .main-navigation ul.main-menu > li > a,
-		.site-header .main-navigation .sub-menu > li > a {
+		.site-header .main-navigation .sub-menu > li > a,
+		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
 			color: ' . $primary_color_contrast . ';
 		}
 

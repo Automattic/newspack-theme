@@ -16,7 +16,30 @@
 	a {
 		color: inherit;
 		display: inline-block;
-		padding: #{ 0.125 * $size__spacing-unit } 0;
+		padding: #{ 0.25 * $size__spacing-unit } 0;
+	}
+
+	.menu-highlight a {
+		border: 1px solid currentColor;
+		font-weight: bold;
+		padding-left: #{$size__spacing-unit * 0.5};
+		padding-right: #{$size__spacing-unit * 0.5};
+	}
+}
+
+
+body.header-default-background.header-default-height .site-header {
+	.tertiary-menu {
+		.menu-highlight a {
+			background-color: $color__primary;
+			border: 0;
+			color: $color__background-body;
+
+			&:hover {
+				background-color: $color__text-main;
+				color: $color__background-body;
+			}
+		}
 	}
 }
 
