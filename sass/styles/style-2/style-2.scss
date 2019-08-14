@@ -89,15 +89,22 @@ body:not(.header-solid-background) .site-header {
 }
 
 .newspack-front-page #primary {
-	padding-top: 0;
+	padding: 0;
 
-	@include media(tablet) {
-		padding-top: $size__spacing-unit;
+	.main-content > article > .entry-content > *:first-child {
+		padding-left: #{ 0.5 * $size__spacing-unit };
+		padding-right: #{ 0.5 * $size__spacing-unit };
+
+		@include media(tablet) {
+			padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
+		}
+
+		@include media(desktop) {
+			padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
+		}
 	}
 
-	@include media(desktop) {
-		padding-top: $size__spacing-unit;
-	}
+
 }
 
 
