@@ -1,0 +1,37 @@
+@import "sass/variables-site/variables-site";
+@import "sass/mixins/mixins-master";
+
+.newspack_global_ad {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	> div {
+		margin-top: $size__spacing-unit;
+		margin-bottom: $size__spacing-unit;
+	}
+
+	&.global_above_header {
+		background-color: $color__background-pre;
+	}
+}
+
+body {
+	// Make the ad background match the bar at the top of the site when default background and default height.
+	&.header-default-background.header-default-height {
+		.newspack_global_ad.global_above_header {
+			background-color: #4a4a4a;
+
+			> div {
+				margin-bottom: #{ 0.7 * $size__spacing-unit }
+			}
+		}
+	}
+
+	// Style pack 2 can't really support an ad below the header because the content is inset into the header.
+	&.style-pack-style-2 {
+		.newspack_global_ad.global_below_header {
+			display: none;
+		}
+	}
+}

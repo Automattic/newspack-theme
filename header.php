@@ -176,6 +176,6 @@
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
-
 	<?php do_action( 'after_header' ); ?>
+
+	<div id="content" class="site-content">
