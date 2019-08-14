@@ -11,7 +11,7 @@ Newspack Theme Styles - Style Pack 2
 
 .site-header,
 .header-solid-background .site-header {
-	padding-bottom: $size__spacing-unit;
+	padding-bottom: #{ 0.5 * $size__spacing-unit };
 
 	@include media(tablet) {
 		padding-bottom: #{ 4 * $size__spacing-unit };
@@ -40,7 +40,7 @@ Newspack Theme Styles - Style Pack 2
 
 .site-content,
 .newspack-front-page.hide-homepage-title .site-content {
-	margin-top: #{ -1 * $size__spacing-unit };
+	margin-top: #{ -0.5 * $size__spacing-unit };
 
 	@include media(tablet) {
 		margin-top: #{ -3.5 * $size__spacing-unit };
@@ -76,7 +76,7 @@ body:not(.header-solid-background) .site-header {
 #primary {
 	background-color: $color__background-body;
 	border-top: 2px solid $color__primary-variation;
-	padding: #{ 2 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+	padding: #{ 2 * $size__spacing-unit } 0;
 
 	@include media(tablet) {
 		border-top-width: 4px;
@@ -92,8 +92,6 @@ body:not(.header-solid-background) .site-header {
 	padding: 0;
 
 	.main-content > article > .entry-content > *:first-child {
-		padding-left: #{ 0.5 * $size__spacing-unit };
-		padding-right: #{ 0.5 * $size__spacing-unit };
 
 		@include media(tablet) {
 			padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
