@@ -303,6 +303,11 @@ function newspack_custom_colors_css() {
 			.header-solid-background .site-header {
 				background-color: ' . $primary_color . ';
 			}
+			.header-solid-background .top-header-contain {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -10 ) . ';
+				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
+			}
+
 			.header-solid-background .site-header,
 			.header-solid-background .site-title,
 			.header-solid-background .site-title a:link,
