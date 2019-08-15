@@ -180,9 +180,20 @@ body:not(.header-solid-background) .site-header {
 
 .entry-meta {
 	.byline a {
-		color: $color__text-light;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
+	}
+
+	a,
+	a:visited,
+	.byline a,
+	.byline a:visited {
+		color: $color__text-light;
+	}
+
+	a:hover,
+	.byline a:hover {
+		color: $color__text-main;
 	}
 }
 
