@@ -39,6 +39,8 @@ function newspack_body_classes( $classes ) {
 	$show_tagline = get_theme_mod( 'header_display_tagline', true );
 	if ( false === $show_tagline ) {
 		$classes[] = 'hide-site-tagline';
+	} else {
+		$classes[] = 'show-site-tagline';
 	}
 
 	// Adds classes to reflect the header layout
@@ -61,6 +63,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'header-simplified';
 	} else {
 		$classes[] = 'header-default-height';
+	}
+
+	// Adds classes if menus are assigned
+	if ( has_nav_menu( 'tertiary-menu' ) ) {
+		$classes[] = 'has-tertiary-menu';
 	}
 
 	// Adds a class of has-sidebar when there is a sidebar present.

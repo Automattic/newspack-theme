@@ -1,6 +1,7 @@
 .mobile-menu-toggle {
 	background-color: transparent;
 	color: inherit;
+	margin-left: auto;
 	padding: 0;
 
 	&:hover,
@@ -34,7 +35,7 @@
 
 	& > * {
 		clear: both;
-		margin-bottom: #{ 2 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
 	}
 
 	.mobile-menu-toggle {
@@ -51,12 +52,13 @@
 	a,
 	a:visited,
 	.main-navigation .sub-menu > li > a {
-		color: inherit;
+		color: #fff;
 	}
 
 	a {
 		display: inline-block;
-		padding: #{ 0.5 * $size__spacing-unit } 0;
+		margin: #{ 0.25 * $size__spacing-unit } 0;
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit }
 	}
 
 	a:hover {
@@ -68,6 +70,10 @@
 	.main-navigation .sub-menu > li.menu-item-has-children .submenu-expand,
 	.submenu-expand {
 		display: none;
+	}
+
+	.tertiary-menu a {
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 	}
 }
 

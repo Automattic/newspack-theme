@@ -7,6 +7,19 @@ Newspack Theme Styles - Style Pack 4
 @import "variables-style/variables-style";
 @import "../../style-base.scss";
 
+// Header
+
+.header-solid-background {
+	.site-header,
+	.site-header .main-navigation .main-menu .sub-menu {
+		background-color: $color__background-dark;
+	}
+
+	.bottom-header-contain {
+		background-color: darken( $color__background-dark, 5% );
+	}
+}
+
 // Accent headers
 
 .accent-header,
@@ -317,7 +330,7 @@ Newspack Theme Styles - Style Pack 4
 }
 
 .site-info {
-	background-color: $color__text-main;
+	background-color: $color__background-dark;
 
 	.wrapper {
 		border: 0;

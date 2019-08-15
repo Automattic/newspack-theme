@@ -16,24 +16,43 @@
 	a {
 		color: inherit;
 		display: inline-block;
+		padding: #{ 0.25 * $size__spacing-unit } 0;
 	}
 
-	#search-toggle {
-		margin-left: #{$size__spacing-unit * 0.5}
+	.menu-highlight a {
+		border: 1px solid currentColor;
+		font-weight: bold;
+		padding-left: #{$size__spacing-unit * 0.5};
+		padding-right: #{$size__spacing-unit * 0.5};
+	}
+}
+
+
+body.header-default-background.header-default-height .site-header {
+	.tertiary-menu {
+		.menu-highlight a {
+			background-color: $color__primary;
+			border: 0;
+			color: $color__background-body;
+
+			&:hover {
+				background-color: $color__text-main;
+				color: $color__background-body;
+			}
+		}
 	}
 }
 
 
 // Styles for when menu items appear in the site-header.
 .site-header .tertiary-menu {
-	font-size: $font__size-sm;
-
 	@include media( tablet ) {
 		text-align: right;
 	}
 
 	li {
 		display: inline-block;
+		font-size: $font__size-xs;
 
 		@include media(tablet) {
 			&:nth-child(n+2) {
@@ -50,11 +69,6 @@
 	.header-simplified & {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
-		li {
-			a {
-				font-size: $font__size-xs;
-			}
-		}
 	}
 
 	// Centered logo.

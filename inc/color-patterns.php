@@ -21,11 +21,24 @@ function newspack_custom_colors_css() {
 	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
 	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
 
+	/**
+	 * Checks if color has sufficient contrast against white; if no, replaces it.
+	 */
+	function newspack_color_with_contrast( $color ) {
+		$contrast = newspack_get_color_contrast( $color );
+		if ( '#000' === $contrast ) {
+			return '#5a5a5a';
+		}
+		return $color;
+	}
+
 	$theme_css = '
 		/* Set primary background color */
 
 		.main-navigation .sub-menu,
 		.mobile-sidebar,
+		.site-header .main-navigation .main-menu .sub-menu,
+		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content > .has-primary-background-color,
@@ -37,7 +50,7 @@ function newspack_custom_colors_css() {
 			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		/* Set primary color */
+		/* Set primary color that contrasts against white */
 
 		.main-navigation .main-menu > li,
 		.main-navigation ul.main-menu > li > a,
@@ -45,17 +58,27 @@ function newspack_custom_colors_css() {
 		.main-navigation .main-menu > li > a + svg,
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
-		#colophon .site-info a:hover,
-		.widget a, .widget a:visited,
-		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+		.site-info a:hover,
+		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+			color: ' . newspack_color_with_contrast( $primary_color ) . ';
+		}
+
+		/* Set primary color */
+
 		.entry .entry-content > .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
-			color: ' . $primary_color . '; /* base: #0073a8; */
+			color: ' . $primary_color . ';
 		}
 
-		.mobile-sidebar {
+		.mobile-sidebar,
+		.mobile-sidebar a,
+		.mobile-sidebar a:visited,
+		.mobile-sidebar .main-navigation .sub-menu > li > a,
+		.mobile-sidebar .main-navigation ul.main-menu > li > a,
+		.site-header .main-navigation .sub-menu > li > a,
+		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
 			color: ' . $primary_color_contrast . ';
 		}
 
@@ -120,7 +143,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content > *[class^="wp-block-"].has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-background-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color {
-			background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
+			background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . '; /* base: #005177; */
 		}
 
 		/* Set primary variation color */
@@ -169,10 +192,11 @@ function newspack_custom_colors_css() {
 			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}';
 
-	if ( 'default' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
 			.cat-links a,
-			.cat-links a:visited {
+			.cat-links a:visited,
+			body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
@@ -182,26 +206,22 @@ function newspack_custom_colors_css() {
 			}
 			.accent-header, .article-section-title,
 			.entry .entry-footer a:hover {
-				color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
 
-	if (
-		'default' === get_theme_mod( 'active_style_pack', 'default' ) ||
-		'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ||
-		'style-4' === get_theme_mod( 'active_style_pack', 'default' )
-	) {
+	if ( newspack_is_active_style_pack( 'default', 'style-3', 'style-4' ) ) {
 		$theme_css .= '
 			.archive .page-title,
 			.entry-meta .byline a,
 			.entry .entry-meta a:hover {
-				color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
 
-	if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-1' ) ) {
 		$theme_css .= '
 			.accent-header:before,
 			.article-section-title:before,
@@ -216,7 +236,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$theme_css .= '
 			.site-content #primary {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
@@ -233,7 +253,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-3' ) ) {
 		$theme_css .= '
 			.cat-links a,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
@@ -251,7 +271,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-4' ) ) {
 		$theme_css .= '
 			.accent-header,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
@@ -271,20 +291,24 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( true === get_theme_mod( 'header_solid_background', false ) && 'style-3' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
-
+	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4' ) ) {
 		$theme_css .= '
 			.header-solid-background .site-header {
 				background-color: ' . $primary_color . ';
 			}
+			.header-solid-background .top-header-contain {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -10 ) . ';
+				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
+			}
+
 			.header-solid-background .site-header,
 			.header-solid-background .site-title,
 			.header-solid-background .site-title a:link,
 			.header-solid-background .site-title a:visited,
 			.header-solid-background .site-description,
-			.header-solid-background .main-navigation .main-menu > li,
-			.header-solid-background .main-navigation ul.main-menu > li > a,
-			.header-solid-background .main-navigation ul.main-menu > li > a:hover,
+			.header-solid-background.header-simplified .main-navigation .main-menu > li,
+			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a,
+			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a:hover,
 			.header-solid-background .top-header-contain,
 			.header-solid-background .middle-header-contain,
 			.main-navigation .sub-menu a {
@@ -308,7 +332,7 @@ function newspack_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:active .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink {
-			color: ' . $primary_color . '; /* base: #0073a8; */
+			color: ' . newspack_color_with_contrast( $primary_color ) . '; /* base: #0073a8; */
 		}
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large),
@@ -342,27 +366,23 @@ function newspack_custom_colors_css() {
 		}
 		';
 
-	if (
-		'default' === get_theme_mod( 'active_style_pack', 'default' ) ||
-		'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ||
-		'style-4' === get_theme_mod( 'active_style_pack', 'default' )
-	) {
+	if ( newspack_is_active_style_pack( 'default', 'style-3', 'style-4' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .entry-meta .byline a {
-				color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
 
-	if ( 'default' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .article-section-title {
-				color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
 	}
 
-	if ( 'style-1' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-1' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .accent-header:before,
 			.editor-block-list__layout .editor-block-list__block .article-section-title:before {
@@ -374,7 +394,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-2' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
 				border-color: ' . $primary_color . ';
@@ -382,7 +402,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-3' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-3' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .accent-header,
 			.editor-block-list__layout .editor-block-list__block .article-section-title {
@@ -397,7 +417,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) {
+	if ( newspack_is_active_style_pack( 'style-4' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .accent-header,
 			.editor-block-list__layout .editor-block-list__block .article-section-title {

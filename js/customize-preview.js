@@ -11,9 +11,9 @@
 	wp.customize( 'header_display_tagline', function( value ) {
 		value.bind( function( to ) {
 			if ( false === to ) {
-				$( 'body' ).addClass( 'hide-site-tagline' );
+				$( 'body' ).addClass( 'hide-site-tagline' ).removeClass( 'show-site-tagline' );
 			} else {
-				$( 'body' ).removeClass( 'hide-site-tagline' );
+				$( 'body' ).removeClass( 'hide-site-tagline' ).addClass( 'show-site-tagline' );;
 			}
 		});
 	});

@@ -11,7 +11,7 @@ Newspack Theme Styles - Style Pack 2
 
 .site-header,
 .header-solid-background .site-header {
-	padding-bottom: $size__spacing-unit;
+	padding-bottom: #{ 0.5 * $size__spacing-unit };
 
 	@include media(tablet) {
 		padding-bottom: #{ 4 * $size__spacing-unit };
@@ -32,15 +32,9 @@ Newspack Theme Styles - Style Pack 2
 	}
 }
 
-.header-simplified .site-content {
-	@include media( tablet ) {
-		margin-top: #{ -2 * $size__spacing-unit };
-	}
-}
-
 .site-content,
 .newspack-front-page.hide-homepage-title .site-content {
-	margin-top: #{ -1 * $size__spacing-unit };
+	margin-top: #{ -0.5 * $size__spacing-unit };
 
 	@include media(tablet) {
 		margin-top: #{ -3.5 * $size__spacing-unit };
@@ -76,7 +70,7 @@ body:not(.header-solid-background) .site-header {
 #primary {
 	background-color: $color__background-body;
 	border-top: 2px solid $color__primary-variation;
-	padding: #{ 2 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+	padding: #{ 2 * $size__spacing-unit } 0;
 
 	@include media(tablet) {
 		border-top-width: 4px;
@@ -89,17 +83,53 @@ body:not(.header-solid-background) .site-header {
 }
 
 .newspack-front-page #primary {
-	padding-top: 0;
+	padding: 0;
 
-	@include media(tablet) {
-		padding-top: $size__spacing-unit;
-	}
+	.main-content > article > .entry-content > *:first-child {
 
-	@include media(desktop) {
-		padding-top: $size__spacing-unit;
+		@include media(tablet) {
+			padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
+		}
+
+		@include media(desktop) {
+			padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
+		}
 	}
 }
 
+.single-post #primary {
+	padding-left: 0;
+	padding-right: 0;
+
+	.site-main > .entry-header {
+		@include media(tablet) {
+			padding-left: #{ 3 * $size__spacing-unit };
+			padding-right: #{ 3 * $size__spacing-unit };
+		}
+
+		@include media(desktop) {
+			padding-left: #{ 4.5 * $size__spacing-unit };
+			padding-right: #{ 4.5 * $size__spacing-unit };
+		}
+	}
+}
+
+.archive #primary {
+	padding-left: 0;
+	padding-right: 0;
+
+	& > .page-header {
+		@include media(tablet) {
+			padding-left: #{ 3 * $size__spacing-unit };
+			padding-right: #{ 3 * $size__spacing-unit };
+		}
+
+		@include media(desktop) {
+			padding-left: #{ 4.5 * $size__spacing-unit };
+			padding-right: #{ 4.5 * $size__spacing-unit };
+		}
+	}
+}
 
 // Site header
 
@@ -107,10 +137,6 @@ body:not(.header-solid-background) .site-header {
 .tertiary-menu {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-}
-
-.site-header .tertiary-menu {
-	font-size: $font__size-xs;
 }
 
 // Accent headers

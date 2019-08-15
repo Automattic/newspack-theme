@@ -8,6 +8,7 @@ nav.secondary-menu {
 
 	a {
 		color: inherit;
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit };
 	}
 }
 
@@ -20,9 +21,12 @@ nav.secondary-menu {
 			flex-wrap: wrap;
 		}
 
+		li {
+			margin-right: #{ $size__spacing-unit }
+		}
+
 		a {
 			font-size: $font__size-xs;
-			margin-right: #{0.5 * $size__spacing-unit};
 		}
 	}
 }

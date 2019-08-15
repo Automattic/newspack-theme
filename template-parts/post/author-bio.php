@@ -9,7 +9,7 @@ if ( (bool) get_the_author_meta( 'description' ) ) : ?>
 <div class="author-bio">
 
 	<?php
-	if ( 'style-4' !== get_theme_mod( 'active_style_pack', 'default' ) ) :
+	if ( ! newspack_is_active_style_pack( 'style-4' ) ) :
 		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 		if ( $author_avatar ) :
 			echo wp_kses(
@@ -31,7 +31,7 @@ if ( (bool) get_the_author_meta( 'description' ) ) : ?>
 	<div class="author-bio-text">
 		<div class="author-bio-header">
 			<?php
-			if ( 'style-4' === get_theme_mod( 'active_style_pack', 'default' ) ) :
+			if ( newspack_is_active_style_pack( 'style-4' ) ) :
 				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 				if ( $author_avatar ) :
 					echo wp_kses(
