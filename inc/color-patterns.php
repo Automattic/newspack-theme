@@ -74,6 +74,7 @@ function newspack_custom_colors_css() {
 		.mobile-sidebar .main-navigation .sub-menu > li > a,
 		.mobile-sidebar .main-navigation ul.main-menu > li > a,
 		.site-header .main-navigation .sub-menu > li > a,
+		.site-header .main-navigation .main-menu .sub-menu > li > a:hover,
 		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
 			color: ' . $primary_color_contrast . ';
 		}
