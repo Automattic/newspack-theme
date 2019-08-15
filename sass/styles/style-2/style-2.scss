@@ -144,11 +144,16 @@ body:not(.header-solid-background) .site-header {
 .accent-header,
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
 .cat-links {
-	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+}
+
+.accent-header,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.cat-links a {
+	color: $color__text-light;
 }
 
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
@@ -416,7 +421,8 @@ body:not(.header-solid-background) .site-header {
 		border: 0;
 	}
 
-	a {
-		color: inherit;
+	a,
+	a:hover {
+		color: $color__background-body;
 	}
 }

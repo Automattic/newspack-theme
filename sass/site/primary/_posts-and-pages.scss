@@ -93,6 +93,10 @@ body.page {
 			color: $color__primary;
 			font-weight: bold;
 			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -335,6 +339,10 @@ body.page {
 
 	.author-meta a {
 		color: $color__text-light;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	p {
@@ -347,6 +355,7 @@ body.page {
 		font-weight: bold;
 		&:hover {
 			color: $color__primary-variation;
+			text-decoration: underline
 		}
 	}
 }

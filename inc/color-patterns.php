@@ -124,6 +124,7 @@ function newspack_custom_colors_css() {
 
 		/* Set secondary color with contrast */
 
+		.entry .entry-content a,
 		.author-bio .author-link,
 		.widget a,
 		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
@@ -196,7 +197,7 @@ function newspack_custom_colors_css() {
 
 		/* Set secondary variation color */
 
-		a:hover,
+		.entry .entry-content a:hover,
 		.widget a:hover,
 		.author-bio .author-link:hover,
 		.entry .entry-content > .has-secondary-variation-color,
