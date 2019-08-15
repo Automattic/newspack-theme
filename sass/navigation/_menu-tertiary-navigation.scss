@@ -17,6 +17,11 @@
 		color: inherit;
 		display: inline-block;
 		padding: #{ 0.25 * $size__spacing-unit } 0;
+
+		&:hover {
+			color: inherit;
+			opacity: 0.85;
+		}
 	}
 
 	.menu-highlight a {

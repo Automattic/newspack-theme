@@ -126,7 +126,7 @@ function newspack_custom_colors_css() {
 
 		.author-bio .author-link,
 		.widget a,
-		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):link {
+		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			color:' . newspack_color_with_contrast( $secondary_color ) . ';
 		}
 
@@ -198,20 +198,12 @@ function newspack_custom_colors_css() {
 
 		a:hover,
 		.widget a:hover,
+		.author-bio .author-link:hover,
 		.entry .entry-content > .has-secondary-variation-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-secondary-variation-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
 		.entry .entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p {
 			color:' . newspack_adjust_brightness( newspack_color_with_contrast( $secondary_color ), -40 ) . ';
-		}
-
-		/* Text selection colors */
-
-		::selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
-		}
-		::-moz-selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
 		}';
 
 	if ( 'default' === get_theme_mod( 'active_style_pack', 'default' ) ) {

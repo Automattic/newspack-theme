@@ -29,6 +29,10 @@
 	.widget {
 		width: 100%;
 
+		a {
+			color: inherit;
+		}
+
 		@include media( mobile ) {
 			flex: 1 0 0px;
 			margin-right: $size__spacing-unit;

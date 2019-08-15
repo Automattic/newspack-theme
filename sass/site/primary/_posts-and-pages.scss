@@ -95,6 +95,10 @@ body.page {
 			text-decoration: none;
 		}
 	}
+
+	.posted-on a {
+		color: $color__text-light;
+	}
 }
 
 .entry-footer {
