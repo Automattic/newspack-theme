@@ -253,6 +253,10 @@
 		}
 	}
 
+	&.header-default-background .site-header {
+		border-bottom: 1px solid $color__border;
+	}
+
 	.middle-header-contain .wrapper {
 		align-items: center;
 		padding: #{ 0.5 * $size__spacing-unit } 0;
