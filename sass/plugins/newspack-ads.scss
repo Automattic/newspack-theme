@@ -18,7 +18,7 @@
 
 body {
 	// Reduce space on top of the content a bit when there's an ad below the header.
-	&:not(.newspack-front-page) .newspack_global_ad.global_below_header + .site-content {
+	&:not(.newspack-front-page):not(.style-pack-style-2) .newspack_global_ad.global_below_header + .site-content {
 		margin-top: #{ 1.5 * $size__spacing-unit };
 	}
 
