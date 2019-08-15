@@ -225,6 +225,7 @@
 // Simplified Header
 
 .header-simplified {
+
 	.site-header .wrapper {
 		justify-content: flex-start;
 	}
@@ -251,6 +252,10 @@
 		&.hide-site-tagline .main-navigation {
 			flex-grow: 2;
 		}
+	}
+
+	&.header-default-background .site-header {
+		border-bottom: 1px solid $color__border;
 	}
 
 	.middle-header-contain .wrapper {
