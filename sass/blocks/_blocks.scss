@@ -180,12 +180,14 @@
 				color: white;
 			}
 
+			&:not(.has-background):hover,
 			&:hover {
 				color: white;
 				background: $color__background-button-hover;
 				cursor: pointer;
 			}
 
+			&:not(.has-background):focus,
 			&:focus {
 				color: white;
 				background: $color__background-button-hover;
