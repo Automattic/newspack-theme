@@ -88,13 +88,17 @@
 				// Centered logo AND short header.
 				if ( true === $header_center_logo && true === $header_simplified ) :
 				?>
-					<div id="tertiary-nav-contain" class="desktop-only">
-						<?php
-						if ( ! newspack_is_amp() ) {
-							newspack_tertiary_menu();
-						}
-						?>
-					</div>
+
+					<div class="nav-wrapper desktop-only">
+						<div id="site-navigation">
+							<?php
+							if ( ! newspack_is_amp() ) {
+								newspack_primary_menu();
+							}
+							?>
+						</div><!-- #site-navigation -->
+					</div><!-- .nav-wrapper -->
+
 				<?php endif; ?>
 
 
@@ -102,7 +106,7 @@
 
 				<?php
 				// Short header:
-				if ( true === $header_simplified ) :
+				if ( true === $header_simplified && false === $header_center_logo ) :
 				?>
 
 					<div class="nav-wrapper desktop-only">
@@ -125,28 +129,23 @@
 				<?php endif; ?>
 
 
-				<?php
-				// Logo NOT centered and header NOT short:
-				if ( ! ( true === $header_center_logo && true === $header_simplified ) ) :
-				?>
-					<div class="nav-wrapper desktop-only">
-						<div id="tertiary-nav-contain">
-							<?php
-							if ( ! newspack_is_amp() ) {
-								newspack_tertiary_menu();
-							}
-							?>
-
-						</div><!-- #tertiary-nav-contain -->
-
+				<div class="nav-wrapper desktop-only">
+					<div id="tertiary-nav-contain">
 						<?php
-						// Header simplified OR centered logo:
-						if ( true === $header_simplified || true === $header_center_logo ) {
-							get_template_part( 'template-parts/header/header', 'search' );
+						if ( ! newspack_is_amp() ) {
+							newspack_tertiary_menu();
 						}
 						?>
-					</div><!-- .nav-wrapper -->
-				<?php endif; ?>
+					</div><!-- #tertiary-nav-contain -->
+
+					<?php
+						// Header is simplified OR logo is centered:
+						if ( true === $header_simplified || true === $header_center_logo ) :
+							get_template_part( 'template-parts/header/header', 'search' );
+						endif;
+					?>
+				</div><!-- .nav-wrapper -->
+
 
 				<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
 					<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
