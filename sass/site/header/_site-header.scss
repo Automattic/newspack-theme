@@ -315,6 +315,10 @@
 	justify-content: flex-end;
 }
 
+.header-center-logo.header-simplified .nav-wrapper:first-of-type {
+	justify-content: flex-start;
+}
+
 .desktop-only {
 	display: none;
 
