@@ -100,8 +100,8 @@
 .bottom-header-contain {
 	.wrapper {
 		@include media( tablet ) {
-			border-bottom: 1px solid #4a4a4a;
-			border-top: 1px solid #4a4a4a;
+			border-bottom: 1px solid $color__border;
+			border-top: 1px solid $color__border;
 		}
 	}
 }
@@ -225,6 +225,7 @@
 // Simplified Header
 
 .header-simplified {
+
 	.site-header .wrapper {
 		justify-content: flex-start;
 	}
