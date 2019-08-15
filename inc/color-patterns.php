@@ -35,9 +35,7 @@ function newspack_custom_colors_css() {
 	$theme_css = '
 		/* Set primary background color */
 
-		.main-navigation .sub-menu,
 		.mobile-sidebar,
-		.site-header .main-navigation .main-menu .sub-menu,
 		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.entry .entry-content > .has-primary-background-color,
 		.entry .entry-content > *[class^="wp-block-"].has-primary-background-color,
@@ -316,6 +314,7 @@ function newspack_custom_colors_css() {
 			.header-solid-background .site-header {
 				background-color: ' . $primary_color . ';
 			}
+
 			.header-solid-background .top-header-contain {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -10 ) . ';
 				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
@@ -332,6 +331,20 @@ function newspack_custom_colors_css() {
 			.header-solid-background .top-header-contain,
 			.header-solid-background .middle-header-contain,
 			.main-navigation .sub-menu a {
+				color: ' . $primary_color_contrast . ';
+			}
+
+
+		';
+	}
+
+	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+		$theme_css .= '
+			.header-solid-background .site-header .main-navigation .main-menu .sub-menu {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -20 ) . ';
+			}
+
+			.header-solid-background .site-header .main-navigation .main-menu .sub-menu a {
 				color: ' . $primary_color_contrast . ';
 			}
 		';
