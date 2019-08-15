@@ -18,10 +18,10 @@
 	}
 
 	a {
-		color: $color__primary;
+		color: $color__link;
 
 		&:hover {
-			color: $color__primary-variation;
+			color: $color__link-hover;
 		}
 	}
 }
