@@ -351,6 +351,19 @@ function newspack_is_static_front_page() {
 }
 
 /**
+ * Check if the current style pack is a particular option.
+ *
+ * Pass in a style pack slug or list of slugs separated by commas (default|style-1|style-2|style-3|style-4)
+ *
+ * @return bool If current style pack is one of the passed options.
+ */
+function newspack_is_active_style_pack() {
+	$args              = func_get_args();
+	$active_style_pack = get_theme_mod( 'active_style_pack', 'default' );
+	return in_array( $active_style_pack, $args );
+}
+
+/**
  * Add body class on editor pages if editing the static front page.
  */
 function newspack_filter_admin_body_class( $classes ) {
