@@ -22,6 +22,7 @@
 
 .entry-header {
 	position: relative;
+	width: 100%;
 }
 
 .entry-title {
@@ -203,7 +204,6 @@ body.page {
 .single-post {
 	.entry-header {
 		padding: 0 0 $size__spacing-unit;
-		width: 100%;
 	}
 
 	&:not(.has-featured-image) .entry-header,

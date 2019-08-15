@@ -41,7 +41,8 @@
 	margin-top: $size__spacing-unit;
 }
 
-.single {
+.single,
+.page:not(.newspack-front-page) {
 	&.has-sidebar #main {
 		@include media( tablet ) {
 			display: flex;
@@ -53,8 +54,7 @@
 
 .archive,
 .blog,
-.search,
-.page:not(.newspack-front-page) {
+.search {
 	&.has-sidebar #primary {
 		@include media(tablet) {
 			display: flex;
@@ -67,7 +67,7 @@
 .archive #main,
 .blog #main,
 .search #main,
-.page:not(.newspack-front-page) #main,
+.page:not(.newspack-front-page) .main-content,
 .single-post .main-content {
 	@include media(tablet) {
 		width: 65%;
