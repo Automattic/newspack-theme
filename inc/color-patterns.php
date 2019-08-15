@@ -123,6 +123,7 @@ function newspack_custom_colors_css() {
 		/* Set secondary color with contrast */
 
 		.entry-content a,
+		.entry-content a:visited,
 		.author-bio .author-link,
 		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			color:' . newspack_color_with_contrast( $secondary_color ) . ';
@@ -351,7 +352,7 @@ function newspack_custom_colors_css() {
 		 * - pullquote (solid color)
 		 * - buttons
 		 */
-		.editor-block-list__layout .editor-block-list__block a,
+
 		.entry-meta .byline a {
 			color: ' . newspack_color_with_contrast( $primary_color ) . '; /* base: #0073a8; */
 		}
@@ -363,13 +364,6 @@ function newspack_custom_colors_css() {
 
 		.editor-block-list__layout .editor-block-list__block .wp-block-pullquote.is-style-solid-color:not(.has-background-color) {
 			background-color: ' . $primary_color . '; /* base: #0073a8; */
-		}
-
-		/* Hover colors */
-		.editor-block-list__layout .editor-block-list__block a:hover,
-		.editor-block-list__layout .editor-block-list__block a:active,
-		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink:hover {
-			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . '; /* base: #005177; */
 		}
 
 		/* Secondary color */
@@ -390,6 +384,14 @@ function newspack_custom_colors_css() {
 			color: ' . $secondary_color_contrast . '; /* base: #0073a8; */
 		}
 
+		/* Hover colors */
+		.editor-block-list__layout .editor-block-list__block a:hover,
+		.editor-block-list__layout .editor-block-list__block a:active,
+		.editor-block-list__layout .editor-block-list__block .wp-block-file .wp-block-file__textlink:hover {
+			color: ' . newspack_adjust_brightness( $secondary_color, -40 ) . '; /* base: #005177; */
+		}
+
+		.editor-block-list__layout .editor-block-list__block a,
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:hover .wp-block-button__link:not(.has-text-color),
 		.editor-block-list__layout .editor-block-list__block .wp-block-button.is-style-outline:focus .wp-block-button__link:not(.has-text-color),
