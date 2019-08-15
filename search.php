@@ -12,16 +12,16 @@ get_header();
 
 	<section id="primary" class="content-area">
 
+		<header class="page-header">
+			<h1 class="page-title">
+				<?php esc_html_e( 'Search results', 'newspack' ); ?>
+			</h1>
+			<?php get_search_form(); ?>
+		</header><!-- .page-header -->
+
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php esc_html_e( 'Search results', 'newspack' ); ?>
-				</h1>
-				<?php get_search_form(); ?>
-			</header><!-- .page-header -->
 
 			<?php
 			// Start the Loop.
