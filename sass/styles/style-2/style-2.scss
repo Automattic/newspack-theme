@@ -85,7 +85,7 @@ body:not(.header-solid-background) .site-header {
 .newspack-front-page #primary {
 	padding: 0;
 
-	.main-content > article > .entry-content > *:first-child {
+	.site-main > article > .entry-content > *:first-child {
 
 		@include media(tablet) {
 			padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
