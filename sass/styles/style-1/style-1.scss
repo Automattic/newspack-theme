@@ -43,8 +43,15 @@
 	}
 }
 
-.entry-meta .byline a {
-	color: $color__text-light;
+.entry-meta .byline {
+	a,
+	a:visited {
+		color: $color__text-light;
+	}
+
+	a:hover {
+		color: $color__text-main;
+	}
 }
 
 .single .entry-meta {

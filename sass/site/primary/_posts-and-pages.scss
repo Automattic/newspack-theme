@@ -94,6 +94,21 @@ body.page {
 			color: $color__primary;
 			font-weight: bold;
 			text-decoration: none;
+
+			&:visited {
+				color: $color__primary;
+			}
+
+			&:hover {
+				color: $color__primary-variation;
+			}
+		}
+	}
+
+	.posted-on {
+		a,
+		a:visited {
+			color: $color__text-light;
 		}
 	}
 }
@@ -163,11 +178,17 @@ body.page {
 	}
 
 	a {
+
+		color: $color__link;
 		text-decoration: underline;
 
-		&.button,
-		&:hover {
-			text-decoration: none;
+		&:visited {
+			color: $color__link-visited;
+		}
+
+		&:hover,
+		&:active {
+			color: $color__link-hover;
 		}
 
 		&.button {
