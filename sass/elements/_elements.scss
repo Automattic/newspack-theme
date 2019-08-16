@@ -2,14 +2,6 @@ html {
 	box-sizing: border-box;
 }
 
-::-moz-selection {
-	background-color: $color__background_selection;
-}
-
-::selection {
-	background-color: $color__background_selection;
-}
-
 *,
 *:before,
 *:after {
