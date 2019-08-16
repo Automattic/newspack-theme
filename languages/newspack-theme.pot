@@ -1,0 +1,577 @@
+# Copyright (C) 2019 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Newspack 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
+"POT-Creation-Date: 2019-08-16 22:38:09+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: classes/class-newspack-style-packs-core.php:177
+msgid "Style Packs"
+msgstr ""
+
+#: classes/class-newspack-style-packs-core.php:193
+#: classes/class-newspack-style-packs-core.php:364
+msgid "Default"
+msgstr ""
+
+#: classes/class-newspack-style-packs-core.php:198
+msgid "Active Style"
+msgstr ""
+
+#. translators: %s: comment author link
+
+#: classes/class-newspack-walker-comment.php:66
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr ""
+
+#. translators: 1: comment date, 2: comment time
+
+#: classes/class-newspack-walker-comment.php:86
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: classes/class-newspack-walker-comment.php:94
+msgid "Edit"
+msgstr ""
+
+#: classes/class-newspack-walker-comment.php:99
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:31
+msgid "Join the Conversation"
+msgstr ""
+
+#: comments.php:33 comments.php:103 comments.php:105
+msgid "Leave a comment"
+msgstr ""
+
+#. translators: %s: post title
+
+#: comments.php:38
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+
+#: comments.php:42
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:90 comments.php:93 comments.php:94
+msgid "Comments"
+msgstr ""
+
+#: comments.php:93
+msgid "Previous"
+msgstr ""
+
+#: comments.php:94
+msgid "Next"
+msgstr ""
+
+#: comments.php:114
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:29
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: WordPress.
+
+#: footer.php:32
+msgid "Proudly powered by %s."
+msgstr ""
+
+#: functions.php:66
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:67 inc/template-tags.php:250
+msgid "Secondary Menu"
+msgstr ""
+
+#: functions.php:68 inc/template-tags.php:274
+msgid "Tertiary Menu"
+msgstr ""
+
+#: functions.php:69 inc/template-tags.php:313 inc/template-tags.php:327
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:124
+msgid "Small"
+msgstr ""
+
+#: functions.php:125
+msgid "S"
+msgstr ""
+
+#: functions.php:130
+msgid "Normal"
+msgstr ""
+
+#: functions.php:131
+msgid "M"
+msgstr ""
+
+#: functions.php:136
+msgid "Large"
+msgstr ""
+
+#: functions.php:137
+msgid "L"
+msgstr ""
+
+#: functions.php:142
+msgid "Huge"
+msgstr ""
+
+#: functions.php:143
+msgid "XL"
+msgstr ""
+
+#: functions.php:158
+msgid "Primary"
+msgstr ""
+
+#: functions.php:165
+msgid "Primary Variation"
+msgstr ""
+
+#: functions.php:172
+msgid "Secondary"
+msgstr ""
+
+#: functions.php:179
+msgid "Secondary Variation"
+msgstr ""
+
+#: functions.php:186
+msgid "White"
+msgstr ""
+
+#: functions.php:211
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:213
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:223 template-parts/footer/footer-widgets.php:10
+msgid "Footer"
+msgstr ""
+
+#: functions.php:225
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:266 template-parts/header/header-search.php:11
+#: template-parts/header/header-search.php:12
+msgid "Open Search"
+msgstr ""
+
+#: functions.php:267 template-parts/header/header-search.php:11
+msgid "Close Search"
+msgstr ""
+
+#: header.php:33
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:153
+msgid "Menu"
+msgstr ""
+
+#: image.php:46 template-parts/content/content-page.php:21
+#: template-parts/content/content-single.php:32
+#: template-parts/content/content.php:38
+msgid "Pages:"
+msgstr ""
+
+#: image.php:50
+msgid "Page"
+msgstr ""
+
+#: image.php:64
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr ""
+
+#: image.php:81
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">%title</span>"
+msgstr ""
+
+#: inc/back-compat.php:37 inc/back-compat.php:51 inc/back-compat.php:71
+msgid "Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:17
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Center Logo"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Check to center the logo in the header."
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Solid Background"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "Check to use the primary color as the header background."
+msgstr ""
+
+#: inc/customizer.php:94
+msgid "Short Header"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Displays header as a shorter, simpler version."
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer.php:117
+msgctxt "primary color"
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:118
+msgctxt "primary color"
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Apply a primary custom color."
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "Apply a secondary custom color."
+msgstr ""
+
+#: inc/customizer.php:178
+msgid "Display Tagline"
+msgstr ""
+
+#: inc/customizer.php:197
+msgid "Hide Homepage Title"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Check to hide the page title, if your homepage is set to display a static page."
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer.php:267
+msgid "Font Provider Import Code or URL"
+msgstr ""
+
+#: inc/customizer.php:268
+msgid "Example: &lt;link href=\"https://fonts.googleapis.com/css?family=Open+Sans&display=swap\" rel=\"stylesheet\"&gt; or https://fonts.googleapis.com/css?family=Open+Sans"
+msgstr ""
+
+#: inc/customizer.php:277
+msgid "Secondary Font Provider Import Code or URL"
+msgstr ""
+
+#: inc/customizer.php:286
+msgid "Header Font"
+msgstr ""
+
+#: inc/customizer.php:287
+msgid "Example: Open Sans"
+msgstr ""
+
+#: inc/customizer.php:302
+msgid "Header Font Fallback Stack"
+msgstr ""
+
+#: inc/customizer.php:312
+msgid "Body Font"
+msgstr ""
+
+#: inc/customizer.php:321
+msgid "Body Font Fallback Stack"
+msgstr ""
+
+#: inc/style-packs.php:17
+msgid "Default Style"
+msgstr ""
+
+#: inc/style-packs.php:18
+msgid "Style 1"
+msgstr ""
+
+#: inc/style-packs.php:19
+msgid "Style 2"
+msgstr ""
+
+#: inc/style-packs.php:20
+msgid "Style 3"
+msgstr ""
+
+#: inc/style-packs.php:21
+msgid "Style 4"
+msgstr ""
+
+#: inc/style-packs.php:25
+msgid "This is the default style."
+msgstr ""
+
+#: inc/style-packs.php:26
+msgid "The description for style 1."
+msgstr ""
+
+#: inc/style-packs.php:27
+msgid "The description for style 2."
+msgstr ""
+
+#: inc/style-packs.php:28
+msgid "The description for style 3."
+msgstr ""
+
+#: inc/style-packs.php:29
+msgid "The description for style 4."
+msgstr ""
+
+#: inc/template-functions.php:133
+msgid "Category: "
+msgstr ""
+
+#: inc/template-functions.php:135
+msgid "Tag: "
+msgstr ""
+
+#: inc/template-functions.php:137
+msgid "Author Archives: "
+msgstr ""
+
+#: inc/template-functions.php:139
+msgid "Yearly Archives: "
+msgstr ""
+
+#: inc/template-functions.php:139
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-functions.php:141
+msgid "Monthly Archives: "
+msgstr ""
+
+#: inc/template-functions.php:141
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-functions.php:143
+msgid "Daily Archives: "
+msgstr ""
+
+#: inc/template-functions.php:145
+msgid "Post Type Archives: "
+msgstr ""
+
+#. translators: %s: Taxonomy singular name
+
+#: inc/template-functions.php:149
+msgid "%s Archives:"
+msgstr ""
+
+#: inc/template-functions.php:151
+msgid "Archives:"
+msgstr ""
+
+#. translators: 1: Author avatar. 2: post author, only visible to screen
+#. readers. 3: author link.
+
+#: inc/template-tags.php:63
+msgid "by"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+
+#: inc/template-tags.php:80
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: used between list items; followed by a space.
+
+#: inc/template-tags.php:93 inc/template-tags.php:114
+msgid ","
+msgstr ""
+
+#. translators: 1: posted in label, only visible to screen readers. 2: list of
+#. categories.
+
+#: inc/template-tags.php:98
+msgid "Posted in"
+msgstr ""
+
+#. translators: 1: posted in label, only visible to screen readers. 2: list of
+#. tags.
+
+#: inc/template-tags.php:119
+msgid "Tagged:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#. translators: %s: Name of current post. Only visible to screen readers
+
+#: inc/template-tags.php:130 template-parts/content/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:207
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:211
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:227
+msgid "Top Menu"
+msgstr ""
+
+#: inc/typography.php:307
+msgid "Serif"
+msgstr ""
+
+#: inc/typography.php:316
+msgid "Sans Serif"
+msgstr ""
+
+#: inc/woocommerce.php:94
+msgid "Payment info"
+msgstr ""
+
+#: inc/woocommerce.php:112
+msgid "Create an account"
+msgstr ""
+
+#: search.php:17
+msgid "Search results"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: template-parts/content/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+
+#: template-parts/content/content-none.php:24
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content/content-none.php:37
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content/content-none.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+
+#: template-parts/content/content-single.php:19
+#: template-parts/content/content.php:25
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/header/mobile-sidebar-fallback.php:13
+#: template-parts/header/mobile-sidebar.php:13
+msgid "Close"
+msgstr ""
+
+#. translators: %s is the current author's name.
+
+#: template-parts/post/author-bio.php:70
+msgid "More by %s"
+msgstr ""
+
+#. translators: %1(X comments)$s
+
+#: template-parts/post/discussion-meta.php:14
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/post/discussion-meta.php:16
+msgid "No comments"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:35
+msgid "Order details"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Newspack"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/Automattic/newspack-theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://newspack.blog"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Article feature"
+msgstr ""
