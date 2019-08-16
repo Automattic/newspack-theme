@@ -183,14 +183,7 @@ function newspack_custom_colors_css() {
 			color:' . newspack_adjust_brightness( $secondary_color, -40 ) . '; /* base: #666 */
 		}
 
-		/* Text selection colors */
-
-		::selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
-		}
-		::-moz-selection {
-			background-color: ' . newspack_adjust_brightness( $primary_color, 200 ) . '; /* base: #005177; */
-		}';
+		';
 
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
