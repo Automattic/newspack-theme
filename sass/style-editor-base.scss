@@ -221,6 +221,14 @@ figcaption,
 		}
 	}
 
+	.entry-meta,
+	.entry-meta a,
+	.entry-meta a:visited,
+	.entry-meta .byline a,
+	.entry-meta .byline a:visited {
+		color: inherit
+	}
+
 	@include media(tablet) {
 		padding-left: 10%;
 		padding-right: 10%;

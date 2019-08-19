@@ -544,6 +544,14 @@
 			}
 		}
 
+		a,
+		a:hover,
+		a:visited,
+		.entry-meta,
+		.entry-meta a {
+			color: inherit;
+		}
+
 		&.alignleft,
 		&.alignright {
 			width: 100%;
