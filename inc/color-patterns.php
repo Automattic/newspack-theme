@@ -73,7 +73,11 @@ function newspack_custom_colors_css() {
 		.mobile-sidebar a:visited,
 		.mobile-sidebar .main-navigation .sub-menu > li > a,
 		.mobile-sidebar .main-navigation ul.main-menu > li > a,
-		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
+		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
+		.site-header .main-navigation .main-menu .sub-menu > li > a:hover,
+		.site-header .main-navigation .main-menu .sub-menu > li > a:focus,
+		.site-header .main-navigation .main-menu .sub-menu > li > a:hover + button,
+		.site-header .main-navigation .main-menu .sub-menu > li > a:focus + button {
 			color: ' . $primary_color_contrast . ';
 		}
 
@@ -319,7 +323,7 @@ function newspack_custom_colors_css() {
 				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
 			}
 
-			.header-solid-background .site-header .main-navigation .main-menu .sub-menu {
+			.header-solid-background .site-header .main-navigation .main-menu .sub-menu a {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -20 ) . ';
 			}
 
@@ -334,7 +338,8 @@ function newspack_custom_colors_css() {
 			.header-solid-background .top-header-contain,
 			.header-solid-background .middle-header-contain,
 			.header-solid-background .main-navigation .sub-menu a,
-			.header-solid-background .site-header .main-navigation .main-menu .sub-menu a {
+			.header-solid-background .site-header .main-navigation .main-menu .sub-menu a,
+			.header-solid-background .site-header .main-navigation .main-menu .sub-menu a:hover {
 				color: ' . $primary_color_contrast . ';
 			}
 

@@ -49,6 +49,7 @@
 		width: 100%;
 
 		> li {
+			color: inherit;
 			> a {
 				color: inherit;
 				padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
@@ -104,7 +105,6 @@
 					right: 0;
 					top: calc( .125 * #{$size__spacing-unit} );
 					bottom: 0;
-					color: white;
 					line-height: 1;
 					padding: calc( .5 * #{$size__spacing-unit} );
 
@@ -151,22 +151,32 @@
 			}
 
 			.sub-menu {
-				background-color: #f1f1f1;
 				position: absolute;
 				opacity: 0;
 				left: -9999px;
 				z-index: 99999;
 
-				> li > a {
-					display: block;
-					line-height: $font__line-height-heading;
-					padding: calc( .5 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} ) calc( .5 * #{$size__spacing-unit} ) $size__spacing-unit;
-					transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
+				a {
+					background-color: #f1f1f1;
+				}
 
-					&:hover,
-					&:focus {
-						background-color: darken( $color__primary-variation, 5% );
-						color: $color__background-body;
+				> li {
+					> a {
+						display: block;
+						line-height: $font__line-height-heading;
+						padding: calc( .5 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} ) calc( .5 * #{$size__spacing-unit} ) $size__spacing-unit;
+						transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
+
+						&:hover,
+						&:focus {
+							background-color: darken( $color__primary-variation, 5% );
+							color: $color__background-body;
+						}
+
+						&:hover + button,
+						&:focus + button {
+							color: $color__background-body;
+						}
 					}
 				}
 
@@ -230,14 +240,9 @@
 }
 
 .header-solid-background {
-	.site-header .main-navigation .main-menu {
-		.sub-menu {
-			background-color: $color__primary-variation;
-
-			a {
-				color: $color__background-body;
-			}
-		}
+	.site-header .main-navigation .main-menu .sub-menu a {
+		background-color: $color__primary-variation;
+		color: $color__background-body;
 	}
 }
 
@@ -255,5 +260,9 @@
 }
 
 .header-simplified .site-header .main-navigation .main-menu > li {
-	padding: #{ 0.25 * $size__spacing-unit } 0
+	padding: #{ 0.25 * $size__spacing-unit } 0;
+
+	> .sub-menu {
+		padding-top: #{ 0.75 * $size__spacing-unit };
+	}
 }
