@@ -6,7 +6,7 @@
  */
 
 
-if ( is_active_sidebar( 'footer-1' ) ) : ?>
+if ( is_active_sidebar( 'footer-1' ) && has_custom_logo() ) : ?>
 	<div class="footer-branding">
 		<div class="wrapper">
 			<?php if ( has_custom_logo() ) : ?>

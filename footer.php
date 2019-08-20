@@ -16,6 +16,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+
 		<?php get_template_part( 'template-parts/footer/footer', 'branding' ); ?>
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 
@@ -38,7 +39,7 @@
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
 
-				if ( ! is_active_sidebar( 'footer-1' ) ) {
+				if ( ! is_active_sidebar( 'footer-1' ) || ( ! has_custom_logo() ) ) {
 					newspack_social_menu_footer();
 				}
 				?>
