@@ -706,6 +706,22 @@
 		}
 	}
 
+	//! Search
+	.wp-block-search {
+		.wp-block-search__input {
+			flex-grow: 0;
+			width: 66%;
+		}
+
+		.wp-block-search__button {
+			margin-left: 1%;
+			padding-left: 0;
+			padding-right: 0;
+			width: 32%;
+			max-width: 8em;
+		}
+	}
+
 	//! Latest Comments
 	.wp-block-latest-comments {
 
