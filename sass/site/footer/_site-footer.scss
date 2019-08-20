@@ -13,7 +13,11 @@
 		}
 
 		.custom-logo-link {
+			height: auto;
 			margin-bottom: $size__spacing-unit;
+			max-height: 100px;
+			max-width: 200px;
+			width: auto;
 		}
 	}
 

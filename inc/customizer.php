@@ -202,6 +202,44 @@ function newspack_customize_register( $wp_customize ) {
 			'settings'    => 'hide_front_page_title',
 		)
 	);
+
+	// Add option to hide page title on static front page.
+	$wp_customize->add_setting(
+		'hide_front_page_title',
+		array(
+			'default'           => false,
+			'type'              => 'theme_mod',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+
+	// Add option to upload logo specifically for the footer.
+	$wp_customize->add_setting(
+		'newspack_footer_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'absint',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize,
+			'newspack_footer_logo',
+			array(
+				'label'       => esc_html__( 'Footer logo', 'newspack' ),
+				'description' => esc_html__( 'Optional alternative logo to be displayed in the footer.', 'newspack' ),
+				'section'     => 'title_tagline',
+				'settings'    => 'newspack_footer_logo',
+				'priority'    => 8,
+				'flex_width'  => true,
+				'flex_height' => true,
+				'width'       => 800,
+				'height'      => 400,
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
