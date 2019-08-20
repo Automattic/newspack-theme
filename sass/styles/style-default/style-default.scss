@@ -24,9 +24,11 @@ body.header-default-background.header-default-height {
 				font-weight: 700;
 				padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background-color: $color__text-main;
 					color: #fff;
+					opacity: 1.0;
 				}
 			}
 		}

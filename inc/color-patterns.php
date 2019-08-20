@@ -169,8 +169,6 @@ function newspack_custom_colors_css() {
 
 		/* Set primary variation color */
 
-		.main-navigation .main-menu > li > a:hover,
-		.main-navigation .main-menu > li > a:hover + svg,
 		.author-bio .author-description .author-link:hover,
 		.entry .entry-content > .has-primary-variation-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-primary-variation-color,

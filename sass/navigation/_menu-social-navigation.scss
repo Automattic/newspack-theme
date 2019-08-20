@@ -26,12 +26,12 @@
 
 			&:hover,
 			&:active {
-				opacity: 0.6;
+				opacity: 0.7;
 			}
 
 			&:focus {
 				opacity: 1;
-				border-bottom: 1px solid $color__text-main;
+				border-bottom: 1px solid currentColor;
 			}
 
 			svg {

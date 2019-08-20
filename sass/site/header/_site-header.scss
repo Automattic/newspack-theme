@@ -115,6 +115,10 @@
 	.search-icon {
 		display: none;
 	}
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 .header-search-contain {
