@@ -548,8 +548,11 @@
 		a:hover,
 		a:visited,
 		.entry-meta,
-		.entry-meta a {
-			color: inherit;
+		.entry-meta a,
+		.entry-meta a:visited,
+		article .entry-meta a,
+		article .entry-meta a:visited {
+			color: #fff;
 		}
 
 		&.alignleft,
