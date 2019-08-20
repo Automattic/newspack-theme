@@ -211,7 +211,8 @@
 		color: $color__text-main;
 	}
 
-	.footer-branding .wrapper {
+	.footer-branding .wrapper,
+	.widget-area:first-child {
 		border-top: 3px solid currentColor;
 	}
 
