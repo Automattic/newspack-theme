@@ -14,11 +14,14 @@
 
 		.custom-logo-link,
 		.footer-logo-link {
-			height: auto;
 			margin-bottom: $size__spacing-unit;
-			max-height: 100px;
+			max-height: 75px;
 			max-width: 200px;
-			width: auto;
+
+			img {
+				max-height: 100%;
+				width: auto;
+			}
 		}
 	}
 
