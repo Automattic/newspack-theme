@@ -114,3 +114,7 @@ Newspack Theme Editor Styles - Style Pack 2
 		}
 	}
 }
+
+.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+	border-top: 5px solid $color__text-main;
+}

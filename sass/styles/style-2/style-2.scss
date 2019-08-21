@@ -325,6 +325,10 @@ body:not(.header-solid-background) .site-header {
 			}
 		}
 	}
+
+	.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+		border-top: 5px solid $color__text-main;
+	}
 }
 
 // Author Bio
