@@ -7,7 +7,6 @@
 	font-size: $font__size-sm;
 	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
 	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
-	text-transform: uppercase;
 }
 
 /* Navigation */
@@ -44,7 +43,6 @@ body.header-default-background.header-default-height {
 		display: inline-block;
 		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
 		padding: 0.5em 0.75em;
-		text-transform: uppercase;
 
 		&:visited {
 			color: #fff;

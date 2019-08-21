@@ -324,6 +324,23 @@ function newspack_customize_typography_register( $wp_customize ) {
 			'choices' => $font_stacks,
 		)
 	);
+
+	// Typography - use optional uppercase styles
+	$wp_customize->add_setting(
+		'accent_allcaps',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'accent_allcaps',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Use all-caps for accent text.', 'newspack' ),
+			'section' => 'newspack_typography',
+		)
+	);
 }
 
 add_action( 'customize_register', 'newspack_customize_typography_register' );

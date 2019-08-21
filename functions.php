@@ -321,7 +321,7 @@ function newspack_editor_customizer_styles() {
 		$theme_customizations .= newspack_custom_colors_css();
 	}
 
-	if ( get_theme_mod( 'font_body', '' ) || get_theme_mod( 'font_header', '' ) ) {
+	if ( get_theme_mod( 'font_body', '' ) || get_theme_mod( 'font_header', '' ) || get_theme_mod( 'accent_allcaps', true ) ) {
 		$theme_customizations .= newspack_custom_typography_css();
 	}
 
@@ -431,7 +431,7 @@ add_action( 'wp_head', 'newspack_colors_css_wrap' );
  */
 function newspack_typography_css_wrap() {
 
-	if ( is_admin() || ( ! get_theme_mod( 'font_body', '' ) && ! get_theme_mod( 'font_header', '' ) ) ) {
+	if ( is_admin() || ( ! get_theme_mod( 'font_body', '' ) && ! get_theme_mod( 'font_header', '' ) && ! get_theme_mod( 'accent_allcaps', true ) ) ) {
 		return;
 	}
 	?>
