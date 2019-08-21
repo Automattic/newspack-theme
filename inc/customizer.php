@@ -203,17 +203,6 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add option to hide page title on static front page.
-	$wp_customize->add_setting(
-		'hide_front_page_title',
-		array(
-			'default'           => false,
-			'type'              => 'theme_mod',
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-
 	// Add option to upload logo specifically for the footer.
 	$wp_customize->add_setting(
 		'newspack_footer_logo',
