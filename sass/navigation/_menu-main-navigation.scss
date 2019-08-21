@@ -54,9 +54,8 @@
 				padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
 				font-weight: 700;
 
-				&:hover,
-				&:hover + svg {
-					color: $color__primary-variation;
+				&:hover {
+					opacity: 0.75;
 				}
 			}
 
