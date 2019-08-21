@@ -30,3 +30,6 @@ Thumbs.db
 # Compiled CSS
 styles/
 *.css
+
+# Release folder
+release/
