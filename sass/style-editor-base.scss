@@ -286,6 +286,13 @@ figcaption,
 	}
 }
 
+.wp-block-columns {
+	.wp-block-cover,
+	.wp-block-cover-image {
+		min-height: 330px;
+	}
+}
+
 /** === Image === */
 
 .wp-block-image {

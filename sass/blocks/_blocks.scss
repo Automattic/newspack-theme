@@ -554,6 +554,13 @@
 		}
 	}
 
+	.wp-block-columns {
+		.wp-block-cover,
+		.wp-block-cover-image {
+			min-height: 330px;
+		}
+	}
+
 	//! Galleries
 	.wp-block-gallery {
 		list-style-type: none;
