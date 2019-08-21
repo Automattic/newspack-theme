@@ -8,7 +8,6 @@
 .cat-links,
 .page-title {
 	color: #666;
-	text-transform: uppercase;
 
 	&:before {
 		background-color: $color__primary;
@@ -27,7 +26,6 @@
 
 #secondary .widget-title {
 	font-size: $font__size-lg;
-	text-transform: uppercase;
 }
 
 /* Posts & Pages */
@@ -81,7 +79,6 @@
 
 	span {
 		font-size: $font__size-xs;
-		text-transform: uppercase;
 	}
 
 	&:before {
@@ -154,7 +151,6 @@
 		cite {
 			font-size: $font__size-sm;
 			font-weight: normal;
-			text-transform: uppercase;
 		}
 
 		&.is-style-solid-color {
@@ -219,7 +215,6 @@
 	.widget-title {
 		color: $color__text-main;
 		font-size: $font__size_base;
-		text-transform: uppercase;
 	}
 
 	.widget,

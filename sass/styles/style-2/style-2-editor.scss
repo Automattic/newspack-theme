@@ -13,7 +13,6 @@ Newspack Theme Editor Styles - Style Pack 2
 	font-family: $font__heading;
 	font-size: $font__size-xs;
 	letter-spacing: 0.05em;
-	text-transform: uppercase;
 }
 
 .article-section-title {
@@ -26,7 +25,6 @@ Newspack Theme Editor Styles - Style Pack 2
 .entry-meta .byline a {
 	color: $color__text-light;
 	letter-spacing: 0.05em;
-	text-transform: uppercase;
 }
 
 // Blocks
@@ -83,7 +81,6 @@ Newspack Theme Editor Styles - Style Pack 2
 		font-weight: bold;
 		letter-spacing: 0.05em;
 		opacity: 0.9;
-		text-transform: uppercase;
 	}
 
 	&[data-align="left"] .wp-block-pullquote,
