@@ -31,12 +31,12 @@
 
 		@include media( mobile ) {
 			flex: 1 0 0px;
-			margin-right: $size__spacing-unit;
-			min-width: calc( 50% - #{ $size__spacing-unit } );
+			margin-right: #{ 2 * $size__spacing-unit };
+			min-width: calc( 50% - #{ 2 * $size__spacing-unit } );
 		}
 
 		@include media( tablet ) {
-			min-width: calc( 25% - #{ $size__spacing-unit } );
+			min-width: calc( 25% - #{ 2 * $size__spacing-unit } );
 		}
 
 		&:last-child {
