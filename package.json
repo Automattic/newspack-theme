@@ -55,6 +55,7 @@
     "build:print": "node-sass sass/print.scss styles/print.css --output-style expanded && postcss -r styles/print.css",
     "build": "run-p \"build:*\"",
     "prebuild": "run-p \"prebuild:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+    "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip . -x node_modules/\\* .git/\\* .github/\\* .gitignore .DS_Store vendor/\\*"
   }
 }
