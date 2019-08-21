@@ -134,3 +134,8 @@ Newspack Theme Editor Styles - Style Pack 3
 
 	}
 }
+
+.wp-block-separator:not(.is-style-dots),
+hr {
+	border-top: 1px dotted $color__text-main;
+}

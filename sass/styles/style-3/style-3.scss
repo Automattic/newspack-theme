@@ -220,6 +220,11 @@ Newspack Theme Styles - Style Pack 3
 			width: 32px;
 		}
 	}
+
+	.wp-block-separator,
+	hr {
+		border-top: 1px dotted $color__text-main;
+	}
 }
 
 // Archives

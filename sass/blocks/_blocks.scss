@@ -572,13 +572,12 @@
 	//! Separator
 	.wp-block-separator,
 	hr {
-		background-color: $color__text-light;
+		background-color: transparent;
 		border: 0;
-		height: 2px;
-		margin-bottom: (2 * $size__spacing-unit);
-		margin-top: (2 * $size__spacing-unit);
-		max-width: 2.25em;
-		text-align: left;
+		border-top: 1px solid $color__border;
+		height: 1px;
+		margin: (2 * $size__spacing-unit) auto;
+		max-width: #{ 5 * $size__spacing-unit };
 
 		&.is-style-wide {
 			max-width: 100%;
