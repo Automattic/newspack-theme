@@ -268,6 +268,30 @@ function newspack_custom_typography_css() {
 		";
 	}
 
+	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
+		$css_blocks .= '
+			.tags-links span:first-child,
+			.page-title {
+				text-transform: uppercase;
+			}
+		';
+
+		if ( newspack_is_active_style_pack( 'default' ) ) {
+			$css_blocks        .= '
+				.accent-header,
+				.article-section-title,
+				.cat-links a {
+					text-transform: uppercase;
+				}
+			';
+			$editor_css_blocks .= '
+				.article-section-title {
+					text-transform: uppercase;
+				}
+			';
+		}
+	}
+
 	if ( '' !== $css_blocks ) {
 		$theme_css = $css_blocks;
 	} else {
