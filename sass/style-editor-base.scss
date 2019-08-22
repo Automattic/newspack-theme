@@ -209,14 +209,13 @@ figcaption,
 		color: inherit
 	}
 
+	h2 {
+		max-width: 100%;
+	}
+
 	@include media(tablet) {
 		padding-left: 10%;
 		padding-right: 10%;
-
-		h2,
-		.wp-block-cover-text {
-			font-size: $font__size-xl;
-		}
 	}
 }
 
