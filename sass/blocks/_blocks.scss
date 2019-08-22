@@ -528,22 +528,6 @@
 			padding: $size__spacing-unit 10%;
 		}
 
-		.wp-block-cover-image-text,
-		.wp-block-cover-text,
-		h2 {
-			font-family: $font__heading;
-			font-size: $font__size-lg;
-			font-weight: bold;
-			line-height: 1.25;
-			padding: 0;
-			color: #fff;
-
-			@include media(tablet) {
-				font-size: $font__size-xl;
-				max-width: 100%;
-			}
-		}
-
 		a,
 		a:hover,
 		a:visited,
