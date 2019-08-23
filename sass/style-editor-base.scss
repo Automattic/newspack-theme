@@ -201,26 +201,6 @@ figcaption,
 
 .wp-block-cover {
 
-	h2,
-	.wp-block-cover-text {
-		font-family: $font__heading;
-		font-size: $font__size-lg;
-		font-weight: bold;
-		line-height: 1.4;
-		padding-left: $size__spacing-unit;
-		padding-right: $size__spacing-unit;
-
-		strong {
-			font-weight: bolder;
-		}
-
-		@include media(tablet) {
-			margin-left: auto;
-			margin-right: auto;
-			padding: 0;
-		}
-	}
-
 	.entry-meta,
 	.entry-meta a,
 	.entry-meta a:visited,
@@ -229,14 +209,15 @@ figcaption,
 		color: inherit
 	}
 
+	h2 {
+		max-width: 100%;
+		padding-left: 0;
+		text-align: left;
+	}
+
 	@include media(tablet) {
 		padding-left: 10%;
 		padding-right: 10%;
-
-		h2,
-		.wp-block-cover-text {
-			font-size: $font__size-xl;
-		}
 	}
 }
 
