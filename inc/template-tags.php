@@ -158,7 +158,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail( 'newspack-featured-image' ); ?>
 			</figure><!-- .post-thumbnail -->
 
 			<?php
