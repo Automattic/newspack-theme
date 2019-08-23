@@ -22,9 +22,14 @@
 	line-height: 1;
 	margin: 0 $size__spacing-unit 0 0;
 	overflow: hidden;
+}
 
-	.custom-logo {
+.site-header .custom-logo-link .custom-logo {
+
+	@include media( tabletonly ) {
 		height: auto;
+		max-height: 75px;
+		max-width: 175px;
 		width: auto;
 	}
 }
