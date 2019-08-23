@@ -781,6 +781,21 @@
 		background-color: $color__secondary-variation;
 	}
 
+	.has-dark-gray-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
+		background-color: #111;
+	}
+
+	.has-medium-gray-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-medium-gray-background-color {
+		background-color: #767676;
+	}
+
+	.has-light-gray-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
+		background-color: #eee;
+	}
+
 	.has-white-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-white-background-color {
 		background-color: #FFF;
@@ -809,6 +824,21 @@
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
 		color: $color__secondary-variation;
+	}
+
+	.has-dark-gray-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color {
+		color: #111;
+	}
+
+	.has-medium-gray-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-medium-gray-color {
+		color: #767676;
+	}
+
+	.has-light-gray-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color {
+		color: #eee;
 	}
 
 	.has-white-color,

@@ -185,6 +185,21 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 						newspack_adjust_brightness( get_theme_mod( 'secondary_color_hex', $secondary_color ), -40 ),
 				),
 				array(
+					'name'  => __( 'Dark Gray', 'newspack' ),
+					'slug'  => 'dark-gray',
+					'color' => '#111', // color__text-main
+				),
+				array(
+					'name'  => __( 'Medium Gray', 'newspack' ),
+					'slug'  => 'medium-gray',
+					'color' => '#767676', // color__text-light
+				),
+				array(
+					'name'  => __( 'Light Gray', 'newspack' ),
+					'slug'  => 'light-gray',
+					'color' => '#eee', // color__background-pre
+				),
+				array(
 					'name'  => __( 'White', 'newspack' ),
 					'slug'  => 'white',
 					'color' => '#FFF',
