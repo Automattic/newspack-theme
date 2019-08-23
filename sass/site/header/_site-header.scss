@@ -25,14 +25,7 @@
 
 	.custom-logo {
 		height: auto;
-		min-height: inherit;
-		max-height: 75px;
-		max-width: 200px;
 		width: auto;
-
-		@include media( tablet ) {
-			max-height: 150px;
-		}
 	}
 }
 
@@ -237,10 +230,6 @@
 	.site-branding {
 		display: flex;
 		flex-basis: auto;
-	}
-
-	.custom-logo-link .custom-logo {
-		max-height: 50px;
 	}
 
 	.site-description {

@@ -523,6 +523,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Logo Resizer.
+ */
+require get_template_directory() . '/inc/logo-resizer.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
