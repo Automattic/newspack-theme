@@ -340,6 +340,32 @@ function newspack_custom_typography_css() {
 				}
 			';
 		}
+
+		if ( newspack_is_active_style_pack( 'style-3' ) ) {
+			$css_blocks        .= '
+				.accent-header,
+				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+				.cat-links,
+				.archive .page-title,
+				.author-bio h2 span,
+				.entry-meta .byline a,
+				.entry-meta .entry-date,
+				.entry .entry-content .wp-block-pullquote cite,
+				.site-footer .widget-title,
+				.site-info {
+					text-transform: uppercase;
+				}
+			';
+			$editor_css_blocks .= '
+				.editor-block-list__layout .editor-block-list__block .accent-header,
+				.editor-block-list__layout .editor-block-list__block .article-section-title,
+				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
+				.editor-block-list__layout .editor-block-list__block .entry-meta .entry-date,
+				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+					text-transform: uppercase;
+				}
+			';
+		}
 	}
 
 	if ( '' !== $css_blocks ) {
