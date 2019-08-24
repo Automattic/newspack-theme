@@ -696,16 +696,6 @@
 				}
 			}
 		}
-
-		&.is-style-borders .wp-block-column {
-			&:not(:first-child) {
-				margin-left: 64px;
-			}
-
-			&:after {
-				right: -32px;
-			}
-		}
 	}
 
 	//! Latest Comments
