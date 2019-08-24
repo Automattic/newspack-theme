@@ -131,8 +131,17 @@ figcaption,
 .gallery-caption {
 	font-family: $font__heading;
 	font-size: $font__size-xs;
-	line-height: 1.6;
+	line-height: $font__line-height-pre;
 	color: $color__text-light;
+}
+
+figcaption {
+	border-bottom: 1px solid $color__border;
+	color: $color__text-light;
+	margin: 0;
+	max-width: 780px;
+	padding: 0 ( $size__spacing-unit * .5 ) ( $size__spacing-unit * .5 );
+	text-align: center;
 }
 
 /** === Post Title === */
@@ -289,11 +298,8 @@ figcaption,
 /** === Image === */
 
 .wp-block-image {
-	.block-editor-rich-text__editable {
-		border-bottom: 1px solid $color__border;
-		padding-bottom: $size__spacing-unit;
-		margin: auto;
-		max-width: 780px;
+	figcaption {
+		margin-top: 0;
 	}
 }
 
@@ -309,18 +315,6 @@ figcaption,
 	.wp-block-image > div > div {
 		max-width: 100%;
 		width: 100% !important; // !important to override inline styles.
-	}
-}
-
-/** === Gallery === */
-
-.wp-block-gallery {
-
-	.blocks-gallery-image figcaption,
-	.blocks-gallery-item figcaption,
-	.gallery-item .gallery-caption {
-		font-size: $font__size-xs;
-		line-height: 1.6;
 	}
 }
 
