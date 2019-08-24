@@ -131,14 +131,6 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-// Site header
-
-.main-navigation > ul > li,
-.tertiary-menu {
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-
 // Accent headers
 
 .accent-header,
@@ -147,8 +139,6 @@ body:not(.header-solid-background) .site-header {
 	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
 }
 
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
@@ -168,8 +158,6 @@ body:not(.header-solid-background) .site-header {
 #secondary .accent-header {
 	color: inherit;
 	font-size: $font__size-lg;
-	letter-spacing: 0;
-	text-transform: none;
 
 	@include media( tablet ) {
 		font-size: $font__size-xl;
@@ -179,11 +167,6 @@ body:not(.header-solid-background) .site-header {
 // Posts & Pages
 
 .entry-meta {
-	.byline a {
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-	}
-
 	a,
 	a:visited,
 	.byline a,
@@ -231,7 +214,6 @@ body:not(.header-solid-background) .site-header {
 		background: $color__background-pre;
 		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
 		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
-		text-transform: uppercase;
 
 		&:hover {
 			background: lighten( $color__background-pre, 5% );
@@ -241,10 +223,6 @@ body:not(.header-solid-background) .site-header {
 	.sep {
 		display: none;
 	}
-}
-
-.post-edit-link {
-	text-transform: uppercase;
 }
 
 // Blocks
@@ -295,7 +273,6 @@ body:not(.header-solid-background) .site-header {
 			font-weight: bold;
 			letter-spacing: 0.05em;
 			opacity: 0.9;
-			text-transform: uppercase;
 		}
 
 		&.alignleft,
@@ -350,9 +327,7 @@ body:not(.header-solid-background) .site-header {
 
 		span {
 			color: $color__text-light;
-			letter-spacing: 0.05em;
 			font-size: $font__size-xs;
-			text-transform: uppercase;
 		}
 	}
 
@@ -403,11 +378,6 @@ body:not(.header-solid-background) .site-header {
 	.widget a:visited,
 	.widget-title {
 		color: inherit;
-	}
-
-	.widget-title {
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
 	}
 }
 

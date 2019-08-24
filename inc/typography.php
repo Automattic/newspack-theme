@@ -312,6 +312,34 @@ function newspack_custom_typography_css() {
 				}
 			';
 		}
+
+		if ( newspack_is_active_style_pack( 'style-2' ) ) {
+			$css_blocks        .= '
+				.main-navigation ul li,
+				.tertiary-menu,
+				.accent-header,
+				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+				.cat-links,
+				.entry-meta .byline a,
+				.tags-links a,
+				.post-edit-link,
+				.entry .entry-content .wp-block-pullquote cite,
+				.author-bio h2 span,
+				.site-footer .widget-title {
+					letter-spacing: 0.05em;
+					text-transform: uppercase;
+				}
+			';
+			$editor_css_blocks .= '
+				.editor-block-list__layout .editor-block-list__block .accent-header,
+				.editor-block-list__layout .editor-block-list__block .article-section-title,
+				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
+				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+					letter-spacing: 0.05em;
+					text-transform: uppercase;
+				}
+			';
+		}
 	}
 
 	if ( '' !== $css_blocks ) {
