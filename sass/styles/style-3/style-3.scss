@@ -124,6 +124,27 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
+figcaption,
+.wp-caption-text {
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: left;
+
+	&:after {
+		background-color: $color__primary;
+		content: "";
+		display: block;
+		height: 5px;
+		margin-top: #{ 0.75 * $size__spacing-unit };
+		width: 32px;
+	}
+}
+
+.wp-block-gallery figcaption:after {
+	display: none;
+}
+
 .entry .entry-content {
 	.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright) {
 		.post-has-image .entry-title {
@@ -136,6 +157,15 @@ Newspack Theme Styles - Style Pack 3
 		}
 	}
 
+	.wp-block-embed figcaption,
+	.wp-block-image figcaption,
+	.wp-block-audio figcaption,
+	.wp-block-video figcaption,
+	.wp-caption-text {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: left;
+	}
 
 	.wp-block-pullquote {
 		border-width: 0;
@@ -202,22 +232,6 @@ Newspack Theme Styles - Style Pack 3
 
 		&.alignfull:not(.is-style-solid-color):before {
 			left: 8px;
-		}
-	}
-
-	.wp-block-image figcaption {
-		border: none;
-		padding-left: 0;
-		padding-right: 0;
-		text-align: left;
-
-		&:after {
-			background-color: $color__primary;
-			content: "";
-			display: block;
-			height: 5px;
-			margin-top: #{ 0.75 * $size__spacing-unit };
-			width: 32px;
 		}
 	}
 

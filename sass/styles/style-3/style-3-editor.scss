@@ -118,7 +118,18 @@ Newspack Theme Editor Styles - Style Pack 3
 	}
 }
 
-.wp-block-image figcaption.block-editor-rich-text__editable {
+.wp-block-audio,
+.wp-block-video,
+.wp-block-image {
+	figcaption {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: left;
+	}
+}
+
+figcaption,
+.wp-caption-text {
 	border: none;
 	padding-left: 0;
 	padding-right: 0;
@@ -131,7 +142,18 @@ Newspack Theme Editor Styles - Style Pack 3
 		height: 5px;
 		margin-top: #{ 1.25 * $size__spacing-unit };
 		width: 32px;
+	}
+}
 
+.wp-block-gallery {
+	figcaption.block-editor-rich-text__editable {
+		padding-left: 10px;
+		padding-left: 10px;
+		text-align: center;
+
+		&:after {
+			display: none;
+		}
 	}
 }
 
