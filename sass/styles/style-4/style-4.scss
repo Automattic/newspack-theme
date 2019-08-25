@@ -79,6 +79,11 @@ Newspack Theme Styles - Style Pack 4
 
 // Posts & Pages
 
+figcaption,
+.wp-caption-text {
+	font-weight: bold;
+}
+
 .entry .entry-content {
 	.has-drop-cap:not(:focus)::first-letter {
 		background-color: $color__primary;
@@ -87,10 +92,6 @@ Newspack Theme Styles - Style Pack 4
 		font-weight: bold;
 		font-size: $font__size-xxl;
 		padding: 0.4em;
-	}
-
-	.wp-block-image figcaption {
-		font-weight: bold;
 	}
 
 	blockquote,
