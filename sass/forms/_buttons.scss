@@ -21,6 +21,7 @@ input[type="submit"] {
 
 	&:hover {
 		background: $color__background-button-hover;
+		color: $color__background-body;
 		cursor: pointer;
 	}
 

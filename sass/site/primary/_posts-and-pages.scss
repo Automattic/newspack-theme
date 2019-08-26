@@ -189,10 +189,6 @@ body.page {
 		&:active {
 			color: $color__link-hover;
 		}
-
-		&.button {
-			text-decoration: none;
-		}
 	}
 
 	// Overwrite iframe embeds that have inline styles.
@@ -210,6 +206,17 @@ body.page {
 	// Classic editor audio embeds.
 	.wp-audio-shortcode {
 		max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
+	}
+}
+
+.entry .entry-content {
+
+	a.button {
+		text-decoration: none;
+
+		&:hover {
+			color: $color__background-body;
+		}
 	}
 }
 
