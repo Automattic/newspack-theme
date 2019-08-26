@@ -182,6 +182,10 @@
 			}
 		}
 
+		&:not(.is-style-outline) .wp-block-button__link:not(.has-background):hover {
+			color: white;
+		}
+
 		&:not(.is-style-squared) .wp-block-button__link {
 			border-radius: 5px;
 		}
