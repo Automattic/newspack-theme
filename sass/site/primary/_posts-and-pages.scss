@@ -214,6 +214,7 @@ body.page {
 	a.button {
 		text-decoration: none;
 
+		&,
 		&:hover {
 			color: $color__background-body;
 		}
