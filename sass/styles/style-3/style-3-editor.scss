@@ -12,7 +12,6 @@ Newspack Theme Editor Styles - Style Pack 3
 	color: $color__primary;
 	font-size: $font__size-xs;
 	margin: 0 0 #{ 2 * $size__spacing-unit };
-	text-transform: uppercase;
 
 	&:before {
 		background-color: $color__primary;
@@ -28,13 +27,6 @@ Newspack Theme Editor Styles - Style Pack 3
 	&.has-drop-cap:not(:focus)::first-letter {
 		font-family: $font__heading;
 		font-weight: bold;
-	}
-}
-
-.entry-meta {
-	.byline a,
-	.entry-date {
-		text-transform: uppercase;
 	}
 }
 
@@ -91,7 +83,6 @@ Newspack Theme Editor Styles - Style Pack 3
 	.wp-block-pullquote__citation {
 		font-weight: bold;
 		opacity: 0.6;
-		text-transform: uppercase;
 	}
 
 	&[data-align="left"],

@@ -28,7 +28,6 @@ Newspack Theme Styles - Style Pack 3
 .archive .page-title {
 	color: $color__primary;
 	margin: 0 0 #{ 2 * $size__spacing-unit };
-	text-transform: uppercase;
 
 	&:before {
 		background-color: $color__primary;
@@ -64,7 +63,6 @@ Newspack Theme Styles - Style Pack 3
 		color: inherit;
 		font-size: $font__size-md;
 		margin: 0 0 #{ 0.5 * $size__spacing-unit };
-		text-transform: none;
 
 		&:before {
 			display: none;
@@ -73,7 +71,6 @@ Newspack Theme Styles - Style Pack 3
 		span {
 			color: $color__text-light;
 			font-size: $font__size-xs;
-			text-transform: uppercase;
 		}
 	}
 }
@@ -86,13 +83,6 @@ Newspack Theme Styles - Style Pack 3
 }
 
 // Posts & Pages
-
-.entry-meta {
-	.byline a,
-	.entry-date {
-		text-transform: uppercase;
-	}
-}
 
 .single-post:not(.has-featured-image) .entry-header,
 .single-post.has-large-featured-image .entry-header {
@@ -185,7 +175,6 @@ figcaption,
 
 		cite {
 			color: $color__text-light;
-			text-transform: uppercase;
 		}
 
 		&:not(.is-style-solid-color) {
@@ -268,10 +257,6 @@ figcaption,
 	.widget-title {
 		color: inherit;
 	}
-
-	.widget-title {
-		text-transform: uppercase;
-	}
 }
 
 .footer-branding {
@@ -288,7 +273,6 @@ figcaption,
 
 .site-info {
 	color: $color__background-body;
-	text-transform: uppercase;
 
 	.wrapper {
 		border: 0;
