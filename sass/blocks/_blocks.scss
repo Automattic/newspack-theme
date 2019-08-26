@@ -703,13 +703,13 @@
 					margin-bottom: 0;
 				}
 			}
-		}
 
-		&[class*='has-'] > * {
-			margin-right: $size__spacing-unit;
+			&[class*='has-'] > * {
+				margin-right: $size__spacing-unit;
 
-			&:last-child {
-				margin-right: 0;
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 
