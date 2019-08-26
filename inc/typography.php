@@ -125,6 +125,9 @@ function newspack_custom_typography_css() {
 			$css_blocks .= "
 			blockquote,
 			.has-drop-cap:not(:focus)::first-letter,
+			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+			.accent-header,
+			.cat-links,
 			.taxonomy-description {
 				font-family: $font_header;
 			}";
@@ -254,7 +257,8 @@ function newspack_custom_typography_css() {
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
 			$editor_css_blocks .= "
 			.editor-block-list__layout .editor-block-list__block blockquote,
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+			.editor-block-list__layout .editor-block-list__block .entry-meta
 
 			{
 				font-family: $font_header;
