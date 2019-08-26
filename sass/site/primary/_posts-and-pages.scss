@@ -178,7 +178,6 @@ body.page {
 	}
 
 	a {
-
 		color: $color__link;
 		text-decoration: underline;
 
@@ -192,13 +191,7 @@ body.page {
 		}
 
 		&.button {
-			display: inline-block;
-		}
-
-		&.button:hover {
-			background: $color__background-button-hover;
-			color: $color__background-body;
-			cursor: pointer;
+			text-decoration: none;
 		}
 	}
 

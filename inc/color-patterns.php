@@ -96,7 +96,7 @@ function newspack_custom_colors_css() {
 		/* Set secondary background color */
 
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
-		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"],
+		.button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content > .has-secondary-background-color,
 		.entry .entry-content > *[class^="wp-block-"].has-secondary-background-color,
 		.entry .entry-content > *[class^="wp-block-"] .has-secondary-background-color,
@@ -107,7 +107,7 @@ function newspack_custom_colors_css() {
 		/* Set colour that contrasts against the secondary background */
 
 		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
-		.entry .button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+		.button, .button:visited, .entry .entry-content .button, .entry .entry-content .button:visited, button, input[type="button"], input[type="reset"], input[type="submit"] {
 			color: ' . $secondary_color_contrast . ';
 		}
 
