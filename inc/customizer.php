@@ -221,7 +221,7 @@ function newspack_customize_register( $wp_customize ) {
 				'description' => esc_html__( 'Optional alternative logo to be displayed in the footer.', 'newspack' ),
 				'section'     => 'title_tagline',
 				'settings'    => 'newspack_footer_logo',
-				'priority'    => 8,
+				'priority'    => 9,
 				'flex_width'  => true,
 				'flex_height' => true,
 				'width'       => 800,

@@ -6,6 +6,12 @@
 		}
 	}
 
+	@if tabletonly == $res {
+		@media only screen and (max-width: #{ $tablet_width - 1 } ) {
+			@content;
+		}
+	}
+
 	@if tablet == $res {
 		@media only screen and (min-width: $tablet_width) {
 			@content;

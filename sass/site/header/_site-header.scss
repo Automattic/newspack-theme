@@ -22,17 +22,15 @@
 	line-height: 1;
 	margin: 0 $size__spacing-unit 0 0;
 	overflow: hidden;
+}
 
-	.custom-logo {
+.site-header .custom-logo-link .custom-logo {
+
+	@include media( tabletonly ) {
 		height: auto;
-		min-height: inherit;
 		max-height: 75px;
-		max-width: 200px;
+		max-width: 175px;
 		width: auto;
-
-		@include media( tablet ) {
-			max-height: 150px;
-		}
 	}
 }
 
@@ -237,10 +235,6 @@
 	.site-branding {
 		display: flex;
 		flex-basis: auto;
-	}
-
-	.custom-logo-link .custom-logo {
-		max-height: 50px;
 	}
 
 	.site-description {
