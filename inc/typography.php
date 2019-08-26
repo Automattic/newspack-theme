@@ -276,7 +276,7 @@ function newspack_custom_typography_css() {
 			}
 		';
 
-		if ( newspack_is_active_style_pack( 'default' ) ) {
+		if ( newspack_is_active_style_pack( 'default', 'style-4' ) ) {
 			$css_blocks        .= '
 				.accent-header,
 				.article-section-title,
