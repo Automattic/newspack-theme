@@ -131,13 +131,7 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-// Site header
-
-.main-navigation > ul > li,
-.tertiary-menu {
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
+// HTML Elements
 
 h1,
 h2,
@@ -156,8 +150,6 @@ h4,
 	font-family: $font__heading;
 	font-size: $font__size-xs;
 	font-weight: bold;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
 }
 
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
