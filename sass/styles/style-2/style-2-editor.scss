@@ -13,7 +13,8 @@ h1,
 h2,
 h3,
 h4,
-blockquote p {
+blockquote p,
+.editor-post-title__block .editor-post-title__input {
 	font-weight: 800;
 }
 
