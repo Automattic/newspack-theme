@@ -705,6 +705,14 @@
 			}
 		}
 
+		&[class*='has-'] > * {
+			margin-right: $size__spacing-unit;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
 		&.is-style-borders {
 			.wp-block-column {
 
