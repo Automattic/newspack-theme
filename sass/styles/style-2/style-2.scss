@@ -131,6 +131,22 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
+// Site header
+
+.main-navigation > ul > li,
+.tertiary-menu {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+.comments-title {
+	font-weight: 800;
+}
+
 // Accent headers
 
 .accent-header,
@@ -139,6 +155,9 @@ body:not(.header-solid-background) .site-header {
 	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
 }
 
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
@@ -227,6 +246,14 @@ body:not(.header-solid-background) .site-header {
 
 // Blocks
 
+blockquote {
+	font-family: $font__heading;
+
+	p {
+		font-weight: 800;
+	}
+}
+
 .entry .entry-content {
 
 	.wp-block-newspack-blocks-homepage-articles {
@@ -247,7 +274,7 @@ body:not(.header-solid-background) .site-header {
 	.has-drop-cap:not(:focus)::first-letter {
 		border: 7px solid $color__primary;
 		font-family: $font__heading;
-		font-weight: bold;
+		font-weight: 800;
 		font-size: $font__size-xxl;
 		padding: 0.4em;
 	}
@@ -261,7 +288,6 @@ body:not(.header-solid-background) .site-header {
 			p {
 				font-size: $font__size-lg;
 				font-style: normal;
-				font-weight: bold;
 
 				@include media( tablet ) {
 					font-size: $font__size-xl;
@@ -321,6 +347,7 @@ body:not(.header-solid-background) .site-header {
 	h2 {
 		color: inherit;
 		font-size: $font__size-md;
+		font-weight: 800;
 		letter-spacing: 0;
 		margin: 0 0 #{ 0.5 * $size__spacing-unit };
 		text-transform: none;
