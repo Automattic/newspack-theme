@@ -703,12 +703,21 @@
 					margin-bottom: 0;
 				}
 			}
+		}
 
-			&[class*='has-'] > * {
-				margin-right: $size__spacing-unit;
+		&.is-style-borders {
+			.wp-block-column {
 
-				&:last-child {
-					margin-right: 0;
+				@include media(tablet) {
+					flex-basis: calc(50% - 32px);
+
+					&:not(:first-child) {
+						margin-left: 64px;
+					}
+
+					&:after {
+						right: -32px;
+					}
 				}
 			}
 		}
