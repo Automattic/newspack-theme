@@ -285,7 +285,8 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.article-section-title {
+				.article-section-title,
+				.accent-header {
 					text-transform: uppercase;
 				}
 			';
