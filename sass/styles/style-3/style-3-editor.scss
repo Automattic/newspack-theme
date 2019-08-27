@@ -157,6 +157,10 @@ hr {
 	[data-type="core/column"] {
 		border-bottom: 1px dotted $color__text-main;
 
+		&:last-child {
+			border-bottom: 0;
+		}
+
 		@include media( mobile ) {
 			border-bottom: 0;
 
