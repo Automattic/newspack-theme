@@ -413,7 +413,8 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$editor_css .= '
-			.editor-block-list__layout .editor-block-list__block .article-section-title {
+			.editor-block-list__layout .editor-block-list__block .article-section-title,
+			.editor-block-list__layout .editor-block-list__block .accent-header {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 		';
