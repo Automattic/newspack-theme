@@ -15,13 +15,13 @@ Newspack Theme Editor Styles - Style Pack 4
 .accent-header,
 .article-section-title {
 	color: $color__primary;
+	font-size: $font__size-xs;
 	text-align: center;
 }
 
 .article-section-title {
 	margin-bottom: #{ 1.5 * $size__spacing-unit };
 	overflow: hidden;
-
 
 	&:before,
 	&:after {
