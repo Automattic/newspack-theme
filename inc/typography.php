@@ -32,6 +32,7 @@ function newspack_custom_typography_css() {
 		.no-comments,
 		.not-found .page-title,
 		.error-404 .page-title,
+		.author-bio .author-link,
 		.page-links,
 		.page-description,
 		.pagination .nav-links,
@@ -106,7 +107,10 @@ function newspack_custom_typography_css() {
 		.widget_tag_cloud .tagcloud,
 
 		/* _copy.scss */
-		blockquote cite
+		blockquote cite,
+
+		/* _blocks.scss */
+		.entry .entry-content .wp-block-button .wp-block-button__link
 
 		{
 			font-family: $font_header;
