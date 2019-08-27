@@ -284,6 +284,13 @@ figcaption {
 	}
 }
 
+.wp-block-cover {
+	.accent-header,
+	.article-section-title {
+		color: inherit;
+	}
+}
+
 .wp-block-columns {
 	.wp-block-cover,
 	.wp-block-cover-image {

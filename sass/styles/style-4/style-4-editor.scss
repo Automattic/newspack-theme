@@ -123,3 +123,12 @@ cite {
 		}
 	}
 }
+
+.wp-block-cover h2.article-section-title {
+	&:before {
+		width: 70%;
+	}
+	&:after {
+		display: none;
+	}
+}
