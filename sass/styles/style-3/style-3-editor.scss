@@ -152,3 +152,27 @@ figcaption,
 hr {
 	border-top: 1px dotted $color__text-main;
 }
+
+.wp-block-columns.is-style-borders {
+	[data-type="core/column"] {
+		border-bottom: 1px dotted $color__text-main;
+
+		@include media( mobile ) {
+			border-bottom: 0;
+
+			&:after {
+				border-right: 1px dotted transparent;
+			}
+
+			&:nth-child(odd):after {
+				border-color: $color__text-main;
+			}
+		}
+
+		@include media( tablet ) {
+			&:after {
+				border-color: $color__text-main;
+			}
+		}
+	}
+}
