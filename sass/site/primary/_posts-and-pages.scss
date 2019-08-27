@@ -178,7 +178,6 @@ body.page {
 	}
 
 	a {
-
 		color: $color__link;
 		text-decoration: underline;
 
@@ -189,16 +188,6 @@ body.page {
 		&:hover,
 		&:active {
 			color: $color__link-hover;
-		}
-
-		&.button {
-			display: inline-block;
-		}
-
-		&.button:hover {
-			background: $color__background-button-hover;
-			color: $color__background-body;
-			cursor: pointer;
 		}
 	}
 
@@ -217,6 +206,18 @@ body.page {
 	// Classic editor audio embeds.
 	.wp-audio-shortcode {
 		max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
+	}
+}
+
+.entry .entry-content {
+
+	a.button {
+		text-decoration: none;
+
+		&,
+		&:hover {
+			color: $color__background-body;
+		}
 	}
 }
 
