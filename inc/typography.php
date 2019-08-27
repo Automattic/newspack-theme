@@ -41,6 +41,7 @@ function newspack_custom_typography_css() {
 		.site-info,
 		#cancel-comment-reply-link,
 		.entry .entry-content .jp-relatedposts-i2 a,
+		.accent-header,
 		h1,
 		h2,
 		h3,
@@ -94,6 +95,9 @@ function newspack_custom_typography_css() {
 		.comment-form label,
 		.comment-form .comment-notes,
 
+		/* _posts-and-pages.scss */
+		.cat-links,
+
 		/* _widgets.scss */
 		.widget_archive ul li,
 		.widget_categories ul li,
@@ -110,8 +114,8 @@ function newspack_custom_typography_css() {
 		blockquote cite,
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-button .wp-block-button__link
-
+		.entry .entry-content .wp-block-button .wp-block-button__link,
+		.wp-block-newspack-blocks-homepage-articles .article-section-title
 		{
 			font-family: $font_header;
 		}";
@@ -128,10 +132,14 @@ function newspack_custom_typography_css() {
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
 			$css_blocks .= "
 			blockquote,
+<<<<<<< HEAD
 			.has-drop-cap:not(:focus)::first-letter,
 			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
 			.accent-header,
 			.cat-links,
+=======
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
+>>>>>>> Make typography fixes more general.
 			.taxonomy-description {
 				font-family: $font_header;
 			}";
@@ -234,6 +242,9 @@ function newspack_custom_typography_css() {
 		/* Jetpack blocks */
 		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 a,
 		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 strong,
+
+		/* Newspack Block */
+		.editor-block-list__layout .editor-block-list__block .entry-meta,
 
 		/* Classic Editor */
 		.editor-block-list__layout .editor-block-list__block .wp-caption dd,
