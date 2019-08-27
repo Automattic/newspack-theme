@@ -237,7 +237,7 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'style-1' ) ) {
 		$theme_css .= '
-			.accent-header:before,
+			.accent-header:not(.widget-title):before,
 			.article-section-title:before,
 			.cat-links:before,
 			.page-title:before {
@@ -421,7 +421,7 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'style-1' ) ) {
 		$editor_css .= '
-			.editor-block-list__layout .editor-block-list__block .accent-header:before,
+			.editor-block-list__layout .editor-block-list__block .accent-header:not(.widget-title):before,
 			.editor-block-list__layout .editor-block-list__block .article-section-title:before {
 				background-color: ' . $primary_color . ';
 			}
