@@ -11,6 +11,7 @@ Newspack Theme Editor Styles - Style Pack 1
 .article-section-title {
 	color: #666;
 	font-family: $font__heading;
+	font-size: $font__size-sm;
 
 	&:before {
 		background-color: $color__primary;
