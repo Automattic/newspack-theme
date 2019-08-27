@@ -11,8 +11,13 @@ Newspack Theme Styles - Style Pack 4
 
 .header-solid-background {
 	.site-header,
+	.top-header-contain,
 	.site-header .main-navigation .main-menu .sub-menu {
 		background-color: $color__background-dark;
+	}
+
+	.top-header-contain {
+		border-color: lighten( $color__background-dark, 5% );
 	}
 
 	.bottom-header-contain {
