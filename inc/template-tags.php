@@ -167,7 +167,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 		<figure class="post-thumbnail">
 			<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+				<?php the_post_thumbnail( 'newspack-archive-image' ); ?>
 			</a>
 		</figure>
 
