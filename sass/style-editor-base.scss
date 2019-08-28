@@ -225,22 +225,20 @@ figcaption {
 	}
 
 	@include media(tablet) {
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 }
 
 .wp-block[data-type="core/cover"][data-align="left"],
 .wp-block[data-type="core/cover"][data-align="right"] {
-
-	.editor-block-list__block-edit {
-		width: calc(4 * (100vw / 12));
-	}
-
 	.wp-block-cover {
-		width: 100%;
-		max-width: 100%;
+		min-height: 250px;
 		padding: calc(1.375 * #{$size__spacing-unit});
+
+		@include media( tablet ) {
+			max-width: 405px;
+		}
 
 		p {
 			padding-left: 0;
@@ -248,9 +246,32 @@ figcaption {
 		}
 
 		@include media(tablet) {
-			padding: calc(2.75 * #{$size__spacing-unit}) calc(2.75 * #{$size__spacing-unit}) calc(3.125 * #{$size__spacing-unit});
+			padding: calc(2 * #{$size__spacing-unit});
+		}
+
+		.wp-block-cover__inner-container {
+			width: 100%;
+		}
+
+		.block-editor-block-list__block-edit {
+			float: none;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.wp-block {
+			&:first-child {
+				margin-top: 0;
+				padding-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
 		}
 	}
+
 }
 
 .wp-block[data-type="core/cover"][data-align="wide"],
