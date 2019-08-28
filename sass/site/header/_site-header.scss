@@ -163,12 +163,13 @@
 .header-center-logo {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > * {
-			flex: 1 0 0;
-			min-width: calc( 100% / 3 );
+			flex-basis: 1;
 		}
 
 		.site-branding {
+			flex-basis: 2;
 			flex-wrap: wrap;
+			max-width: 40%
 		}
 
 		.site-header .custom-logo-link,
@@ -176,6 +177,20 @@
 		.site-description {
 			text-align: center;
 			width: 100%;
+		}
+
+		.site-header .custom-logo-link {
+			margin-right: 0;
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+
+	@include media( desktop ) {
+		.site-branding {
+			max-width: 50%
 		}
 	}
 }
