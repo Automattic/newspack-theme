@@ -318,26 +318,6 @@
 			margin-right: auto;
 		}
 	}
-
-	&.header-center-logo {
-
-		@include media( tablet ) {
-			.site-header .wrapper > * {
-				flex: 1 0 0;
-				min-width: 33%;
-			}
-
-			.site-branding {
-				flex-wrap: wrap;
-			}
-
-			.custom-logo-link,
-			.site-title,
-			.site-description {
-				width: 100%;
-			}
-		}
-	}
 }
 
 // Wrapper used to align search with menus.
