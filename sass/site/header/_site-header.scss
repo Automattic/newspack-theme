@@ -163,16 +163,16 @@
 .header-center-logo {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
-			border: 1px solid red;
-			flex-basis: 30%;
-			justify-content: space-between;
+			justify-content: center;
+			width: 35%;
 
 			&.site-branding {
-				flex-basis: 40%;
+				width: 30%;
 			}
 		}
 
 		.site-branding {
+			flex-basis: unset;
 			flex-wrap: wrap;
 		}
 
@@ -196,9 +196,8 @@
 	@include media( desktop ) {
 		.site-header .middle-header-contain .wrapper > div {
 			flex: 1;
-			flex-basis: auto;
 			display: flex;
-			justify-content: center;
+			width: auto;
 
 			&:first-of-type > * {
 				margin-right: auto;
