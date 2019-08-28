@@ -16,8 +16,12 @@ body.newspack-static-front-page {
 		max-width: 1230px; // 1200px + 30px to offset padding
 	}
 
-	[data-type="core/group"][data-align="wide"],
-	[data-type="core/group"][data-align="full"] {
+	.wp-block[data-align="wide"] {
+		max-width: 1430px; // 1400px + 30px to offset padding
+	}
+
+	.wp-block[data-type="core/group"][data-align="wide"],
+	.wp-block[data-type="core/group"][data-align="full"] {
 		.wp-block:not([data-align="wide"]):not([data-align="full"]) {
 			max-width: 1230px; // 1200px + 30px to offset padding
 		}
