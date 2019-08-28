@@ -74,12 +74,4 @@ body.header-default-background.header-default-height .site-header {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
 	}
-
-	// Centered logo.
-	.header-center-logo & {
-		margin-left: 0;
-		@include media(tablet) {
-			text-align: center;
-		}
-	}
 }

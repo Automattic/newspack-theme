@@ -162,14 +162,18 @@
 
 .header-center-logo {
 	@include media( tablet ) {
-		.site-header .middle-header-contain .wrapper > * {
-			flex-basis: 1;
+		.site-header .middle-header-contain .wrapper > div {
+			border: 1px solid red;
+			flex-basis: 30%;
+			justify-content: space-between;
+
+			&.site-branding {
+				flex-basis: 40%;
+			}
 		}
 
 		.site-branding {
-			flex-basis: 2;
 			flex-wrap: wrap;
-			max-width: 40%
 		}
 
 		.site-header .custom-logo-link,
@@ -181,6 +185,7 @@
 
 		.site-header .custom-logo-link {
 			margin-right: 0;
+
 			img {
 				height: auto;
 				max-width: 100%;
@@ -189,8 +194,23 @@
 	}
 
 	@include media( desktop ) {
-		.site-branding {
-			max-width: 50%
+		.site-header .middle-header-contain .wrapper > div {
+			flex: 1;
+			flex-basis: auto;
+			display: flex;
+			justify-content: center;
+
+			&:first-of-type > * {
+				margin-right: auto;
+			}
+
+			&:last-of-type {
+				justify-content: flex-end;
+			}
+		}
+
+		.site-header .custom-logo-link img {
+			max-width: inherit;
 		}
 	}
 }
