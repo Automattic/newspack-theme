@@ -259,7 +259,7 @@ figcaption {
 			margin-right: 0;
 		}
 
-		.wp-block {
+		[class*="wp-block-"] {
 			&:first-child {
 				margin-top: 0;
 				padding-top: 0;
