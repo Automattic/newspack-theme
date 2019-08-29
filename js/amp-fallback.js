@@ -6,7 +6,6 @@
 
 (function() {
 
-
 	// Search toggle.
 	var headerContain           = document.getElementById( 'masthead' ),
 		headerSearch            = document.getElementById( 'header-search' ),
@@ -47,6 +46,52 @@
 			body.classList.toggle( 'menu-opened' );
 		}, false );
 	}
-
-
 } )();
+
+// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+( function( $ ) {
+
+	var primaryNavigation = $( '.main-navigation > ul' );
+
+	if ( ! primaryNavigation.length || ! primaryNavigation.children().length ) {
+		return;
+	}
+
+	// Toggle `focus` class to allow submenu access on tablets.
+	function toggleFocusClassTouchScreen() {
+		if ( 'none' === $( '.site-header .mobile-menu-toggle' ).css( 'display' ) ) {
+
+			$( document.body ).on( 'touchstart.newspack', function( e ) {
+				if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
+					$( '.main-navigation li' ).removeClass( 'is-focused' );
+				}
+			});
+
+			primaryNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+				.on( 'touchstart.newspack', function( e ) {
+					var el = $( this ).parent( 'li' );
+
+					if ( ! el.hasClass( 'is-focused' ) ) {
+						e.preventDefault();
+						el.toggleClass( 'is-focused' );
+						el.siblings( '.is-focused' ).removeClass( 'is-focused' );
+					}
+				});
+
+		} else {
+			primaryNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.newspack' );
+		}
+	}
+
+	if ( 'ontouchstart' in window ) {
+		$( window ).on( 'resize.newspack', toggleFocusClassTouchScreen );
+		toggleFocusClassTouchScreen();
+	}
+
+	primaryNavigation.find( 'a' ).on( 'focus.newspack blur.newspack', function() {
+		$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+	} );
+} )( jQuery );
+
+
+
