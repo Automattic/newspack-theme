@@ -7,11 +7,29 @@ Newspack Theme Editor Styles - Style Pack 2
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
+// Elements
+
+h1,
+h2,
+h3,
+h4,
+blockquote p,
+.editor-post-title__block .editor-post-title__input {
+	font-weight: 800;
+}
+
+blockquote {
+	font-family: $font__heading;
+}
+
+// Accent Headers
+
 .accent-header,
 .article-section-title {
 	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xs;
+	font-weight: bold;
 }
 
 .article-section-title {
@@ -47,7 +65,7 @@ Newspack Theme Editor Styles - Style Pack 2
 	&.has-drop-cap:not(:focus)::first-letter {
 		border: 7px solid $color__primary;
 		font-family: $font__heading;
-		font-weight: bold;
+		font-weight: 800;
 		font-size: $font__size-xxl;
 		padding: 0.4em;
 	}
