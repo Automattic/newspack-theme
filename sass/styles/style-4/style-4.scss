@@ -28,14 +28,14 @@ Newspack Theme Styles - Style Pack 4
 // Accent headers
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.article-section-title,
 .cat-links {
 	color: $color__primary;
 	font-size: $font__size-xs;
 	text-align: center;
 }
 
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.article-section-title,
 .widget-title.accent-header {
 	margin-bottom: $size__spacing-unit;
 	overflow: hidden;
