@@ -63,20 +63,30 @@
 
 	.wrapper {
 		border-top: 1px solid $color__border;
-		justify-content: space-between;
+		display: block;
 		padding: $size__spacing-unit 0;
+
+		@include media( tablet ) {
+
+			display: flex;
+			justify-content: flex-start;
+
+			& > * {
+				margin-left: $size__spacing-unit;
+			}
+
+			& > *:last-child {
+				margin-left: auto;
+			}
+		}
 	}
 
 	a {
 		color: inherit;
+		display: block;
 
 		&:hover {
 			text-decoration: none;
-			color: $color__primary-variation;
 		}
-	}
-
-	.privacy-policy-link {
-		margin-right: $size__spacing-unit;
 	}
 }
