@@ -700,6 +700,23 @@
 				}
 			}
 		}
+
+		&.is-style-borders {
+			.wp-block-column {
+
+				@include media(tablet) {
+					flex-basis: calc(50% - 32px);
+
+					&:not(:first-child) {
+						margin-left: 64px;
+					}
+
+					&:after {
+						right: -32px;
+					}
+				}
+			}
+		}
 	}
 
 	//! Latest Comments

@@ -302,6 +302,25 @@ figcaption {
 	}
 }
 
+/** === Columns === */
+
+.wp-block-columns.is-style-borders {
+	[data-type="core/column"] {
+
+		@include media(tablet) {
+			flex-basis: calc(50% - 32px);
+
+			&:not(:first-child) {
+				margin-left: 64px;
+			}
+
+			&:after {
+				right: -42px;
+			}
+		}
+	}
+}
+
 /** === Image === */
 
 .wp-block-image {
