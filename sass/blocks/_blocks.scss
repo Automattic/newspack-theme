@@ -535,10 +535,34 @@
 
 		&.alignleft,
 		&.alignright {
-			width: 100%;
+			min-height: 250px;
+			max-width: 100%;
+
+			@include media(mobile) {
+				width: 50%;
+			}
 
 			@include media(tablet) {
 				padding: $size__spacing-unit calc(2 * #{$size__spacing-unit});
+			}
+
+			blockquote,
+			.wp-block-pullquote:not(.is-style-solid-color) blockquote {
+				padding-left: 0;
+			}
+
+			.wp-block-cover__inner-container {
+				width: 100%;
+
+				[class*="wp-block-"]:first-child {
+					margin-top: 0;
+					padding-top: 0;
+				}
+
+				[class*="wp-block-"]:last-child {
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
 			}
 		}
 	}
@@ -547,10 +571,6 @@
 		.wp-block-cover,
 		.wp-block-cover-image {
 			min-height: 330px;
-		}
-
-		.wp-block-cover__inner-container {
-			width: 100%;
 		}
 	}
 
