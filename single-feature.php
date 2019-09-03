@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Article feature
+ * Template Name: One column
  * Template Post Type: post, page
  *
  * The template for displaying all single posts
