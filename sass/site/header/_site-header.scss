@@ -199,6 +199,10 @@
 			display: flex;
 			width: auto;
 
+			&.site-branding {
+				width: auto;
+			}
+
 			&:first-of-type > * {
 				margin-right: auto;
 			}
