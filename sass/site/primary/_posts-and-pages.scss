@@ -250,13 +250,6 @@ body.page {
 		}
 	}
 
-	&.post-template-single-feature {
-		.main-content {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
 	.main-content {
 		.post-thumbnail:first-child {
 			margin-top: #{ 2 * $size__spacing-unit };
