@@ -8,7 +8,7 @@
 ( function( $ ) {
 
 	var api = wp.customize;
-	var Logo = new photoBlogLogo();
+	var Logo = new NewspackLogo();
 	var initial = null;
 	var resizeTimer;
 
@@ -37,13 +37,15 @@
 		initial = to;
 	}
 
-	function photoBlogLogo() {
+	function NewspackLogo() {
+
 		var intId = 0;
 		var hasLogo = null;
 		var min = 48;
 
 		var self = {
 			resize: function( to ) {
+
 				if ( hasLogo ) {
 					var img = new Image();
 					var logo = $( '.custom-logo' );
@@ -59,7 +61,7 @@
 					}
 
 					var max = new Object();
-					max.width = $.isNumeric( cssMax.width ) ? cssMax.width : size.width;
+					max.width = $.isNumeric( cssMax.width ) ? cssMax.width : 600;
 					max.height = $.isNumeric( cssMax.height ) ? cssMax.height : size.height;
 
 					img.onload = function() {

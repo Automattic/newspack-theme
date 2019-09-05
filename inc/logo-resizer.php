@@ -65,9 +65,11 @@ function newspack_customize_logo_resize( $html ) {
 		// get the logo support size
 		$sizes = get_theme_support( 'custom-logo' );
 
+		$logo_max_width = ( $logo['width'] > 600 ) ? 600 : $logo['width'];
+
 		// Check for max height and width, default to image sizes if none set in theme
 		$max['height'] = isset( $sizes[0]['height'] ) ? $sizes[0]['height'] : $logo['height'];
-		$max['width']  = isset( $sizes[0]['width'] ) ? $sizes[0]['width'] : $logo['width'];
+		$max['width']  = isset( $sizes[0]['width'] ) ? $sizes[0]['width'] : $logo_max_width;
 
 		// landscape or square
 		if ( $logo['width'] >= $logo['height'] ) {

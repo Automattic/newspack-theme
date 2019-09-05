@@ -162,12 +162,17 @@
 
 .header-center-logo {
 	@include media( tablet ) {
-		.site-header .middle-header-contain .wrapper > * {
-			flex: 1 0 0;
-			min-width: calc( 100% / 3 );
+		.site-header .middle-header-contain .wrapper > div {
+			justify-content: center;
+			width: 35%;
+
+			&.site-branding {
+				width: 30%;
+			}
 		}
 
 		.site-branding {
+			flex-basis: unset;
 			flex-wrap: wrap;
 		}
 
@@ -176,6 +181,39 @@
 		.site-description {
 			text-align: center;
 			width: 100%;
+		}
+
+		.site-header .custom-logo-link {
+			margin-right: 0;
+
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+
+	@include media( desktop ) {
+		.site-header .middle-header-contain .wrapper > div {
+			flex: 1;
+			display: flex;
+			width: auto;
+
+			&.site-branding {
+				width: auto;
+			}
+
+			&:first-of-type > * {
+				margin-right: auto;
+			}
+
+			&:last-of-type {
+				justify-content: flex-end;
+			}
+		}
+
+		.site-header .custom-logo-link img {
+			max-width: inherit;
 		}
 	}
 }
@@ -282,26 +320,6 @@
 
 		&.show-site-tagline .site-branding {
 			margin-right: auto;
-		}
-	}
-
-	&.header-center-logo {
-
-		@include media( tablet ) {
-			.site-header .wrapper > * {
-				flex: 1 0 0;
-				min-width: 33%;
-			}
-
-			.site-branding {
-				flex-wrap: wrap;
-			}
-
-			.custom-logo-link,
-			.site-title,
-			.site-description {
-				width: 100%;
-			}
 		}
 	}
 }
