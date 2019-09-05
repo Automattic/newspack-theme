@@ -210,8 +210,13 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
-		// Make our theme AMP Native
-		add_theme_support( 'amp' );
+		// Make our theme AMP/PWA Native
+		add_theme_support( 'amp' , [
+			'service_worker' => [
+				'cdn_script_caching'   => true,
+				'google_fonts_caching' => true,
+			],
+		] );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
