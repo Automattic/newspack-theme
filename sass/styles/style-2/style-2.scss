@@ -82,7 +82,7 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-.newspack-front-page #primary {
+.newspack-front-page:not(.page-template-single-feature) #primary {
 	padding: 0;
 
 	.site-main > article > .entry-content > *:first-child {

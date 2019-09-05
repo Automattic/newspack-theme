@@ -68,7 +68,8 @@
 .blog #main,
 .search #main,
 .page .main-content,
-.single-post .main-content {
+.single-post .main-content,
+.newspack-front-page.page-template-single-feature .site-main {
 	@include media(tablet) {
 		width: 65%;
 	}
@@ -92,12 +93,11 @@
 }
 
 // Single-column layouts
-.post-template-single-feature,
-.page-template-single-feature {
-	.main-content {
-		margin-left: auto;
-		margin-right: auto;
-	}
+.post-template-single-feature .main-content,
+.page-template-single-feature .main-content,
+.newspack-front-page.page-template-single-feature .site-main {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .page-template-single-feature {
@@ -115,5 +115,14 @@
 .page-template-single-wide {
 	.main-content {
 		width: 100%;
+	}
+
+	@include media( tablet ) {
+		.author-bio,
+		.comments-area {
+			margin-left: auto;
+			margin-right: auto;
+			width: 65%;
+		}
 	}
 }
