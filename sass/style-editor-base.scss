@@ -28,6 +28,15 @@ body {
 		}
 	}
 
+	.editor-inner-blocks .wp-block[data-align="left"] {
+		@include media( desktop ) {
+			left: auto;
+		}
+		@include media( wide ) {
+			left: auto;
+		}
+	}
+
 	.wp-block[data-align="right"] {
 		@include media( desktop ) {
 			right: #{-2 * $size__spacing-unit };
@@ -36,7 +45,17 @@ body {
 			right: #{-4 * $size__spacing-unit };
 		}
 	}
+
+	.editor-inner-blocks .wp-block[data-align="right"] {
+		@include media( desktop ) {
+			right: auto;
+		}
+		@include media( wide ) {
+			right: auto;
+		}
+	}
 }
+
 
 /** === Content Width === */
 
