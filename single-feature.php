@@ -53,10 +53,6 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					}
-
-					if ( is_active_sidebar( 'article-2' ) && is_single() ) {
-						dynamic_sidebar( 'article-2' );
-					}
 					?>
 				</div>
 

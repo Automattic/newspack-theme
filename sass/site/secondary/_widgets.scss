@@ -101,3 +101,7 @@
 .single-post #secondary {
 	padding-top: calc( #{$size__spacing-unit} * 1.5 );
 }
+
+.above-content {
+	margin: $size__spacing-unit 0 0;
+}

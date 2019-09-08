@@ -33,6 +33,10 @@
 				'after'  => '</div>',
 			)
 		);
+
+		if ( is_active_sidebar( 'article-2' ) && is_single() ) {
+			dynamic_sidebar( 'article-2' );
+		}
 		?>
 	</div><!-- .entry-content -->
 

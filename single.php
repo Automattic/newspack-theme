@@ -51,9 +51,6 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 						comments_template();
 					}
 
-					if ( is_active_sidebar( 'article-2' ) ) {
-						dynamic_sidebar( 'article-2' );
-					}
 					?>
 				</div><!-- .main-content -->
 
