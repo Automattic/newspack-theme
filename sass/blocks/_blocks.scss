@@ -50,8 +50,10 @@
 	}
 }
 
-// Wide and full widths need adjustment for the homepage
-.newspack-front-page {
+// Wide and full widths need adjustment for the wider templates
+.newspack-front-page,
+.post-template-single-wide,
+.page-template-single-wide {
 	.entry .entry-content {
 		.alignwide {
 			@include media(tablet) {
