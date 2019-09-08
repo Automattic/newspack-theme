@@ -97,26 +97,44 @@
 	.wp-block-pullquote {
 		background-color: $color__background-body;
 		border-width: 0;
+		border-color: transparent;
 		font-family: $font__heading;
 		font-weight: bold;
 		padding-top: #{ 4 * $size__spacing-unit };
 		position: relative;
 
 		p {
-			position: relative;
-			z-index: 1;
 			@include media( tablet ) {
 				font-size: $font__size-xl;
 			}
 		}
 
 		blockquote {
-			background-color: inherit;
 			border-color: inherit;
 			text-align: center;
 
+			&:before,
+			&:after {
+				border-top: 2px solid;
+				border-color: inherit;
+				content: "";
+				display: block;
+				position: absolute;
+				opacity: 0.8;
+				top: #{ 2 * $size__spacing-unit };
+			}
+
 			&:before {
-				background-color: inherit;
+				left: 15%;
+				right: calc( 50% + 2em);
+			}
+
+			&:after {
+				left: calc( 50% + 2em);
+				right: 15%;
+			}
+
+			p:first-of-type:before {
 				color: $color__primary;
 				content: "\201C";
 				display: inline-block;
@@ -134,17 +152,16 @@
 					font-size: calc( 1rem * 7 );
 				}
 			}
+		}
 
-			&:after {
-				border-top: 2px solid;
-				border-top-color: inherit;
-				content: "";
-				display: block;
-				position: absolute;
-				opacity: 0.5;
-				left: 15%;
-				right: 15%;
-				top: #{ 2 * $size__spacing-unit };
+		&.is-style-solid-color {
+			blockquote:before,
+			blockquote:after {
+				border-top-color: currentColor;
+			}
+
+			p:first-of-type:before {
+				color: inherit;
 			}
 		}
 
@@ -172,23 +189,42 @@
 
 			p {
 				font-size: $font__size-md;
+
+					&:first-of-type:before {
+					font-size: calc( 1rem * 5 );
+					left: 0;
+					text-align: left;
+					width: 0.5em;
+				}
 			}
 
-			blockquote:before {
-				font-size: calc( 1rem * 5 );
-				left: 0;
-				text-align: left;
-				width: 0.5em;
+			blockquote {
+				&:before {
+					left: 3em;
+					right: 15%;
+				}
+
+				&:after {
+					display: none;
+				}
 			}
 
-			blockquote:after {
-				left: 0;
-			}
+			&.is-style-solid-color {
+				p:first-of-type:before {
+					left: #{ 1.5 * $size__spacing-unit };
+				}
 
-			&.is-style-solid-color blockquote:before,
-			&.is-style-solid-color blockquote:after {
-				left: #{ 2 * $size__spacing-unit };
+				blockquote:before {
+					left: 4em;
+				}
 			}
+		}
+	}
+
+	.wp-block-cover,
+	.wp-block-group {
+		.wp-block-pullquote {
+			background-color: transparent;
 		}
 	}
 }

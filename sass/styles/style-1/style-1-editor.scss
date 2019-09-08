@@ -48,7 +48,6 @@ Newspack Theme Editor Styles - Style Pack 1
 .wp-block[data-type="core/pullquote"] {
 
 	.wp-block-pullquote {
-		background-color: $color__background-body;
 		border-width: 0;
 		padding-top: #{ 3 * $size__spacing-unit };
 		position: relative;
@@ -60,13 +59,41 @@ Newspack Theme Editor Styles - Style Pack 1
 	}
 
 	blockquote {
-		background-color: inherit;
 		border-color: inherit;
 		margin: #{ 2 * $size__spacing-unit } 0;
 		text-align: center;
 
+		&:before,
+		&:after {
+			border-top: 2px solid;
+			border-top-color: inherit;
+			content: "";
+			display: block;
+			position: absolute;
+			opacity: 0.8;
+			top: #{ 2 * $size__spacing-unit };
+		}
+
 		&:before {
-			background-color: inherit;
+			left: 15%;
+			right: calc( 50% + 2em);
+		}
+
+		&:after {
+			left: calc( 50% + 2em);
+			right: 15%;
+		}
+	}
+
+	.wp-block-pullquote.is-style-solid-color {
+		blockquote:before,
+		blockquote:after {
+			border-top-color: currentColor;
+		}
+	}
+
+	.block-library-pullquote__content {
+		&:before {
 			color: $color__primary;
 			content: "\201C";
 			display: inline-block;
@@ -77,7 +104,7 @@ Newspack Theme Editor Styles - Style Pack 1
 			line-height: 0.75;
 			position: absolute;
 			text-align: center;
-			top: #{ 1.5 * $size__spacing-unit };
+			top: #{ -3.5 * $size__spacing-unit };
 			width: 0.5em;
 			z-index: 1;
 
@@ -85,28 +112,10 @@ Newspack Theme Editor Styles - Style Pack 1
 				font-size: calc( 1rem * 7 );
 			}
 		}
-
-		&:after {
-			border-top: 2px solid;
-			border-top-color: inherit;
-			content: "";
-			display: block;
-			position: absolute;
-			opacity: 0.5;
-			left: 15%;
-			right: 15%;
-			top: #{ 2 * $size__spacing-unit };
-		}
 	}
 
-	.wp-block-pullquote.is-style-solid-color {
-		blockquote:before {
-			color: inherit;
-		}
-
-		blockquote:after {
-			border-top-color: currentColor;
-		}
+	.wp-block-pullquote.is-style-solid-color .block-library-pullquote__content:before {
+		color: inherit;
 	}
 
 	blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
@@ -135,23 +144,31 @@ Newspack Theme Editor Styles - Style Pack 1
 			text-align: left;
 
 			&:before {
-				font-size: calc( 1rem * 5 );
-				left: 0;
-				text-align: left;
-				width: 0.5em;
+				left: 2em;
+				right: 0;
 			}
 
 			&:after {
+				display: none;
+			}
+		}
+
+		.block-library-pullquote__content {
+			&:before {
+				font-size: calc( 1rem * 5 );
 				left: 0;
+				text-align: left;
+				top: #{ -2.5 * $size__spacing-unit };
+				width: 0.5em;
 			}
 		}
 
 		&.is-style-solid-color blockquote {
 			padding-top: #{ 0.25 * $size__spacing-unit };
 
-			&:before,
-			&:after {
-				left: #{ 2 * $size__spacing-unit };
+			&:before {
+				left: #{ 4 * $size__spacing-unit };
+				right: #{ 2 * $size__spacing-unit };
 			}
 		}
 
