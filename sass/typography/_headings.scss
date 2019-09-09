@@ -164,3 +164,12 @@ blockquote {
 .page-description {
 	text-transform: none;
 }
+
+.accent-header {
+	margin-bottom: 0.5em;
+
+	& + * {
+		margin-top: 0;
+	}
+}
+

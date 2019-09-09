@@ -144,7 +144,7 @@ h4,
 // Accent headers
 
 .accent-header,
-.article-section-title,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
 .cat-links {
 	color: $color__text-light;
 	font-family: $font__heading;
@@ -152,6 +152,7 @@ h4,
 	font-weight: bold;
 }
 
+.accent-header,
 .site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
