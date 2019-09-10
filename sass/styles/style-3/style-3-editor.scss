@@ -23,6 +23,11 @@ Newspack Theme Editor Styles - Style Pack 3
 	}
 }
 
+.wp-block-newspack-blocks-homepage-articles article .entry-meta,
+.entry-meta {
+	font-size: $font__size-xs;
+}
+
 .wp-block-paragraph {
 	&.has-drop-cap:not(:focus)::first-letter {
 		font-family: $font__heading;
