@@ -320,6 +320,7 @@ function newspack_custom_typography_css() {
 			$css_blocks        .= '
 				.main-navigation ul li,
 				.tertiary-menu,
+				.mobile-menu-toggle,
 				.accent-header,
 				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
 				.cat-links,
