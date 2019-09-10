@@ -92,6 +92,10 @@ function newspack_custom_colors_css() {
 			border-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
+		.mobile-sidebar nav.main-navigation + nav.secondary-menu {
+			border-color: ' . $primary_color_contrast . ';
+		}
+
 		.gallery-item > div > a:focus {
 			box-shadow: 0 0 0 2px ' . $primary_color . '; /* base: #0073a8; */
 		}
