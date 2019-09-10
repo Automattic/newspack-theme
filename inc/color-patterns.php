@@ -73,6 +73,7 @@ function newspack_custom_colors_css() {
 		}
 
 		.mobile-sidebar,
+		.mobile-sidebar button:hover,
 		.mobile-sidebar a,
 		.mobile-sidebar a:visited,
 		.mobile-sidebar .main-navigation .sub-menu > li > a,

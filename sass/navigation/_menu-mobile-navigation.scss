@@ -16,6 +16,9 @@
 }
 
 .site-header .mobile-menu-toggle {
+	&:hover {
+		color: inherit
+	}
 	@include media(tablet) {
 		display: none;
 	}
