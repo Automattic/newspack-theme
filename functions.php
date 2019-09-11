@@ -125,25 +125,25 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'      => __( 'Small', 'newspack' ),
 					'shortName' => __( 'S', 'newspack' ),
-					'size'      => 19.5,
+					'size'      => 16,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => __( 'Normal', 'newspack' ),
 					'shortName' => __( 'M', 'newspack' ),
-					'size'      => 22,
+					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
 					'name'      => __( 'Large', 'newspack' ),
 					'shortName' => __( 'L', 'newspack' ),
-					'size'      => 36.5,
+					'size'      => 36,
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => __( 'Huge', 'newspack' ),
 					'shortName' => __( 'XL', 'newspack' ),
-					'size'      => 49.5,
+					'size'      => 44,
 					'slug'      => 'huge',
 				),
 			)
