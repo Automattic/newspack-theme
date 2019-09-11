@@ -89,6 +89,11 @@ Newspack Theme Styles - Style Pack 3
 
 // Posts & Pages
 
+.entry-meta,
+.entry .wp-block-newspack-blocks-homepage-articles article .entry-meta {
+	font-size: $font__size-xs;
+}
+
 .single-post:not(.has-featured-image) .entry-header,
 .single-post.has-large-featured-image .entry-header {
 	border-bottom: 1px dotted $color__text-main;
