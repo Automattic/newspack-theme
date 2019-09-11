@@ -54,6 +54,7 @@ function newspack_custom_colors_css() {
 		.main-navigation ul.main-menu > li > a,
 		.entry .entry-content .more-link:hover,
 		.main-navigation .main-menu > li > a + svg,
+		.entry-footer a,
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,
