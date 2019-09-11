@@ -237,7 +237,7 @@ figcaption {
 		padding: calc(1.375 * #{$size__spacing-unit});
 
 		@include media( tablet ) {
-			max-width: 405px;
+			max-width: 400px;
 		}
 
 		p {
@@ -250,7 +250,8 @@ figcaption {
 		}
 
 		.wp-block-cover__inner-container {
-			width: 100%;
+			width: 450px;
+			max-width: 100%;
 		}
 
 		.block-editor-block-list__block-edit {
