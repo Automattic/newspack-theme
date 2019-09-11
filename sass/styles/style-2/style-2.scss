@@ -11,8 +11,6 @@ Newspack Theme Styles - Style Pack 2
 
 .site-header,
 .header-solid-background .site-header {
-	padding-bottom: #{ 0.5 * $size__spacing-unit };
-
 	@include media(tablet) {
 		padding-bottom: #{ 4 * $size__spacing-unit };
 	}
@@ -34,8 +32,6 @@ Newspack Theme Styles - Style Pack 2
 
 .site-content,
 .newspack-front-page.hide-homepage-title .site-content {
-	margin-top: #{ -0.5 * $size__spacing-unit };
-
 	@include media(tablet) {
 		margin-top: #{ -3.5 * $size__spacing-unit };
 	}
@@ -46,6 +42,13 @@ Newspack Theme Styles - Style Pack 2
 }
 
 // Header
+
+.site-header {
+	border-bottom: 2px solid $color__primary-variation;
+	@include media( tablet ) {
+		border-bottom: 0;
+	}
+}
 
 .bottom-header-contain .wrapper {
 	border: 0;
@@ -69,11 +72,10 @@ body:not(.header-solid-background) .site-header {
 
 #primary {
 	background-color: $color__background-body;
-	border-top: 2px solid $color__primary-variation;
-	padding: #{ 2 * $size__spacing-unit } 0;
+	padding: $size__spacing-unit 0;
 
 	@include media(tablet) {
-		border-top-width: 4px;
+		border-top: 4px solid $color__primary-variation;
 		padding: #{ 3 * $size__spacing-unit } #{ 3 * $size__spacing-unit } 0;
 	}
 
