@@ -31,13 +31,18 @@ Newspack Theme Styles - Style Pack 4
 .article-section-title,
 .cat-links {
 	color: $color__primary;
+}
+
+.accent-header,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.cat-links {
 	font-size: $font__size-xs;
+	margin-bottom: $size__spacing-unit;
 	text-align: center;
 }
 
 .article-section-title,
 .widget-title.accent-header {
-	margin-bottom: $size__spacing-unit;
 	overflow: hidden;
 
 	span {

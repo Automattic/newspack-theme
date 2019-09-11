@@ -11,7 +11,7 @@ Newspack Theme Editor Styles - Style Pack 3
 .article-section-title {
 	color: $color__primary;
 	font-size: $font__size-xs;
-	margin: 0 0 #{ 2 * $size__spacing-unit };
+	margin: 0 0 #{ 1.5 * $size__spacing-unit };
 
 	&:before {
 		background-color: $color__primary;
