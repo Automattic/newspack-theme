@@ -10,6 +10,10 @@ body {
 	.wp-block[data-align="full"] {
 		max-width: 100vw;
 		width: auto;
+
+		figcaption {
+			padding: 0 $size__spacing-unit;
+		}
 	}
 
 	@include media(desktop) {
@@ -128,20 +132,18 @@ table th {
 }
 
 figcaption,
-.gallery-caption {
+.gallery-caption,
+.wp-caption-text {
 	font-family: $font__heading;
-	font-size: $font__size-xs;
+	font-size: $font__size-xxs;
 	line-height: $font__line-height-pre;
 	color: $color__text-light;
+	margin: 0 0 #{ 0.5 * $size__spacing-unit }	;
 }
 
-figcaption {
-	border-bottom: 1px solid $color__border;
-	color: $color__text-light;
-	margin: 0;
+figcaption,
+.wp-caption-text {
 	max-width: 780px;
-	padding: 0 ( $size__spacing-unit * .5 ) ( $size__spacing-unit * .5 );
-	text-align: center;
 }
 
 /** === Post Title === */
@@ -347,6 +349,7 @@ figcaption {
 .wp-block-image {
 	figcaption {
 		margin-top: 0;
+		text-align: left;
 	}
 }
 

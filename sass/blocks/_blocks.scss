@@ -511,7 +511,7 @@
 		}
 
 		figcaption {
-			padding: ( $size__spacing-unit * .5 );
+			text-align: left;
 		}
 	}
 
@@ -911,6 +911,10 @@
 			max-width: 100vw;
 			position: relative;
 			width: 100vw;
+
+			figcaption {
+	g			padding: 0 $size__spacing-unit;
+			}
 		}
 
 		&.alignleft,
