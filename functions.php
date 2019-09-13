@@ -332,6 +332,14 @@ function newspack_scripts() {
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 
 /**
+ * Enqueue Block Styles Javascript
+ */
+function newspack_extend_featured_image_script() {
+	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/extend-featured-image-editor.js' ), array( 'wp-blocks' ) );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
+
+/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
@@ -449,60 +457,21 @@ function newspack_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
 
-
 /**
- * Register meta box.
+ * Register Featured Image position option.
  */
-function newspack_register_featured_image_style_metabox() {
-	add_meta_box( 'newspack-featured-image-style', esc_html__( 'Featured Image Style', 'newspack' ), 'newspack_featured_image_style_metabox_markup', 'post', 'side' );
+function newspack_register_meta() {
+	register_meta(
+		'post',
+		'newspack_featured_image_position',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'string',
+		)
+	);
 }
-add_action( 'add_meta_boxes', 'newspack_register_featured_image_style_metabox' );
-
-/**
- * Meta box display callback.
- *
- * @param WP_Post $post Current post object.
- */
-function newspack_featured_image_style_metabox_markup( $post ) {
-
-	wp_nonce_field( basename( __FILE__ ), 'newspack_featured_image_style_nonce' );
-
-	// Get Current featured image styles
-	$current_featured_image_style = get_post_meta( $post->ID, '_featured_image_style', true );
-	?>
-
-	<label><input type="radio" name="current_feat_img_style" value="default" checked="checked" <?php checked( $current_featured_image_style, 'default' ); ?> /> <?php esc_html_e( 'Default', 'newspack' ); ?></label><br>
-	<label><input type="radio" name="current_feat_img_style" value="behind" <?php checked( $current_featured_image_style, 'behind' ); ?> /> <?php esc_html_e( 'Behind Article Title', 'newspack' ); ?></label><br>
-<?php
-}
-
-/**
- * Save meta box content.
- *
- * @param int $post_id Post ID.
- */
-function newspack_featured_image_style_save( $post_id ) {
-	// Verify meta box nonce.
-	if ( ! isset( $_POST['newspack_featured_image_style_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['newspack_featured_image_style_nonce'] ), basename( __FILE__ ) ) ) {
-		return;
-	}
-
-	// Return if autosave.
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-		return;
-	}
-
-	// Check the user's permissions.
-	if ( ! current_user_can( 'edit_post', $post_id ) ) {
-		return;
-	}
-
-	// Store custom fields values.
-	if ( isset( $_REQUEST['current_feat_img_style'] ) ) {
-		update_post_meta( $post_id, '_featured_image_style', sanitize_text_field( isset( $_POST['current_feat_img_style'] ) ) );
-	}
-}
-add_action( 'save_post', 'newspack_featured_image_style_save' );
+add_action( 'init', 'newspack_register_meta' );
 
 /**
  * Display custom color CSS in customizer and on frontend.

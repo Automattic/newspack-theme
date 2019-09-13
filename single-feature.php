@@ -25,8 +25,8 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 			while ( have_posts() ) :
 				the_post();
 
-				$featured_image_style = get_post_meta( get_the_ID(), '_featured_image_style', true );
-				if ( 'behind' === $featured_image_style ) :
+				$featured_image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
+				if ( 'behind' === $featured_image_position ) :
 				?>
 
 					<div class="featured-image-behind">

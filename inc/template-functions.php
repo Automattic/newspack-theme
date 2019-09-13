@@ -87,7 +87,7 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds a class to single artcles, if they're using a special featured image style.
-	$current_featured_image_style = get_post_meta( get_the_ID(), '_featured_image_style', true );
+	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 	if ( 'behind' === $current_featured_image_style ) {
 		$classes[] = 'single-featured-image-behind';
 	}
