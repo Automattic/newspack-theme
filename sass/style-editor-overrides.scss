@@ -11,7 +11,8 @@
 
 /** === Static Front Page === */
 
-body.newspack-static-front-page {
+body.newspack-static-front-page,
+body.newspack-single-wide-template {
 	.wp-block {
 		max-width: 1230px; // 1200px + 30px to offset padding
 	}
