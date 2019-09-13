@@ -20,3 +20,9 @@ figcaption,
 	padding: 0 ( $size__spacing-unit * .5 ) ( $size__spacing-unit * .5 );
 	text-align: center;
 }
+
+.wp-block-newspack-blocks-homepage-articles figcaption {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: left;
+}
