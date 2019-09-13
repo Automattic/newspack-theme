@@ -38,6 +38,10 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 				<div class="main-content">
 
 					<?php
+					if ( is_active_sidebar( 'article-1' ) && is_single() ) {
+						dynamic_sidebar( 'article-1' );
+					}
+
 					// Place smaller featured images inside of 'content' area.
 					if ( has_post_thumbnail() && 1200 > $thumbnail_info['width'] ) {
 						newspack_post_thumbnail();

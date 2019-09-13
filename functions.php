@@ -252,6 +252,30 @@ function newspack_widgets_init() {
 		)
 	);
 
+	register_sidebar(
+		array(
+			'name'          => __( 'Article above content', 'newspack' ),
+			'id'            => 'article-1',
+			'description'   => __( 'Add widgets here to appear above article content.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="above-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Article below content', 'newspack' ),
+			'id'            => 'article-2',
+			'description'   => __( 'Add widgets here to appear below article content.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'newspack_widgets_init' );
 
