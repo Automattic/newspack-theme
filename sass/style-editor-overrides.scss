@@ -30,6 +30,10 @@ body.newspack-static-front-page {
 			max-width: 1430px; // 1400px + 30px to offset padding
 		}
 	}
+
+	figcaption {
+		max-width: 1230px;
+	}
 }
 
 /** === Single Posts === */

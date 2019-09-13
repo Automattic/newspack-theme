@@ -134,15 +134,11 @@ table th {
 figcaption,
 .gallery-caption,
 .wp-caption-text {
+	color: $color__text-light;
 	font-family: $font__heading;
 	font-size: $font__size-xxs;
 	line-height: $font__line-height-pre;
-	color: $color__text-light;
-	margin: 0 0 #{ 0.5 * $size__spacing-unit }	;
-}
-
-figcaption,
-.wp-caption-text {
+	margin: 0 auto #{ 0.5 * $size__spacing-unit };
 	max-width: 780px;
 }
 
@@ -366,6 +362,19 @@ figcaption,
 		max-width: 100%;
 		width: 100% !important; // !important to override inline styles.
 	}
+}
+
+/** === Gallery === */
+
+.wp-block-gallery figcaption {
+	margin-bottom: 0;
+}
+
+/** === Audio & Video === */
+
+.wp-block-audio figcaption,
+.wp-block-video figcaption {
+	text-align: left;
 }
 
 /** === Button === */
