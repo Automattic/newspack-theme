@@ -250,10 +250,8 @@ body.page {
 		}
 	}
 
-	.main-content {
-		.post-thumbnail:first-child {
-			margin-top: #{ 2 * $size__spacing-unit };
-		}
+	.main-content > .post-thumbnail:first-child {
+		margin-top: #{ 2 * $size__spacing-unit };
 	}
 
 	@include media(mobile) {
