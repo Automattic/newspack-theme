@@ -86,8 +86,16 @@
 	transition: right 0.2s;
 	z-index: 999999;
 
-	.menu-opened & {
-		right: 0;
+	& > * {
+		display: none;
+	}
+}
+
+.menu-opened #mobile-sidebar-fallback {
+	right: 0;
+
+	& > * {
+		display: block;
 	}
 }
 
