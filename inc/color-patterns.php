@@ -55,6 +55,7 @@ function newspack_custom_colors_css() {
 		.main-navigation ul.main-menu > li > a,
 		.entry .entry-content .more-link:hover,
 		.main-navigation .main-menu > li > a + svg,
+		.search-form button:active, .search-form button:hover, .search-form button:focus,
 		.entry-footer a,
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
@@ -130,27 +131,6 @@ function newspack_custom_colors_css() {
 		.author-bio .author-link,
 		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			color:' . newspack_color_with_contrast( $secondary_color ) . ';
-		}
-
-		/* Set secondary border color */
-
-		input[type="text"]:focus,
-		input[type="email"]:focus,
-		input[type="url"]:focus,
-		input[type="password"]:focus,
-		input[type="search"]:focus,
-		input[type="number"]:focus,
-		input[type="tel"]:focus,
-		input[type="range"]:focus,
-		input[type="date"]:focus,
-		input[type="month"]:focus,
-		input[type="week"]:focus,
-		input[type="time"]:focus,
-		input[type="datetime"]:focus,
-		input[type="datetime-local"]:focus,
-		input[type="color"]:focus,
-		textarea:focus {
-			border-color: ' . $secondary_color . '; /* base: #0073a8; */
 		}
 
 		/* Set primary variation background color */
