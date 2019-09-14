@@ -248,7 +248,7 @@ class Newspack_Style_Packs_Core {
 	 * Enqueues Style Pack Customizer JavaScript, and CSS and fonts for Style Pack previews.
 	 */
 	public function customize_preview() {
-		$customizer_js_uri = sprintf( '%s/%s/style-packs-customizer.js', get_template_directory_uri(), $this->config['js_directory'] );
+		$customizer_js_uri = sprintf( '%s/%s/dist/style-packs-customizer.js', get_template_directory_uri(), $this->config['js_directory'] );
 		wp_enqueue_script( 'style-packs-customizer', $customizer_js_uri, array( 'customize-preview' ), $this->theme_version, true );
 		$style_pack_stylesheets = array();
 		$style_pack_fonts       = array();

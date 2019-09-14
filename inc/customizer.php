@@ -394,7 +394,7 @@ function newspack_customize_partial_blogdescription() {
  * Bind JS handlers to instantly live-preview changes.
  */
 function newspack_customize_preview_js() {
-	wp_enqueue_script( 'newspack-customize-preview', get_theme_file_uri( '/js/customize-preview.js' ), array( 'customize-preview' ), '20181231', true );
+	wp_enqueue_script( 'newspack-customize-preview', get_theme_file_uri( '/js/dist/customize-preview.js' ), array( 'customize-preview' ), '20181231', true );
 	wp_localize_script(
 		'newspack-customize-preview',
 		'_NewspackThemePreviewData',
@@ -409,7 +409,7 @@ add_action( 'customize_preview_init', 'newspack_customize_preview_js' );
  * Load dynamic logic for the customizer controls area.
  */
 function newspack_panels_js() {
-	wp_enqueue_script( 'newspack-customize-controls', get_theme_file_uri( '/js/customize-controls.js' ), array(), '20181231', true );
+	wp_enqueue_script( 'newspack-customize-controls', get_theme_file_uri( '/js/dist/customize-controls.js' ), array(), '20181231', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'newspack_panels_js' );
 

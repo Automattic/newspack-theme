@@ -31,5 +31,8 @@ Thumbs.db
 styles/
 *.css
 
+# Compiled Javascript
+js/dist/
+
 # Release folder
 release/

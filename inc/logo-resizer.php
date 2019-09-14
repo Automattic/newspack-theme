@@ -132,7 +132,7 @@ function newspack_logo_resize_min_max( $short, $long, $short_max, $long_max, $pe
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function newspack_logo_resizer_customize_preview_js() {
-	wp_enqueue_script( 'newspack-logo-resizer-customizer', get_template_directory_uri() . '/js/logo/customize-preview.js', array( 'jquery', 'customize-preview' ), '1.0', true );
+	wp_enqueue_script( 'newspack-logo-resizer-customizer', get_template_directory_uri() . '/js/dist/logo-customize-preview.js', array( 'jquery', 'customize-preview' ), '1.0', true );
 }
 add_action( 'customize_preview_init', 'newspack_logo_resizer_customize_preview_js' );
 
@@ -140,7 +140,7 @@ add_action( 'customize_preview_init', 'newspack_logo_resizer_customize_preview_j
  * JS handlers for Customizer Controls
  */
 function newspack_logo_resizer_customize_controls_js() {
-	wp_enqueue_script( 'newspack-logo-resizer-customizer-controls', get_template_directory_uri() . '/js/logo/customize-controls.js', array( 'jquery', 'customize-controls' ), '1.0', true );
+	wp_enqueue_script( 'newspack-logo-resizer-customizer-controls', get_template_directory_uri() . '/js/dist/logo-customize-controls.js', array( 'jquery', 'customize-controls' ), '1.0', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'newspack_logo_resizer_customize_controls_js' );
 
