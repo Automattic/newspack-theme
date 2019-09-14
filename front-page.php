@@ -17,7 +17,13 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+				?>
 
+				<header class="entry-header">
+					<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+				</header>
+
+				<?php
 				get_template_part( 'template-parts/content/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
