@@ -15,13 +15,15 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	return;
 }
 
-/**
- * Determine whether it is an AMP response.
- *
- * @return bool Whether AMP.
- */
-function newspack_is_amp() {
-	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+if ( ! function_exists( 'newspack_is_amp' ) ) {
+	/**
+	 * Determine whether it is an AMP response.
+	 *
+	 * @return bool Whether AMP.
+	 */
+	function newspack_is_amp() {
+		return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+	}
 }
 
 if ( ! function_exists( 'newspack_setup' ) ) :
