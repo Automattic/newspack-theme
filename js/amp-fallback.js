@@ -40,11 +40,20 @@
 	// Mobile menu fallback.
 
 	var menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
-		body = document.getElementsByTagName( 'body' )[0];
+		body = document.getElementsByTagName( 'body' )[0],
+		mobileSidebar = document.getElementById( 'mobile-sidebar-fallback' ),
+		menuOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[0],
+		menuCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[0];
 
 	for ( var i = 0; i < menuToggle.length; i++ ) {
 		menuToggle[i].addEventListener( 'click', function() {
-			body.classList.toggle( 'menu-opened' );
+			if ( body.classList.contains( 'menu-opened' ) ) {
+				body.classList.remove( 'menu-opened' );
+				menuOpenButton.focus();
+			} else {
+				body.classList.add( 'menu-opened' );
+				menuCloseButton.focus();
+			}
 		}, false );
 	}
 
