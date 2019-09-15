@@ -316,7 +316,7 @@ function newspack_scripts() {
 			'close_search' => esc_html__( 'Close Search', 'newspack' ),
 		);
 
-		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/amp-fallback.js' ), array(), '1.0', true );
+		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
 	// Load custom fonts, if any.
