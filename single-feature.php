@@ -26,19 +26,19 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 				the_post();
 
 				$featured_image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
-				if ( 'behind' === $featured_image_position ) :
+
+				if ( 'behind' === $featured_image_position && has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) :
 				?>
 
 					<div class="featured-image-behind">
-
 						<?php newspack_post_thumbnail(); ?>
-
 						<div class="wrapper">
 							<header class="entry-header">
 								<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 							</header>
 						</div><!-- .wrapper -->
 					</div><!-- .featured-image-behind -->
+
 				<?php else : ?>
 
 					<header class="entry-header">
@@ -47,10 +47,9 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 
 					<?php
 					// Place larger featured images above content area.
-					if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'default' === $featured_image_style ) {
+					if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) {
 						newspack_post_thumbnail();
 					}
-
 				endif;
 				?>
 
