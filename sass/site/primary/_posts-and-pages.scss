@@ -362,7 +362,7 @@ body.page {
 
 /* Featured Image - special styles */
 
-.single-featured-image-behind {
+.has-large-featured-image.single-featured-image-behind {
 	.site-content {
 		margin-top: 0;
 	}
@@ -371,13 +371,29 @@ body.page {
 .featured-image-behind {
 	background-color: $color__text-main;
 	margin: 0 calc(50% - 50vw);
-	min-height: 50vh;
+	min-height: calc( 90vh - 60px );
 	overflow: hidden;
 	position: relative;
 	width: 100vw;
 
-	@include media( tablet ) {
-		min-height: 80vh;
+	.admin-bar & {
+		min-height: calc( 100vh - 106px );
+	}
+
+	@media screen and (min-height: 700px) and (min-width: 768px) {
+		min-height: calc( 100vh - 220px );
+
+		.admin-bar & {
+			min-height: calc( 100vh - 250px );
+		}
+
+		.header-simplified & {
+			min-height: calc( 100vh - 110px );
+		}
+
+		.header-simplified.admin-toolbar & {
+			min-height: calc( 100vh - 142px );
+		}
 	}
 
 	&:before,
