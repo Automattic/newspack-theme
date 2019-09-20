@@ -47,7 +47,12 @@ const ComposedRadio = compose( [
 ] )( RadioCustom );
 
 const wrapPostFeaturedImage = OriginalComponent => {
-	return props => <ComposedRadio />;
+	return props => (
+		<Fragment>
+			<OriginalComponent { ...props } />
+			<ComposedRadio />
+		</Fragment>
+	);
 };
 
 addFilter(
