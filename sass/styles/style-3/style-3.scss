@@ -95,6 +95,12 @@ Newspack Theme Styles - Style Pack 3
 
 // Posts & Pages
 
+@include media( desktop ) {
+	.header-solid-background .featured-image-beside {
+
+	}
+}
+
 .entry-meta,
 .entry .wp-block-newspack-blocks-homepage-articles article .entry-meta {
 	font-size: $font__size-xs;

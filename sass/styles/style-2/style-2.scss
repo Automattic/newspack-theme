@@ -105,7 +105,8 @@ body:not(.header-solid-background) .site-header {
 	padding-left: 0;
 	padding-right: 0;
 
-	.site-main > .entry-header {
+	.site-main > .entry-header,
+	.featured-image-beside .entry-header {
 		@include media(tablet) {
 			padding-left: #{ 3 * $size__spacing-unit };
 			padding-right: #{ 3 * $size__spacing-unit };
@@ -117,6 +118,7 @@ body:not(.header-solid-background) .site-header {
 		}
 	}
 }
+
 
 .single-featured-image-behind {
 	#primary {
@@ -130,7 +132,19 @@ body:not(.header-solid-background) .site-header {
 
 		#primary {
 			border-top: 0;
+		}
+	}
+}
 
+@include media( desktop ) {
+	.single-featured-image-beside {
+		.site-header {
+			padding: 0 0 #{ 0.5 * $size__spacing-unit };
+		}
+
+		#primary {
+			border-top: 0;
+			padding-top: 0;
 		}
 	}
 }

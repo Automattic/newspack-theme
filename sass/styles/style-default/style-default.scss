@@ -55,6 +55,23 @@ body.header-default-background.header-default-height {
 	}
 }
 
+@include media( desktop ) {
+	.featured-image-behind,
+	.featured-image-beside {
+		.cat-links {
+			a,
+			a:hover {
+				background-color: transparent;
+				margin: 0;
+				padding: 0;
+			}
+			.sep {
+				display: inline;
+			}
+		}
+	}
+}
+
 .tags-links {
 	a {
 		background-color: #f1f1f1;

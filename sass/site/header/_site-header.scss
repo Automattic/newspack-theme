@@ -127,6 +127,7 @@
 		position: absolute;
 		top: calc( 100% + 4px );
 		width: 300px;
+		z-index: 5;
 
 		@include media (tablet) {
 			right: 0;

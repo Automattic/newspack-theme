@@ -34,6 +34,19 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 						</div><!-- .wrapper -->
 					</div><!-- .featured-image-behind -->
 
+				<?php elseif ( 'beside' === $featured_image_position && has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) : ?>
+
+					<div class="featured-image-beside">
+
+						<div class="wrapper">
+							<header class="entry-header">
+								<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+							</header>
+						</div><!-- .wrapper -->
+
+						<?php newspack_post_thumbnail(); ?>
+
+					</div><!-- .featured-image-behind -->
 				<?php else : ?>
 
 					<header class="entry-header">
