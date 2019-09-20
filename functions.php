@@ -332,6 +332,14 @@ function newspack_scripts() {
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 
 /**
+ * Enqueue Block Styles Javascript
+ */
+function newspack_extend_featured_image_script() {
+	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks' ) );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
+
+/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
@@ -448,6 +456,22 @@ function newspack_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
+
+/**
+ * Register Featured Image position option.
+ */
+function newspack_register_meta() {
+	register_meta(
+		'post',
+		'newspack_featured_image_position',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'string',
+		)
+	);
+}
+add_action( 'init', 'newspack_register_meta' );
 
 /**
  * Display custom color CSS in customizer and on frontend.
