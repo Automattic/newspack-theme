@@ -60,8 +60,10 @@ body.header-default-background.header-default-height {
 	.featured-image-beside {
 		.cat-links {
 			a,
-			a:hover {
+			a:hover,
+			a:visited {
 				background-color: transparent;
+				color: inherit;
 				margin: 0;
 				padding: 0;
 			}

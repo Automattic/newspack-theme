@@ -90,23 +90,6 @@ Newspack Theme Styles - Style Pack 4
 
 // Posts & Pages
 
-@include media( desktop ) {
-	.header-solid-background .featured-image-beside {
-		background-color: $color__background-pre;
-	}
-
-	.featured-image-beside {
-		.entry-header {
-			color: $color__text-main;
-		}
-	}
-
-	.single-post .featured-image-beside .entry-subhead {
-		border: 0;
-		padding: 0;
-	}
-}
-
 figcaption,
 .wp-caption-text {
 	font-weight: bold;
@@ -226,6 +209,31 @@ figcaption,
 	&.has-large-featured-image {
 		.entry-header {
 			border-bottom: 0;
+		}
+	}
+}
+
+@include media( tablet ) {
+	.header-solid-background .featured-image-beside {
+		background-color: $color__background-pre;
+
+		.entry-header {
+			color: $color__text-main;
+		}
+
+		.cat-links {
+			color: $color__primary;
+		}
+	}
+
+	.single-post .featured-image-beside .entry-subhead {
+		border: 0;
+		margin-bottom: 0;
+		padding: 0;
+		text-align: center;
+
+		.author-avatar {
+			display: none;
 		}
 	}
 }

@@ -53,16 +53,19 @@
 	}
 }
 
-.single .entry-meta {
+.single {
 	@include media( tablet ) {
-		align-items: center;
-		display: flex;
+		.entry-meta {
+			align-items: center;
+			display: flex;
+		}
 
-		.posted-on {
+		&.single-featured-image-default	.posted-on {
 			margin-left: #{ 1.5 * $size__spacing-unit };
 		}
 	}
 }
+
 
 /* Avatar */
 .avatar,

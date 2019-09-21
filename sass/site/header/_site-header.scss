@@ -250,10 +250,9 @@
 		border-bottom: 1px solid darken( $color__primary, 10% );
 	}
 
-
 	.middle-header-contain .wrapper {
 		@include media( tablet ) {
-			padding: #{ 2 * $size__spacing-unit } 0;
+			padding: #{ 1.5 * $size__spacing-unit } 0 $size__spacing-unit;
 		}
 	}
 

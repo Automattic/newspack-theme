@@ -535,10 +535,6 @@ body.page {
 			margin-left: auto;
 			max-width: 600px;
 
-			.author-avatar {
-				display: none;
-			}
-
 			a,
 			.cat-links,
 			.entry-meta,
@@ -551,6 +547,20 @@ body.page {
 
 			.entry-subhead {
 				display: block;
+			}
+
+			.entry-meta .byline {
+				display: inline-block;
+
+				&:after {
+					content: "|";
+					display: inline-block;
+					margin: 0 $size__spacing-unit;
+				}
+			}
+
+			.author-avatar {
+				display: none;
 			}
 		}
 

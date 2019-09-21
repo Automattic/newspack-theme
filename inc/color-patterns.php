@@ -49,7 +49,7 @@ function newspack_custom_colors_css() {
 			background-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		@media only screen and (min-width: 1168px) {
+		@media only screen and (min-width: 782px) {
 			.header-default-background .featured-image-beside {
 				background-color: ' . $primary_color . ';
 			}
@@ -91,7 +91,7 @@ function newspack_custom_colors_css() {
 			color: ' . $primary_color_contrast . ';
 		}
 
-		@media only screen and (min-width: 1168px) {
+		@media only screen and (min-width: 782px) {
 			.header-default-background .featured-image-beside .entry-header {
 				color: ' . $primary_color_contrast . ';
 			}
@@ -248,7 +248,7 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color . ';
 			}
 
-			@media only screen and (min-width: 1168px) {
+			@media only screen and (min-width: 782px) {
 				.header-default-background .featured-image-beside .cat-links:before {
 					background-color: ' . $primary_color_contrast . ';
 				}
@@ -285,16 +285,6 @@ function newspack_custom_colors_css() {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 
-			@media only screen and (min-width: 1168px) {
-				.header-default-background .featured-image-beside .cat-links {
-					color: ' . $primary_color_contrast . ';
-				}
-
-				.header-default-background .featured-image-beside .cat-links:before {
-					background-color: ' . $primary_color_contrast . ';
-				}
-			}
-
 			.cat-links a:hover {
 				color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 			}
@@ -306,6 +296,22 @@ function newspack_custom_colors_css() {
 			figcaption:after,
 			.wp-caption-text:after {
 				background-color: ' . $primary_color . ';
+			}
+
+			@media only screen and (min-width: 782px) {
+				.header-solid-background .featured-image-beside {
+					background-color: ' . $primary_color . ';
+				}
+
+				.header-solid-background .featured-image-beside .entry-header,
+				.header-default-background .featured-image-beside .entry-header {
+					color: ' . $primary_color_contrast . ';
+				}
+
+				.header-solid-background .featured-image-beside .cat-links:before,
+				.header-default-background .featured-image-beside .cat-links:before {
+					background-color: ' . $primary_color_contrast . ';
+				}
 			}
 		';
 	}
