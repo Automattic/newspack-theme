@@ -466,7 +466,7 @@ body.page {
 	width: 100%;
 }
 
-@include media( desktop ) {
+@include media( tablet ) {
 	.single-featured-image-beside .site-content {
 		margin-top: 0;
 	}
