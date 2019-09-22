@@ -422,6 +422,7 @@ body.page {
 		align-self: flex-end;
 		color: #fff;
 		margin: 0 auto #{ 2 * $size__spacing-unit };
+		max-width: 90%;
 		position: relative;
 		z-index: 2;
 
@@ -429,15 +430,15 @@ body.page {
 			display: none;
 		}
 
-		a,
 		.entry-meta,
 		.entry-meta .byline a,
 		.entry-meta .byline a:visited,
 		.entry-meta .posted-on a,
 		.entry-meta .posted-on a:visited,
+		.cat-links,
 		.cat-links a,
 		.cat-links a:visited {
-			color: inherit;
+			color: #fff;
 		}
 	}
 
