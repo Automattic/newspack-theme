@@ -70,6 +70,21 @@ body.header-default-background.header-default-height {
 	}
 }
 
+.featured-image-behind {
+	.cat-links {
+		font-size: $font__size-sm;
+		a,
+		a:hover {
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+		}
+		.sep {
+			display: inline;
+		}
+	}
+}
+
 /* Archives */
 
 .blog,
