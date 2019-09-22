@@ -59,7 +59,7 @@
 }
 
 .site-info {
-	color: $color__text-light;
+	color: $color__text-light;}
 
 	.wrapper {
 		border-top: 1px solid $color__border;
@@ -83,7 +83,8 @@
 
 	a {
 		color: inherit;
-		display: block;
+		display: inline-block;
+		margin: #{ 0.25 * $size__spacing-unit };
 
 		&:hover {
 			text-decoration: none;
