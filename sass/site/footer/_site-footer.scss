@@ -59,7 +59,7 @@
 }
 
 .site-info {
-	color: $color__text-light;}
+	color: $color__text-light;
 
 	.wrapper {
 		border-top: 1px solid $color__border;
@@ -83,11 +83,15 @@
 
 	a {
 		color: inherit;
-		display: inline-block;
-		margin: #{ 0.25 * $size__spacing-unit };
+		display: block;
 
 		&:hover {
 			text-decoration: none;
 		}
+	}
+
+	a,
+	.copyright {
+		margin: #{ 0.25 * $size__spacing-unit } 0;
 	}
 }
