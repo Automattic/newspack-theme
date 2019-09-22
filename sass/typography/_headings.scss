@@ -142,15 +142,7 @@ h6 {
 .entry-title,
 .comments-title,
 blockquote {
-	hyphens: auto;
 	word-break: break-word;
-}
-
-/* Do not hyphenate entry title on tablet view and bigger. */
-.entry-title {
-	@include media(tablet) {
-		hyphens: none;
-	}
 }
 
 .page-header {
