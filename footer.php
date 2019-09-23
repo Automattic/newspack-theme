@@ -24,7 +24,7 @@
 			<div class="wrapper">
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
-					&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.
+					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.</span>
 				<?php endif; ?>
 
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'newspack' ) ); ?>" class="imprint">

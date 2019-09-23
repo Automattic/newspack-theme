@@ -89,4 +89,9 @@
 			text-decoration: none;
 		}
 	}
+
+	a,
+	.copyright {
+		margin: #{ 0.25 * $size__spacing-unit } 0;
+	}
 }
