@@ -415,8 +415,7 @@ function newspack_is_active_style_pack() {
 function newspack_check_current_template() {
 	global $post;
 
-	$post_id       = $post->ID;
-	$template_file = $post_id ? get_post_meta( $post_id, '_wp_page_template', true ) : '';
+	$template_file = ( $post && $post->ID ) ? get_post_meta( $post->ID, '_wp_page_template', true ) : '';
 
 	return $template_file;
 }
