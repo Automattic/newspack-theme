@@ -81,7 +81,7 @@ body.page {
 }
 
 .entry-meta {
-	.author-avatar {
+	.author-avatar:not(:empty) {
 		float: left;
 		margin-right: #{ $size__spacing-unit * 0.5 };
 	}

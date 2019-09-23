@@ -170,16 +170,11 @@
 		.children {
 			padding-left: 0;
 		}
-
-		&.depth-1 {
-			margin-left: calc(3.25 * #{$size__spacing-unit});
-		}
 	}
 
 	.comment-body {
 		margin: calc(2 * #{$size__spacing-unit}) 0 0;
 	}
-
 
 	.comment-meta {
 		position: relative;
@@ -191,14 +186,6 @@
 			float: left;
 			margin-right: $size__spacing-unit;
 			position: relative;
-
-			@include media(tablet) {
-				float: inherit;
-				margin-right: inherit;
-				position: absolute;
-				top: 0;
-				right: calc(100% + #{$size__spacing-unit});
-			}
 		}
 
 		.fn {
