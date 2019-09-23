@@ -5,14 +5,6 @@
 	margin: 32px 0;
 	max-width: 100%;
 
-	> *:first-child {
-		margin-top: 0;
-	}
-
-	> *:last-child {
-		margin-bottom: 0;
-	}
-
 	// When the image block is aligned left or right, the markup changes,
 	// making a slighly different selector necessary.
 	&.wp-block-image .alignleft,
