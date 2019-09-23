@@ -16,6 +16,9 @@
 }
 
 .site-header .mobile-menu-toggle {
+	&:hover {
+		color: inherit
+	}
 	@include media(tablet) {
 		display: none;
 	}
@@ -26,7 +29,7 @@
 	background-color: $color__primary;
 	color: #fff;
 	font-size: $font__size-sm;
-	width: 80vw;
+	width: 90vw;
 	padding: $size__spacing-unit;
 
 	@include media(tablet) {
@@ -35,7 +38,7 @@
 
 	& > * {
 		clear: both;
-		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: $size__spacing-unit;
 	}
 
 	.mobile-menu-toggle {
@@ -57,13 +60,24 @@
 
 	a {
 		display: inline-block;
-		margin: #{ 0.25 * $size__spacing-unit } 0;
-		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit }
+		margin: #{ 0.125 * $size__spacing-unit } 0;
+		padding: #{ 0.125 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit };
 	}
 
 	a:hover {
 		background: transparent;
 		text-decoration: underline;
+	}
+
+	nav.secondary-menu a,
+	.main-navigation .main-menu > li > a {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	nav.main-navigation + nav.secondary-menu {
+		border-top: 1px solid #fff;
+		padding-top: #{ 0.75 * $size__spacing-unit };
 	}
 
 	.main-navigation .main-menu > li.menu-item-has-children .submenu-expand svg,
@@ -72,8 +86,15 @@
 		display: none;
 	}
 
-	.tertiary-menu a {
-		padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+	.tertiary-menu {
+		li {
+			display: inline-block;
+			margin-right: #{ 0.5 * $size__spacing-unit };
+		}
+
+		a {
+			padding: #{ 0.125 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		}
 	}
 }
 

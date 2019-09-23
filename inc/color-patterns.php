@@ -74,6 +74,7 @@ function newspack_custom_colors_css() {
 		}
 
 		.mobile-sidebar,
+		.mobile-sidebar button:hover,
 		.mobile-sidebar a,
 		.mobile-sidebar a:visited,
 		.mobile-sidebar .main-navigation .sub-menu > li > a,
@@ -91,6 +92,10 @@ function newspack_custom_colors_css() {
 		.entry .entry-content .wp-block-quote:not(.is-large),
 		.entry .entry-content .wp-block-quote:not(.is-style-large) {
 			border-color: ' . $primary_color . '; /* base: #0073a8; */
+		}
+
+		.mobile-sidebar nav.main-navigation + nav.secondary-menu {
+			border-color: ' . $primary_color_contrast . ';
 		}
 
 		.gallery-item > div > a:focus {
