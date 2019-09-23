@@ -241,5 +241,12 @@
 }
 
 .header-simplified .site-header .main-navigation .main-menu > li {
-	padding: #{ 0.25 * $size__spacing-unit } 0
+	margin-right: #{ 0.25 * $size__spacing-unit };
+	padding: #{ 0.25 * $size__spacing-unit } 0;
+
+	@include media( tablet ) {
+		&.menu-item-has-children > a {
+			padding-right: 0;
+		}
+	}
 }
