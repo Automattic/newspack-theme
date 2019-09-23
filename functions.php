@@ -15,13 +15,15 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	return;
 }
 
-/**
- * Determine whether it is an AMP response.
- *
- * @return bool Whether AMP.
- */
-function newspack_is_amp() {
-	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+if ( ! function_exists( 'newspack_is_amp' ) ) {
+	/**
+	 * Determine whether it is an AMP response.
+	 *
+	 * @return bool Whether AMP.
+	 */
+	function newspack_is_amp() {
+		return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+	}
 }
 
 if ( ! function_exists( 'newspack_setup' ) ) :
@@ -314,7 +316,7 @@ function newspack_scripts() {
 			'close_search' => esc_html__( 'Close Search', 'newspack' ),
 		);
 
-		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/amp-fallback.js' ), array(), '1.0', true );
+		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
 	// Load custom fonts, if any.
@@ -328,6 +330,14 @@ function newspack_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
+
+/**
+ * Enqueue Block Styles Javascript
+ */
+function newspack_extend_featured_image_script() {
+	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks' ) );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
 
 /**
  * Fix skip link focus in IE11.
@@ -446,6 +456,22 @@ function newspack_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
+
+/**
+ * Register Featured Image position option.
+ */
+function newspack_register_meta() {
+	register_meta(
+		'post',
+		'newspack_featured_image_position',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'string',
+		)
+	);
+}
+add_action( 'init', 'newspack_register_meta' );
 
 /**
  * Display custom color CSS in customizer and on frontend.
