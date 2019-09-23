@@ -579,6 +579,11 @@
 		.wp-block-cover,
 		.wp-block-cover-image {
 			min-height: 330px;
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
+			.wp-block-cover__inner-container {
+				width: 100%;
+			}
 		}
 	}
 
