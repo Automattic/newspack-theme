@@ -369,9 +369,9 @@ body.page {
 
 .featured-image-behind {
 	background-color: $color__text-main;
+	display: flex;
 	margin: 0 calc(50% - 50vw);
 	min-height: calc( 90vh - 60px );
-	overflow: hidden;
 	position: relative;
 	width: 100vw;
 
@@ -379,7 +379,7 @@ body.page {
 		min-height: calc( 100vh - 106px );
 	}
 
-	@media screen and (min-height: 700px) and (min-width: 768px) {
+	@media screen and (min-width: 768px) {
 		min-height: calc( 100vh - 220px );
 
 		.admin-bar & {
@@ -395,19 +395,29 @@ body.page {
 		}
 	}
 
-	&:before,
-	.wrapper {
+	&:before {
+		background-color: rgba(0,0,0,0.5);
+		content: '';
 		bottom: 0;
 		left: 0;
 		position: absolute;
 		right: 0;
 		top: 0;
+		z-index: 1;
 	}
 
-	&:before {
-		background-color: rgba(0,0,0,0.5);
-		content: '';
-		z-index: 1;
+	.wrapper {
+		margin-top: auto;
+		margin-bottom: 0;
+	}
+
+	.post-thumbnail {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		overflow: hidden;
 	}
 
 	.wp-post-image {
@@ -421,7 +431,7 @@ body.page {
 	.entry-header {
 		align-self: flex-end;
 		color: #fff;
-		margin: 0 auto #{ 2 * $size__spacing-unit };
+		margin: #{ 4 * $size__spacing-unit } auto #{ 2 * $size__spacing-unit };
 		max-width: 90%;
 		position: relative;
 		z-index: 2;
