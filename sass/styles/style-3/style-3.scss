@@ -95,9 +95,9 @@ Newspack Theme Styles - Style Pack 3
 
 // Posts & Pages
 
-@include media( desktop ) {
-	.header-solid-background .featured-image-beside {
-
+@include media( tablet ) {
+	.featured-image-beside .cat-links:before {
+		background-color: $color__background-body;
 	}
 }
 
