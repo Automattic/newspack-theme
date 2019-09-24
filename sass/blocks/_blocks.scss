@@ -706,12 +706,13 @@
 	//! Columns
 	.wp-block-columns {
 
-		@include media(tablet) {
-			.wp-block-column > * {
+		.wp-block-column > * :last-child {
+			margin-bottom: 0;
+		}
 
-				&:last-child {
-					margin-bottom: 0;
-				}
+		@include media(tablet) {
+			.wp-block-column {
+				margin-bottom: 0;
 			}
 
 			&[class*='has-'] > * {
@@ -740,6 +741,14 @@
 			}
 		}
 	}
+
+	//! Group
+	.wp-block-group {
+		.wp-block-group__inner-container > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 
 	//! Latest Comments
 	.wp-block-latest-comments {
