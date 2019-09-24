@@ -31,6 +31,12 @@
 
 /* Posts & Pages */
 
+@include media( tablet ) {
+	.featured-image-beside .cat-links:before {
+		background-color: $color__background-body;
+	}
+}
+
 .single .cat-links {
 	font-size: $font__size_base;
 }

@@ -261,7 +261,8 @@ function newspack_custom_colors_css() {
 			.site-header,
 			.header-default-background .site-header,
 			.header-simplified.header-default-background .site-header,
-			.site-content #primary {
+			.site-content #primary,
+			#page .site-header {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 			}
 

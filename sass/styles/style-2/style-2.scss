@@ -45,7 +45,12 @@ Newspack Theme Styles - Style Pack 2
 
 .site-header,
 .header-default-background .site-header,
-.header-simplified.header-default-background .site-header {
+.header-simplified.header-default-background .site-header,
+body:not(.header-solid-background) .site-header {
+	background-color: #efefef;
+}
+
+#page .site-header {
 	border-bottom: 2px solid $color__primary-variation;
 	@include media( tablet ) {
 		border-bottom: 0;
@@ -64,10 +69,6 @@ Newspack Theme Styles - Style Pack 2
 	#search-toggle {
 		color: inherit;
 	}
-}
-
-body:not(.header-solid-background) .site-header {
-	background-color: #efefef;
 }
 
 // Content Area
@@ -137,7 +138,7 @@ body:not(.header-solid-background) .site-header {
 @include media( tablet ) {
 	.single-featured-image-beside {
 		.site-header {
-			padding: 0 0 #{ 0.5 * $size__spacing-unit };
+			padding: 0;
 		}
 
 		#primary {
