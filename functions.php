@@ -420,6 +420,17 @@ function newspack_is_active_style_pack() {
 }
 
 /**
+ * Check for specific templates.
+ */
+function newspack_check_current_template() {
+	global $post;
+
+	$template_file = ( $post && $post->ID ) ? get_post_meta( $post->ID, '_wp_page_template', true ) : '';
+
+	return $template_file;
+}
+
+/**
  * Add body class on editor pages if editing the static front page.
  */
 function newspack_filter_admin_body_class( $classes ) {
@@ -430,6 +441,10 @@ function newspack_filter_admin_body_class( $classes ) {
 
 	if ( 'default' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
 		$classes .= ' style-pack-' . get_theme_mod( 'active_style_pack', 'default' );
+	}
+
+	if ( 'single-wide.php' === newspack_check_current_template() ) {
+		$classes .= ' newspack-single-wide-template';
 	}
 
 	return $classes;
