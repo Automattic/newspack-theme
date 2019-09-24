@@ -107,7 +107,7 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .single-post:not(.has-featured-image) .entry-header,
-.single-post.has-large-featured-image .entry-header {
+.single-post:not(.has-large-featured-image) .entry-header {
 	border-bottom: 1px dotted $color__text-main;
 }
 
@@ -136,11 +136,13 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
-.header-solid-background .featured-image-beside {
-	background-color: $color__primary;
+@include media( tablet ) {
+	.header-solid-background .featured-image-beside {
+		background-color: $color__primary;
 
-	.cat-links:before {
-		background-color: $color__background-body;
+		.cat-links:before {
+			background-color: $color__background-body;
+		}
 	}
 }
 

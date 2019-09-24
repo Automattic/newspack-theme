@@ -105,8 +105,7 @@ body:not(.header-solid-background) .site-header {
 	padding-left: 0;
 	padding-right: 0;
 
-	.site-main > .entry-header,
-	.featured-image-beside .entry-header {
+	.site-main > .entry-header {
 		@include media(tablet) {
 			padding-left: #{ 3 * $size__spacing-unit };
 			padding-right: #{ 3 * $size__spacing-unit };
@@ -144,6 +143,11 @@ body:not(.header-solid-background) .site-header {
 		#primary {
 			border-top: 0;
 			padding-top: 0;
+		}
+
+		.entry-header {
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
 		}
 	}
 }

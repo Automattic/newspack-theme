@@ -543,13 +543,17 @@ body.page {
 				display: block;
 			}
 
-			.entry-meta .byline {
-				display: inline-block;
+			.entry-meta {
+				margin-bottom: $size__spacing-unit;
 
-				&:after {
-					content: "|";
+				.byline {
 					display: inline-block;
-					margin: 0 $size__spacing-unit;
+
+					&:after {
+						content: "|";
+						display: inline-block;
+						margin: 0 #{ 0.75 * $size__spacing-unit } 0 $size__spacing-unit;
+					}
 				}
 			}
 
