@@ -116,6 +116,23 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
+.single-featured-image-behind {
+	#primary {
+		padding-top: 0;
+	}
+
+	@include media( tablet ) {
+		.site-header {
+			padding: 0;
+		}
+
+		#primary {
+			border-top: 0;
+
+		}
+	}
+}
+
 .archive #primary {
 	padding-left: 0;
 	padding-right: 0;

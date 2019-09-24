@@ -95,6 +95,17 @@ figcaption,
 	font-weight: bold;
 }
 
+.single-featured-image-behind {
+	.featured-image-behind {
+		.entry-subhead {
+			border: 0;
+			display: block;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}
+
 .entry .entry-content {
 	.has-drop-cap:not(:focus)::first-letter {
 		background-color: $color__primary;

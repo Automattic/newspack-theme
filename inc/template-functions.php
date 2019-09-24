@@ -82,7 +82,7 @@ function newspack_body_classes( $classes ) {
 
 	// Adds a class if singular post has a large featured image
 	$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-	if ( is_single() && has_post_thumbnail() && 1200 > $thumbnail_info['width'] ) {
+	if ( is_single() && has_post_thumbnail() && 1200 < (int) $thumbnail_info['width'] ) {
 		$classes[] = 'has-large-featured-image';
 	}
 
