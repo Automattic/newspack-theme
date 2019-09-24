@@ -241,6 +241,8 @@ function newspack_custom_colors_css() {
 	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$theme_css .= '
 			.site-header,
+			.header-default-background .site-header,
+			.header-simplified.header-default-background .site-header,
 			.site-content #primary {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 			}

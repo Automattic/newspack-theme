@@ -43,7 +43,9 @@ Newspack Theme Styles - Style Pack 2
 
 // Header
 
-.site-header {
+.site-header,
+.header-default-background .site-header,
+.header-simplified.header-default-background .site-header {
 	border-bottom: 2px solid $color__primary-variation;
 	@include media( tablet ) {
 		border-bottom: 0;

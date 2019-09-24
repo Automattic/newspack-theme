@@ -1,8 +1,3 @@
-// Site header
-.site-header {
-
-}
-
 // Site branding
 .site-branding {
 	align-items: center;
@@ -158,9 +153,22 @@
  * Header options.
  */
 
+ // Default Header
+
+.header-default-background {
+	.site-header {
+		border-bottom: 1px solid $color__border;
+
+		@include media(tablet) {
+			border-bottom: 0;
+		}
+	}
+}
+
 // Centred Logo
 
 .header-center-logo {
+
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
 			justify-content: center;
