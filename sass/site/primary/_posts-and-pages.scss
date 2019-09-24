@@ -381,7 +381,7 @@ body.page {
 		min-height: calc( 100vh - 106px );
 	}
 
-	@media screen and (min-width: 768px) {
+	@include media( tablet ) {
 		min-height: calc( 100vh - 220px );
 
 		.admin-bar & {
@@ -482,28 +482,20 @@ body.page {
 	.featured-image-beside {
 		display: flex;
 		margin: 0 calc(50% - 50vw);
-		min-height: calc( 90vh - 60px );
+		min-height: calc( 100vh - 220px );
 		position: relative;
 		width: 100vw;
 
 		.admin-bar & {
-			min-height: calc( 100vh - 106px );
+			min-height: calc( 100vh - 250px );
 		}
 
-		@media screen and (min-height: 700px) and (min-width: 768px) {
-			min-height: calc( 100vh - 220px );
+		.header-simplified & {
+			min-height: calc( 100vh - 110px );
+		}
 
-			.admin-bar & {
-				min-height: calc( 100vh - 250px );
-			}
-
-			.header-simplified & {
-				min-height: calc( 100vh - 110px );
-			}
-
-			.header-simplified.admin-toolbar & {
-				min-height: calc( 100vh - 142px );
-			}
+		.header-simplified.admin-toolbar & {
+			min-height: calc( 100vh - 142px );
 		}
 
 		.post-thumbnail,
@@ -534,6 +526,8 @@ body.page {
 			color: #fff;
 			margin-left: auto;
 			max-width: 600px;
+			padding-left: 0;
+			padding-right: 0;
 
 			a,
 			.cat-links,

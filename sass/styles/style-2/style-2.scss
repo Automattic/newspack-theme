@@ -135,7 +135,7 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-@include media( desktop ) {
+@include media( tablet ) {
 	.single-featured-image-beside {
 		.site-header {
 			padding: 0 0 #{ 0.5 * $size__spacing-unit };
