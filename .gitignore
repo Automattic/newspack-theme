@@ -28,7 +28,7 @@ Thumbs.db
 /vendor/
 
 # Compiled CSS
-styles/
+/styles/
 *.css
 
 # Compiled Javascript
