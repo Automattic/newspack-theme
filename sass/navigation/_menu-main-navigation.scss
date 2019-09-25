@@ -147,20 +147,38 @@
 				> a {
 					color: inherit;
 				}
+
+				> .sub-menu {
+					padding-top: 12px;
+
+					&:before {
+						border-style: solid;
+						border-width: 0 8px 8px 8px;
+						border-color: transparent transparent $color__background-dark transparent;
+						content: '';
+						display: inline-block;
+						height: 0;
+						left: 10px;
+						position: absolute;
+						top: 4px;
+						width: 0;
+					}
+				}
 			}
 
 			.sub-menu {
-				background-color: $color__primary;
 				color: $color__background-body;
 				position: absolute;
 				opacity: 0;
+				transition: opacity 0.2s;
 				left: -9999px;
 				z-index: 99999;
 
-				> li > a {
+				a {
+					background-color: $color__background-dark;
 					display: block;
 					line-height: $font__line-height-heading;
-					padding: calc( .5 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} ) calc( .5 * #{$size__spacing-unit} ) $size__spacing-unit;
+					padding: calc( 0.75 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} ) calc( 0.75 * #{$size__spacing-unit} ) $size__spacing-unit;
 
 					&:hover,
 					&:focus {
@@ -170,7 +188,7 @@
 
 				.submenu-expand {
 					right: #{ 0.25 * $size__spacing-unit };
-					top: #{ 0.4 * $size__spacing-unit };
+					top: #{ 0.65 * $size__spacing-unit };
 					transform: rotate( -90deg );
 				}
 			}
