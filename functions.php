@@ -443,8 +443,12 @@ function newspack_filter_admin_body_class( $classes ) {
 		$classes .= ' style-pack-' . get_theme_mod( 'active_style_pack', 'default' );
 	}
 
-	if ( 'single-wide.php' === newspack_check_current_template() ) {
+	if ( 'single-feature.php' === newspack_check_current_template() ) {
+		$classes .= ' newspack-single-column-template';
+	} elseif ( 'single-wide.php' === newspack_check_current_template() ) {
 		$classes .= ' newspack-single-wide-template';
+	} else {
+		$classes .= ' newspack-default-template';
 	}
 
 	return $classes;
@@ -456,7 +460,7 @@ add_filter( 'admin_body_class', 'newspack_filter_admin_body_class', 10, 1 );
  * Enqueue CSS styles for the editor that use the <body> tag.
  */
 function newspack_enqueue_editor_override_assets( $classes ) {
-		wp_enqueue_style( 'newspack-editor-overrides', get_theme_file_uri( '/styles/style-editor-overrides.css' ), false, '1.1', 'all' );
+	wp_enqueue_style( 'newspack-editor-overrides', get_theme_file_uri( '/styles/style-editor-overrides.css' ), false, '1.1', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_editor_override_assets' );
 
