@@ -11,8 +11,7 @@ Newspack Theme Styles - Style Pack 4
 
 .header-solid-background {
 	.site-header,
-	.top-header-contain,
-	.site-header .main-navigation .main-menu .sub-menu {
+	.top-header-contain {
 		background-color: $color__background-dark;
 	}
 
@@ -22,6 +21,23 @@ Newspack Theme Styles - Style Pack 4
 
 	.bottom-header-contain {
 		background-color: darken( $color__background-dark, 5% );
+	}
+}
+
+.header-solid-background.header-simplified {
+	.site-header .main-navigation .main-menu .sub-menu {
+		a {
+			background-color: $color__text-main;
+
+			&:hover,
+			&:focus {
+				background-color: $color__primary
+			}
+		}
+
+		&:before {
+			border-color: transparent transparent $color__text-main transparent;
+		}
 	}
 }
 

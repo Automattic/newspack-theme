@@ -298,20 +298,9 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
-			@media only screen and (min-width: 782px) {
-				.header-solid-background .featured-image-beside {
-					background-color: ' . $primary_color . ';
-				}
-
-				.header-solid-background .featured-image-beside .entry-header,
-				.header-default-background .featured-image-beside .entry-header {
-					color: ' . $primary_color_contrast . ';
-				}
-
-				.header-solid-background .featured-image-beside .cat-links:before,
-				.header-default-background .featured-image-beside .cat-links:before {
-					background-color: ' . $primary_color_contrast . ';
-				}
+			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:hover,
+			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:focus {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
 	}
@@ -332,6 +321,11 @@ function newspack_custom_colors_css() {
 
 			.site-footer .widget .widget-title {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
+			}
+
+			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:hover,
+			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:focus {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
 	}

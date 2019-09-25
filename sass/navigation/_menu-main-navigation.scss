@@ -258,13 +258,23 @@
 	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
 }
 
-.header-simplified .site-header .main-navigation .main-menu > li {
-	margin-right: #{ 0.25 * $size__spacing-unit };
-	padding: #{ 0.25 * $size__spacing-unit } 0;
+.header-simplified {
+	.site-header .main-navigation .main-menu > li {
+		margin-right: #{ 0.25 * $size__spacing-unit };
+		padding: #{ 0.25 * $size__spacing-unit } 0;
 
-	@include media( tablet ) {
-		&.menu-item-has-children > a {
-			padding-right: 0;
+		@include media( tablet ) {
+			&.menu-item-has-children > a {
+				padding-right: 0;
+			}
+		}
+
+		> .sub-menu {
+			padding-top: 20px;
+
+			&:before {
+				top: 12px;
+			}
 		}
 	}
 }
