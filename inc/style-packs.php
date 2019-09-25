@@ -21,6 +21,7 @@ new Newspack_Style_Packs_Core(
 			'style-2' => esc_html__( 'Style 2', 'newspack' ),
 			'style-3' => esc_html__( 'Style 3', 'newspack' ),
 			'style-4' => esc_html__( 'Style 4', 'newspack' ),
+			'style-5' => esc_html__( 'Style 5', 'newspack' ),
 		),
 		// Style descriptions
 		'style_descriptions' => array(
@@ -29,6 +30,7 @@ new Newspack_Style_Packs_Core(
 			'style-2' => esc_html__( 'The description for style 2.', 'newspack' ),
 			'style-3' => esc_html__( 'The description for style 3.', 'newspack' ),
 			'style-4' => esc_html__( 'The description for style 4.', 'newspack' ),
+			'style-5' => esc_html__( 'The description for style 5.', 'newspack' ),
 		),
 		// Style fonts
 		'fonts'              => array(
@@ -43,6 +45,10 @@ new Newspack_Style_Packs_Core(
 			),
 			'style-4' => array(
 				'IBM Plex Serif' => 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i',
+			),
+			'style-5' => array(
+				'Old Standard TT' => 'https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700&display=swap',
+				'Cormorant Garamond' => 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i&display=swap',
 			),
 		),
 	)
