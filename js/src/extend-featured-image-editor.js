@@ -2,7 +2,7 @@
 
 import { addFilter } from '@wordpress/hooks';
 import { RadioControl } from '@wordpress/components';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { withDispatch, withSelect, select } from '@wordpress/data';
 import { Component, createElement, Fragment } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import { __ } from '@wordpress/i18n';
@@ -47,12 +47,20 @@ const ComposedRadio = compose( [
 ] )( RadioCustom );
 
 const wrapPostFeaturedImage = OriginalComponent => {
-	return props => (
-		<Fragment>
-			<OriginalComponent { ...props } />
-			<ComposedRadio />
-		</Fragment>
-	);
+	return props => {
+		const post_type = select( 'core/editor' ).getCurrentPostType();
+
+		if ( "post" !== post_type ) {
+			return <OriginalComponent {...props} />;
+		}
+
+		return (
+			<Fragment>
+				<OriginalComponent { ...props } />
+				<ComposedRadio />
+			</Fragment>
+		);
+	};
 };
 
 addFilter(
