@@ -50,11 +50,11 @@ const wrapPostFeaturedImage = OriginalComponent => {
 	return props => {
 		const post_type = select( 'core/editor' ).getCurrentPostType();
 
-        if (post_type !== "post") {
-            return <OriginalComponent {...props} />;
-        }
+		if ( "post" !== post_type ) {
+			return <OriginalComponent {...props} />;
+		}
 
-        return (
+		return (
 			<Fragment>
 				<OriginalComponent { ...props } />
 				<ComposedRadio />
