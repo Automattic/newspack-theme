@@ -32,6 +32,10 @@ body {
 		}
 	}
 
+	.block-editor-inner-blocks .wp-block[data-align="left"] {
+		left: auto;
+	}
+
 	.wp-block[data-align="right"] {
 		@include media( desktop ) {
 			right: #{-2 * $size__spacing-unit };
@@ -39,6 +43,10 @@ body {
 		@include media( wide ) {
 			right: #{-4 * $size__spacing-unit };
 		}
+	}
+
+	.block-editor-inner-blocks .wp-block[data-align="right"] {
+		right: auto;
 	}
 }
 
