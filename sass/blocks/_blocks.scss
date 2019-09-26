@@ -134,6 +134,10 @@
 				max-width: (0.33 * $desktop_width);
 			}
 		}
+
+		figcaption {
+			text-align: left;
+		}
 	}
 
 	//! Video
@@ -141,6 +145,10 @@
 
 		video {
 			width: 100%;
+		}
+
+		figcaption {
+			text-align: left;
 		}
 	}
 
@@ -503,7 +511,7 @@
 		}
 
 		figcaption {
-			padding: ( $size__spacing-unit * .5 );
+			text-align: left;
 		}
 	}
 

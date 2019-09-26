@@ -10,13 +10,23 @@
 
 figcaption,
 .wp-caption-text {
-	border-bottom: 1px solid $color__border;
 	color: $color__text-light;
 	font-size: $font__size-xs;
 	font-family: $font__heading;
 	line-height: $font__line-height-pre;
-	margin: 0;
+	margin: 0 auto;
 	max-width: 780px;
-	padding: 0 ( $size__spacing-unit * .5 ) ( $size__spacing-unit * .5 );
-	text-align: center;
+	padding: 0;
+	text-align: left;
 }
+
+.newspack-front-page,
+.post-template-single-wide,
+.page-template-single-wide {
+	figcaption,
+	.wp-caption-text {
+		max-width: 1200px;
+	}
+}
+
+
