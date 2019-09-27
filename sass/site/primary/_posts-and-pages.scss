@@ -81,6 +81,8 @@ body.page {
 }
 
 .entry-meta {
+	margin-bottom: #{ 0.25 * $size__spacing-unit };
+
 	.author-avatar:not(:empty) {
 		float: left;
 		margin-right: #{ $size__spacing-unit * 0.5 };
@@ -379,7 +381,7 @@ body.page {
 		min-height: calc( 100vh - 106px );
 	}
 
-	@media screen and (min-width: 768px) {
+	@include media( tablet ) {
 		min-height: calc( 100vh - 220px );
 
 		.admin-bar & {
@@ -455,5 +457,114 @@ body.page {
 	.entry-meta .byline {
 		display: inline-block;
 		margin-right: $size__spacing-unit;
+	}
+}
+
+
+.featured-image-beside > .wrapper {
+	max-width: 100%;
+	width: 100%;
+}
+
+@include media( tablet ) {
+	.single-featured-image-beside .site-content {
+		margin-top: 0;
+	}
+
+	.header-default-background .featured-image-beside {
+		background-color: $color__primary;
+	}
+
+	.header-solid-background .featured-image-beside {
+		background-color: #333;
+	}
+
+	.featured-image-beside {
+		display: flex;
+		margin: 0 calc(50% - 50vw);
+		min-height: calc( 100vh - 220px );
+		position: relative;
+		width: 100vw;
+
+		.admin-bar & {
+			min-height: calc( 100vh - 250px );
+		}
+
+		.header-simplified & {
+			min-height: calc( 100vh - 110px );
+		}
+
+		.header-simplified.admin-toolbar & {
+			min-height: calc( 100vh - 142px );
+		}
+
+		.post-thumbnail,
+		& > .wrapper {
+			width: 50%;
+		}
+
+		.post-thumbnail {
+			margin: 0;
+			overflow: hidden;
+			position: relative;
+		}
+
+		& > .wrapper {
+			padding: 0 #{ 2 * $size__spacing-unit };
+			margin: auto 0;
+		}
+
+		.wp-post-image {
+			min-height: 100%;
+			object-fit: cover;
+			object-position: 50% 50%;
+			position: absolute;
+			width: 100%;
+		}
+
+		.entry-header {
+			color: #fff;
+			margin-left: auto;
+			max-width: 600px;
+			padding-left: 0;
+			padding-right: 0;
+
+			a,
+			a:hover,
+			.cat-links,
+			.entry-meta,
+			.entry-meta .byline a,
+			.entry-meta .byline a:visited,
+			.entry-meta .posted-on a,
+			.entry-meta .posted-on a:visited	 {
+				color: inherit;
+			}
+
+			.entry-subhead {
+				display: block;
+			}
+
+			.entry-meta {
+				margin-bottom: $size__spacing-unit;
+
+				.byline {
+					display: inline-block;
+
+					&:after {
+						content: "|";
+						display: inline-block;
+						margin: 0 #{ 0.75 * $size__spacing-unit } 0 $size__spacing-unit;
+					}
+				}
+			}
+
+			.author-avatar {
+				display: none;
+			}
+		}
+
+		.entry-title {
+			font-size: $font__size-xxl;
+		}
 	}
 }

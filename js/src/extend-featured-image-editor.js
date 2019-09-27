@@ -18,6 +18,7 @@ class RadioCustom extends Component {
 				options={ [
 					{ label: __( 'Default' ), value: '' },
 					{ label: __( 'Behind article title' ), value: 'behind' },
+					{ label: __( 'Beside article title' ), value: 'beside' },
 				] }
 				onChange={ value => {
 					this.setState( { value } );

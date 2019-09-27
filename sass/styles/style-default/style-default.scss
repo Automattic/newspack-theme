@@ -55,6 +55,36 @@ body.header-default-background.header-default-height {
 	}
 }
 
+.featured-image-behind .cat-links {
+	a,
+	a:hover,
+	a:visited {
+		background-color: transparent;
+		color: inherit;
+		margin: 0;
+		padding: 0;
+	}
+	.sep {
+		display: inline;
+	}
+}
+
+@include media( tablet ) {
+	.featured-image-beside .cat-links {
+		a,
+		a:hover,
+		a:visited {
+			background-color: transparent;
+			color: inherit;
+			margin: 0;
+			padding: 0;
+		}
+		.sep {
+			display: inline;
+		}
+	}
+}
+
 .tags-links {
 	a {
 		background-color: #f1f1f1;

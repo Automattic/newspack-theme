@@ -213,6 +213,31 @@ figcaption,
 	}
 }
 
+@include media( tablet ) {
+	.header-solid-background .featured-image-beside {
+		background-color: $color__background-pre;
+
+		.entry-header {
+			color: $color__text-main;
+		}
+
+		.cat-links {
+			color: $color__primary;
+		}
+	}
+
+	.single-post .featured-image-beside .entry-subhead {
+		border: 0;
+		margin-bottom: 0;
+		padding: 0;
+		text-align: center;
+
+		.author-avatar {
+			display: none;
+		}
+	}
+}
+
 .entry .entry-footer {
 	color: $color__primary;
 	text-align: center;
