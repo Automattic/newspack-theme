@@ -2,10 +2,6 @@
 @import "../../style-base.scss";
 
 /* Style pack-specific overrides */
-body {
-	font-family: $font__body;
-}
-
 .accent-header:not(.widget-title),
 .article-section-title,
 .cat-links,
@@ -31,17 +27,168 @@ body {
 	font-size: $font__size-lg;
 }
 
-/* Posts & Pages */
+/* Body */
+body {
+	outline: 1px solid;
+	outline-offset: -#{ 0.5 * $size__spacing-unit };
+	padding: #{ 0.5 * $size__spacing-unit };
+}
+
+/* Header */
+
+.top-header-contain {
+	background-color: $color__text-main;
+}
+
+.bottom-header-contain {
+	.wrapper {
+		@include media( tablet ) {
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+.header-search-contain {
+	@include media( tablet ) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+/* Main Navigation */
+
+.site-header .main-navigation {
+	font-size: $font__size_base;
+
+	.main-menu {
+		.sub-menu {
+			background-color: $color__text-main;
+
+			> li > a:focus,
+			> li > a:hover {
+				background-color: $color__text-light;
+			}
+		}
+
+		.menu-item-has-children:not(.off-canvas):hover > .sub-menu,
+		.menu-item-has-children:not(.off-canvas):focus > .sub-menu {
+			margin-top: 1px;
+		}
+	}
+}
+
+/* Font Family */
+
+.entry-meta,
+.cat-links,
+.entry-footer,
+.main-navigation,
+.secondary-menu,
+.tertiary-menu,
+.site-description,
+.site-info,
+#cancel-comment-reply-link,
+#mobile-sidebar,
+.widget {
+	font-family: inherit;
+	font-style: normal;
+}
+
+/* Accent headers */
+
+.accent-header,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.cat-links {
+	font-size: $font__size-xs;
+	margin-bottom: $size__spacing-unit;
+}
+
+.accent-header,
+.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+	text-align: center;
+}
+
+.article-section-title,
+.widget-title.accent-header {
+	overflow: hidden;
+
+	&:before {
+		display: none;
+	}
+
+	span {
+		display: inline-block;
+		position: relative;
+
+		&:before,
+		&:after {
+			border-top: 1px solid;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 600px;
+		}
+
+		&:before {
+			right: calc( 100% + #{ 0.25 * $size__spacing-unit } );
+		}
+
+		&:after {
+			left: calc( 100% + #{ 0.25 * $size__spacing-unit } );
+		}
+	}
+}
+
+.cat-links {
+	font-size: $font__size-sm;
+
+	a {
+		color: inherit;
+	}
+}
 
 .single .cat-links {
 	font-size: $font__size_base;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		border-top: 1px solid;
+		content:"";
+    display: inline-block;
+    margin-left: #{ 0.25 * $size__spacing-unit };
+    margin-right: -100%;
+		vertical-align: middle;
+    width: 100%;
+	}
 }
+
+/* Posts & Pages */
 
 .search,
 .blog {
 	.cat-links:before {
 		display: none;
 	}
+}
+
+.entry-header {
+	.entry-subhead {
+		border-top: 1px solid;
+		padding-top: 1rem;
+	}
+}
+
+.single-post:not(.has-large-featured-image) {
+		.entry-header {
+			border-bottom-color: $color__text-main;
+			border-bottom-width: 2px;
+		}
 }
 
 .entry-meta .byline {
@@ -66,10 +213,9 @@ body {
 	}
 }
 
-/* Avatar */
-.avatar,
-.entry-content .wp-block-newspack-blocks-homepage-articles .avatar {
-	border-radius: 0;
+.accent-header:not(.widget-title):before,
+.cat-links:before {
+	background: $color__text-main;
 }
 
 /* Author Bio */
@@ -85,6 +231,29 @@ body {
 
 	&:before {
 		display: none;
+	}
+}
+
+/* Form */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	&:focus {
+		outline-color: $color__text-main;
 	}
 }
 
@@ -252,11 +421,15 @@ body {
 
 	.widget-title {
 		color: $color__text-main;
+		font-family: $font__heading;
 		font-size: $font__size_base;
 	}
+}
 
-	.widget,
-	.site-info {
-		font-family: $font__heading;
+.site-content .wp-block-newspack-blocks-homepage-articles {
+	&.is-style-borders {
+		article {
+			border-color: $color__text-main;
+		}
 	}
 }
