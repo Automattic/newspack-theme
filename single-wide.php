@@ -24,8 +24,14 @@ $thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 				the_post();
 
 				// Template part for large featured images.
-				get_template_part( 'template-parts/post/large-featured-image' );
+				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) :
+					get_template_part( 'template-parts/post/large-featured-image' );
+				else :
 				?>
+					<header class="entry-header">
+						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+					</header>
+				<?php endif; ?>
 
 				<div class="main-content">
 

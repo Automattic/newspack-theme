@@ -14,14 +14,22 @@ get_header();
 		<main id="main" class="site-main">
 
 			<?php
-
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 
+				// Get the post thumbnail.
+				$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+
 				// Template part for large featured images.
-				get_template_part( 'template-parts/post/large-featured-image' );
+				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) :
+					get_template_part( 'template-parts/post/large-featured-image' );
+				else :
 				?>
+					<header class="entry-header">
+						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+					</header>
+				<?php endif; ?>
 
 				<div class="main-content">
 
