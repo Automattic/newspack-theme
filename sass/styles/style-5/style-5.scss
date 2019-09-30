@@ -89,7 +89,12 @@ body {
 .site-info,
 #cancel-comment-reply-link,
 #mobile-sidebar,
-.widget {
+.widget,
+.entry .entry-content .wp-block-button .wp-block-button__link,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	font-family: inherit;
 	font-style: normal;
 }
