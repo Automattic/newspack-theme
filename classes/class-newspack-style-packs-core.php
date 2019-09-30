@@ -54,6 +54,7 @@ class Newspack_Style_Packs_Core {
 					'body_class_format'  => 'style-pack-%s',
 					'styles_directory'   => 'styles',
 					'js_directory'       => 'js',
+					'default_css_id'     => '',
 					'style_thumbs'       => array(),
 					'style_descriptions' => array(),
 					'default_headers'    => array(),
@@ -277,6 +278,7 @@ class Newspack_Style_Packs_Core {
 			'preview_style'     => $this->get_preview_style(),
 			'styles'            => $style_pack_stylesheets,
 			'fonts'             => $style_pack_fonts,
+			'default_css_id'    => $this->config['default_css_id'],
 		);
 		wp_localize_script( 'style-packs-customizer', 'stylePacksData', $style_packs_data );
 	}

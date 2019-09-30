@@ -12,6 +12,8 @@ new Newspack_Style_Packs_Core(
 		'styles_directory'   => 'styles',
 		// JavaScript directory
 		'js_directory'       => 'js',
+		// Default style.css ID
+		'default_css_id'     => 'newspack-style-css',
 		// Style declarations
 		'styles'             => array(
 			'default' => esc_html__( 'Default Style', 'newspack' ),
