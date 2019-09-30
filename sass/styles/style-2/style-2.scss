@@ -20,13 +20,20 @@ Newspack Theme Styles - Style Pack 2
 	}
 }
 
-.header-simplified .site-header {
-	@include media( tablet ) {
-		padding-top: #{ 0.5 * $size__spacing-unit };
+.header-simplified {
+	.middle-header-contain {
+		@include media( tablet ) {
+			padding-top: #{ 0.5 * $size__spacing-unit };
+		}
+		@include media( desktop ) {
+			padding-top: $size__spacing-unit;
+		}
 	}
 
-	@include media( desktop ) {
-		padding: $size__spacing-unit 0 #{ 10 * $size__spacing-unit };
+	.site-header {
+		@include media( desktop ) {
+			padding: 0 0 #{ 10 * $size__spacing-unit };
+		}
 	}
 }
 

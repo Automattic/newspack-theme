@@ -40,8 +40,8 @@
 		?>
 
 		<?php
-		// Header is NOT short:
-		if ( false === $header_simplified ) :
+		// Header is NOT short, or if it is, there's a secondary menu assigned.
+		if ( false === $header_simplified || ( true === $header_simplified && has_nav_menu( 'secondary-menu' ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
