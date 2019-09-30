@@ -346,7 +346,7 @@
 .desktop-only {
 	display: none;
 
-	@include media( tablet ) {
+	@include media( desktop ) {
 		display: inherit;
 	}
 }

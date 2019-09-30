@@ -19,7 +19,7 @@
 	&:hover {
 		color: inherit
 	}
-	@include media(tablet) {
+	@include media(desktop) {
 		display: none;
 	}
 }
