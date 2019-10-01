@@ -799,6 +799,21 @@
 		}
 	}
 
+	// Jetpack Blocks
+	.jp-relatedposts-i2 {
+		font-family: $font__heading;
+		a {
+			font-size: $font__size-md;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.jp-related-posts-i2__post-date,
+		.jp-related-posts-i2__post-context {
+			font-size: $font__size-sm;
+		}
+	}
+
 	//! Font Sizes
 	.has-small-font-size {
 		font-size: $font__size-sm;

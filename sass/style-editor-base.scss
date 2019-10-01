@@ -744,6 +744,22 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Jetpack Blocks === */
+
+.jp-relatedposts-i2 {
+	font-family: $font__heading;
+	a {
+		font-size: $font__size-md;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.jp-related-posts-i2__post-date,
+	.jp-related-posts-i2__post-context {
+		font-size: $font__size-sm;
+	}
+}
+
 /** === Classic Editor === */
 
 /* Properly center-align captions in the classic-editor block */

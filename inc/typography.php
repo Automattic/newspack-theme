@@ -38,6 +38,7 @@ function newspack_custom_typography_css() {
 		.site-title,
 		.site-info,
 		#cancel-comment-reply-link,
+		.jp-relatedposts-i2,
 		h1,
 		h2,
 		h3,
@@ -186,6 +187,9 @@ function newspack_custom_typography_css() {
 
 		/* Latest Comments blocks */
 		.editor-block-list__layout .editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+
+		/* Jetpack blocks */
+		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2,
 
 		/* Classic Editor */
 		.editor-block-list__layout .editor-block-list__block .wp-caption dd,
