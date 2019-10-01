@@ -801,6 +801,8 @@
 
 	// Jetpack Blocks
 	.jp-relatedposts-i2 {
+		border-top: 1px solid $color__border;
+		border-bottom: 1px solid $color__border;
 		font-family: $font__heading;
 		a {
 			font-size: $font__size-md;
