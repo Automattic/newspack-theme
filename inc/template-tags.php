@@ -287,6 +287,29 @@ function newspack_tertiary_menu() {
 }
 
 /**
+ * Displays 'highlight' menu; created a function to reduce duplication.
+ */
+function newspack_highlight_menu() {
+	if ( ! has_nav_menu( 'highlight-menu' ) ) {
+		return;
+	}
+	?>
+	<nav toolbar="(min-width: 1099px)" toolbar-target="site-navigation" class="highlight-menu" aria-label="<?php esc_attr_e( 'Highlight Menu', 'newspack' ); ?>">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'highlight-menu',
+				'container'      => false,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'          => 1,
+			)
+		);
+		?>
+	</nav>
+<?php
+}
+
+/**
  * Displays social links menu; create a function for the wp_nav_menu settings to reduce duplication.
  */
 function newspack_social_menu_settings() {

@@ -182,6 +182,17 @@
 
 	</header><!-- #masthead -->
 
+	<div class="wrapper">
+		<div id="highlight-navigation">
+
+			<?php
+			if ( ! newspack_is_amp() ) {
+				newspack_highlight_menu();
+			}
+			?>
+		</div><!-- #highlight-navigation -->
+	</div><!-- .wrapper -->
+
 	<?php do_action( 'after_header' ); ?>
 
 	<div id="content" class="site-content">

@@ -72,6 +72,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				'primary-menu'   => __( 'Primary Menu', 'newspack' ),
 				'secondary-menu' => __( 'Secondary Menu', 'newspack' ),
 				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
+				'highlight-menu' => __( 'Topic Highlight Menu', 'newspack' ),
 				'social'         => __( 'Social Links Menu', 'newspack' ),
 			)
 		);
