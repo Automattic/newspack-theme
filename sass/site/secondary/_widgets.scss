@@ -85,6 +85,17 @@
 	}
 }
 
+
+.widgets-list-layout {
+	.widgets-list-layout-blavatar {
+		width: auto;
+	}
+
+	.widgets-list-layout-links {
+		width: calc( 100% - 60px)
+	}
+}
+
 #secondary {
 	section:first-child,
 	section:first-child > div {
