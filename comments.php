@@ -28,9 +28,13 @@ $discussion = newspack_get_discussion_data();
 		<?php
 		if ( comments_open() ) {
 			if ( have_comments() ) {
-				_e( 'Join the Conversation', 'newspack' );
+				echo ( function_exists('\Rename_Comments\get_text') )
+					? \Rename_Comments\get_text( 'rc_comments_title' )
+					: __( 'Join the Conversation', 'newspack' );
 			} else {
-				_e( 'Leave a comment', 'newspack' );
+				echo ( function_exists('\Rename_Comments\get_text') )
+					? \Rename_Comments\get_text( 'rc_no_comments_title' )
+					: __( 'Leave a comment', 'newspack' );
 			}
 		} else {
 			if ( '1' == $discussion->responses ) {
@@ -73,7 +77,7 @@ $discussion = newspack_get_discussion_data();
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new Newspack_Walker_Comment(),
+					'walker'      => new newspack_Walker_Comment(),
 					'avatar_size' => newspack_get_avatar_size(),
 					'short_ping'  => true,
 					'style'       => 'ol',
@@ -87,22 +91,25 @@ $discussion = newspack_get_discussion_data();
 		if ( have_comments() ) :
 			$prev_icon     = newspack_get_icon_svg( 'chevron_left', 22 );
 			$next_icon     = newspack_get_icon_svg( 'chevron_right', 22 );
-			$comments_text = __( 'Comments', 'newspack' );
+			$comments_text = ( function_exists('\Rename_Comments\get_text') ) ? \Rename_Comments\get_text( 'rc_comments_name_plural' ) : __( 'Comments', 'newspack' );
 			the_comments_navigation(
 				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'newspack' ), __( 'Comments', 'newspack' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'newspack' ), __( 'Comments', 'newspack' ), $next_icon ),
+					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'newspack' ), $comments_text ),
+					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'newspack' ), $comments_text, $next_icon ),
 				)
 			);
 		endif;
 
 		// Show comment form at bottom if showing newest comments at the bottom.
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
+			$leave_comment_text = ( function_exists('\Rename_Comments\get_text') )
+				? \Rename_Comments\get_text( 'rc_comments_leave_comment' )
+				: __( 'Leave a comment', 'newspack' );
 			?>
 			<div class="comment-form-flex">
-				<span class="screen-reader-text"><?php _e( 'Leave a comment', 'newspack' ); ?></span>
+				<span class="screen-reader-text"><?php echo $leave_comment_text; ?></span>
 				<?php newspack_comment_form( 'asc' ); ?>
-				<h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'newspack' ); ?></h2>
+				<h2 class="comments-title" aria-hidden="true"><?php echo $leave_comment_text; ?></h2>
 			</div>
 			<?php
 		endif;
@@ -111,7 +118,11 @@ $discussion = newspack_get_discussion_data();
 		if ( ! comments_open() ) :
 			?>
 			<p class="no-comments">
-				<?php _e( 'Comments are closed.', 'newspack' ); ?>
+				<?php
+					echo ( function_exists('\Rename_Comments\get_text') )
+						? \Rename_Comments\get_text( 'rc_comments_closed' )
+						: esc_html__( 'Comments are closed.', 'newspack' );
+				?>
 			</p>
 			<?php
 		endif;
