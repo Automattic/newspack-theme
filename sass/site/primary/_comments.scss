@@ -54,6 +54,12 @@
 			}
 		}
 	}
+
+	// Hide Jetpack comments' title.
+	.comments-title-wrap + .comment-respond .comment-reply-title {
+		display: none;
+	}
+
 }
 
 #comment {
