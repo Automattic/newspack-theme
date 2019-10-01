@@ -1,42 +1,7 @@
-/*!
-Newspack Theme Editor Styles - Style Pack 1
-*/
-
-/** === Includes === */
-
 @import "variables-style/variables-style";
 @import "../../style-editor-base";
 
-.accent-header,
-.article-section-title {
-	color: #666;
-	font-family: $font__heading;
-	font-size: $font__size-sm;
-
-	&:before {
-		background-color: $color__primary;
-		content: "";
-		display: inline-block;
-		height: 0.75em;
-		margin: 0 0.75em 0 0;
-		position: relative;
-		width: 0.75em;
-		top: 3px;
-	}
-}
-
-.entry-meta .byline a {
-	color: $color__text-light;
-}
-
-/* Avatar */
-
-.avatar {
-	border-radius: 0;
-}
-
-/** === Paragraph === */
-
+/* Paragraph */
 .wp-block-paragraph {
 
 	&.has-drop-cap:not(:focus)::first-letter {
@@ -45,6 +10,7 @@ Newspack Theme Editor Styles - Style Pack 1
 	}
 }
 
+/* Pullquote */
 .wp-block[data-type="core/pullquote"] {
 
 	.wp-block-pullquote {
@@ -178,4 +144,49 @@ Newspack Theme Editor Styles - Style Pack 1
 			font-size: $font__size-md;
 		}
 	}
+}
+
+/* Newspack Homepage Articles */
+.accent-header,
+.article-section-title {
+	font-family: $font__body;
+	font-size: $font__size-base;
+	margin-bottom: $size__spacing-unit;
+
+	&:after {
+		background-color: currentColor;
+		content: "";
+		display: inline-block;
+		height: 1px;
+		margin: 0 0 0 0.25rem;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+	}
+}
+
+.wp-block-newspack-blocks-homepage-articles {
+	&.is-style-borders {
+		article {
+			border-color: currentColor;
+		}
+	}
+
+	> .block-editor-rich-text {
+		overflow-x: hidden;
+	}
+}
+
+/* Font Family */
+.entry-meta,
+.cat-links,
+.entry-footer,
+.widget,
+.wp-block-button .wp-block-button__link,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-family: inherit;
+	font-style: normal;
 }
