@@ -671,6 +671,27 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Jetpack Blocks === */
+
+// Jetpack Blocks
+.jp-relatedposts-i2 {
+	border-top: 1px solid $color__border;
+	border-bottom: 1px solid $color__border;
+	padding: $size__spacing-unit 0;
+	a,
+	strong {
+		font-family: $font__heading;
+		font-size: $font__size-base;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.jp-related-posts-i2__post-date,
+	.jp-related-posts-i2__post-context {
+		font-size: $font__size-xs;
+	}
+}
+
 /** === Classic Editor === */
 
 /* Properly center-align captions in the classic-editor block */
