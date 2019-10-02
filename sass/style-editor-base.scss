@@ -754,14 +754,14 @@ ul.wp-block-archives,
 	font-family: $font__heading;
 	a,
 	strong {
-		font-size: $font__size-md;
+		font-size: $font__size-base;
 		font-weight: bold;
 		text-decoration: none;
 	}
 
 	.jp-related-posts-i2__post-date,
 	.jp-related-posts-i2__post-context {
-		font-size: $font__size-xxs;
+		font-size: $font__size-xs;
 	}
 }
 
