@@ -38,7 +38,7 @@ function newspack_custom_typography_css() {
 		.site-title,
 		.site-info,
 		#cancel-comment-reply-link,
-		.entry .entry-content .jp-relatedposts-i2,
+		.entry .entry-content .jp-relatedposts-i2 a,
 		h1,
 		h2,
 		h3,
@@ -189,7 +189,8 @@ function newspack_custom_typography_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 
 		/* Jetpack blocks */
-		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2,
+		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 a,
+		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 strong,
 
 		/* Classic Editor */
 		.editor-block-list__layout .editor-block-list__block .wp-caption dd,

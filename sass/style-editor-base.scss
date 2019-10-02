@@ -751,9 +751,9 @@ ul.wp-block-archives,
 	border-top: 1px solid $color__border;
 	border-bottom: 1px solid $color__border;
 	padding: $size__spacing-unit 0;
-	font-family: $font__heading;
 	a,
 	strong {
+		font-family: $font__heading;
 		font-size: $font__size-base;
 		font-weight: bold;
 		text-decoration: none;
