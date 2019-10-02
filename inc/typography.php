@@ -38,7 +38,7 @@ function newspack_custom_typography_css() {
 		.site-title,
 		.site-info,
 		#cancel-comment-reply-link,
-		.jp-relatedposts-i2,
+		.entry .entry-content .jp-relatedposts-i2,
 		h1,
 		h2,
 		h3,
