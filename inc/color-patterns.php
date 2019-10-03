@@ -54,7 +54,6 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Set primary color that contrasts against white */
-		.highlight-menu .menu-label,
 		.entry .entry-content .more-link:hover,
 		.main-navigation .main-menu > li > a + svg,
 		.search-form button:active, .search-form button:hover, .search-form button:focus,
@@ -85,7 +84,7 @@ function newspack_custom_colors_css() {
 		.site-header .main-navigation .sub-menu a:focus,
 		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
 		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
-		.mobile-sidebar .highlight-menu .menu-label,
+		.highlight-menu .menu-label,
 		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
 			color: ' . $primary_color_contrast . ';
@@ -142,7 +141,7 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Set secondary color with contrast */
-
+		.site-header .highlight-menu .menu-label,
 		.entry-content a,
 		.entry-content a:visited,
 		.author-bio .author-link,
@@ -258,12 +257,21 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$theme_css .= '
+			.header-solid-background .site-header {
+				background-color: ' . $primary_color . ';
+			}
+
 			.site-header,
 			.header-default-background .site-header,
 			.header-simplified.header-default-background .site-header,
 			.site-content #primary,
 			#page .site-header {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
+			}
+
+			.site-header .highlight-menu .menu-label,
+			.site-header .highlight-menu a {
+				color: ' . $primary_color_contrast . ';
 			}
 
 			.site-footer {

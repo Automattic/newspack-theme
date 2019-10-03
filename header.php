@@ -180,15 +180,11 @@
 			</div><!-- .bottom-header-contain -->
 		<?php endif; ?>
 
-		<div class="wrapper">
-			<div id="highlight-navigation">
-				<?php
-				if ( ! newspack_is_amp() ) {
-					newspack_highlight_menu();
-				}
-				?>
-			</div><!-- #highlight-navigation -->
-		</div><!-- .wrapper -->
+		<div class="highlight-menu-contain desktop-only">
+			<div class="wrapper">
+				<?php newspack_highlight_menu(); ?>
+			</div><!-- .wrapper -->
+		</div><!-- .highlight-menu-contain -->
 
 	</header><!-- #masthead -->
 

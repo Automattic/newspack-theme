@@ -1,36 +1,64 @@
 .highlight-menu {
 	font-family: $font__heading;
-	font-size: $font__size-xs;
 	padding: #{ 0.25 * $size__spacing-unit } 0;
 
 	ul,
-	li,
-	.menu-label {
-		display: inline-block;
+	li {
+		display: inline;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 
-	.menu-label {
-		color: $color__primary;
-		font-weight: bold;
-	}
-
-	li,
-	.menu-label {
-		margin-right: #{ 0.5 * $size__spacing-unit };
-	}
-
-}
-
-.mobile-sidebar .highlight-menu {
-	ul,
 	a {
 		display: block;
 	}
 
 	.menu-label {
 		color: $color__background-body;
+		font-weight: bold;
+	}
+}
+
+.site-header {
+	.highlight-menu-contain .wrapper {
+		overflow: hidden;
+		word-wrap: break-word;
+
+		ul {
+			display: block;
+			height: 1.5em;
+			width: 100%;
+		}
+	}
+
+	.highlight-menu {
+		font-size: $font__size-xs;
+
+		a {
+			display: inline-block;
+		}
+
+		li,
+		.menu-label {
+			margin-right: #{ 0.5 * $size__spacing-unit };
+		}
+
+		.menu-label {
+			color: $color__primary;
+			display: inline-block;
+		}
+	}
+}
+
+.header-center-logo .site-header .highlight-menu-contain .wrapper {
+	justify-content: center;
+	text-align: center;
+}
+
+.single-featured-image-beside,
+.single-featured-image-behind {
+	.highlight-menu-contain {
+		display: none;
 	}
 }

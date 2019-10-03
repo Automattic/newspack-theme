@@ -9,6 +9,10 @@ Newspack Theme Styles - Style Pack 2
 
 // Header Overlap
 
+.header-solid-background .site-header {
+	background-color: $color__primary;
+}
+
 .site-header,
 .header-solid-background .site-header {
 	@include media(tablet) {
@@ -20,13 +24,26 @@ Newspack Theme Styles - Style Pack 2
 	}
 }
 
-.header-simplified .site-header {
-	@include media( tablet ) {
-		padding-top: #{ 0.5 * $size__spacing-unit };
-	}
-
+.site-header .highlight-menu-contain {
 	@include media( desktop ) {
-		padding: $size__spacing-unit 0 #{ 10 * $size__spacing-unit };
+		margin-top: $size__spacing-unit;
+	}
+}
+
+.header-simplified {
+	.site-header {
+		@include media( tablet ) {
+			padding-top: #{ 0.5 * $size__spacing-unit };
+		}
+
+		@include media( desktop ) {
+			padding: $size__spacing-unit 0 #{ 10 * $size__spacing-unit };
+
+			.highlight-menu-contain {
+				position: relative;
+				top: #{ 3 * $size__spacing-unit };
+			}
+		}
 	}
 }
 
@@ -44,7 +61,7 @@ Newspack Theme Styles - Style Pack 2
 // Header
 
 .site-header,
-.header-default-background .site-header,
+.header-default-background .middle-header-contain,
 .header-simplified.header-default-background .site-header,
 body:not(.header-solid-background) .site-header {
 	background-color: #efefef;

@@ -294,15 +294,13 @@ function newspack_highlight_menu() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 1099px)" toolbar-target="site-navigation" class="highlight-menu" aria-label="<?php esc_attr_e( 'Highlight Menu', 'newspack' ); ?>">
+	<nav class="highlight-menu" aria-label="<?php esc_attr_e( 'Highlight Menu', 'newspack' ); ?>">
 		<?php
-		echo '<span class="menu-label">' . esc_html( wp_get_nav_menu_name( 'highlight-menu' ) ) . '</span>';
-
 		wp_nav_menu(
 			array(
 				'theme_location' => 'highlight-menu',
 				'container'      => false,
-				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s"><li><span class="menu-label">' . esc_html( wp_get_nav_menu_name( 'highlight-menu' ) ) . '</span></li>%3$s</ul>',
 				'depth'          => 1,
 			)
 		);
