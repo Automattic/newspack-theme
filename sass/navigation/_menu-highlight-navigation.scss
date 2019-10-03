@@ -1,22 +1,24 @@
-.highlight-menu-contain .wrapper {
-	font-family: $font__heading;
-	font-size: $font__size-xs;
-	height: 1.5em;
-	overflow: hidden;
-	word-wrap: break-word;
-
-	ul {
-		display: block;
-		width: 100%;
+.highlight-menu-contain {
+	margin-top: #{ 0.25 * $size__spacing-unit };
+	.wrapper {
+		font-family: $font__heading;
+		font-size: $font__size-xs;
+		height: 1.5em;
+		overflow: hidden;
+		word-wrap: break-word;
 	}
 }
 
 .highlight-menu {
 	ul, li {
-		display: inline;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	ul {
+		display: block;
+		width: 100%;
 	}
 
 	li {

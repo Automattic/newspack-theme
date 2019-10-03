@@ -269,8 +269,8 @@ function newspack_custom_colors_css() {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 			}
 
-			.site-header .highlight-menu .menu-label,
-			.site-header .highlight-menu a {
+			.header-solid-background .site-header .highlight-menu .menu-label,
+			.header-solid-background .site-header .highlight-menu a {
 				color: ' . $primary_color_contrast . ';
 			}
 

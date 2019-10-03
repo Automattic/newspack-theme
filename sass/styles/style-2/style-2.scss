@@ -67,6 +67,10 @@ body:not(.header-solid-background) .site-header {
 	background-color: #efefef;
 }
 
+.header-simplified.header-default-background .middle-header-contain {
+	border-bottom: 0;
+}
+
 #page .site-header {
 	border-bottom: 2px solid $color__primary-variation;
 	@include media( tablet ) {
