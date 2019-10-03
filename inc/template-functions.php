@@ -88,12 +88,14 @@ function newspack_body_classes( $classes ) {
 
 	// Adds a class to single artcles, if they're using a special featured image style.
 	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
-	if ( 'behind' === $current_featured_image_style ) {
-		$classes[] = 'single-featured-image-behind';
-	} elseif ( 'beside' === $current_featured_image_style ) {
-		$classes[] = 'single-featured-image-beside';
-	} else {
-		$classes[] = 'single-featured-image-default';
+	if ( is_single() ) {
+		if ( 'behind' === $current_featured_image_style ) {
+			$classes[] = 'single-featured-image-behind';
+		} elseif ( 'beside' === $current_featured_image_style ) {
+			$classes[] = 'single-featured-image-beside';
+		} else {
+			$classes[] = 'single-featured-image-default';
+		}
 	}
 
 	return $classes;
