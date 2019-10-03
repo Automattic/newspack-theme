@@ -297,6 +297,10 @@ body.page {
 			margin-top: #{ 0.5 * $size__spacing-unit };
 		}
 	}
+
+	.entry-footer {
+		margin-bottom: 0;
+	}
 }
 
 /* Author description */
