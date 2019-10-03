@@ -278,7 +278,8 @@ function newspack_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks .= '
 			.tags-links span:first-child,
-			.page-title {
+			.page-title,
+			.highlight-menu .menu-label {
 				text-transform: uppercase;
 			}
 		';

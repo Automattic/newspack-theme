@@ -54,7 +54,7 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Set primary color that contrasts against white */
-
+		.highlight-menu .menu-label,
 		.entry .entry-content .more-link:hover,
 		.main-navigation .main-menu > li > a + svg,
 		.search-form button:active, .search-form button:hover, .search-form button:focus,
@@ -85,6 +85,7 @@ function newspack_custom_colors_css() {
 		.site-header .main-navigation .sub-menu a:focus,
 		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
 		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
+		.mobile-sidebar .highlight-menu .menu-label,
 		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
 			color: ' . $primary_color_contrast . ';
@@ -332,7 +333,7 @@ function newspack_custom_colors_css() {
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4' ) ) {
 		$theme_css .= '
-			.header-solid-background .site-header {
+			.header-solid-background .middle-header-contain {
 				background-color: ' . $primary_color . ';
 			}
 			.header-solid-background .top-header-contain {

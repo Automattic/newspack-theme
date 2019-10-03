@@ -17,6 +17,8 @@
 
 	<?php get_search_form(); ?>
 
+	<?php newspack_highlight_menu(); ?>
+
 	<?php newspack_primary_menu(); ?>
 
 	<?php newspack_secondary_menu(); ?>
