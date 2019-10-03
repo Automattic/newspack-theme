@@ -11,20 +11,14 @@ $has_responses = $discussion->responses > 0;
 
 if ( $has_responses ) {
 	/* translators: %1(X comments)$s */
-	$meta_label = sprintf( _n( '%d Comment', '%d Comments', $discussion->responses, 'newspack' ), $discussion->responses );
+	$meta_label = sprintf( _n(
+		'%d Comment',
+		'%d Comments',
+		$discussion->responses, 'newspack'
+	), $discussion->responses );
 
-	if ( function_exists('\Rename_Comments\get_text') ) {
-		$rc_name = ( $discussion->responses > 1 )
-			? \Rename_Comments\get_text('rc_comments_name_plural')
-			: \Rename_Comments\get_text('rc_comments_name');
-		$meta_label = sprintf( '%d %s', $discussion->responses, $rc_name );
-	}
 } else {
-	$meta_label = __( 'No comments', 'newspack' );
-
-	if ( function_exists('\Rename_Comments\get_text') ) {
-		$meta_label = sprintf( esc_html__( 'No %s', 'newspack' ), \Rename_Comments\get_text('rc_comments_name_plural') );
-	}
+	$meta_label = apply_filters( 'newspack_no_comments', __( 'No comments', 'newspack' ) );
 }
 ?>
 

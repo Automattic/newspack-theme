@@ -28,13 +28,9 @@ $discussion = newspack_get_discussion_data();
 		<?php
 		if ( comments_open() ) {
 			if ( have_comments() ) {
-				echo ( function_exists('\Rename_Comments\get_text') )
-					? \Rename_Comments\get_text( 'rc_comments_title' )
-					: __( 'Join the Conversation', 'newspack' );
+				echo apply_filters( 'newspack_comment_section_title_nocomments', __( 'Join the Conversation', 'newspack' ) );
 			} else {
-				echo ( function_exists('\Rename_Comments\get_text') )
-					? \Rename_Comments\get_text( 'rc_no_comments_title' )
-					: __( 'Leave a comment', 'newspack' );
+				echo apply_filters( 'newspack_comment_section_title', __( 'Leave a comment', 'newspack' ) );
 			}
 		} else {
 			if ( '1' == $discussion->responses ) {
@@ -91,7 +87,7 @@ $discussion = newspack_get_discussion_data();
 		if ( have_comments() ) :
 			$prev_icon     = newspack_get_icon_svg( 'chevron_left', 22 );
 			$next_icon     = newspack_get_icon_svg( 'chevron_right', 22 );
-			$comments_text = ( function_exists('\Rename_Comments\get_text') ) ? \Rename_Comments\get_text( 'rc_comments_name_plural' ) : __( 'Comments', 'newspack' );
+			$comments_text = apply_filters( 'newspack_comments_name_plural', __( 'Comments', 'newspack' ) );
 			the_comments_navigation(
 				array(
 					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'newspack' ), $comments_text ),
@@ -102,9 +98,7 @@ $discussion = newspack_get_discussion_data();
 
 		// Show comment form at bottom if showing newest comments at the bottom.
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
-			$leave_comment_text = ( function_exists('\Rename_Comments\get_text') )
-				? \Rename_Comments\get_text( 'rc_comments_leave_comment' )
-				: __( 'Leave a comment', 'newspack' );
+			$leave_comment_text = apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) );
 			?>
 			<div class="comment-form-flex">
 				<span class="screen-reader-text"><?php echo $leave_comment_text; ?></span>
@@ -119,9 +113,7 @@ $discussion = newspack_get_discussion_data();
 			?>
 			<p class="no-comments">
 				<?php
-					echo ( function_exists('\Rename_Comments\get_text') )
-						? \Rename_Comments\get_text( 'rc_comments_closed' )
-						: esc_html__( 'Comments are closed.', 'newspack' );
+					echo apply_filters( 'newspack_comments_closed', __( 'Comments are closed.', 'newspack' ) );
 				?>
 			</p>
 			<?php
