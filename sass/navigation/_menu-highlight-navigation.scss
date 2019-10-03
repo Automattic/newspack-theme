@@ -1,53 +1,33 @@
-.highlight-menu {
+.highlight-menu-contain .wrapper {
 	font-family: $font__heading;
-	padding: #{ 0.25 * $size__spacing-unit } 0;
+	font-size: $font__size-xs;
+	height: 1.5em;
+	overflow: hidden;
+	word-wrap: break-word;
 
-	ul,
-	li {
+	ul {
+		display: block;
+		width: 100%;
+	}
+}
+
+.highlight-menu {
+	ul, li {
 		display: inline;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 
-	a {
-		display: block;
+	li {
+		display: inline-block;
+		height: 1.5em;
+		margin-right: #{ 0.5 * $size__spacing-unit };
 	}
 
 	.menu-label {
 		color: $color__background-body;
 		font-weight: bold;
-	}
-}
-
-.site-header {
-	.highlight-menu-contain .wrapper {
-		height: 1.25em;
-		overflow: hidden;
-		word-wrap: break-word;
-
-		ul {
-			display: block;
-			width: 100%;
-		}
-	}
-
-	.highlight-menu {
-		font-size: $font__size-xs;
-
-		a {
-			display: inline-block;
-		}
-
-		li,
-		.menu-label {
-			margin-right: #{ 0.5 * $size__spacing-unit };
-		}
-
-		.menu-label {
-			color: $color__primary;
-			display: inline-block;
-		}
 	}
 }
 
