@@ -18,7 +18,7 @@ if ( $has_responses ) {
 	), $discussion->responses );
 
 } else {
-	$meta_label = apply_filters( 'newspack_no_comments', __( 'No comments', 'newspack' ) );
+	$meta_label = esc_html( apply_filters( 'newspack_no_comments', __( 'No comments', 'newspack' ) ) );
 }
 ?>
 

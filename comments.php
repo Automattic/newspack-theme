@@ -28,9 +28,9 @@ $discussion = newspack_get_discussion_data();
 		<?php
 		if ( comments_open() ) {
 			if ( have_comments() ) {
-				echo apply_filters( 'newspack_comment_section_title_nocomments', __( 'Join the Conversation', 'newspack' ) );
+				echo esc_html( apply_filters( 'newspack_comment_section_title_nocomments', __( 'Join the Conversation', 'newspack' ) ) );
 			} else {
-				echo apply_filters( 'newspack_comment_section_title', __( 'Leave a comment', 'newspack' ) );
+				echo esc_html( apply_filters( 'newspack_comment_section_title', __( 'Leave a comment', 'newspack' ) ) );
 			}
 		} else {
 			if ( '1' == $discussion->responses ) {
@@ -101,9 +101,9 @@ $discussion = newspack_get_discussion_data();
 			$leave_comment_text = apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) );
 			?>
 			<div class="comment-form-flex">
-				<span class="screen-reader-text"><?php echo $leave_comment_text; ?></span>
+				<span class="screen-reader-text"><?php echo esc_html( $leave_comment_text ); ?></span>
 				<?php newspack_comment_form( 'asc' ); ?>
-				<h2 class="comments-title" aria-hidden="true"><?php echo $leave_comment_text; ?></h2>
+				<h2 class="comments-title" aria-hidden="true"><?php echo esc_html( $leave_comment_text ); ?></h2>
 			</div>
 			<?php
 		endif;
@@ -113,7 +113,7 @@ $discussion = newspack_get_discussion_data();
 			?>
 			<p class="no-comments">
 				<?php
-					echo apply_filters( 'newspack_comments_closed', __( 'Comments are closed.', 'newspack' ) );
+					echo esc_html( apply_filters( 'newspack_comments_closed', __( 'Comments are closed.', 'newspack' ) ) );
 				?>
 			</p>
 			<?php
