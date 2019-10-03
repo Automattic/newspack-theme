@@ -11,11 +11,11 @@ $has_responses = $discussion->responses > 0;
 
 if ( $has_responses ) {
 	/* translators: %1(X comments)$s */
-	$meta_label = sprintf( _n(
+	$meta_label = apply_filters( 'newspack_number_comments', sprintf( _n(
 		'%d Comment',
 		'%d Comments',
 		$discussion->responses, 'newspack'
-	), $discussion->responses );
+	), $discussion->responses ) );
 
 } else {
 	$meta_label = esc_html( apply_filters( 'newspack_no_comments', __( 'No comments', 'newspack' ) ) );
