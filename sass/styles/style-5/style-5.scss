@@ -175,6 +175,12 @@ input[type="submit"] {
 	}
 }
 
+.featured-image-beside {
+	.entry-header .entry-meta .byline:after {
+		display: none;
+	}
+}
+
 .entry-meta .byline {
 	a,
 	a:visited {
