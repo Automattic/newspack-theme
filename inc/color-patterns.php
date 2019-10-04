@@ -278,6 +278,7 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'style-3' ) ) {
 		$theme_css .= '
+			.cat-links,
 			.cat-links a,
 			.article-section-title,
 			.entry .entry-footer,
