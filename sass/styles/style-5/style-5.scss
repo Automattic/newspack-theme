@@ -73,25 +73,22 @@ input[type="submit"] {
 
 .article-section-title,
 .widget-title.accent-header {
-	overflow: hidden;
-
 	&:before {
 		display: none;
 	}
 
 	span {
-		display: block;
-		position: relative;
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
 
 		&:after {
 			background-color: currentColor;
 			content: "";
-			display: inline-block;
+			flex: 1 0 0.25rem;
 			height: 1px;
 			margin: 0 0 0 0.25rem;
-			position: absolute;
-			width: 100%;
-			top: 50%;
 		}
 	}
 }
@@ -103,8 +100,10 @@ input[type="submit"] {
 }
 
 .single .cat-links {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
 	font-size: $font__size_base;
-	overflow: hidden;
 	position: relative;
 
 	&:before {
@@ -112,13 +111,11 @@ input[type="submit"] {
 	}
 
 	&:after {
-		border-top: 1px solid;
-		content:"";
-    display: inline-block;
-    margin-left: #{ 0.25 * $size__spacing-unit };
-    margin-right: -100%;
-		vertical-align: middle;
-    width: 100%;
+		background-color: currentColor;
+		content: "";
+		flex: 1 0 0.25rem;
+		height: 1px;
+		margin: 0 0 0 0.25rem;
 	}
 }
 
