@@ -1,0 +1,46 @@
+.highlight-menu-contain {
+	margin-top: #{ 0.25 * $size__spacing-unit };
+	.wrapper {
+		font-family: $font__heading;
+		font-size: $font__size-xs;
+		height: 1.5em;
+		overflow: hidden;
+		word-wrap: break-word;
+	}
+}
+
+.highlight-menu {
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		display: block;
+		width: 100%;
+	}
+
+	li {
+		display: inline-block;
+		height: 1.5em;
+		margin-right: #{ 0.5 * $size__spacing-unit };
+	}
+
+	.menu-label {
+		color: $color__background-body;
+		font-weight: bold;
+	}
+}
+
+.header-center-logo .site-header .highlight-menu-contain .wrapper {
+	justify-content: center;
+	text-align: center;
+}
+
+.single-featured-image-beside,
+.single-featured-image-behind {
+	.highlight-menu-contain {
+		display: none;
+	}
+}

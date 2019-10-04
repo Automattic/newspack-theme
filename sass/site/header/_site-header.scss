@@ -157,7 +157,7 @@
  // Default Header
 
 .header-default-background {
-	.site-header {
+	.middle-header-contain {
 		border-bottom: 1px solid $color__border;
 
 		@include media(tablet) {
@@ -231,7 +231,6 @@
 
 .header-solid-background {
 	.site-header {
-		background-color: $color__primary;
 		padding-bottom: 0;
 	}
 
@@ -250,9 +249,13 @@
 		border-bottom: 1px solid darken( $color__primary, 10% );
 	}
 
-	.middle-header-contain .wrapper {
-		@include media( tablet ) {
-			padding: #{ 1.5 * $size__spacing-unit } 0 $size__spacing-unit;
+	.middle-header-contain {
+		background-color: $color__primary;
+
+		.wrapper {
+			@include media( tablet ) {
+				padding: #{ 1.5 * $size__spacing-unit } 0 $size__spacing-unit;
+			}
 		}
 	}
 
@@ -297,7 +300,7 @@
 		}
 	}
 
-	&.header-default-background .site-header {
+	&.header-default-background .middle-header-contain {
 		border-bottom: 1px solid $color__border;
 	}
 

@@ -178,6 +178,30 @@
 					?>
 				</div><!-- .wrapper -->
 			</div><!-- .bottom-header-contain -->
+		<?php
+		endif;
+
+		/**
+		 * Displays 'highlight' menu; created a function to reduce duplication.
+		 */
+		if ( has_nav_menu( 'highlight-menu' ) ) :
+		?>
+			<div class="highlight-menu-contain desktop-only">
+				<div class="wrapper">
+					<nav class="highlight-menu" aria-label="<?php esc_attr_e( 'Highlight Menu', 'newspack' ); ?>">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'highlight-menu',
+								'container'      => false,
+								'items_wrap'     => '<ul id="%1$s" class="%2$s"><li><span class="menu-label">' . esc_html( wp_get_nav_menu_name( 'highlight-menu' ) ) . '</span></li>%3$s</ul>',
+								'depth'          => 1,
+							)
+						);
+						?>
+					</nav>
+				</div><!-- .wrapper -->
+			</div><!-- .highlight-menu-contain -->
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
