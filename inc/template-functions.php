@@ -26,6 +26,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'newspack-front-page';
 	}
 
+	// Add a class to determine whether it has a sidebar.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
+
 	// Adds a class when in the Customizer.
 	if ( is_customize_preview() ) :
 		$classes[] = 'newspack-customizer';

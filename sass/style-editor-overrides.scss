@@ -19,6 +19,45 @@
 	}
 }
 
+/** === Default template + no sidebar === */
+
+.newspack-default-template:not(.newspack-static-front-page) {
+	.block-editor-block-list__layout {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1286px;
+	}
+
+	.edit-post-visual-editor .block-editor-block-list__block {
+		margin-left: 0;
+	}
+
+	&.no-sidebar {
+		.wp-block[data-align=right] .block-editor-block-list__block-edit,
+		.wp-block[data-type="core/image"][data-align="right"].wp-block .block-editor-block-list__block-edit{
+			@include media( tablet ) {
+				max-width: 40%;
+			}
+
+			@include media( desktop ) {
+				margin-right: -50%;
+			}
+		}
+
+		.wp-block-group.is-style-alignright {
+			@include media( tablet ) {
+				max-width: 40%;
+			}
+
+			@include media( desktop ) {
+				margin-right: calc( -50% + 34px );
+			}
+		}
+	}
+}
+
+
+
 /** === One Column Templates === */
 
 @include media(desktop) {
@@ -101,6 +140,7 @@ body.newspack-single-column-template {
 body.post-type-post {
 	.editor-post-title__block {
 		max-width: 1200px;
+
 		.editor-post-title__input {
 			font-size: $font__size-xl;
 
