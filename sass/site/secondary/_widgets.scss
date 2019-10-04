@@ -52,8 +52,8 @@
 
 .widget_recent_comments,
 .widget_recent_entries {
-	li {
-		margin-bottom: #{ 0.5 * $size__spacing-unit };
+	ul li {
+		margin-bottom: #{ 0.75 * $size__spacing-unit };
 	}
 }
 
@@ -66,9 +66,10 @@
 	}
 
 	.post-date {
-		color: $color__text-light;
+		color: inherit;
 		font-size: $font__size-sm;
 		display: block;
+		opacity: 0.8;
 	}
 }
 
