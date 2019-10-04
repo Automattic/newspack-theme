@@ -18,6 +18,12 @@
 		}
 	}
 
+	@if narrowdesktop == $res {
+		@media only screen and (min-width: $narrow_desktop_width) {
+			@content;
+		}
+	}
+
 	@if desktop == $res {
 		@media only screen and (min-width: $desktop_width) {
 			@content;

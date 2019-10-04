@@ -19,7 +19,7 @@
 	&:hover {
 		color: inherit
 	}
-	@include media(desktop) {
+	@include media(narrowdesktop) {
 		display: none;
 	}
 }

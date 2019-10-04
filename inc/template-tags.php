@@ -224,7 +224,7 @@ function newspack_primary_menu() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 1099px)" toolbar-target="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+	<nav toolbar="(min-width: 900px)" toolbar-target="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
 		<?php
 		wp_nav_menu(
 			array(
@@ -247,7 +247,7 @@ function newspack_secondary_menu() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 1099px)" toolbar-target="secondary-nav-contain" class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+	<nav toolbar="(min-width: 900px)" toolbar-target="secondary-nav-contain" class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
 		<?php
 		wp_nav_menu(
 			array(
@@ -271,7 +271,7 @@ function newspack_tertiary_menu() {
 		return;
 	}
 	?>
-		<nav toolbar="(min-width: 1099px)" toolbar-target="tertiary-nav-contain" class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+		<nav toolbar="(min-width: 900px)" toolbar-target="tertiary-nav-contain" class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
@@ -310,7 +310,7 @@ function newspack_social_menu_header() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 1099px)" toolbar-target="social-nav-contain" class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+	<nav toolbar="(min-width: 900px)" toolbar-target="social-nav-contain" class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
 		<?php newspack_social_menu_settings(); ?>
 	</nav><!-- .social-navigation -->
 <?php

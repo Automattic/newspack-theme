@@ -346,7 +346,7 @@
 .desktop-only {
 	display: none;
 
-	@include media( desktop ) {
+	@include media( narrowdesktop ) {
 		display: inherit;
 	}
 }
