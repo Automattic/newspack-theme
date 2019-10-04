@@ -343,11 +343,20 @@
 	justify-content: flex-start;
 }
 
+// Hide desktop menus at specific breakpoints.
+
 .desktop-only {
 	display: none;
+}
 
-	@include media( narrowdesktop ) {
+@include media( tablet ) {
+	.header-default-height .desktop-only {
 		display: inherit;
 	}
 }
 
+@include media( narrowdesktop ) {
+	.header-simplified .desktop-only {
+		display: inherit;
+	}
+}
