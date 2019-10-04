@@ -28,27 +28,6 @@ body {
 	}
 }
 
-/* Main Navigation */
-.site-header .main-navigation {
-	font-size: $font__size_base;
-
-	.main-menu {
-		.sub-menu {
-			background-color: $color__text-main;
-
-			> li > a:focus,
-			> li > a:hover {
-				background-color: $color__text-light;
-			}
-		}
-
-		.menu-item-has-children:not(.off-canvas):hover > .sub-menu,
-		.menu-item-has-children:not(.off-canvas):focus > .sub-menu {
-			margin-top: 1px;
-		}
-	}
-}
-
 /* Font Family */
 .entry-meta,
 .cat-links,
