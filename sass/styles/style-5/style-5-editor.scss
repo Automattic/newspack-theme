@@ -14,74 +14,29 @@
 .wp-block[data-type="core/pullquote"] {
 
 	.wp-block-pullquote {
-		border-width: 0;
-		padding-top: #{ 3 * $size__spacing-unit };
-		position: relative;
+		border: 0;
+		border-bottom: 2px solid;
+		border-top: 1px solid;
+		font-family: $font__heading;
+		font-style: normal;
+		font-weight: bold;
 
-		.block-library-pullquote__content {
-			position: relative;
-			z-index: 1;
+		p {
+			font-style: inherit;
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
+		}
+
+		&.is-style-solid-color {
+			border: 0;
 		}
 	}
 
 	blockquote {
 		border-color: inherit;
-		margin: #{ 2 * $size__spacing-unit } 0;
 		text-align: center;
-
-		&:before,
-		&:after {
-			border-top: 2px solid;
-			border-top-color: inherit;
-			content: "";
-			display: block;
-			position: absolute;
-			opacity: 0.8;
-			top: #{ 2 * $size__spacing-unit };
-		}
-
-		&:before {
-			left: 15%;
-			right: calc( 50% + 2em);
-		}
-
-		&:after {
-			left: calc( 50% + 2em);
-			right: 15%;
-		}
-	}
-
-	.wp-block-pullquote.is-style-solid-color {
-		blockquote:before,
-		blockquote:after {
-			border-top-color: currentColor;
-		}
-	}
-
-	.block-library-pullquote__content {
-		&:before {
-			color: $color__primary;
-			content: "\201C";
-			display: inline-block;
-			font-family: $font__heading;
-			font-size: calc( 1rem * 5 );
-			font-weight: normal;
-			left: calc( 50% - 0.25em );
-			line-height: 0.75;
-			position: absolute;
-			text-align: center;
-			top: #{ -3.5 * $size__spacing-unit };
-			width: 0.5em;
-			z-index: 1;
-
-			@include media( tablet ) {
-				font-size: calc( 1rem * 7 );
-			}
-		}
-	}
-
-	.wp-block-pullquote.is-style-solid-color .block-library-pullquote__content:before {
-		color: inherit;
 	}
 
 	blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
@@ -97,52 +52,9 @@
 	}
 
 	.wp-block-pullquote__citation {
-		font-size: $font__size-sm;
+		font-family: $font__body;
+		font-size: $font__size-base;
 		font-weight: normal;
-	}
-
-	&[data-align="left"] .wp-block-pullquote,
-	&[data-align="right"] .wp-block-pullquote {
-		border-width: 0;
-
-		blockquote {
-			padding-top: #{ 3.5 * $size__spacing-unit };
-			text-align: left;
-
-			&:before {
-				left: 2em;
-				right: 0;
-			}
-
-			&:after {
-				display: none;
-			}
-		}
-
-		.block-library-pullquote__content {
-			&:before {
-				font-size: calc( 1rem * 5 );
-				left: 0;
-				text-align: left;
-				top: #{ -2.5 * $size__spacing-unit };
-				width: 0.5em;
-			}
-		}
-
-		&.is-style-solid-color blockquote {
-			padding-top: #{ 0.25 * $size__spacing-unit };
-
-			&:before {
-				left: #{ 4 * $size__spacing-unit };
-				right: #{ 2 * $size__spacing-unit };
-			}
-		}
-
-		blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
-		blockquote > .editor-rich-text p,
-		p {
-			font-size: $font__size-md;
-		}
 	}
 }
 

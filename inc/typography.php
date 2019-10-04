@@ -144,6 +144,14 @@ function newspack_custom_typography_css() {
 			";
 		}
 
+		if ( newspack_is_active_style_pack( 'style-5' ) ) {
+			$css_blocks .= "
+			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
+			.entry .entry-content .wp-block-pullquote {
+				font-family: $font_header;
+			}";
+		}
+
 		$editor_css_blocks .= "
 		.editor-block-list__layout .editor-block-list__block h1,
 		.editor-block-list__layout .editor-block-list__block h2,
@@ -246,6 +254,14 @@ function newspack_custom_typography_css() {
 				font-family: $font_header;
 			}";
 		}
+
+		if ( newspack_is_active_style_pack( 'style-5' ) ) {
+			$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p {
+				font-family: $font_header;
+			}";
+		}
 	}
 
 	if ( get_theme_mod( 'font_body', '' ) ) {
@@ -266,6 +282,13 @@ function newspack_custom_typography_css() {
 		}
 		";
 
+		if ( newspack_is_active_style_pack( 'style-5' ) ) {
+			$css_blocks .= "
+			.entry .entry-content .wp-block-pullquote cite {
+				font-family: $font_body;
+			}";
+		}
+
 		$editor_css_blocks .= "
 			.editor-block-list__layout .editor-block-list__block,
 			.editor-default-block-appender .editor-default-block-appender__content
@@ -273,6 +296,13 @@ function newspack_custom_typography_css() {
 				font-family: $font_body;
 			}
 		";
+
+		if ( newspack_is_active_style_pack( 'style-5' ) ) {
+			$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation {
+				font-family: $font_body;
+			}";
+		}
 	}
 
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
