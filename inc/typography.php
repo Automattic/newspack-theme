@@ -149,6 +149,26 @@ function newspack_custom_typography_css() {
 			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
 			.entry .entry-content .wp-block-pullquote {
 				font-family: $font_header;
+			}
+			.entry-meta,
+			.cat-links,
+			.entry-footer,
+			.main-navigation,
+			.secondary-menu,
+			.tertiary-menu,
+			.site-description,
+			.site-info,
+			#cancel-comment-reply-link,
+			#mobile-sidebar,
+			.widget,
+			.widget-title.accent-header,
+			.entry .entry-content .wp-block-button .wp-block-button__link,
+			.entry .article-section-title,
+			button,
+			input[type=\"button\"],
+			input[type=\"reset\"],
+			input[type=\"submit\"] {
+				font-family: inherit;
 			}";
 		}
 
