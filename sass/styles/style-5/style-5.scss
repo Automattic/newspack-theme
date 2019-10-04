@@ -215,6 +215,18 @@ textarea {
 		font-weight: bold;
 	}
 
+	.wp-block-separator,
+	hr {
+		background: transparent !important;
+		border-color: currentColor;
+		border-top-style: double;
+		border-top-width: 3px;
+
+		&.is-style-dots:before {
+			color: currentColor;
+		}
+	}
+
 	.wp-block-pullquote {
 		background-color: transparent;
 		border: 0;

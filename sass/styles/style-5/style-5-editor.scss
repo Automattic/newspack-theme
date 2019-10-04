@@ -15,11 +15,25 @@
 	&.is-style-borders {
 		[data-type="core/column"] {
 			border-color: currentColor;
-			
+
 			&:after {
 				border-color: currentColor;
 			}
 		}
+	}
+}
+
+/* Separator */
+.wp-block-separator {
+	&:not(.is-style-dots) {
+		background: transparent !important;
+		border-color: currentColor;
+		border-top-style: double;
+		border-top-width: 3px;
+	}
+
+	&.is-style-dots:before {
+		color: currentColor;
 	}
 }
 
