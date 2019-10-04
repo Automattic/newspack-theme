@@ -28,6 +28,18 @@ body {
 	}
 }
 
+.header-solid-background {
+	.site-header,
+	.bottom-header-contain,
+	.top-header-contain {
+		background-color: $color__text-main;
+	}
+
+	.top-header-contain {
+		border-bottom-color: $color__background-body;
+	}
+}
+
 /* Font Family */
 .entry-meta,
 .cat-links,
