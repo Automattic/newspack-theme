@@ -19,7 +19,16 @@
 	&:hover {
 		color: inherit
 	}
-	@include media(tablet) {
+}
+
+@include media( tablet ) {
+	.header-default-height .site-header .mobile-menu-toggle {
+		display: none;
+	}
+}
+
+@include media( narrowdesktop ) {
+	.header-simplified .site-header .mobile-menu-toggle {
 		display: none;
 	}
 }
