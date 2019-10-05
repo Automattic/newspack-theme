@@ -1126,7 +1126,8 @@
 	}
 }
 
-.post-template-default.singular.no-sidebar {
+.post-template-default.singular.no-sidebar,
+.page-template-default.singular.no-sidebar {
 	.entry .entry-content > * {
 		&.alignright,
 		&.wp-block-image .alignright,
