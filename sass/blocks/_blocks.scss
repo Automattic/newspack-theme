@@ -1,7 +1,6 @@
 /* !Block styles */
 
-.entry .entry-content > *,
-.entry .entry-summary > * {
+.entry-content > * {
 	margin: 32px 0;
 	max-width: 100%;
 
@@ -46,7 +45,7 @@
 .newspack-front-page,
 .post-template-single-wide,
 .page-template-single-wide {
-	.entry .entry-content {
+	.entry-content {
 		.alignwide {
 			@include media(tablet) {
 				margin-left: calc(25% - 25vw);
@@ -87,9 +86,7 @@
  * - Prevents layout styles from cascading too deeply
  * - helps with plugin compatibility
  */
-.entry .entry-content,
-.entry .entry-summary {
-
+.entry-content {
 	.entry-content,
 	.entry-summary,
 	.entry {
@@ -105,7 +102,7 @@
 	}
 }
 
-.entry .entry-content {
+.entry-content {
 
 	//! Paragraphs
 	p.has-background {
@@ -922,8 +919,7 @@
 
 //! 'Feature' alignments
 .post-template-single-feature {
-	.entry .entry-content > *,
-	.entry .entry-summary > * {
+	.entry-content > * {
 		&.alignwide {
 			@include media( tablet ) {
 				margin-left: calc(25% - 25vw);
@@ -1016,8 +1012,8 @@
 	}
 
 	//! Group & Cover Block
-	.entry .entry-content > .wp-block-cover,
-	.entry .entry-content > .wp-block-group {
+	.entry-content > .wp-block-cover,
+	.entry-content > .wp-block-group {
 		&.alignfull,
 		&.alignwide {
 			> div > .alignwide {
