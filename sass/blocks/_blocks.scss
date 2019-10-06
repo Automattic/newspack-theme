@@ -520,16 +520,16 @@
 	.wp-block-cover {
 		position: relative;
 		min-height: 430px;
-		padding: $size__spacing-unit;
+		padding: $size__spacing-unit #{ 1.5 * $size__spacing-unit };
+
+		.wp-block-cover__inner-container {
+			width: 100%;
+		}
 
 		h2 {
 			max-width: 100%;
 			padding-left: 0;
 			text-align: left;
-		}
-
-		@include media(tablet) {
-			padding: $size__spacing-unit 10%;
 		}
 
 		a,
@@ -562,8 +562,6 @@
 			}
 
 			.wp-block-cover__inner-container {
-				width: 100%;
-
 				[class*="wp-block-"]:first-child {
 					margin-top: 0;
 				}
@@ -997,7 +995,7 @@
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
-				@include postContentMaxWidth();
+				width: 100%;
 			}
 
 			@include media(tablet) {
