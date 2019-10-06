@@ -108,7 +108,9 @@ body.newspack-single-column-template {
 			padding: 0 $size__spacing-unit;
 		}
 	}
+}
 
+body.newspack-single-column-template {
 	.wp-block[data-align="left"],
 	.wp-block-group.is-style-alignleft {
 		@include media( desktop ) {
