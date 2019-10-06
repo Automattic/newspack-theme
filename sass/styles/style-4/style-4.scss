@@ -122,7 +122,7 @@ figcaption,
 	}
 }
 
-.entry .entry-content {
+.entry-content {
 	.has-drop-cap:not(:focus)::first-letter {
 		background-color: $color__primary;
 		color: #fff;
@@ -254,7 +254,7 @@ figcaption,
 	}
 }
 
-.entry .entry-footer {
+.entry-footer {
 	color: $color__primary;
 	text-align: center;
 

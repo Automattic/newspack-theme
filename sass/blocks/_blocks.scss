@@ -752,6 +752,10 @@
 		.wp-block-group__inner-container > *:last-child {
 			margin-bottom: 0;
 		}
+
+		&.has-background {
+			margin: 32px 0;
+		}
 	}
 
 

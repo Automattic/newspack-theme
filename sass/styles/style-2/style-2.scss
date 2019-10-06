@@ -254,9 +254,9 @@ h4,
 	}
 }
 
-.entry .entry-footer,
-.entry .entry-footer a,
-.entry .entry-footer a:hover {
+.entry-footer,
+.entry-footer a,
+.entry-footer a:hover {
 	color: $color__text-main;
 }
 
@@ -286,7 +286,7 @@ blockquote {
 	}
 }
 
-.entry .entry-content {
+.entry-content {
 
 	.wp-block-newspack-blocks-homepage-articles {
 		 article .entry-meta {

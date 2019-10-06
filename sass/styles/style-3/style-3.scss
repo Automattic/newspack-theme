@@ -102,7 +102,7 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
-.entry .entry-content {
+.entry-content {
 	.has-drop-cap:not(:focus)::first-letter {
 		font-family: $font__heading;
 		font-weight: bold;
@@ -118,7 +118,7 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .entry-meta,
-.entry .wp-block-newspack-blocks-homepage-articles article .entry-meta {
+.wp-block-newspack-blocks-homepage-articles article .entry-meta {
 	font-size: $font__size-xs;
 }
 
@@ -127,12 +127,12 @@ Newspack Theme Styles - Style Pack 3
 	border-bottom: 1px dotted $color__text-main;
 }
 
-.entry .entry-footer {
+.entry-footer {
 	color: $color__primary;
 }
 
-.entry .entry-footer a,
-.entry .entry-footer a:hover {
+.entry-footer a,
+.entry-footer a:hover {
 	color: $color__text-main;
 }
 
@@ -183,7 +183,7 @@ figcaption,
 	display: none;
 }
 
-.entry .entry-content {
+.entry-content {
 	.wp-block-newspack-blocks-homepage-articles {
 		.show-image:not(.image-alignleft):not(.image-alignright):not(.show-caption) .post-has-image .entry-title {
 			background-color: $color__background-body;
