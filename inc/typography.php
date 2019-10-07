@@ -277,6 +277,7 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
 			$editor_css_blocks .= "
+			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p {
 				font-family: $font_header;
