@@ -72,6 +72,7 @@ input[type="submit"] {
 	margin-bottom: $size__spacing-unit;
 }
 
+.accent-header,
 .article-section-title,
 .widget-title.accent-header {
 	&:before {
@@ -100,6 +101,7 @@ input[type="submit"] {
 	}
 }
 
+.accent-header:not(.widget-title),
 .single .cat-links {
 	align-items: center;
 	display: flex;

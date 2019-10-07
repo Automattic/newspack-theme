@@ -283,7 +283,8 @@ function newspack_custom_typography_css() {
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p {
 				font-family: $font_header;
 			}
-			.editor-block-list__layout .editor-block-list__block .article-section-title {
+			.editor-block-list__layout .editor-block-list__block .article-section-title,
+			.editor-block-list__layout .editor-block-list__block .accent-header {
 				font-family: inherit;
 			}";
 		}

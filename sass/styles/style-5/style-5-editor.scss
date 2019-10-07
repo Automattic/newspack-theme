@@ -85,7 +85,6 @@
 }
 
 /* Newspack Homepage Articles */
-.accent-header,
 .article-section-title {
 	font-family: $font__body;
 	font-size: $font__size-base;
@@ -100,6 +99,24 @@
 		position: absolute;
 		width: 100%;
 		top: 50%;
+	}
+}
+
+.accent-header {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $font__body;
+	font-size: $font__size_base;
+	margin-bottom: $size__spacing-unit;
+	position: relative;
+
+	&:after {
+		background-color: currentColor;
+		content: "";
+		flex: 1 0 0.25rem;
+		height: 1px;
+		margin: 0 0 0 0.25rem;
 	}
 }
 
