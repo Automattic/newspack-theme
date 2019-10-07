@@ -16,11 +16,6 @@
 	& > * {
 		margin-top: calc(2 * #{$size__spacing-unit});
 		margin-bottom: calc(2 * #{$size__spacing-unit});
-
-		@include media(tablet) {
-			margin-top: calc(3 * #{$size__spacing-unit});
-			margin-bottom: calc(3 * #{$size__spacing-unit});
-		}
 	}
 
 	/* Add extra margin when the comments section is located immediately after the
@@ -54,6 +49,12 @@
 			}
 		}
 	}
+
+	// Hide Jetpack comments' title.
+	.comments-title-wrap + .comment-respond .comment-reply-title {
+		display: none;
+	}
+
 }
 
 #comment {
