@@ -1,7 +1,6 @@
 /* !Block styles */
 
-.entry .entry-content > *,
-.entry .entry-summary > * {
+.entry .entry-content > * {
 	margin: 32px 0;
 	max-width: 100%;
 
@@ -91,8 +90,7 @@
  * - Prevents layout styles from cascading too deeply
  * - helps with plugin compatibility
  */
-.entry .entry-content,
-.entry .entry-summary {
+.entry .entry-content {
 
 	.entry-content,
 	.entry-summary,
@@ -926,8 +924,7 @@
 
 //! 'Feature' alignments
 .post-template-single-feature {
-	.entry .entry-content > *,
-	.entry .entry-summary > * {
+	.entry .entry-content > * {
 		&.alignwide {
 			@include media( tablet ) {
 				margin-left: calc(25% - 25vw);
