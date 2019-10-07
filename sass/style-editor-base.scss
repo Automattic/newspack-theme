@@ -518,6 +518,10 @@ figcaption,
 
 .wp-block[data-type="core/group"][data-align="left"] > .block-editor-block-list__block-edit,
 .wp-block[data-type="core/group"][data-align="right"] > .block-editor-block-list__block-edit {
+	.block-editor-block-list__block-edit {
+		margin-left: inherit;
+		margin-right: inherit;
+	}
 	@include media( mobile ) {
 		max-width: 390px;
 		width: 50%;
