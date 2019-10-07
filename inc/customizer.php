@@ -229,6 +229,35 @@ function newspack_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	/**
+	 * Author Bio options
+	 */
+	$wp_customize->add_section(
+		'author_bio_options',
+		array(
+			'title' => esc_html__( 'Author Bio Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to hide the whole author bio.
+	$wp_customize->add_setting(
+		'show_author_bio',
+		array(
+			'default'           => true,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_author_bio',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display Author Bio', 'newspack' ),
+			'description' => esc_html__( 'Display Author Bio under individual posts.', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 

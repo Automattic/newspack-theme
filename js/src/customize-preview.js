@@ -28,4 +28,15 @@
 			}
 		});
 	});
+
+	// Hide Author Bio
+	wp.customize( 'show_author_bio', function( value ) {
+		value.bind( function( to ) {
+			if ( false === to ) {
+				$( 'body' ).addClass( 'hide-author-bio' );
+			} else {
+				$( 'body' ).removeClass( 'hide-author-bio' );
+			}
+		});
+	});
 })( jQuery );
