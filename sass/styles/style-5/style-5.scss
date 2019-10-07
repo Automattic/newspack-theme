@@ -53,6 +53,7 @@ body {
 #mobile-sidebar,
 .widget,
 .widget-title.accent-header,
+.accent-header,
 .entry .entry-content .wp-block-button .wp-block-button__link,
 .entry .article-section-title,
 button,
@@ -208,7 +209,7 @@ input[type="submit"] {
 /* Author Bio */
 .author-bio .accent-header {
 	color: $color__text-main;
-	font-size: $font__size-md;
+	font-size: $font__size_base;
 	margin: 0 0 #{ 0.25 * $size__spacing-unit };
 
 	span {

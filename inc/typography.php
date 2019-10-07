@@ -162,6 +162,7 @@ function newspack_custom_typography_css() {
 			#mobile-sidebar,
 			.widget,
 			.widget-title.accent-header,
+			.accent-header,
 			.entry .entry-content .wp-block-button .wp-block-button__link,
 			.entry .article-section-title,
 			button,
@@ -281,6 +282,9 @@ function newspack_custom_typography_css() {
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p {
 				font-family: $font_header;
+			}
+			.editor-block-list__layout .editor-block-list__block .article-section-title {
+				font-family: inherit;
 			}";
 		}
 	}
