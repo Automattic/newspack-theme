@@ -313,6 +313,7 @@ figcaption,
 .wp-block[data-type="core/image"][data-align="right"].wp-block .block-editor-block-list__block-edit {
 	max-width: 50%;
 
+
 	.wp-block-image {
 		table-layout: fixed;
 		max-width: 100%;
@@ -510,6 +511,16 @@ figcaption,
 	.wp-block-pullquote {
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;
+	}
+}
+
+/** === Group === */
+
+.wp-block[data-type="core/group"][data-align="left"] > .block-editor-block-list__block-edit,
+.wp-block[data-type="core/group"][data-align="right"] > .block-editor-block-list__block-edit {
+	@include media( mobile ) {
+		max-width: 390px;
+		width: 50%;
 	}
 }
 
