@@ -122,16 +122,17 @@ figcaption,
 	}
 }
 
-.entry .entry-content {
-	.has-drop-cap:not(:focus)::first-letter {
-		background-color: $color__primary;
-		color: #fff;
-		font-family: $font__heading;
-		font-weight: bold;
-		font-size: $font__size-xxl;
-		padding: 0.4em;
-	}
+//! Paragraph
+.has-drop-cap:not(:focus)::first-letter {
+	background-color: $color__primary;
+	color: #fff;
+	font-family: $font__heading;
+	font-weight: bold;
+	font-size: $font__size-xxl;
+	padding: 0.4em;
+}
 
+.entry .entry-content {
 	blockquote,
 	cite {
 		font-family: $font__heading;
