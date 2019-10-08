@@ -279,7 +279,7 @@ function newspack_custom_colors_css() {
 				color: ' . $primary_color_contrast . ';
 			}
 
-			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+			.has-drop-cap:not(:focus)::first-letter {
 				border-color: ' . $primary_color . ';
 			}
 		';
@@ -324,7 +324,7 @@ function newspack_custom_colors_css() {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 
-			.entry .entry-content .has-drop-cap:not(:focus)::first-letter {
+			.has-drop-cap:not(:focus)::first-letter {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}

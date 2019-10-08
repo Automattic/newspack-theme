@@ -106,6 +106,14 @@
 	}
 }
 
+//! Paragraphs
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: 4em;
+	line-height: 0.75;
+	margin: 0.125em #{ 0.75 * $size__spacing-unit } 0 0;
+	position: relative;
+}
+
 .entry .entry-content {
 
 	//! Paragraphs
@@ -307,16 +315,6 @@
 		font-family: $font__body;
 		font-size: $font__size_base;
 		line-height: 1.8;
-	}
-
-	//! Paragraphs
-	.has-drop-cap {
-		&:not(:focus)::first-letter {
-			font-size: 4em;
-			line-height: 0.75;
-			margin: 0.125em #{ 0.75 * $size__spacing-unit } 0 0;
-			position: relative;
-		}
 	}
 
 	//! Pullquote

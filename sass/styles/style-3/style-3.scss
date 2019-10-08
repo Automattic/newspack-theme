@@ -102,11 +102,10 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
-.entry .entry-content {
-	.has-drop-cap:not(:focus)::first-letter {
-		font-family: $font__heading;
-		font-weight: bold;
-	}
+//! Paragraph
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: $font__heading;
+	font-weight: bold;
 }
 
 // Posts & Pages
