@@ -36,7 +36,7 @@ Newspack Theme Editor Styles - Style Pack 3
 }
 
 .wp-block-newspack-blocks-homepage-articles {
-	&.show-image:not(.image-alignleft):not(.image-alignright):not(.show-caption) .post-has-image .entry-title {
+	&.show-image:not(.image-alignleft):not(.image-alignright):not(.show-caption):not(.image-alignbehind) .post-has-image .entry-title {
 		background-color: $color__background-body;
 		margin-top: -1.75em;
 		padding: 0.5em 0.25em 0 0;
