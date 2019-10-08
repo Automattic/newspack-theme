@@ -279,6 +279,7 @@ blockquote {
 	font-weight: 800;
 }
 
+
 //! Newspack Article Block
 .wpnbha {
 	 article .entry-meta {
@@ -291,6 +292,57 @@ blockquote {
 	&.type-scale4 {
 		article .entry-meta {
 			font-size: #{ 0.6 * $font__size_base };
+		}
+	}
+}
+
+//! Pullquote
+.wp-block-pullquote {
+	border-width: 16px 0 4px;
+
+	blockquote {
+		margin: #{ 2 * $size__spacing-unit } 0;
+
+		p {
+			font-size: $font__size-lg;
+			font-style: normal;
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
+		}
+	}
+
+	cite {
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		opacity: 0.9;
+	}
+
+	&.alignleft,
+	&.alignright {
+		border-width: 0;
+		position: relative;
+		margin-top: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
+
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-lg;
+			}
+		}
+
+		&:before {
+			border-color: inherit;
+			border-width: 10px 0 0;
+			border-style: solid;
+			content: "";
+			display: block;
+			width: 75%;
+		}
+
+		&.is-solid-color:before {
+			display: none;
 		}
 	}
 }

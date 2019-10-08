@@ -131,6 +131,7 @@ figcaption,
 	}
 }
 
+
 //! Paragraph
 .has-drop-cap:not(:focus)::first-letter {
 	background-color: $color__primary;
@@ -139,6 +140,38 @@ figcaption,
 	font-weight: bold;
 	font-size: $font__size-xxl;
 	padding: 0.4em;
+}
+
+//! Pullquote
+
+.wp-block-pullquote {
+	border-width: 2px 0;
+
+	blockquote {
+		p {
+			font-size: $font__size-lg;
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
+		}
+	}
+
+	cite {
+		font-style: italic;
+	}
+
+	&.alignleft,
+	&.alignright {
+		margin-top: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
+
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-lg;
+			}
+		}
+	}
 }
 
 .entry .entry-content {
@@ -151,36 +184,6 @@ figcaption,
 		em,
 		i {
 			font-style: normal;
-		}
-	}
-
-	.wp-block-pullquote {
-		border-width: 2px 0;
-
-		blockquote {
-			p {
-				font-size: $font__size-lg;
-
-				@include media( tablet ) {
-					font-size: $font__size-xl;
-				}
-			}
-		}
-
-		cite {
-			font-style: italic;
-		}
-
-		&.alignleft,
-		&.alignright {
-			margin-top: #{ 1.5 * $size__spacing-unit };
-			margin-bottom: #{ 1.5 * $size__spacing-unit };
-
-			@include media( tablet ) {
-				p {
-					font-size: $font__size-lg;
-				}
-			}
 		}
 	}
 }
