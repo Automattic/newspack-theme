@@ -150,6 +150,7 @@ function newspack_custom_typography_css() {
 			.entry .entry-content .wp-block-pullquote {
 				font-family: $font_header;
 			}
+			figcaption,
 			.entry-meta,
 			.cat-links,
 			.entry-footer,
