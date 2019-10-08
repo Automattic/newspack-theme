@@ -74,6 +74,9 @@ function newspack_custom_typography_css() {
 		/* _menu-top-navigation.scss */
 		.secondary-menu,
 
+		/* _menu-highlight-navigation.scss */
+		.highlight-menu-contain .wrapper,
+
 		/* _next_previous.scss */
 		.comment-navigation .nav-previous,
 		.comment-navigation .nav-next,
