@@ -146,7 +146,7 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
 			$css_blocks .= "
-			.entry .entry-content .has-drop-cap:not(:focus)::first-letter,
+			.has-drop-cap:not(:focus)::first-letter,
 			.entry .entry-content .wp-block-pullquote {
 				font-family: $font_header;
 			}
