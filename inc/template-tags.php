@@ -158,18 +158,30 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			?>
 
 			<figure class="post-thumbnail">
-				<?php the_post_thumbnail( 'newspack-featured-image' ); ?>
+				<?php
+				$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
+
+				// If using the behind or beside image styles, add the object-fit argument for AMP.
+				if ( 'behind' === $current_featured_image_style || 'beside' === $current_featured_image_style ) {
+					the_post_thumbnail(
+						'newspack-featured-image',
+						array(
+							'object-fit' => 'cover',
+						)
+					);
+				} else {
+					the_post_thumbnail( 'newspack-featured-image' );
+				}
+				?>
 			</figure><!-- .post-thumbnail -->
 
-			<?php
-		else :
-			?>
+		<?php else : ?>
 
-		<figure class="post-thumbnail">
-			<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php the_post_thumbnail( 'newspack-archive-image' ); ?>
-			</a>
-		</figure>
+			<figure class="post-thumbnail">
+				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+					<?php the_post_thumbnail( 'newspack-archive-image' ); ?>
+				</a>
+			</figure>
 
 			<?php
 		endif; // End is_singular().
