@@ -31,6 +31,7 @@ body {
 .header-solid-background {
 	.site-header,
 	.bottom-header-contain,
+	.middle-header-contain,
 	.top-header-contain {
 		background-color: $color__text-main;
 	}
@@ -120,6 +121,24 @@ input[type="submit"] {
 		flex: 1 0 0.25rem;
 		height: 1px;
 		margin: 0 0 0 0.25rem;
+	}
+}
+
+/* Navigation */
+.mobile-sidebar {
+	background: $color__text-main;
+}
+
+.site-header {
+	.main-navigation {
+		.main-menu {
+			.sub-menu {
+				a:hover,
+				a:focus {
+					background: $color__text-main;
+				}
+			}
+		}
 	}
 }
 
