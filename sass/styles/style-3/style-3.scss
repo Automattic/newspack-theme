@@ -298,27 +298,13 @@ figcaption,
 
 	.wp-block-columns.is-style-borders {
 		.wp-block-column {
-			border-bottom: 1px dotted $color__text-main;
-
-			&:last-child {
-				border-bottom: 0;
-			}
+			border-bottom-style: dotted;
+			border-bottom-color: $color__text-main;
 
 			@include media( mobile ) {
-				border-bottom: 0;
-
 				&:after {
-					border-right: 1px dotted transparent;
-				}
-
-				&:nth-child(odd):after {
-					border-color: $color__text-main;
-				}
-			}
-
-			@include media( tablet ) {
-				&:after {
-					border-color: $color__text-main;
+					border-right-style: dotted;
+					border-right-color: $color__text-main;
 				}
 			}
 		}
