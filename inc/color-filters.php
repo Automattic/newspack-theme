@@ -8,7 +8,7 @@
 /**
  * Define default color filters.
  */
-define( 'NEWSPACK_DEFAULT_PRIMARY', '#2A7DE1' ); // Hex
+define( 'NEWSPACK_DEFAULT_PRIMARY', '#3366ff' ); // Hex
 define( 'NEWSPACK_DEFAULT_SECONDARY', '#666666' ); // Hex
 
 /**
@@ -64,5 +64,3 @@ function newspack_has_custom_primary_color() {
 function newspack_has_custom_secondary_color() {
 	return newspack_get_secondary_color() !== NEWSPACK_DEFAULT_SECONDARY;
 }
-
-
