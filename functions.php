@@ -152,8 +152,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
-		$primary_color   = newspack_get_primary_color();
-		$secondary_color = newspack_get_secondary_color();
+		$primary_color           = newspack_get_primary_color();
+		$primary_color_variation = newspack_get_primary_color_variation();
+		$secondary_color         = newspack_get_secondary_color();
 
 		// Editor color palette.
 		add_theme_support(
@@ -170,7 +171,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 					'name'  => __( 'Primary Variation', 'newspack' ),
 					'slug'  => 'primary-variation',
 					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						newspack_adjust_brightness( $primary_color, -40 ) :
+						$primary_color_variation :
 						newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
 				),
 				array(
