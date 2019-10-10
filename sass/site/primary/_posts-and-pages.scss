@@ -154,6 +154,11 @@ body.page {
 			display: block;
 		}
 	}
+
+	figcaption {
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
 .entry-content {
@@ -472,6 +477,13 @@ body.page {
 .featured-image-beside > .wrapper {
 	max-width: 100%;
 	width: 100%;
+}
+
+.featured-image-behind + figcaption,
+.featured-image-beside + figcaption {
+	margin: #{ 0.25 * $size__spacing-unit } auto 0;
+	width: 1200px;
+	max-width: 100%;
 }
 
 @include media( tablet ) {
