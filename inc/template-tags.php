@@ -154,25 +154,34 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ) :
-			?>
+		if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
+
 				<?php
 				$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 
 				// If using the behind or beside image styles, add the object-fit argument for AMP.
-				if ( 'behind' === $current_featured_image_style || 'beside' === $current_featured_image_style ) {
+				if ( 'behind' === $current_featured_image_style || 'beside' === $current_featured_image_style ) :
+
 					the_post_thumbnail(
 						'newspack-featured-image',
 						array(
 							'object-fit' => 'cover',
 						)
 					);
-				} else {
+
+				else :
 					the_post_thumbnail( 'newspack-featured-image' );
-				}
+					$caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+					if ( $caption ) :
+					?>
+						<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
+					<?php
+					endif;
+				endif;
 				?>
+
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>

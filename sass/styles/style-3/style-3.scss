@@ -116,6 +116,12 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
+.post-thumbnail figcaption:after,
+.featured-image-behind + figcaption:after,
+.featured-image-beside + figcaption:after {
+	display: none;
+}
+
 .entry-meta,
 .entry .wp-block-newspack-blocks-homepage-articles article .entry-meta {
 	font-size: $font__size-xs;
