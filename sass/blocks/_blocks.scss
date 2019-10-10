@@ -715,36 +715,25 @@
 			margin-bottom: 0;
 		}
 
-		@include media(tablet) {
-			.wp-block-column {
-				margin-bottom: 0;
-			}
+		@include media( mobile ) {
+			margin-left: -16px;
+			max-width: calc(100% + 32px);
+		}
 
-			&[class*='has-'] > * {
-				margin-right: $size__spacing-unit;
-
-				&:last-child {
-					margin-right: 0;
-				}
+		@include media( tablet ) {
+			&.is-style-borders {
+				margin-left: -24px;
+				max-width: calc(100% + 48px);
 			}
 		}
 
-		&.is-style-borders {
-			.wp-block-column {
-
-				@include media(tablet) {
-					flex-basis: calc(50% - 32px);
-
-					&:not(:first-child) {
-						margin-left: 64px;
-					}
-
-					&:after {
-						right: -32px;
-					}
-				}
+		@include media( desktop ) {
+			&.is-style-borders {
+				margin-left: -32px;
+				max-width: calc(100% + 64px);
 			}
 		}
+
 	}
 
 	//! Group
