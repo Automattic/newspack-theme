@@ -69,12 +69,15 @@
 
 		& + .wrapper {
 			border: 0;
-			padding: 0;
 		}
 
 		@include media( tablet ) {
 			display: flex;
 			justify-content: flex-start;
+
+			& + .wrapper {
+				padding: 0;
+			}
 
 			& > * {
 				margin-left: $size__spacing-unit;
