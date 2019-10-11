@@ -340,7 +340,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4' ) ) {
+	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4', 'style-5' ) ) {
 		$theme_css .= '
 			.header-solid-background .middle-header-contain {
 				background-color: ' . $primary_color . ';
