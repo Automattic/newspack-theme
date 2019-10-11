@@ -732,6 +732,10 @@
 		&.is-style-borders {
 			.wp-block-column {
 
+				&:not(:last-child) > *:last-child {
+					margin-bottom: 32px;
+				}
+
 				@include media(tablet) {
 					flex-basis: calc(50% - 32px);
 
@@ -741,6 +745,10 @@
 
 					&:after {
 						right: -32px;
+					}
+
+					&:not(:last-child) > *:last-child {
+						margin-bottom: 0;
 					}
 				}
 			}
