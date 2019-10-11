@@ -21,6 +21,24 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 
 		<div class="site-info">
+
+			<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
+				<div class="wrapper">
+					<nav class="footer-menu">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'footer-menu',
+									'container'      => false,
+									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'          => 1,
+								)
+							);
+						?>
+					</nav>
+				</div><!-- .wrapper -->
+			<?php endif; ?>
+
 			<div class="wrapper">
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
