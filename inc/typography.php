@@ -25,6 +25,7 @@ function newspack_custom_typography_css() {
 		.comments-title,
 		.comment-author .fn,
 		.discussion-meta-info,
+		.cat-links,
 		.entry-meta,
 		.entry-footer,
 		.main-navigation,
@@ -186,6 +187,7 @@ function newspack_custom_typography_css() {
 		.editor-block-list__layout .editor-block-list__block h6,
 		.editor-block-list__layout .editor-block-list__block figcaption,
 		.editor-block-list__layout .editor-block-list__block .gallery-caption,
+		.editor-block-list__layout .editor-block-list__block .cat-links,
 
 		/* Post Title */
 		.editor-styles-wrapper .editor-post-title .editor-post-title__block .editor-post-title__input,
@@ -339,7 +341,14 @@ function newspack_custom_typography_css() {
 		$css_blocks .= '
 			.tags-links span:first-child,
 			.page-title,
+			.cat-links,
 			.highlight-menu .menu-label {
+				text-transform: uppercase;
+			}
+		';
+
+		$editor_css_blocks .= '
+			.cat-links {
 				text-transform: uppercase;
 			}
 		';
@@ -347,8 +356,7 @@ function newspack_custom_typography_css() {
 		if ( newspack_is_active_style_pack( 'default', 'style-4', 'style-5' ) ) {
 			$css_blocks        .= '
 				.accent-header,
-				.article-section-title,
-				.cat-links a {
+				.article-section-title {
 					text-transform: uppercase;
 				}
 			';
@@ -364,7 +372,6 @@ function newspack_custom_typography_css() {
 			$css_blocks        .= '
 				.accent-header:not(.widget-title),
 				.article-section-title,
-				.cat-links,
 				.page-title,
 				#secondary .widget-title,
 				.author-bio .accent-header span,
@@ -389,7 +396,6 @@ function newspack_custom_typography_css() {
 				.mobile-menu-toggle,
 				.accent-header,
 				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
-				.cat-links,
 				.entry-meta .byline a,
 				.tags-links a,
 				.post-edit-link,
@@ -415,7 +421,6 @@ function newspack_custom_typography_css() {
 			$css_blocks        .= '
 				.accent-header,
 				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
-				.cat-links,
 				.archive .page-title,
 				.author-bio h2 span,
 				.entry-meta .byline a,

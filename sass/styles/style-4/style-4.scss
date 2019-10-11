@@ -230,6 +230,12 @@ figcaption,
 	}
 }
 
+//! Newspack
+.wp-block-newspack-blocks-homepage-articles .cat-links {
+	text-align: left;
+}
+
+
 @include media( tablet ) {
 	.header-solid-background .featured-image-beside {
 		background-color: $color__background-pre;
