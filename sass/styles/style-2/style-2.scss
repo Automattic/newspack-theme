@@ -481,8 +481,16 @@ blockquote {
 	.wrapper {
 		border: 0;
 	}
+}
 
+.site-footer .site-info {
 	a {
 		color: inherit;
+	}
+
+	a:hover,
+	a:visited {
+		color: inherit;
+		opacity: 0.8;
 	}
 }
