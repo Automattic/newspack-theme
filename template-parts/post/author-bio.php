@@ -56,7 +56,7 @@ if ( (bool) get_the_author_meta( 'description' ) && is_single() ) : ?>
 					<span><?php // TODO: Add Job title ?></span>
 				</h2>
 				<div class="author-meta">
-					<a href="<?php echo 'mailto:' . esc_attr( get_the_author_meta( 'user_email' ) ); ?>"><?php the_author_meta( 'user_email' ); ?></a>
+					<a class="author-email" href="<?php echo 'mailto:' . esc_attr( get_the_author_meta( 'user_email' ) ); ?>"><?php the_author_meta( 'user_email' ); ?></a>
 				</div>
 			</div>
 		</div><!-- .author-bio-header -->

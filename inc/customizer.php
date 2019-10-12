@@ -258,6 +258,25 @@ function newspack_customize_register( $wp_customize ) {
 			'section'     => 'author_bio_options',
 		)
 	);
+
+	// Add option to hide author email address.
+	$wp_customize->add_setting(
+		'show_author_email',
+		array(
+			'default'           => false,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_author_email',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display Author Email', 'newspack' ),
+			'description' => esc_html__( 'Display Author email with bio on individual posts.', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
