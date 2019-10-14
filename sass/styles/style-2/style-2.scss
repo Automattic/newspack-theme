@@ -478,7 +478,8 @@ blockquote {
 	background-color: $color__text-main;
 	color: $color__background-body;
 
-	.wrapper {
+	.site-info-contain:first-child,
+	.widget-area .wrapper {
 		border: 0;
 	}
 

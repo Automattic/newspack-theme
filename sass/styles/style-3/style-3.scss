@@ -375,7 +375,8 @@ figcaption,
 .site-info {
 	color: $color__background-body;
 
-	.wrapper {
+	.site-info-contain:first-child,
+	.widget-area .wrapper {
 		border: 0;
 	}
 
