@@ -9,6 +9,7 @@ input[type="submit"] {
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;
+	display: inline-block;
 	color: $color__background-body;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
