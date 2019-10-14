@@ -104,6 +104,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hide-author-bio';
 	}
 
+	$display_author_email = get_theme_mod( 'show_author_email', false );
+	if ( false === $display_author_email ) {
+		$classes[] = 'hide-author-email';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );

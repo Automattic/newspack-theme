@@ -39,4 +39,15 @@
 			}
 		});
 	});
+
+	// Hide Author email
+	wp.customize( 'show_author_email', function( value ) {
+		value.bind( function( to ) {
+			if ( false === to ) {
+				$( 'body' ).addClass( 'hide-author-email' );
+			} else {
+				$( 'body' ).removeClass( 'hide-author-email' );
+			}
+		});
+	});
 })( jQuery );
