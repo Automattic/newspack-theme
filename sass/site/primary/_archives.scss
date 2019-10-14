@@ -81,8 +81,10 @@
 
 	&.author .page-header {
 		display: flex;
+		justify-content: space-between;
 
 		.avatar {
+			flex-shrink: 0;
 			height: 30px;
 			margin-right: $size__spacing-unit;
 			width: 30px;

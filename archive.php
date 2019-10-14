@@ -19,18 +19,7 @@ get_header();
 					$author_avatar = get_avatar( $author_id, 120 );
 
 					if ( $author_avatar ) {
-						echo wp_kses(
-							$author_avatar,
-							array(
-								'img' => array(
-									'src'    => array(),
-									'alt'    => array(),
-									'class'  => array(),
-									'width'  => array(),
-									'height' => array(),
-								),
-							)
-						);
+						echo get_avatar( $author_id, 120 );
 					}
 				}
 			?>

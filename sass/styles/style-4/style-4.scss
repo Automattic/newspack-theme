@@ -366,6 +366,24 @@ figcaption,
 	.page-header {
 		text-align: center;
 	}
+
+	&.author .page-header {
+		display: block;
+
+		.avatar {
+			margin: 0 auto $size__spacing-unit;
+
+			@include media( mobile ) {
+				height: 60px;
+				width: 60px;
+			}
+
+			@include media( tablet ) {
+				height: 80px;
+				width: 80px;
+			}
+		}
+	}
 }
 
 
