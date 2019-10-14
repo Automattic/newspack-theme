@@ -58,7 +58,6 @@ function newspack_woo_custom_colors_css( $css, $primary_color ) {
 	}
 	$css      .= '
 		.onsale,
-		.woocommerce-info,
 		.woocommerce-store-notice {
 			background-color: ' . $primary_color . ';
 		}
