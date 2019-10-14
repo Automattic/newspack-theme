@@ -63,11 +63,6 @@
 	padding-bottom: $size__spacing-unit;
 
 	.wrapper {
-		border-top: 1px solid $color__border;
-		padding-top: $size__spacing-unit;
-	}
-
-	.wrapper {
 		display: block;
 		@include media( tablet ) {
 			display: flex;
@@ -98,14 +93,24 @@
 		margin: #{ 0.25 * $size__spacing-unit } 0;
 	}
 
+	.site-info-contain:first-child .wrapper {
+		border-top: 1px solid $color__border;
+		padding-top: $size__spacing-unit;
+	}
+
 	.widget-area {
 		.wrapper {
+			border-top: 1px solid $color__border;
 			justify-content: space-between;
+			padding: $size__spacing-unit 0;
 		}
 
 		.widget {
-			min-width: 0;
-			margin-bottom: 0;
+			font-size: inherit;
+
+			@include media( mobile ) {
+				margin-bottom: 0;
+			}
 		}
 
 		ul, li {
@@ -114,12 +119,14 @@
 			padding: 0;
 		}
 
-		li {
-			display: inline-block;
-			margin-right: $size__spacing-unit;
+		@include media( mobile ) {
+			li {
+				display: inline-block;
+				margin-right: $size__spacing-unit;
 
-			&:last-child {
-				margin-right: 0;
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 	}
