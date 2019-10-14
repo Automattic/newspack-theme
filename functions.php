@@ -74,7 +74,6 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
 				'highlight-menu' => __( 'Topic Highlight Menu', 'newspack' ),
 				'social'         => __( 'Social Links Menu', 'newspack' ),
-				'footer-menu'    => __( 'Footer Menu', 'newspack' ),
 			)
 		);
 
@@ -250,6 +249,18 @@ function newspack_widgets_init() {
 			'name'          => __( 'Footer', 'newspack' ),
 			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Below Footer', 'newspack' ),
+			'id'            => 'footer-2',
+			'description'   => __( 'Add widgets here to appear below the footer, above the copyright information.', 'newspack' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

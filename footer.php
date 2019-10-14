@@ -22,24 +22,9 @@
 
 		<div class="site-info">
 
-			<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
-				<div class="wrapper">
-					<nav class="footer-menu">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'footer-menu',
-									'container'      => false,
-									'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'depth'          => 1,
-								)
-							);
-						?>
-					</nav>
-				</div><!-- .wrapper -->
-			<?php endif; ?>
+			<?php get_template_part( 'template-parts/footer/below-footer', 'widgets' ); ?>
 
-			<div class="wrapper">
+			<div class="wrapper site-info-contain">
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
 					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.</span>
