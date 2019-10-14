@@ -59,6 +59,29 @@
 				&.wp-block-cover {
 					width: auto;
 				}
+
+				&.wp-block-columns {
+					margin-left: calc(25% - 25vw - 16px);
+					margin-right: calc(25% - 25vw - 16px);
+					max-width: calc(100vw + 32px);
+					width: auto;
+
+					&.is-style-borders {
+						margin-left: calc(25% - 25vw - 24px);
+						margin-right: calc(25% - 25vw - 24px);
+						max-width: calc(100vw + 48px);
+					}
+				}
+			}
+
+			@include media(desktop) {
+				&.wp-block-columns {
+					&.is-style-borders {
+						margin-left: calc(25% - 25vw - 32px);
+						margin-right: calc(25% - 25vw - 32px);
+						max-width: calc(100vw + 64px);
+					}
+				}
 			}
 		}
 		.alignfull {
@@ -68,6 +91,37 @@
 
 			&.wp-block-cover {
 				width: 100vw;
+			}
+
+			&.wp-block-columns {
+				margin-left: 0;
+				margin-right: 0;
+				max-width: 100%;
+
+				@include media(mobile) {
+					margin-left: calc(50% - 50vw - 16px);
+					margin-right: calc(50% - 50vw - 16px);
+					max-width: calc(100vw + 32px);
+					width: calc(100vw + 32px);
+				}
+
+				@include media(tablet) {
+					&.is-style-borders {
+						margin-left: calc(50% - 50vw - 24px);
+						margin-right: calc(50% - 50vw - 24px);
+						max-width: calc(100vw + 48px);
+						width: calc(100vw + 48px);
+					}
+				}
+
+				@include media(desktop) {
+					&.is-style-borders {
+						margin-left: calc(50% - 50vw - 32px);
+						margin-right: calc(50% - 50vw - 32px);
+						max-width: calc(100vw + 64px);
+						width: calc(100vw + 64px);
+					}
+				}
 			}
 		}
 
