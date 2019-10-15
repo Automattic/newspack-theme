@@ -116,18 +116,6 @@ function newspack_woo_account_registration_heading() {
 add_action( 'woocommerce_before_checkout_registration_form', 'newspack_woo_account_registration_heading' );
 
 /**
- * Remove sidebar on Checkout page to reduce distractions.
- */
-function newspack_woo_remove_checkout_sidebar( $is_active ) {
-	if ( is_page( wc_get_page_id( 'checkout' ) ) ) {
-		return false;
-	}
-
-	return $is_active;
-}
-add_filter( 'is_active_sidebar', 'newspack_woo_remove_checkout_sidebar' );
-
-/**
  * Remove default WooCommerce wrapper.
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
