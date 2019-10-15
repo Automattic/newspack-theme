@@ -12,7 +12,8 @@ if ( (bool) get_the_author_meta( 'description' ) && is_single() ) : ?>
 	if ( ! newspack_is_active_style_pack( 'style-4' ) ) {
 		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 		if ( $author_avatar ) {
-			echo get_avatar( get_the_author_meta( 'ID' ), 80 );
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $author_avatar;
 		}
 	}
 	?>
@@ -23,7 +24,8 @@ if ( (bool) get_the_author_meta( 'description' ) && is_single() ) : ?>
 			if ( newspack_is_active_style_pack( 'style-4' ) ) {
 				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 				if ( $author_avatar ) {
-					echo get_avatar( get_the_author_meta( 'ID' ), 80 );
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo $author_avatar;
 				}
 			}
 			?>
