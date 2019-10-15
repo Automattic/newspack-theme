@@ -340,6 +340,21 @@ function newspack_custom_colors_css() {
 		';
 	}
 
+	if ( newspack_is_active_style_pack( 'style-5' ) ) {
+		$theme_css .= '
+			.cat-links a,
+			.cat-links a:visited,
+			body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
+				background-color: ' . $primary_color . ';
+				color: ' . $primary_color_contrast . ';
+			}
+			.cat-links a:hover {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
+				color: ' . $primary_color_contrast . ';
+			}
+		';
+	}
+
 	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4', 'style-5' ) ) {
 		$theme_css .= '
 			.header-solid-background .middle-header-contain {
