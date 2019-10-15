@@ -9,45 +9,25 @@ if ( (bool) get_the_author_meta( 'description' ) && is_single() ) : ?>
 <div class="author-bio">
 
 	<?php
-	if ( ! newspack_is_active_style_pack( 'style-4' ) ) :
+	if ( ! newspack_is_active_style_pack( 'style-4' ) ) {
 		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
-		if ( $author_avatar ) :
-			echo wp_kses(
-				$author_avatar,
-				array(
-					'img' => array(
-						'src'    => array(),
-						'alt'    => array(),
-						'class'  => array(),
-						'width'  => array(),
-						'height' => array(),
-					),
-				)
-			);
-		endif;
-	endif;
+		if ( $author_avatar ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $author_avatar;
+		}
+	}
 	?>
 
 	<div class="author-bio-text">
 		<div class="author-bio-header">
 			<?php
-			if ( newspack_is_active_style_pack( 'style-4' ) ) :
+			if ( newspack_is_active_style_pack( 'style-4' ) ) {
 				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
-				if ( $author_avatar ) :
-					echo wp_kses(
-						$author_avatar,
-						array(
-							'img' => array(
-								'src'    => array(),
-								'alt'    => array(),
-								'class'  => array(),
-								'width'  => array(),
-								'height' => array(),
-							),
-						)
-					);
-				endif;
-			endif;
+				if ( $author_avatar ) {
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo $author_avatar;
+				}
+			}
 			?>
 
 			<div>
