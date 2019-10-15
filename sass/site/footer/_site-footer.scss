@@ -113,8 +113,15 @@
 			font-size: inherit;
 
 			@include media( mobile ) {
-				margin-bottom: 0;
-				min-width: 25%;
+				margin: 0 $size__spacing-unit;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -134,13 +141,22 @@
 		}
 
 		@include media( mobile ) {
-			ul, li {
+			ul, li a {
 				display: inline;
 			}
 
-			ul li a {
+			li {
 				display: inline-block;
 				margin: 0 $size__spacing-unit 0 0;
+
+				ul {
+					display: inline-block;
+					margin-left: $size__spacing-unit;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 
