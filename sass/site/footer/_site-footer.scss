@@ -114,7 +114,13 @@
 
 			@include media( mobile ) {
 				margin-bottom: 0;
+				min-width: 25%;
 			}
+		}
+
+		.widget-title {
+			display: inline-block;
+			margin-right: $size__spacing-unit;
 		}
 
 		ul, li {
@@ -123,14 +129,18 @@
 			padding: 0;
 		}
 
-		@include media( mobile ) {
-			li {
-				display: inline-block;
-				margin-right: $size__spacing-unit;
+		a {
+			margin: 0;
+		}
 
-				&:last-child {
-					margin-right: 0;
-				}
+		@include media( mobile ) {
+			ul, li {
+				display: inline;
+			}
+
+			ul li a {
+				display: inline-block;
+				margin: 0 $size__spacing-unit 0 0;
 			}
 		}
 
