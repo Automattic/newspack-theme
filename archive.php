@@ -19,7 +19,8 @@ get_header();
 					$author_avatar = get_avatar( $author_id, 120 );
 
 					if ( $author_avatar ) {
-						echo get_avatar( $author_id, 120 );
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo $author_avatar;
 					}
 				}
 			?>
