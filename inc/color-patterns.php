@@ -352,6 +352,10 @@ function newspack_custom_colors_css() {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 				color: ' . $primary_color_contrast . ';
 			}
+			.accent-header, .article-section-title,
+			.entry .entry-footer a:hover {
+				color: ' . newspack_color_with_contrast( $primary_color ) . ';
+			}
 		';
 	}
 
