@@ -109,7 +109,11 @@ h4 {
 }
 
 .page-title {
-	font-size: $font__size_base;
+	font-size: $font__size_sm;
+
+	@include media( tablet ) {
+		font-size: $font__size_base;
+	}
 }
 
 .entry-meta,

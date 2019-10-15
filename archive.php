@@ -14,9 +14,23 @@ get_header();
 
 		<header class="page-header">
 			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				if ( is_author() ) {
+					$author_id     = get_query_var( 'author' );
+					$author_avatar = get_avatar( $author_id, 120 );
+
+					if ( $author_avatar ) {
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo $author_avatar;
+					}
+				}
 			?>
+			<span>
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+			</span>
+
 		</header><!-- .page-header -->
 
 		<main id="main" class="site-main">

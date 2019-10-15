@@ -78,6 +78,32 @@
 			}
 		}
 	}
+
+	&.author .page-header {
+		display: flex;
+		justify-content: space-between;
+
+		.avatar {
+			flex-shrink: 0;
+			height: 30px;
+			margin-right: $size__spacing-unit;
+			width: 30px;
+		}
+
+		@include media( mobile ) {
+			.avatar {
+				height: 80px;
+				width: 80px;
+			}
+		}
+
+		@include media( tablet ) {
+			.avatar {
+				height: 120px;
+				width: 120px;
+			}
+		}
+	}
 }
 
 .page-description {
