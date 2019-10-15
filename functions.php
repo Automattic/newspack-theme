@@ -258,6 +258,18 @@ function newspack_widgets_init() {
 
 	register_sidebar(
 		array(
+			'name'          => __( 'Above Copyright', 'newspack' ),
+			'id'            => 'footer-2',
+			'description'   => __( 'Add widgets here to appear below the footer, above the copyright information.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => __( 'Article above content', 'newspack' ),
 			'id'            => 'article-1',
 			'description'   => __( 'Add widgets here to appear above article content.', 'newspack' ),

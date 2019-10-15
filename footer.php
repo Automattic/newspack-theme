@@ -21,7 +21,10 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 
 		<div class="site-info">
-			<div class="wrapper">
+
+			<?php get_template_part( 'template-parts/footer/below-footer', 'widgets' ); ?>
+
+			<div class="wrapper site-info-contain">
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
 					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.</span>
