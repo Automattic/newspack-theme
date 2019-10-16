@@ -41,16 +41,14 @@
 
 		// Only show the rest of the author controls when the bio is visible.
 		wp.customize( 'show_author_bio', function( setting ) {
-			console.log( setting );
 			wp.customize.control( 'show_author_email', function( control ) {
 				var visibility = function() {
-					if ( '1' === setting.get() ) {
+					if ( true === setting.get() ) {
 						control.container.slideDown( 180 );
 					} else {
 						control.container.slideUp( 180 );
 					}
 				};
-
 				visibility();
 				setting.bind( visibility );
 			});
