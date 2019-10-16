@@ -2,7 +2,7 @@
 
 .accent-header,
 .article-section-title {
-	border-bottom: 4px solid #ccc;
+	border-bottom: 4px solid $color__border;
 	color: $color__primary;
 	font-size: $font__size-sm;
 	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
@@ -51,6 +51,19 @@ body.header-default-background.header-default-height {
 		&:hover {
 			background-color: $color__primary-variation;
 			color: #fff;
+		}
+	}
+}
+
+.wp-block-newspack-blocks-homepage-articles .cat-links {
+	a {
+		margin: 0;
+		padding: 0;
+		&,
+		&:visited,
+		&:hover {
+			background-color: transparent;
+			color: inherit;
 		}
 	}
 }

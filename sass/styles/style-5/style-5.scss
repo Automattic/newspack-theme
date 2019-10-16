@@ -338,6 +338,11 @@ textarea {
 	}
 }
 
+//! Newspack
+.wp-block-newspack-blocks-homepage-articles .cat-links:after {
+	display: none;
+}
+
 /* Archive */
 .archive .page-title {
 	color: $color__text-light;

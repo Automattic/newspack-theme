@@ -388,6 +388,12 @@ blockquote {
 	}
 }
 
+//! Newspack
+
+.entry-content .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links {
+	background-color: $color__secondary;
+}
+
 // Author Bio
 
 .author-bio {
