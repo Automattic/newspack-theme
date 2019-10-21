@@ -202,6 +202,11 @@ figcaption,
 		figcaption:after {
 			display: none;
 		}
+
+		&.is-style-borders article {
+			border-bottom-style: dotted;
+			border-bottom-color: $color__text-main;
+		}
 	}
 
 	.wp-block-cover,
