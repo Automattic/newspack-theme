@@ -343,12 +343,14 @@ function newspack_custom_typography_css() {
 			.page-title,
 			.cat-links,
 			.highlight-menu .menu-label {
+				letter-spacing: 0.05em;
 				text-transform: uppercase;
 			}
 		';
 
 		$editor_css_blocks .= '
 			.cat-links {
+				letter-spacing: 0.05em;
 				text-transform: uppercase;
 			}
 		';
