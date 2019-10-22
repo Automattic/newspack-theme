@@ -81,7 +81,8 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .cat-links a,
-.cat-links a:hover {
+.cat-links a:hover,
+.cat-links a:visited {
 	color: $color__primary;
 }
 
@@ -195,7 +196,7 @@ figcaption,
 		border-bottom-color: $color__text-main;
 	}
 
-	.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright) .post-has-image .entry-title {
+	.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright):not(.show-caption) .post-has-image .entry-title {
 		background-color: $color__background-body;
 		margin-top: -1.5em;
 		padding: 0.5em 0.25em 0 0;
@@ -315,8 +316,16 @@ figcaption,
 }
 
 //! Newspack
-.wp-block-newspack-blocks-homepage-articles .cat-links:before {
-	display: none;
+.wp-block-newspack-blocks-homepage-articles .cat-links {
+	&:before {
+		display: none;
+	}
+
+	a,
+	a:visited,
+	a:hover {
+		color: $color__text-light;
+	}
 }
 
 // Archives

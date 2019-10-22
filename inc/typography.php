@@ -395,6 +395,7 @@ function newspack_custom_typography_css() {
 				.tertiary-menu,
 				.mobile-menu-toggle,
 				.accent-header,
+				.cat-links,
 				.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
 				.entry-meta .byline a,
 				.tags-links a,
@@ -410,6 +411,7 @@ function newspack_custom_typography_css() {
 				.editor-block-list__layout .editor-block-list__block .accent-header,
 				.editor-block-list__layout .editor-block-list__block .article-section-title,
 				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
+				.editor-block-list__layout .editor-block-list__block .cat-links,
 				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
 					letter-spacing: 0.05em;
 					text-transform: uppercase;
