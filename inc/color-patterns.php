@@ -282,15 +282,6 @@ function newspack_custom_colors_css() {
 			.has-drop-cap:not(:focus)::first-letter {
 				border-color: ' . $primary_color . ';
 			}
-
-			.entry-content .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links {
-				background-color: ' . $secondary_color . ';
-			}
-			.entry-content .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links a,
-			.entry-content .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links a:visited,
-			.entry-content .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links a:hover {
-				color: ' . $secondary_color_contrast . ';
-			}
 		';
 	}
 
