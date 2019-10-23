@@ -196,7 +196,7 @@ figcaption,
 		border-bottom-color: $color__text-main;
 	}
 
-	.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright):not(.image-alignbehind):not(.show-caption):not(.show-category) .post-has-image .entry-title {
+	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
 		background-color: $color__background-body;
 		margin-top: -1.5em;
 		padding: 0.5em 0.25em 0 0;
@@ -211,7 +211,7 @@ figcaption,
 
 	.wp-block-cover,
 	.wp-block-group {
-		.wp-block-newspack-blocks-homepage-articles.show-image:not(.image-alignleft):not(.image-alignright):not(.image-alignbehind):not(.show-caption):not(.show-category) .post-has-image .entry-title {
+		.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
 			background-color: transparent;
 			margin-top: 0;
 			padding: 0;
