@@ -172,7 +172,7 @@
 
 					<?php
 					// If logo is not centered.
-					if ( false === $header_center_logo ) {
+					if ( false === $header_center_logo && has_nav_menu( 'primary-menu' ) ) {
 						get_template_part( 'template-parts/header/header', 'search' );
 					}
 					?>
