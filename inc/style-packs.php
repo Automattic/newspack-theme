@@ -35,16 +35,16 @@ new Newspack_Style_Packs_Core(
 		// Style fonts
 		'fonts'              => array(
 			'style-1' => array(
-				'Fira Sans Condensed' => 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,600,600i',
+				'Fira Sans Condensed' => 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,600,600i&display=swap',
 			),
 			'style-2' => array(
-				'Montserrat' => 'https://fonts.googleapis.com/css?family=Montserrat:500,700,800',
+				'Montserrat' => 'https://fonts.googleapis.com/css?family=Montserrat:500,700,800&display=swap',
 			),
 			'style-3' => array(
 				'Barlow' => 'https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i&display=swap',
 			),
 			'style-4' => array(
-				'IBM Plex Serif' => 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i',
+				'IBM Plex Serif' => 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i&display=swap',
 			),
 			'style-5' => array(
 				'Old Standard TT' => 'https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700&display=swap',
