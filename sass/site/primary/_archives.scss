@@ -44,8 +44,9 @@
 			display: flex;
 
 			.post-thumbnail {
+				flex-basis: 25%;
+				flex-grow: 0;
 				margin: 0 1em 0 0;
-				flex-basis: 25%
 			}
 
 			.entry-container {
