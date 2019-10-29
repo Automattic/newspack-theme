@@ -143,23 +143,6 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-.archive #primary {
-	padding-left: 0;
-	padding-right: 0;
-
-	& > .page-header {
-		@include media(tablet) {
-			padding-left: #{ 3 * $size__spacing-unit };
-			padding-right: #{ 3 * $size__spacing-unit };
-		}
-
-		@include media(desktop) {
-			padding-left: #{ 4.5 * $size__spacing-unit };
-			padding-right: #{ 4.5 * $size__spacing-unit };
-		}
-	}
-}
-
 // HTML Elements
 
 h1,
