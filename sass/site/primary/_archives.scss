@@ -44,8 +44,9 @@
 			display: flex;
 
 			.post-thumbnail {
+				flex-basis: 25%;
+				max-width: 25%;
 				margin: 0 1em 0 0;
-				flex-basis: 25%
 			}
 
 			.entry-container {
@@ -72,6 +73,10 @@
 	@include media(tablet) {
 		&:not(paged) article.has-post-thumbnail:first-of-type {
 			display: block;
+
+			.post-thumbnail {
+				max-width: 100%;
+			}
 
 			.entry-header {
 				margin: $size__spacing-unit 0 0;
