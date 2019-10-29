@@ -74,6 +74,10 @@
 		&:not(paged) article.has-post-thumbnail:first-of-type {
 			display: block;
 
+			.post-thumbnail {
+				max-width: 100%;
+			}
+
 			.entry-header {
 				margin: $size__spacing-unit 0 0;
 			}
