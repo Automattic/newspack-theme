@@ -47,7 +47,6 @@
 	.main-menu {
 		overflow: visible;
 		width: 100%;
-
 		> li {
 			> a {
 				color: inherit;
@@ -146,6 +145,10 @@
 
 				> a {
 					color: inherit;
+				}
+
+				&:first-child a {
+					padding-left: 0;
 				}
 
 				> .sub-menu {
