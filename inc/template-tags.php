@@ -77,8 +77,25 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	 * Prints HTML with the current post's categories.
 	 */
 	function newspack_categories() {
-		/* translators: used between list items; followed by a space. */
-		$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
+		$categories_list = '';
+
+		// Only display Yoast primary category if set.
+		if ( class_exists( 'WPSEO_Primary_Term' ) ) {
+			$primary_term = new WPSEO_Primary_Term( 'category', get_the_ID() );
+			$category_id = $primary_term->get_primary_term();
+			if ( $category_id ) {
+				$category = get_term( $category_id );
+				if ( $category ) {
+					$categories_list = '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" rel="category tag">' . $category->name . '</a>';
+				}
+			}
+		}
+
+		if ( ! $categories_list ) {
+			/* translators: used between list items; followed by a space. */
+			$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
+		}
+
 		if ( $categories_list ) {
 			printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
