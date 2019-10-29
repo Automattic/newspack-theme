@@ -280,7 +280,7 @@ function newspack_custom_colors_css() {
 			}
 
 			.has-drop-cap:not(:focus)::first-letter {
-				border-color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $secondary_color ) . ';
 			}
 		';
 	}
@@ -471,7 +471,7 @@ function newspack_custom_colors_css() {
 	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$editor_css .= '
 			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
-				border-color: ' . $primary_color . ';
+				color: ' . newspack_color_with_contrast( $secondary_color ) . ';
 			}
 
 			.editor-block-list__layout .editor-block-list__block .wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links {
