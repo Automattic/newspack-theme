@@ -109,21 +109,6 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
-.newspack-front-page:not(.page-template-single-feature) #primary {
-	padding: 0;
-
-	.site-main > article > .entry-content > *:first-child {
-
-		@include media(tablet) {
-			padding: $size__spacing-unit #{ 3 * $size__spacing-unit } 0;
-		}
-
-		@include media(desktop) {
-			padding: $size__spacing-unit #{ 4.5 * $size__spacing-unit } 0;
-		}
-	}
-}
-
 .single-featured-image-behind {
 	#primary {
 		padding-top: 0;
