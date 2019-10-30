@@ -130,8 +130,3 @@ blockquote {
 .wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
 	border-top: 5px solid $color__text-main;
 }
-
-//! Newspack
-.wp-block-newspack-blocks-homepage-articles.image-aligntop .post-has-image .cat-links {
-	background-color: $color__secondary;
-}
