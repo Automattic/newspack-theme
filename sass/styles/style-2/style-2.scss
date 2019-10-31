@@ -381,10 +381,6 @@ blockquote {
 	.page-header {
 		border-bottom: 2px solid $color__text-main;
 		padding-bottom: #{ 2 * $size__spacing-unit };
-
-		@include media( tablet ) {
-			padding-bottom: #{ 4 * $size__spacing-unit };
-		}
 	}
 
 	.page-title {
