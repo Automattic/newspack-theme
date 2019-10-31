@@ -109,6 +109,12 @@ body:not(.header-solid-background) .site-header {
 	}
 }
 
+.newspack-front-page:not(.page-template-single-feature) #primary {
+	@include media(tablet) {
+		padding-top: $size__spacing-unit;
+	}
+}
+
 .single-featured-image-behind {
 	#primary {
 		padding-top: 0;
