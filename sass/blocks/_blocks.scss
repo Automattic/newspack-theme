@@ -765,6 +765,10 @@
 	//! Columns
 	.wp-block-columns {
 
+		.wp-block-column > *:first-child {
+			margin-top: 0;
+		}
+
 		.wp-block-column > *:last-child {
 			margin-bottom: 0;
 		}
@@ -792,6 +796,10 @@
 
 	//! Group
 	.wp-block-group {
+		.wp-block-group__inner-container > *:first-child {
+			margin-top: 0;
+		}
+
 		.wp-block-group__inner-container > *:last-child {
 			margin-bottom: 0;
 		}
