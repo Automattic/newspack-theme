@@ -141,7 +141,7 @@
 				color: #555;
 				display: inline-block;
 				line-height: 1.25;
-				margin-right: #{0.75 * $size__spacing-unit};
+				margin-right: #{ 0.25 * $size__spacing-unit };
 
 				> a {
 					color: inherit;
@@ -149,6 +149,12 @@
 
 				&:first-child > a {
 					padding-left: 0;
+				}
+
+				@include media( tablet ) {
+					&.menu-item-has-children > a {
+						padding-right: 0;
+					}
 				}
 
 				> .sub-menu {
@@ -263,14 +269,7 @@
 
 .header-simplified {
 	.site-header .main-navigation .main-menu > li {
-		margin-right: #{ 0.25 * $size__spacing-unit };
 		padding: #{ 0.25 * $size__spacing-unit } 0;
-
-		@include media( tablet ) {
-			&.menu-item-has-children > a {
-				padding-right: 0;
-			}
-		}
 
 		> .sub-menu {
 			padding-top: 20px;
