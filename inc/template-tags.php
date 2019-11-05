@@ -44,14 +44,60 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	 * Prints HTML with meta information about theme author.
 	 */
 	function newspack_posted_by() {
-		printf(
-			/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
-			'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			get_avatar( get_the_author_meta( 'ID' ) ),
-			esc_html__( 'by', 'newspack' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
+
+		if ( function_exists( 'coauthors_posts_links' ) ) :
+
+			$authors      = get_coauthors();
+			$author_count = count( $authors );
+			$i            = 1;
+
+			foreach ( $authors as $author ) {
+				echo '<span class="author-avatar">' . wp_kses_post( coauthors_get_avatar( $author ) ) . '</span>';
+			}
+			?>
+
+
+			printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ), 'meta-prep meta-prep-author',
+			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
+				get_permalink(),
+				esc_attr( get_the_time() ),
+				get_the_date()
+			),
+			coauthors_posts_links( null, null, null, null, false )
 		);
+
+			<span class="byline">
+				<span><?php echo esc_html__( 'by', 'newspack' ); ?></span>
+				<?php foreach ( $authors as $author ) { ?>
+					<span class="author vcard">
+						<a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>">
+							<?php the_coauthor_meta( 'display_name', $author->ID ); ?>
+						</a>
+					</span>
+
+					<?php
+						if ( ( $author_count - 1 ) === $i ) :
+							echo ' and ';
+						elseif ( $author_count > $i ) :
+							echo ', ';
+						endif;
+						$i++;
+					?>
+				<?php } ?>
+			</span><!-- .byline -->
+		<?php
+		else :
+
+			printf(
+				/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
+				'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
+				get_avatar( get_the_author_meta( 'ID' ) ),
+				esc_html__( 'by', 'newspack' ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_html( get_the_author() )
+			);
+
+		endif;
 	}
 endif;
 
