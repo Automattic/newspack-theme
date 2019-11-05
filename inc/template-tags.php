@@ -248,6 +248,8 @@ endif;
 function newspack_has_menus() {
 	if ( has_nav_menu( 'primary-menu' ) || has_nav_menu( 'secondary-menu' ) || has_nav_menu( 'tertiary-menu' ) ) {
 		return true;
+	} else {
+		return false;
 	}
 }
 
