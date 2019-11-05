@@ -56,38 +56,34 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 			}
 			?>
 
-
-			printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ), 'meta-prep meta-prep-author',
-			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
-				get_permalink(),
-				esc_attr( get_the_time() ),
-				get_the_date()
-			),
-			coauthors_posts_links( null, null, null, null, false )
-		);
-
 			<span class="byline">
 				<span><?php echo esc_html__( 'by', 'newspack' ); ?></span>
-				<?php foreach ( $authors as $author ) { ?>
-					<span class="author vcard">
-						<a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>">
-							<?php the_coauthor_meta( 'display_name', $author->ID ); ?>
-						</a>
-					</span>
+				<?php
+				foreach ( $authors as $author ) {
 
-					<?php
-						if ( ( $author_count - 1 ) === $i ) :
-							echo ' and ';
-						elseif ( $author_count > $i ) :
-							echo ', ';
-						endif;
-						$i++;
-					?>
-				<?php } ?>
+					$i++;
+					if ( $author_count === $i ) :
+						/* translators: separates last two author names; needs a space on either side. */
+						$sep = esc_html__( ' and ', 'newspack' );
+					elseif ( $author_count > $i ) :
+						/* translators: separates all but the last two author names; needs a space at the end. */
+						$sep = esc_html__( ', ', 'newspack' );
+					else :
+						$sep = '';
+					endif;
+
+					printf(
+						/* translators: 1: author link. 2: author name. 3. variable seperator (comma, 'and', or empty) */
+						'<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>%3$s ',
+						esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ),
+						esc_html( $author->display_name ),
+						esc_html( $sep )
+					);
+				}
+				?>
 			</span><!-- .byline -->
 		<?php
 		else :
-
 			printf(
 				/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
 				'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
