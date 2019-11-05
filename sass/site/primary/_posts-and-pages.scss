@@ -198,6 +198,22 @@ body.page {
 		}
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		a {
+			color: $color__text-main;
+			text-decoration: none;
+
+			&:visited {
+				color: $color__text-main;
+			}
+		}
+	}
+
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 		margin: 32px 0 !important;
