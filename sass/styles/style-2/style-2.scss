@@ -309,11 +309,9 @@ blockquote {
 
 //! Paragraph
 .has-drop-cap:not(:focus)::first-letter {
-	border: 7px solid $color__primary;
+	color: $color__secondary;
 	font-family: $font__heading;
 	font-weight: 800;
-	font-size: $font__size-xxl;
-	padding: 0.4em;
 }
 
 .entry .entry-content {
