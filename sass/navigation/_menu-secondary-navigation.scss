@@ -29,6 +29,10 @@ nav.secondary-menu {
 			margin-right: #{ $size__spacing-unit }
 		}
 
+		li:first-child a {
+			padding-left: 0;
+		}
+
 		a {
 			font-size: $font__size-xs;
 		}
