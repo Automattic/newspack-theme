@@ -15,6 +15,11 @@ add_filter( 'is_active_sidebar', '__return_false' );
 // See: https://wordads.co/2018/02/07/how-to-control-jetpack-ad-placements-using-hooks/
 add_filter( 'wordads_header_disable', '__return_true' );
 
+// Remove everything from the theme's do_action locations above and below the header, and footer.
+remove_all_actions( 'before_header' );
+remove_all_actions( 'after_header' );
+remove_all_actions( 'before_footer' );
+
 get_header();
 ?>
 	<section id="primary" class="content-area">
