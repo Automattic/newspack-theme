@@ -289,6 +289,7 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.cat-links,
 			.cat-links a,
+			.cat-links a:visited,
 			.article-section-title,
 			.entry .entry-footer,
 			.accent-header {
