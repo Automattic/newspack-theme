@@ -243,6 +243,17 @@ if ( ! function_exists( 'newspack_the_posts_navigation' ) ) :
 endif;
 
 /**
+ * Check if any header menus are applied; used to show menu toggle on smaller screens.
+ */
+function newspack_has_menus() {
+	if ( has_nav_menu( 'primary-menu' ) || has_nav_menu( 'secondary-menu' ) || has_nav_menu( 'tertiary-menu' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
  * Displays primary menu; created a function to reduce duplication.
  */
 function newspack_primary_menu() {

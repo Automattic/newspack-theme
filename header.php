@@ -146,11 +146,12 @@
 					?>
 				</div><!-- .nav-wrapper -->
 
-
-				<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
-					<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-					<?php esc_html_e( 'Menu', 'newspack' ); ?>
-				</button>
+				<?php if ( newspack_has_menus() ) : ?>
+					<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<?php esc_html_e( 'Menu', 'newspack' ); ?>
+					</button>
+				<?php endif; ?>
 
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
