@@ -495,3 +495,25 @@ blockquote {
 		opacity: 0.7;
 	}
 }
+
+// Pop-up
+
+.entry-content {
+	.newspack-lightbox {
+		background: rgba(black, 0.2);
+
+		.newspack-popup-wrapper {
+			border: 8px solid;
+
+			@include media( tablet ) {
+				border-width: 10px;
+			}
+		}
+
+		.newspack-lightbox__close {
+			border-radius: 0;
+			right: 1px;
+			top: 1px;
+		}
+	}
+}

@@ -380,3 +380,47 @@ textarea {
 		}
 	}
 }
+
+/* Pop-up */
+
+.entry-content {
+	.newspack-lightbox {
+		background: rgba(white, 0.75);
+
+		.newspack-popup-wrapper {
+			box-shadow: 0 0 0 1px $color__text-main;
+			margin: 0.5rem;
+		}
+
+		&.newspack-lightbox-placement-center {
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+
+			.newspack-popup-wrapper {
+				box-shadow: 0 0 0 1px $color__text-main;
+				max-height: calc( 100% - 1rem );
+			}
+		}
+
+		.newspack-lightbox__close {
+			background: transparent;
+			border: 1px solid $color__text-main;
+			border-radius: 0;
+			color: inherit;
+			padding: 5px;
+			right: -1px;
+			top: -1px;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background: $color__text-main;
+				color: white;
+			}
+
+			svg {
+				transition: fill 150ms ease-in-out;
+			}
+		}
+	}
+}
