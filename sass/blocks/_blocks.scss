@@ -961,7 +961,8 @@
 }
 
 //! 'Feature' alignments
-.post-template-single-feature {
+.post-template-single-feature,
+.page-template-single-feature {
 	.entry .entry-content > * {
 		&.alignwide {
 			@include media( tablet ) {
