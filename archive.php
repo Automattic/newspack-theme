@@ -15,8 +15,13 @@ get_header();
 		<header class="page-header">
 			<?php
 				if ( is_author() ) {
-					$author_id     = get_query_var( 'author' );
-					$author_avatar = get_avatar( $author_id, 120 );
+
+					if ( function_exists( 'coauthors_posts_links' ) ) {
+						$author_avatar = coauthors_get_avatar( get_queried_object(), 120 );
+					} else {
+						$author_id     = get_query_var( 'author' );
+						$author_avatar = get_avatar( $author_id, 120 );
+					}
 
 					if ( $author_avatar ) {
 						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
