@@ -7,6 +7,7 @@
  * @package Newspack
  */
 
+$image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 get_header();
 ?>
 
@@ -22,7 +23,7 @@ get_header();
 				$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 
 				// Template part for large featured images.
-				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] ) :
+				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'small' !== $image_position ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :
 				?>
@@ -39,7 +40,7 @@ get_header();
 					}
 
 					// Place smaller featured images inside of 'content' area.
-					if ( has_post_thumbnail() && 1200 > $thumbnail_info['width'] ) {
+					if ( has_post_thumbnail() && ( 1200 > $thumbnail_info['width'] || 'small' === $image_position ) ) {
 						newspack_post_thumbnail();
 					}
 
