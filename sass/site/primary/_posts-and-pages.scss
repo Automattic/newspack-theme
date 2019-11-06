@@ -319,6 +319,11 @@ body.page {
 	}
 }
 
+
+.page:not(.home) article.page > .post-thumbnail {
+	margin-top: #{ 1.5 * $size__spacing-unit };
+}
+
 .page.home .entry .entry-content {
 	max-width: 100%;
 }
