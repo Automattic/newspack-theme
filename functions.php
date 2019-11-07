@@ -349,7 +349,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
  * Enqueue Block Styles Javascript
  */
 function newspack_extend_featured_image_script() {
-	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks' ), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks', 'wp-components' ), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
 
