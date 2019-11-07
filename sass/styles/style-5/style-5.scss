@@ -404,10 +404,12 @@ textarea {
 			background: transparent;
 			border: 1px solid $color__text-main;
 			border-radius: 0;
+			border-right: 0;
+			border-top: 0;
 			color: inherit;
 			padding: 5px;
-			right: -1px;
-			top: -1px;
+			right: 0;
+			top: 0;
 
 			&:active,
 			&:focus,
