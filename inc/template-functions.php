@@ -80,12 +80,6 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-featured-image';
 	}
 
-	// Adds a class if singular post has a large featured image
-	$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-	if ( is_single() && has_post_thumbnail() && 1200 <= (int) $thumbnail_info['width'] ) {
-		$classes[] = 'has-large-featured-image';
-	}
-
 	// Adds a class to single artcles, if they're using a special featured image style.
 	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 	if ( is_single() ) {
@@ -96,6 +90,12 @@ function newspack_body_classes( $classes ) {
 		} else {
 			$classes[] = 'single-featured-image-default';
 		}
+	}
+
+	// Adds a class if singular post has a large featured image
+	$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+	if ( is_single() && has_post_thumbnail() && 1200 <= (int) $thumbnail_info['width'] && 'small' !== $current_featured_image_style ) {
+		$classes[] = 'has-large-featured-image';
 	}
 
 	// Adds a class if the author bio is hidden.
