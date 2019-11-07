@@ -7,8 +7,9 @@
  * @package Newspack
  */
 
-$image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 get_header();
+$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+$image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 ?>
 
 	<section id="primary" class="content-area">
@@ -18,9 +19,6 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
-				// Get the post thumbnail.
-				$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 
 				// Template part for large featured images.
 				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'small' !== $image_position ) :
