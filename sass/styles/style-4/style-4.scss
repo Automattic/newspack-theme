@@ -433,3 +433,26 @@ figcaption,
 		color: $color__background-body;
 	}
 }
+
+// Pop-up
+
+.entry-content {
+	.newspack-lightbox {
+		.newspack-popup-title {
+			font-weight: normal;
+		}
+
+		.newspack-lightbox__close {
+			background: transparent;
+			border: 1px solid $color__border;
+			color: inherit;
+			padding: 5px;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background: $color__border;
+			}
+		}
+	}
+}

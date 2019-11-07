@@ -381,3 +381,37 @@ figcaption,
 		color: inherit;
 	}
 }
+
+// Pop-up
+
+.entry-content {
+	.newspack-lightbox {
+		.newspack-popup-wrapper {
+			border: 1px solid $color__border;
+		}
+
+		&.newspack-lightbox-placement-bottom,
+		&.newspack-lightbox-placement-top {
+			.newspack-popup-wrapper {
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+
+		&.newspack-lightbox-placement-bottom {
+			.newspack-popup-wrapper {
+				border-bottom: 0;
+			}
+		}
+
+		&.newspack-lightbox-placement-top {
+			.newspack-popup-wrapper {
+				border-top: 0;
+			}
+		}
+
+		.newspack-lightbox__close {
+			border-radius: 5px;
+		}
+	}
+}

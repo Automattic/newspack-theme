@@ -273,3 +273,13 @@
 		font-family: $font__heading;
 	}
 }
+
+/* Pop-up */
+
+.entry-content {
+	.newspack-lightbox {
+		.newspack-lightbox__close {
+			border-radius: 5px;
+		}
+	}
+}
