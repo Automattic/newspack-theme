@@ -1,6 +1,6 @@
 /** === Tertiary menu === */
 
-.tertiary-menu {
+.nav3 {
 	align-items: center;
 	display: flex;
 	list-style: none;
@@ -33,7 +33,7 @@
 
 
 body.header-default-background.header-default-height .site-header {
-	.tertiary-menu {
+	.nav3 {
 		.menu-highlight a {
 			background-color: $color__primary;
 			border: 0;
@@ -49,7 +49,7 @@ body.header-default-background.header-default-height .site-header {
 
 
 // Styles for when menu items appear in the site-header.
-.site-header .tertiary-menu {
+.site-header .nav3 {
 	@include media( tablet ) {
 		text-align: right;
 	}

@@ -36,7 +36,7 @@ function newspack_custom_colors_css() {
 		/* Set primary background color */
 
 		.mobile-sidebar,
-		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
+		body.header-default-background.header-default-height .site-header .nav3 .menu-highlight a,
 		.entry .entry-content .has-primary-background-color,
 		.entry .entry-content *[class^="wp-block-"].has-primary-background-color,
 		.entry .entry-content *[class^="wp-block-"] .has-primary-background-color,
@@ -85,7 +85,7 @@ function newspack_custom_colors_css() {
 		.site-header .nav1 .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
 		.site-header .nav1 .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
 		.highlight-menu .menu-label,
-		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
+		body.header-default-background.header-default-height .site-header .nav3 .menu-highlight a,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
 			color: ' . $primary_color_contrast . ';
 		}
@@ -208,7 +208,7 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.cat-links a,
 			.cat-links a:visited,
-			body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a {
+			body.header-default-background.header-default-height .site-header .nav3 .menu-highlight a {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
