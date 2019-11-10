@@ -239,8 +239,8 @@
 	.site-title a:visited,
 	.site-description,
 	.middle-header-contain,
-	.main-navigation .main-menu > li,
-	.main-navigation .main-menu > li > a {
+	.nav1 .main-menu > li,
+	.nav1 .main-menu > li > a {
 		color: #fff;
 	}
 
@@ -265,8 +265,8 @@
 			border: 0;
 		}
 
-		.main-navigation .main-menu > li,
-		.main-navigation .main-menu > li > a,
+		.nav1 .main-menu > li,
+		.nav1 .main-menu > li > a,
 		#search-toggle {
 			color: #fff;
 		}
@@ -295,7 +295,7 @@
 			margin-right: $size__spacing-unit;
 		}
 
-		&.hide-site-tagline .main-navigation {
+		&.hide-site-tagline .nav1 {
 			flex-grow: 2;
 		}
 	}

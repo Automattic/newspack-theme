@@ -55,7 +55,7 @@ function newspack_custom_colors_css() {
 
 		/* Set primary color that contrasts against white */
 		.entry .entry-content .more-link:hover,
-		.main-navigation .main-menu > li > a + svg,
+		.nav1 .main-menu > li > a + svg,
 		.search-form button:active, .search-form button:hover, .search-form button:focus,
 		.entry-footer a,
 		.comment .comment-metadata > a:hover,
@@ -78,12 +78,12 @@ function newspack_custom_colors_css() {
 		.mobile-sidebar button:hover,
 		.mobile-sidebar a,
 		.mobile-sidebar a:visited,
-		.mobile-sidebar .main-navigation .sub-menu > li > a,
-		.mobile-sidebar .main-navigation ul.main-menu > li > a,
-		.site-header .main-navigation .sub-menu a:hover,
-		.site-header .main-navigation .sub-menu a:focus,
-		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
-		.site-header .main-navigation .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
+		.mobile-sidebar .nav1 .sub-menu > li > a,
+		.mobile-sidebar .nav1 ul.main-menu > li > a,
+		.site-header .nav1 .sub-menu a:hover,
+		.site-header .nav1 .sub-menu a:focus,
+		.site-header .nav1 .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
+		.site-header .nav1 .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
 		.highlight-menu .menu-label,
 		body.header-default-background.header-default-height .site-header .tertiary-menu .menu-highlight a,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
@@ -105,7 +105,7 @@ function newspack_custom_colors_css() {
 			border-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		.mobile-sidebar nav.main-navigation + nav.secondary-menu {
+		.mobile-sidebar nav.nav1 + nav.secondary-menu {
 			border-color: ' . $primary_color_contrast . ';
 		}
 
@@ -151,14 +151,14 @@ function newspack_custom_colors_css() {
 
 		/* Set primary variation background color */
 
-		.site-header .main-navigation .sub-menu > li > a:hover,
-		.site-header .main-navigation .sub-menu > li > a:focus,
-		.site-header .main-navigation .sub-menu > li > a:hover:after,
-		.site-header .main-navigation .sub-menu > li > a:focus:after,
-		.site-header .main-navigation .sub-menu > li > .menu-item-link-return:hover,
-		.site-header .main-navigation .sub-menu > li > .menu-item-link-return:focus,
-		.site-header .main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
-		.site-header .main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
+		.site-header .nav1 .sub-menu > li > a:hover,
+		.site-header .nav1 .sub-menu > li > a:focus,
+		.site-header .nav1 .sub-menu > li > a:hover:after,
+		.site-header .nav1 .sub-menu > li > a:focus:after,
+		.site-header .nav1 .sub-menu > li > .menu-item-link-return:hover,
+		.site-header .nav1 .sub-menu > li > .menu-item-link-return:focus,
+		.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):hover,
+		.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):focus,
 		.entry .entry-content .has-primary-variation-background-color,
 		.entry .entry-content *[class^="wp-block-"].has-primary-variation-background-color,
 		.entry .entry-content *[class^="wp-block-"] .has-primary-variation-background-color,
@@ -309,8 +309,8 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
-			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:hover,
-			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:focus {
+			.header-solid-background.header-simplified .site-header .nav1 .main-menu .sub-menu a:hover,
+			.header-solid-background.header-simplified .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
@@ -334,8 +334,8 @@ function newspack_custom_colors_css() {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 
-			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:hover,
-			.header-solid-background.header-simplified .site-header .main-navigation .main-menu .sub-menu a:focus {
+			.header-solid-background.header-simplified .site-header .nav1 .main-menu .sub-menu a:hover,
+			.header-solid-background.header-simplified .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
@@ -356,12 +356,12 @@ function newspack_custom_colors_css() {
 			.header-solid-background .site-title a:link,
 			.header-solid-background .site-title a:visited,
 			.header-solid-background .site-description,
-			.header-solid-background.header-simplified .main-navigation .main-menu > li,
-			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a,
-			.header-solid-background.header-simplified .main-navigation ul.main-menu > li > a:hover,
+			.header-solid-background.header-simplified .nav1 .main-menu > li,
+			.header-solid-background.header-simplified .nav1 ul.main-menu > li > a,
+			.header-solid-background.header-simplified .nav1 ul.main-menu > li > a:hover,
 			.header-solid-background .top-header-contain,
 			.header-solid-background .middle-header-contain,
-			.main-navigation .sub-menu a {
+			.nav1 .sub-menu a {
 				color: ' . $primary_color_contrast . ';
 			}
 		';

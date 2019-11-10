@@ -63,7 +63,7 @@
 
 	a,
 	a:visited,
-	.main-navigation .sub-menu > li > a {
+	.nav1 .sub-menu > li > a {
 		color: #fff;
 	}
 
@@ -79,18 +79,18 @@
 	}
 
 	nav.secondary-menu a,
-	.main-navigation .main-menu > li > a {
+	.nav1 .main-menu > li > a {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	nav.main-navigation + nav.secondary-menu {
+	nav.nav1 + nav.secondary-menu {
 		border-top: 1px solid #fff;
 		padding-top: #{ 0.75 * $size__spacing-unit };
 	}
 
-	.main-navigation .main-menu > li.menu-item-has-children .submenu-expand svg,
-	.main-navigation .sub-menu > li.menu-item-has-children .submenu-expand,
+	.nav1 .main-menu > li.menu-item-has-children .submenu-expand svg,
+	.nav1 .sub-menu > li.menu-item-has-children .submenu-expand,
 	.submenu-expand {
 		display: none;
 	}

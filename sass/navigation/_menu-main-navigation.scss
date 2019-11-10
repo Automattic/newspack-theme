@@ -1,6 +1,6 @@
 /** === Main menu === */
 
-.main-navigation {
+.nav1 {
 	/* Un-style buttons */
 	button {
 		display: inline-block;
@@ -131,7 +131,7 @@
 /* Desktop-specific styles */
 
 .site-header {
-	.main-navigation {
+	.nav1 {
 		font-size: $font__size-xs;
 
 		.main-menu {
@@ -263,12 +263,12 @@
 	}
 }
 
-.header-default-height .site-header .main-navigation .main-menu > li {
+.header-default-height .site-header .nav1 .main-menu > li {
 	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
 }
 
 .header-simplified {
-	.site-header .main-navigation .main-menu > li {
+	.site-header .nav1 .main-menu > li {
 		padding: #{ 0.25 * $size__spacing-unit } 0;
 
 		> .sub-menu {
