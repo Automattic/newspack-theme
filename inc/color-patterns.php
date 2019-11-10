@@ -105,7 +105,7 @@ function newspack_custom_colors_css() {
 			border-color: ' . $primary_color . '; /* base: #0073a8; */
 		}
 
-		.mobile-sidebar nav.nav1 + nav.secondary-menu {
+		.mobile-sidebar .nav1 + nav.secondary-menu {
 			border-color: ' . $primary_color_contrast . ';
 		}
 
