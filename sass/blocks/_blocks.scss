@@ -269,6 +269,15 @@
 	}
 }
 
+.wp-block-columns {
+	.wp-block-cover,
+	.wp-block-cover-image {
+		min-height: 330px;
+		padding-left: $size__spacing-unit;
+		padding-right: $size__spacing-unit;
+	}
+}
+
 .entry .entry-content {
 
 	//! Paragraphs
@@ -666,19 +675,6 @@
 
 		figcaption {
 			text-align: left;
-		}
-	}
-
-	.wp-block-columns {
-		.wp-block-cover,
-		.wp-block-cover-image {
-			height: auto;
-			min-height: 330px;
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
-			.wp-block-cover__inner-container {
-				width: 100%;
-			}
 		}
 	}
 
