@@ -233,11 +233,6 @@
 }
 
 .entry .entry-content {
-	.has-drop-cap:not(:focus)::first-letter {
-		font-family: $font__heading;
-		font-weight: bold;
-	}
-
 	.wp-block-cover,
 	.wp-block-group {
 		.wp-block-pullquote {
