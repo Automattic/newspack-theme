@@ -326,7 +326,7 @@ function newspack_secondary_menu() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 767px)" toolbar-target="secondary-nav-contain" class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+	<nav toolbar="(min-width: 767px)" toolbar-target="secondary-nav-contain" class="secondary-menu nav2" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
 		<?php
 		wp_nav_menu(
 			array(

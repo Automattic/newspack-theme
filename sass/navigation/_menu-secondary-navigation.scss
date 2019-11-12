@@ -1,4 +1,4 @@
-nav.secondary-menu {
+.nav2 {
 
 	ul, li {
 		list-style: none;
@@ -18,7 +18,7 @@ nav.secondary-menu {
 
 /* Desktop-specific styles */
 .site-header {
-	nav.secondary-menu {
+	.nav2 {
 		ul, li {
 			align-items: center;
 			display: flex;

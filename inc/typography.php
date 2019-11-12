@@ -159,7 +159,7 @@ function newspack_custom_typography_css() {
 			.cat-links,
 			.entry-footer,
 			.nav1,
-			.secondary-menu,
+			.nav2,
 			.tertiary-menu,
 			.site-description,
 			.site-info,
