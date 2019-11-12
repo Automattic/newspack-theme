@@ -106,7 +106,6 @@
 
 //! Pullquote
 .wp-block-pullquote {
-	background-color: $color__background-body;
 	border-width: 0;
 	border-color: transparent;
 	font-family: $font__heading;
@@ -151,7 +150,7 @@
 			display: inline-block;
 			font-size: calc( 1rem * 5 );
 			font-weight: normal;
-			left: calc( 50% - 0.25em );
+			left: calc( 50% - 0.3em );
 			line-height: 0.75;
 			position: absolute;
 			text-align: center;
@@ -228,15 +227,6 @@
 			blockquote:before {
 				left: 4em;
 			}
-		}
-	}
-}
-
-.entry .entry-content {
-	.wp-block-cover,
-	.wp-block-group {
-		.wp-block-pullquote {
-			background-color: transparent;
 		}
 	}
 }
