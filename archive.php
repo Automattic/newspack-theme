@@ -16,16 +16,29 @@ get_header();
 			<?php
 				if ( is_author() ) {
 
+					$queried       = get_queried_object();
+					$author_avatar = '';
+
 					if ( function_exists( 'coauthors_posts_links' ) ) {
-						$author_avatar = coauthors_get_avatar( get_queried_object(), 120 );
+						// Check if this is a guest author post type.
+						if ( 'guest-author' === get_post_type( $queried->{ 'ID' } ) ) {
+							// If yes, make sure the author actually has an avatar set; otherwise, coauthors_get_avatar returns a featured image.
+							if ( get_post_thumbnail_id( $queried->{ 'ID' } ) ) {
+								$author_avatar = coauthors_get_avatar( $queried, 120 );
+							} else {
+								// If there is no avatar, force it to return the current fallback image.
+								$author_avatar = get_avatar( ' ' );
+							}
+						} else {
+							$author_avatar = coauthors_get_avatar( $queried, 120 );
+						}
 					} else {
 						$author_id     = get_query_var( 'author' );
 						$author_avatar = get_avatar( $author_id, 120 );
 					}
 
 					if ( $author_avatar ) {
-						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo $author_avatar;
+						echo wp_kses_post( $author_avatar );
 					}
 				}
 			?>
