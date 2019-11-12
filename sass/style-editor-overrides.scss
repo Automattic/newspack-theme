@@ -34,8 +34,7 @@
 	}
 
 	&.no-sidebar {
-		.wp-block[data-align=right],
-		.wp-block[data-type="core/image"][data-align="right"].wp-block {
+		.wp-block[data-align="right"][data-type="core/group"] {
 			& > .block-editor-block-list__block-edit {
 
 				@include media( desktop ) {

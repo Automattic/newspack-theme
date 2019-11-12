@@ -1130,18 +1130,15 @@
 
 .post-template-default.singular.no-sidebar,
 .page-template-default.singular.no-sidebar {
-	.entry .entry-content > * {
-		&.alignright,
-		&.wp-block-image .alignright {
-			@include media(mobile) {
-				/*rtl:ignore*/
-				margin-left: calc(2 * #{$size__spacing-unit});
-			}
+	.wp-block-group.alignright {
+		@include media(mobile) {
+			/*rtl:ignore*/
+			margin-left: calc(2 * #{$size__spacing-unit});
+		}
 
-			@include media( tablet ) {
-				/*rtl:ignore*/
-				margin-right: calc( -50% - #{ 1.5 * $size__spacing-unit } );
-			}
+		@include media( tablet ) {
+			/*rtl:ignore*/
+			margin-right: calc( -50% - #{ 1.5 * $size__spacing-unit } );
 		}
 	}
 }
