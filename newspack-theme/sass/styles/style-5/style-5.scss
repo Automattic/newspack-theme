@@ -286,7 +286,6 @@ textarea {
 
 //! Pullquote
 .wp-block-pullquote {
-	background-color: transparent;
 	border: 0;
 	border-bottom: 2px solid;
 	border-top: 1px solid;
@@ -330,13 +329,6 @@ textarea {
 
 		&.is-style-dots:before {
 			color: currentColor;
-		}
-	}
-
-	.wp-block-cover,
-	.wp-block-group {
-		.wp-block-pullquote {
-			background-color: transparent;
 		}
 	}
 }
