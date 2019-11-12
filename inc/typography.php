@@ -70,7 +70,7 @@ function newspack_custom_typography_css() {
 		.nav1 button,
 
 		/* _menu-tertiary-navigation.scss */
-		.tertiary-menu,
+		.nav3,
 
 		/* _menu-top-navigation.scss */
 		.secondary-menu,
@@ -160,7 +160,7 @@ function newspack_custom_typography_css() {
 			.entry-footer,
 			.nav1,
 			.nav2,
-			.tertiary-menu,
+			.nav3,
 			.site-description,
 			.site-info,
 			#cancel-comment-reply-link,
@@ -392,7 +392,7 @@ function newspack_custom_typography_css() {
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
 			$css_blocks        .= '
 				.nav1 ul li,
-				.tertiary-menu,
+				.nav3,
 				.mobile-menu-toggle,
 				.accent-header,
 				.cat-links,

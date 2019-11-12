@@ -350,7 +350,7 @@ function newspack_tertiary_menu() {
 		return;
 	}
 	?>
-		<nav toolbar="(min-width: 767px)" toolbar-target="tertiary-nav-contain" class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+		<nav toolbar="(min-width: 767px)" toolbar-target="tertiary-nav-contain" class="tertiary-menu nav3" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
