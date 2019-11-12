@@ -45,7 +45,7 @@ figcaption,
 .entry-meta,
 .cat-links,
 .entry-footer,
-.main-navigation,
+.nav1, // main-navigation
 .secondary-menu,
 .tertiary-menu,
 .site-description,
@@ -129,7 +129,7 @@ input[type="submit"] {
 }
 
 .site-header {
-	.main-navigation {
+	.nav1 {
 		.main-menu {
 			.sub-menu {
 				a:hover,

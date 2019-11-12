@@ -303,7 +303,7 @@ function newspack_primary_menu() {
 		return;
 	}
 	?>
-	<nav toolbar="(min-width: 767px)" toolbar-target="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
+	<nav toolbar="(min-width: 767px)" toolbar-target="site-navigation" class="main-navigation nav1" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
 		<?php
 		wp_nav_menu(
 			array(
