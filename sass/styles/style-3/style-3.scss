@@ -189,6 +189,12 @@ figcaption,
 	display: none;
 }
 
+//! Columns Block
+.wp-block-columns.is-style-borders .wp-block-column:after {
+	border-style: dotted;
+	border-color: $color__text-main;
+}
+
 .entry .entry-content {
 
 	.wp-block-newspack-blocks-homepage-articles.is-style-borders article {
@@ -299,13 +305,6 @@ figcaption,
 	.wp-block-separator,
 	hr {
 		border-top: 1px dotted $color__text-main;
-	}
-
-	.wp-block-columns.is-style-borders {
-		.wp-block-column:after {
-			border-style: dotted;
-			border-color: $color__text-main;
-		}
 	}
 
 	// Jetpack Blocks
