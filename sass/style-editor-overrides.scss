@@ -28,18 +28,20 @@
 		max-width: 1286px;
 		width: 100%;
 
-		& > .wp-block {
-			max-width: 70%;
-		}
-
-		.block-editor-block-list__layout {
+		@include media( tablet ) {
 			& > .wp-block {
-				max-width: 100%;
+				max-width: 70%;
 			}
 
-			.block-editor-block-list__block {
-				padding-left: 10px;
-				padding-right: 0;
+			.block-editor-block-list__layout {
+				& > .wp-block {
+					max-width: 100%;
+				}
+
+				.block-editor-block-list__block {
+					padding-left: 10px;
+					padding-right: 0;
+				}
 			}
 		}
 	}
