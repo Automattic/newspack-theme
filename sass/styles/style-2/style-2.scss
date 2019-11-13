@@ -162,7 +162,7 @@ h4,
 // Accent headers
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.site-content .wpnbha .article-section-title,
 .cat-links {
 	color: $color__text-light;
 	font-family: $font__heading;
@@ -171,7 +171,7 @@ h4,
 }
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title {
+.site-content .wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
 		margin-bottom: #{ 1.5 * $size__spacing-unit };
@@ -272,22 +272,23 @@ blockquote {
 	font-weight: 800;
 }
 
-.entry .entry-content {
+//! Newspack Article Block
+.wpnbha {
+	 article .entry-meta {
+		font-size: #{ 0.7 * $font__size_base };
+	}
 
-	.wp-block-newspack-blocks-homepage-articles {
-		 article .entry-meta {
-			font-size: #{ 0.7 * $font__size_base };
-		}
-
-		&.type-scale1,
-		&.type-scale2,
-		&.type-scale3,
-		&.type-scale4 {
-			article .entry-meta {
-				font-size: #{ 0.6 * $font__size_base };
-			}
+	&.type-scale1,
+	&.type-scale2,
+	&.type-scale3,
+	&.type-scale4 {
+		article .entry-meta {
+			font-size: #{ 0.6 * $font__size_base };
 		}
 	}
+}
+
+.entry .entry-content {
 
 	.wp-block-pullquote {
 		border-width: 16px 0 4px;

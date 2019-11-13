@@ -60,14 +60,14 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles  .article-section-title,
+.site-content .wpnbha .article-section-title,
 .cat-links,
 .archive .page-title {
 	margin: 0 0 #{ 1.5 * $size__spacing-unit };
 }
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.site-content .wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-xs;
 }
@@ -109,6 +109,35 @@ Newspack Theme Styles - Style Pack 3
 	font-weight: bold;
 }
 
+//! Newspack Article Block
+.wpnbha.is-style-borders article {
+	border-bottom-style: dotted;
+	border-bottom-color: $color__text-main;
+}
+
+.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+	background-color: $color__background-body;
+	margin-top: -1.5em;
+	padding: 0.5em 0.25em 0 0;
+	position: relative;
+	width: 85%;
+	z-index: 1;
+}
+
+.wpnbha figcaption:after {
+	display: none;
+}
+
+.wp-block-cover,
+.wp-block-group {
+	.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+		background-color: transparent;
+		margin-top: 0;
+		padding: 0;
+		width: auto;
+	}
+}
+
 // Posts & Pages
 
 @include media( tablet ) {
@@ -124,7 +153,7 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .entry-meta,
-.entry .wp-block-newspack-blocks-homepage-articles article .entry-meta {
+.wpnbha article .entry-meta {
 	font-size: $font__size-xs;
 }
 
@@ -196,34 +225,6 @@ figcaption,
 }
 
 .entry .entry-content {
-
-	.wp-block-newspack-blocks-homepage-articles.is-style-borders article {
-		border-bottom-style: dotted;
-		border-bottom-color: $color__text-main;
-	}
-
-	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
-		background-color: $color__background-body;
-		margin-top: -1.5em;
-		padding: 0.5em 0.25em 0 0;
-		position: relative;
-		width: 85%;
-		z-index: 1;
-	}
-
-	.wp-block-newspack-blocks-homepage-articles figcaption:after {
-		display: none;
-	}
-
-	.wp-block-cover,
-	.wp-block-group {
-		.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
-			background-color: transparent;
-			margin-top: 0;
-			padding: 0;
-			width: auto;
-		}
-	}
 
 	.wp-block-embed figcaption,
 	.wp-block-image figcaption,
@@ -315,7 +316,7 @@ figcaption,
 }
 
 //! Newspack
-.wp-block-newspack-blocks-homepage-articles .cat-links {
+.wpnbha .cat-links {
 	&:before {
 		display: none;
 	}

@@ -301,7 +301,7 @@ function newspack_custom_colors_css() {
 			}
 
 			.accent-header:before,
-			.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title:before,
+			.site-content .wpnbha .article-section-title:before,
 			.cat-links:before,
 			.archive .page-title:before,
 			figcaption:after,

@@ -201,7 +201,14 @@
 			max-width: calc(100% + 64px);
 		}
 	}
+}
 
+
+//! Newspack Article Block
+.wpnbha {
+	figcaption {
+		max-width: 100%;
+	}
 }
 
 .entry .entry-content {
@@ -845,13 +852,6 @@
 
 		&.has-excerpts {
 
-		}
-	}
-
-	//! Newspack Block
-	.wp-block-newspack-blocks-homepage-articles {
-		figcaption {
-			max-width: 100%;
 		}
 	}
 
