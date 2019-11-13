@@ -1130,11 +1130,8 @@
 
 .post-template-default.singular.no-sidebar,
 .page-template-default.singular.no-sidebar {
-	.wp-block-group.alignright {
-		@include media(mobile) {
-			/*rtl:ignore*/
-			margin-left: calc(2 * #{$size__spacing-unit});
-		}
+	.wp-block-group.alignright,
+	.wp-block-image figure.alignright {
 
 		@include media( tablet ) {
 			/*rtl:ignore*/
