@@ -170,9 +170,13 @@ figcaption,
 	}
 }
 
-.wp-block-separator:not(.is-style-dots),
+.wp-block-separator,
 hr {
-	border-top: 1px dotted $color__text-main;
+	border-width: 0;
+	&:not(.is-style-dots) {
+		background-color: transparent;
+		border-top: 1px dotted $color__text-main;
+	}
 }
 
 .wp-block-columns.is-style-borders {

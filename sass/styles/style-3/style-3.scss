@@ -191,7 +191,14 @@ figcaption,
 
 .wp-block-separator,
 hr {
-	border-top: 1px dotted $color__text-main;
+	background: transparent;
+	border-color: currentColor;
+	border-top-style: dotted;
+	border-top-width: 1px;
+
+	&.has-background {
+		border: 0;
+	}
 }
 
 .entry .entry-content {

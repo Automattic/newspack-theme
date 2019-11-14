@@ -126,5 +126,7 @@ blockquote {
 }
 
 .wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
-	border-top: 5px solid $color__text-main;
+	background-color: $color__text-main;
+	border: 0;
+	height: 5px;
 }

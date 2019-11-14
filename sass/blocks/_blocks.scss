@@ -171,12 +171,11 @@
 //! Separator
 .wp-block-separator,
 hr {
-	background-color: transparent;
+	background-color: $color__border;
 	border: 0;
-	border-top: 1px solid $color__border;
 	height: 1px;
-	margin: (2 * $size__spacing-unit) auto;
-	max-width: #{ 5 * $size__spacing-unit };
+	margin: (2 * $size__spacing-unit) 0;
+	max-width: 100px;
 
 	&.is-style-wide {
 		max-width: 100%;
@@ -187,10 +186,12 @@ hr {
 		background-color: inherit;
 		border: inherit;
 		height: inherit;
+		margin-left: auto;
+		margin-right: auto;
 		text-align: center;
 
 		&:before {
-			color: $color__text-light;
+			color: currentColor;
 			font-size: $font__size-lg;
 			letter-spacing: $font__size-sm;
 			padding-left: $font__size-sm;

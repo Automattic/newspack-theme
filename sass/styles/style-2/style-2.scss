@@ -273,8 +273,16 @@ blockquote {
 }
 
 .wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
-	border-top: 5px solid $color__text-main;
+	&,
+	&.has-background {
+		height: 5px;
+	}
+
+	&:not( .has-background ) {
+		background-color: $color__text-main;
+	}
 }
+
 
 .entry .entry-content {
 
