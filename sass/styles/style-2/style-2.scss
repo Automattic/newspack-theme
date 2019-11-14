@@ -272,6 +272,10 @@ blockquote {
 	font-weight: 800;
 }
 
+.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
+	border-top: 5px solid $color__text-main;
+}
+
 .entry .entry-content {
 
 	.wp-block-newspack-blocks-homepage-articles {
@@ -337,10 +341,6 @@ blockquote {
 				display: none;
 			}
 		}
-	}
-
-	.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
-		border-top: 5px solid $color__text-main;
 	}
 }
 

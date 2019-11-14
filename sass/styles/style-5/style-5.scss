@@ -270,20 +270,21 @@ textarea {
 	font-weight: bold;
 }
 
+//! Separator
+.wp-block-separator,
+hr {
+	background: transparent !important;
+	border-color: currentColor;
+	border-top-style: double;
+	border-top-width: 3px;
+
+	&.is-style-dots:before {
+		color: currentColor;
+	}
+}
+
 /* Blocks */
 .entry .entry-content {
-	.wp-block-separator,
-	hr {
-		background: transparent !important;
-		border-color: currentColor;
-		border-top-style: double;
-		border-top-width: 3px;
-
-		&.is-style-dots:before {
-			color: currentColor;
-		}
-	}
-
 	.wp-block-pullquote {
 		background-color: transparent;
 		border: 0;

@@ -189,6 +189,11 @@ figcaption,
 	display: none;
 }
 
+.wp-block-separator,
+hr {
+	border-top: 1px dotted $color__text-main;
+}
+
 .entry .entry-content {
 
 	.wp-block-newspack-blocks-homepage-articles.is-style-borders article {
@@ -294,11 +299,6 @@ figcaption,
 		&.alignfull:not(.is-style-solid-color):before {
 			left: 8px;
 		}
-	}
-
-	.wp-block-separator,
-	hr {
-		border-top: 1px dotted $color__text-main;
 	}
 
 	.wp-block-columns.is-style-borders {

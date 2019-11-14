@@ -168,6 +168,46 @@
 	position: relative;
 }
 
+//! Separator
+.wp-block-separator,
+hr {
+	background-color: transparent;
+	border: 0;
+	border-top: 1px solid $color__border;
+	height: 1px;
+	margin: (2 * $size__spacing-unit) auto;
+	max-width: #{ 5 * $size__spacing-unit };
+
+	&.is-style-wide {
+		max-width: 100%;
+	}
+
+	&.is-style-dots {
+		max-width: 100%;
+		background-color: inherit;
+		border: inherit;
+		height: inherit;
+		text-align: center;
+
+		&:before {
+			color: $color__text-light;
+			font-size: $font__size-lg;
+			letter-spacing: $font__size-sm;
+			padding-left: $font__size-sm;
+		}
+	}
+
+	/* Remove duplicate rule-line when a separator
+	 * is followed by an H1, or H2 */
+	& + h1,
+	& + h2 {
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
 .entry .entry-content {
 
 	//! Paragraphs
@@ -651,46 +691,6 @@
 
 		figcaption a {
 			color: #fff;
-		}
-	}
-
-	//! Separator
-	.wp-block-separator,
-	hr {
-		background-color: transparent;
-		border: 0;
-		border-top: 1px solid $color__border;
-		height: 1px;
-		margin: (2 * $size__spacing-unit) auto;
-		max-width: #{ 5 * $size__spacing-unit };
-
-		&.is-style-wide {
-			max-width: 100%;
-		}
-
-		&.is-style-dots {
-			max-width: 100%;
-			background-color: inherit;
-			border: inherit;
-			height: inherit;
-			text-align: center;
-
-			&:before {
-				color: $color__text-light;
-				font-size: $font__size-lg;
-				letter-spacing: $font__size-sm;
-				padding-left: $font__size-sm;
-			}
-		}
-
-		/* Remove duplicate rule-line when a separator
-		 * is followed by an H1, or H2 */
-		& + h1,
-		& + h2 {
-
-			&:before {
-				display: none;
-			}
 		}
 	}
 
