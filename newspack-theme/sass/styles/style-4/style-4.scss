@@ -131,6 +131,17 @@ figcaption,
 	}
 }
 
+blockquote,
+cite {
+	font-family: $font__heading;
+	font-style: italic;
+	text-align: center;
+
+	em,
+	i {
+		font-style: normal;
+	}
+}
 
 //! Paragraph
 .has-drop-cap:not(:focus)::first-letter {
