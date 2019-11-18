@@ -1045,7 +1045,6 @@
 	.wp-block-cover,
 	.wp-block-cover-image {
 		&.alignfull {
-
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
@@ -1055,8 +1054,7 @@
 			@include media(tablet) {
 
 				.wp-block-cover-image-text,
-				.wp-block-cover-text,
-				h2 {
+				.wp-block-cover-text {
 					padding: 0;
 				}
 			}
