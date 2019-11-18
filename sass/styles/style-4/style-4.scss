@@ -50,7 +50,7 @@ Newspack Theme Styles - Style Pack 4
 }
 
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.site-content .wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-xs;
 	margin-bottom: $size__spacing-unit;
@@ -231,7 +231,7 @@ figcaption,
 }
 
 //! Newspack
-.wp-block-newspack-blocks-homepage-articles .cat-links {
+.wpnbha .cat-links {
 	text-align: left;
 }
 

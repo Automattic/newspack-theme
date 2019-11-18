@@ -67,7 +67,7 @@ input[type="submit"] {
 
 /* Accent headers */
 .accent-header,
-.site-content .wp-block-newspack-blocks-homepage-articles .article-section-title,
+.site-content .wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-base;
 	margin-bottom: $size__spacing-unit;
@@ -338,7 +338,7 @@ textarea {
 }
 
 //! Newspack
-.wp-block-newspack-blocks-homepage-articles .cat-links:after {
+.wpnbha .cat-links:after {
 	display: none;
 }
 
@@ -372,7 +372,7 @@ textarea {
 	}
 }
 
-.site-content .wp-block-newspack-blocks-homepage-articles {
+.site-content .wpnbha {
 	&.is-style-borders {
 		article {
 			border-color: $color__text-main;
