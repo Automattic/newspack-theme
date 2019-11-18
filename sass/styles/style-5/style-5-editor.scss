@@ -89,6 +89,8 @@
 	font-family: $font__body;
 	font-size: $font__size-base;
 	margin-bottom: $size__spacing-unit;
+	overflow: hidden;
+	position: relative;
 
 	&:after {
 		background-color: currentColor;
