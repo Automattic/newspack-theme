@@ -242,7 +242,7 @@ function newspack_custom_typography_css() {
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .block-library-pullquote__content::before
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text__editable:first-child::before
 
 			{
 				font-family: $font_header;

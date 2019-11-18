@@ -92,29 +92,28 @@ Newspack Theme Editor Styles - Style Pack 1
 		}
 	}
 
-	.block-library-pullquote__content {
-		&:before {
-			color: $color__primary;
-			content: "\201C";
-			display: inline-block;
-			font-family: $font__heading;
-			font-size: calc( 1rem * 5 );
-			font-weight: normal;
-			left: calc( 50% - 0.25em );
-			line-height: 0.75;
-			position: absolute;
-			text-align: center;
-			top: #{ -3.5 * $size__spacing-unit };
-			width: 0.5em;
-			z-index: 1;
+	blockquote > .editor-rich-text__editable:first-child:before {
+		color: $color__primary;
+		content: "\201C";
+		display: inline-block;
+		font-family: $font__heading;
+		font-size: calc( 1rem * 6 );
+		font-style: italic;
+		font-weight: normal;
+		left: calc( 50% - 0.3em );
+		line-height: 0.75;
+		position: absolute;
+		text-align: center;
+		top: 0.2em;
+		width: 0.5em;
+		z-index: 1;
 
-			@include media( tablet ) {
-				font-size: calc( 1rem * 7 );
-			}
+		@include media( tablet ) {
+			font-size: calc( 1rem * 8 );
 		}
 	}
 
-	.wp-block-pullquote.is-style-solid-color .block-library-pullquote__content:before {
+	.wp-block-pullquote.is-style-solid-color blockquote > .editor-rich-text__editable:first-child:before {
 		color: inherit;
 	}
 
@@ -144,7 +143,7 @@ Newspack Theme Editor Styles - Style Pack 1
 			text-align: left;
 
 			&:before {
-				left: 2em;
+				left: 3em;
 				right: 0;
 			}
 
@@ -153,22 +152,24 @@ Newspack Theme Editor Styles - Style Pack 1
 			}
 		}
 
-		.block-library-pullquote__content {
-			&:before {
-				font-size: calc( 1rem * 5 );
-				left: 0;
-				text-align: left;
-				top: #{ -2.5 * $size__spacing-unit };
-				width: 0.5em;
-			}
+		blockquote > .editor-rich-text__editable:first-child:before {
+			font-size: calc( 1rem * 6 );
+			left: 0;
+			text-align: left;
+			top: 0.3em;
+			width: 0.5em;
 		}
 
 		&.is-style-solid-color blockquote {
 			padding-top: #{ 0.25 * $size__spacing-unit };
 
 			&:before {
-				left: #{ 4 * $size__spacing-unit };
+				left: #{ 5 * $size__spacing-unit };
 				right: #{ 2 * $size__spacing-unit };
+			}
+
+			& > .editor-rich-text__editable:first-child:before {
+				left: #{ 1.5 * $size__spacing-unit };
 			}
 		}
 
