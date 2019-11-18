@@ -270,6 +270,17 @@ textarea {
 	font-weight: bold;
 }
 
+//! Columns Block
+.wp-block-columns.is-style-borders {
+	.wp-block-column {
+		border-color: currentColor;
+
+		&:after {
+			border-color: currentColor;
+		}
+	}
+}
+
 /* Blocks */
 .entry .entry-content {
 	.wp-block-separator,
@@ -322,18 +333,6 @@ textarea {
 	.wp-block-group {
 		.wp-block-pullquote {
 			background-color: transparent;
-		}
-	}
-
-	.wp-block-columns {
-		&.is-style-borders {
-			.wp-block-column {
-				border-color: currentColor;
-
-				&:after {
-					border-color: currentColor;
-				}
-			}
 		}
 	}
 }
