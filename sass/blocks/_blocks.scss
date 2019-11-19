@@ -172,7 +172,8 @@
 .wp-block-columns {
 
 	.wp-block-column > * {
-		margin: 32px 0;
+		margin-bottom: 32px;
+		margin-top: 32px;
 
 		&:first-child {
 			margin-top: 0;
@@ -808,7 +809,8 @@
 	//! Group
 	.wp-block-group {
 		.wp-block-group__inner-container > * {
-			margin: 32px 0;
+			margin-bottom: 32px;
+			margin-top: 32px;
 
 			&:first-child {
 				margin-top: 0;
