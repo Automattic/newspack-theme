@@ -1,8 +1,13 @@
 /* !Block styles */
 
 .entry .entry-content > * {
-	margin: 32px 0;
+	margin-bottom: 32px;
+	margin-top: 32px;
 	max-width: 100%;
+
+	&.wp-block-columns {
+		max-width: calc( 100% + 32px );
+	}
 
 	&:last-child {
 		margin-bottom: 0;
