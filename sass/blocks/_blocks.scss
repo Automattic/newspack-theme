@@ -1099,11 +1099,18 @@
 			}
 		}
 	}
+}
 
+.newspack-front-page,
+.post-template-single-wide,
+.page-template-single-wide,
+.post-template-single-feature,
+.page-template-single-feature {
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
 	.wp-block-pullquote,
 	.wp-block-columns,
-	.wp-block-table {
+	.wp-block-table,
+	.wpnbha {
 		&.alignfull {
 			padding-left: $size__spacing-unit;
 			padding-right: $size__spacing-unit;
