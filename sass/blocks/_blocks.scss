@@ -5,10 +5,6 @@
 	margin-top: 32px;
 	max-width: 100%;
 
-	&.wp-block-columns {
-		max-width: calc( 100% + 32px );
-	}
-
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -188,7 +184,10 @@
 			margin-bottom: 0;
 		}
 	}
+}
 
+// Temporarily make some column styles more specific
+.entry .entry-content > .wp-block-columns {
 	@include media( mobile ) {
 		margin-left: -16px;
 		max-width: calc(100% + 32px);
