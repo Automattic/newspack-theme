@@ -21,6 +21,7 @@ Newspack Theme Editor Styles - Style Pack 4
 
 .article-section-title {
 	margin-bottom: #{ 1.5 * $size__spacing-unit };
+	position: relative;
 	overflow: hidden;
 
 	&:before,
