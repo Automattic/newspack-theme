@@ -46,9 +46,9 @@ function newspack_body_classes( $classes ) {
 	// Adds classes to reflect the header layout
 	$header_solid_background = get_theme_mod( 'header_solid_background', false );
 	if ( true === $header_solid_background ) {
-		$classes[] = 'header-solid-background';
+		$classes[] = 'hs-bg';
 	} else {
-		$classes[] = 'header-default-background';
+		$classes[] = 'hd-bg';
 	}
 
 	$header_center_logo = get_theme_mod( 'header_center_logo', false );

@@ -28,7 +28,7 @@ body {
 	}
 }
 
-.header-solid-background {
+.hs-bg {
 	.bottom-header-contain,
 	.middle-header-contain,
 	.top-header-contain {
@@ -177,8 +177,8 @@ input[type="submit"] {
 	}
 }
 
-.header-default-background,
-.header-solid-background {
+.hd-bg,
+.hs-bg {
 	.featured-image-beside {
 		@include media( tablet ) {
 			background-color: currentColor;
@@ -186,7 +186,7 @@ input[type="submit"] {
 	}
 }
 
-.header-solid-background {
+.hs-bg {
 	.featured-image-beside {
 		@include media( tablet ) {
 			border-top: 1px solid $color__background-body;
