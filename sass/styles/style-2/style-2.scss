@@ -30,7 +30,8 @@ Newspack Theme Styles - Style Pack 2
 	}
 }
 
-.header-simplified {
+// Header simplified
+.hs {
 	.site-header {
 		@include media( tablet ) {
 			padding-top: #{ 0.5 * $size__spacing-unit };
@@ -61,14 +62,14 @@ Newspack Theme Styles - Style Pack 2
 // Header
 
 .site-header,
-.h-db .middle-header-contain, // default background
-.header-simplified.h-db .site-header,
-body:not(.h-sb) .site-header {
+.h-db .middle-header-contain, // Header default background
+.hs.h-db .site-header, // Header simplified; default background
+body:not(.h-sb) .site-header { // Not Header solid background
 	background-color: #efefef;
 }
 
-// default background
-.header-simplified.h-db .middle-header-contain {
+// Header simplified; Header default background
+.hs.h-db .middle-header-contain {
 	border-bottom: 0;
 }
 

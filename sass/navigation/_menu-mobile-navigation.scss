@@ -22,13 +22,14 @@
 }
 
 @include media( tablet ) {
-	.header-default-height .site-header .mobile-menu-toggle {
+	// Header default height
+	.hdh .site-header .mobile-menu-toggle {
 		display: none;
 	}
 }
 
 @include media( narrowdesktop ) {
-	.header-simplified .site-header .mobile-menu-toggle {
+	.hs .site-header .mobile-menu-toggle { // Header simplified
 		display: none;
 	}
 }

@@ -254,8 +254,8 @@
 	}
 }
 
-// Header Center Logo
-.h-cl.header-default-height .site-header #site-navigation {
+// Header Center Logo; default height
+.h-cl.h-dh .site-header #site-navigation {
 	flex-basis: 100%;
 	text-align: center;
 
@@ -264,11 +264,11 @@
 	}
 }
 
-.header-default-height .site-header .nav1 .main-menu > li {
+.hdh .site-header .nav1 .main-menu > li {
 	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
 }
 
-.header-simplified {
+.hs {
 	.site-header .nav1 .main-menu > li {
 		padding: #{ 0.25 * $size__spacing-unit } 0;
 

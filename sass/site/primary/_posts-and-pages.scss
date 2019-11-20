@@ -440,12 +440,11 @@ body.page {
 		.admin-bar & {
 			min-height: calc( 100vh - 250px );
 		}
-
-		.header-simplified & {
+		// Header simplified
+		.hs & {
 			min-height: calc( 100vh - 110px );
 		}
-
-		.header-simplified.admin-toolbar & {
+		.hs.admin-toolbar & {
 			min-height: calc( 100vh - 142px );
 		}
 	}
@@ -552,11 +551,11 @@ body.page {
 			min-height: calc( 100vh - 250px );
 		}
 
-		.header-simplified & {
+		// Header simplified
+		.hs & {
 			min-height: calc( 100vh - 110px );
 		}
-
-		.header-simplified.admin-toolbar & {
+		.hs.admin-toolbar & {
 			min-height: calc( 100vh - 142px );
 		}
 
