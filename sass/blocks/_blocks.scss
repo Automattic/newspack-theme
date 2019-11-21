@@ -183,7 +183,10 @@
 			margin-bottom: 0;
 		}
 	}
+}
 
+// Temporarily make some column styles more specific
+.entry .entry-content > .wp-block-columns {
 	@include media( mobile ) {
 		margin-left: -16px;
 		max-width: calc(100% + 32px);
