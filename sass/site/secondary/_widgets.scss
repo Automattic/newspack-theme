@@ -97,6 +97,13 @@
 	}
 }
 
+.jetpack_subscription_widget {
+	.error {
+		background-color: $color__background-pre;
+		padding: $size__spacing-unit;
+	}
+}
+
 #secondary {
 	section:first-child,
 	section:first-child > div {
