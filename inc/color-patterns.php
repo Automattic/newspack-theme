@@ -36,7 +36,8 @@ function newspack_custom_colors_css() {
 		/* Set primary background color */
 
 		.mobile-sidebar,
-		body.h-db.hdh .site-header .nav3 .menu-highlight a,
+		/* Header default background; header default height */
+		body.h-db.h-dh .site-header .nav3 .menu-highlight a,
 		.entry .entry-content .has-primary-background-color,
 		.entry .entry-content *[class^="wp-block-"].has-primary-background-color,
 		.entry .entry-content *[class^="wp-block-"] .has-primary-background-color,
@@ -48,6 +49,7 @@ function newspack_custom_colors_css() {
 		}
 
 		@media only screen and (min-width: 782px) {
+			/* Header default background */
 			.h-db .featured-image-beside {
 				background-color: ' . $primary_color . ';
 			}
@@ -85,12 +87,14 @@ function newspack_custom_colors_css() {
 		.site-header .nav1 .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
 		.site-header .nav1 .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
 		.highlight-menu .menu-label,
-		body.h-db.hdh .site-header .nav3 .menu-highlight a,
+		/* Header default background; default height */
+		body.h-db.h-dh .site-header .nav3 .menu-highlight a,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
 			color: ' . $primary_color_contrast . ';
 		}
 
 		@media only screen and (min-width: 782px) {
+			/* Header default background */
 			.h-db .featured-image-beside .entry-header {
 				color: ' . $primary_color_contrast . ';
 			}
@@ -208,7 +212,8 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.cat-links a,
 			.cat-links a:visited,
-			body.h-db.hdh .site-header .nav3 .menu-highlight a {
+			/* Header default background; default height */
+			body.h-db.h-dh .site-header .nav3 .menu-highlight a {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
@@ -248,6 +253,7 @@ function newspack_custom_colors_css() {
 			}
 
 			@media only screen and (min-width: 782px) {
+				/* Header default background */
 				.h-db .featured-image-beside .cat-links:before {
 					background-color: ' . $primary_color_contrast . ';
 				}
@@ -257,18 +263,22 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'style-2' ) ) {
 		$theme_css .= '
+			/* Header solid background */
 			.h-sb .site-header {
 				background-color: ' . $primary_color . ';
 			}
 
 			.site-header,
+			/* Header default background */
 			.h-db .site-header,
+			/* Header short height; default background */
 			.h-sh.h-db .site-header,
 			.site-content #primary,
 			#page .site-header {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
 			}
 
+			/* Header solid background */
 			.h-sb .site-header .highlight-menu .menu-label,
 			.h-sb .site-header .highlight-menu a {
 				color: ' . $primary_color_contrast . ';
@@ -309,6 +319,7 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
+			/* Header solid background; short height */
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
@@ -334,6 +345,7 @@ function newspack_custom_colors_css() {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 
+			/* Header solid background; short height */
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
@@ -343,6 +355,7 @@ function newspack_custom_colors_css() {
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4', 'style-5' ) ) {
 		$theme_css .= '
+			/* Header solid background */
 			.h-sb .middle-header-contain {
 				background-color: ' . $primary_color . ';
 			}
@@ -351,11 +364,13 @@ function newspack_custom_colors_css() {
 				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
 			}
 
+			/* Header solif background */
 			.h-sb .site-header,
 			.h-sb .site-title,
 			.h-sb .site-title a:link,
 			.h-sb .site-title a:visited,
 			.h-sb .site-description,
+			/* Header solid background; short height */
 			.h-sb.h-sh .nav1 .main-menu > li,
 			.h-sb.h-sh .nav1 ul.main-menu > li > a,
 			.h-sb.h-sh .nav1 ul.main-menu > li > a:hover,
