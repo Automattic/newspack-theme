@@ -156,7 +156,7 @@
 
  // Default Header
 
-.hd-bg {
+.h-db {
 	.middle-header-contain {
 		border-bottom: 1px solid $color__border;
 
@@ -229,7 +229,7 @@
 
 // Solid Background
 
-.hs-bg {
+.h-sb {
 	.site-header {
 		padding-bottom: 0;
 	}
@@ -300,7 +300,8 @@
 		}
 	}
 
-	&.hd-bg .middle-header-contain {
+	// Default background color.
+	&.h-db .middle-header-contain {
 		border-bottom: 1px solid $color__border;
 	}
 

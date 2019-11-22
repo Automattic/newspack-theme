@@ -9,7 +9,8 @@ Newspack Theme Styles - Style Pack 3
 
 // Header
 
-.hs-bg {
+// Solid Background
+.h-sb {
 	.top-header-contain,
 	.middle-header-contain {
 		background-color: $color__background-dark;
@@ -24,7 +25,7 @@ Newspack Theme Styles - Style Pack 3
 	}
 }
 
-.hs-bg.header-simplified {
+.h-sb.header-simplified {
 	.site-header .nav1 .main-menu .sub-menu {
 		a {
 			background-color: $color__text-main;
@@ -188,7 +189,8 @@ Newspack Theme Styles - Style Pack 3
 }
 
 @include media( tablet ) {
-	.hs-bg .featured-image-beside {
+	// Header - Solid background
+	.h-sb .featured-image-beside {
 		background-color: $color__primary;
 
 		.cat-links:before {

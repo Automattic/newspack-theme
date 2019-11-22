@@ -531,11 +531,13 @@ body.page {
 		margin-top: 0;
 	}
 
-	.hd-bg .featured-image-beside {
+	// Header - default background
+	.h-db .featured-image-beside {
 		background-color: $color__primary;
 	}
 
-	.hs-bg .featured-image-beside {
+	// Header - solid background
+	.h-sb .featured-image-beside {
 		background-color: #333;
 	}
 

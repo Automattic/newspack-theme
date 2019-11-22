@@ -8,13 +8,13 @@ Newspack Theme Styles - Style Pack 2
 @import "../../style-base.scss";
 
 // Header Overlap
-
-.hs-bg .site-header {
+// Header - Solid background
+.h-sb .site-header {
 	background-color: $color__primary;
 }
 
 .site-header,
-.hs-bg .site-header {
+.h-sb .site-header {
 	@include media(tablet) {
 		padding-bottom: #{ 4 * $size__spacing-unit };
 	}
@@ -61,13 +61,14 @@ Newspack Theme Styles - Style Pack 2
 // Header
 
 .site-header,
-.hd-bg .middle-header-contain,
-.header-simplified.hd-bg .site-header,
-body:not(.hs-bg) .site-header {
+.h-db .middle-header-contain, // default background
+.header-simplified.h-db .site-header,
+body:not(.h-sb) .site-header {
 	background-color: #efefef;
 }
 
-.header-simplified.hd-bg .middle-header-contain {
+// default background
+.header-simplified.h-db .middle-header-contain {
 	border-bottom: 0;
 }
 
@@ -82,7 +83,8 @@ body:not(.hs-bg) .site-header {
 	border: 0;
 }
 
-.hs-bg .bottom-header-contain {
+// Header - solid background
+.h-sb .bottom-header-contain {
 	background-color: transparent;
 
 	.nav1 .main-menu > li,
