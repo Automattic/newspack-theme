@@ -53,9 +53,9 @@ function newspack_body_classes( $classes ) {
 
 	$header_center_logo = get_theme_mod( 'header_center_logo', false );
 	if ( true === $header_center_logo ) {
-		$classes[] = 'header-center-logo';
+		$classes[] = 'h-cl';
 	} else {
-		$classes[] = 'header-left-logo';
+		$classes[] = 'h-ll';
 	}
 
 	$header_simplified = get_theme_mod( 'header_simplified', false );
