@@ -263,7 +263,7 @@ function newspack_custom_colors_css() {
 
 			.site-header,
 			.h-db .site-header,
-			.hs.h-db .site-header,
+			.h-sh.h-db .site-header,
 			.site-content #primary,
 			#page .site-header {
 				border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
@@ -309,8 +309,8 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
-			.h-sb.hs .site-header .nav1 .main-menu .sub-menu a:hover,
-			.h-sb.hs .site-header .nav1 .main-menu .sub-menu a:focus {
+			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
+			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
@@ -334,8 +334,8 @@ function newspack_custom_colors_css() {
 				color: ' . newspack_color_with_contrast( $primary_color ) . ';
 			}
 
-			.h-sb.hs .site-header .nav1 .main-menu .sub-menu a:hover,
-			.h-sb.hs .site-header .nav1 .main-menu .sub-menu a:focus {
+			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
+			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
 			}
 		';
@@ -356,9 +356,9 @@ function newspack_custom_colors_css() {
 			.h-sb .site-title a:link,
 			.h-sb .site-title a:visited,
 			.h-sb .site-description,
-			.h-sb.hs .nav1 .main-menu > li,
-			.h-sb.hs .nav1 ul.main-menu > li > a,
-			.h-sb.hs .nav1 ul.main-menu > li > a:hover,
+			.h-sb.h-sh .nav1 .main-menu > li,
+			.h-sb.h-sh .nav1 ul.main-menu > li > a,
+			.h-sb.h-sh .nav1 ul.main-menu > li > a:hover,
 			.h-sb .top-header-contain,
 			.h-sb .middle-header-contain,
 			.nav1 .sub-menu a {

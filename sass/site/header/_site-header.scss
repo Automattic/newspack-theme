@@ -271,9 +271,8 @@
 	}
 }
 
-// Simplified Header
-.hs {
-
+// Header - short height
+.h-sh {
 	.site-header .wrapper {
 		justify-content: flex-start;
 	}
@@ -355,14 +354,14 @@
 
 @include media( tablet ) {
 	// Header default height
-	.hdh .desktop-only {
+	.h-dh .desktop-only {
 		display: inherit;
 	}
 }
 
 @include media( narrowdesktop ) {
-	// Header simplified
-	.hs .desktop-only {
+	// Header short height
+	.h-sh .desktop-only {
 		display: inherit;
 	}
 }

@@ -32,7 +32,7 @@
 }
 
 // Header - default background and default height
-body.h-db.hdh .site-header {
+body.h-db.h-dh .site-header {
 	.nav3 {
 		.menu-highlight a {
 			background-color: $color__primary;
@@ -69,8 +69,8 @@ body.h-db.hdh .site-header {
 		margin: #{$size__spacing-unit * 0.25} 0;
 	}
 
-	// Header Simplified
-	.hs & {
+	// Header Short Height
+	.h-sh & {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
 	}

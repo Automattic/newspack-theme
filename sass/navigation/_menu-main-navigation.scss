@@ -264,11 +264,13 @@
 	}
 }
 
-.hdh .site-header .nav1 .main-menu > li {
+// Header - default height
+.h-dh .site-header .nav1 .main-menu > li {
 	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
 }
 
-.hs {
+// Header - short height
+.h-sh {
 	.site-header .nav1 .main-menu > li {
 		padding: #{ 0.25 * $size__spacing-unit } 0;
 
