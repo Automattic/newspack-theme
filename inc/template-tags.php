@@ -231,7 +231,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 				else :
 					the_post_thumbnail( 'newspack-featured-image' );
-					$caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+					$caption = get_the_excerpt( get_post_thumbnail_id() );
 					if ( $caption ) :
 					?>
 						<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
