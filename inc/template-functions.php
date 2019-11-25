@@ -429,3 +429,14 @@ function newspack_get_color_contrast( $hex ) {
 		return '#fff';
 	}
 }
+
+/**
+ * Checks if color has sufficient contrast against white; if no, replaces it.
+ */
+function newspack_color_with_contrast( $color ) {
+	$contrast = newspack_get_color_contrast( $color );
+	if ( '#000' === $contrast ) {
+		return '#5a5a5a';
+	}
+	return $color;
+}

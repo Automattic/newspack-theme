@@ -429,7 +429,12 @@ function newspack_is_static_front_page() {
  */
 function newspack_is_active_style_pack() {
 	$args              = func_get_args();
-	$active_style_pack = get_theme_mod( 'active_style_pack', 'default' );
+	$active_style_pack = '';
+
+	// Only assign an active style pack if not using a child theme.
+	if ( ! is_child_theme() ) {
+		$active_style_pack = get_theme_mod( 'active_style_pack', 'default' );
+	}
 	return in_array( $active_style_pack, $args );
 }
 
