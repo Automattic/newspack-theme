@@ -140,6 +140,7 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-4' ) ) {
 			$css_blocks .= "
+			.site-description,
 			.has-drop-cap:not(:focus)::first-letter,
 			.taxonomy-description,
 			.entry .entry-content blockquote, .entry .entry-content blockquote cite, .entry .entry-content .wp-block-pullquote cite {
