@@ -278,7 +278,8 @@ function newspack_custom_typography_css() {
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty='true']::before,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
 			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation {
+			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+			.editor-block-list__layout .editor-block-list__block .entry-meta {
 				font-family: $font_header;
 			}";
 		}
