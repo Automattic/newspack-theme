@@ -8,8 +8,8 @@ Newspack Theme Styles - Style Pack 4
 @import "../../style-base.scss";
 
 // Header
-
-.header-solid-background {
+// Solid Background
+.h-sb {
 	.top-header-contain,
 	.middle-header-contain {
 		background-color: $color__background-dark;
@@ -24,7 +24,7 @@ Newspack Theme Styles - Style Pack 4
 	}
 }
 
-.header-solid-background.header-simplified {
+.h-sb.header-simplified {
 	.site-header .nav1 .main-menu .sub-menu {
 		a {
 			background-color: $color__text-main;
@@ -237,7 +237,7 @@ figcaption,
 
 
 @include media( tablet ) {
-	.header-solid-background .featured-image-beside {
+	.h-sb .featured-image-beside {
 		background-color: $color__background-pre;
 
 		.entry-header {
