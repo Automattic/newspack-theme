@@ -109,6 +109,21 @@
 	}
 }
 
+.widget_authors.widget {
+	a {
+		align-items: center;
+		display: flex;
+	}
+
+	img {
+		margin-right: #{ 0.5 * $size__spacing-unit };
+	}
+
+	ul ul {
+		margin: 0 0 #{ 1.5 * $size__spacing-unit } #{ 1.5 * $size__spacing-unit };
+	}
+}
+
 #secondary {
 	section:first-child,
 	section:first-child > div {
