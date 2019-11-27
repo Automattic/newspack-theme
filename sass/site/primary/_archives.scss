@@ -115,6 +115,10 @@
 	color: $color__text-main;
 }
 
+.tag .page-description:first-letter {
+	text-transform: capitalize;
+}
+
 .taxonomy-description {
 	color: $color__text-light;
 	font-style: italic;
