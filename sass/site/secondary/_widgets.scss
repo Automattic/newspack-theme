@@ -97,6 +97,18 @@
 	}
 }
 
+.jetpack_subscription_widget {
+	.error,
+	div {
+		background-color: $color__background-pre;
+		padding: $size__spacing-unit;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
 #secondary {
 	section:first-child,
 	section:first-child > div {
