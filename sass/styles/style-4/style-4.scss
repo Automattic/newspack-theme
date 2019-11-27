@@ -111,13 +111,21 @@ figcaption,
 	font-weight: bold;
 }
 
-.single-featured-image-behind {
+.single-post {
 	.featured-image-behind {
 		.entry-subhead {
 			border: 0;
 			display: block;
 			padding: 0;
 			text-align: center;
+
+			.author-avatar {
+				display: none;
+			}
+		}
+
+		.entry-meta {
+			margin-bottom: $size__spacing-unit;
 		}
 	}
 }
