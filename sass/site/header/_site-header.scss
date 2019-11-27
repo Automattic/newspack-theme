@@ -167,9 +167,7 @@
 }
 
 // Centred Logo
-
-.header-center-logo {
-
+.h-cl {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
 			justify-content: center;
@@ -290,7 +288,8 @@
 		margin: 0;
 	}
 
-	&.header-left-logo {
+	// Left-aligned logo
+	&.h-ll {
 		.site-branding {
 			margin-right: $size__spacing-unit;
 		}
@@ -314,7 +313,8 @@
 		margin-left: #{ 0.75 * $size__spacing-unit };
 	}
 
-	&.header-left-logo {
+	// Left-aligned logo
+	&.h-ll {
 		&.hide-site-tagline .nav-wrapper {
 			margin-left: auto;
 
@@ -343,7 +343,8 @@
 	justify-content: flex-end;
 }
 
-.header-center-logo.header-simplified .nav-wrapper:first-of-type {
+// Left-aligned logo
+.h-cl.header-simplified .nav-wrapper:first-of-type {
 	justify-content: flex-start;
 }
 
