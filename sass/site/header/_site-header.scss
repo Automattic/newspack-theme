@@ -271,10 +271,8 @@
 	}
 }
 
-// Simplified Header
-
-.header-simplified {
-
+// Header - short height
+.h-sh {
 	.site-header .wrapper {
 		justify-content: flex-start;
 	}
@@ -343,8 +341,8 @@
 	justify-content: flex-end;
 }
 
-// Left-aligned logo
-.h-cl.header-simplified .nav-wrapper:first-of-type {
+// Centred logo; short header
+.h-cl.h-sh .nav-wrapper:first-of-type {
 	justify-content: flex-start;
 }
 
@@ -355,13 +353,15 @@
 }
 
 @include media( tablet ) {
-	.header-default-height .desktop-only {
+	// Header default height
+	.h-dh .desktop-only {
 		display: inherit;
 	}
 }
 
 @include media( narrowdesktop ) {
-	.header-simplified .desktop-only {
+	// Header short height
+	.h-sh .desktop-only {
 		display: inherit;
 	}
 }

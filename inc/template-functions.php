@@ -60,9 +60,9 @@ function newspack_body_classes( $classes ) {
 
 	$header_simplified = get_theme_mod( 'header_simplified', false );
 	if ( true === $header_simplified ) {
-		$classes[] = 'header-simplified';
+		$classes[] = 'h-sh'; // Header short height.
 	} else {
-		$classes[] = 'header-default-height';
+		$classes[] = 'h-dh'; // Header default height.
 	}
 
 	// Adds classes if menus are assigned

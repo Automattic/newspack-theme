@@ -31,8 +31,8 @@
 	}
 }
 
-// Header - default background
-body.h-db.header-default-height .site-header {
+// Header - default background and default height
+body.h-db.h-dh .site-header {
 	.nav3 {
 		.menu-highlight a {
 			background-color: $color__primary;
@@ -69,8 +69,8 @@ body.h-db.header-default-height .site-header {
 		margin: #{$size__spacing-unit * 0.25} 0;
 	}
 
-	// Short header
-	.header-simplified & {
+	// Header Short Height
+	.h-sh & {
 		font-size: $font__size_base;
 		margin-left: $size__spacing-unit;
 	}
