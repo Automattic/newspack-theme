@@ -1,12 +1,9 @@
-
-
 <?php
 /**
  * Custom template tags for this theme
  *
  * @package Newspack
  */
-
 
 if ( ! function_exists( 'newspack_posted_on' ) ) :
 	/**
