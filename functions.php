@@ -457,6 +457,10 @@ function newspack_filter_admin_body_class( $classes ) {
 		$classes .= ' style-pack-' . get_theme_mod( 'active_style_pack', 'default' );
 	}
 
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes .= ' no-sidebar';
+	}
+
 	if ( 'single-feature.php' === newspack_check_current_template() ) {
 		$classes .= ' newspack-single-column-template';
 	} elseif ( 'single-wide.php' === newspack_check_current_template() ) {
