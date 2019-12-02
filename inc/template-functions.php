@@ -98,6 +98,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-large-featured-image';
 	}
 
+	// Add a class to determine whether it has a sidebar.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
+
 	// Adds a class if the author bio is hidden.
 	$display_author_bio = get_theme_mod( 'show_author_bio', true );
 	if ( false === $display_author_bio ) {
