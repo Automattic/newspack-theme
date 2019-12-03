@@ -69,7 +69,7 @@
 .blog #main,
 .search #main,
 .page .main-content,
-.single-post .main-content,
+.single .main-content,
 .newspack-front-page.page-template-single-feature .site-main {
 	@include media(tablet) {
 		width: 65%;
@@ -80,7 +80,7 @@
 .blog #secondary,
 .search #secondary,
 .page #secondary,
-.single-post #secondary {
+.single #secondary {
 	@include media(tablet) {
 		width: calc( 35% - #{ 2 * $size__spacing-unit } );
 	}

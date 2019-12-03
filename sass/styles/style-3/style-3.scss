@@ -159,8 +159,8 @@ Newspack Theme Styles - Style Pack 3
 	font-size: $font__size-xs;
 }
 
-.single-post:not(.has-featured-image) .entry-header,
-.single-post:not(.has-large-featured-image) .entry-header {
+.single:not(.has-featured-image) .entry-header,
+.single:not(.has-large-featured-image) .entry-header {
 	border-bottom: 1px dotted $color__text-main;
 }
 
