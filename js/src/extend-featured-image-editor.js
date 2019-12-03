@@ -20,6 +20,7 @@ class RadioCustom extends Component {
 					{ label: __( 'Small' ), value: 'small' },
 					{ label: __( 'Behind article title' ), value: 'behind' },
 					{ label: __( 'Beside article title' ), value: 'beside' },
+					{ label: __( 'Hidden' ), value: 'hidden' },
 				] }
 				onChange={ value => {
 					this.setState( { value } );

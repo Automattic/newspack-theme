@@ -25,7 +25,7 @@ $image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position
 				the_post();
 
 				// Template part for large featured images.
-				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'small' !== $image_position ) :
+				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'small' !== $image_position && 'hidden' !== $image_position ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :
 				?>
@@ -42,7 +42,7 @@ $image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position
 					}
 
 					// Place smaller featured images inside of 'content' area.
-					if ( has_post_thumbnail() && 1200 > $thumbnail_info['width'] || 'small' === $image_position ) {
+					if ( ( has_post_thumbnail() && 1200 > $thumbnail_info['width'] || 'small' === $image_position ) && 'hidden' !== $image_position ) {
 						newspack_post_thumbnail();
 					}
 
