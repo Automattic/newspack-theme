@@ -5,6 +5,47 @@
  * @package Newspack
  */
 
+if ( ! function_exists( 'newspack_featured_image_position' ) ) :
+	/**
+	 * Returns current post's featured image position.
+	 *
+	 * @return string
+	 */
+	function newspack_featured_image_position() {
+		// Get thumbnail
+		$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+		$img_width      = $thumbnail_info['width'];
+
+		// Get per-post image position setting.
+		$image_pos = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
+
+		// Get default image position setting from the Customizer.
+		$default_image_pos = get_theme_mod( 'featured_image_default', 'large' );
+
+		// Set a position value to return.
+		$position = '';
+
+		if ( ! has_post_thumbnail() ) {
+			return;
+		}
+
+		// First, check for a per-post image setting.
+		if ( '' !== $image_pos ) {
+			$position = $image_pos;
+		// If this post doesn't have a setting, fall back to the default.
+		} else {
+			$position = $default_image_pos;
+		}
+
+		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large.
+		if ( 'large' === $position && 1200 > $img_width ) {
+			$position = 'small';
+		}
+
+		return $position;
+	}
+endif;
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -83,20 +124,17 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-featured-image';
 	}
 
-	// Adds a class to single artcles, if they're using a special featured image style.
-	if ( is_single() ) {
-		if ( 'behind' === $current_featured_image_style ) {
-			$classes[] = 'single-featured-image-behind';
-		} elseif ( 'beside' === $current_featured_image_style ) {
-			$classes[] = 'single-featured-image-beside';
-		} else {
-			$classes[] = 'single-featured-image-default';
-		}
+	// Adds special classes, depending on the featured image position.
+	if ( 'behind' === newspack_featured_image_position() ) {
+		$classes[] = 'single-featured-image-behind';
+	} elseif ( 'beside' === newspack_featured_image_position() ) {
+		$classes[] = 'single-featured-image-beside';
+	} elseif ( is_single() ) {
+		$classes[] = 'single-featured-image-default';
 	}
 
 	// Adds a class if singular post has a large featured image
-	$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-	if ( is_single() && has_post_thumbnail() && 1200 <= (int) $thumbnail_info['width'] && 'small' !== $current_featured_image_style ) {
+	if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) {
 		$classes[] = 'has-large-featured-image';
 	}
 

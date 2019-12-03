@@ -217,10 +217,9 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			<figure class="post-thumbnail">
 
 				<?php
-				$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 
 				// If using the behind or beside image styles, add the object-fit argument for AMP.
-				if ( 'behind' === $current_featured_image_style || 'beside' === $current_featured_image_style ) :
+				if ( in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) ) ) :
 
 					the_post_thumbnail(
 						'newspack-featured-image',

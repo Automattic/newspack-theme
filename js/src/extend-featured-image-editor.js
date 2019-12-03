@@ -16,6 +16,7 @@ class RadioCustom extends Component {
 				label={ __( 'Featured Image Position' ) }
 				selected={ meta.newspack_featured_image_position }
 				options={ [
+					{ label: __( 'Default (set in Customizer)' ), value: '' },
 					{ label: __( 'Large' ), value: 'large' },
 					{ label: __( 'Small' ), value: 'small' },
 					{ label: __( 'Behind article title' ), value: 'behind' },
