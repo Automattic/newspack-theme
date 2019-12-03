@@ -75,13 +75,15 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
+	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
+
+
 	// Adds class if singular post or page has a featured image.
-	if ( is_singular() && has_post_thumbnail() ) {
+	if ( is_singular() && has_post_thumbnail() && 'hidden' !== $current_featured_image_style ) {
 		$classes[] = 'has-featured-image';
 	}
 
 	// Adds a class to single artcles, if they're using a special featured image style.
-	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 	if ( is_single() ) {
 		if ( 'behind' === $current_featured_image_style ) {
 			$classes[] = 'single-featured-image-behind';
