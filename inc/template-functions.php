@@ -12,6 +12,11 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 	 * @return string
 	 */
 	function newspack_featured_image_position() {
+		// If we're not on a single page, or if there's no thumbnail, return.
+		if ( ! is_single() || ! has_post_thumbnail() ) {
+			return;
+		}
+
 		// Get thumbnail
 		$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
 		$img_width      = $thumbnail_info['width'];
@@ -24,10 +29,6 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 
 		// Set a position value to return.
 		$position = '';
-
-		if ( ! has_post_thumbnail() ) {
-			return;
-		}
 
 		// First, check for a per-post image setting.
 		if ( '' !== $image_pos ) {
@@ -116,11 +117,8 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
-	$current_featured_image_style = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
-
-
 	// Adds class if singular post or page has a featured image.
-	if ( is_singular() && has_post_thumbnail() && 'hidden' !== $current_featured_image_style ) {
+	if ( is_singular() && has_post_thumbnail() && 'hidden' !== newspack_featured_image_position() ) {
 		$classes[] = 'has-featured-image';
 	}
 
