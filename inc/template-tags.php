@@ -231,8 +231,12 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 				else :
 					the_post_thumbnail( 'newspack-featured-image' );
+
 					$caption = get_the_excerpt( get_post_thumbnail_id() );
-					if ( $caption ) :
+					// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
+					$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
+
+					if ( $caption_exists ) :
 					?>
 						<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
 					<?php
