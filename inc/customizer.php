@@ -295,6 +295,40 @@ function newspack_customize_register( $wp_customize ) {
 			'section'     => 'author_bio_options',
 		)
 	);
+
+	/**
+	 * Featured Image settings
+	 */
+	$wp_customize->add_section(
+		'featured_image_options',
+		array(
+			'title' => esc_html__( 'Featured Image Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to hide the whole author bio.
+	$wp_customize->add_setting(
+		'featured_image_default',
+		array(
+			'default'           => 'large',
+			'sanitize_callback' => 'newspack_sanitize_feature_image_position',
+		)
+	);
+	$wp_customize->add_control(
+		'featured_image_default',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Featured Image Default Position', 'newspack' ),
+			'choices' => array(
+				'large'  => esc_html__( 'Large', 'newspack' ),
+				'small'  => esc_html__( 'Small', 'newspack' ),
+				'behind' => esc_html__( 'Behind article title', 'newspack' ),
+				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'hidden' => esc_html__( 'Hidden', 'newspack' ),
+			),
+			'section' => 'featured_image_options',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
@@ -497,6 +531,29 @@ function newspack_sanitize_color_option( $choice ) {
 	}
 
 	return 'default';
+}
+
+/**
+ * Sanitize custom color choice.
+ *
+ * @param string $choice Whether image filter is active.
+ *
+ * @return string
+ */
+function newspack_sanitize_feature_image_position( $choice ) {
+	$valid = array(
+		'large',
+		'small',
+		'behind',
+		'beside',
+		'hidden',
+	);
+
+	if ( in_array( $choice, $valid, true ) ) {
+		return $choice;
+	}
+
+	return 'large';
 }
 
 /**
