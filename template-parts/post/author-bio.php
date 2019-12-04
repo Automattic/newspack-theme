@@ -55,14 +55,14 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 					</div><!-- .author-bio-header -->
 
 					<p>
-						<?php echo wp_kses_post( $author->description ); ?>
-					</p><!-- .author-description -->
-					<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
+						<?php echo esc_html( newspack_truncate_text( $author->description, 200 ) ); ?>
+						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
 						<?php
 							/* translators: %s is the current author's name. */
 							printf( esc_html__( 'More by %s', 'newspack' ), esc_html( $author->display_name ) );
 						?>
-					</a>
+						</a>
+					</p><!-- .author-description -->
 				</div><!-- .author-bio-text -->
 
 			</div><!-- .author-bio -->
@@ -109,14 +109,14 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 		</div><!-- .author-bio-header -->
 
 		<p>
-			<?php the_author_meta( 'description' ); ?>
+			<?php echo esc_html( newspack_truncate_text( get_the_author_meta( 'description' ), 200 ) ); ?>
+			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php
+					/* translators: %s is the current author's name. */
+					printf( esc_html__( 'More by %s', 'newspack' ), esc_html( get_the_author() ) );
+				?>
+			</a>
 		</p><!-- .author-description -->
-		<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-			<?php
-				/* translators: %s is the current author's name. */
-				printf( esc_html__( 'More by %s', 'newspack' ), esc_html( get_the_author() ) );
-			?>
-		</a>
 	</div><!-- .author-bio-text -->
 </div><!-- .author-bio -->
 <?php endif; ?>

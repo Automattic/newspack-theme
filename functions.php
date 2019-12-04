@@ -584,6 +584,25 @@ function newspack_sanitize_svgs() {
 }
 
 /**
+ * Truncates text to a specific character length, without breaking a character.
+ */
+function newspack_truncate_text( $content, $length, $after = '...' ) {
+	// If content is already shorter than the truncate length, return it.
+	if ( strlen( $content ) <= $length ) {
+		return $content;
+	}
+
+	// Find the first space after the desired length:
+	$breakpoint = strpos( $content, ' ', $length );
+
+	// Make sure $breakpoint isn't returning false, and is less than length of content:
+	if ( false !== $breakpoint && $breakpoint < strlen( $content ) - 1 ) {
+		$content = substr( $content, 0, $breakpoint ) . $after;
+	}
+	return $content;
+}
+
+/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
