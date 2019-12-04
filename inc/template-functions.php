@@ -151,23 +151,23 @@ add_filter( 'comment_form_defaults', 'newspack_comment_form_defaults' );
  */
 function newspack_get_the_archive_title() {
 	if ( is_category() ) {
-		$title = esc_html__( 'Category: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_tag() ) {
-		$title = esc_html__( 'Tag: ', 'newspack' ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
+		$title = '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} elseif ( is_author() ) {
-		$title = esc_html__( 'Author Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
+		$title = esc_html__( 'Articles by ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
-		$title = esc_html__( 'Yearly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
+		$title = esc_html__( 'Articles from ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
 	} elseif ( is_month() ) {
-		$title = esc_html__( 'Monthly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
+		$title = esc_html__( 'Articles from ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
 	} elseif ( is_day() ) {
-		$title = esc_html__( 'Daily Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		$title = esc_html__( 'Articles from ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
 	} elseif ( is_post_type_archive() ) {
-		$title = esc_html__( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
+		$title = '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name );
+		$title = esc_html( $tax->labels->singular_name );
 	} else {
 		$title = esc_html__( 'Archives:', 'newspack' );
 	}
