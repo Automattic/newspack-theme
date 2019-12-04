@@ -277,6 +277,24 @@ function newspack_customize_register( $wp_customize ) {
 			'section'     => 'author_bio_options',
 		)
 	);
+
+	// Add option to hide the whole author bio.
+	$wp_customize->add_setting(
+		'author_bio_length',
+		array(
+			'default'           => 200,
+			'sanitize_callback' => 'absint',
+		)
+	);
+	$wp_customize->add_control(
+		'author_bio_length',
+		array(
+			'type'        => 'number',
+			'label'       => esc_html__( 'Author Bio Length (Characters)', 'newspack' ),
+			'description' => esc_html__( 'Truncates the author bio to the nearest word to the characters specified; links to rest of bio on author archive page.', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
