@@ -290,8 +290,8 @@ function newspack_customize_register( $wp_customize ) {
 		'author_bio_length',
 		array(
 			'type'        => 'number',
-			'label'       => esc_html__( 'Author Bio Length (Characters)', 'newspack' ),
-			'description' => esc_html__( 'Truncates the author bio to the nearest word to the characters specified; links to rest of bio on author archive page.', 'newspack' ),
+			'label'       => esc_html__( 'Author Bio Length (in characters)', 'newspack' ),
+			'description' => esc_html__( 'Truncates the author bio on single posts to this approximate character length, but without breaking a word. The full bio appears on the author archive page.', 'newspack' ),
 			'section'     => 'author_bio_options',
 		)
 	);
