@@ -18,7 +18,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				// Template part for large featured images (standard, behind and small).
+				// Template part for large featured images.
 				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :

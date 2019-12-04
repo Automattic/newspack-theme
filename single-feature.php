@@ -11,11 +11,7 @@
  */
 
 get_header();
-$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-$image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 ?>
-
-
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
