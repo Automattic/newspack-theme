@@ -14,7 +14,7 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 	function newspack_featured_image_position() {
 		// If we're not on a single page, or if there's no thumbnail, return.
 		if ( ! is_single() || ! has_post_thumbnail() ) {
-			return;
+			return '';
 		}
 
 		// Get thumbnail
