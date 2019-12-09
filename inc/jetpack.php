@@ -53,7 +53,6 @@ function newspack_jetpack_setup() {
 			),
 			'featured-images' => array(
 				'archive' => true,
-				'post'    => true,
 				'page'    => true,
 			),
 		)

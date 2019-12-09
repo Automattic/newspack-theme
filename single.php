@@ -8,8 +8,6 @@
  */
 
 get_header();
-$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-$image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 ?>
 
 	<section id="primary" class="content-area">
@@ -21,13 +19,14 @@ $image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position
 				the_post();
 
 				// Template part for large featured images.
-				if ( has_post_thumbnail() && 1200 <= $thumbnail_info['width'] && 'small' !== $image_position && 'hidden' !== $image_position ) :
+				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :
 				?>
 					<header class="entry-header">
 						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 					</header>
+
 				<?php endif; ?>
 
 				<div class="main-content">
@@ -38,9 +37,9 @@ $image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position
 					}
 
 					// Place smaller featured images inside of 'content' area.
-					if ( ( has_post_thumbnail() && ( 1200 > $thumbnail_info['width'] || 'small' === $image_position ) ) && 'hidden' !== $image_position ) {
+					if ( 'small' === newspack_featured_image_position() ) :
 						newspack_post_thumbnail();
-					}
+					endif;
 
 					get_template_part( 'template-parts/content/content', 'single' );
 

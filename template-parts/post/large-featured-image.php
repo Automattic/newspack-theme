@@ -5,10 +5,9 @@
  * @package Newspack
  */
 
-$featured_image_position = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 $caption                 = get_post( get_post_thumbnail_id() )->post_excerpt;
 
-if ( 'behind' === $featured_image_position ) :
+if ( 'behind' === newspack_featured_image_position() ) :
 ?>
 
 	<div class="featured-image-behind">
@@ -24,7 +23,7 @@ if ( 'behind' === $featured_image_position ) :
 		<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
 	<?php endif; ?>
 
-<?php elseif ( 'beside' === $featured_image_position ) : ?>
+<?php elseif ( 'beside' === newspack_featured_image_position() ) : ?>
 
 	<div class="featured-image-beside">
 		<div class="wrapper">
