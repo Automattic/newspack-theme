@@ -1,0 +1,13 @@
+{
+	"name": "newspack-theme",
+	"version": "1.0.0-alpha.23",
+	"description": "A theme for Newspack. https://newspack.blog",
+	"bugs": {
+		"url": "https://github.com/Automattic/newspack-theme/issues"
+	},
+	"homepage": "https://github.com/WordPress/newspack#readme",
+	"scripts": {
+		"build": "(cd newspack-theme && npm run build)",
+		"release:archive": "(cd newspack-theme && npm run release:archive)"
+	}
+}
