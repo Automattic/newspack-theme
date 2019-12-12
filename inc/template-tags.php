@@ -23,19 +23,34 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		printf(
-			'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
-			esc_url( get_permalink() ),
-			wp_kses(
-				$time_string,
-				array(
-					'time' => array(
-						'class'    => array(),
-						'datetime' => array(),
-					),
+		if ( is_single() ) {
+			printf(
+			'<span class="posted-on">%1$s</span>',
+				wp_kses(
+					$time_string,
+					array(
+						'time' => array(
+							'class'    => array(),
+							'datetime' => array(),
+						),
+					)
 				)
-			)
-		);
+			);
+		} else {
+			printf(
+			'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
+				esc_url( get_permalink() ),
+				wp_kses(
+					$time_string,
+					array(
+						'time' => array(
+							'class'    => array(),
+							'datetime' => array(),
+						),
+					)
+				)
+			);
+		}
 	}
 endif;
 
