@@ -680,6 +680,13 @@
 		figcaption {
 			text-align: left;
 		}
+
+		.alignleft > figcaption,
+		.alignright > figcaption,
+		.alignleft > figure,
+		.alignright > figure {
+			display: block;
+		}
 	}
 
 	//! Galleries
