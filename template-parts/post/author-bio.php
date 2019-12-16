@@ -32,7 +32,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 			<div class="author-bio">
 				<?php
 				if ( ! newspack_is_active_style_pack( 'style-4' ) && $author_avatar ) {
-					echo wp_kses_post( $author_avatar );
+					echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
 				}
 				?>
 
@@ -40,7 +40,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 					<div class="author-bio-header">
 						<?php
 						if ( newspack_is_active_style_pack( 'style-4' ) && $author_avatar ) {
-							echo wp_kses_post( $author_avatar );
+							echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
 						}
 						?>
 

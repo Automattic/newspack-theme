@@ -38,7 +38,7 @@ get_header();
 					}
 
 					if ( $author_avatar ) {
-						echo wp_kses_post( $author_avatar );
+						echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
 					}
 				}
 			?>

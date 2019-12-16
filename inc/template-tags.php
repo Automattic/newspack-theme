@@ -63,7 +63,7 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 					$author_avatar = coauthors_get_avatar( $author, 80 );
 				}
 
-				echo '<span class="author-avatar">' . wp_kses_post( $author_avatar ) . '</span>';
+				echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>';
 			}
 			?>
 

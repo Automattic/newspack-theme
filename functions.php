@@ -602,6 +602,26 @@ function newspack_truncate_text( $content, $length, $after = '...' ) {
 	return $content;
 }
 
+ /**
+ * Returns an array of 'acceptable' avatar tags, to use with wp_kses().
+ */
+function newspack_sanitize_avatars() {
+	$avatar_args = array(
+		'img' => array(
+			'class'  => true,
+			'src'    => true,
+			'alt'    => true,
+			'width'  => true,
+			'height' => true,
+			'data-*' => true,
+			'srcset' => true,
+		),
+		'noscript' => array(),
+	);
+
+	return $avatar_args;
+}
+
 /**
  * SVG Icons class.
  */
