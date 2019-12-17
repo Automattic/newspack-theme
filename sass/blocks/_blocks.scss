@@ -680,6 +680,11 @@
 		figcaption {
 			text-align: left;
 		}
+
+		.alignleft > figcaption,
+		.alignright > figcaption {
+			display: block;
+		}
 	}
 
 	//! Galleries
