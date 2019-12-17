@@ -354,6 +354,26 @@ function newspack_extend_featured_image_script() {
 add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
 
 /**
+ * Post Subtitle feature
+ * - enqueue JS script
+ * - register post meta field
+ */
+function newspack_post_subtitle_script() {
+	wp_enqueue_script( 'newspack-post-subtitle', get_theme_file_uri( '/js/dist/post-subtitle.js' ), array(), '1.0', true );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_post_subtitle_script' );
+
+function register_post_subtitle_meta_field() {
+	register_post_meta( 'post', 'newspack_post_subtitle', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
+}
+add_action( 'init', 'register_post_subtitle_meta_field' );
+
+
+/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
