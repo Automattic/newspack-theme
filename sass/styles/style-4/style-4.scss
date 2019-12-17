@@ -190,16 +190,28 @@ figcaption,
 		text-align: center;
 	}
 
-	.entry-header .entry-title {
-		margin-bottom: #{ 1.5 * $size__spacing-unit };
-		margin-top: $size__spacing-unit;
-		text-align: center;
+	.entry-header {
+		.entry-title,
+		.newspack-post-subtitle {
+			text-align: center;
+		}
+		.entry-title {
+			margin-bottom: #{ 1.5 * $size__spacing-unit };
+			margin-top: $size__spacing-unit;
 
-		@include media( tablet ) {
-			margin-bottom: #{ 3 * $size__spacing-unit };
-			margin-left: auto;
-			margin-right: auto;
-			width: 85%;
+			@include media( tablet ) {
+				margin-bottom: #{ 3 * $size__spacing-unit };
+				margin-left: auto;
+				margin-right: auto;
+				width: 85%;
+			}
+
+			&--with-subtitle {
+				margin-bottom: #{ 0.7 * $size__spacing-unit };
+			}
+		}
+		.newspack-post-subtitle {
+			margin-bottom: #{ 3.3 * $size__spacing-unit };
 		}
 	}
 
