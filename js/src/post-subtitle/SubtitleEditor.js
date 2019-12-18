@@ -4,6 +4,7 @@
 import { compose } from '@wordpress/compose';
 import { withDispatch } from '@wordpress/data';
 import { useState, useEffect } from '@wordpress/element';
+import { TextareaControl } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -30,12 +31,12 @@ const SubtitleEditor = ( { subtitle, saveSubtitle } ) => {
 		saveSubtitle( value );
 	}, [ value ]);
 
-	const onChange = ( { target } ) => {
-		setValue( target.value );
+	const onChange = value => {
+		setValue( value );
 	};
 
 	return (
-		<textarea
+		<TextareaControl
 			value={ value }
 			onChange={ onChange }
 			style={ { marginTop: '10px', width: '100%' } }
