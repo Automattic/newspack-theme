@@ -221,6 +221,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				'google_fonts_caching' => true,
 			],
 		] );
+
+		// Add custom theme support - post subtitle
+		add_theme_support( 'post-subtitle' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
