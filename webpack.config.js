@@ -11,6 +11,7 @@ const getBaseWebpackConfig = require("@automattic/calypso-build/webpack.config.j
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+// Add all js/src/*.js scripts
 const entry = fs
 	.readdirSync(path.join(__dirname, "js", "src"))
 	.filter(script => "js" === script.split(".").pop())
@@ -22,6 +23,13 @@ const entry = fs
 			[split.join(".")]: path.join(__dirname, "js", "src", item)
 		};
 	}, {});
+
+// Add all js/src/*/index.js scripts
+fs.readdirSync( path.join( __dirname, "js", "src" ) )
+	.filter( script => fs.existsSync( path.join( __dirname, "js", "src", script, "index.js" ) ) )
+	.forEach( function( script ) {
+		entry[ script ] = path.join( __dirname, "js", "src", script, "index.js" );
+	} );
 
 const webpackConfig = getBaseWebpackConfig(
 	{ WP: true },

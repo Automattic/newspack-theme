@@ -42,6 +42,14 @@
 	}
 }
 
+.newspack-post-subtitle {
+	margin-bottom: 1.3em;
+	font-style: italic;
+	@include media(mobile) {
+		margin-bottom: 2.3em;
+	}
+}
+
 body.page {
 	.entry-title {
 		font-size: $font__size-xl;
@@ -258,6 +266,10 @@ body.page {
 	.entry-title {
 		font-size: $font__size-xl;
 		margin: 0 0 0.5em;
+
+		&--with-subtitle {
+			margin-bottom: #{ 0.3 * $size__spacing-unit };
+		}
 
 		@include media( mobile ) {
 			font-size: $font__size-xxl;

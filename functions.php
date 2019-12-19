@@ -346,12 +346,18 @@ function newspack_scripts() {
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 
 /**
- * Enqueue Block Styles Javascript
+ * Enqueue scripts for:
+ * - Featured Image position option
+ * - Article Subtitle
  */
-function newspack_extend_featured_image_script() {
+function newspack_enqueue_scripts() {
 	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks', 'wp-components' ), wp_get_theme()->get( 'Version' ) );
+
+	if ( 'post' === get_current_screen()->post_type ) {
+		wp_enqueue_script( 'newspack-post-subtitle', get_theme_file_uri( '/js/dist/post-subtitle.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	}
 }
-add_action( 'enqueue_block_editor_assets', 'newspack_extend_featured_image_script' );
+add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
 
 /**
  * Fix skip link focus in IE11.
@@ -495,12 +501,24 @@ function newspack_front_page_template( $template ) {
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
 
 /**
- * Register Featured Image position option.
+ * Register meta fields:
+ * - Featured Image position option
+ * - Article Subtitle
  */
 function newspack_register_meta() {
 	register_meta(
 		'post',
 		'newspack_featured_image_position',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'string',
+		)
+	);
+
+	register_post_meta(
+		'post',
+		'newspack_post_subtitle',
 		array(
 			'show_in_rest' => true,
 			'single'       => true,
