@@ -12,7 +12,8 @@ project.properties
 .sublimelinterrc
 
 # Grunt
-/node_modules/
+node_modules/
+*/node_modules/
 none
 
 # Sass
@@ -32,6 +33,7 @@ Thumbs.db
 *.css
 
 # Compiled Javascript
+js/dist/
 */js/dist/
 
 # Release folder
