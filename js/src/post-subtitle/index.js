@@ -28,10 +28,10 @@ const NewspackSubtitlePanel = ( { subtitle } ) => {
 	return (
 		<PluginDocumentSettingPanel
 			name="newspack-subtitle"
-			title={ __( 'Article Subtitle' ) }
+			title={ __( 'Article Subtitle', 'newspack' ) }
 			className="newspack-subtitle"
 		>
-			{ __( 'Set a Subtitle for the Article' ) }
+			{ __( 'Set a Subtitle for the Article', 'newspack' ) }
 			<SubtitleEditor />
 		</PluginDocumentSettingPanel>
 	);
