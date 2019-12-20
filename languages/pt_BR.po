@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Newspack\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
 "POT-Creation-Date: 2019-12-20T20:01:33+00:00\n"
-"PO-Revision-Date: 2019-12-20 12:04-0800\n"
+"PO-Revision-Date: 2019-12-20 14:30-0800\n"
 "Last-Translator: Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>\n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -210,35 +210,25 @@ msgid "Above Copyright"
 msgstr ""
 
 #: functions.php:266
-#, fuzzy
-#| msgid "Add widgets here to appear in your footer."
 msgid ""
 "Add widgets here to appear below the footer, above the copyright information."
-msgstr "Adicione widgets aqui para aparecer no rodapé."
+msgstr ""
 
 #: functions.php:276
-#, fuzzy
-#| msgid "Article feature"
 msgid "Article above content"
-msgstr "Artigo em Destaque"
+msgstr ""
 
 #: functions.php:278
-#, fuzzy
-#| msgid "Add widgets here to appear in your footer."
 msgid "Add widgets here to appear above article content."
-msgstr "Adicione widgets aqui para aparecer no rodapé."
+msgstr ""
 
 #: functions.php:288
-#, fuzzy
-#| msgid "Article feature"
 msgid "Article below content"
-msgstr "Artigo em Destaque"
+msgstr ""
 
 #: functions.php:290
-#, fuzzy
-#| msgid "Add widgets here to appear in your footer."
 msgid "Add widgets here to appear below article content."
-msgstr "Adicione widgets aqui para aparecer no rodapé."
+msgstr ""
 
 #: functions.php:332 template-parts/header/header-search.php:11
 #: template-parts/header/header-search.php:12
@@ -377,20 +367,16 @@ msgid "Author Bio Settings"
 msgstr ""
 
 #: inc/customizer.php:256
-#, fuzzy
-#| msgid "Display Site Title"
 msgid "Display Author Bio"
-msgstr "Exibir título do site"
+msgstr ""
 
 #: inc/customizer.php:257
 msgid "Display Author Bio under individual posts."
 msgstr ""
 
 #: inc/customizer.php:275
-#, fuzzy
-#| msgid "Display Site Title"
 msgid "Display Author Email"
-msgstr "Exibir título do site"
+msgstr ""
 
 #: inc/customizer.php:276
 msgid "Display Author email with bio on individual posts."
@@ -408,10 +394,8 @@ msgid ""
 msgstr ""
 
 #: inc/customizer.php:305
-#, fuzzy
-#| msgid "Header Settings"
 msgid "Featured Image Settings"
-msgstr "Configurações de cabeçalho"
+msgstr ""
 
 #: inc/customizer.php:321
 msgid "Featured Image Default Position"
@@ -486,10 +470,8 @@ msgid "Style 4"
 msgstr "Estilo 4"
 
 #: inc/style-packs.php:24
-#, fuzzy
-#| msgid "Style 1"
 msgid "Style 5"
-msgstr "Estilo 1"
+msgstr "Estilo 5"
 
 #: inc/style-packs.php:28
 msgid "This is the default style."
@@ -512,10 +494,8 @@ msgid "The description for style 4."
 msgstr "A descrição para o estilo 4."
 
 #: inc/style-packs.php:33
-#, fuzzy
-#| msgid "The description for style 1."
 msgid "The description for style 5."
-msgstr "A descrição para o estilo 1."
+msgstr "A descrição para o estilo 5."
 
 #: inc/template-functions.php:197
 msgid "Category: "
@@ -689,10 +669,8 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continue lendo <span class = \"screen-reader-text\"> \"%s\" </span>"
 
 #: template-parts/footer/below-footer-widgets.php:9
-#, fuzzy
-#| msgid "Footer"
 msgid "Below Footer"
-msgstr "Rodapé"
+msgstr ""
 
 #: template-parts/header/mobile-sidebar-fallback.php:13
 #: template-parts/header/mobile-sidebar.php:13
@@ -728,10 +706,8 @@ msgid "Default (set in Customizer)"
 msgstr ""
 
 #: js/src/post-subtitle/index.js:31
-#, fuzzy
-#| msgid "Article feature"
 msgid "Article Subtitle"
-msgstr "Artigo em Destaque"
+msgstr ""
 
 #: js/src/post-subtitle/index.js:34
 msgid "Set a Subtitle for the Article"

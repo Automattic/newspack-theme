@@ -6,7 +6,7 @@
 	"locale_data": {
 		"messages": {
 			"": { "domain": "messages", "lang": "pt_BR", "plural-forms": "nplurals=2; plural=n != 1;" },
-			"Article Subtitle": [ "Artigo em Destaque" ],
+			"Article Subtitle": [ "" ],
 			"Set a Subtitle for the Article": [ "" ]
 		}
 	}
