@@ -61,8 +61,8 @@ class Newspack_Walker_Comment extends Walker_Comment {
 						}
 
 						printf(
-							/* translators: %s: comment author link */
 							wp_kses(
+								/* translators: %s: comment author link */
 								__( '%s <span class="screen-reader-text says">says:</span>', 'newspack' ),
 								array(
 									'span' => array(

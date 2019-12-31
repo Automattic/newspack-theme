@@ -16,12 +16,12 @@ class RadioCustom extends Component {
 				label={ __( 'Featured Image Position' ) }
 				selected={ meta.newspack_featured_image_position }
 				options={ [
-					{ label: __( 'Default (set in Customizer)' ), value: '' },
-					{ label: __( 'Large' ), value: 'large' },
-					{ label: __( 'Small' ), value: 'small' },
-					{ label: __( 'Behind article title' ), value: 'behind' },
-					{ label: __( 'Beside article title' ), value: 'beside' },
-					{ label: __( 'Hidden' ), value: 'hidden' },
+					{ label: __( 'Default (set in Customizer)', 'newspack' ), value: '' },
+					{ label: __( 'Large', 'newspack' ), value: 'large' },
+					{ label: __( 'Small', 'newspack' ), value: 'small' },
+					{ label: __( 'Behind article title', 'newspack' ), value: 'behind' },
+					{ label: __( 'Beside article title', 'newspack' ), value: 'beside' },
+					{ label: __( 'Hidden', 'newspack' ), value: 'hidden' },
 				] }
 				onChange={ value => {
 					this.setState( { value } );

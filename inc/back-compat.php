@@ -34,6 +34,7 @@ add_action( 'after_switch_theme', 'newspack_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function newspack_upgrade_notice() {
+	/* translators: %s: WordPress version used by current site. */
 	$message = sprintf( __( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
