@@ -18,6 +18,11 @@ To disclose a security issue to our team, [please submit a report via HackerOne 
 
 If you have a patch or have stumbled upon an issue with the Newspack plugin/theme, you can contribute this back to the code. [Please read our contributor guidelines for more information on how you can do this.](https://github.com/Automattic/newspack-theme/blob/master/.github/CONTRIBUTING.md)
 
+### Development
+
+Run `npm start` to compile the SCSS and JS files, and start file watcher.
+Run `npm run build` to perform a single compilation run.
+
 ## Support or Questions
 
 This repository is not suitable for support or general questions about Newspack. Please only use our issue trackers for bug reports and feature requests, following [the contribution guidelines](https://github.com/Automattic/newspack-theme/blob/master/.github/CONTRIBUTING.md).
