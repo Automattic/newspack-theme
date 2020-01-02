@@ -249,6 +249,10 @@ figcaption,
 		color: $color__text-light;
 	}
 
+	&.is-style-solid-color blockquote cite {
+		text-transform: uppercase;
+	}
+
 	&:not(.is-style-solid-color) {
 
 		blockquote {
