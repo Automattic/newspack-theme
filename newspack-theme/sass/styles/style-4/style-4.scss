@@ -173,29 +173,22 @@ cite {
 		font-style: italic;
 	}
 
+	&.is-style-solid-color blockquote {
+		text-align: center;
+	}
+
 	&.alignleft,
 	&.alignright {
 		margin-top: #{ 1.5 * $size__spacing-unit };
 		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		blockquote {
+			text-align: left;
+		}
 
 		@include media( tablet ) {
 			p {
 				font-size: $font__size-lg;
 			}
-		}
-	}
-}
-
-.entry .entry-content {
-	blockquote,
-	cite {
-		font-family: $font__heading;
-		font-style: italic;
-		text-align: center;
-
-		em,
-		i {
-			font-style: normal;
 		}
 	}
 }
