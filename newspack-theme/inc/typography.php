@@ -382,15 +382,13 @@ function newspack_custom_typography_css() {
 				.page-title,
 				#secondary .widget-title,
 				.author-bio .accent-header span,
-				.wp-block-pullquote cite,
 				#colophon .widget-title {
 					text-transform: uppercase;
 				}
 			';
 			$editor_css_blocks .= '
 				.editor-block-list__layout .editor-block-list__block .accent-header,
-				.editor-block-list__layout .editor-block-list__block .article-section-title,
-				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+				.editor-block-list__layout .editor-block-list__block .article-section-title {
 					text-transform: uppercase;
 				}
 			';
@@ -407,7 +405,6 @@ function newspack_custom_typography_css() {
 				.entry-meta .byline a,
 				.tags-links a,
 				.post-edit-link,
-				.wp-block-pullquote cite,
 				.author-bio h2 span,
 				.site-footer .widget-title {
 					letter-spacing: 0.05em;
@@ -418,8 +415,7 @@ function newspack_custom_typography_css() {
 				.editor-block-list__layout .editor-block-list__block .accent-header,
 				.editor-block-list__layout .editor-block-list__block .article-section-title,
 				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
-				.editor-block-list__layout .editor-block-list__block .cat-links,
-				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+				.editor-block-list__layout .editor-block-list__block .cat-links {
 					letter-spacing: 0.05em;
 					text-transform: uppercase;
 				}
@@ -434,7 +430,6 @@ function newspack_custom_typography_css() {
 				.author-bio h2 span,
 				.entry-meta .byline a,
 				.entry-meta .entry-date,
-				.wp-block-pullquote cite,
 				.site-footer .widget-title,
 				.site-info {
 					text-transform: uppercase;
@@ -444,8 +439,7 @@ function newspack_custom_typography_css() {
 				.editor-block-list__layout .editor-block-list__block .accent-header,
 				.editor-block-list__layout .editor-block-list__block .article-section-title,
 				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
-				.editor-block-list__layout .editor-block-list__block .entry-meta .entry-date,
-				.editor-block-list__layout .editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+				.editor-block-list__layout .editor-block-list__block .entry-meta .entry-date {
 					text-transform: uppercase;
 				}
 			';
