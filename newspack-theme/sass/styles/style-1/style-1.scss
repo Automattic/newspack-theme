@@ -165,9 +165,18 @@
 	}
 
 	&.is-style-solid-color {
-		blockquote:before,
-		blockquote:after {
-			border-top-color: currentColor;
+
+		blockquote {
+			text-align: center;
+
+			&:before,
+			&:after {
+				border-top-color: currentColor;
+			}
+
+			cite {
+				text-transform: uppercase;
+			}
 		}
 
 		p:first-of-type:before {
@@ -192,6 +201,10 @@
 
 	&.alignleft,
 	&.alignright {
+		blockquote {
+			text-align: left;
+		}
+
 		&,
 		&.is-style-solid-color {
 			padding-top: #{ 3 * $size__spacing-unit };
