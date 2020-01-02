@@ -232,14 +232,11 @@
 		text-align: left;
 	}
 
-	a,
-	a:hover,
-	a:visited,
-	.entry-meta,
-	.entry-meta a,
-	.entry-meta a:visited,
+	article .entry-meta,
 	article .entry-meta a,
-	article .entry-meta a:visited {
+	article .entry-meta a:visited,
+	article .cat-links a,
+	article .cat-links a:visited {
 		color: #fff;
 	}
 
@@ -273,12 +270,24 @@
 	}
 }
 
+.entry-content .wp-block-cover {
+	a,
+	a:hover,
+	a:visited {
+		color: inherit;
+	}
+}
+
 .wp-block-columns {
 	.wp-block-cover,
 	.wp-block-cover-image {
-		min-height: 330px;
-		padding-left: $size__spacing-unit;
-		padding-right: $size__spacing-unit;
+		a,
+		a:visited,
+		a:hover {
+			min-height: 330px;
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
+		}
 	}
 }
 
@@ -972,9 +981,9 @@
 	}
 }
 
-.has-text-color a,
-.has-text-color a:hover,
-.has-text-color a:visited {
+.entry-content .has-text-color a,
+.entry-content .has-text-color a:hover,
+.entry-content .has-text-color a:visited {
 	color: inherit;
 }
 
