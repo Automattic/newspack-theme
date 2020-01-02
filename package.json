@@ -52,7 +52,33 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"scripts": {
-		"build": "(cd newspack-theme && npm run build)",
-		"release:archive": "(cd newspack-theme && npm run release:archive)"
+		"prebuild:style": "node-sass newspack-theme/sass/style.scss newspack-theme/style.css --output-style expanded && postcss -r newspack-theme/style.css",
+		"prebuild:style-1": "node-sass newspack-theme/sass/styles/style-1/style-1.scss newspack-theme/styles/style-1.css --output-style expanded && postcss -r newspack-theme/styles/style-1.css",
+		"prebuild:style-2": "node-sass newspack-theme/sass/styles/style-2/style-2.scss newspack-theme/styles/style-2.css --output-style expanded && postcss -r newspack-theme/styles/style-2.css",
+		"prebuild:style-3": "node-sass newspack-theme/sass/styles/style-3/style-3.scss newspack-theme/styles/style-3.css --output-style expanded && postcss -r newspack-theme/styles/style-3.css",
+		"prebuild:style-4": "node-sass newspack-theme/sass/styles/style-4/style-4.scss newspack-theme/styles/style-4.css --output-style expanded && postcss -r newspack-theme/styles/style-4.css",
+		"prebuild:style-5": "node-sass newspack-theme/sass/styles/style-5/style-5.scss newspack-theme/styles/style-5.css --output-style expanded && postcss -r newspack-theme/styles/style-5.css",
+		"build:style-editor": "node-sass newspack-theme/sass/style-editor.scss newspack-theme/styles/style-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-editor.css",
+		"build:style-editor-overrides": "node-sass newspack-theme/sass/style-editor-overrides.scss newspack-theme/styles/style-editor-overrides.css --output-style expanded && postcss -r newspack-theme/styles/style-editor-overrides.css",
+		"build:style-editor-customizer": "node-sass newspack-theme/sass/style-editor-customizer.scss newspack-theme/styles/style-editor-customizer.css --output-style expanded && postcss -r newspack-theme/styles/style-editor-customizer.css",
+		"build:style-1-editor": "node-sass newspack-theme/sass/styles/style-1/style-1-editor.scss newspack-theme/styles/style-1-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-1-editor.css",
+		"build:style-2-editor": "node-sass newspack-theme/sass/styles/style-2/style-2-editor.scss newspack-theme/styles/style-2-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-2-editor.css",
+		"build:style-3-editor": "node-sass newspack-theme/sass/styles/style-3/style-3-editor.scss newspack-theme/styles/style-3-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-3-editor.css",
+		"build:style-4-editor": "node-sass newspack-theme/sass/styles/style-4/style-4-editor.scss newspack-theme/styles/style-4-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-4-editor.css",
+		"build:style-5-editor": "node-sass newspack-theme/sass/styles/style-5/style-5-editor.scss newspack-theme/styles/style-5-editor.css --output-style expanded && postcss -r newspack-theme/styles/style-5-editor.css",
+		"prebuild:style-woocommerce": "node-sass newspack-theme/sass/plugins/woocommerce.scss newspack-theme/styles/woocommerce.css --output-style expanded && postcss -r newspack-theme/styles/woocommerce.css",
+		"build:rtl": "rtlcss newspack-theme/style.css newspack-theme/style-rtl.css",
+		"build:rtl-style-1": "rtlcss newspack-theme/styles/style-1.css newspack-theme/styles/style-1-rtl.css",
+		"build:rtl-style-2": "rtlcss newspack-theme/styles/style-2.css newspack-theme/styles/style-2-rtl.css",
+		"build:rtl-style-3": "rtlcss newspack-theme/styles/style-3.css newspack-theme/styles/style-3-rtl.css",
+		"build:rtl-style-4": "rtlcss newspack-theme/styles/style-4.css newspack-theme/styles/style-4-rtl.css",
+		"build:rtl-style-5": "rtlcss newspack-theme/styles/style-5.css newspack-theme/styles/style-5-rtl.css",
+		"build:rtl-woocommerce": "rtlcss newspack-theme/styles/woocommerce.css newspack-theme/styles/woocommerce-rtl.css",
+		"build:print": "node-sass newspack-theme/sass/print.scss newspack-theme/styles/print.css --output-style expanded && postcss -r newspack-theme/styles/print.css",
+		"build:webpack": "calypso-build --config='./webpack.config.js'",
+		"build": "run-p \"build:*\"",
+		"prebuild": "run-p \"prebuild:*\"",
+		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
+		"release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip . -x node_modules/\\* .git/\\* .github/\\* .gitignore .DS_Store vendor/\\*"
 	}
 }
