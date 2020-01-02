@@ -319,6 +319,10 @@ blockquote {
 		opacity: 0.9;
 	}
 
+	&.is-style-solid-color blockquote cite {
+		text-transform: uppercase;
+	}
+
 	&.alignleft,
 	&.alignright {
 		border-width: 0;

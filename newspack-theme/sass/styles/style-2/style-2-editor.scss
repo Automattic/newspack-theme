@@ -93,7 +93,9 @@ blockquote {
 
 	.wp-block-pullquote__citation {
 		font-weight: bold;
+		letter-spacing: 0.05em;
 		opacity: 0.9;
+		text-transform: uppercase;
 	}
 
 	&[data-align="left"] .wp-block-pullquote,
