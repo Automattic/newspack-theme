@@ -281,13 +281,9 @@
 .wp-block-columns {
 	.wp-block-cover,
 	.wp-block-cover-image {
-		a,
-		a:visited,
-		a:hover {
-			min-height: 330px;
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
-		}
+		min-height: 330px;
+		padding-left: $size__spacing-unit;
+		padding-right: $size__spacing-unit;
 	}
 }
 
