@@ -972,6 +972,12 @@
 	}
 }
 
+.has-text-color a,
+.has-text-color a:hover,
+.has-text-color a:visited {
+	color: inherit;
+}
+
 //! 'Feature' alignments
 .post-template-single-feature,
 .page-template-single-feature {
