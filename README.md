@@ -20,8 +20,8 @@ If you have a patch or have stumbled upon an issue with the Newspack plugin/them
 
 ### Development
 
-Run `npm start` to compile the SCSS and JS files, and start file watcher.
-Run `npm run build` to perform a single compilation run.
+- Run `npm start` to compile the SCSS and JS files, and start file watcher.
+- Run `npm run build` to perform a single compilation run.
 
 ## Support or Questions
 
