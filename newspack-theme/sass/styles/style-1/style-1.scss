@@ -173,10 +173,6 @@
 			&:after {
 				border-top-color: currentColor;
 			}
-
-			cite {
-				text-transform: uppercase;
-			}
 		}
 
 		p:first-of-type:before {
@@ -187,15 +183,22 @@
 	cite {
 		font-size: $font__size-sm;
 		font-weight: normal;
+		text-transform: uppercase;
 	}
 
 	&.is-style-solid-color {
-		blockquote:before {
-			color: inherit;
-		}
+		blockquote{
+			&:before {
+				color: inherit;
+			}
 
-		blockquote:after {
-			border-top-color: currentColor;
+			&:after {
+				border-top-color: currentColor;
+			}
+
+			cite {
+				text-transform: uppercase;
+			}
 		}
 	}
 

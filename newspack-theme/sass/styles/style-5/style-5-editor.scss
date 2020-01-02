@@ -88,6 +88,19 @@
 		font-size: $font__size-base;
 		font-weight: normal;
 	}
+
+	&[data-align="left"],
+	&[data-align="right"] {
+		blockquote {
+			text-align: left;
+		}
+
+		@include media( tablet ) {
+			.wp-block-pullquote p {
+				font-size: $font__size-md;
+			}
+		}
+	}
 }
 
 /* Newspack Homepage Articles */
