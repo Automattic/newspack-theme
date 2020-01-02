@@ -730,16 +730,6 @@
 				padding-left: $font__size-sm;
 			}
 		}
-
-		/* Remove duplicate rule-line when a separator
-		 * is followed by an H1, or H2 */
-		& + h1,
-		& + h2 {
-
-			&:before {
-				display: none;
-			}
-		}
 	}
 
 	//! Twitter Embed
