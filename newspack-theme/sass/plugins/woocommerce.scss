@@ -9,8 +9,8 @@ $body: "Baskerville Old Face", Garamond, "Times New Roman", serif;
 $body-color: #111;
 $highlights-color: #36f;
 
-@import "sass/variables-site/variables-site";
-@import "sass/mixins/mixins-master";
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
 
 /**
  * Fonts
