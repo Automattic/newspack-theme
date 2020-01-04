@@ -14,7 +14,7 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 // Add all js/src/*.js scripts
 const entry = fs
 	.readdirSync( path.join( __dirname, 'newspack-theme/js', 'src' ) )
-	.filter( script => 'newspack-theme/js' === script.split( '.' ).pop() )
+	.filter( script => 'js' === script.split( '.' ).pop() )
 	.reduce( ( obj, item ) => {
 		const split = item.split( '.' );
 		split.pop();
