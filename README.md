@@ -20,6 +20,9 @@ If you have a patch or have stumbled upon an issue with the Newspack plugin/them
 
 ### Development
 
+The Newspack theme repository contains the Newspack parent theme in a subdirectory. This means you cannot `git clone` the theme directly to the wp-content/themes directory and have it work. The recommended approach is to `git clone` the repository to another location, and symlink the `newspack-theme/newspack-theme` direcory -- the folder containing the actual theme -- to the `wp-content/themes` directory of your development website.
+
+- Run `npm install && composer install` to install the dependencies.
 - Run `npm start` to compile the SCSS and JS files, and start file watcher.
 - Run `npm run build` to perform a single compilation run.
 
