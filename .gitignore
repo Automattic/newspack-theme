@@ -32,7 +32,7 @@ Thumbs.db
 *.css
 
 # Compiled Javascript
-js/dist/
+newspack-theme/js/dist/
 
 # Release folder
 release/

@@ -5,8 +5,8 @@ const sass = require( 'node-sass' );
 const rtlcss = require( 'rtlcss' );
 const postcssFocusWithin = require( 'postcss-focus-within' );
 
-if ( ! fs.existsSync( './styles' ) ) {
-	fs.mkdirSync( './styles' );
+if ( ! fs.existsSync( './newspack-theme/styles' ) ) {
+	fs.mkdirSync( './newspack-theme/styles' );
 }
 
 /**
@@ -65,22 +65,70 @@ const compileAllStylesheets = () => {
 };
 
 const SASS_STYLESHEETS = [
-	{ inFile: 'sass/style.scss', outFile: 'style.css', withRTL: true },
-	{ inFile: 'sass/styles/style-1/style-1.scss', outFile: 'styles/style-1.css', withRTL: true },
-	{ inFile: 'sass/styles/style-2/style-2.scss', outFile: 'styles/style-2.css', withRTL: true },
-	{ inFile: 'sass/styles/style-3/style-3.scss', outFile: 'styles/style-3.css', withRTL: true },
-	{ inFile: 'sass/styles/style-4/style-4.scss', outFile: 'styles/style-4.css', withRTL: true },
-	{ inFile: 'sass/styles/style-5/style-5.scss', outFile: 'styles/style-5.css', withRTL: true },
-	{ inFile: 'sass/style-editor.scss', outFile: 'styles/style-editor.css' },
-	{ inFile: 'sass/style-editor-overrides.scss', outFile: 'styles/style-editor-overrides.css' },
-	{ inFile: 'sass/style-editor-customizer.scss', outFile: 'styles/style-editor-customizer.css' },
-	{ inFile: 'sass/styles/style-1/style-1-editor.scss', outFile: 'styles/style-1-editor.css' },
-	{ inFile: 'sass/styles/style-2/style-2-editor.scss', outFile: 'styles/style-2-editor.css' },
-	{ inFile: 'sass/styles/style-3/style-3-editor.scss', outFile: 'styles/style-3-editor.css' },
-	{ inFile: 'sass/styles/style-4/style-4-editor.scss', outFile: 'styles/style-4-editor.css' },
-	{ inFile: 'sass/styles/style-5/style-5-editor.scss', outFile: 'styles/style-5-editor.css' },
-	{ inFile: 'sass/plugins/woocommerce.scss', outFile: 'styles/woocommerce.css', withRTL: true },
-	{ inFile: 'sass/print.scss', outFile: 'styles/print.css' },
+	{ inFile: 'newspack-theme/sass/style.scss', outFile: 'newspack-theme/style.css', withRTL: true },
+	{
+		inFile: 'newspack-theme/sass/styles/style-1/style-1.scss',
+		outFile: 'newspack-theme/styles/style-1.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-2/style-2.scss',
+		outFile: 'newspack-theme/styles/style-2.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-3/style-3.scss',
+		outFile: 'newspack-theme/styles/style-3.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-4/style-4.scss',
+		outFile: 'newspack-theme/styles/style-4.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-5/style-5.scss',
+		outFile: 'newspack-theme/styles/style-5.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-theme/sass/style-editor.scss',
+		outFile: 'newspack-theme/styles/style-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/style-editor-overrides.scss',
+		outFile: 'newspack-theme/styles/style-editor-overrides.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/style-editor-customizer.scss',
+		outFile: 'newspack-theme/styles/style-editor-customizer.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-1/style-1-editor.scss',
+		outFile: 'newspack-theme/styles/style-1-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-2/style-2-editor.scss',
+		outFile: 'newspack-theme/styles/style-2-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-3/style-3-editor.scss',
+		outFile: 'newspack-theme/styles/style-3-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-4/style-4-editor.scss',
+		outFile: 'newspack-theme/styles/style-4-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/styles/style-5/style-5-editor.scss',
+		outFile: 'newspack-theme/styles/style-5-editor.css',
+	},
+	{
+		inFile: 'newspack-theme/sass/plugins/woocommerce.scss',
+		outFile: 'newspack-theme/styles/woocommerce.css',
+		withRTL: true,
+	},
+	{ inFile: 'newspack-theme/sass/print.scss', outFile: 'newspack-theme/styles/print.css' },
 ];
 
 // initial run
@@ -91,7 +139,7 @@ if ( process.argv.some( arg => arg.startsWith( '--watch' ) ) ) {
 	console.log( `watching the scss files…
 ` );
 
-	chokidar.watch( 'sass/**/*.scss' ).on( 'change', path => {
+	chokidar.watch( 'newspack-theme/sass/**/*.scss' ).on( 'change', path => {
 		console.log( `updated: ${ path }
 ` );
 
