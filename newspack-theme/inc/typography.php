@@ -40,6 +40,7 @@ function newspack_custom_typography_css() {
 		.site-info,
 		#cancel-comment-reply-link,
 		.entry .entry-content .jp-relatedposts-i2 a,
+		.page-title,
 		h1,
 		h2,
 		h3,
@@ -68,6 +69,7 @@ function newspack_custom_typography_css() {
 
 		/* _menu-main-navigation.scss */
 		.nav1 button,
+		.mobile-menu-toggle,
 
 		/* _menu-tertiary-navigation.scss */
 		.nav3,
@@ -129,7 +131,8 @@ function newspack_custom_typography_css() {
 			$css_blocks .= "
 			blockquote,
 			.has-drop-cap:not(:focus)::first-letter,
-			.taxonomy-description {
+			.taxonomy-description
+			{
 				font-family: $font_header;
 			}";
 		}
@@ -137,7 +140,8 @@ function newspack_custom_typography_css() {
 		if ( newspack_is_active_style_pack( 'style-3' ) ) {
 			$css_blocks .= "
 			.has-drop-cap:not(:focus)::first-letter,
-			.taxonomy-description {
+			.taxonomy-description,
+			.page-title {
 				font-family: $font_header;
 			}";
 		}
@@ -313,8 +317,7 @@ function newspack_custom_typography_css() {
 		textarea,
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-verse,
-		.page-title
+		.entry .entry-content .wp-block-verse
 		{
 			font-family: $font_body;
 		}
@@ -346,8 +349,8 @@ function newspack_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks .= '
 			.tags-links span:first-child,
-			.page-title,
 			.cat-links,
+			.page-title,
 			.highlight-menu .menu-label {
 				text-transform: uppercase;
 			}
