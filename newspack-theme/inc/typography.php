@@ -350,6 +350,7 @@ function newspack_custom_typography_css() {
 		$css_blocks .= '
 			.tags-links span:first-child,
 			.cat-links,
+			.page-title,
 			.highlight-menu .menu-label {
 				text-transform: uppercase;
 			}
