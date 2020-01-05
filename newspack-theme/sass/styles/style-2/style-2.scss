@@ -347,8 +347,16 @@ blockquote {
 		}
 	}
 
-	.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
-		border-top: 5px solid $color__text-main;
+	.wp-block-separator {
+		border-top: 2px solid $color__text-main;
+
+		&:not(.is-style-dots):not(.is-style-wide) {
+			border-top: 5px solid $color__text-main;
+		}
+
+		&.is-style-dots::before {
+			color: $color__text-main;
+		}
 	}
 }
 
