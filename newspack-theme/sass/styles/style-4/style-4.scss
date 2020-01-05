@@ -131,6 +131,18 @@ figcaption,
 	}
 }
 
+blockquote,
+cite {
+	font-family: $font__heading;
+	font-style: italic;
+	text-align: center;
+
+	em,
+	i {
+		font-style: normal;
+	}
+}
+
 //! Paragraph
 .has-drop-cap:not(:focus)::first-letter {
 	background-color: $color__primary;
@@ -141,45 +153,41 @@ figcaption,
 	padding: 0.4em;
 }
 
-.entry .entry-content {
-	blockquote,
-	cite {
-		font-family: $font__heading;
-		font-style: italic;
-		text-align: center;
+//! Pullquote
 
-		em,
-		i {
-			font-style: normal;
+.wp-block-pullquote {
+	border-width: 2px 0;
+
+	blockquote {
+		p {
+			font-size: $font__size-lg;
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
 		}
 	}
 
-	.wp-block-pullquote {
-		border-width: 2px 0;
+	&.is-style-solid-color blockquote cite,
+	cite {
+		font-style: italic;
+	}
 
+	&.is-style-solid-color blockquote {
+		text-align: center;
+	}
+
+	&.alignleft,
+	&.alignright {
+		margin-top: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
 		blockquote {
+			text-align: left;
+		}
+
+		@include media( tablet ) {
 			p {
 				font-size: $font__size-lg;
-
-				@include media( tablet ) {
-					font-size: $font__size-xl;
-				}
-			}
-		}
-
-		cite {
-			font-style: italic;
-		}
-
-		&.alignleft,
-		&.alignright {
-			margin-top: #{ 1.5 * $size__spacing-unit };
-			margin-bottom: #{ 1.5 * $size__spacing-unit };
-
-			@include media( tablet ) {
-				p {
-					font-size: $font__size-lg;
-				}
 			}
 		}
 	}

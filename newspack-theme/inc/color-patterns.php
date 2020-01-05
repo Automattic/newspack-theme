@@ -248,7 +248,7 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
-			.entry .entry-content .wp-block-pullquote blockquote p:first-of-type:before {
+			.wp-block-pullquote blockquote p:first-of-type:before {
 				color: ' . $primary_color . ';
 			}
 

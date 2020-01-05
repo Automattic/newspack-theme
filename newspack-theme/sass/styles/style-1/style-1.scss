@@ -97,144 +97,152 @@
 
 /* Blocks */
 
+
 //! Paragraph
 .has-drop-cap:not(:focus)::first-letter {
 	font-family: $font__heading;
 	font-weight: bold;
 }
 
-.entry .entry-content {
-	.wp-block-pullquote {
-		background-color: $color__background-body;
-		border-width: 0;
-		border-color: transparent;
-		font-family: $font__heading;
-		font-weight: bold;
-		padding-top: #{ 4 * $size__spacing-unit };
-		position: relative;
+//! Pullquote
+.wp-block-pullquote {
+	border-width: 0;
+	border-color: transparent;
+	font-family: $font__heading;
+	font-weight: bold;
+	padding-top: #{ 4 * $size__spacing-unit };
+	position: relative;
 
-		p {
-			@include media( tablet ) {
-				font-size: $font__size-xl;
-			}
+	p {
+		@include media( tablet ) {
+			font-size: $font__size-xl;
 		}
+	}
 
-		blockquote {
+	blockquote {
+		border-color: inherit;
+		text-align: center;
+
+		&:before,
+		&:after {
+			border-top: 2px solid;
 			border-color: inherit;
-			text-align: center;
-
-			&:before,
-			&:after {
-				border-top: 2px solid;
-				border-color: inherit;
-				content: "";
-				display: block;
-				position: absolute;
-				opacity: 0.8;
-				top: #{ 2 * $size__spacing-unit };
-			}
-
-			&:before {
-				left: 15%;
-				right: calc( 50% + 2em);
-			}
-
-			&:after {
-				left: calc( 50% + 2em);
-				right: 15%;
-			}
-
-			p:first-of-type:before {
-				color: $color__primary;
-				content: "\201C";
-				display: inline-block;
-				font-size: calc( 1rem * 5 );
-				font-weight: normal;
-				left: calc( 50% - 0.25em );
-				line-height: 0.75;
-				position: absolute;
-				text-align: center;
-				top: #{ 1.5 * $size__spacing-unit };
-				width: 0.5em;
-				z-index: 1;
-
-				@include media( tablet ) {
-					font-size: calc( 1rem * 7 );
-				}
-			}
+			content: "";
+			display: block;
+			position: absolute;
+			opacity: 0.8;
+			top: #{ 2 * $size__spacing-unit };
 		}
 
-		&.is-style-solid-color {
-			blockquote:before,
-			blockquote:after {
-				border-top-color: currentColor;
-			}
-
-			p:first-of-type:before {
-				color: inherit;
-			}
+		&:before {
+			left: 15%;
+			right: calc( 50% + 2em);
 		}
 
-		cite {
-			font-size: $font__size-sm;
+		&:after {
+			left: calc( 50% + 2em);
+			right: 15%;
+		}
+
+		p:first-of-type:before {
+			color: $color__primary;
+			content: "\201C";
+			display: inline-block;
+			font-size: calc( 1rem * 5 );
 			font-weight: normal;
-		}
+			left: calc( 50% - 0.3em );
+			line-height: 0.75;
+			position: absolute;
+			text-align: center;
+			top: #{ 1.5 * $size__spacing-unit };
+			width: 0.5em;
+			z-index: 1;
 
-		&.is-style-solid-color {
-			blockquote:before {
-				color: inherit;
-			}
-
-			blockquote:after {
-				border-top-color: currentColor;
-			}
-		}
-
-		&.alignleft,
-		&.alignright {
-			&,
-			&.is-style-solid-color {
-				padding-top: #{ 3 * $size__spacing-unit };
-			}
-
-			p {
-				font-size: $font__size-md;
-
-					&:first-of-type:before {
-					font-size: calc( 1rem * 5 );
-					left: 0;
-					text-align: left;
-					width: 0.5em;
-				}
-			}
-
-			blockquote {
-				&:before {
-					left: 3em;
-					right: 15%;
-				}
-
-				&:after {
-					display: none;
-				}
-			}
-
-			&.is-style-solid-color {
-				p:first-of-type:before {
-					left: #{ 1.5 * $size__spacing-unit };
-				}
-
-				blockquote:before {
-					left: 4em;
-				}
+			@include media( tablet ) {
+				font-size: calc( 1rem * 7 );
 			}
 		}
 	}
 
-	.wp-block-cover,
-	.wp-block-group {
-		.wp-block-pullquote {
-			background-color: transparent;
+	&.is-style-solid-color {
+
+		blockquote {
+			text-align: center;
+
+			&:before,
+			&:after {
+				border-top-color: currentColor;
+			}
+		}
+
+		p:first-of-type:before {
+			color: inherit;
+		}
+	}
+
+	cite {
+		font-size: $font__size-sm;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	&.is-style-solid-color {
+		blockquote{
+			&:before {
+				color: inherit;
+			}
+
+			&:after {
+				border-top-color: currentColor;
+			}
+
+			cite {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&.alignleft,
+	&.alignright {
+		blockquote {
+			text-align: left;
+		}
+
+		&,
+		&.is-style-solid-color {
+			padding-top: #{ 3 * $size__spacing-unit };
+		}
+
+		p {
+			font-size: $font__size-md;
+
+				&:first-of-type:before {
+				font-size: calc( 1rem * 5 );
+				left: 0;
+				text-align: left;
+				width: 0.5em;
+			}
+		}
+
+		blockquote {
+			&:before {
+				left: 3em;
+				right: 15%;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&.is-style-solid-color {
+			p:first-of-type:before {
+				left: #{ 1.5 * $size__spacing-unit };
+			}
+
+			blockquote:before {
+				left: 4em;
+			}
 		}
 	}
 }

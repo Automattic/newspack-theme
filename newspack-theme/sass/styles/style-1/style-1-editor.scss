@@ -132,6 +132,7 @@ Newspack Theme Editor Styles - Style Pack 1
 	.wp-block-pullquote__citation {
 		font-size: $font__size-sm;
 		font-weight: normal;
+		text-transform: uppercase;
 	}
 
 	&[data-align="left"] .wp-block-pullquote,
