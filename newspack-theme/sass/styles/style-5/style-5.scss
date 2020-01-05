@@ -308,6 +308,10 @@ textarea {
 
 	&.is-style-solid-color {
 		border: 0;
+
+		&:not(.alignleft):not(.alignright) blockquote {
+			text-align: center;
+		}
 	}
 
 	cite {
