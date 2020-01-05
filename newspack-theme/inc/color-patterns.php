@@ -196,7 +196,7 @@ function newspack_custom_colors_css() {
 
 		/* Set secondary variation color */
 
-		.entry .entry-content a:hover,
+		.entry-content a:hover,
 		.widget a:hover,
 		.author-bio .author-link:hover,
 		.entry .entry-content .has-secondary-variation-color,
@@ -446,6 +446,8 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Do not overwrite solid color pullquote or cover links */
+		.editor-block-list__layout .editor-block-list__block .has-text-color a,
+		.editor-block-list__layout .editor-block-list__block .has-text-color a:hover,
 		.editor-block-list__layout .editor-block-list__block .wp-block-pullquote.is-style-solid-color a,
 		.editor-block-list__layout .editor-block-list__block .wp-block-cover a,
 		.editor-block-list__layout .editor-block-list__block .wp-block-newspack-blocks-homepage-articles .entry-title a,

@@ -232,14 +232,11 @@
 		text-align: left;
 	}
 
-	a,
-	a:hover,
-	a:visited,
-	.entry-meta,
-	.entry-meta a,
-	.entry-meta a:visited,
+	article .entry-meta,
 	article .entry-meta a,
-	article .entry-meta a:visited {
+	article .entry-meta a:visited,
+	article .cat-links a,
+	article .cat-links a:visited {
 		color: #fff;
 	}
 
@@ -270,6 +267,14 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+.entry-content .wp-block-cover {
+	a,
+	a:hover,
+	a:visited {
+		color: inherit;
 	}
 }
 
@@ -970,6 +975,12 @@
 	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
 		color: #FFF;
 	}
+}
+
+.entry-content .has-text-color a,
+.entry-content .has-text-color a:hover,
+.entry-content .has-text-color a:visited {
+	color: inherit;
 }
 
 //! 'Feature' alignments

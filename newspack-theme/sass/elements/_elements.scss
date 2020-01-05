@@ -12,28 +12,6 @@ body {
 	background-color: $color__background-body;
 }
 
-a {
-	@include link-transition;
-	color: $color__link;
-}
-
-a:visited {
-	color: $color__link;
-}
-
-a:hover,
-a:active {
-	color: $color__link-hover;
-	outline: 0;
-	text-decoration: none;
-}
-
-a:focus {
-	outline: thin;
-	outline-style: dotted;
-	text-decoration: underline;
-}
-
 h1,
 h2,
 h3,
