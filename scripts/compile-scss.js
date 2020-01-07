@@ -9,6 +9,10 @@ if ( ! fs.existsSync( './newspack-theme/styles' ) ) {
 	fs.mkdirSync( './newspack-theme/styles' );
 }
 
+if ( ! fs.existsSync( './newspack-sacha/styles' ) ) {
+	fs.mkdirSync( './newspack-sacha/styles' );
+}
+
 /**
  * Save a file do disk.
  */
@@ -129,6 +133,16 @@ const SASS_STYLESHEETS = [
 		withRTL: true,
 	},
 	{ inFile: 'newspack-theme/sass/print.scss', outFile: 'newspack-theme/styles/print.css' },
+	// Newspack Sacha Child theme
+	{
+		inFile: 'newspack-sacha/sass/style.scss',
+		outFile: 'newspack-sacha/style.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-sacha/sass/style-editor.scss',
+		outFile: 'newspack-sacha/styles/style-editor.css',
+	},
 ];
 
 // initial run

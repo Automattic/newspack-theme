@@ -1,0 +1,503 @@
+/*
+Theme Name: Newspack Sacha
+Theme URI:
+Author: Automattic
+Author URI: https://newspack.blog
+Description:
+Requires at least: WordPress 4.9.6
+Version: 1.0.0-alpha.25
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: newspack-theme
+Text Domain: newspack-style-4
+Tags:
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "variables-style/variables-style";
+@import "../../newspack-theme/sass/style-base";
+
+
+// Header
+// Solid Background
+.h-sb {
+	.top-header-contain,
+	.middle-header-contain {
+		background-color: $color__background-dark;
+	}
+
+	.top-header-contain {
+		border-color: lighten( $color__background-dark, 5% );
+	}
+
+	.bottom-header-contain {
+		background-color: darken( $color__background-dark, 5% );
+	}
+}
+
+// Header solid background; header short height
+.h-sb.h-sh {
+	.site-header .nav1 .main-menu .sub-menu {
+		a {
+			background-color: $color__text-main;
+
+			&:hover,
+			&:focus {
+				background-color: $color__primary
+			}
+		}
+
+		&:before {
+			border-color: transparent transparent $color__text-main transparent;
+		}
+	}
+}
+
+// Accent headers
+
+.accent-header,
+.article-section-title,
+.cat-links {
+	color: $color__primary;
+}
+
+.accent-header,
+.site-content .wpnbha .article-section-title,
+.cat-links {
+	font-size: $font__size-xs;
+	margin-bottom: $size__spacing-unit;
+	text-align: center;
+}
+
+.article-section-title,
+.widget-title.accent-header {
+	overflow: hidden;
+
+	span {
+		display: inline-block;
+		position: relative;
+
+		&:before,
+		&:after {
+			border-top: 1px solid $color__border;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 600px;
+		}
+
+		&:before {
+			right: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		}
+
+		&:after {
+			left: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		}
+	}
+}
+
+.cat-links {
+	font-size: $font__size-sm;
+
+	a {
+		color: inherit;
+	}
+}
+
+.blog,
+.search {
+	.cat-links {
+		text-align: left;
+	}
+}
+
+.entry-title {
+	font-weight: normal;
+}
+
+// Posts & Pages
+
+figcaption,
+.wp-caption-text {
+	font-weight: bold;
+}
+
+.single {
+	.featured-image-behind {
+		.entry-subhead {
+			border: 0;
+			display: block;
+			padding: 0;
+			text-align: center;
+
+			.author-avatar {
+				display: none;
+			}
+		}
+
+		.entry-meta {
+			margin-bottom: $size__spacing-unit;
+		}
+	}
+}
+
+blockquote,
+cite {
+	font-family: $font__heading;
+	font-style: italic;
+	text-align: center;
+
+	em,
+	i {
+		font-style: normal;
+	}
+}
+
+//! Paragraph
+.has-drop-cap:not(:focus)::first-letter {
+	background-color: $color__primary;
+	color: #fff;
+	font-family: $font__heading;
+	font-weight: bold;
+	font-size: $font__size-xxl;
+	padding: 0.4em;
+}
+
+//! Pullquote
+
+.wp-block-pullquote {
+	border-width: 2px 0;
+
+	blockquote {
+		p {
+			font-size: $font__size-lg;
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
+		}
+	}
+
+	&.is-style-solid-color blockquote cite,
+	cite {
+		font-style: italic;
+	}
+
+	&.is-style-solid-color blockquote {
+		text-align: center;
+	}
+
+	&.alignleft,
+	&.alignright {
+		margin-top: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		blockquote {
+			text-align: left;
+		}
+
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-lg;
+			}
+		}
+	}
+}
+
+.single {
+	.cat-links {
+		text-align: center;
+	}
+
+	.entry-header {
+		.entry-title,
+		.newspack-post-subtitle {
+			text-align: center;
+		}
+		.entry-title {
+			margin-bottom: #{ 1.5 * $size__spacing-unit };
+			margin-top: $size__spacing-unit;
+
+			@include media( tablet ) {
+				margin-bottom: #{ 3 * $size__spacing-unit };
+				margin-left: auto;
+				margin-right: auto;
+				width: 85%;
+			}
+
+			&--with-subtitle {
+				margin-bottom: #{ 0.7 * $size__spacing-unit };
+			}
+		}
+		.newspack-post-subtitle {
+			margin-bottom: #{ 3.3 * $size__spacing-unit };
+		}
+	}
+
+	.entry-subhead {
+		border-bottom: 1px solid $color__border;
+		border-top: 1px solid $color__border;
+		display: block;
+		margin-bottom: $size__spacing-unit;
+		padding: #{ 0.75 * $size__spacing-unit } 0;
+		text-align: center;
+
+
+		@include media( mobile ) {
+			display: flex;
+			margin-bottom: #{ 2 * $size__spacing-unit };
+			text-align: left;
+		}
+
+		.sd-content {
+			text-align: inherit;
+		}
+
+		.author-avatar {
+			display: none;
+
+			@include media( mobile ) {
+				display: block;
+			}
+		}
+	}
+
+	&:not(.has-featured-image),
+	&.has-large-featured-image {
+		.entry-header {
+			border-bottom: 0;
+		}
+	}
+}
+
+//! Newspack
+.wpnbha .cat-links {
+	text-align: left;
+}
+
+
+@include media( tablet ) {
+	.h-sb .featured-image-beside {
+		background-color: $color__background-pre;
+
+		.entry-header {
+			color: $color__text-main;
+		}
+
+		.cat-links {
+			color: $color__primary;
+		}
+	}
+
+	.single .featured-image-beside .entry-subhead {
+		border: 0;
+		margin-bottom: 0;
+		padding: 0;
+		text-align: center;
+
+		.author-avatar {
+			display: none;
+		}
+	}
+}
+
+.entry .entry-footer {
+	color: $color__primary;
+	text-align: center;
+
+	a,
+	a:hover {
+		color: $color__text-main;
+	}
+}
+
+.tags-links {
+
+	span:first-child {
+		text-transform: none;
+	}
+
+	a {
+		background: $color__background-pre;
+		color: $color__text-main;
+		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
+		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+
+		&:hover {
+			background: lighten( $color__background-pre, 5% );
+		}
+	}
+
+	.sep {
+		display: none;
+	}
+}
+
+// Author bio
+
+.author-bio {
+	display: block;
+	text-align: center;
+
+	h2 {
+		color: $color__text-main;
+		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		text-align: left;
+	}
+
+	.avatar {
+		height: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60px;
+
+		@include media( tablet ) {
+			margin-left: 0;
+			margin-right: $size__spacing-unit;
+		}
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	.author-bio-text {
+		width: 100%;
+
+		@include media( tablet ) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+		}
+	}
+
+	.author-bio-header {
+		@include media( tablet ) {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			text-align: left;
+		}
+	}
+}
+
+// Archives
+
+.page-title {
+	letter-spacing: 0;
+	text-transform: none;
+
+	@include media( tablet ) {
+		font-size: $font__size_base;
+	}
+
+	.page-description {
+		margin-top: $size__spacing-unit;
+	}
+}
+
+.taxonomy-description {
+	font-family: $font__heading;
+	font-style: normal;
+
+	@include media( tablet ) {
+		margin-bottom: #{ 3 * $size__spacing-unit };
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 85%;
+	}
+}
+
+.archive {
+	.page-header {
+		text-align: center;
+	}
+
+	&.author .page-header {
+		display: block;
+
+		.avatar {
+			margin: 0 auto $size__spacing-unit;
+
+			@include media( mobile ) {
+				height: 60px;
+				width: 60px;
+			}
+
+			@include media( tablet ) {
+				height: 80px;
+				width: 80px;
+			}
+		}
+	}
+}
+
+
+.site-footer {
+	background-color: #f1f1f1;
+	color: $color__text-main;
+
+	.widget .widget-title {
+		color: $color__primary;
+		font-weight: bold;
+	}
+
+	.widget a,
+	.widget a:visited,
+	a,
+	a:visited {
+		color: inherit;
+	}
+}
+
+.footer-branding {
+	padding-top: $size__spacing-unit;
+
+	@include media( tablet ) {
+		padding-top: #{ 2 * $size__spacing-unit };
+	}
+}
+
+.site-info {
+	background-color: $color__background-dark;
+
+	.site-info-contain:first-child,
+	.widget-area .wrapper {
+		border: 0;
+	}
+
+	&,
+	a,
+	a:hover,
+	a:visited {
+		color: $color__background-body;
+	}
+}
+
+// Pop-up
+
+.entry-content {
+	.newspack-lightbox {
+		.newspack-popup-title {
+			font-weight: normal;
+		}
+
+		.newspack-lightbox__close {
+			background: transparent;
+			border: 1px solid $color__border;
+			color: inherit;
+			padding: 5px;
+
+			&:active,
+			&:focus,
+			&:hover {
+				background: $color__border;
+			}
+		}
+	}
+}
