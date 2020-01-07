@@ -275,11 +275,13 @@
 		color: $color__text-main;
 		font-size: $font__size_base;
 	}
+}
 
-	.widget,
-	.site-info {
-		font-family: $font__heading;
-	}
+#colophon .widget,
+// If custom font is set, `#colophon .site-info` selector would override it
+// (See issue #663)
+.site-info {
+	font-family: $font__heading;
 }
 
 /* Pop-up */
