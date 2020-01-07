@@ -309,8 +309,13 @@ function newspack_custom_colors_css() {
 				background-color: ' . $primary_color . ';
 			}
 
-			.h-sb .featured-image-beside a {
+			.featured-image-beside a,
+			.featured-image-beside .cat-links a {
 				color: ' . $primary_color_contrast . ';
+			}
+
+			.featured-image-beside .cat-links:before {
+				background-color: ' . $primary_color_contrast . ';
 			}
 
 			/* Header solid background; short height */
