@@ -20,7 +20,7 @@ if ( ! function_exists( 'newspack_sacha_setup' ) ) :
 		// Remove the default editor styles
 		remove_editor_styles();
 		// Add child theme editor styles, compiled from `style-child-theme-editor.scss`.
-		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'styles/style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_sacha_setup', 12 );
@@ -108,22 +108,31 @@ add_action( 'wp_enqueue_scripts', 'newspack_sacha_scripts', 99 );
  * Enqueue supplemental block editor styles.
  */
 function newspack_sacha_editor_customizer_styles() {
+	// Enqueue Google fonts.
+	wp_enqueue_style( 'newspack-sacha-fonts', newspack_sacha_fonts_url(), array(), null );
+
 	// Check for color or font customizations.
 	$theme_customizations = '';
+
 	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
-		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		$theme_customizations .= newspack_sacha_custom_colors_css();
 	}
+
 	if ( get_theme_mod( 'font_body', '' ) || get_theme_mod( 'font_header', '' ) || get_theme_mod( 'accent_allcaps', true ) ) {
 		$theme_customizations .= newspack_sacha_custom_typography_css();
 	}
+
 	// If there are any, add those styles inline.
 	if ( $theme_customizations ) {
-		wp_add_inline_style( 'newspack-editor-customizer-styles', $theme_customizations );
+		// Enqueue a non-existant file to hook our inline styles to:
+		wp_register_style( 'newspack-sacha-editor-inline-styles', false );
+		wp_enqueue_style( 'newspack-sacha-editor-inline-styles' );
+		// Add inline styles:
+		wp_add_inline_style( 'newspack-sacha-editor-inline-styles', $theme_customizations );
 	}
 }
-add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_styles', 99 );
+add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_styles' );
 
 
 /**
