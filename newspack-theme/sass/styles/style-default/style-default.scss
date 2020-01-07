@@ -5,8 +5,12 @@
 	border-bottom: 4px solid $color__border;
 	color: $color__primary;
 	font-size: $font__size-sm;
-	margin: 0 0 calc( #{$size__spacing-unit} / 2 );
-	padding: 0 0 calc( #{$size__spacing-unit} / 2 );
+}
+
+.accent-header,
+.entry-content .wpnbha .article-section-title {
+	margin: 0 0 #{$size__spacing-unit * 0.75};
+	padding: 0 0 #{$size__spacing-unit * 0.33};
 }
 
 /* Navigation */
