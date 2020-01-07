@@ -58,6 +58,9 @@ function newspack_custom_typography_css() {
 		input[type=\"reset\"],
 		input[type=\"submit\"],
 
+		/* _blocks.scss */
+		.wp-block-button,
+
 		/* _captions.scss */
 		.wp-caption-text,
 		.gallery-caption,
