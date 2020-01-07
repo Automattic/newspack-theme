@@ -179,11 +179,11 @@ input[type="submit"] {
 }
 
 // Default and solid header backgrounds
-.h-db,
-.h-sb {
+.h-db.single-featured-image-beside,
+.h-sb.single-featured-image-beside  {
 	.featured-image-beside {
 		@include media( tablet ) {
-			background-color: currentColor;
+			background-color: $color__text-main;
 		}
 	}
 }
