@@ -203,6 +203,7 @@ body.page {
 		&:hover,
 		&:active {
 			color: $color__link-hover;
+			text-decoration: none;
 		}
 	}
 
