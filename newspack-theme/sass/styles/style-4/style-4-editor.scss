@@ -1,6 +1,2 @@
-// Style pack variables from child theme + base theme variables:
-@import "../../../../newspack-sacha/sass/variables-style/variables-style";
-// Base styles:
-@import "../../style-editor-base";
-// Style pack styles from child theme:
+// Pull in CSS from child theme:
 @import "../../../../newspack-sacha/sass/style-editor";
