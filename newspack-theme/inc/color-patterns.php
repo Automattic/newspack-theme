@@ -353,7 +353,7 @@ function newspack_custom_colors_css() {
 		';
 	}
 
-	if ( true === get_theme_mod( 'header_solid_background', false ) && ! newspack_is_active_style_pack( 'style-3', 'style-4', 'style-5' ) ) {
+	if ( true === get_theme_mod( 'header_solid_background', false ) && newspack_is_active_style_pack( 'default', 'style-1', 'style-2' ) ) {
 		$theme_css .= '
 			/* Header solid background */
 			.h-sb .middle-header-contain {
