@@ -20,6 +20,12 @@
 	}
 }
 
+.accent-header,
+.wp-block-columns .wp-block-column > .accent-header,
+.entry .wpnbha .article-section-title {
+	margin-bottom: 1em;
+}
+
 .cat-links {
 	font-family: $font__heading;
 	font-size: $font__size-sm;
