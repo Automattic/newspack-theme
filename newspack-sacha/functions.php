@@ -60,7 +60,7 @@ function newspack_sacha_custom_colors_css_wrap() {
 	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'theme_colors', 'default' ) ) || is_admin() ) {
 		return;
 	}
-	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';
 	?>
 
 	<style type="text/css" id="custom-theme-colors-sacha">
@@ -113,6 +113,7 @@ function newspack_sacha_editor_customizer_styles() {
 
 	// Check for color or font customizations.
 	$theme_customizations = '';
+	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';
 
 	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
@@ -133,12 +134,6 @@ function newspack_sacha_editor_customizer_styles() {
 	}
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_styles' );
-
-
-/**
- * Custom colors styles for child theme.
- */
-require get_stylesheet_directory() . '/inc/child-color-patterns.php';
 
 /**
  * Custom typography styles for child theme.
