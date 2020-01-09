@@ -316,7 +316,8 @@ function newspack_custom_colors_css() {
 				.h-sb .featured-image-beside,
 				.h-sb .featured-image-beside a,
 				.featured-image-beside a,
-				.featured-image-beside a:visited {
+				.featured-image-beside a:visited,
+				.featured-image-beside .cat-links a {
 					color: ' . $primary_color_contrast . ';
 				}
 
@@ -361,6 +362,16 @@ function newspack_custom_colors_css() {
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
 			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
+			}
+		';
+	}
+
+	if ( newspack_is_active_style_pack( 'style-5' ) ) {
+		$theme_css .= '
+			@media only screen and (min-width: 782px) {
+				.h-db .featured-image-beside .entry-header {
+					color: #fff;
+				}
 			}
 		';
 	}
