@@ -182,8 +182,8 @@ hr {
 	border-top: 1px dotted $color__text-main;
 }
 
-.wp-block-columns.is-style-borders {
-	> .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
+.wp-block .wp-block-columns.is-style-borders {
+	[data-type="core/column"] {
 		border-bottom: 1px dotted $color__text-main;
 
 		&:last-child {
