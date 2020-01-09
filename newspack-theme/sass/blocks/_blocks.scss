@@ -855,7 +855,7 @@
 		}
 	}
 
-	// Jetpack Blocks
+	//! Jetpack Blocks
 	.jp-relatedposts-i2 {
 		border-top: 1px solid $color__border;
 		border-bottom: 1px solid $color__border;
@@ -870,6 +870,32 @@
 		.jp-related-posts-i2__post-date,
 		.jp-related-posts-i2__post-context {
 			font-size: $font__size-xs;
+		}
+	}
+
+	//! Organic Profile Block
+	.wp-block-organic-profile-block {
+		box-shadow: none;
+
+		.organic-profile-image {
+			margin-right: 32px;
+		}
+
+		.organic-profile-content {
+			padding: 0;
+		}
+
+		.organic-profile-social {
+			.social-link {
+				border: 0;
+				display: inline-block;
+				font-size: 16px;
+				height: 32px;
+				line-height: 32px;
+				padding: 0;
+				text-align: center;
+				width: 32px;
+			}
 		}
 	}
 
