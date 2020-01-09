@@ -715,7 +715,20 @@ ul.wp-block-archives,
 	box-shadow: none;
 
 	.organic-profile-image {
+		align-items: flex-start;
+		background: none !important;
 		margin-right: 32px;
+
+		button.image-button {
+			border-radius: 0;
+			height: auto;
+
+			img {
+				display: block;
+				margin: 0;
+				opacity: 1;
+			}
+		}
 	}
 
 	.organic-profile-content {
