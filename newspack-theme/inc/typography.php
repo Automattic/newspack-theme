@@ -191,57 +191,57 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= "
-		.editor-block-list__layout .editor-block-list__block h1,
-		.editor-block-list__layout .editor-block-list__block h2,
-		.editor-block-list__layout .editor-block-list__block h3,
-		.editor-block-list__layout .editor-block-list__block h4,
-		.editor-block-list__layout .editor-block-list__block h5,
-		.editor-block-list__layout .editor-block-list__block h6,
-		.editor-block-list__layout .editor-block-list__block figcaption,
-		.editor-block-list__layout .editor-block-list__block .gallery-caption,
-		.editor-block-list__layout .editor-block-list__block .cat-links,
+		.block-editor-block-list__layout .block-editor-block-list__block h1,
+		.block-editor-block-list__layout .block-editor-block-list__block h2,
+		.block-editor-block-list__layout .block-editor-block-list__block h3,
+		.block-editor-block-list__layout .block-editor-block-list__block h4,
+		.block-editor-block-list__layout .block-editor-block-list__block h5,
+		.block-editor-block-list__layout .block-editor-block-list__block h6,
+		.block-editor-block-list__layout .block-editor-block-list__block figcaption,
+		.block-editor-block-list__layout .block-editor-block-list__block .gallery-caption,
+		.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
 
 		/* Post Title */
 		.editor-styles-wrapper .editor-post-title .editor-post-title__block .editor-post-title__input,
 
 		/* Table Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block-table,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table,
 
 		/* Cover Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block-cover h2,
-		.editor-block-list__layout .editor-block-list__block .wp-block-cover .wp-block-cover-text,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-cover h2,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-cover .wp-block-cover-text,
 
 		/* Button Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block-button .wp-block-button__link,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-button .wp-block-button__link,
 
 		/* Blockquote Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block-quote cite,
-		.editor-block-list__layout .editor-block-list__block .wp-block-quote footer,
-		.editor-block-list__layout .editor-block-list__block .wp-block-quote .wp-block-quote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote cite,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote footer,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote .wp-block-quote__citation,
 
 		/* Pullquote Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
-		.editor-block-list__layout .editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
 
 		/* File Block */
-		.editor-block-list__layout .editor-block-list__block .wp-block-file,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-file,
 
 		/* Widget blocks */
-		.editor-block-list__layout .editor-block-list__block ul.wp-block-archives li,
-		.editor-block-list__layout .editor-block-list__block .wp-block-categories li,
-		.editor-block-list__layout .editor-block-list__block .wp-block-latest-posts li,
+		.block-editor-block-list__layout .block-editor-block-list__block ul.wp-block-archives li,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-categories li,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts li,
 
 		/* Latest Comments blocks */
-		.editor-block-list__layout .editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 
 		/* Jetpack blocks */
-		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 a,
-		.editor-block-list__layout .editor-block-list__block .jp-relatedposts-i2 strong,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 a,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 strong,
 
 		/* Classic Editor */
-		.editor-block-list__layout .editor-block-list__block .wp-caption dd,
-		.editor-block-list__layout .editor-block-list__block .wp-block-freeform blockquote cite
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption dd,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-freeform blockquote cite
 
 		{
 			font-family: $font_header;
@@ -250,11 +250,11 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-1' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text__editable:first-child::before
+			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text__editable:first-child::before
 
 			{
 				font-family: $font_header;
@@ -264,8 +264,8 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block blockquote,
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+			.block-editor-block-list__layout .block-editor-block-list__block blockquote,
+			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
 
 			{
 				font-family: $font_header;
@@ -276,7 +276,7 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-3' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
+			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
 
 			{
 				font-family: $font_header;
@@ -286,24 +286,24 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-4' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty='true']::before,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-			.editor-block-list__layout .editor-block-list__block .entry-meta {
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty='true']::before,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta {
 				font-family: $font_header;
 			}";
 		}
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] p {
+			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p {
 				font-family: $font_header;
 			}
-			.editor-block-list__layout .editor-block-list__block .article-section-title,
-			.editor-block-list__layout .editor-block-list__block .accent-header {
+			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
+			.block-editor-block-list__layout .block-editor-block-list__block .accent-header {
 				font-family: inherit;
 			}";
 		}
@@ -334,7 +334,7 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block,
+			.block-editor-block-list__layout .block-editor-block-list__block,
 			.editor-default-block-appender .editor-default-block-appender__content
 			{
 				font-family: $font_body;
@@ -343,7 +343,7 @@ function newspack_custom_typography_css() {
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
 			$editor_css_blocks .= "
-			.editor-block-list__layout .editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation {
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation {
 				font-family: $font_body;
 			}";
 		}
@@ -360,8 +360,8 @@ function newspack_custom_typography_css() {
 		';
 
 		$editor_css_blocks .= '
-			.cat-links {
-			.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+			.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
+			.block-editor-block-list__layout .block-editor-block-list__block #jp-relatedposts h3.jp-relatedposts-headline {
 				text-transform: uppercase;
 			}
 		';
@@ -374,8 +374,8 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.accent-header,
-				.article-section-title {
+				.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 					text-transform: uppercase;
 				}
 			';
@@ -393,8 +393,8 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.editor-block-list__layout .editor-block-list__block .accent-header,
-				.editor-block-list__layout .editor-block-list__block .article-section-title {
+				.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 					text-transform: uppercase;
 				}
 			';
@@ -418,10 +418,10 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.editor-block-list__layout .editor-block-list__block .accent-header,
-				.editor-block-list__layout .editor-block-list__block .article-section-title,
-				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
-				.editor-block-list__layout .editor-block-list__block .cat-links {
+				.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
+				.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
+				.block-editor-block-list__layout .block-editor-block-list__block .cat-links {
 					letter-spacing: 0.05em;
 					text-transform: uppercase;
 				}
@@ -442,10 +442,10 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.editor-block-list__layout .editor-block-list__block .accent-header,
-				.editor-block-list__layout .editor-block-list__block .article-section-title,
-				.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
-				.editor-block-list__layout .editor-block-list__block .entry-meta .entry-date {
+				.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
+				.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
+				.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .entry-date {
 					text-transform: uppercase;
 				}
 			';
