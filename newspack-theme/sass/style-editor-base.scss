@@ -710,6 +710,68 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Organic Profile Block === */
+.wp-block-organic-profile-block {
+	box-shadow: none;
+
+	.organic-profile-image {
+		align-items: center;
+		background: none !important;
+		margin-bottom: 16px;
+
+		@media only screen and (min-width: 768px) {
+			margin-bottom: 0;
+			margin-right: 32px;
+		}
+
+		&.image-active {
+			max-width: 100%;
+		}
+
+		button.image-button {
+			border-radius: 0;
+			height: auto;
+
+			img {
+				display: block;
+				margin: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	.organic-profile-content {
+		padding: 0;
+		width: 100%;
+
+		h5 {
+			color: $color__text-light;
+		}
+	}
+
+	.organic-profile-social {
+		.social-link {
+			border: 0;
+			color: $color__text-light;
+			cursor: default;
+			display: inline-block;
+			font-size: 16px;
+			height: 32px;
+			line-height: 32px;
+			padding: 0;
+			pointer-events: none;
+			text-align: center;
+			width: 32px;
+
+			&:active,
+			&:focus,
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+}
+
 /** === Classic Editor === */
 
 /* Properly center-align captions in the classic-editor block */
