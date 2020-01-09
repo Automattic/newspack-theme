@@ -90,13 +90,13 @@ function newspack_custom_typography_css() {
 		/* _comments.scss */
 		.comment-list .pingback .comment-body,
 		.comment-list .trackback .comment-body,
-
 		.comment-list .pingback .comment-body .comment-edit-link,
 		.comment-list .trackback .comment-body .comment-edit-link,
-
-
 		.comment-form label,
 		.comment-form .comment-notes,
+
+		/* _blocks.scss */
+		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 
 		/* _widgets.scss */
 		.widget_archive ul li,
