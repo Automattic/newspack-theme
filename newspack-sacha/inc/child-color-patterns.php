@@ -45,13 +45,13 @@ function newspack_sacha_custom_colors_css() {
 	';
 
 	$editor_css = '
-		.editor-block-list__layout .editor-block-list__block .entry-meta .byline a,
-		.editor-block-list__layout .editor-block-list__block .accent-header,
-		.editor-block-list__layout .editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title {
+		.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
+		.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title {
 			color: ' . newspack_color_with_contrast( $primary_color ) . ';
 		}
 
-		.editor-block-list__layout .editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
 			background-color: ' . $primary_color . ';
 			color: ' . $primary_color_contrast . ';
 		}
