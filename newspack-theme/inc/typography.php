@@ -58,6 +58,9 @@ function newspack_custom_typography_css() {
 		input[type=\"reset\"],
 		input[type=\"submit\"],
 
+		/* _blocks.scss */
+		.entry .entry-content .wp-block-button .wp-block-button__link,
+
 		/* _captions.scss */
 		.wp-caption-text,
 		.gallery-caption,
@@ -357,8 +360,8 @@ function newspack_custom_typography_css() {
 		';
 
 		$editor_css_blocks .= '
-			.cat-links {
-			.entry-content #jp-relatedposts h3.jp-relatedposts-headline {
+			.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
+			.block-editor-block-list__layout .block-editor-block-list__block #jp-relatedposts h3.jp-relatedposts-headline {
 				text-transform: uppercase;
 			}
 		';
@@ -371,8 +374,8 @@ function newspack_custom_typography_css() {
 				}
 			';
 			$editor_css_blocks .= '
-				.accent-header,
-				.article-section-title {
+				.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 					text-transform: uppercase;
 				}
 			';
