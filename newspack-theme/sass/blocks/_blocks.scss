@@ -976,6 +976,13 @@
 	}
 }
 
+.newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child {
+	margin-top: 0;
+	@include media( tablet ) {
+		margin-top: calc( #{ -0.5 * $size__spacing-unit } - 1px ); // minus 1px to offset bottom border on header
+	}
+}
+
 .entry-content .has-text-color a,
 .entry-content .has-text-color a:hover,
 .entry-content .has-text-color a:visited {
