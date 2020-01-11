@@ -554,6 +554,7 @@ body.page {
 	}
 
 	.featured-image-beside {
+		color: #fff;
 		display: flex;
 		margin: 0 calc(50% - 50vw);
 		min-height: calc( 100vh - 220px );
@@ -597,7 +598,6 @@ body.page {
 		}
 
 		.entry-header {
-			color: #fff;
 			margin-left: auto;
 			max-width: 600px;
 			padding-left: 0;
@@ -641,7 +641,7 @@ body.page {
 			font-size: $font__size-xxl;
 		}
 	}
-} 
+}
 
 .entry-content #jp-relatedposts {
 	h3.jp-relatedposts-headline {
@@ -656,7 +656,7 @@ body.page {
 		opacity: 1.0;
 
 		.jp-relatedposts-post-img {
-			margin-bottom: #{ 0.5 * $size__spacing-unit };	
+			margin-bottom: #{ 0.5 * $size__spacing-unit };
 		}
 
 		.jp-relatedposts-post-title {
@@ -665,7 +665,7 @@ body.page {
 			a {
 				color: $color__text-main;
 				font-family: $font__heading;
-				font-size: $font__size-base;	
+				font-size: $font__size-base;
 				font-weight: bold;
 			}
 		}

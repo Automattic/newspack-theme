@@ -143,8 +143,14 @@ Newspack Theme Styles - Style Pack 3
 // Posts & Pages
 
 @include media( tablet ) {
-	.featured-image-beside .cat-links:before {
-		background-color: $color__background-body;
+	.featured-image-beside {
+		.cat-links a {
+			color: $color__background-body;
+		}
+
+		.cat-links:before {
+			background-color: $color__background-body;
+		}
 	}
 }
 
@@ -193,10 +199,6 @@ Newspack Theme Styles - Style Pack 3
 	// Header - Solid background
 	.h-sb .featured-image-beside {
 		background-color: $color__primary;
-
-		.cat-links:before {
-			background-color: $color__background-body;
-		}
 	}
 }
 
