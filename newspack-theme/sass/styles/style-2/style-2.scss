@@ -126,7 +126,7 @@ body:not(.h-sb) .site-header { // Not Header solid background
 	margin-top: #{ -1 * $size__spacing-unit };
 
 	@include media( tablet ) {
-		margin-top: calc( #{ -1 * $size__spacing-unit } - 4px );
+		margin-top: calc( #{ -1 * $size__spacing-unit } - 4px );  // minus 4px to offset bottom border on header
 	}
 }
 
