@@ -199,8 +199,8 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
-			.nav3 a {
-				background-color: ' . newspack_adjust_brightness( $primary_color, -20 ) . ';
+			.h-sb .nav3 a {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -17 ) . ';
 				color: ' . $primary_color_contrast . ';
 			}
 			.h-sb .site-header .nav3 .menu-highlight a {
