@@ -2,7 +2,7 @@
 /**
  * The template for displaying Author info
  *
- * @package Newspack
+ * @package Newspack Sacha
  */
 
 $author_bio_length = get_theme_mod( 'author_bio_length', 200 );

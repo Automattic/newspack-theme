@@ -1,6 +1,6 @@
 <?php
 /**
- * Newpack Sacha: Customizer
+ * Newspack Sacha: Customizer
  *
  * @package Newspack Sacha
  */

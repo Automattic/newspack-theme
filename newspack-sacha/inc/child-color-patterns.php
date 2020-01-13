@@ -1,8 +1,8 @@
 <?php
 /**
- * Newspack Style 4 Theme: Color Patterns
+ * Newspack Sacha: Color Patterns
  *
- * @package Newspack Style 4
+ * @package Newspack Sacha
  */
 /**
  * Add child theme-specific custom colours.
