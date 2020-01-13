@@ -199,10 +199,17 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
+			.nav3 a {
+				background-color: ' . newspack_adjust_brightness( $primary_color, -20 ) . ';
+				color: ' . $primary_color_contrast . ';
+			}
+			.h-sb .site-header .nav3 .menu-highlight a {
+				background-color: ' . $secondary_color . ';
+				color: ' . $secondary_color_contrast . ';
+			}
 			.cat-links a,
 			.cat-links a:visited,
-			/* Header default background; default height */
-			body.h-db.h-dh .site-header .nav3 .menu-highlight a {
+			.site-header .nav3 .menu-highlight a {
 				background-color: ' . $primary_color . ';
 				color: ' . $primary_color_contrast . ';
 			}
