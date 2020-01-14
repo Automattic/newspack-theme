@@ -178,7 +178,8 @@ h4,
 }
 
 .accent-header,
-.site-content .wpnbha .article-section-title {
+.wp-block-columns .wp-block-column > .accent-header,
+.entry-content .wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
 		margin-bottom: #{ 1.5 * $size__spacing-unit };

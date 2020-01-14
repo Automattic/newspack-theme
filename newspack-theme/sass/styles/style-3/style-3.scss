@@ -62,7 +62,8 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .accent-header,
-.site-content .wpnbha .article-section-title,
+.wp-block-columns .wp-block-column > .accent-header,
+.entry-content .wpnbha .article-section-title,
 .cat-links,
 .archive .page-title {
 	margin: 0 0 #{ 1.5 * $size__spacing-unit };

@@ -183,7 +183,9 @@
 		margin-bottom: 32px;
 		margin-top: 32px;
 
-		&:first-child {
+		&:first-child,
+		&.wpnbha:first-child .article-section-title,
+		&.accent-header + div.wpnbha {
 			margin-top: 0;
 		}
 

@@ -68,6 +68,7 @@ input[type="submit"] {
 
 /* Accent headers */
 .accent-header,
+.wp-block-columns .wp-block-column > .accent-header,
 .site-content .wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-base;
