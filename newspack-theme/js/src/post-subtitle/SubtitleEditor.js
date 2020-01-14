@@ -31,14 +31,10 @@ const SubtitleEditor = ( { subtitle, saveSubtitle } ) => {
 		saveSubtitle( value );
 	}, [ value ] );
 
-	const onChange = value => {
-		setValue( value );
-	};
-
 	return (
 		<TextareaControl
 			value={ value }
-			onChange={ onChange }
+			onChange={ setValue }
 			style={ { marginTop: '10px', width: '100%' } }
 		/>
 	);

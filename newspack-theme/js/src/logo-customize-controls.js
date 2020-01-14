@@ -12,7 +12,7 @@
 
 	api.bind( 'ready', function() {
 		$( window ).load( function() {
-			if ( false == api.control( 'custom_logo' ).setting() ) {
+			if ( false === api.control( 'custom_logo' ).setting() ) {
 				$( '#customize-control-logo_size' ).hide();
 			}
 		} );

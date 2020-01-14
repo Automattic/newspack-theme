@@ -67,7 +67,7 @@
 		const styleData = config.styles[ style ];
 
 		if ( styleData ) {
-			link = createLink( styleData.id, styleData.uri );
+			const link = createLink( styleData.id, styleData.uri );
 			if ( '' !== stylePacksData.default_css_id ) {
 				document
 					.getElementById( stylePacksData.default_css_id )

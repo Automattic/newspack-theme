@@ -8,7 +8,6 @@
 ( function( $ ) {
 	const api = wp.customize;
 	const Logo = new NewspackLogo();
-	let initial = null;
 	let resizeTimer;
 
 	api( 'custom_logo', function( value ) {
@@ -19,10 +18,6 @@
 	api( 'logo_size', function( value ) {
 		Logo.resize( value() );
 		value.bind( Logo.resize );
-	} );
-
-	api( 'ready', function() {
-		initial = api( 'custom_logo' )._value;
 	} );
 
 	/**
@@ -43,11 +38,10 @@
 	 *
 	 */
 	function NewspackLogo() {
-		const intId = 0;
 		let hasLogo = null;
 		const min = 48;
 
-		var self = {
+		const self = {
 			resize( to ) {
 				if ( hasLogo ) {
 					const img = new Image();
@@ -102,10 +96,10 @@
 			},
 
 			add() {
-				intID = setInterval( function() {
+				const intId = setInterval( function() {
 					const logo = $( '.custom-logo[src]' );
 					if ( logo.length ) {
-						clearInterval( intID );
+						clearInterval( intId );
 						hasLogo = true;
 					}
 				}, 500 );
@@ -113,10 +107,10 @@
 
 			change() {
 				const oldlogo = $( '.custom-logo' ).attr( 'src' );
-				intID = setInterval( function() {
+				const intId = setInterval( function() {
 					const logo = $( '.custom-logo' ).attr( 'src' );
-					if ( logo != oldlogo ) {
-						clearInterval( intID );
+					if ( logo !== oldlogo ) {
+						clearInterval( intId );
 						hasLogo = true;
 						self.resize( 50 );
 					}
@@ -142,20 +136,17 @@
 	 * @param {number} m minimum short side
 	 */
 	function logo_min_max( a, b, amax, bmax, p, m ) {
-		let ppp,
-			ratio,
-			max = new Object(),
-			size = new Object();
+		const max = new Object();
+		const size = new Object();
 
-		ratio = b / a;
+		const ratio = b / a;
 		max.b = bmax >= b ? b : bmax;
 		max.a = amax >= max.b / ratio ? Math.floor( max.b / ratio ) : amax;
 
-		// number of pixels per percentage point
-		ppp = ( max.a - m ) / 100;
+		const pixelsPerPercentagePoint = ( max.a - m ) / 100;
 
 		// at 0%, the minimum is set, scale up from there
-		size.a = Math.floor( m + p * ppp );
+		size.a = Math.floor( m + p * pixelsPerPercentagePoint );
 		// long side is calculated from the image ratio
 		size.b = Math.floor( size.a * ratio );
 
