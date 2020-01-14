@@ -15,29 +15,59 @@
 
 /* Navigation */
 
-// Header default background; header default height
-body.h-db.h-dh {
-	.site-header {
-		.nav3 {
-			a {
-				background-color: lighten($color__text-light, 45%);
-				color: $color__text-main;
-				@include button-transition;
-				border-radius: 5px;
-				font-size: $font__size-sm;
-				font-weight: 700;
-				padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
+.nav3 {
+	a {
+		background-color: lighten($color__text-light, 45%);
+		color: $color__text-main;
+		@include button-transition;
+		border-radius: 5px;
+		font-size: $font__size-sm;
+		font-weight: 700;
+		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
+	}
 
-				&:hover,
-				&:focus {
-					background-color: $color__text-main;
-					color: #fff;
-					opacity: 1.0;
-				}
-			}
+	.menu-highlight a {
+		background-color: $color__primary;
+		border: 0;
+		color: #fff;
+	}
+}
+
+.h-sb .nav3 {
+	a {
+		background-color: darken($color__primary, 10%);
+		color: #fff;
+	}
+
+	.menu-highlight a {
+		background-color: $color__secondary;
+	}
+}
+
+.nav3,
+.h-sb .nav3 {
+	li a,
+	li.menu-highlight a {
+		&:hover,
+		&:focus {
+			background-color: $color__text-main;
+			color: #fff;
+			opacity: 1.0;
 		}
 	}
 }
+
+.mobile-sidebar .nav3 {
+	a {
+		background: transparent;
+		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
+	}
+
+	.menu-highlight a {
+		background-color: darken($color__primary, 10%);
+	}
+}
+
 
 /* Posts and pages */
 
