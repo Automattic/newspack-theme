@@ -13,6 +13,10 @@ if ( ! fs.existsSync( './newspack-sacha/styles' ) ) {
 	fs.mkdirSync( './newspack-sacha/styles' );
 }
 
+if ( ! fs.existsSync( './newspack-scott/styles' ) ) {
+	fs.mkdirSync( './newspack-scott/styles' );
+}
+
 /**
  * Save a file do disk.
  */
@@ -142,6 +146,16 @@ const SASS_STYLESHEETS = [
 	{
 		inFile: 'newspack-sacha/sass/style-editor.scss',
 		outFile: 'newspack-sacha/styles/style-editor.css',
+	},
+	// Newspack Scott Child theme
+	{
+		inFile: 'newspack-scott/sass/style.scss',
+		outFile: 'newspack-scott/style.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-scott/sass/style-editor.scss',
+		outFile: 'newspack-scott/styles/style-editor.css',
 	},
 ];
 
