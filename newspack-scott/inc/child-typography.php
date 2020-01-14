@@ -16,28 +16,31 @@ function newspack_scott_custom_typography_css() {
 
 	if ( get_theme_mod( 'font_header', '' ) ) {
 		$css_blocks .= '
-			.site-description,
 			.has-drop-cap:not(:focus)::first-letter,
-			.taxonomy-description,
-			.entry .entry-content blockquote, .entry .entry-content blockquote cite, .wp-block-pullquote cite {
+			.wp-block-pullquote,
+			.wp-block-pullquote cite {
 				font-family: $font_header;
 			}
 		';
 
 		$editor_css_blocks .= '
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
-			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta {
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text__editable:first-child::before {
 				font-family: $font_header;
 			}
 		';
 	}
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
-			.accent-header,
-			.article-section-title {
+			.accent-header:not(.widget-title),
+			.article-section-title,
+			.page-title,
+			#secondary .widget-title,
+			.author-bio .accent-header span,
+			#colophon .widget-title {
 				text-transform: uppercase;
 			}
 		';

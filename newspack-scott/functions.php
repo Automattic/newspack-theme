@@ -63,7 +63,7 @@ function newspack_scott_custom_colors_css_wrap() {
 	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';
 	?>
 
-	<style type="text/css" id="custom-theme-colors-sacha">
+	<style type="text/css" id="custom-theme-colors-scott">
 		<?php echo esc_html( newspack_scott_custom_colors_css() ); ?>
 	</style>
 	<?php
@@ -79,7 +79,7 @@ function newspack_scott_typography_css_wrap() {
 	}
 	?>
 
-	<style type="text/css" id="custom-theme-fonts-sacha">
+	<style type="text/css" id="custom-theme-fonts-scott">
 		<?php echo wp_kses( newspack_scott_custom_typography_css(), '' ); ?>
 	</style>
 
@@ -95,7 +95,7 @@ function newspack_scott_scripts() {
 	// Dequeue parent styles
 	wp_dequeue_style( 'newspack-style' );
 	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-scott-fonts', newspack_sacha_fonts_url(), array(), null );
+	wp_enqueue_style( 'newspack-scott-fonts', newspack_scott_fonts_url(), array(), null );
 	// Enqueue child styles
 	wp_enqueue_style( 'newspack-scott-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 	// Enqueue child RTL styles
