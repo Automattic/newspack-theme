@@ -10,7 +10,7 @@
 ( function( $ ) {
 	// Style packs data.
 	var config = stylePacksData;
-	var body   = document.body;
+	var body = document.body;
 
 	loadPreviewStylesheets();
 
@@ -23,7 +23,7 @@
 
 			fireEvent( 'change', {
 				from: currentStyle,
-				to: to
+				to: to,
 			} );
 			body.classList.remove( getBodyClass( currentStyle ) );
 			body.classList.add( getBodyClass( to ) );
@@ -32,7 +32,7 @@
 	} );
 
 	function fireEvent( evt, payload ) {
-		$( document ).trigger( ['style_packs', evt].join( '.' ), payload );
+		$( document ).trigger( [ 'style_packs', evt ].join( '.' ), payload );
 	}
 
 	function createLink( id, uri ) {
@@ -52,50 +52,57 @@
 			removeStyle( prevStyle );
 		}
 
-		var styleData = config.styles[style];
+		var styleData = config.styles[ style ];
 
 		if ( styleData ) {
 			link = createLink( styleData.id, styleData.uri );
 			if ( '' !== stylePacksData.default_css_id ) {
-				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", link );
+				document
+					.getElementById( stylePacksData.default_css_id )
+					.insertAdjacentElement( 'afterend', link );
 			} else {
 				document.head.appendChild( link );
 			}
-
 		}
 
-		_.each( config.fonts[style], function( uri, id ) {
+		_.each( config.fonts[ style ], function( uri, id ) {
 			var link = createLink( id, uri );
 			if ( '' !== stylePacksData.default_css_id ) {
-				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", link );
+				document
+					.getElementById( stylePacksData.default_css_id )
+					.insertAdjacentElement( 'afterend', link );
 			} else {
 				document.head.appendChild( link );
 			}
-		});
+		} );
 	}
 
 	function removeStyle( style ) {
-		if ( config.styles[style] ) {
-			$( 'head #' + config.styles[style].id ).remove();
+		if ( config.styles[ style ] ) {
+			$( 'head #' + config.styles[ style ].id ).remove();
 		}
-		_.each( config.fonts[style], function( uri, id ) {
+		_.each( config.fonts[ style ], function( uri, id ) {
 			$( 'head #' + id ).remove();
 		} );
 	}
 
 	function loadPreviewStylesheets() {
 		var style = config.preview_style,
-			data  = config.styles[style];
-		_.each(config.fonts[style], function( uri, id ) {
+			data = config.styles[ style ];
+		_.each( config.fonts[ style ], function( uri, id ) {
 			if ( '' !== stylePacksData.default_css_id ) {
-				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", createLink( id, uri ) );
+				document
+					.getElementById( stylePacksData.default_css_id )
+					.insertAdjacentElement( 'afterend', createLink( id, uri ) );
 			} else {
 				document.head.appendChild( createLink( id, uri ) );
 			}
 		} );
 		if ( data ) {
 			if ( '' !== stylePacksData.default_css_id ) {
-				document.getElementById( stylePacksData.default_css_id ).insertAdjacentElement( "afterend", createLink( data.id, data.uri ) );
+				document
+					.getElementById( stylePacksData.default_css_id )
+					.insertAdjacentElement( 'afterend', createLink( data.id, data.uri ) );
 			} else {
 				document.head.appendChild( createLink( data.id, data.uri ) );
 			}

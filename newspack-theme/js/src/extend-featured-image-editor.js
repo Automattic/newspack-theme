@@ -54,8 +54,8 @@ const wrapPostFeaturedImage = OriginalComponent => {
 	return props => {
 		const post_type = select( 'core/editor' ).getCurrentPostType();
 
-		if ( "post" !== post_type ) {
-			return <OriginalComponent {...props} />;
+		if ( 'post' !== post_type ) {
+			return <OriginalComponent { ...props } />;
 		}
 
 		return (

@@ -27,9 +27,9 @@ const decorate = compose(
 const SubtitleEditor = ( { subtitle, saveSubtitle } ) => {
 	const [ value, setValue ] = useState( subtitle );
 
-	useEffect(() => {
+	useEffect( () => {
 		saveSubtitle( value );
-	}, [ value ]);
+	}, [ value ] );
 
 	const onChange = value => {
 		setValue( value );

@@ -20,7 +20,7 @@
 
 	// Check logo changes
 	api( 'custom_logo', function( value ) {
-		value.bind ( function ( to ) {
+		value.bind( function( to ) {
 			if ( '' === to ) {
 				api.control( 'logo_size' ).deactivate();
 			} else {

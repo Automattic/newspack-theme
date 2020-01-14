@@ -21,9 +21,9 @@ import { appendSubtitleToTitleDOMElement, connectWithSelect } from './utils';
  */
 const NewspackSubtitlePanel = ( { subtitle } ) => {
 	// Update the DOM when subtitle value changes
-	useEffect(() => {
+	useEffect( () => {
 		appendSubtitleToTitleDOMElement( subtitle );
-	}, [ subtitle ]);
+	}, [ subtitle ] );
 
 	return (
 		<PluginDocumentSettingPanel
