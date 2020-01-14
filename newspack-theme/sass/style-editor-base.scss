@@ -668,24 +668,28 @@ ul.wp-block-archives,
 /** === Latest Comments === */
 
 .wp-block-latest-comments {
+	margin-left: 0;
+	padding-left: 0;
 
 	.wp-block-latest-comments__comment-meta {
 		font-family: $font__heading;
 		font-weight: bold;
 
 		.wp-block-latest-comments__comment-date {
+			color: $color__text-light;
 			font-weight: normal;
 		}
 	}
 
-	.wp-block-latest-comments__comment,
-	.wp-block-latest-comments__comment-date,
-	.wp-block-latest-comments__comment-excerpt p {
-		font-size: inherit;
+	.wp-block-latest-comments__comment {
+		line-height: $font__line-height-body;
+		margin-bottom: $size__spacing-unit;
 	}
 
-	.wp-block-latest-comments__comment-date {
-		font-size: $font__size-xs;
+	.wp-block-latest-comments__comment-excerpt p {
+		font-size: 1.1em;
+		line-height: $font__line-height-body;
+		margin: 0;
 	}
 }
 

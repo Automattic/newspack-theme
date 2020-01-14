@@ -412,6 +412,31 @@
 	}
 }
 
+//! Latest Comments
+.wp-block-latest-comments {
+	padding-left: 0;
+
+	.wp-block-latest-comments__comment-meta {
+		font-family: $font__heading;
+		font-weight: bold;
+
+		.wp-block-latest-comments__comment-date {
+			color: $color__text-light;
+			font-weight: normal;
+			margin: #{ 0.25 * $size__spacing-unit } 0;
+		}
+	}
+
+	.wp-block-latest-comments__comment {
+		line-height: $font__line-height-body;
+	}
+
+	.wp-block-latest-comments__comment-excerpt p {
+		font-size: 1.1em;
+		line-height: $font__line-height-body;
+	}
+}
+
 .entry .entry-content {
 
 	//! Paragraphs
@@ -819,41 +844,6 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-		}
-	}
-
-
-	//! Latest Comments
-	.wp-block-latest-comments {
-
-		.wp-block-latest-comments__comment-meta {
-			font-family: $font__heading;
-			font-weight: bold;
-
-			.wp-block-latest-comments__comment-date {
-				font-weight: normal;
-			}
-		}
-
-		.wp-block-latest-comments__comment,
-		.wp-block-latest-comments__comment-date,
-		.wp-block-latest-comments__comment-excerpt p {
-			font-size: inherit;
-		}
-
-		&.has-avatars {
-
-		}
-
-		&.has-dates {
-
-			.wp-block-latest-comments__comment-date {
-				font-size: $font__size-xs;
-			}
-		}
-
-		&.has-excerpts {
-
 		}
 	}
 
