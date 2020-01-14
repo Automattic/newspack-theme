@@ -31,10 +31,16 @@
 		} );
 	} );
 
+	/**
+	 * Fire style_packs event
+	 */
 	function fireEvent( evt, payload ) {
 		$( document ).trigger( [ 'style_packs', evt ].join( '.' ), payload );
 	}
 
+	/**
+	 * Create DOM link element
+	 */
 	function createLink( id, uri ) {
 		const link = document.createElement( 'link' );
 		link.setAttribute( 'rel', 'stylesheet' );
@@ -43,10 +49,16 @@
 		return link;
 	}
 
+	/**
+	 * Get body class
+	 */
 	function getBodyClass( style ) {
 		return stylePacksData.body_class_format.replace( '%s', style );
 	}
 
+	/**
+	 * Apply styles to document head
+	 */
 	function applyStyle( style, prevStyle ) {
 		if ( prevStyle ) {
 			removeStyle( prevStyle );
@@ -77,6 +89,9 @@
 		} );
 	}
 
+	/**
+	 * Remove styles from document head
+	 */
 	function removeStyle( style ) {
 		if ( config.styles[ style ] ) {
 			$( 'head #' + config.styles[ style ].id ).remove();
@@ -86,6 +101,9 @@
 		} );
 	}
 
+	/**
+	 * Load preview stylesheets to document head
+	 */
 	function loadPreviewStylesheets() {
 		const style = config.preview_style,
 			data = config.styles[ style ];

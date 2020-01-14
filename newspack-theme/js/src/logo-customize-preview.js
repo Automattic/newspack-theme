@@ -131,9 +131,16 @@
 		return self;
 	}
 
-	// a is short side, b is long side
-	// x is short css max, y is long css max
-	// p is percent, m is minimum short side
+	/**
+	 * Get logo size
+	 *
+	 * @param {number} a short side,
+	 * @param {number} b long side
+	 * @param {number} amax short css max
+	 * @param {number} bmax long css max
+	 * @param {number} p percent
+	 * @param {number} m minimum short side
+	 */
 	function logo_min_max( a, b, amax, bmax, p, m ) {
 		let ppp,
 			ratio,
