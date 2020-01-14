@@ -199,7 +199,13 @@ function newspack_custom_colors_css() {
 
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
-			.h-sb .nav3 a {
+			.mobile-sidebar .nav3 a {
+				background: transparent;
+			}
+			.mobile-sidebar .nav3 .menu-highlight a {
+				background: ' . newspack_adjust_brightness( $primary_color, -20 ) . ';
+			}
+			.h-sb .site-header .nav3 a {
 				background-color: ' . newspack_adjust_brightness( $primary_color, -17 ) . ';
 				color: ' . $primary_color_contrast . ';
 			}

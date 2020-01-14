@@ -57,6 +57,17 @@
 	}
 }
 
+.mobile-sidebar .nav3 {
+	a {
+		background: transparent;
+		padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
+	}
+
+	.menu-highlight a {
+		background-color: darken($color__primary, 10%);
+	}
+}
+
 
 /* Posts and pages */
 
