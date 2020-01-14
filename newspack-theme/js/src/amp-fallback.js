@@ -6,7 +6,7 @@
 
 ( function() {
 	// Search toggle.
-	var headerContain = document.getElementById( 'masthead' ),
+	const headerContain = document.getElementById( 'masthead' ),
 		headerSearch = document.getElementById( 'header-search' ),
 		headerSearchInput = headerSearch.getElementsByTagName( 'input' )[ 0 ],
 		searchToggle = document.getElementById( 'search-toggle' ),
@@ -37,13 +37,13 @@
 
 	// Mobile menu fallback.
 
-	var menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
+	const menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
 		body = document.getElementsByTagName( 'body' )[ 0 ],
 		mobileSidebar = document.getElementById( 'mobile-sidebar-fallback' ),
 		menuOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
 		menuCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ];
 
-	for ( var i = 0; i < menuToggle.length; i++ ) {
+	for ( let i = 0; i < menuToggle.length; i++ ) {
 		menuToggle[ i ].addEventListener(
 			'click',
 			function() {

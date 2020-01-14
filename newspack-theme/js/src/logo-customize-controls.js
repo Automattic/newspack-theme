@@ -8,7 +8,7 @@
 ( function( $ ) {
 	'use strict';
 
-	var api = wp.customize;
+	const api = wp.customize;
 
 	api.bind( 'ready', function() {
 		$( window ).load( function() {

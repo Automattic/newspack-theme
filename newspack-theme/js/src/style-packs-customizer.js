@@ -9,21 +9,21 @@
 
 ( function( $ ) {
 	// Style packs data.
-	var config = stylePacksData;
-	var body = document.body;
+	const config = stylePacksData;
+	const body = document.body;
 
 	loadPreviewStylesheets();
 
 	// Active style pack.
 	wp.customize( 'active_style_pack', function( value ) {
-		var currentStyle = value();
+		let currentStyle = value();
 
 		value.bind( function( to ) {
 			applyStyle( to, currentStyle );
 
 			fireEvent( 'change', {
 				from: currentStyle,
-				to: to,
+				to,
 			} );
 			body.classList.remove( getBodyClass( currentStyle ) );
 			body.classList.add( getBodyClass( to ) );
@@ -36,7 +36,7 @@
 	}
 
 	function createLink( id, uri ) {
-		var link = document.createElement( 'link' );
+		const link = document.createElement( 'link' );
 		link.setAttribute( 'rel', 'stylesheet' );
 		link.setAttribute( 'id', id );
 		link.setAttribute( 'href', uri );
@@ -52,7 +52,7 @@
 			removeStyle( prevStyle );
 		}
 
-		var styleData = config.styles[ style ];
+		const styleData = config.styles[ style ];
 
 		if ( styleData ) {
 			link = createLink( styleData.id, styleData.uri );
@@ -66,7 +66,7 @@
 		}
 
 		_.each( config.fonts[ style ], function( uri, id ) {
-			var link = createLink( id, uri );
+			const link = createLink( id, uri );
 			if ( '' !== stylePacksData.default_css_id ) {
 				document
 					.getElementById( stylePacksData.default_css_id )
@@ -87,7 +87,7 @@
 	}
 
 	function loadPreviewStylesheets() {
-		var style = config.preview_style,
+		const style = config.preview_style,
 			data = config.styles[ style ];
 		_.each( config.fonts[ style ], function( uri, id ) {
 			if ( '' !== stylePacksData.default_css_id ) {

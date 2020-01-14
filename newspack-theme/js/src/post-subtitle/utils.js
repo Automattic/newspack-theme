@@ -8,6 +8,7 @@ export const META_FIELD_NAME = 'newspack_post_subtitle';
 
 /**
  * Appends subtitle to DOM, below the Title in the Editor.
+ *
  * @param  {string} subtitle Subtitle text
  */
 export const appendSubtitleToTitleDOMElement = subtitle => {

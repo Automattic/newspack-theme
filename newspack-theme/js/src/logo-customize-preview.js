@@ -6,10 +6,10 @@
  * Contains handlers to make Customizer preview changes asynchronously.
  */
 ( function( $ ) {
-	var api = wp.customize;
-	var Logo = new NewspackLogo();
-	var initial = null;
-	var resizeTimer;
+	const api = wp.customize;
+	const Logo = new NewspackLogo();
+	let initial = null;
+	let resizeTimer;
 
 	api( 'custom_logo', function( value ) {
 		handleLogoDetection( value() );
@@ -25,6 +25,9 @@
 		initial = api( 'custom_logo' )._value;
 	} );
 
+	/**
+	 *
+	 */
 	function handleLogoDetection( to, initial ) {
 		if ( '' === to ) {
 			Logo.remove();
@@ -36,33 +39,36 @@
 		initial = to;
 	}
 
+	/**
+	 *
+	 */
 	function NewspackLogo() {
-		var intId = 0;
-		var hasLogo = null;
-		var min = 48;
+		const intId = 0;
+		let hasLogo = null;
+		const min = 48;
 
 		var self = {
-			resize: function( to ) {
+			resize( to ) {
 				if ( hasLogo ) {
-					var img = new Image();
-					var logo = $( '.custom-logo' );
+					const img = new Image();
+					const logo = $( '.custom-logo' );
 
-					var size = {
+					let size = {
 						width: parseInt( logo.attr( 'width' ), 10 ),
 						height: parseInt( logo.attr( 'height' ), 10 ),
 					};
 
-					var cssMax = {
+					const cssMax = {
 						width: parseInt( logo.css( 'max-width' ), 10 ),
 						height: parseInt( logo.css( 'max-height' ), 10 ),
 					};
 
-					var max = new Object();
+					const max = new Object();
 					max.width = $.isNumeric( cssMax.width ) ? cssMax.width : 600;
 					max.height = $.isNumeric( cssMax.height ) ? cssMax.height : size.height;
 
 					img.onload = function() {
-						var output = new Object();
+						let output = new Object();
 
 						if ( size.width >= size.height ) {
 							// landscape or square, calculate height as short side
@@ -95,9 +101,9 @@
 				}
 			},
 
-			add: function() {
+			add() {
 				intID = setInterval( function() {
-					var logo = $( '.custom-logo[src]' );
+					const logo = $( '.custom-logo[src]' );
 					if ( logo.length ) {
 						clearInterval( intID );
 						hasLogo = true;
@@ -105,10 +111,10 @@
 				}, 500 );
 			},
 
-			change: function() {
-				var oldlogo = $( '.custom-logo' ).attr( 'src' );
+			change() {
+				const oldlogo = $( '.custom-logo' ).attr( 'src' );
 				intID = setInterval( function() {
-					var logo = $( '.custom-logo' ).attr( 'src' );
+					const logo = $( '.custom-logo' ).attr( 'src' );
 					if ( logo != oldlogo ) {
 						clearInterval( intID );
 						hasLogo = true;
@@ -117,7 +123,7 @@
 				}, 100 );
 			},
 
-			remove: function() {
+			remove() {
 				hasLogo = null;
 			},
 		};
@@ -129,7 +135,7 @@
 	// x is short css max, y is long css max
 	// p is percent, m is minimum short side
 	function logo_min_max( a, b, amax, bmax, p, m ) {
-		var ppp,
+		let ppp,
 			ratio,
 			max = new Object(),
 			size = new Object();
