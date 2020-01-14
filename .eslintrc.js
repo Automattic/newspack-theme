@@ -1,6 +1,7 @@
 module.exports = {
 	extends: [
 		'plugin:@wordpress/eslint-plugin/recommended',
+		'plugin:prettier/recommended',
 		'plugin:react/recommended',
 		'plugin:jsdoc/recommended',
 		'plugin:import/errors',
