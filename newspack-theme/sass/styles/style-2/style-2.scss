@@ -122,6 +122,14 @@ body:not(.h-sb) .site-header { // Not Header solid background
 	}
 }
 
+.newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child {
+	margin-top: #{ -1 * $size__spacing-unit };
+
+	@include media( tablet ) {
+		margin-top: calc( #{ -1 * $size__spacing-unit } - 4px );  // minus 4px to offset bottom border on header
+	}
+}
+
 .single-featured-image-behind {
 	#primary {
 		padding-top: 0;
