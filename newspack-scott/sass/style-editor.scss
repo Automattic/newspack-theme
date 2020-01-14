@@ -1,0 +1,187 @@
+/*!
+Newspack Scott Editor Styles
+*/
+
+/** === Includes === */
+
+@import "variables-style/variables-style";
+@import "../../newspack-theme/sass/style-editor-base";
+
+.accent-header,
+.article-section-title {
+	color: #666;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+
+	&::before {
+		background-color: $color__primary;
+		content: '';
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 0.75em 0 0;
+		position: relative;
+		width: 0.75em;
+		top: 3px;
+	}
+}
+
+.entry-meta .byline a {
+	color: $color__text-light;
+}
+
+/* Avatar */
+
+.avatar {
+	border-radius: 0;
+}
+
+/** === Paragraph === */
+
+.wp-block-paragraph {
+	&.has-drop-cap:not( :focus )::first-letter {
+		font-family: $font__heading;
+		font-weight: bold;
+	}
+}
+
+.wp-block[data-type='core/pullquote'] {
+	.wp-block-pullquote {
+		border-width: 0;
+		padding-top: #{3 * $size__spacing-unit};
+		position: relative;
+
+		.block-library-pullquote__content {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	blockquote {
+		border-color: inherit;
+		margin: #{2 * $size__spacing-unit} 0;
+		text-align: center;
+
+		&::before,
+		&::after {
+			border-top: 2px solid;
+			border-top-color: inherit;
+			content: '';
+			display: block;
+			position: absolute;
+			opacity: 0.8;
+			top: #{2 * $size__spacing-unit};
+		}
+
+		&::before {
+			left: 15%;
+			right: calc( 50% + 2em );
+		}
+
+		&::after {
+			left: calc( 50% + 2em );
+			right: 15%;
+		}
+	}
+
+	.wp-block-pullquote.is-style-solid-color {
+		blockquote::before,
+		blockquote::after {
+			border-top-color: currentColor;
+		}
+	}
+
+	blockquote > .editor-rich-text__editable:first-child::before {
+		color: $color__primary;
+		content: '\201C';
+		display: inline-block;
+		font-family: $font__heading;
+		font-size: calc( 1rem * 6 );
+		font-style: italic;
+		font-weight: normal;
+		left: calc( 50% - 0.3em );
+		line-height: 0.75;
+		position: absolute;
+		text-align: center;
+		top: 0.2em;
+		width: 0.5em;
+		z-index: 1;
+
+		@include media( tablet ) {
+			font-size: calc( 1rem * 8 );
+		}
+	}
+
+	.wp-block-pullquote.is-style-solid-color
+		blockquote
+		> .editor-rich-text__editable:first-child::before {
+		color: inherit;
+	}
+
+	blockquote
+		> .block-library-pullquote__content
+		.editor-rich-text__tinymce[data-is-empty='true']::before,
+	blockquote > .editor-rich-text p,
+	p {
+		font-family: $font__heading;
+		font-size: $font__size-lg;
+		font-weight: bold;
+
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
+	.wp-block-pullquote__citation {
+		font-size: $font__size-sm;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	&[data-align='left'] .wp-block-pullquote,
+	&[data-align='right'] .wp-block-pullquote {
+		border-width: 0;
+
+		blockquote {
+			padding-top: #{3.5 * $size__spacing-unit};
+			text-align: left;
+
+			&::before {
+				left: 3em;
+				right: 0;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+
+		blockquote > .editor-rich-text__editable:first-child::before {
+			font-size: calc( 1rem * 6 );
+			left: 0;
+			text-align: left;
+			top: 0.3em;
+			width: 0.5em;
+		}
+
+		&.is-style-solid-color blockquote {
+			padding-top: #{0.25 * $size__spacing-unit};
+
+			&::before {
+				left: #{5 * $size__spacing-unit};
+				right: #{2 * $size__spacing-unit};
+			}
+
+			> .editor-rich-text__editable:first-child::before {
+				left: #{1.5 * $size__spacing-unit};
+			}
+		}
+
+		blockquote
+			> .block-library-pullquote__content
+			.editor-rich-text__tinymce[data-is-empty='true']::before,
+		blockquote > .editor-rich-text p,
+		p {
+			font-size: $font__size-md;
+		}
+	}
+}

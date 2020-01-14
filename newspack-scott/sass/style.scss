@@ -1,0 +1,308 @@
+/*
+Theme Name: Newspack Scott
+Theme URI:
+Author: Automattic
+Author URI: https://newspack.blog
+Description:
+Requires at least: WordPress 4.9.6
+Version: 1.0.0-alpha.26
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: newspack-theme
+Text Domain: newspack-scott
+Tags:
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "variables-style/variables-style";
+@import "../../newspack-theme/sass/style-base";
+
+/* Style pack-specific overrides */
+
+.accent-header:not( .widget-title ),
+.article-section-title,
+.cat-links,
+.page-title {
+	color: #666;
+	font-size: $font__size-sm;
+
+	&::before {
+		background-color: $color__primary;
+		content: '';
+		display: inline-block;
+		height: 0.75em;
+		margin: 0 0.5em 0 0;
+		width: 0.75em;
+	}
+}
+
+.accent-header,
+.wp-block-columns .wp-block-column > .accent-header,
+.entry .wpnbha .article-section-title {
+	margin-bottom: 1em;
+}
+
+.cat-links {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+}
+
+#secondary .widget-title {
+	font-size: $font__size-lg;
+}
+
+/* Posts & Pages */
+
+@include media( tablet ) {
+	.featured-image-beside .cat-links::before {
+		background-color: $color__background-body;
+	}
+}
+
+.single .cat-links {
+	font-size: $font__size_base;
+}
+
+.search,
+.blog {
+	.cat-links::before {
+		display: none;
+	}
+}
+
+.entry-meta .byline {
+	a,
+	a:visited {
+		color: $color__text-light;
+	}
+
+	a:hover {
+		color: $color__text-main;
+	}
+}
+
+.single {
+	@include media( tablet ) {
+		.entry-meta {
+			align-items: center;
+			display: flex;
+		}
+
+		&.single-featured-image-default .posted-on {
+			margin-left: #{1.5 * $size__spacing-unit};
+		}
+	}
+}
+
+/* Avatar */
+.avatar,
+.entry-content .wpnbha .avatar {
+	border-radius: 0;
+}
+
+/* Author Bio */
+
+.author-bio .accent-header {
+	color: $color__text-main;
+	font-size: $font__size-md;
+	margin: 0 0 #{0.25 * $size__spacing-unit};
+
+	span {
+		font-size: $font__size-xs;
+	}
+
+	&::before {
+		display: none;
+	}
+}
+
+/* Blocks */
+
+//! Paragraph
+.has-drop-cap:not( :focus )::first-letter {
+	font-family: $font__heading;
+	font-weight: bold;
+}
+
+//! Pullquote
+.wp-block-pullquote {
+	border-width: 0;
+	border-color: transparent;
+	font-family: $font__heading;
+	font-weight: bold;
+	padding-top: #{4 * $size__spacing-unit};
+	position: relative;
+
+	p {
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
+	blockquote {
+		border-color: inherit;
+		text-align: center;
+
+		&::before,
+		&::after {
+			border-top: 2px solid;
+			border-color: inherit;
+			content: '';
+			display: block;
+			position: absolute;
+			opacity: 0.8;
+			top: #{2 * $size__spacing-unit};
+		}
+
+		&::before {
+			left: 15%;
+			right: calc( 50% + 2em );
+		}
+
+		&::after {
+			left: calc( 50% + 2em );
+			right: 15%;
+		}
+
+		p:first-of-type::before {
+			color: $color__primary;
+			content: '\201C';
+			display: inline-block;
+			font-size: calc( 1rem * 5 );
+			font-weight: normal;
+			left: calc( 50% - 0.3em );
+			line-height: 0.75;
+			position: absolute;
+			text-align: center;
+			top: #{1.5 * $size__spacing-unit};
+			width: 0.5em;
+			z-index: 1;
+
+			@include media( tablet ) {
+				font-size: calc( 1rem * 7 );
+			}
+		}
+	}
+
+	&.is-style-solid-color {
+		blockquote {
+			text-align: center;
+			&::before {
+				color: inherit;
+			}
+			&::after {
+				border-top-color: currentColor;
+			}
+			&::before,
+			&::after {
+				border-top-color: currentColor;
+			}
+			cite {
+				text-transform: uppercase;
+			}
+		}
+
+		p:first-of-type::before {
+			color: inherit;
+		}
+	}
+
+	cite {
+		font-size: $font__size-sm;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	&.alignleft,
+	&.alignright {
+		blockquote {
+			text-align: left;
+			&::before {
+				left: 3em;
+				right: 15%;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&,
+		&.is-style-solid-color {
+			padding-top: #{3 * $size__spacing-unit};
+		}
+
+		p {
+			font-size: $font__size-md;
+
+			&:first-of-type::before {
+				font-size: calc( 1rem * 5 );
+				left: 0;
+				text-align: left;
+				width: 0.5em;
+			}
+		}
+
+		&.is-style-solid-color {
+			p:first-of-type::before {
+				left: #{1.5 * $size__spacing-unit};
+			}
+
+			blockquote::before {
+				left: 4em;
+			}
+		}
+	}
+}
+
+//! Newspack
+.wpnbha .cat-links::before {
+	display: none;
+}
+
+// Archive
+
+.archive .page-title {
+	color: $color__text-light;
+}
+
+/* Footer */
+
+#colophon {
+	&,
+	.social-navigation a {
+		color: $color__text-main;
+	}
+
+	.footer-branding .wrapper,
+	.footer-widgets:first-child {
+		border-top: 3px solid currentColor;
+	}
+
+	.widget-title {
+		color: $color__text-main;
+		font-size: $font__size_base;
+	}
+}
+
+#colophon .widget,
+// If custom font is set, `#colophon .site-info` selector would override it
+// (See issue #663)
+.site-info {
+	font-family: $font__heading;
+}
+
+/* Pop-up */
+
+.entry-content {
+	.newspack-lightbox {
+		.newspack-lightbox__close {
+			border-radius: 5px;
+		}
+	}
+}
