@@ -3,13 +3,13 @@
 import { addFilter } from '@wordpress/hooks';
 import { RadioControl } from '@wordpress/components';
 import { withDispatch, withSelect, select } from '@wordpress/data';
-import { Component, createElement, Fragment } from '@wordpress/element';
+import { Component, Fragment } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import { __ } from '@wordpress/i18n';
 
 class RadioCustom extends Component {
 	render() {
-		const { meta, updateFeaturedImagePosition, value } = this.props;
+		const { meta, updateFeaturedImagePosition } = this.props;
 
 		return (
 			<RadioControl
@@ -33,8 +33,8 @@ class RadioCustom extends Component {
 }
 
 const ComposedRadio = compose( [
-	withSelect( select => {
-		const { getCurrentPostAttribute, getEditedPostAttribute } = select( 'core/editor' );
+	withSelect( _select => {
+		const { getCurrentPostAttribute, getEditedPostAttribute } = _select( 'core/editor' );
 		return {
 			meta: { ...getCurrentPostAttribute( 'meta' ), ...getEditedPostAttribute( 'meta' ) },
 		};
@@ -51,11 +51,12 @@ const ComposedRadio = compose( [
 ] )( RadioCustom );
 
 const wrapPostFeaturedImage = OriginalComponent => {
+	// eslint-disable-next-line react/display-name
 	return props => {
 		const post_type = select( 'core/editor' ).getCurrentPostType();
 
-		if ( "post" !== post_type ) {
-			return <OriginalComponent {...props} />;
+		if ( 'post' !== post_type ) {
+			return <OriginalComponent { ...props } />;
 		}
 
 		return (

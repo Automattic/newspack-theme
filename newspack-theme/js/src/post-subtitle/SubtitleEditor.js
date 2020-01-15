@@ -27,18 +27,14 @@ const decorate = compose(
 const SubtitleEditor = ( { subtitle, saveSubtitle } ) => {
 	const [ value, setValue ] = useState( subtitle );
 
-	useEffect(() => {
+	useEffect( () => {
 		saveSubtitle( value );
-	}, [ value ]);
-
-	const onChange = value => {
-		setValue( value );
-	};
+	}, [ value ] );
 
 	return (
 		<TextareaControl
 			value={ value }
-			onChange={ onChange }
+			onChange={ setValue }
 			style={ { marginTop: '10px', width: '100%' } }
 		/>
 	);
