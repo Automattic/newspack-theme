@@ -539,6 +539,27 @@ function newspack_register_meta() {
 }
 add_action( 'init', 'newspack_register_meta' );
 
+
+/**
+ * Migrate theme settings when switching within the family of Newspack themes.
+ *
+ * @since Newspack Theme 1.0.0
+ */
+function newspack_migrate_settings( $old_name, $old_theme = false ) {
+	$theme           = wp_get_theme();
+	$old_stylesheet  = is_a( $old_theme, 'WP_Theme' ) ? $old_theme->get_stylesheet() : null;
+	$new_stylesheet  = $theme->get_stylesheet();
+	$newspack_prefix = 'newspack-';
+
+	if ( 0 === strrpos( $old_stylesheet, $newspack_prefix ) && 0 === strrpos( $new_stylesheet, $newspack_prefix ) ) {
+		$mods = get_option( 'theme_mods_' . $old_stylesheet, null );
+		if ( $mods ) {
+			update_option( 'theme_mods_' . $new_stylesheet, $mods );
+		}
+	}
+}
+add_action( 'after_switch_theme', 'newspack_migrate_settings', 10, 2 );
+
 /**
  * Display custom color CSS in customizer and on frontend.
  */
