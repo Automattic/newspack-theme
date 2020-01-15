@@ -558,7 +558,7 @@ function newspack_colors_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-primary="' . esc_attr( $primary_color ) . '"' : ''; ?>>
-		<?php echo newspack_custom_colors_css(); ?>
+		<?php echo newspack_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -575,7 +575,7 @@ function newspack_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts">
-		<?php echo wp_kses( newspack_custom_typography_css(), '' ); ?>
+		<?php echo newspack_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 <?php
