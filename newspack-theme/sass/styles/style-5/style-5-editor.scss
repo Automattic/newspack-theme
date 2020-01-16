@@ -1,10 +1,9 @@
-@import "variables-style/variables-style";
-@import "../../style-editor-base";
+@import 'variables-style/variables-style';
+@import '../../style-editor-base';
 
 /* Paragraph */
 .wp-block-paragraph {
-
-	&.has-drop-cap:not(:focus)::first-letter {
+	&.has-drop-cap:not( :focus )::first-letter {
 		font-family: $font__heading;
 		font-weight: bold;
 	}
@@ -13,15 +12,15 @@
 /* Columns */
 .wp-block-columns {
 	&.is-style-borders {
-		& > .editor-inner-blocks > .editor-block-list__layout > [data-type="core/column"] {
+		& > .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
 			border-color: currentColor;
 
-			&:after {
+			&::after {
 				border-color: currentColor;
 			}
 
 			@include media( mobile ) {
-				&:nth-child(odd):after {
+				&:nth-child( odd )::after {
 					border-color: currentColor;
 				}
 			}
@@ -31,20 +30,20 @@
 
 /* Separator */
 .wp-block-separator {
-	&:not(.is-style-dots) {
+	&:not( .is-style-dots ) {
 		background: transparent !important;
 		border-color: currentColor;
 		border-top-style: double;
 		border-top-width: 3px;
 	}
 
-	&.is-style-dots:before {
+	&.is-style-dots::before {
 		color: currentColor;
 	}
 }
 
 /* Pullquote */
-.wp-block[data-type="core/pullquote"] {
+.wp-block[data-type='core/pullquote'] {
 	.wp-block-pullquote {
 		border: 0;
 		border-bottom: 2px solid;
@@ -71,7 +70,9 @@
 		text-align: center;
 	}
 
-	blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+	blockquote
+		> .block-library-pullquote__content
+		.editor-rich-text__tinymce[data-is-empty='true']::before,
 	blockquote > .editor-rich-text p,
 	p {
 		font-family: $font__heading;
@@ -89,8 +90,8 @@
 		font-weight: normal;
 	}
 
-	&[data-align="left"],
-	&[data-align="right"] {
+	&[data-align='left'],
+	&[data-align='right'] {
 		blockquote {
 			text-align: left;
 		}
@@ -111,9 +112,9 @@
 	overflow: hidden;
 	position: relative;
 
-	&:after {
+	&::after {
 		background-color: currentColor;
-		content: "";
+		content: '';
 		display: inline-block;
 		height: 1px;
 		margin: 0 0 0 0.25rem;
@@ -132,9 +133,9 @@
 	margin-bottom: $size__spacing-unit;
 	position: relative;
 
-	&:after {
+	&::after {
 		background-color: currentColor;
-		content: "";
+		content: '';
 		flex: 1 0 0.25rem;
 		height: 1px;
 		margin: 0 0 0 0.25rem;
@@ -161,9 +162,9 @@ figcaption,
 .widget,
 .wp-block-button .wp-block-button__link,
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	font-family: inherit;
 	font-style: normal;
 }

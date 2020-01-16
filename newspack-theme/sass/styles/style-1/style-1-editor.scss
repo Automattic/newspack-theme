@@ -4,8 +4,8 @@ Newspack Theme Editor Styles - Style Pack 1
 
 /** === Includes === */
 
-@import "variables-style/variables-style";
-@import "../../style-editor-base";
+@import 'variables-style/variables-style';
+@import '../../style-editor-base';
 
 .accent-header,
 .article-section-title {
@@ -13,9 +13,9 @@ Newspack Theme Editor Styles - Style Pack 1
 	font-family: $font__heading;
 	font-size: $font__size-sm;
 
-	&:before {
+	&::before {
 		background-color: $color__primary;
-		content: "";
+		content: '';
 		display: inline-block;
 		height: 0.75em;
 		margin: 0 0.75em 0 0;
@@ -38,18 +38,16 @@ Newspack Theme Editor Styles - Style Pack 1
 /** === Paragraph === */
 
 .wp-block-paragraph {
-
-	&.has-drop-cap:not(:focus)::first-letter {
+	&.has-drop-cap:not( :focus )::first-letter {
 		font-family: $font__heading;
 		font-weight: bold;
 	}
 }
 
-.wp-block[data-type="core/pullquote"] {
-
+.wp-block[data-type='core/pullquote'] {
 	.wp-block-pullquote {
 		border-width: 0;
-		padding-top: #{ 3 * $size__spacing-unit };
+		padding-top: #{3 * $size__spacing-unit};
 		position: relative;
 
 		.block-library-pullquote__content {
@@ -60,41 +58,41 @@ Newspack Theme Editor Styles - Style Pack 1
 
 	blockquote {
 		border-color: inherit;
-		margin: #{ 2 * $size__spacing-unit } 0;
+		margin: #{2 * $size__spacing-unit} 0;
 		text-align: center;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			border-top: 2px solid;
 			border-top-color: inherit;
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			opacity: 0.8;
-			top: #{ 2 * $size__spacing-unit };
+			top: #{2 * $size__spacing-unit};
 		}
 
-		&:before {
+		&::before {
 			left: 15%;
-			right: calc( 50% + 2em);
+			right: calc( 50% + 2em );
 		}
 
-		&:after {
-			left: calc( 50% + 2em);
+		&::after {
+			left: calc( 50% + 2em );
 			right: 15%;
 		}
 	}
 
 	.wp-block-pullquote.is-style-solid-color {
-		blockquote:before,
-		blockquote:after {
+		blockquote::before,
+		blockquote::after {
 			border-top-color: currentColor;
 		}
 	}
 
-	blockquote > .editor-rich-text__editable:first-child:before {
+	blockquote > .editor-rich-text__editable:first-child::before {
 		color: $color__primary;
-		content: "\201C";
+		content: '\201C';
 		display: inline-block;
 		font-family: $font__heading;
 		font-size: calc( 1rem * 6 );
@@ -113,11 +111,15 @@ Newspack Theme Editor Styles - Style Pack 1
 		}
 	}
 
-	.wp-block-pullquote.is-style-solid-color blockquote > .editor-rich-text__editable:first-child:before {
+	.wp-block-pullquote.is-style-solid-color
+		blockquote
+		> .editor-rich-text__editable:first-child::before {
 		color: inherit;
 	}
 
-	blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+	blockquote
+		> .block-library-pullquote__content
+		.editor-rich-text__tinymce[data-is-empty='true']::before,
 	blockquote > .editor-rich-text p,
 	p {
 		font-family: $font__heading;
@@ -135,25 +137,25 @@ Newspack Theme Editor Styles - Style Pack 1
 		text-transform: uppercase;
 	}
 
-	&[data-align="left"] .wp-block-pullquote,
-	&[data-align="right"] .wp-block-pullquote {
+	&[data-align='left'] .wp-block-pullquote,
+	&[data-align='right'] .wp-block-pullquote {
 		border-width: 0;
 
 		blockquote {
-			padding-top: #{ 3.5 * $size__spacing-unit };
+			padding-top: #{3.5 * $size__spacing-unit};
 			text-align: left;
 
-			&:before {
+			&::before {
 				left: 3em;
 				right: 0;
 			}
 
-			&:after {
+			&::after {
 				display: none;
 			}
 		}
 
-		blockquote > .editor-rich-text__editable:first-child:before {
+		blockquote > .editor-rich-text__editable:first-child::before {
 			font-size: calc( 1rem * 6 );
 			left: 0;
 			text-align: left;
@@ -162,19 +164,21 @@ Newspack Theme Editor Styles - Style Pack 1
 		}
 
 		&.is-style-solid-color blockquote {
-			padding-top: #{ 0.25 * $size__spacing-unit };
+			padding-top: #{0.25 * $size__spacing-unit};
 
-			&:before {
-				left: #{ 5 * $size__spacing-unit };
-				right: #{ 2 * $size__spacing-unit };
+			&::before {
+				left: #{5 * $size__spacing-unit};
+				right: #{2 * $size__spacing-unit};
 			}
 
-			& > .editor-rich-text__editable:first-child:before {
-				left: #{ 1.5 * $size__spacing-unit };
+			& > .editor-rich-text__editable:first-child::before {
+				left: #{1.5 * $size__spacing-unit};
 			}
 		}
 
-		blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+		blockquote
+			> .block-library-pullquote__content
+			.editor-rich-text__tinymce[data-is-empty='true']::before,
 		blockquote > .editor-rich-text p,
 		p {
 			font-size: $font__size-md;

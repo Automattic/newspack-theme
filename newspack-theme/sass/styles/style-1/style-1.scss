@@ -1,18 +1,18 @@
-@import "variables-style/variables-style";
-@import "../../style-base.scss";
+@import 'variables-style/variables-style';
+@import '../../style-base.scss';
 
 /* Style pack-specific overrides */
 
-.accent-header:not(.widget-title),
+.accent-header:not( .widget-title ),
 .article-section-title,
 .cat-links,
 .page-title {
 	color: #666;
 	font-size: $font__size-sm;
 
-	&:before {
+	&::before {
 		background-color: $color__primary;
-		content: "";
+		content: '';
 		display: inline-block;
 		height: 0.75em;
 		margin: 0 0.5em 0 0;
@@ -38,7 +38,7 @@
 /* Posts & Pages */
 
 @include media( tablet ) {
-	.featured-image-beside .cat-links:before {
+	.featured-image-beside .cat-links::before {
 		background-color: $color__background-body;
 	}
 }
@@ -49,7 +49,7 @@
 
 .search,
 .blog {
-	.cat-links:before {
+	.cat-links::before {
 		display: none;
 	}
 }
@@ -72,12 +72,11 @@
 			display: flex;
 		}
 
-		&.single-featured-image-default	.posted-on {
-			margin-left: #{ 1.5 * $size__spacing-unit };
+		&.single-featured-image-default .posted-on {
+			margin-left: #{1.5 * $size__spacing-unit};
 		}
 	}
 }
-
 
 /* Avatar */
 .avatar,
@@ -90,22 +89,21 @@
 .author-bio .accent-header {
 	color: $color__text-main;
 	font-size: $font__size-md;
-	margin: 0 0 #{ 0.25 * $size__spacing-unit };
+	margin: 0 0 #{0.25 * $size__spacing-unit};
 
 	span {
 		font-size: $font__size-xs;
 	}
 
-	&:before {
+	&::before {
 		display: none;
 	}
 }
 
 /* Blocks */
 
-
 //! Paragraph
-.has-drop-cap:not(:focus)::first-letter {
+.has-drop-cap:not( :focus )::first-letter {
 	font-family: $font__heading;
 	font-weight: bold;
 }
@@ -116,7 +114,7 @@
 	border-color: transparent;
 	font-family: $font__heading;
 	font-weight: bold;
-	padding-top: #{ 4 * $size__spacing-unit };
+	padding-top: #{4 * $size__spacing-unit};
 	position: relative;
 
 	p {
@@ -129,30 +127,30 @@
 		border-color: inherit;
 		text-align: center;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			border-top: 2px solid;
 			border-color: inherit;
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			opacity: 0.8;
-			top: #{ 2 * $size__spacing-unit };
+			top: #{2 * $size__spacing-unit};
 		}
 
-		&:before {
+		&::before {
 			left: 15%;
-			right: calc( 50% + 2em);
+			right: calc( 50% + 2em );
 		}
 
-		&:after {
-			left: calc( 50% + 2em);
+		&::after {
+			left: calc( 50% + 2em );
 			right: 15%;
 		}
 
-		p:first-of-type:before {
+		p:first-of-type::before {
 			color: $color__primary;
-			content: "\201C";
+			content: '\201C';
 			display: inline-block;
 			font-size: calc( 1rem * 5 );
 			font-weight: normal;
@@ -160,7 +158,7 @@
 			line-height: 0.75;
 			position: absolute;
 			text-align: center;
-			top: #{ 1.5 * $size__spacing-unit };
+			top: #{1.5 * $size__spacing-unit};
 			width: 0.5em;
 			z-index: 1;
 
@@ -171,17 +169,16 @@
 	}
 
 	&.is-style-solid-color {
-
 		blockquote {
 			text-align: center;
 
-			&:before,
-			&:after {
+			&::before,
+			&::after {
 				border-top-color: currentColor;
 			}
 		}
 
-		p:first-of-type:before {
+		p:first-of-type::before {
 			color: inherit;
 		}
 	}
@@ -193,12 +190,12 @@
 	}
 
 	&.is-style-solid-color {
-		blockquote{
-			&:before {
+		blockquote {
+			&::before {
 				color: inherit;
 			}
 
-			&:after {
+			&::after {
 				border-top-color: currentColor;
 			}
 
@@ -216,13 +213,13 @@
 
 		&,
 		&.is-style-solid-color {
-			padding-top: #{ 3 * $size__spacing-unit };
+			padding-top: #{3 * $size__spacing-unit};
 		}
 
 		p {
 			font-size: $font__size-md;
 
-				&:first-of-type:before {
+			&:first-of-type::before {
 				font-size: calc( 1rem * 5 );
 				left: 0;
 				text-align: left;
@@ -231,22 +228,22 @@
 		}
 
 		blockquote {
-			&:before {
+			&::before {
 				left: 3em;
 				right: 15%;
 			}
 
-			&:after {
+			&::after {
 				display: none;
 			}
 		}
 
 		&.is-style-solid-color {
-			p:first-of-type:before {
-				left: #{ 1.5 * $size__spacing-unit };
+			p:first-of-type::before {
+				left: #{1.5 * $size__spacing-unit};
 			}
 
-			blockquote:before {
+			blockquote::before {
 				left: 4em;
 			}
 		}
@@ -254,7 +251,7 @@
 }
 
 //! Newspack
-.wpnbha .cat-links:before {
+.wpnbha .cat-links::before {
 	display: none;
 }
 

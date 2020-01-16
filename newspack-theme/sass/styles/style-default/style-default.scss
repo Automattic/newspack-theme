@@ -14,12 +14,11 @@
 	margin-bottom: #{$size__spacing-unit * 0.75};
 }
 
-
 /* Navigation */
 
 .nav3 {
 	a {
-		background-color: lighten($color__text-light, 45%);
+		background-color: lighten( $color__text-light, 45% );
 		color: $color__text-main;
 		@include button-transition;
 		border-radius: 5px;
@@ -37,7 +36,7 @@
 
 .h-sb .nav3 {
 	a {
-		background-color: darken($color__primary, 10%);
+		background-color: darken( $color__primary, 10% );
 		color: #fff;
 	}
 
@@ -54,7 +53,7 @@
 		&:focus {
 			background-color: $color__text-main;
 			color: #fff;
-			opacity: 1.0;
+			opacity: 1;
 		}
 	}
 }
@@ -66,10 +65,9 @@
 	}
 
 	.menu-highlight a {
-		background-color: darken($color__primary, 10%);
+		background-color: darken( $color__primary, 10% );
 	}
 }
-
 
 /* Posts and pages */
 
@@ -78,7 +76,7 @@
 		background-color: $color__primary;
 		color: #fff;
 		display: inline-block;
-		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
+		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
 		padding: 0.5em 0.75em;
 
 		&:visited {
@@ -138,8 +136,8 @@
 .tags-links {
 	a {
 		background-color: #f1f1f1;
-		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
-		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 	}
 }
 

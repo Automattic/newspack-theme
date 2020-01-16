@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -27,7 +27,7 @@ hr {
 	height: 2px;
 }
 
-@import "lists";
+@import 'lists';
 
 img {
 	height: auto;
@@ -49,4 +49,4 @@ blockquote {
 	}
 }
 
-@import "tables";
+@import 'tables';

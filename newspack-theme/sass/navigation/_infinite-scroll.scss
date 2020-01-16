@@ -8,13 +8,13 @@
 	display: none;
 }
 
- /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
 
 .infinite-loader {
-	margin: calc(3 * 1rem) auto;
+	margin: calc( 3 * 1rem ) auto;
 }
 
 .infinite-loader .spinner {
@@ -23,7 +23,7 @@
 }
 
 .site-main #infinite-handle {
-	margin: calc(2 * 1rem) auto;
+	margin: calc( 2 * 1rem ) auto;
 }
 
 .site-main #infinite-handle span {
@@ -42,7 +42,7 @@
 	font-family: $font__heading;
 	font-weight: 700;
 	line-height: $font__line-height-heading;
-	padding: ( $size__spacing-unit * .76 ) $size__spacing-unit;
+	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
 
 	&:hover {
 		background: $color__background-button-hover;

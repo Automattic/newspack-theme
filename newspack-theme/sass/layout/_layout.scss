@@ -1,4 +1,3 @@
-
 /** === Layout === */
 
 .wrapper {
@@ -9,7 +8,7 @@
 	max-width: 90%;
 	width: $size__site-main;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		flex-wrap: nowrap;
 	}
 }
@@ -24,10 +23,10 @@
 }
 
 .site-content {
-	margin-top: #{ 1.5 * $size__spacing-unit };
+	margin-top: #{1.5 * $size__spacing-unit};
 
 	@include media( tablet ) {
-		margin-top: #{ 4 * $size__spacing-unit }
+		margin-top: #{4 * $size__spacing-unit};
 	}
 }
 
@@ -42,7 +41,7 @@
 }
 
 .single,
-.page:not(.newspack-front-page) {
+.page:not( .newspack-front-page ) {
 	&.has-sidebar #main {
 		@include media( tablet ) {
 			display: flex;
@@ -56,7 +55,7 @@
 .blog,
 .search {
 	&.has-sidebar #primary {
-		@include media(tablet) {
+		@include media( tablet ) {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -70,7 +69,7 @@
 .page .main-content,
 .single .main-content,
 .newspack-front-page.page-template-single-feature .site-main {
-	@include media(tablet) {
+	@include media( tablet ) {
 		width: 65%;
 	}
 }
@@ -80,11 +79,11 @@
 .search #secondary,
 .page #secondary,
 .single #secondary {
-	@include media(tablet) {
-		width: calc( 35% - #{ 2 * $size__spacing-unit } );
+	@include media( tablet ) {
+		width: calc( 35% - #{2 * $size__spacing-unit} );
 	}
-	@include media(desktop) {
-		width: calc( 35% - #{ 3 * $size__spacing-unit } );
+	@include media( desktop ) {
+		width: calc( 35% - #{3 * $size__spacing-unit} );
 	}
 }
 
@@ -101,7 +100,7 @@
 }
 
 .page-template-single-feature {
-	@include media(tablet) {
+	@include media( tablet ) {
 		.entry-header {
 			margin-left: auto;
 			margin-right: auto;

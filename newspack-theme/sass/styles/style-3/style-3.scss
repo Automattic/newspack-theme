@@ -4,8 +4,8 @@ Newspack Theme Styles - Style Pack 3
 
 /** === Includes === */
 
-@import "variables-style/variables-style";
-@import "../../style-base.scss";
+@import 'variables-style/variables-style';
+@import '../../style-base.scss';
 
 // Header
 
@@ -33,11 +33,11 @@ Newspack Theme Styles - Style Pack 3
 
 			&:hover,
 			&:focus {
-				background-color: $color__primary
+				background-color: $color__primary;
 			}
 		}
 
-		&:before {
+		&::before {
 			border-color: transparent transparent $color__text-main transparent;
 		}
 	}
@@ -51,9 +51,9 @@ Newspack Theme Styles - Style Pack 3
 .archive .page-title {
 	color: $color__primary;
 
-	&:before {
+	&::before {
 		background-color: $color__primary;
-		content: "";
+		content: '';
 		display: block;
 		height: 5px;
 		margin: 0 0 $size__spacing-unit;
@@ -66,7 +66,7 @@ Newspack Theme Styles - Style Pack 3
 .entry-content .wpnbha .article-section-title,
 .cat-links,
 .archive .page-title {
-	margin: 0 0 #{ 1.5 * $size__spacing-unit };
+	margin: 0 0 #{1.5 * $size__spacing-unit};
 }
 
 .accent-header,
@@ -76,9 +76,9 @@ Newspack Theme Styles - Style Pack 3
 }
 
 .search .cat-links {
-	margin-bottom: #{ 0.5 * $size__spacing-unit };
+	margin-bottom: #{0.5 * $size__spacing-unit};
 
-	&:before {
+	&::before {
 		display: none;
 	}
 }
@@ -93,9 +93,9 @@ Newspack Theme Styles - Style Pack 3
 	h2 {
 		color: inherit;
 		font-size: $font__size-md;
-		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		margin: 0 0 #{0.5 * $size__spacing-unit};
 
-		&:before {
+		&::before {
 			display: none;
 		}
 
@@ -107,7 +107,7 @@ Newspack Theme Styles - Style Pack 3
 }
 
 //! Paragraph
-.has-drop-cap:not(:focus)::first-letter {
+.has-drop-cap:not( :focus )::first-letter {
 	font-family: $font__heading;
 	font-weight: bold;
 }
@@ -118,7 +118,9 @@ Newspack Theme Styles - Style Pack 3
 	border-bottom-color: $color__text-main;
 }
 
-.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	.post-has-image
+	.entry-title {
 	background-color: $color__background-body;
 	margin-top: -1.5em;
 	padding: 0.5em 0.25em 0 0;
@@ -127,13 +129,15 @@ Newspack Theme Styles - Style Pack 3
 	z-index: 1;
 }
 
-.wpnbha figcaption:after {
+.wpnbha figcaption::after {
 	display: none;
 }
 
 .wp-block-cover,
 .wp-block-group {
-	.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+		.post-has-image
+		.entry-title {
 		background-color: transparent;
 		margin-top: 0;
 		padding: 0;
@@ -149,15 +153,15 @@ Newspack Theme Styles - Style Pack 3
 			color: $color__background-body;
 		}
 
-		.cat-links:before {
+		.cat-links::before {
 			background-color: $color__background-body;
 		}
 	}
 }
 
-.post-thumbnail figcaption:after,
-.featured-image-behind + figcaption:after,
-.featured-image-beside + figcaption:after {
+.post-thumbnail figcaption::after,
+.featured-image-behind + figcaption::after,
+.featured-image-beside + figcaption::after {
 	display: none;
 }
 
@@ -166,8 +170,8 @@ Newspack Theme Styles - Style Pack 3
 	font-size: $font__size-xs;
 }
 
-.single:not(.has-featured-image) .entry-header,
-.single:not(.has-large-featured-image) .entry-header {
+.single:not( .has-featured-image ) .entry-header,
+.single:not( .has-large-featured-image ) .entry-header {
 	border-bottom: 1px dotted $color__text-main;
 }
 
@@ -183,8 +187,8 @@ Newspack Theme Styles - Style Pack 3
 .tags-links {
 	a {
 		background: $color__background-pre;
-		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
-		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 
 		&:hover {
 			background: lighten( $color__background-pre, 5% );
@@ -210,23 +214,22 @@ figcaption,
 	padding-right: 0;
 	text-align: left;
 
-	&:after {
+	&::after {
 		background-color: $color__primary;
-		content: "";
+		content: '';
 		display: block;
 		height: 5px;
-		margin-top: #{ 0.75 * $size__spacing-unit };
+		margin-top: #{0.75 * $size__spacing-unit};
 		width: 32px;
 	}
 }
 
-.wp-block-gallery figcaption:after {
+.wp-block-gallery figcaption::after {
 	display: none;
 }
 
-
 //! Columns Block
-.wp-block-columns.is-style-borders .wp-block-column:after {
+.wp-block-columns.is-style-borders .wp-block-column::after {
 	border-style: dotted;
 	border-color: $color__text-main;
 }
@@ -257,17 +260,16 @@ figcaption,
 		text-transform: uppercase;
 	}
 
-	&:not(.is-style-solid-color) {
-
+	&:not( .is-style-solid-color ) {
 		blockquote {
-			padding-left: #{ 2 * $size__spacing-unit };
+			padding-left: #{2 * $size__spacing-unit};
 		}
 
-		&:before {
+		&::before {
 			border-top: 8px solid;
 			border-left: 8px solid;
 			border-color: inherit;
-			content: "";
+			content: '';
 			display: block;
 			height: 40px;
 			left: 0;
@@ -279,33 +281,32 @@ figcaption,
 
 	&.alignleft,
 	&.alignright {
-
 		@include media( tablet ) {
 			blockquote p {
 				font-size: $font__size-lg;
 			}
 		}
 
-		&:not(.is-style-solid-color) {
+		&:not( .is-style-solid-color ) {
 			padding-top: $size__spacing-unit;
 
 			blockquote {
 				padding-left: 0;
 			}
 
-			&:before {
+			&::before {
 				border-left: 0;
 			}
 		}
 	}
 
-	&.alignfull:not(.is-style-solid-color):before {
+	&.alignfull:not( .is-style-solid-color )::before {
 		left: 8px;
 	}
 }
 
 //! Paragraph
-.has-drop-cap:not(:focus)::first-letter {
+.has-drop-cap:not( :focus )::first-letter {
 	font-family: $font__heading;
 	font-weight: bold;
 }
@@ -316,7 +317,9 @@ figcaption,
 	border-bottom-color: $color__text-main;
 }
 
-.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	.post-has-image
+	.entry-title {
 	background-color: $color__background-body;
 	margin-top: -1.5em;
 	padding: 0.5em 0.25em 0 0;
@@ -325,12 +328,12 @@ figcaption,
 	z-index: 1;
 }
 
-.wpnbha figcaption:after {
+.wpnbha figcaption::after {
 	display: none;
 }
 
 .wpnbha .cat-links {
-	&:before {
+	&::before {
 		display: none;
 	}
 
@@ -343,7 +346,9 @@ figcaption,
 
 .wp-block-cover,
 .wp-block-group {
-	.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image .entry-title {
+	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+		.post-has-image
+		.entry-title {
 		background-color: transparent;
 		margin-top: 0;
 		padding: 0;
@@ -352,7 +357,6 @@ figcaption,
 }
 
 .entry .entry-content {
-
 	.wp-block-embed figcaption,
 	.wp-block-image figcaption,
 	.wp-block-audio figcaption,
@@ -405,10 +409,10 @@ figcaption,
 }
 
 .footer-branding {
-	margin-bottom: #{ 2 * $size__spacing-unit };
+	margin-bottom: #{2 * $size__spacing-unit};
 
 	@include media( tablet ) {
-		padding-top: #{ 2 * $size__spacing-unit };
+		padding-top: #{2 * $size__spacing-unit};
 	}
 
 	.wrapper {

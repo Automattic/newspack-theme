@@ -1,9 +1,8 @@
 .button,
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	@include button-transition;
 	background: $color__background-button;
 	border: none;
@@ -16,7 +15,7 @@ input[type="submit"] {
 	font-weight: 700;
 	line-height: $font__line-height-heading;
 	outline: none;
-	padding: ( $size__spacing-unit * .76 ) $size__spacing-unit;
+	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
 	text-decoration: none;
 	vertical-align: bottom;
 

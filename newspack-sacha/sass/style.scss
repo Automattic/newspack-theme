@@ -19,9 +19,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import "variables-style/variables-style";
-@import "../../newspack-theme/sass/style-base";
-
+@import 'variables-style/variables-style';
+@import '../../newspack-theme/sass/style-base';
 
 // Header
 // Solid Background
@@ -48,11 +47,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 			&:hover,
 			&:focus {
-				background-color: $color__primary
+				background-color: $color__primary;
 			}
 		}
 
-		&:before {
+		&::before {
 			border-color: transparent transparent $color__text-main transparent;
 		}
 	}
@@ -82,22 +81,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		display: inline-block;
 		position: relative;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			border-top: 1px solid $color__border;
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			top: 50%;
 			width: 600px;
 		}
 
-		&:before {
-			right: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		&::before {
+			right: calc( 100% + #{0.5 * $size__spacing-unit} );
 		}
 
-		&:after {
-			left: calc( 100% + #{ 0.5 * $size__spacing-unit } );
+		&::after {
+			left: calc( 100% + #{0.5 * $size__spacing-unit} );
 		}
 	}
 }
@@ -160,7 +159,7 @@ cite {
 }
 
 //! Paragraph
-.has-drop-cap:not(:focus)::first-letter {
+.has-drop-cap:not( :focus )::first-letter {
 	background-color: $color__primary;
 	color: #fff;
 	font-family: $font__heading;
@@ -195,8 +194,8 @@ cite {
 
 	&.alignleft,
 	&.alignright {
-		margin-top: #{ 1.5 * $size__spacing-unit };
-		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		margin-top: #{1.5 * $size__spacing-unit};
+		margin-bottom: #{1.5 * $size__spacing-unit};
 		blockquote {
 			text-align: left;
 		}
@@ -220,22 +219,22 @@ cite {
 			text-align: center;
 		}
 		.entry-title {
-			margin-bottom: #{ 1.5 * $size__spacing-unit };
+			margin-bottom: #{1.5 * $size__spacing-unit};
 			margin-top: $size__spacing-unit;
 
 			@include media( tablet ) {
-				margin-bottom: #{ 3 * $size__spacing-unit };
+				margin-bottom: #{3 * $size__spacing-unit};
 				margin-left: auto;
 				margin-right: auto;
 				width: 85%;
 			}
 
 			&--with-subtitle {
-				margin-bottom: #{ 0.7 * $size__spacing-unit };
+				margin-bottom: #{0.7 * $size__spacing-unit};
 			}
 		}
 		.newspack-post-subtitle {
-			margin-bottom: #{ 3.3 * $size__spacing-unit };
+			margin-bottom: #{3.3 * $size__spacing-unit};
 		}
 	}
 
@@ -244,13 +243,12 @@ cite {
 		border-top: 1px solid $color__border;
 		display: block;
 		margin-bottom: $size__spacing-unit;
-		padding: #{ 0.75 * $size__spacing-unit } 0;
+		padding: #{0.75 * $size__spacing-unit} 0;
 		text-align: center;
-
 
 		@include media( mobile ) {
 			display: flex;
-			margin-bottom: #{ 2 * $size__spacing-unit };
+			margin-bottom: #{2 * $size__spacing-unit};
 			text-align: left;
 		}
 
@@ -267,7 +265,7 @@ cite {
 		}
 	}
 
-	&:not(.has-featured-image),
+	&:not( .has-featured-image ),
 	&.has-large-featured-image {
 		.entry-header {
 			border-bottom: 0;
@@ -279,7 +277,6 @@ cite {
 .wpnbha .cat-links {
 	text-align: left;
 }
-
 
 @include media( tablet ) {
 	.h-sb .featured-image-beside {
@@ -317,7 +314,6 @@ cite {
 }
 
 .tags-links {
-
 	span:first-child {
 		text-transform: none;
 	}
@@ -325,8 +321,8 @@ cite {
 	a {
 		background: $color__background-pre;
 		color: $color__text-main;
-		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
-		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 
 		&:hover {
 			background: lighten( $color__background-pre, 5% );
@@ -346,7 +342,7 @@ cite {
 
 	h2 {
 		color: $color__text-main;
-		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		margin: 0 0 #{0.5 * $size__spacing-unit};
 		text-align: left;
 	}
 
@@ -406,7 +402,7 @@ cite {
 	font-style: normal;
 
 	@include media( tablet ) {
-		margin-bottom: #{ 3 * $size__spacing-unit };
+		margin-bottom: #{3 * $size__spacing-unit};
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 85%;
@@ -437,7 +433,6 @@ cite {
 	}
 }
 
-
 .site-footer {
 	background-color: #f1f1f1;
 	color: $color__text-main;
@@ -459,7 +454,7 @@ cite {
 	padding-top: $size__spacing-unit;
 
 	@include media( tablet ) {
-		padding-top: #{ 2 * $size__spacing-unit };
+		padding-top: #{2 * $size__spacing-unit};
 	}
 }
 

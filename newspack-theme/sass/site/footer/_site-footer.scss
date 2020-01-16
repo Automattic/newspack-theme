@@ -1,7 +1,7 @@
 /* Site footer */
 
 .site-footer {
-	margin: #{ 2 * $size__spacing-unit } 0 0;
+	margin: #{2 * $size__spacing-unit} 0 0;
 
 	a {
 		color: $color__text-light;
@@ -26,7 +26,7 @@
 	}
 
 	.footer-widgets {
-		padding: $size__spacing-unit 0 #{ 2 * $size__spacing-unit };
+		padding: $size__spacing-unit 0 #{2 * $size__spacing-unit};
 
 		.wrapper {
 			flex-wrap: wrap;
@@ -38,13 +38,13 @@
 		width: 100%;
 
 		@include media( mobile ) {
-			flex: 1 0 0px;
-			margin-right: #{ 2 * $size__spacing-unit };
-			min-width: calc( 50% - #{ 2 * $size__spacing-unit } );
+			flex: 1 0 0;
+			margin-right: #{2 * $size__spacing-unit};
+			min-width: calc( 50% - #{2 * $size__spacing-unit} );
 		}
 
 		@include media( tablet ) {
-			min-width: calc( 25% - #{ 2 * $size__spacing-unit } );
+			min-width: calc( 25% - #{2 * $size__spacing-unit} );
 		}
 
 		&:last-child {
@@ -71,7 +71,7 @@
 			&.site-info-contain {
 				justify-content: flex-start;
 
-				& > *:not(:first-child) {
+				& > *:not( :first-child ) {
 					margin-left: $size__spacing-unit;
 				}
 
@@ -81,7 +81,6 @@
 			}
 		}
 	}
-
 
 	a {
 		color: inherit;
@@ -94,7 +93,7 @@
 
 	a,
 	.copyright {
-		margin: #{ 0.25 * $size__spacing-unit } 0;
+		margin: #{0.25 * $size__spacing-unit} 0;
 	}
 
 	.site-info-contain:first-child {
@@ -106,7 +105,7 @@
 		.wrapper {
 			border-top: 1px solid $color__border;
 			justify-content: space-between;
-			padding: $size__spacing-unit 0 #{ 0.5 * $size__spacing-unit };
+			padding: $size__spacing-unit 0 #{0.5 * $size__spacing-unit};
 		}
 
 		.widget {
@@ -126,7 +125,8 @@
 			margin: 0 $size__spacing-unit 0 0;
 		}
 
-		ul, li {
+		ul,
+		li {
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -137,7 +137,8 @@
 		}
 
 		@include media( mobile ) {
-			ul, li a {
+			ul,
+			li a {
 				display: inline;
 			}
 
