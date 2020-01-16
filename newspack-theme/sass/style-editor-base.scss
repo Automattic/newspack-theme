@@ -16,6 +16,7 @@ body {
 
 /** === Base Typography === */
 
+// stylelint-disable-next-line no-duplicate-selectors
 body {
 	font-size: $font__size_base;
 	font-family: $font__body;
@@ -36,6 +37,14 @@ h6 {
 	font-family: $font__heading;
 	font-weight: 700;
 	line-height: $font__line-height-heading;
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+
+		&:visited {
+			color: $color__text-main;
+		}
+	}
 }
 
 h1 {
@@ -74,9 +83,6 @@ a {
 	@include link-transition;
 	color: $color__link;
 
-	*:visited {
-	}
-
 	&:hover,
 	&:active {
 		color: $color__link-hover;
@@ -87,22 +93,6 @@ a {
 	&:focus {
 		outline: 0;
 		text-decoration: underline;
-	}
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	a {
-		color: $color__text-main;
-		text-decoration: none;
-
-		&:visited {
-			color: $color__text-main;
-		}
 	}
 }
 
@@ -186,11 +176,19 @@ figcaption,
 
 .wp-block-table {
 	font-family: $font__heading;
+	td,
+	th {
+		border-color: $color__text-light;
+	}
 }
 
 /** === Cover === */
 
 .wp-block-cover {
+	.accent-header,
+	.article-section-title {
+		color: inherit;
+	}
 	.wp-block-cover__inner-container {
 		width: 100%;
 	}
@@ -255,13 +253,6 @@ figcaption,
 				margin-bottom: 0;
 			}
 		}
-	}
-}
-
-.wp-block-cover {
-	.accent-header,
-	.article-section-title {
-		color: inherit;
 	}
 }
 
@@ -552,15 +543,6 @@ figcaption,
 
 .wp-block-code {
 	border-radius: 0;
-}
-
-/** === Table === */
-
-.wp-block-table {
-	td,
-	th {
-		border-color: $color__text-light;
-	}
 }
 
 /** === Separator === */

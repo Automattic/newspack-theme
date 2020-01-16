@@ -294,6 +294,25 @@
 		&.hide-site-tagline .nav1 {
 			flex-grow: 2;
 		}
+
+		&.hide-site-tagline .nav-wrapper {
+			margin-left: auto;
+
+			+ .nav-wrapper {
+				margin-left: 0;
+			}
+		}
+
+		&.hide-site-tagline.has-tertiary-menu .nav-wrapper {
+			margin-left: 0;
+			+ .nav-wrapper {
+				margin-left: auto;
+			}
+		}
+
+		&.show-site-tagline .site-branding {
+			margin-right: auto;
+		}
 	}
 
 	// Default background color.
@@ -308,28 +327,6 @@
 
 	.header-search-contain {
 		margin-left: #{0.75 * $size__spacing-unit};
-	}
-
-	// Left-aligned logo
-	&.h-ll {
-		&.hide-site-tagline .nav-wrapper {
-			margin-left: auto;
-
-			& + .nav-wrapper {
-				margin-left: 0;
-			}
-		}
-
-		&.hide-site-tagline.has-tertiary-menu .nav-wrapper {
-			margin-left: 0;
-			& + .nav-wrapper {
-				margin-left: auto;
-			}
-		}
-
-		&.show-site-tagline .site-branding {
-			margin-right: auto;
-		}
 	}
 }
 

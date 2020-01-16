@@ -102,14 +102,11 @@
 					color: white;
 					line-height: 1;
 					padding: calc( 0.5 * #{$size__spacing-unit} );
+					margin-right: 0;
 
 					svg {
 						top: 0;
 					}
-				}
-
-				.submenu-expand {
-					margin-right: 0;
 				}
 			}
 

@@ -127,25 +127,6 @@ figcaption,
 	font-weight: bold;
 }
 
-.single {
-	.featured-image-behind {
-		.entry-subhead {
-			border: 0;
-			display: block;
-			padding: 0;
-			text-align: center;
-
-			.author-avatar {
-				display: none;
-			}
-		}
-
-		.entry-meta {
-			margin-bottom: $size__spacing-unit;
-		}
-	}
-}
-
 blockquote,
 cite {
 	font-family: $font__heading;
@@ -211,6 +192,23 @@ cite {
 .single {
 	.cat-links {
 		text-align: center;
+	}
+
+	.featured-image-behind {
+		.entry-subhead {
+			border: 0;
+			display: block;
+			padding: 0;
+			text-align: center;
+
+			.author-avatar {
+				display: none;
+			}
+		}
+
+		.entry-meta {
+			margin-bottom: $size__spacing-unit;
+		}
 	}
 
 	.entry-header {
@@ -342,8 +340,8 @@ cite {
 
 	h2 {
 		color: $color__text-main;
-		margin: 0 0 #{0.5 * $size__spacing-unit};
 		text-align: left;
+		margin: 0;
 	}
 
 	.avatar {
@@ -356,10 +354,6 @@ cite {
 			margin-left: 0;
 			margin-right: $size__spacing-unit;
 		}
-	}
-
-	h2 {
-		margin: 0;
 	}
 
 	.author-bio-text {

@@ -16,7 +16,7 @@ $highlights-color: #36f;
  * Fonts
  */
 @font-face {
-	font-family: 'star';
+	font-family: star;
 	src: url( '../fonts/star.eot' );
 	src: url( '../fonts/star.eot?#iefix' ) format( 'embedded-opentype' ),
 		url( '../fonts/star.woff' ) format( 'woff' ), url( '../fonts/star.ttf' ) format( 'truetype' ),
@@ -26,7 +26,7 @@ $highlights-color: #36f;
 }
 
 @font-face {
-	font-family: 'WooCommerce';
+	font-family: WooCommerce;
 	src: url( '../fonts/WooCommerce.eot' );
 	src: url( '../fonts/WooCommerce.eot?#iefix' ) format( 'embedded-opentype' ),
 		url( '../fonts/WooCommerce.woff' ) format( 'woff' ),
@@ -54,6 +54,15 @@ a.button {
 }
 
 .woocommerce {
+	.content-area {
+		.site-main {
+			margin: 32px 0;
+			max-width: 100%;
+
+			@include postContentMaxWidth();
+		}
+	}
+
 	form .form-row {
 		.required {
 			color: firebrick;
@@ -106,16 +115,13 @@ a.button {
 	display: inline-block;
 	background: $highlights-color;
 	color: #fff;
-	display: inline-block;
 	font-family: $headings;
 	font-size: 0.71111em;
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	line-height: 1.2;
 	padding: 0.5rem;
-	position: absolute;
 	text-transform: uppercase;
-	top: 0;
 	z-index: 1;
 }
 
@@ -322,7 +328,7 @@ ul.products {
 	line-height: 1;
 	font-size: 1em;
 	width: 5.4em;
-	font-family: 'star';
+	font-family: star;
 
 	&::before {
 		content: '\73\73\73\73\73';
@@ -656,7 +662,7 @@ table.variations {
 					width: 1em;
 					height: 1em;
 					line-height: 1;
-					font-family: 'WooCommerce';
+					font-family: WooCommerce;
 					content: '\e021';
 					text-indent: 0;
 				}
@@ -975,6 +981,7 @@ table.variations {
 	margin: 1rem 0 0 0;
 }
 
+// stylelint-disable-next-line selector-id-pattern
 #shipping_method {
 	list-style: none;
 	margin: 0;
@@ -1212,6 +1219,7 @@ table.variations {
 	.shipping.recurring-total {
 		th,
 		td {
+			// stylelint-disable-next-line function-calc-no-invalid
 			font-size: calc( $font__size-sm * 1rem );
 			font-weight: normal;
 		}
@@ -1286,7 +1294,7 @@ table.variations {
 	input.input-radio[name='payment_method'] {
 		display: none;
 
-		& + label {
+		+ label {
 			&::before {
 				content: '';
 				display: inline-block;
@@ -1330,17 +1338,6 @@ table.variations {
 /**
  * Layout stuff
  */
-.woocommerce {
-	.content-area {
-		.site-main {
-			margin: 32px 0;
-			max-width: 100%;
-
-			@include postContentMaxWidth();
-		}
-	}
-}
-
 @media only screen and ( max-width: 768px ) {
 	.woocommerce,
 	.woocommerce-page {

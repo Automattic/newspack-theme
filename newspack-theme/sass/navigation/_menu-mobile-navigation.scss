@@ -46,7 +46,7 @@
 		width: 33vw;
 	}
 
-	& > * {
+	> * {
 		clear: both;
 		margin-bottom: $size__spacing-unit;
 	}
@@ -117,7 +117,7 @@
 	transition: right 0.2s;
 	z-index: 999999;
 
-	& > * {
+	> * {
 		display: none;
 	}
 }
@@ -125,7 +125,7 @@
 .menu-opened #mobile-sidebar-fallback {
 	right: 0;
 
-	& > * {
+	> * {
 		display: block;
 	}
 }

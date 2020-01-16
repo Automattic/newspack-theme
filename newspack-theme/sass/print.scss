@@ -51,18 +51,14 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.has-large-font-size,
 	h2.author-title,
 	p.author-bio,
-	.comments-title,
-	h3 {
+	.comments-title {
 		font-size: 14pt;
 		margin-top: 25px;
 	}
 
 	/* Page breaks */
 
-	a {
-		page-break-inside: avoid;
-	}
-
+	a,
 	blockquote {
 		page-break-inside: avoid;
 	}
@@ -120,7 +116,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		content: '';
 	}
 
-	a:not( :local-link )::after {
+	a::after {
 		content: ' < ' attr( href ) '> ';
 	}
 

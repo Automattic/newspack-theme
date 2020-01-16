@@ -71,7 +71,7 @@
 	}
 
 	@include media( tablet ) {
-		&:not( paged ) article.has-post-thumbnail:first-of-type {
+		&:not( .paged ) article.has-post-thumbnail:first-of-type {
 			display: block;
 
 			.post-thumbnail {

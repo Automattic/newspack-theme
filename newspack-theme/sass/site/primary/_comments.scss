@@ -13,7 +13,7 @@
 		margin: calc( 3 * #{$size__spacing-unit} ) 0;
 	}
 
-	& > * {
+	> * {
 		margin-top: calc( 2 * #{$size__spacing-unit} );
 		margin-bottom: calc( 2 * #{$size__spacing-unit} );
 	}

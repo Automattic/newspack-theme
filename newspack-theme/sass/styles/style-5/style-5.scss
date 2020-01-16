@@ -30,6 +30,12 @@ body {
 
 // Header - solid bg
 .h-sb {
+	.featured-image-beside {
+		@include media( tablet ) {
+			border-top: 1px solid $color__background-body;
+		}
+	}
+
 	.bottom-header-contain,
 	.middle-header-contain,
 	.top-header-contain {
@@ -185,15 +191,6 @@ input[type='submit'] {
 	.featured-image-beside {
 		@include media( tablet ) {
 			background-color: $color__text-main;
-		}
-	}
-}
-
-// Solid header background
-.h-sb {
-	.featured-image-beside {
-		@include media( tablet ) {
-			border-top: 1px solid $color__background-body;
 		}
 	}
 }

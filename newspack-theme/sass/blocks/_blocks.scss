@@ -27,7 +27,6 @@
 		/*rtl:ignore*/
 		float: right;
 		margin-top: 0;
-		margin-left: 0;
 		margin-right: 0;
 		/*rtl:ignore*/
 		margin-left: $size__spacing-unit;
@@ -139,26 +138,6 @@
 	}
 }
 
-/*
- * Unset nested content selector styles
- * - Prevents layout styles from cascading too deeply
- * - helps with plugin compatibility
- */
-.entry .entry-content {
-	.entry-content,
-	.entry {
-		margin: inherit;
-		max-width: inherit;
-		padding: inherit;
-
-		@include media( tablet ) {
-			margin: inherit;
-			max-width: inherit;
-			padding: inherit;
-		}
-	}
-}
-
 //! Paragraphs
 .has-drop-cap:not( :focus )::first-letter {
 	font-size: 4em;
@@ -176,6 +155,13 @@
 
 //! Columns
 .wp-block-columns {
+	.wp-block-cover,
+	.wp-block-cover-image {
+		min-height: 330px;
+		padding-left: $size__spacing-unit;
+		padding-right: $size__spacing-unit;
+	}
+
 	.wp-block-column > * {
 		margin-bottom: 32px;
 		margin-top: 32px;
@@ -274,15 +260,6 @@
 	a:hover,
 	a:visited {
 		color: inherit;
-	}
-}
-
-.wp-block-columns {
-	.wp-block-cover,
-	.wp-block-cover-image {
-		min-height: 330px;
-		padding-left: $size__spacing-unit;
-		padding-right: $size__spacing-unit;
 	}
 }
 
@@ -434,6 +411,24 @@
 }
 
 .entry .entry-content {
+	/*
+	 * Unset nested content selector styles
+	 * - Prevents layout styles from cascading too deeply
+	 * - helps with plugin compatibility
+	 */
+	.entry-content,
+	.entry {
+		margin: inherit;
+		max-width: inherit;
+		padding: inherit;
+
+		@include media( tablet ) {
+			margin: inherit;
+			max-width: inherit;
+			padding: inherit;
+		}
+	}
+
 	//! Paragraphs
 	p.has-background {
 		padding: 20px 30px;
@@ -488,7 +483,6 @@
 			font-weight: bold;
 			text-decoration: none;
 			padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
-			outline: none;
 			outline: none;
 
 			&:not( .has-background ) {

@@ -104,6 +104,7 @@
 }
 
 .featured-image-behind .cat-links {
+	font-size: $font__size-sm;
 	a,
 	a:hover,
 	a:visited {
@@ -145,21 +146,6 @@
 .tags-links {
 	.sep {
 		display: none;
-	}
-}
-
-.featured-image-behind {
-	.cat-links {
-		font-size: $font__size-sm;
-		a,
-		a:hover {
-			background-color: transparent;
-			margin: 0;
-			padding: 0;
-		}
-		.sep {
-			display: inline;
-		}
 	}
 }
 

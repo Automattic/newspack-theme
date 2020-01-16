@@ -20,9 +20,6 @@
 
 .site-content {
 	min-height: 30vh;
-}
-
-.site-content {
 	margin-top: #{1.5 * $size__spacing-unit};
 
 	@include media( tablet ) {

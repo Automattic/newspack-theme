@@ -7,7 +7,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 
-		& > * {
+		> * {
 			background-color: #eee;
 			margin-right: #{0.5 * $size__spacing-unit};
 			padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit} #{0.25 *

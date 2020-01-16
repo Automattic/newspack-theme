@@ -169,7 +169,6 @@ figcaption,
 .wp-block-gallery {
 	figcaption.block-editor-rich-text__editable {
 		padding-left: 10px;
-		padding-left: 10px;
 		text-align: center;
 
 		&::after {
@@ -184,7 +183,7 @@ hr {
 }
 
 .wp-block-columns.is-style-borders {
-	& > .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
+	> .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
 		border-bottom: 1px dotted $color__text-main;
 
 		&:last-child {

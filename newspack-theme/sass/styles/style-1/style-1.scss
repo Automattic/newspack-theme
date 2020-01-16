@@ -171,10 +171,18 @@
 	&.is-style-solid-color {
 		blockquote {
 			text-align: center;
-
+			&::before {
+				color: inherit;
+			}
+			&::after {
+				border-top-color: currentColor;
+			}
 			&::before,
 			&::after {
 				border-top-color: currentColor;
+			}
+			cite {
+				text-transform: uppercase;
 			}
 		}
 
@@ -189,26 +197,18 @@
 		text-transform: uppercase;
 	}
 
-	&.is-style-solid-color {
-		blockquote {
-			&::before {
-				color: inherit;
-			}
-
-			&::after {
-				border-top-color: currentColor;
-			}
-
-			cite {
-				text-transform: uppercase;
-			}
-		}
-	}
-
 	&.alignleft,
 	&.alignright {
 		blockquote {
 			text-align: left;
+			&::before {
+				left: 3em;
+				right: 15%;
+			}
+
+			&::after {
+				display: none;
+			}
 		}
 
 		&,
@@ -224,17 +224,6 @@
 				left: 0;
 				text-align: left;
 				width: 0.5em;
-			}
-		}
-
-		blockquote {
-			&::before {
-				left: 3em;
-				right: 15%;
-			}
-
-			&::after {
-				display: none;
 			}
 		}
 

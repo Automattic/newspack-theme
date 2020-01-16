@@ -67,7 +67,7 @@ body.page {
 }
 
 .tags-links {
-	& > * {
+	> * {
 		display: inline-block;
 	}
 
@@ -569,7 +569,7 @@ body.page {
 		}
 
 		.post-thumbnail,
-		& > .wrapper {
+		> .wrapper {
 			width: 50%;
 		}
 
@@ -579,7 +579,7 @@ body.page {
 			position: relative;
 		}
 
-		& > .wrapper {
+		> .wrapper {
 			padding: 0 #{2 * $size__spacing-unit};
 			margin: auto 0;
 		}

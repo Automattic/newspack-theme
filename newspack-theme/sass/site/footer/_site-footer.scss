@@ -71,11 +71,11 @@
 			&.site-info-contain {
 				justify-content: flex-start;
 
-				& > *:not( :first-child ) {
+				> *:not( :first-child ) {
 					margin-left: $size__spacing-unit;
 				}
 
-				& > *:last-child {
+				> *:last-child {
 					margin-left: auto;
 				}
 			}

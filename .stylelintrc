@@ -14,5 +14,6 @@
     "media-feature-parentheses-space-inside": "always",
     "selector-pseudo-class-parentheses-space-inside": "always",
     "selector-class-pattern": null,
+    "font-family-no-missing-generic-family-keyword": null,
   }
 }

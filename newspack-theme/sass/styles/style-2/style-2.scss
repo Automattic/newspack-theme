@@ -64,7 +64,7 @@ Newspack Theme Styles - Style Pack 2
 .site-header,
 .h-db .middle-header-contain, // Header default background
 .h-sh.h-db .site-header, // Header short height; header default background
-body:not(.h-sb) .site-header {
+body:not( .h-sb ) .site-header {
 	// Not Header solid background
 	background-color: #efefef;
 }
@@ -374,10 +374,6 @@ blockquote {
 		&.is-style-dots::before {
 			color: $color__text-main;
 		}
-	}
-
-	.wp-block-separator:not( .is-style-dots ):not( .is-style-wide ) {
-		border-top: 5px solid $color__text-main;
 	}
 }
 

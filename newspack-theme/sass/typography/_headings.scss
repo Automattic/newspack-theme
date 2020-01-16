@@ -78,7 +78,7 @@ h1,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
-.archive:not( paged ) article.entry:first-of-type .entry-title,
+.archive:not( .paged ) article.entry:first-of-type .entry-title,
 h2 {
 	font-size: $font__size-lg;
 
@@ -110,6 +110,7 @@ h4 {
 
 .page-title {
 	font-size: $font__size_sm;
+	letter-spacing: 0.01em;
 
 	@include media( tablet ) {
 		font-size: $font__size_base;
@@ -161,10 +162,6 @@ blockquote {
 	width: 100%;
 }
 
-.page-title {
-	letter-spacing: 0.01em;
-}
-
 .page-description {
 	text-transform: none;
 }
@@ -172,7 +169,7 @@ blockquote {
 .accent-header {
 	margin-bottom: 0.5em;
 
-	& + * {
+	+ * {
 		margin-top: 0;
 	}
 }
