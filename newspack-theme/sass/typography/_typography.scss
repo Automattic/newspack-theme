@@ -1,8 +1,7 @@
-
 html {
 	font-size: $font__size_base_sm;
 
-	@include media(mobile) {
+	@include media( mobile ) {
 		font-size: $font__size_base;
 	}
 }
@@ -35,6 +34,6 @@ textarea {
 	font-family: $font__body;
 }
 
-@import "headings";
+@import 'headings';
 
-@import "copy";
+@import 'copy';

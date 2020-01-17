@@ -4,9 +4,9 @@
 	/*rtl:ignore*/
 	margin-right: $size__spacing-unit;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		/*rtl:ignore*/
-		margin-right: calc(2 * #{$size__spacing-unit});
+		margin-right: calc( 2 * #{$size__spacing-unit} );
 	}
 }
 
@@ -16,9 +16,9 @@
 	/*rtl:ignore*/
 	margin-left: $size__spacing-unit;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		/*rtl:ignore*/
-		margin-left: calc(2 * #{$size__spacing-unit});
+		margin-left: calc( 2 * #{$size__spacing-unit} );
 	}
 }
 

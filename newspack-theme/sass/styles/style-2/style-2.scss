@@ -4,8 +4,8 @@ Newspack Theme Styles - Style Pack 2
 
 /** === Includes === */
 
-@import "variables-style/variables-style";
-@import "../../style-base.scss";
+@import 'variables-style/variables-style';
+@import '../../style-base.scss';
 
 // Header Overlap
 // Header - Solid background
@@ -15,12 +15,12 @@ Newspack Theme Styles - Style Pack 2
 
 .site-header,
 .h-sb .site-header {
-	@include media(tablet) {
-		padding-bottom: #{ 4 * $size__spacing-unit };
+	@include media( tablet ) {
+		padding-bottom: #{4 * $size__spacing-unit};
 	}
 
 	@include media( desktop ) {
-		padding-bottom: #{ 7 * $size__spacing-unit };
+		padding-bottom: #{7 * $size__spacing-unit};
 	}
 }
 
@@ -34,15 +34,15 @@ Newspack Theme Styles - Style Pack 2
 .h-sh {
 	.site-header {
 		@include media( tablet ) {
-			padding-top: #{ 0.5 * $size__spacing-unit };
+			padding-top: #{0.5 * $size__spacing-unit};
 		}
 
 		@include media( desktop ) {
-			padding: $size__spacing-unit 0 #{ 10 * $size__spacing-unit };
+			padding: $size__spacing-unit 0 #{10 * $size__spacing-unit};
 
 			.highlight-menu-contain {
 				position: relative;
-				top: #{ 3 * $size__spacing-unit };
+				top: #{3 * $size__spacing-unit};
 			}
 		}
 	}
@@ -50,12 +50,12 @@ Newspack Theme Styles - Style Pack 2
 
 .site-content,
 .newspack-front-page.hide-homepage-title .site-content {
-	@include media(tablet) {
-		margin-top: #{ -3.5 * $size__spacing-unit };
+	@include media( tablet ) {
+		margin-top: #{-3.5 * $size__spacing-unit};
 	}
 
-	@include media(desktop) {
-		margin-top: #{ -6 * $size__spacing-unit };
+	@include media( desktop ) {
+		margin-top: #{-6 * $size__spacing-unit};
 	}
 }
 
@@ -64,7 +64,8 @@ Newspack Theme Styles - Style Pack 2
 .site-header,
 .h-db .middle-header-contain, // Header default background
 .h-sh.h-db .site-header, // Header short height; header default background
-body:not(.h-sb) .site-header { // Not Header solid background
+body:not( .h-sb ) .site-header {
+	// Not Header solid background
 	background-color: #efefef;
 }
 
@@ -105,28 +106,30 @@ body:not(.h-sb) .site-header { // Not Header solid background
 	background-color: $color__background-body;
 	padding: $size__spacing-unit 0;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		border-top: 4px solid $color__primary-variation;
-		padding: #{ 3 * $size__spacing-unit } #{ 2 * $size__spacing-unit } 0;
+		padding: #{3 * $size__spacing-unit} #{2 * $size__spacing-unit} 0;
 	}
 
-	@include media(desktop) {
-		padding-left: #{ 3 * $size__spacing-unit };
-		padding-right: #{ 3 * $size__spacing-unit };
+	@include media( desktop ) {
+		padding-left: #{3 * $size__spacing-unit};
+		padding-right: #{3 * $size__spacing-unit};
 	}
 }
 
-.newspack-front-page:not(.page-template-single-feature) #primary {
-	@include media(tablet) {
+.newspack-front-page:not( .page-template-single-feature ) #primary {
+	@include media( tablet ) {
 		padding-top: $size__spacing-unit;
 	}
 }
 
 .newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child {
-	margin-top: #{ -1 * $size__spacing-unit };
+	margin-top: #{-1 * $size__spacing-unit};
 
 	@include media( tablet ) {
-		margin-top: calc( #{ -1 * $size__spacing-unit } - 4px );  // minus 4px to offset bottom border on header
+		margin-top: calc(
+			#{-1 * $size__spacing-unit} - 4px
+		); // minus 4px to offset bottom border on header
 	}
 }
 
@@ -190,14 +193,14 @@ h4,
 .entry-content .wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
-		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		margin-bottom: #{1.5 * $size__spacing-unit};
 	}
 }
 
 .single .cat-links {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
-		margin-bottom: #{ 2.5 * $size__spacing-unit };
+		margin-bottom: #{2.5 * $size__spacing-unit};
 	}
 }
 
@@ -228,14 +231,14 @@ h4,
 
 .single {
 	.entry-header {
-		padding-bottom: #{ 2 * $size__spacing-unit };
+		padding-bottom: #{2 * $size__spacing-unit};
 
 		@include media( tablet ) {
-			padding-bottom: #{ 3 * $size__spacing-unit };
+			padding-bottom: #{3 * $size__spacing-unit};
 		}
 	}
 
-	&:not(.has-featured-image) .entry-header,
+	&:not( .has-featured-image ) .entry-header,
 	.has-large-featured-image .entry-header {
 		border-bottom: 2px solid $color__text-main;
 
@@ -258,8 +261,8 @@ h4,
 .tags-links {
 	a {
 		background: $color__background-pre;
-		margin: 0 #{ 0.25 * $size__spacing-unit } #{ 0.25 * $size__spacing-unit } 0;
-		padding: #{ 0.25 * $size__spacing-unit } #{ 0.5 * $size__spacing-unit };
+		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 
 		&:hover {
 			background: lighten( $color__background-pre, 5% );
@@ -282,17 +285,16 @@ blockquote {
 }
 
 //! Paragraph
-.has-drop-cap:not(:focus)::first-letter {
+.has-drop-cap:not( :focus )::first-letter {
 	color: $color__secondary;
 	font-family: $font__heading;
 	font-weight: 800;
 }
 
-
 //! Newspack Article Block
 .wpnbha {
-	 article .entry-meta {
-		font-size: #{ 0.7 * $font__size_base };
+	article .entry-meta {
+		font-size: #{0.7 * $font__size_base};
 	}
 
 	&.type-scale1,
@@ -300,7 +302,7 @@ blockquote {
 	&.type-scale3,
 	&.type-scale4 {
 		article .entry-meta {
-			font-size: #{ 0.6 * $font__size_base };
+			font-size: #{0.6 * $font__size_base};
 		}
 	}
 }
@@ -310,7 +312,7 @@ blockquote {
 	border-width: 16px 0 4px;
 
 	blockquote {
-		margin: #{ 2 * $size__spacing-unit } 0;
+		margin: #{2 * $size__spacing-unit} 0;
 
 		p {
 			font-size: $font__size-lg;
@@ -337,8 +339,8 @@ blockquote {
 	&.alignright {
 		border-width: 0;
 		position: relative;
-		margin-top: #{ 1.5 * $size__spacing-unit };
-		margin-bottom: #{ 1.5 * $size__spacing-unit };
+		margin-top: #{1.5 * $size__spacing-unit};
+		margin-bottom: #{1.5 * $size__spacing-unit};
 
 		@include media( tablet ) {
 			p {
@@ -346,27 +348,26 @@ blockquote {
 			}
 		}
 
-		&:before {
+		&::before {
 			border-color: inherit;
 			border-width: 10px 0 0;
 			border-style: solid;
-			content: "";
+			content: '';
 			display: block;
 			width: 75%;
 		}
 
-		&.is-style-solid-color:before {
+		&.is-style-solid-color::before {
 			display: none;
 		}
 	}
 }
 
 .entry .entry-content {
-
 	.wp-block-separator {
 		border-top: 2px solid $color__text-main;
 
-		&:not(.is-style-dots):not(.is-style-wide) {
+		&:not( .is-style-dots ):not( .is-style-wide ) {
 			border-top: 5px solid $color__text-main;
 		}
 
@@ -374,17 +375,13 @@ blockquote {
 			color: $color__text-main;
 		}
 	}
-
-	.wp-block-separator:not(.is-style-dots):not(.is-style-wide) {
-		border-top: 5px solid $color__text-main;
-	}
 }
 
 // Author Bio
 
 .author-bio {
 	border-top: 8px solid $color__text-main;
-	padding-top: #{ 1.5 * $size__spacing-unit };
+	padding-top: #{1.5 * $size__spacing-unit};
 
 	@include media( tablet ) {
 		border-top-width: 10px;
@@ -395,7 +392,7 @@ blockquote {
 		font-size: $font__size-md;
 		font-weight: 800;
 		letter-spacing: 0;
-		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		margin: 0 0 #{0.5 * $size__spacing-unit};
 		text-transform: none;
 
 		span {
@@ -414,7 +411,7 @@ blockquote {
 .archive {
 	.page-header {
 		border-bottom: 2px solid $color__text-main;
-		padding-bottom: #{ 2 * $size__spacing-unit };
+		padding-bottom: #{2 * $size__spacing-unit};
 	}
 
 	.page-title {
@@ -451,10 +448,10 @@ blockquote {
 }
 
 .footer-branding {
-	margin-bottom: #{ 2 * $size__spacing-unit };
+	margin-bottom: #{2 * $size__spacing-unit};
 
 	@include media( tablet ) {
-		padding-top: #{ 2 * $size__spacing-unit };
+		padding-top: #{2 * $size__spacing-unit};
 	}
 
 	.wrapper {

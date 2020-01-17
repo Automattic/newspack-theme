@@ -1,8 +1,8 @@
 .wp-caption {
-	margin-bottom: calc(1.5 * #{$size__spacing-unit});
+	margin-bottom: calc( 1.5 * #{$size__spacing-unit} );
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -28,5 +28,3 @@ figcaption,
 		max-width: 1200px;
 	}
 }
-
-

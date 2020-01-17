@@ -1,4 +1,3 @@
-
 // Custom Colors - defaults
 $color__primary: #36f;
 $color__primary-variation: #2240d5;
@@ -14,7 +13,11 @@ $color__background-button: $color__secondary;
 $color__background-button-hover: #111;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-$color__background_selection: mix( $color__background-body, $color__primary, 75% ); // lighten( salmon, 22.5% ); // lighten( #0999d4, 48% );
+$color__background_selection: mix(
+	$color__background-body,
+	$color__primary,
+	75%
+); // lighten( salmon, 22.5% ); // lighten( #0999d4, 48% );
 $color__background-dark: #333;
 
 // Text

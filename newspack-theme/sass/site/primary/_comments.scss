@@ -7,27 +7,26 @@
 }
 
 .comments-area {
-	margin: calc(2 * #{$size__spacing-unit}) 0;
+	margin: calc( 2 * #{$size__spacing-unit} ) 0;
 
-	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) 0;
+	@include media( tablet ) {
+		margin: calc( 3 * #{$size__spacing-unit} ) 0;
 	}
 
-	& > * {
-		margin-top: calc(2 * #{$size__spacing-unit});
-		margin-bottom: calc(2 * #{$size__spacing-unit});
+	> * {
+		margin-top: calc( 2 * #{$size__spacing-unit} );
+		margin-bottom: calc( 2 * #{$size__spacing-unit} );
 	}
 
 	/* Add extra margin when the comments section is located immediately after the
 	 * post itself (this happens on pages).
 	 */
 	.entry + & {
-		margin-top: calc(3 * #{$size__spacing-unit});
+		margin-top: calc( 3 * #{$size__spacing-unit} );
 	}
 
 	.comments-title-wrap {
-
-		@include media(tablet) {
+		@include media( tablet ) {
 			align-items: baseline;
 			display: flex;
 			justify-content: space-between;
@@ -36,14 +35,14 @@
 		.comments-title {
 			margin: 0;
 
-			@include media(tablet) {
-				flex: 1 0 calc(3 * (100vw / 12));
+			@include media( tablet ) {
+				flex: 1 0 calc( 3 * ( 100vw / 12 ) );
 			}
 		}
 
 		.discussion-meta {
-			@include media(tablet) {
-				flex: 0 0 calc(2 * (100vw / 12));
+			@include media( tablet ) {
+				flex: 0 0 calc( 2 * ( 100vw / 12 ) );
 				margin-left: #{$size__spacing-unit};
 				text-align: right;
 			}
@@ -54,7 +53,6 @@
 	.comments-title-wrap + .comment-respond .comment-reply-title {
 		display: none;
 	}
-
 }
 
 #comment {
@@ -77,14 +75,13 @@
 		display: block;
 		font-size: $font__size_base;
 		position: absolute;
-		left: calc(#{$size__spacing-unit} + 100%);
-		top: calc(-3.5 * #{$size__spacing-unit});
-		width: calc(100vw / 12 );
+		left: calc( #{$size__spacing-unit} + 100% );
+		top: calc( -3.5 * #{$size__spacing-unit} );
+		width: calc( 100vw / 12 );
 	}
 }
 
 #comments {
-
 	> .comments-title:last-child {
 		display: none;
 	}
@@ -124,7 +121,6 @@
 
 	.pingback,
 	.trackback {
-
 		.comment-body {
 			color: $color__text-light;
 			font-family: $font__heading;
@@ -133,7 +129,7 @@
 			margin-top: $size__spacing-unit;
 			margin-bottom: $size__spacing-unit;
 
-			a:not(.comment-edit-link) {
+			a:not( .comment-edit-link ) {
 				font-weight: bold;
 				line-height: 1.5;
 				padding-right: #{0.5 * $size__spacing-unit};
@@ -150,7 +146,6 @@
 }
 
 .comment-reply {
-
 	#respond + & {
 		display: none;
 	}
@@ -164,8 +159,8 @@
 	list-style: none;
 	position: relative;
 
-	@include media(tablet) {
-		padding-left: calc(.5 * (#{$size__spacing-unit} + calc(100vw / 12 )));
+	@include media( tablet ) {
+		padding-left: calc( 0.5 * ( #{$size__spacing-unit} + calc( 100vw / 12 ) ) );
 
 		&.depth-1,
 		.children {
@@ -174,7 +169,7 @@
 	}
 
 	.comment-body {
-		margin: calc(2 * #{$size__spacing-unit}) 0 0;
+		margin: calc( 2 * #{$size__spacing-unit} ) 0 0;
 	}
 
 	.comment-meta {
@@ -182,7 +177,6 @@
 	}
 
 	.comment-author {
-
 		.avatar {
 			float: left;
 			margin-right: $size__spacing-unit;
@@ -208,12 +202,12 @@
 			height: 18px;
 			position: absolute;
 			background: lighten( $color__primary, 8% );
-			right: calc(100% - #{$size__spacing-unit * 2.5});
+			right: calc( 100% - #{$size__spacing-unit * 2.5} );
 			top: -3px;
 			width: 18px;
 
-			@include media(tablet) {
-				right: calc(100% + #{$size__spacing-unit * .75});
+			@include media( tablet ) {
+				right: calc( 100% + #{$size__spacing-unit * 0.75} );
 			}
 
 			svg {
@@ -221,13 +215,12 @@
 				height: inherit;
 				display: block;
 				fill: white;
-				transform: scale(0.875);
+				transform: scale( 0.875 );
 			}
 		}
 	}
 
 	.comment-metadata {
-
 		> a,
 		.comment-edit-link {
 			display: inline;
@@ -259,7 +252,7 @@
 			color: $color__text-light;
 
 			svg {
-				transform: scale(0.8);
+				transform: scale( 0.8 );
 				vertical-align: baseline;
 				margin-right: 0.1em;
 			}
@@ -278,10 +271,9 @@
 	}
 
 	.comment-content {
-
 		margin: $size__spacing-unit 0;
 
-		@include media(desktop) {
+		@include media( desktop ) {
 			padding-right: $size__spacing-unit;
 		}
 
@@ -331,31 +323,27 @@
 	}
 
 	.comment-user-avatar {
-
 		img {
-			height: calc(1.5 * #{$size__spacing-unit});
-			width: calc(1.5 * #{$size__spacing-unit});
+			height: calc( 1.5 * #{$size__spacing-unit} );
+			width: calc( 1.5 * #{$size__spacing-unit} );
 		}
 	}
 }
 
 .discussion-meta {
-
 	.discussion-meta-info {
 		margin: 0;
 
 		.svg-icon {
 			vertical-align: middle;
 			fill: currentColor;
-			transform: scale( 0.6 ) scaleX(-1) translateY(-0.1em);
-			margin-left: -#{.25 * $size__spacing-unit}; // Align icon with avatars above.
+			transform: scale( 0.6 ) scaleX( -1 ) translateY( -0.1em );
+			margin-left: -#{0.25 * $size__spacing-unit}; // Align icon with avatars above.
 		}
 	}
-
 }
 
 .comment-form {
-
 	.comment-notes,
 	label {
 		font-family: $font__heading;
@@ -365,21 +353,21 @@
 
 	.comment-form-author,
 	.comment-form-email {
-		@include media(tablet) {
-			width: calc(50% - #{$size__spacing-unit / 2});
+		@include media( tablet ) {
+			width: calc( 50% - #{$size__spacing-unit / 2} );
 			float: left;
 		}
 	}
 
 	.comment-form-email {
-		@include media(tablet) {
+		@include media( tablet ) {
 			margin-left: $size__spacing-unit;
 		}
 	}
 
-	input[name="author"],
-	input[name="email"],
-	input[name="url"] {
+	input[name='author'],
+	input[name='email'],
+	input[name='url'] {
 		display: block;
 		width: 100%;
 	}

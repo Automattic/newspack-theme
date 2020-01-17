@@ -16,7 +16,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 --------------------------------------------------------------*/
 
 @media print {
-
 	/* Margins */
 
 	@page {
@@ -27,14 +26,15 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		margin-top: 1em;
 	}
 
-	.entry .entry-header, .site-footer .site-info {
+	.entry .entry-header,
+	.site-footer .site-info {
 		margin: 0;
 	}
 
 	/* Fonts */
 
 	body {
-		font: 13pt Georgia, "Times New Roman", Times, serif;
+		font: 13pt Georgia, 'Times New Roman', Times, serif;
 		line-height: 1.3;
 		background: #fff;
 		color: #000;
@@ -51,17 +51,14 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.has-large-font-size,
 	h2.author-title,
 	p.author-bio,
-	.comments-title, h3 {
+	.comments-title {
 		font-size: 14pt;
 		margin-top: 25px;
 	}
 
 	/* Page breaks */
 
-	a {
-		page-break-inside: avoid
-	}
-
+	a,
 	blockquote {
 		page-break-inside: avoid;
 	}
@@ -73,7 +70,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	h5,
 	h6 {
 		page-break-after: avoid;
-		page-break-inside: avoid
+		page-break-inside: avoid;
 	}
 
 	img {
@@ -81,17 +78,22 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-after: avoid;
 	}
 
-	table, pre {
+	table,
+	pre {
 		page-break-inside: avoid;
 	}
 
-	ul, ol, dl {
+	ul,
+	ol,
+	dl {
 		page-break-before: avoid;
 	}
 
 	/* Links */
 
-	a:link, a:visited, a {
+	a:link,
+	a:visited,
+	a {
 		background: transparent;
 		font-weight: bold;
 		text-decoration: underline;
@@ -102,30 +104,30 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		page-break-inside: avoid;
 	}
 
-	a[href^=http]:after {
-		content: " < " attr(href) "> ";
+	a[href^='http']::after {
+		content: ' < ' attr( href ) '> ';
 	}
 
-	a:after > img {
-		content: "";
+	a::after > img {
+		content: '';
 	}
 
-	article a[href^="#"]:after {
-		content: "";
+	article a[href^='#']::after {
+		content: '';
 	}
 
-	a:not(:local-link):after {
-		content: " < " attr(href) "> ";
+	a::after {
+		content: ' < ' attr( href ) '> ';
 	}
 
 	/* Visibility */
 	.nav1,
 	.site-title + .nav1,
 	.social-navigation,
-	.site-branding-container:before,
-	.entry .entry-title:before,
+	.site-branding-container::before,
+	.entry .entry-title::before,
 	.entry-footer,
-	.author-description:before,
+	.author-description::before,
 	.widget-area,
 	.comment-form-flex,
 	.comment-reply,

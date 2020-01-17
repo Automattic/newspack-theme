@@ -69,7 +69,7 @@ h1,
 .page-description {
 	font-size: $font__size-xxl;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		font-size: $font__size-xxxl;
 	}
 }
@@ -78,11 +78,11 @@ h1,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
-.archive:not(paged) article.entry:first-of-type .entry-title,
+.archive:not( .paged ) article.entry:first-of-type .entry-title,
 h2 {
 	font-size: $font__size-lg;
 
-	@include media(tablet) {
+	@include media( tablet ) {
 		font-size: $font__size-xl;
 	}
 }
@@ -110,6 +110,7 @@ h4 {
 
 .page-title {
 	font-size: $font__size_sm;
+	letter-spacing: 0.01em;
 
 	@include media( tablet ) {
 		font-size: $font__size_base;
@@ -129,7 +130,7 @@ h5 {
 .comment-metadata,
 .comment-notes,
 #cancel-comment-reply-link,
-img:after,
+img::after,
 .site-info,
 h6 {
 	font-size: $font__size-xs;
@@ -152,17 +153,13 @@ blockquote {
 
 /* Do not hyphenate entry title on tablet view and bigger. */
 .entry-title {
-	@include media(tablet) {
+	@include media( tablet ) {
 		hyphens: none;
 	}
 }
 
 .page-header {
 	width: 100%;
-}
-
-.page-title {
-	letter-spacing: 0.01em;
 }
 
 .page-description {
@@ -172,8 +169,7 @@ blockquote {
 .accent-header {
 	margin-bottom: 0.5em;
 
-	& + * {
+	+ * {
 		margin-top: 0;
 	}
 }
-

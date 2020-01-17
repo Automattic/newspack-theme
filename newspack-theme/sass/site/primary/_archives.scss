@@ -2,7 +2,7 @@
 .blog,
 .search {
 	.page-header {
-		margin: 0 0 #{ $size__spacing-unit * 3 };
+		margin: 0 0 #{$size__spacing-unit * 3};
 
 		h1 {
 			margin-top: 0;
@@ -19,7 +19,7 @@
 	}
 
 	.entry {
-		margin-top: calc(3 * #{$size__spacing-unit});
+		margin-top: calc( 3 * #{$size__spacing-unit} );
 
 		&:first-of-type {
 			margin-top: 0;
@@ -27,7 +27,7 @@
 	}
 
 	.post-thumbnail {
-		margin: 0 0 #{ 0.5 * $size__spacing-unit };
+		margin: 0 0 #{0.5 * $size__spacing-unit};
 	}
 
 	.entry-content > p {
@@ -35,7 +35,7 @@
 	}
 
 	.entry-meta {
-		margin: #{ $size__spacing-unit * 0.5 } 0;
+		margin: #{$size__spacing-unit * 0.5} 0;
 	}
 
 	@include media( tablet ) {
@@ -70,8 +70,8 @@
 		color: $color__primary;
 	}
 
-	@include media(tablet) {
-		&:not(paged) article.has-post-thumbnail:first-of-type {
+	@include media( tablet ) {
+		&:not( .paged ) article.has-post-thumbnail:first-of-type {
 			display: block;
 
 			.post-thumbnail {
@@ -115,7 +115,7 @@
 	color: $color__text-main;
 }
 
-.tag .page-description:first-letter {
+.tag .page-description::first-letter {
 	text-transform: capitalize;
 }
 

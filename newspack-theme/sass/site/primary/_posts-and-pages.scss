@@ -2,18 +2,17 @@
 	display: block;
 }
 
-.updated:not(.published) {
+.updated:not( .published ) {
 	display: none;
 }
 
 .page-links {
 	clear: both;
-	margin: 0 0 calc(1.5 * #{$size__spacing-unit});
+	margin: 0 0 calc( 1.5 * #{$size__spacing-unit} );
 }
 
 .entry {
-
-	margin-top: calc(6 * #{$size__spacing-unit});
+	margin-top: calc( 6 * #{$size__spacing-unit} );
 
 	&:first-of-type {
 		margin-top: 0;
@@ -29,7 +28,7 @@
 	font-size: $font__size-xxl;
 	margin: 0;
 
-	@include media(desktop) {
+	@include media( desktop ) {
 		font-size: $font__size-xxxl;
 	}
 
@@ -45,7 +44,7 @@
 .newspack-post-subtitle {
 	margin-bottom: 1.3em;
 	font-style: italic;
-	@include media(mobile) {
+	@include media( mobile ) {
 		margin-bottom: 2.3em;
 	}
 }
@@ -55,7 +54,7 @@ body.page {
 		font-size: $font__size-xl;
 		margin: 0;
 
-		@include media(desktop) {
+		@include media( desktop ) {
 			font-size: $font__size-xxl;
 		}
 	}
@@ -64,11 +63,11 @@ body.page {
 .cat-links {
 	display: block;
 	font-size: $font__size-xs;
-	margin: 0 0 #{ 0.75 * $size__spacing-unit };
+	margin: 0 0 #{0.75 * $size__spacing-unit};
 }
 
 .tags-links {
-	& > * {
+	> * {
 		display: inline-block;
 	}
 
@@ -89,11 +88,11 @@ body.page {
 }
 
 .entry-meta {
-	margin-bottom: #{ 0.25 * $size__spacing-unit };
+	margin-bottom: #{0.25 * $size__spacing-unit};
 
-	.author-avatar:not(:empty) {
+	.author-avatar:not( :empty ) {
 		float: left;
-		margin-right: #{ $size__spacing-unit * 0.5 };
+		margin-right: #{$size__spacing-unit * 0.5};
 	}
 
 	.byline {
@@ -123,7 +122,7 @@ body.page {
 }
 
 .entry-footer {
-	margin: $size__spacing-unit 0 #{ 3 * $size__spacing-unit };
+	margin: $size__spacing-unit 0 #{3 * $size__spacing-unit};
 	> span {
 		margin-right: $size__spacing-unit;
 		display: inline-block;
@@ -141,7 +140,7 @@ body.page {
 		font-size: $font__size-sm;
 
 		svg {
-			margin: 0 #{ 0.25 * $size__spacing-unit } 0 0;
+			margin: 0 #{0.25 * $size__spacing-unit} 0 0;
 		}
 	}
 }
@@ -170,7 +169,6 @@ body.page {
 }
 
 .entry-content {
-
 	p {
 		word-wrap: break-word;
 	}
@@ -180,8 +178,8 @@ body.page {
 		display: inline;
 		color: inherit;
 
-		&:after {
-			content: "\02192";
+		&::after {
+			content: '\02192';
 			display: inline-block;
 			margin-left: 0.5em;
 		}
@@ -231,18 +229,17 @@ body.page {
 
 	// Page links
 	.page-links a {
-		margin: calc(0.5 * #{$size__spacing-unit});
+		margin: calc( 0.5 * #{$size__spacing-unit} );
 		text-decoration: none;
 	}
 
 	// Classic editor audio embeds.
 	.wp-audio-shortcode {
-		max-width: calc(100vw - (2 * #{ $size__spacing-unit }));
+		max-width: calc( 100vw - ( 2 * #{$size__spacing-unit} ) );
 	}
 }
 
 .entry .entry-content {
-
 	a.button {
 		text-decoration: none;
 
@@ -260,7 +257,7 @@ body.page {
 		padding: 0 0 $size__spacing-unit;
 	}
 
-	&:not(.has-large-featured-image) .entry-header {
+	&:not( .has-large-featured-image ) .entry-header {
 		border-bottom: 1px solid #ddd;
 	}
 
@@ -269,7 +266,7 @@ body.page {
 		margin: 0 0 0.5em;
 
 		&--with-subtitle {
-			margin-bottom: #{ 0.3 * $size__spacing-unit };
+			margin-bottom: #{0.3 * $size__spacing-unit};
 		}
 
 		@include media( mobile ) {
@@ -280,13 +277,13 @@ body.page {
 			font-size: $font__size-xxxl;
 		}
 
-		@include media(desktop) {
+		@include media( desktop ) {
 			font-size: $font__size-xxxxl;
 		}
 	}
 
 	.entry-meta {
-		margin-bottom: #{ 0.5 * $size__spacing-unit };
+		margin-bottom: #{0.5 * $size__spacing-unit};
 
 		@include media( mobile ) {
 			margin-bottom: 0;
@@ -294,20 +291,20 @@ body.page {
 	}
 
 	.avatar {
-		height: #{ 1.75 * $size__spacing-unit };
-		width: #{ 1.75 * $size__spacing-unit };
+		height: #{1.75 * $size__spacing-unit};
+		width: #{1.75 * $size__spacing-unit};
 
-		@include media( tablet) {
-			height: #{ 2.25 * $size__spacing-unit };
-			width: #{ 2.25 * $size__spacing-unit };
+		@include media( tablet ) {
+			height: #{2.25 * $size__spacing-unit};
+			width: #{2.25 * $size__spacing-unit};
 		}
 	}
 
 	.main-content > .post-thumbnail:first-child {
-		margin-top: #{ 2 * $size__spacing-unit };
+		margin-top: #{2 * $size__spacing-unit};
 	}
 
-	@include media(mobile) {
+	@include media( mobile ) {
 		.entry-subhead {
 			align-items: center;
 			display: flex;
@@ -332,9 +329,8 @@ body.page {
 	}
 }
 
-
-.page:not(.home) article.page > .post-thumbnail {
-	margin-top: #{ 1.5 * $size__spacing-unit };
+.page:not( .home ) article.page > .post-thumbnail {
+	margin-top: #{1.5 * $size__spacing-unit};
 }
 
 .page.home .entry .entry-content {
@@ -350,8 +346,8 @@ body.page {
 
 	.site-content {
 		margin-top: 0;
-		@include media(tablet) {
-			margin-top: #{ 0.5 * $size__spacing-unit };
+		@include media( tablet ) {
+			margin-top: #{0.5 * $size__spacing-unit};
 		}
 	}
 
@@ -364,14 +360,14 @@ body.page {
 
 .author-bio {
 	display: flex;
-	margin: calc(2 * #{$size__spacing-unit}) auto $size__spacing-unit;
+	margin: calc( 2 * #{$size__spacing-unit} ) auto $size__spacing-unit;
 
 	.avatar {
 		height: 60px;
 		margin-right: $size__spacing-unit;
 		width: 60px;
 
-		@include media(mobile) {
+		@include media( mobile ) {
 			height: 80px;
 			width: 80px;
 		}
@@ -379,7 +375,7 @@ body.page {
 
 	.author-bio-text {
 		width: calc( 100% - 60px - 1em );
-		@include media(mobile) {
+		@include media( mobile ) {
 			width: calc( 100% - 80px - 1em );
 		}
 	}
@@ -392,7 +388,7 @@ body.page {
 			font-size: $font__size-sm;
 			text-transform: none;
 
-			@include media(mobile) {
+			@include media( mobile ) {
 				display: inline;
 				margin: 0 0 0 0.5em;
 			}
@@ -438,7 +434,7 @@ body.page {
 .featured-image-behind {
 	background-color: $color__text-main;
 	display: flex;
-	margin: 0 calc(50% - 50vw);
+	margin: 0 calc( 50% - 50vw );
 	min-height: calc( 90vh - 60px );
 	position: relative;
 	width: 100vw;
@@ -462,8 +458,8 @@ body.page {
 		}
 	}
 
-	&:before {
-		background-color: rgba(0,0,0,0.5);
+	&::before {
+		background-color: rgba( 0, 0, 0, 0.5 );
 		content: '';
 		bottom: 0;
 		left: 0;
@@ -498,7 +494,7 @@ body.page {
 	.entry-header {
 		align-self: flex-end;
 		color: #fff;
-		margin: #{ 4 * $size__spacing-unit } auto #{ 2 * $size__spacing-unit };
+		margin: #{4 * $size__spacing-unit} auto #{2 * $size__spacing-unit};
 		max-width: 90%;
 		position: relative;
 		z-index: 2;
@@ -525,7 +521,6 @@ body.page {
 	}
 }
 
-
 .featured-image-beside > .wrapper {
 	max-width: 100%;
 	width: 100%;
@@ -533,7 +528,7 @@ body.page {
 
 .featured-image-behind + figcaption,
 .featured-image-beside + figcaption {
-	margin: #{ 0.25 * $size__spacing-unit } auto 0;
+	margin: #{0.25 * $size__spacing-unit} auto 0;
 	width: 1200px;
 	max-width: 100%;
 }
@@ -556,7 +551,7 @@ body.page {
 	.featured-image-beside {
 		color: #fff;
 		display: flex;
-		margin: 0 calc(50% - 50vw);
+		margin: 0 calc( 50% - 50vw );
 		min-height: calc( 100vh - 220px );
 		position: relative;
 		width: 100vw;
@@ -574,7 +569,7 @@ body.page {
 		}
 
 		.post-thumbnail,
-		& > .wrapper {
+		> .wrapper {
 			width: 50%;
 		}
 
@@ -584,8 +579,8 @@ body.page {
 			position: relative;
 		}
 
-		& > .wrapper {
-			padding: 0 #{ 2 * $size__spacing-unit };
+		> .wrapper {
+			padding: 0 #{2 * $size__spacing-unit};
 			margin: auto 0;
 		}
 
@@ -610,7 +605,7 @@ body.page {
 			.entry-meta .byline a,
 			.entry-meta .byline a:visited,
 			.entry-meta .posted-on a,
-			.entry-meta .posted-on a:visited	 {
+			.entry-meta .posted-on a:visited {
 				color: inherit;
 			}
 
@@ -624,10 +619,10 @@ body.page {
 				.byline {
 					display: inline-block;
 
-					&:after {
-						content: "|";
+					&::after {
+						content: '|';
 						display: inline-block;
-						margin: 0 #{ 0.75 * $size__spacing-unit } 0 $size__spacing-unit;
+						margin: 0 #{0.75 * $size__spacing-unit} 0 $size__spacing-unit;
 					}
 				}
 			}
@@ -647,21 +642,21 @@ body.page {
 	h3.jp-relatedposts-headline {
 		font-family: $font__heading;
 		font-size: $font__size-xs;
-		em:before {
+		em::before {
 			display: none;
 		}
 	}
 
 	.jp-relatedposts-items-visual .jp-relatedposts-post {
-		opacity: 1.0;
+		opacity: 1;
 
 		.jp-relatedposts-post-img {
-			margin-bottom: #{ 0.5 * $size__spacing-unit };
+			margin-bottom: #{0.5 * $size__spacing-unit};
 		}
 
 		.jp-relatedposts-post-title {
 			line-height: $font__line-height-heading;
-			margin-bottom: #{ 0.25 * $size__spacing-unit };
+			margin-bottom: #{0.25 * $size__spacing-unit};
 			a {
 				color: $color__text-main;
 				font-family: $font__heading;
@@ -672,7 +667,7 @@ body.page {
 
 		.jp-relatedposts-post-context {
 			color: $color__text-light;
-			opacity: 1.0;
+			opacity: 1;
 		}
 	}
 }

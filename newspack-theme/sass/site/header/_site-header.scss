@@ -6,7 +6,7 @@
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	position: relative;
-	@include media(tablet) {
+	@include media( tablet ) {
 		flex-basis: 60%;
 	}
 }
@@ -20,7 +20,6 @@
 }
 
 .site-header .custom-logo-link .custom-logo {
-
 	@include media( tabletonly ) {
 		height: auto;
 		max-height: 75px;
@@ -65,7 +64,7 @@
 }
 
 .hide-site-tagline .site-description {
-	clip: rect(1px, 1px, 1px, 1px);
+	clip: rect( 1px, 1px, 1px, 1px );
 	position: absolute;
 }
 
@@ -75,8 +74,8 @@
 	color: #fff;
 
 	nav {
-		padding-bottom: #{ 0.3 * $size__spacing-unit };
-		padding-top: #{ 0.3 * $size__spacing-unit };
+		padding-bottom: #{0.3 * $size__spacing-unit};
+		padding-top: #{0.3 * $size__spacing-unit};
 	}
 }
 
@@ -85,7 +84,7 @@
 	align-items: center;
 	padding: $size__spacing-unit 0;
 	@include media( mobile ) {
-		padding: #{ 1.5 * $size__spacing-unit } 0;
+		padding: #{1.5 * $size__spacing-unit} 0;
 	}
 }
 
@@ -103,7 +102,7 @@
 #search-toggle {
 	background-color: transparent;
 	color: inherit;
-	padding: #{ 0.25 * $size__spacing-unit } 0 0;
+	padding: #{0.25 * $size__spacing-unit} 0 0;
 
 	.search-icon {
 		display: none;
@@ -116,7 +115,7 @@
 
 .header-search-contain {
 	display: none;
-	margin-left: #{ 0.75 * $size__spacing-unit };
+	margin-left: #{0.75 * $size__spacing-unit};
 	position: relative;
 
 	@include media( tablet ) {
@@ -129,7 +128,7 @@
 		width: 300px;
 		z-index: 5;
 
-		@include media (tablet) {
+		@include media( tablet ) {
 			right: 0;
 		}
 	}
@@ -154,13 +153,13 @@
  * Header options.
  */
 
- // Default Header
+// Default Header
 
 .h-db {
 	.middle-header-contain {
 		border-bottom: 1px solid $color__border;
 
-		@include media(tablet) {
+		@include media( tablet ) {
 			border-bottom: 0;
 		}
 	}
@@ -252,7 +251,7 @@
 
 		.wrapper {
 			@include media( tablet ) {
-				padding: #{ 1.5 * $size__spacing-unit } 0 $size__spacing-unit;
+				padding: #{1.5 * $size__spacing-unit} 0 $size__spacing-unit;
 			}
 		}
 	}
@@ -295,6 +294,25 @@
 		&.hide-site-tagline .nav1 {
 			flex-grow: 2;
 		}
+
+		&.hide-site-tagline .nav-wrapper {
+			margin-left: auto;
+
+			+ .nav-wrapper {
+				margin-left: 0;
+			}
+		}
+
+		&.hide-site-tagline.has-tertiary-menu .nav-wrapper {
+			margin-left: 0;
+			+ .nav-wrapper {
+				margin-left: auto;
+			}
+		}
+
+		&.show-site-tagline .site-branding {
+			margin-right: auto;
+		}
 	}
 
 	// Default background color.
@@ -304,33 +322,11 @@
 
 	.middle-header-contain .wrapper {
 		align-items: center;
-		padding: #{ 0.5 * $size__spacing-unit } 0;
+		padding: #{0.5 * $size__spacing-unit} 0;
 	}
 
 	.header-search-contain {
-		margin-left: #{ 0.75 * $size__spacing-unit };
-	}
-
-	// Left-aligned logo
-	&.h-ll {
-		&.hide-site-tagline .nav-wrapper {
-			margin-left: auto;
-
-			& + .nav-wrapper {
-				margin-left: 0;
-			}
-		}
-
-		&.hide-site-tagline.has-tertiary-menu .nav-wrapper {
-			margin-left: 0;
-			& + .nav-wrapper {
-				margin-left: auto;
-			}
-		}
-
-		&.show-site-tagline .site-branding {
-			margin-right: auto;
-		}
+		margin-left: #{0.75 * $size__spacing-unit};
 	}
 }
 

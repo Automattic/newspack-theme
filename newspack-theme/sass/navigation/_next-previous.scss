@@ -1,16 +1,17 @@
 // Index/archive navigation
 .pagination {
-	margin: #{ 3 * $size__spacing-unit } 0;
+	margin: #{3 * $size__spacing-unit} 0;
 
 	.nav-links {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 
-		& > * {
+		> * {
 			background-color: #eee;
-			margin-right: #{ 0.5 * $size__spacing-unit };
-			padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+			margin-right: #{0.5 * $size__spacing-unit};
+			padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit} #{0.25 *
+				$size__spacing-unit};
 
 			&:last-child {
 				margin-right: 0;
@@ -58,7 +59,7 @@
 			display: none;
 		}
 
-		@include media(tablet) {
+		@include media( tablet ) {
 			margin-left: 0 auto;
 			padding: 0;
 		}
@@ -67,7 +68,6 @@
 
 // Comments navigation
 .comment-navigation {
-
 	.nav-links {
 		display: flex;
 		flex-direction: row;
@@ -83,7 +83,7 @@
 		.secondary-text {
 			display: none;
 
-			@include media(tablet) {
+			@include media( tablet ) {
 				display: inline;
 			}
 		}

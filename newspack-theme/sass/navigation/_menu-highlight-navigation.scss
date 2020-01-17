@@ -1,5 +1,5 @@
 .highlight-menu-contain {
-	margin-top: #{ 0.25 * $size__spacing-unit };
+	margin-top: #{0.25 * $size__spacing-unit};
 	.wrapper {
 		font-family: $font__heading;
 		font-size: $font__size-xs;
@@ -10,7 +10,8 @@
 }
 
 .highlight-menu {
-	ul, li {
+	ul,
+	li {
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -24,7 +25,7 @@
 	li {
 		display: inline-block;
 		height: 1.5em;
-		margin-right: #{ 0.5 * $size__spacing-unit };
+		margin-right: #{0.5 * $size__spacing-unit};
 	}
 
 	.menu-label {
