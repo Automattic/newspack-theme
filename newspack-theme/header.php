@@ -18,7 +18,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<?php do_action( 'wp_body_open' ); ?>
 <?php do_action( 'before_header' ); ?>
 
 <?php
