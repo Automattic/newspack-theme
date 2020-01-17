@@ -29,18 +29,18 @@ function newspack_sacha_custom_colors_css() {
 		.cat-links,
 		.entry .entry-footer,
 		.site-footer .widget .widget-title {
-			color: ' . newspack_color_with_contrast( $primary_color ) . ';
+			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
 		.has-drop-cap:not(:focus)::first-letter {
-			background-color: ' . $primary_color . ';
-			color: ' . $primary_color_contrast . ';
+			background-color: ' . esc_html( $primary_color ) . ';
+			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
 		/* Header solid background; short height */
 		.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
 		.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
-			background-color: ' . newspack_adjust_brightness( $primary_color, -30 ) . ';
+			background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
 		}
 	';
 
@@ -48,12 +48,12 @@ function newspack_sacha_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
 		.block-editor-block-list__layout .block-editor-block-list__block .accent-header,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title {
-			color: ' . newspack_color_with_contrast( $primary_color ) . ';
+			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
-			background-color: ' . $primary_color . ';
-			color: ' . $primary_color_contrast . ';
+			background-color: ' . esc_html( $primary_color ) . ';
+			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
 	';
@@ -61,13 +61,6 @@ function newspack_sacha_custom_colors_css() {
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {
 		$theme_css = $editor_css;
 	}
-	/**
-	 * Filters Newspack Theme custom colors CSS.
-	 *
-	 * @since Newspack Sacha 1.0
-	 *
-	 * @param string $theme_css   Base theme colors CSS.
-	 * @param int    $primary_color       The user's selected color hex.
-	 */
-	return apply_filters( 'newspack_sacha_custom_colors_css', $theme_css, $primary_color );
+
+	return $theme_css;
 }

@@ -19,7 +19,7 @@ function newspack_scott_custom_typography_css() {
 			.has-drop-cap:not(:focus)::first-letter,
 			.wp-block-pullquote,
 			.wp-block-pullquote cite {
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
 		';
 
@@ -29,7 +29,7 @@ function newspack_scott_custom_typography_css() {
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text__editable:first-child::before {
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
 		';
 	}
