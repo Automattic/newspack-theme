@@ -22,7 +22,7 @@ function newspack_nelson_custom_colors_css() {
 	$theme_css = '
 		/* Header solid background */
 		.h-sb .site-header {
-			background-color: ' . $primary_color . ';
+			background-color: ' . esc_html( $primary_color ) . ';
 		}
 
 		.site-header,
@@ -32,22 +32,22 @@ function newspack_nelson_custom_colors_css() {
 		.h-sh.h-db .site-header,
 		.site-content #primary,
 		#page .site-header {
-			border-color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
+			border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 		}
 
 		/* Header solid background */
 		.h-sb .site-header .highlight-menu .menu-label,
 		.h-sb .site-header .highlight-menu a {
-			color: ' . $primary_color_contrast . ';
+			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
 		.site-footer {
-			background-color: ' . $primary_color . ';
-			color: ' . $primary_color_contrast . ';
+			background-color: ' . esc_html( $primary_color ) . ';
+			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
 		.has-drop-cap:not(:focus)::first-letter {
-			color: ' . newspack_color_with_contrast( $secondary_color ) . ';
+			color: ' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 		}
 	';
 
@@ -55,11 +55,11 @@ function newspack_nelson_custom_colors_css() {
 		$theme_css .= '
 			/* Header solid background */
 			.h-sb .middle-header-contain {
-				background-color: ' . $primary_color . ';
+				background-color: ' . esc_html( $primary_color ) . ';
 			}
 			.h-sb .top-header-contain {
-				background-color: ' . newspack_adjust_brightness( $primary_color, -10 ) . ';
-				border-bottom-color: ' . newspack_adjust_brightness( $primary_color, -15 ) . ';
+				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -10 ) ) . ';
+				border-bottom-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -15 ) ) . ';
 			}
 
 			/* Header solif background */
@@ -75,27 +75,20 @@ function newspack_nelson_custom_colors_css() {
 			.h-sb .top-header-contain,
 			.h-sb .middle-header-contain,
 			.nav1 .sub-menu a {
-				color: ' . $primary_color_contrast . ';
+				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
 		';
 	}
 
 	$editor_css = '
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
-			color: ' . newspack_color_with_contrast( $secondary_color ) . ';
+			color: ' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 		}
 	';
 
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {
 		$theme_css = $editor_css;
 	}
-	/**
-	 * Filters Newspack Theme custom colors CSS.
-	 *
-	 * @since Newspack Nelson 1.0
-	 *
-	 * @param string $theme_css   Base theme colors CSS.
-	 * @param int    $primary_color       The user's selected color hex.
-	 */
-	return apply_filters( 'newspack_nelson_custom_colors_css', $theme_css, $primary_color );
+
+	return $theme_css;
 }

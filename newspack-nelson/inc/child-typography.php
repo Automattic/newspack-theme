@@ -15,20 +15,21 @@ function newspack_nelson_custom_typography_css() {
 	$editor_css_blocks = '';
 
 	if ( get_theme_mod( 'font_header', '' ) ) {
-		$css_blocks .= "
+		$css_blocks .= '
 		blockquote,
 		.has-drop-cap:not(:focus)::first-letter,
 		.taxonomy-description {
-			font-family: $font_header;
-		}";
+			font-family: ' . wp_kses( $font_header, null ) . ';
+		}';
 
-		$editor_css_blocks .= "
+		$editor_css_blocks .= '
 		.block-editor-block-list__layout .block-editor-block-list__block blockquote,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
-			font-family: $font_header;
+			font-family: ' . wp_kses( $font_header, null ) . ';
 		}
-		";
+		';
 	}
+
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.nav1 ul li,
