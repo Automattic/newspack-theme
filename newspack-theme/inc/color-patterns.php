@@ -496,7 +496,7 @@ function newspack_custom_colors_css() {
 	if ( newspack_is_active_style_pack( 'default', 'style-3', 'style-4' ) ) {
 		$editor_css .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a {
-				color: ' . esc_html( ewspack_color_with_contrast( $primary_color ) ) . ';
+				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 			}
 		';
 	}
