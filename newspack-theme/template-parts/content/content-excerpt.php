@@ -15,7 +15,7 @@
 
 	<div class="entry-container">
 		<?php
-		if ( ! is_page() && ! is_archive() ) :
+		if ( 'page' !== get_post_type() && ! is_archive() ) :
 			newspack_categories();
 		endif;
 		?>
@@ -23,7 +23,7 @@
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</header><!-- .entry-header -->
 
-		<?php if ( ! is_page() ) : ?>
+		<?php if ( 'page' !== get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php newspack_posted_by(); ?>
 				<?php newspack_posted_on(); ?>
