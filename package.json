@@ -85,6 +85,6 @@
     "lint:scss:staged": "stylelint --syntax scss",
     "format:scss": "prettier --write \"**/*.scss\"",
     "start": "npm run dev",
-    "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store"
+    "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store"
   }
 }

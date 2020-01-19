@@ -1,0 +1,217 @@
+/*!
+Newspack Theme Editor Styles - Style Pack 3
+*/
+
+/** === Includes === */
+
+@import 'variables-style/variables-style';
+@import '../../newspack-theme/sass/style-editor-base';
+
+.accent-header,
+.article-section-title {
+	color: $color__primary;
+	font-size: $font__size-xs;
+	margin: 0 0 #{1.5 * $size__spacing-unit};
+
+	&::before {
+		background-color: $color__primary;
+		content: '';
+		display: block;
+		height: 5px;
+		margin: 0 0 $size__spacing-unit;
+		width: 32px;
+	}
+}
+
+.wp-block-newspack-blocks-homepage-articles article .entry-meta,
+.entry-meta {
+	font-size: $font__size-xs;
+}
+
+.wp-block-paragraph {
+	&.has-drop-cap:not( :focus )::first-letter {
+		font-family: $font__heading;
+		font-weight: bold;
+	}
+}
+
+.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	.post-has-image
+	.entry-title {
+	background-color: $color__background-body;
+	margin-top: -1.75em;
+	padding: 0.5em 0.25em 0 0;
+	position: relative;
+	width: 85%;
+	z-index: 1;
+}
+
+.wp-block-newspack-blocks-homepage-articles figcaption::after {
+	display: none;
+}
+
+.wp-block-newspack-blocks-homepage-articles.is-style-borders article {
+	border-bottom-style: dotted;
+	border-bottom-color: $color__text-main;
+}
+
+.wp-block-cover,
+.wp-block-group {
+	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+		.post-has-image
+		.entry-title {
+		background-color: transparent;
+		margin-top: 0;
+		padding: 0;
+		width: auto;
+	}
+}
+
+.wp-block[data-type='core/pullquote'] {
+	.wp-block-pullquote {
+		border-width: 0;
+		position: relative;
+
+		&:not( .is-style-solid-color ) {
+			blockquote {
+				padding-left: #{2 * $size__spacing-unit};
+			}
+
+			&::before {
+				border-top: 8px solid;
+				border-left: 8px solid;
+				border-color: inherit;
+				content: '';
+				display: block;
+				height: 40px;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 40px;
+			}
+		}
+	}
+
+	blockquote
+		> .block-library-pullquote__content
+		.editor-rich-text__tinymce[data-is-empty='true']::before,
+	blockquote > .editor-rich-text p,
+	p {
+		font-size: $font__size-lg;
+		font-style: normal;
+		font-weight: bold;
+
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
+	.wp-block-pullquote__citation {
+		font-weight: bold;
+		opacity: 0.6;
+		text-transform: uppercase;
+	}
+
+	&[data-align='left'],
+	&[data-align='right'] {
+		@include media( tablet ) {
+			.wp-block-pullquote blockquote p {
+				font-size: $font__size-lg;
+			}
+		}
+	}
+
+	&[data-align='left']
+		.editor-block-list__block-edit
+		.wp-block-pullquote:not( .is-style-solid-color ),
+	&[data-align='right']
+		.editor-block-list__block-edit
+		.wp-block-pullquote:not( .is-style-solid-color ) {
+		padding-top: $size__spacing-unit;
+
+		blockquote {
+			padding-left: 0;
+		}
+
+		&::before {
+			border-left: 0;
+		}
+	}
+}
+
+.wp-block-audio,
+.wp-block-video,
+.wp-block-image {
+	figcaption {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: left;
+	}
+}
+
+figcaption,
+.wp-caption-text {
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: left;
+
+	&::after {
+		background-color: $color__primary;
+		content: '';
+		display: block;
+		height: 5px;
+		margin-top: #{1.25 * $size__spacing-unit};
+		width: 32px;
+	}
+}
+
+.wp-block-gallery {
+	figcaption.block-editor-rich-text__editable {
+		padding-left: 10px;
+		text-align: center;
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.wp-block-separator:not( .is-style-dots ),
+hr {
+	border-top: 1px dotted $color__text-main;
+}
+
+.wp-block-columns.is-style-borders {
+	> .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
+		border-bottom: 1px dotted $color__text-main;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		@include media( mobile ) {
+			border-bottom: 0;
+
+			&::after {
+				border-right: 1px dotted transparent;
+			}
+
+			&:nth-child( odd )::after {
+				border-color: $color__text-main;
+			}
+		}
+
+		@include media( tablet ) {
+			&::after {
+				border-color: $color__text-main;
+			}
+		}
+	}
+}
+
+// Jetpack Blocks
+.jp-relatedposts-i2 {
+	border-top: 1px dotted $color__text-main;
+	border-bottom: 1px dotted $color__text-main;
+}
