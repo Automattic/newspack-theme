@@ -39,7 +39,7 @@ function newspack_scott_fonts_url() {
 	$fira_sans_condensed = esc_html_x( 'on', 'Fira Sans Condensed font: on or off', 'newspack-scott' );
 	if ( 'off' !== $fira_sans_condensed ) {
 		$font_families   = array();
-		$font_families[] = 'Fira Sans Condensed:400,400i,600,600';
+		$font_families[] = 'Fira Sans Condensed:400,400i,600,600i';
 
 		$query_args = array(
 			'family'  => urlencode( implode( '|', $font_families ) ),
