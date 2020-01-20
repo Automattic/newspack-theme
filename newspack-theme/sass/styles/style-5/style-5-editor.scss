@@ -10,19 +10,13 @@
 }
 
 /* Columns */
-.wp-block-columns {
-	&.is-style-borders {
-		> .editor-inner-blocks > .editor-block-list__layout > [data-type='core/column'] {
-			border-color: currentColor;
+.wp-block .wp-block-columns.is-style-borders {
+	[data-type="core/column"] {
+		border-color: currentColor;
 
-			&::after {
+		@include media( mobile ) {
+			&:after {
 				border-color: currentColor;
-			}
-
-			@include media( mobile ) {
-				&:nth-child( odd )::after {
-					border-color: currentColor;
-				}
 			}
 		}
 	}
