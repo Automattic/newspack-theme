@@ -1,0 +1,41 @@
+version: 2.1
+
+commands:
+  checkout_code:
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout_code
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project
+
+  lint:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout_code
+      - run:
+          name: Run Linter
+          command: npm run lint
+
+## Workflows
+workflows:
+  version: 2
+  quality_assurance:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
