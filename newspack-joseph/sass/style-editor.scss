@@ -17,11 +17,11 @@ Newspack Sacha Editor Styles
 
 /* Columns */
 .wp-block .wp-block-columns.is-style-borders {
-	[data-type="core/column"] {
+	[data-type='core/column'] {
 		border-color: currentColor;
 
 		@include media( mobile ) {
-			&:after {
+			&::after {
 				border-color: currentColor;
 			}
 		}

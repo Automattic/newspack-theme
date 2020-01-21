@@ -4,8 +4,8 @@ Newspack Katharine Editor Styles
 
 /** === Includes === */
 
-@import "variables-style/variables-style";
-@import "../../newspack-theme/sass/style-editor-base";
+@import 'variables-style/variables-style';
+@import '../../newspack-theme/sass/style-editor-base';
 
 .accent-header,
 .article-section-title {
@@ -183,7 +183,7 @@ hr {
 }
 
 .wp-block .wp-block-columns.is-style-borders {
-	[data-type="core/column"] {
+	[data-type='core/column'] {
 		border-bottom: 1px dotted $color__text-main;
 
 		&:last-child {
