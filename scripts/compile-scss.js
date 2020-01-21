@@ -25,6 +25,10 @@ if ( ! fs.existsSync( './newspack-katharine/styles' ) ) {
 	fs.mkdirSync( './newspack-katharine/styles' );
 }
 
+if ( ! fs.existsSync( './newspack-joseph/styles' ) ) {
+	fs.mkdirSync( './newspack-joseph/styles' );
+}
+
 /**
  * Save a file do disk.
  */
@@ -184,6 +188,16 @@ const SASS_STYLESHEETS = [
 	{
 		inFile: 'newspack-katharine/sass/style-editor.scss',
 		outFile: 'newspack-katharine/styles/style-editor.css',
+	},
+	// Newspack Joseph Child theme
+	{
+		inFile: 'newspack-joseph/sass/style.scss',
+		outFile: 'newspack-joseph/style.css',
+		withRTL: true,
+	},
+	{
+		inFile: 'newspack-joseph/sass/style-editor.scss',
+		outFile: 'newspack-joseph/styles/style-editor.css',
 	},
 ];
 
