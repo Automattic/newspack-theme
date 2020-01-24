@@ -263,11 +263,8 @@ cite {
 		}
 	}
 
-	&:not( .has-featured-image ),
-	&.has-large-featured-image {
-		.entry-header {
-			border-bottom: 0;
-		}
+	&:not( .has-large-featured-image ) .entry-header {
+		border-bottom: 0;
 	}
 }
 
