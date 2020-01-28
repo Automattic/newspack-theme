@@ -1,2 +1,13 @@
 // Pull in CSS from child theme:
 @import '../../../../newspack-scott/sass/style';
+
+body {
+	#content {
+		transition: opacity 200ms;
+	}
+	&.newspack-app-shell-transitioning {
+		#content {
+			opacity: 0;
+		}
+	}
+}
