@@ -1,0 +1,17 @@
+{
+	"translation-revision-date": "2020-01-29 15:27-0800",
+	"generator": "WP-CLI/2.4.0",
+	"source": "js/src/extend-featured-image-editor.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": { "domain": "messages", "lang": "de_DE", "plural-forms": "nplurals=2; plural=(n != 1);" },
+			"Small": [ "Klein" ],
+			"Large": [ "Gro\u00df" ],
+			"Behind article title": [ "" ],
+			"Beside article title": [ "" ],
+			"Hidden": [ "Verborgen" ],
+			"Default (set in Customizer)": [ "" ]
+		}
+	}
+}
