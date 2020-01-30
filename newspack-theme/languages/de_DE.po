@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-20T20:01:33+00:00\n"
-"PO-Revision-Date: 2020-01-30 15:11-0800\n"
+"PO-Revision-Date: 2020-01-30 15:35-0800\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Domain: newspack\n"
 "Last-Translator: \n"
@@ -680,7 +680,7 @@ msgstr "Schließen"
 #. translators: %s is the current author's name.
 #: template-parts/post/author-bio.php:63 template-parts/post/author-bio.php:117
 msgid "More by %s"
-msgstr ""
+msgstr "Mehr von %s"
 
 #. translators: %1(X comments)$s
 #: template-parts/post/discussion-meta.php:14
