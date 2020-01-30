@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-20T20:01:33+00:00\n"
-"PO-Revision-Date: 2020-01-29 15:27-0800\n"
+"PO-Revision-Date: 2020-01-30 15:11-0800\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Domain: newspack\n"
 "Last-Translator: \n"
@@ -39,7 +39,7 @@ msgstr "Oje! Die Seite wurde nicht gefunden."
 #: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchtest Du danach "
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchten Sie danach "
 "suchen?"
 
 #. translators: %s: comment author link
@@ -62,11 +62,11 @@ msgstr "Ihr Kommentar wartet auf Moderation."
 
 #: comments.php:31
 msgid "Join the Conversation"
-msgstr "Nimm an der Konversation teil"
+msgstr "Nehmen Sie an der Konversation teil"
 
 #: comments.php:33 comments.php:101
 msgid "Leave a comment"
-msgstr "Hinterlasse einen Kommentar"
+msgstr "Hinterlassen Sie bitte einen Kommentar"
 
 #. translators: %s: post title
 #: comments.php:38
