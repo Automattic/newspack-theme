@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-12-20T20:01:33+00:00\n"
-"PO-Revision-Date: 2020-01-30 15:35-0800\n"
+"PO-Revision-Date: 2020-01-30 15:55-0800\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Domain: newspack\n"
 "Last-Translator: \n"
@@ -593,11 +593,11 @@ msgstr "Ältere Beiträge"
 
 #: inc/template-tags.php:335
 msgid "Top Menu"
-msgstr "Top Menü"
+msgstr "Hauptmenü"
 
 #: inc/woocommerce.php:93
 msgid "Payment info"
-msgstr "Zahlungs Info"
+msgstr "Zahlungsinformationen"
 
 #: inc/woocommerce.php:111
 msgid "Create an account"
