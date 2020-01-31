@@ -290,6 +290,21 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_comments_template' ) ) {
+
+	/**
+	 * Output the comment template.
+	 */
+	function newspack_comments_template() {
+		// Add Coral AMP compatibility because they integrated with AMP for WP plugin instead of the official AMP plugin.
+		if ( newspack_is_amp() && function_exists( 'coral_talk_comments_amp_template' ) ) {
+			coral_talk_comments_amp_template();
+		} else {
+			comments_template();
+		}
+	}
+}
+
 if ( ! function_exists( 'newspack_the_posts_navigation' ) ) :
 	/**
 	 * Documentation for function.
