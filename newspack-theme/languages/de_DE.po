@@ -1,0 +1,714 @@
+# Copyright (C) 2019 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Newspack 1.0.0-alpha.24\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-12-20T20:01:33+00:00\n"
+"PO-Revision-Date: 2020-01-30 15:55-0800\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Domain: newspack\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#. Theme Name of the theme
+msgid "Newspack"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://github.com/Automattic/newspack-theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Author URI of the theme
+msgid "https://newspack.blog"
+msgstr ""
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oje! Die Seite wurde nicht gefunden."
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Wie es aussieht, wurde an dieser Stelle nichts gefunden. Möchten Sie danach "
+"suchen?"
+
+#. translators: %s: comment author link
+#: classes/class-newspack-walker-comment.php:66
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr "%s <span class=\"Screen-Reader-Text sagt\">sagt:</span>"
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-newspack-walker-comment.php:86
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: classes/class-newspack-walker-comment.php:94
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: classes/class-newspack-walker-comment.php:99
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf Moderation."
+
+#: comments.php:31
+msgid "Join the Conversation"
+msgstr "Nehmen Sie an der Konversation teil"
+
+#: comments.php:33 comments.php:101
+msgid "Leave a comment"
+msgstr "Hinterlassen Sie bitte einen Kommentar"
+
+#. translators: %s: post title
+#: comments.php:38
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr "Eine Antwort auf &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:42
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s Antwort auf &ldquo;%2$s&ldquo;"
+msgstr[1] "%1$s Antworten auf &ldquo;%2$s&ldquo;"
+
+#: comments.php:90
+msgid "Comments"
+msgstr "Kommentare"
+
+#: comments.php:93
+msgid "Previous"
+msgstr "Zurück"
+
+#: comments.php:94
+msgid "Next"
+msgstr "Weiter"
+
+#: comments.php:116
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: footer.php:33
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#. translators: %s: WordPress.
+#: footer.php:36
+msgid "Proudly powered by %s."
+msgstr "Unterstützt von %s."
+
+#: functions.php:72
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: functions.php:73 inc/template-tags.php:358
+msgid "Secondary Menu"
+msgstr "Sekundäres Menü"
+
+#: functions.php:74 inc/template-tags.php:382
+msgid "Tertiary Menu"
+msgstr "Tertiäres Menü"
+
+#: functions.php:75
+msgid "Topic Highlight Menu"
+msgstr ""
+
+#: functions.php:76 inc/template-tags.php:421 inc/template-tags.php:435
+msgid "Social Links Menu"
+msgstr "Social Media Menü"
+
+#: functions.php:129 inc/customizer.php:324
+#: js/src/extend-featured-image-editor.js:21
+msgid "Small"
+msgstr "Klein"
+
+#: functions.php:130
+msgid "S"
+msgstr "S"
+
+#: functions.php:135
+msgid "Normal"
+msgstr "Normal"
+
+#: functions.php:136
+msgid "M"
+msgstr "M"
+
+#: functions.php:141 inc/customizer.php:323
+#: js/src/extend-featured-image-editor.js:20
+msgid "Large"
+msgstr "Groß"
+
+#: functions.php:142
+msgid "L"
+msgstr "L"
+
+#: functions.php:147
+msgid "Huge"
+msgstr "Riesig"
+
+#: functions.php:148
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:164
+msgid "Primary"
+msgstr "Primär"
+
+#: functions.php:171
+msgid "Primary Variation"
+msgstr ""
+
+#: functions.php:178
+msgid "Secondary"
+msgstr "Sekundär"
+
+#: functions.php:185
+msgid "Secondary Variation"
+msgstr ""
+
+#: functions.php:192
+msgid "Dark Gray"
+msgstr "Dunkelgrau"
+
+#: functions.php:197
+msgid "Medium Gray"
+msgstr "Mittel-Grau"
+
+#: functions.php:202
+msgid "Light Gray"
+msgstr "Hellgrau"
+
+#: functions.php:207
+msgid "White"
+msgstr "Weiß"
+
+#: functions.php:240
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: functions.php:242
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Widgets hier hinzufügen, um diese in der Sidebar auszugeben."
+
+#: functions.php:252 template-parts/footer/footer-widgets.php:10
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:254
+msgid "Add widgets here to appear in your footer."
+msgstr "Füge Widgets hinzu, die in der Fußzeile erscheinen."
+
+#: functions.php:264
+msgid "Above Copyright"
+msgstr ""
+
+#: functions.php:266
+msgid ""
+"Add widgets here to appear below the footer, above the copyright information."
+msgstr ""
+
+#: functions.php:276
+msgid "Article above content"
+msgstr ""
+
+#: functions.php:278
+msgid "Add widgets here to appear above article content."
+msgstr ""
+
+#: functions.php:288
+msgid "Article below content"
+msgstr ""
+
+#: functions.php:290
+msgid "Add widgets here to appear below article content."
+msgstr ""
+
+#: functions.php:332 template-parts/header/header-search.php:11
+#: template-parts/header/header-search.php:12
+msgid "Open Search"
+msgstr "Suche öffnen"
+
+#: functions.php:333 template-parts/header/header-search.php:11
+msgid "Close Search"
+msgstr "Suche schließen"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: header.php:152
+msgid "Menu"
+msgstr "Menü"
+
+#: header.php:192
+msgid "Highlight Menu"
+msgstr ""
+
+#: image.php:46 template-parts/content/content-page.php:21
+#: template-parts/content/content-single.php:32
+#: template-parts/content/content.php:38
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: image.php:50
+msgid "Page"
+msgstr "Seite"
+
+#: image.php:64
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Volle Größe"
+
+#: image.php:81
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">"
+"%title</span>"
+msgstr ""
+"<span class=\"meta-nav\">veröffentlicht in</span><br><span class=\"post-title"
+"\" >%titel</span>"
+
+#. translators: %s: WordPress version used by current site.
+#: inc/back-compat.php:38 inc/back-compat.php:52 inc/back-compat.php:72
+msgid ""
+"Newspack Theme requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:17
+msgid "Display Site Title"
+msgstr "Titel der Website anzeigen"
+
+#: inc/customizer.php:42
+msgid "Header Settings"
+msgstr "Header Einstellungen"
+
+#: inc/customizer.php:58
+msgid "Center Logo"
+msgstr "Center Logo"
+
+#: inc/customizer.php:59
+msgid "Check to center the logo in the header."
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Solid Background"
+msgstr "Solider Hintergrund"
+
+#: inc/customizer.php:77
+msgid "Check to use the primary color as the header background."
+msgstr ""
+
+#: inc/customizer.php:94
+msgid "Short Header"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Displays header as a shorter, simpler version."
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "Primary Color"
+msgstr "Primäre Farbe"
+
+#: inc/customizer.php:117
+msgctxt "primary color"
+msgid "Default"
+msgstr "Standard"
+
+#: inc/customizer.php:118
+msgctxt "primary color"
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: inc/customizer.php:139
+msgid "Apply a primary custom color."
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "Apply a secondary custom color."
+msgstr ""
+
+#: inc/customizer.php:178
+msgid "Display Tagline"
+msgstr "Untertitel anzeigen"
+
+#: inc/customizer.php:197
+msgid "Hide Homepage Title"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid ""
+"Check to hide the page title, if your homepage is set to display a static "
+"page."
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "Footer logo"
+msgstr "Logo Fußzeile"
+
+#: inc/customizer.php:221
+msgid "Optional alternative logo to be displayed in the footer."
+msgstr ""
+
+#: inc/customizer.php:239
+msgid "Author Bio Settings"
+msgstr ""
+
+#: inc/customizer.php:256
+msgid "Display Author Bio"
+msgstr "Autor-Bio anzeigen"
+
+#: inc/customizer.php:257
+msgid "Display Author Bio under individual posts."
+msgstr ""
+
+#: inc/customizer.php:275
+msgid "Display Author Email"
+msgstr ""
+
+#: inc/customizer.php:276
+msgid "Display Author email with bio on individual posts."
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "Author Bio Length (in characters)"
+msgstr ""
+
+#: inc/customizer.php:294
+msgid ""
+"Truncates the author bio on single posts to this approximate character "
+"length, but without breaking a word. The full bio appears on the author "
+"archive page."
+msgstr ""
+
+#: inc/customizer.php:305
+msgid "Featured Image Settings"
+msgstr "Beitragsbild-Einstellungen"
+
+#: inc/customizer.php:321
+msgid "Featured Image Default Position"
+msgstr ""
+
+#: inc/customizer.php:325 js/src/extend-featured-image-editor.js:22
+msgid "Behind article title"
+msgstr ""
+
+#: inc/customizer.php:326 js/src/extend-featured-image-editor.js:23
+msgid "Beside article title"
+msgstr ""
+
+#: inc/customizer.php:327 js/src/extend-featured-image-editor.js:24
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: inc/customizer.php:347
+msgid "Typography"
+msgstr "Typografie"
+
+#: inc/customizer.php:394
+msgid "Font Provider Import Code or URL"
+msgstr ""
+
+#: inc/customizer.php:404
+msgid "Secondary Font Provider Import Code or URL"
+msgstr ""
+
+#: inc/customizer.php:413
+msgid "Header Font"
+msgstr "Schriftart für Überschrift"
+
+#: inc/customizer.php:429
+msgid "Header Font Fallback Stack"
+msgstr ""
+
+#: inc/customizer.php:439
+msgid "Body Font"
+msgstr "Body Schriftart"
+
+#: inc/customizer.php:448
+msgid "Body Font Fallback Stack"
+msgstr ""
+
+#: inc/customizer.php:467
+msgid "Use all-caps for accent text."
+msgstr ""
+
+#: inc/logo-resizer.php:28
+msgid "Logo Size"
+msgstr "Logo Größe"
+
+#: inc/style-packs.php:19
+msgid "Default Style"
+msgstr "Standard-Stil"
+
+#: inc/style-packs.php:20
+msgid "Style 1"
+msgstr "Stil 1"
+
+#: inc/style-packs.php:21
+msgid "Style 2"
+msgstr "Stil 2"
+
+#: inc/style-packs.php:22
+msgid "Style 3"
+msgstr "Stil 3"
+
+#: inc/style-packs.php:23
+msgid "Style 4"
+msgstr "Stil 4"
+
+#: inc/style-packs.php:24
+msgid "Style 5"
+msgstr "Stil 5"
+
+#: inc/style-packs.php:28
+msgid "This is the default style."
+msgstr ""
+
+#: inc/style-packs.php:29
+msgid "The description for style 1."
+msgstr ""
+
+#: inc/style-packs.php:30
+msgid "The description for style 2."
+msgstr ""
+
+#: inc/style-packs.php:31
+msgid "The description for style 3."
+msgstr ""
+
+#: inc/style-packs.php:32
+msgid "The description for style 4."
+msgstr ""
+
+#: inc/style-packs.php:33
+msgid "The description for style 5."
+msgstr ""
+
+#: inc/template-functions.php:197
+msgid "Category: "
+msgstr "Kategorie: "
+
+#: inc/template-functions.php:199
+msgid "Tag: "
+msgstr "Schlagwort: "
+
+#: inc/template-functions.php:201
+msgid "Author Archives: "
+msgstr "Autoren-Archive: "
+
+#: inc/template-functions.php:203
+msgid "Yearly Archives: "
+msgstr "Jahresarchive: "
+
+#: inc/template-functions.php:203
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/template-functions.php:205
+msgid "Monthly Archives: "
+msgstr "Monatsarchive: "
+
+#: inc/template-functions.php:205
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-functions.php:207
+msgid "Daily Archives: "
+msgstr "Tagesarchive: "
+
+#: inc/template-functions.php:209
+msgid "Post Type Archives: "
+msgstr "Post-Typ-Archiv "
+
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:213
+msgid "%s Archives:"
+msgstr ""
+
+#: inc/template-functions.php:215
+msgid "Archives:"
+msgstr "Archive:"
+
+#: inc/template-tags.php:86 inc/template-tags.php:117
+msgid "by"
+msgstr "von"
+
+#. translators: separates last two author names; needs a space on either side.
+#: inc/template-tags.php:93
+msgid " and "
+msgstr " und "
+
+#. translators: separates all but the last two author names; needs a space at the end.
+#: inc/template-tags.php:96
+msgid ", "
+msgstr ", "
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:136
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Schreiben Sie einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
+
+#. translators: used between list items; followed by a space.
+#: inc/template-tags.php:164 inc/template-tags.php:187
+msgid ","
+msgstr ","
+
+#: inc/template-tags.php:171
+msgid "Posted in"
+msgstr "Veröffentlicht in"
+
+#: inc/template-tags.php:192
+msgid "Tagged:"
+msgstr "Markiert:"
+
+#. translators: %s Name of current post only visible to screen readers.
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:203 template-parts/content/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Bearbeiten <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:304
+msgid "Newer posts"
+msgstr "Neuere Beiträge"
+
+#: inc/template-tags.php:308
+msgid "Older posts"
+msgstr "Ältere Beiträge"
+
+#: inc/template-tags.php:335
+msgid "Top Menu"
+msgstr "Hauptmenü"
+
+#: inc/woocommerce.php:93
+msgid "Payment info"
+msgstr "Zahlungsinformationen"
+
+#: inc/woocommerce.php:111
+msgid "Create an account"
+msgstr "Konto erstellen"
+
+#: offline.php:27
+msgid "Offline"
+msgstr "Offline"
+
+#: search.php:17
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche &hellip;"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "Suche"
+
+#. Template Name of the theme
+msgid "One column"
+msgstr "Eine Spalte"
+
+#. Template Name of the theme
+msgid "One column wide"
+msgstr ""
+
+#: template-parts/content/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Sind Sie bereit Ihren ersten Beitrag zu veröffentlichen?  <a href=\"%1$s"
+"\">Starten Sie hier</a>."
+
+#: template-parts/content/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Es tut uns leid. Ihre Sucher ergab keinen Treffer, Bitte versuchen Sie es "
+"mit einem anderen Begriff."
+
+#: template-parts/content/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Es scheint, dass wir nicht finden können, was du suchst. Vielleicht kann die "
+"Suche helfen."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-single.php:19
+#: template-parts/content/content.php:25
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Weiterlesen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/footer/below-footer-widgets.php:9
+msgid "Below Footer"
+msgstr ""
+
+#: template-parts/header/mobile-sidebar-fallback.php:13
+#: template-parts/header/mobile-sidebar.php:13
+msgid "Close"
+msgstr "Schließen"
+
+#. translators: %s is the current author's name.
+#: template-parts/post/author-bio.php:63 template-parts/post/author-bio.php:117
+msgid "More by %s"
+msgstr "Mehr von %s"
+
+#. translators: %1(X comments)$s
+#: template-parts/post/discussion-meta.php:14
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] "%d Kommentar"
+msgstr[1] "%d Kommentare"
+
+#: template-parts/post/discussion-meta.php:21
+msgid "No comments"
+msgstr "Keine Kommentare"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Bitte melden Sie sich an, um die Bestellung abzuschließen."
+
+#: woocommerce/checkout/form-checkout.php:35
+msgid "Order details"
+msgstr "Bestelldetails"
+
+#: js/src/extend-featured-image-editor.js:19
+msgid "Default (set in Customizer)"
+msgstr ""
+
+#: js/src/post-subtitle/index.js:31
+msgid "Article Subtitle"
+msgstr ""
+
+#: js/src/post-subtitle/index.js:34
+msgid "Set a Subtitle for the Article"
+msgstr ""
