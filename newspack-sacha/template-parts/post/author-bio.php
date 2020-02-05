@@ -19,20 +19,21 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 
 			if ( 'guest-author' === get_post_type( $author->ID ) ) {
 				if ( get_post_thumbnail_id( $author->ID ) ) {
-					$author_avatar = coauthors_get_avatar( $author, 80 );
+					$author_avatar = coauthors_get_avatar( $author, 160 );
 				} else {
 					// If there is no avatar, force it to return the current fallback image.
 					$author_avatar = get_avatar( ' ' );
 				}
 			} else {
-				$author_avatar = coauthors_get_avatar( $author, 80 );
+				$author_avatar = coauthors_get_avatar( $author, 160 );
 			}
+			$author_avatar = preg_replace('/(<img\b[^><]*)>/i', '$1 object-fit="cover">', $author_avatar);
 			?>
 
 			<div class="author-bio">
 				<div class="author-bio-text">
 					<div class="author-bio-header">
-						<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
+						<?php echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>'; ?>
 
 						<div>
 							<h2 class="accent-header">
@@ -69,10 +70,10 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 	<div class="author-bio-text">
 		<div class="author-bio-header">
 			<?php
-				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
+				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 160, '', '', array( 'object-fit' => 'cover' ) );
 				if ( $author_avatar ) {
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo $author_avatar;
+					echo '<span class="author-avatar">' . $author_avatar . '</span>';
 				}
 			?>
 
