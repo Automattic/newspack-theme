@@ -14,7 +14,7 @@
 		clear: both;
 	}
 
-	.author-avatar {
+	.entry-meta .author-avatar {
 		display: none;
 	}
 
@@ -89,7 +89,7 @@
 		display: flex;
 		justify-content: flex-start;
 
-		.avatar {
+		.author-avatar {
 			flex-shrink: 0;
 			height: 30px;
 			margin-right: $size__spacing-unit;
@@ -97,14 +97,14 @@
 		}
 
 		@include media( mobile ) {
-			.avatar {
+			.author-avatar {
 				height: 80px;
 				width: 80px;
 			}
 		}
 
 		@include media( tablet ) {
-			.avatar {
+			.author-avatar {
 				height: 120px;
 				width: 120px;
 			}

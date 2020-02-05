@@ -290,7 +290,7 @@ body.page {
 		}
 	}
 
-	.avatar {
+	.author-avatar {
 		height: #{1.75 * $size__spacing-unit};
 		width: #{1.75 * $size__spacing-unit};
 
@@ -362,7 +362,7 @@ body.page {
 	display: flex;
 	margin: calc( 2 * #{$size__spacing-unit} ) auto $size__spacing-unit;
 
-	.avatar {
+	.author-avatar {
 		height: 60px;
 		margin-right: $size__spacing-unit;
 		width: 60px;

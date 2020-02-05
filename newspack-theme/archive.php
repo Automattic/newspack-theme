@@ -32,13 +32,15 @@ get_header();
 						} else {
 							$author_avatar = coauthors_get_avatar( $queried, 120 );
 						}
+						$author_avatar = preg_replace( '/(<img\b[^><]*)>/i', '$1 object-fit="cover">', $author_avatar );
+
 					} else {
 						$author_id     = get_query_var( 'author' );
-						$author_avatar = get_avatar( $author_id, 120 );
+						$author_avatar = get_avatar( $author_id, 120, '', '', array( 'object-fit' => 'cover' ) );
 					}
 
 					if ( $author_avatar ) {
-						echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
+						echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>';
 					}
 				}
 			?>

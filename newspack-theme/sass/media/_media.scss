@@ -17,12 +17,24 @@ object {
 	display: inline-block;
 }
 
-.avatar {
+.author-avatar .avatar {
+	height: auto;
+	left: 50%;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translate( -50%, -50% );
+	width: auto;
+	object-fit: cover;
+}
+
+.author-avatar {
 	border-radius: 100%;
-	display: block;
 	height: calc( 2.25 * #{$size__spacing-unit} );
-	min-height: inherit;
+	position: relative;
 	width: calc( 2.25 * #{$size__spacing-unit} );
+	overflow: hidden;
 }
 
 svg {

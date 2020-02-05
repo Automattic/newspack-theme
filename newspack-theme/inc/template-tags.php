@@ -78,6 +78,8 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 					$author_avatar = coauthors_get_avatar( $author, 80 );
 				}
 
+				$author_avatar = preg_replace( '/(<img\b[^><]*)>/i', '$1 object-fit="cover">', $author_avatar );
+
 				echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>';
 			}
 			?>
@@ -113,7 +115,7 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 			printf(
 				/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
 				'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
-				get_avatar( get_the_author_meta( 'ID' ) ),
+				get_avatar( get_the_author_meta( 'ID' ), 96, '', '', array( 'object-fit' => 'cover' ) ),
 				esc_html__( 'by', 'newspack' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )

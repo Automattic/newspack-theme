@@ -65,6 +65,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_image_size( 'newspack-featured-image', 1200, 9999 );
 		add_image_size( 'newspack-archive-image', 800, 600, true );
 		add_image_size( 'newspack-footer-logo', 400, 9999, true );
+		add_image_size( 'newspack-avatar', 200, 200, true );
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
@@ -658,13 +659,14 @@ function newspack_truncate_text( $content, $length, $after = '...' ) {
 function newspack_sanitize_avatars() {
 	$avatar_args = array(
 		'img' => array(
-			'class'  => true,
-			'src'    => true,
-			'alt'    => true,
-			'width'  => true,
-			'height' => true,
-			'data-*' => true,
-			'srcset' => true,
+			'class'      => true,
+			'src'        => true,
+			'alt'        => true,
+			'width'      => true,
+			'height'     => true,
+			'data-*'     => true,
+			'srcset'     => true,
+			'object-fit' => true,
 		),
 		'noscript' => array(),
 	);
