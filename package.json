@@ -9,6 +9,10 @@
   "devDependencies": {
     "@automattic/calypso-build": "^5.1.0",
     "@babel/core": "^7.4.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
     "@wordpress/blocks": "^6.2.0",
     "@wordpress/browserslist-config": "^2.2.2",
     "@wordpress/components": "^7.3.1",
@@ -23,6 +27,8 @@
     "autoprefixer": "^9.1.5",
     "chokidar-cli": "^1.2.1",
     "classnames": "^2.2.6",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^6.8.0",
@@ -45,6 +51,8 @@
     "prettier": "git+https://github.com/Automattic/wp-prettier.git#wp-prettier-1.18.2",
     "react-router-dom": "^5.0.1",
     "rtlcss": "^2.4.0",
+    "semantic-release": "^17.0.2",
+    "semantic-release-version-bump": "^1.1.0",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-wordpress": "^16.0.0",
@@ -72,6 +80,8 @@
     "*.scss": "npm run lint:scss:staged"
   },
   "scripts": {
+    "cm": "git-cz",
+    "semantic-release": "semantic-release",
     "build:js": "webpack",
     "build:scss": "node scripts/compile-scss.js",
     "build": "run-p \"build:*\"",
@@ -86,5 +96,10 @@
     "format:scss": "prettier --write \"**/*.scss\"",
     "start": "npm run dev",
     "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
