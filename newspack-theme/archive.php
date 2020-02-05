@@ -24,19 +24,19 @@ get_header();
 						if ( 'guest-author' === get_post_type( $queried->{ 'ID' } ) ) {
 							// If yes, make sure the author actually has an avatar set; otherwise, coauthors_get_avatar returns a featured image.
 							if ( get_post_thumbnail_id( $queried->{ 'ID' } ) ) {
-								$author_avatar = coauthors_get_avatar( $queried, 120 );
+								$author_avatar = coauthors_get_avatar( $queried, 180 );
 							} else {
 								// If there is no avatar, force it to return the current fallback image.
 								$author_avatar = get_avatar( ' ' );
 							}
 						} else {
-							$author_avatar = coauthors_get_avatar( $queried, 120 );
+							$author_avatar = coauthors_get_avatar( $queried, 180 );
 						}
 						$author_avatar = preg_replace( '/(<img\b[^><]*)>/i', '$1 object-fit="cover">', $author_avatar );
 
 					} else {
 						$author_id     = get_query_var( 'author' );
-						$author_avatar = get_avatar( $author_id, 120, '', '', array( 'object-fit' => 'cover' ) );
+						$author_avatar = get_avatar( $author_id, 180, '', '', array( 'object-fit' => 'cover' ) );
 					}
 
 					if ( $author_avatar ) {
