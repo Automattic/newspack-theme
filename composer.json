@@ -14,11 +14,17 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "brainmaestro/composer-git-hooks": "^2.6",
     "automattic/vipwpcs": "^2.0.0",
-    "xwp/wp-dev-lib": "^1.4.0",
+    "xwp/wp-dev-lib": "^1.5.0",
     "wptrt/wpthemereview": "*",
     "phpstan/phpstan-shim": "^0.11.12",
     "szepeviktor/phpstan-wordpress": "^0.2.0"
   },
+  "repositories": [
+    {
+      "url": "git@github.com:adekbadek/wp-dev-lib.git",
+      "type": "git"
+    }
+  ],
   "scripts": {
     "phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
     "lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
