@@ -52,7 +52,7 @@
     "react-router-dom": "^5.0.1",
     "rtlcss": "^2.4.0",
     "semantic-release": "^17.0.2",
-    "semantic-release-version-bump": "^1.1.0",
+    "semantic-release-version-bump": "^1.2.0",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-wordpress": "^16.0.0",
