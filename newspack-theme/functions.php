@@ -512,6 +512,26 @@ function newspack_front_page_template( $template ) {
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
 
 /**
+ * Override Jetpack Image Accelerator (Photon) downsizing of avatars. If an image has a square aspect ratio and the width is between 1-120px, assume it is an avatar and block downsizing.
+ * https://developer.jetpack.com/hooks/jetpack_photon_override_image_downsize/
+ *
+ * @param boolean $default The default value, generally false.
+ * @param array   $args Array of image details.
+ *
+ * @return boolean Should Photon be stopped from downsizing.
+ */
+function newspack_override_avatar_downsizing( $default, $args ) {
+	if ( is_array( $args['size'] ) && 2 === count( $args['size'] ) ) {
+		list( $width, $height ) = $args['size'];
+		if ( $width === $height && $width <= 120 & $width > 0 ) {
+			return true;
+		}
+	}
+	return $default;
+}
+add_filter( 'jetpack_photon_override_image_downsize', 'newspack_override_avatar_downsizing', 10, 2 );
+
+/**
  * Register meta fields:
  * - Featured Image position option
  * - Article Subtitle
