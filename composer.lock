@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f140c579eb1c507638534aef9dd5417",
+    "content-hash": "2a558c469d22adf865a666ed9b8a5da7",
     "packages": [
         {
             "name": "composer/installers",
@@ -127,6 +127,54 @@
                 "zikula"
             ],
             "time": "2019-08-12T15:00:31+00:00"
+        },
+        {
+            "name": "xwp/wp-dev-lib",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xwp/wp-dev-lib.git",
+                "reference": "3e3ced3fdc5c47bbb59cde2f693ce115f2865f82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xwp/wp-dev-lib/zipball/3e3ced3fdc5c47bbb59cde2f693ce115f2865f82",
+                "reference": "3e3ced3fdc5c47bbb59cde2f693ce115f2865f82",
+                "shasum": ""
+            },
+            "type": "library",
+            "scripts": {
+                "test": [
+                    "find ./scripts -name *.php -print0 | xargs -0 -n1 -P8 php -l",
+                    "shellcheck **/*.sh || true",
+                    "shellcheck --format json **/*.sh | grep --quiet --invert-match '\"level\":\"error\"'"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Weston Ruter",
+                    "email": "weston@xwp.co",
+                    "homepage": "https://weston.ruter.net"
+                },
+                {
+                    "name": "XWP",
+                    "email": "engage@xwp.co",
+                    "homepage": "https://xwp.co"
+                }
+            ],
+            "description": "Common code used during development of WordPress plugins and themes",
+            "homepage": "https://github.com/xwp/wp-dev-lib",
+            "keywords": [
+                "WordPress"
+            ],
+            "support": {
+                "issues": "https://github.com/xwp/wp-dev-lib/issues",
+                "source": "https://github.com/xwp/wp-dev-lib"
+            },
+            "time": "2020-01-17T09:26:20+00:00"
         }
     ],
     "packages-dev": [
@@ -1067,48 +1115,6 @@
                 "wordpress"
             ],
             "time": "2019-11-17T20:05:55+00:00"
-        },
-        {
-            "name": "xwp/wp-dev-lib",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:adekbadek/wp-dev-lib.git",
-                "reference": "0c5a18fbb47a83109ff493090b6f1cfb15bfdc09"
-            },
-            "type": "library",
-            "scripts": {
-                "test": [
-                    "find ./scripts -name *.php -print0 | xargs -0 -n1 -P8 php -l",
-                    "shellcheck **/*.sh || true",
-                    "shellcheck --format json **/*.sh | grep --quiet --invert-match '\"level\":\"error\"'"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Weston Ruter",
-                    "email": "weston@xwp.co",
-                    "homepage": "https://weston.ruter.net"
-                },
-                {
-                    "name": "XWP",
-                    "email": "engage@xwp.co",
-                    "homepage": "https://xwp.co"
-                }
-            ],
-            "description": "Common code used during development of WordPress plugins and themes",
-            "homepage": "https://github.com/xwp/wp-dev-lib",
-            "keywords": [
-                "WordPress"
-            ],
-            "support": {
-                "issues": "https://github.com/xwp/wp-dev-lib/issues",
-                "source": "https://github.com/xwp/wp-dev-lib"
-            },
-            "time": "2020-01-17T09:26:20+00:00"
         }
     ],
     "aliases": [],
