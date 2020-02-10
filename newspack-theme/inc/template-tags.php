@@ -369,8 +369,15 @@ function newspack_secondary_menu() {
 	if ( ! has_nav_menu( 'secondary-menu' ) ) {
 		return;
 	}
+
+	// Only set the AMP toolbar attributes if the secondary menu container exists in the header.
+	$toolbar_attributes = '';
+	if ( false === get_theme_mod( 'header_simplified', false ) ) {
+		$toolbar_attributes = 'toolbar-target="secondary-nav-contain" toolbar="(min-width: 767px)"';
+	}
+
 	?>
-	<nav toolbar="(min-width: 767px)" toolbar-target="secondary-nav-contain" class="secondary-menu nav2" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
+	<nav class="secondary-menu nav2" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
 		wp_nav_menu(
 			array(
@@ -432,8 +439,14 @@ function newspack_social_menu_header() {
 	if ( ! has_nav_menu( 'social' ) ) {
 		return;
 	}
+
+	// Only set a toolbar-target attributes if the social menu container exists in the header.
+	$toolbar_attributes = '';
+	if ( false === get_theme_mod( 'header_simplified', false ) ) {
+		$toolbar_attributes = 'toolbar="(min-width: 767px)" toolbar-target="social-nav-contain"';
+	}
 	?>
-	<nav toolbar="(min-width: 767px)" toolbar-target="social-nav-contain" class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
+	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php newspack_social_menu_settings(); ?>
 	</nav><!-- .social-navigation -->
 <?php
