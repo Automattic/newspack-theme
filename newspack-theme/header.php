@@ -21,13 +21,7 @@
 <?php do_action( 'wp_body_open' ); ?>
 <?php do_action( 'before_header' ); ?>
 
-<?php
-	if ( newspack_is_amp() ) {
-		get_template_part( 'template-parts/header/mobile', 'sidebar' );
-	} else {
-		get_template_part( 'template-parts/header/mobile', 'sidebar-fallback' );
-	}
-?>
+<?php get_template_part( 'template-parts/header/mobile', 'sidebar' ); ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
