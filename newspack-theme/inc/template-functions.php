@@ -167,6 +167,20 @@ function newspack_post_classes( $classes, $class, $post_id ) {
 add_filter( 'post_class', 'newspack_post_classes', 10, 3 );
 
 /**
+ * Gets the category and tag classes from the post.
+ */
+function newspack_get_category_tag_classes( $post_id ) {
+	$post_classes    = get_post_class( '', $post_id );
+	$cat_tag_classes = array();
+	foreach ( $post_classes as $post_class ) {
+		if ( 0 === strpos( $post_class, 'category-' ) || 0 === strpos( $post_class, 'tag-' ) ) {
+			$cat_tag_classes[] = $post_class;
+		}
+	}
+	return implode( ' ', $cat_tag_classes );
+}
+
+/**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
 function newspack_pingback_header() {
