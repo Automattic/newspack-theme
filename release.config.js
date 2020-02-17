@@ -15,7 +15,8 @@ module.exports = {
 		[
 			'semantic-release-version-bump',
 			{
-				files: [ 'newspack-*/sass/style.scss', 'newspack-*/style.css' ],
+				files: 'newspack-*/sass/style.scss',
+				callback: 'npm run release:archive',
 			},
 		],
 		{

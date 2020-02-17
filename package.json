@@ -52,7 +52,7 @@
     "react-router-dom": "^5.0.1",
     "rtlcss": "^2.4.0",
     "semantic-release": "^17.0.2",
-    "semantic-release-version-bump": "^1.2.0",
+    "semantic-release-version-bump": "^1.3.0",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-wordpress": "^16.0.0",
@@ -95,7 +95,8 @@
     "lint:scss:staged": "stylelint --syntax scss",
     "format:scss": "prettier --write \"**/*.scss\"",
     "start": "npm run dev",
-    "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store"
+    "release:archive": "run-p \"build\" && mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store",
+    "release": "npm run release:archive && npm run semantic-release"
   },
   "config": {
     "commitizen": {

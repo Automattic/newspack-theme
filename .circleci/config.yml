@@ -36,11 +36,8 @@ jobs:
     steps:
       - checkout_code
       - run:
-          name: Build release
-          command: npm run release:archive
-      - run:
           name: Release new version
-          command: npm run semantic-release
+          command: npm run release
 
 workflows:
   version: 2
