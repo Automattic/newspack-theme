@@ -266,7 +266,7 @@ function newspack_widgets_init() {
 			'description'   => __( 'Add widgets here to appear below the footer, above the copyright information.', 'newspack' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title screen-reader-text">',
 			'after_title'   => '</h2>',
 		)
 	);
