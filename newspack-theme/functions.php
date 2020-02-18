@@ -705,7 +705,7 @@ require get_template_directory() . '/classes/class-newspack-walker-comment.php';
 /**
  * Style pack class.
  */
-if ( ! is_child_theme() ) {
+if ( ! is_child_theme() && ! newspack_is_active_style_pack( 'default' ) ) {
 	require get_template_directory() . '/classes/class-newspack-style-packs-core.php';
 	require get_template_directory() . '/inc/style-packs.php';
 }
