@@ -667,6 +667,7 @@ body.page {
 
 .jp-relatedposts-i2,
 #jp-relatedposts.jp-relatedposts {
+	clear: both;
 	font-family: $font__heading;
 	.jp-relatedposts-headline {
 		font: bold $font__size-xs $font__heading;
