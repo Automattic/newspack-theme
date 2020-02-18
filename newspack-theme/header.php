@@ -18,6 +18,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php // TODO: Start remove with style pack code. ?>
+	<?php newspack_stylepack_warning(); ?>
+<?php // TODO: End remove with style pack code. ?>
+
 <?php do_action( 'wp_body_open' ); ?>
 <?php do_action( 'before_header' ); ?>
 

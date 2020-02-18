@@ -738,3 +738,72 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// TODO: Start remove with style pack code.
+/**
+ * Displays warning about style packs.
+ */
+function newspack_stylepack_warning() {
+	$current_style_pack = get_theme_mod( 'active_style_pack', 'default' );
+	if ( is_child_theme() === false && 'default' !== $current_style_pack && current_user_can( 'administrator' ) ) :
+		if ( 'style-1' === $current_style_pack ) {
+			$child_theme = 'Scott';
+		} elseif ( 'style-2' === $current_style_pack ) {
+			$child_theme = 'Nelson';
+		} elseif ( 'style-3' === $current_style_pack ) {
+			$child_theme = 'Katharine';
+		} elseif ( 'style-4' === $current_style_pack ) {
+			$child_theme = 'Sacha';
+		} else {
+			$child_theme = 'Joseph';
+		}
+
+		$args = array(
+			'strong' => array(),
+			'a'      => array(
+				'href'  => array(),
+				'style' => array(),
+			),
+		);
+	?>
+		<div style="background: #ffde00; padding: 5px 20px; font-size: 90%; position: fixed; z-index: 99999; bottom: 0;">
+			<p>
+			<strong>WARNING:</strong> The style pack code will be removed from the Newspack Theme in a future release. If you would like to keep
+			<strong><?php echo esc_html( newspack_stylepack( $current_style_pack ) ); ?>'s</strong> styles, please download and activate the
+			<?php echo wp_kses( newspack_return_child_theme( $current_style_pack ), $args ); ?> child theme before upgrading to the next Newspack Theme version.</p>
+			<p><strong>This warning is only visible to site administrators.</strong></p>
+		</div>
+	<?php
+	endif;
+}
+
+/**
+ * Returns corresponding child theme name and GitHub link for each style pack.
+ */
+function newspack_return_child_theme( $stylepack ) {
+	if ( 'style-1' === $stylepack ) {
+		$child_name     = 'Newspack Scott';
+		$child_download = 'newspack-scott.zip';
+	} elseif ( 'style-2' === $stylepack ) {
+		$child_name     = 'Newspack Nelson';
+		$child_download = 'newspack-nelson.zip';
+	} elseif ( 'style-3' === $stylepack ) {
+		$child_name     = 'Newspack Katharine';
+		$child_download = 'newspack-katharine.zip';
+	} elseif ( 'style-4' === $stylepack ) {
+		$child_name     = 'Newspack Sacha';
+		$child_download = 'newspack-sacha.zip';
+	} else {
+		$child_name     = 'Newspack Joseph';
+		$child_download = 'newspack-joseph.zip';
+	}
+	return '<strong><a style="color: #000" href="https://github.com/Automattic/newspack-theme/releases/latest/download/' . esc_attr( $child_download ) . '">' . esc_html( $child_name ) . '</a></strong>';
+}
+
+/**
+ * Returns style pack name for each style pack ID.
+ */
+function newspack_stylepack( $stylepack ) {
+	return str_replace( 'style-', 'Style ', $stylepack );
+}
+// TODO: End remove with style pack code.
