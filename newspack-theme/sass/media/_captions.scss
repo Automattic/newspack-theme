@@ -11,13 +11,18 @@
 figcaption,
 .wp-caption-text {
 	color: $color__text-light;
-	font-size: $font__size-xs;
-	font-family: $font__heading;
-	line-height: $font__line-height-pre;
 	margin: 0 auto;
 	max-width: 780px;
 	padding: 0;
 	text-align: left;
+}
+
+figcaption,
+.wp-caption-text,
+.amp-image-lightbox-caption {
+	font-size: $font__size-xs;
+	font-family: $font__heading;
+	line-height: $font__line-height-pre;
 }
 
 .newspack-front-page,

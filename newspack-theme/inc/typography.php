@@ -64,6 +64,7 @@ function newspack_custom_typography_css() {
 		/* _captions.scss */
 		.wp-caption-text,
 		.gallery-caption,
+		.amp-image-lightbox-caption,
 
 		/* _infinite_scroll.scss */
 		.site-main #infinite-handle span button,
