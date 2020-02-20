@@ -74,7 +74,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Solid Background', 'newspack' ),
-			'description' => esc_html__( 'Check to use the primary color as the header background.', 'newspack' ),
+			'description' => esc_html__( 'Check to use the primary color as the header background. Can be changed under "Colors".', 'newspack' ),
 			'section'     => 'newspack_header_options',
 		)
 	);
@@ -111,14 +111,13 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'theme_colors',
 		array(
-			'type'     => 'radio',
-			'label'    => __( 'Primary Color', 'newspack' ),
+			'type'    => 'radio',
+			'label'   => __( 'Colors', 'newspack' ),
 			'choices'  => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
-			'section'  => 'colors',
-			'priority' => 5,
+			'section' => 'colors',
 		)
 	);
 
@@ -157,6 +156,50 @@ function newspack_customize_register( $wp_customize ) {
 			'secondary_color_hex',
 			array(
 				'description' => __( 'Apply a secondary custom color.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	/**
+	 * Header background_color
+	 */
+	$wp_customize->add_setting(
+		'header_color',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_color_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_color',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Header Background Color', 'newspack' ),
+			'choices' => array(
+				'default' => _x( 'Default', 'header background color', 'newspack' ),
+				'custom'  => _x( 'Custom', 'header background color', 'newspack' ),
+			),
+			'section' => 'colors',
+		)
+	);
+
+	// Add header color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'header_color_hex',
+		array(
+			'default'           => '#666',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the header.', 'newspack' ),
 				'section'     => 'colors',
 			)
 		)
