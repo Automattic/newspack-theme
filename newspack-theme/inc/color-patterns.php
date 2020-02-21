@@ -206,6 +206,23 @@ function newspack_custom_colors_css() {
 
 		';
 
+	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+		$theme_css .= '
+			.mobile-sidebar {
+				background: ' . $header_color . ';
+			}
+
+			.mobile-sidebar,
+			.mobile-sidebar button:hover,
+			.mobile-sidebar a,
+			.mobile-sidebar a:visited,
+			.mobile-sidebar .nav1 .sub-menu > li > a,
+			.mobile-sidebar .nav1 ul.main-menu > li > a {
+				color: ' . $header_color_contrast . ';
+			}
+		';
+	}
+
 	if ( newspack_is_active_style_pack( 'default' ) ) {
 		$theme_css .= '
 			.mobile-sidebar .nav3 a {
@@ -232,6 +249,9 @@ function newspack_custom_colors_css() {
 
 		if ( true === get_theme_mod( 'header_solid_background', false ) ) {
 			$theme_css .= '
+				.mobile-sidebar .nav3 .menu-highlight a {
+					background: ' . newspack_adjust_brightness( $header_color, -20 ) . ';
+				}
 				.h-sb .site-header .nav3 a {
 					background-color: ' . newspack_adjust_brightness( $header_color, -17 ) . ';
 					color: ' . esc_html( $header_color_contrast ) . ';
