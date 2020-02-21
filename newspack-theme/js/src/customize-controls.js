@@ -48,6 +48,23 @@
 				visibility();
 				setting.bind( visibility );
 			} );
+			wp.customize.control( 'header_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						// Make sure the site is set to use a solid header background.
+						if (
+							true === wp.customize.value( 'header_solid_background' )() &&
+							'custom' === wp.customize.value( 'header_color' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
 		} );
 
 		// Controls to show/hide when the Solid Background is toggled.
