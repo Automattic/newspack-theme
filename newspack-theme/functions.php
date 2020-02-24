@@ -152,9 +152,8 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
-		$primary_color           = newspack_get_primary_color();
-		$primary_color_variation = newspack_get_primary_color_variation();
-		$secondary_color         = newspack_get_secondary_color();
+		$primary_color   = newspack_get_primary_color();
+		$secondary_color = newspack_get_secondary_color();
 
 		// Editor color palette.
 		add_theme_support(
@@ -171,7 +170,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 					'name'  => __( 'Primary Variation', 'newspack' ),
 					'slug'  => 'primary-variation',
 					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						$primary_color_variation :
+						newspack_adjust_brightness( $primary_color, -40 ) :
 						newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
 				),
 				array(
@@ -591,15 +590,10 @@ function newspack_colors_css_wrap() {
 	}
 
 	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-
-	$primary_color = newspack_get_primary_color();
-	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
-		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
-	}
 	?>
 
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-primary="' . esc_attr( $primary_color ) . '"' : ''; ?>>
-		<?php echo newspack_custom_colors_css(); ?>
+	<style type="text/css" id="custom-theme-colors">
+		<?php echo newspack_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -616,7 +610,7 @@ function newspack_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts">
-		<?php echo wp_kses( newspack_custom_typography_css(), '' ); ?>
+		<?php echo newspack_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 <?php
@@ -727,11 +721,6 @@ if ( ! is_child_theme() ) {
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Default color filters.
- */
-require get_template_directory() . '/inc/color-filters.php';
 
 /**
  * Custom typography functions.

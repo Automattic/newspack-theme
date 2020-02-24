@@ -374,6 +374,23 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
 
+/**
+ * The default color used for the primary color throughout this theme
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_primary_color() {
+	return '#3366ff';
+}
+
+/**
+ * The default color used for the secondary color throughout this theme
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_secondary_color() {
+	return '#666666';
+}
 
 /**
  * Adjust a hexidecimal colour value to lighten or darken it.
