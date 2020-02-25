@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for display the mobile navigation, either AMP or fallback.
+ * Template to display the mobile navigation, either AMP or fallback.
  *
  * @package Newspack
  */
