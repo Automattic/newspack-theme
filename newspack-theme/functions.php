@@ -700,6 +700,46 @@ function newspack_coauthors_in_rss( $the_author ) {
 add_filter( 'the_author', 'newspack_coauthors_in_rss' );
 
 /**
+ * Notify about child theme deprecation.
+ * TODO: Remove after child theme code is removed.
+ */
+function newspack_child_theme_deprecation_notification() {
+	$theme = get_option( 'stylesheet', null );
+	if ( 'newspack-theme' !== $theme ) {
+		return;
+	}
+	$style_pack         = get_theme_mod( 'active_style_pack', 'default' );
+	$style_pack_mapping = array(
+		'style-1' => 'scott',
+		'style-2' => 'nelson',
+		'style-3' => 'katharine',
+		'style-4' => 'sacha',
+		'style-5' => 'joseph',
+	);
+	if ( ! isset( $style_pack_mapping[ $style_pack ] ) ) {
+		return;
+	}
+	?>
+	<div class="notice notice-warning">
+		<p>
+			<?php
+			echo wp_kses_post(
+				sprintf(
+					/* translators: warning about upcoming feature deprecation. */
+					__( 'The style pack code will be removed from the Newspack Theme in a future release. If you would like to keep <strong>%1$s</strong> styles, please download and activate the <strong><a href="%2$s">%3$s</a></strong> child theme before upgrading to the next Newspack Theme version.', 'newspack' ),
+					ucfirst( str_replace( '-', ' ', $style_pack ) ),
+					'https://github.com/Automattic/newspack-theme/releases/latest/download/newspack-' . $style_pack_mapping[ $style_pack ] . '.zip',
+					ucfirst( $style_pack_mapping[ $style_pack ] )
+				)
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'newspack_child_theme_deprecation_notification' );
+
+/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
