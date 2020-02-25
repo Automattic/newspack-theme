@@ -649,24 +649,32 @@ ul.wp-block-archives,
 	margin-left: 0;
 	padding-left: 0;
 
-	.wp-block-latest-comments__comment-meta {
-		font-family: $font__heading;
-		font-weight: bold;
-
-		.wp-block-latest-comments__comment-date {
-			color: $color__text-light;
-			font-weight: normal;
-		}
-	}
-
 	.wp-block-latest-comments__comment {
+		font-size: $font__size-sm;
 		line-height: $font__line-height-body;
 		margin-bottom: $size__spacing-unit;
 	}
 
+	.wp-block-latest-comments__comment-meta {
+		font-family: $font__heading;
+		font-weight: bold;
+
+		a,
+		a:visited {
+			color: $color__text-main;
+			text-decoration: none;
+		}
+
+		.wp-block-latest-comments__comment-date {
+			color: $color__text-light;
+			font-size: 0.9em;
+			font-weight: normal;
+			margin: #{0.5 * $size__spacing-unit} 0;
+		}
+	}
+
 	.wp-block-latest-comments__comment-excerpt p {
-		font-size: 1.1em;
-		line-height: $font__line-height-body;
+		font-size: 1.05em;
 		margin: 0;
 	}
 }
