@@ -30,12 +30,26 @@ jobs:
           name: Run Linter
           command: npm run lint
 
-## Workflows
+  release:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout_code
+      - run:
+          name: Release new version
+          command: npm run release
+
 workflows:
   version: 2
-  quality_assurance:
+  all:
     jobs:
       - build
       - lint:
           requires:
             - build
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: release
