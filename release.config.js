@@ -44,7 +44,7 @@ module.exports = {
 			'@semantic-release/github',
 			{
 				assets: THEMES.map( name => ( {
-					path: `./assets/release/${ name }.zip`,
+					path: `./release/${ name }.zip`,
 					label: `${ name }.js`,
 				} ) ),
 			},
