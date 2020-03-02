@@ -681,7 +681,7 @@ ul.wp-block-archives,
 
 /** === Jetpack Blocks === */
 
-// Jetpack Blocks
+// Related Posts
 .jp-relatedposts-i2 {
 	border-top: 1px solid $color__border;
 	border-bottom: 1px solid $color__border;
@@ -697,6 +697,13 @@ ul.wp-block-archives,
 	.jp-related-posts-i2__post-date,
 	.jp-related-posts-i2__post-context {
 		font-size: $font__size-xs;
+	}
+}
+
+// Mailchimp
+.wp-block-jetpack-mailchimp {
+	.block-editor-rich-text__editable {
+		font-size: $font__size-sm;
 	}
 }
 

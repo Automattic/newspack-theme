@@ -1119,6 +1119,17 @@
 	}
 }
 
+//! Mailchimp block
+.wp-block-jetpack-mailchimp {
+	input[type='email'] {
+		width: 100%;
+	}
+
+	#wp-block-jetpack-mailchimp_consent-text {
+		font-size: $font__size-sm;
+	}
+}
+
 //! Organic Profile Block
 .wp-block-organic-profile-block {
 	box-shadow: none;
