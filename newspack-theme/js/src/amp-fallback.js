@@ -36,7 +36,6 @@
 	);
 
 	// Mobile menu fallback.
-
 	const menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
 		body = document.getElementsByTagName( 'body' )[ 0 ],
 		mobileSidebar = document.getElementById( 'mobile-sidebar-fallback' ),
@@ -53,6 +52,28 @@
 				} else {
 					body.classList.add( 'menu-opened' );
 					menuCloseButton.focus();
+				}
+			},
+			false
+		);
+	}
+
+	// Desktop menu fallback.
+	const desktopToggle = document.getElementsByClassName( 'desktop-menu-toggle' ),
+		desktopSidebar = document.getElementById( 'desktop-sidebar-fallback' ),
+		desktopOpenButton = headerContain.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
+		desktopCloseButton = desktopSidebar.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ];
+
+	for ( let i = 0; i < desktopToggle.length; i++ ) {
+		desktopToggle[ i ].addEventListener(
+			'click',
+			function() {
+				if ( body.classList.contains( 'desktop-menu-opened' ) ) {
+					body.classList.remove( 'desktop-menu-opened' );
+					desktopOpenButton.focus();
+				} else {
+					body.classList.add( 'desktop-menu-opened' );
+					desktopCloseButton.focus();
 				}
 			},
 			false

@@ -27,6 +27,8 @@ if ( newspack_is_amp() ) : ?>
 
 		<?php newspack_secondary_menu(); ?>
 
+		<?php newspack_desktop_sidebar_menu(); ?>
+
 		<?php newspack_social_menu_header(); ?>
 
 <?php if ( newspack_is_amp() ) : ?>

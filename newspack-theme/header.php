@@ -22,6 +22,7 @@
 <?php do_action( 'before_header' ); ?>
 
 <?php get_template_part( 'template-parts/header/mobile', 'sidebar' ); ?>
+<?php get_template_part( 'template-parts/header/desktop', 'sidebar' ); ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
@@ -39,6 +40,11 @@
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
+					<!-- toggle for desktop menu -->
+					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<?php esc_html_e( 'Menu', 'newspack' ); ?>
+					</button>
 					<div id="secondary-nav-contain">
 						<?php
 						if ( ! newspack_is_amp() ) {

@@ -465,3 +465,26 @@ function newspack_social_menu_footer() {
 	</nav><!-- .social-navigation -->
 <?php
 }
+
+/**
+ * Displays desktop sidebar menu; created a function to reduce duplication.
+ */
+function newspack_desktop_sidebar_menu() {
+	if ( ! has_nav_menu( 'desktop-sidebar-menu' ) ) {
+		return;
+	}
+	?>
+		<nav class="desktop-sidebar-menu" aria-label="<?php esc_attr_e( 'Desktop Sidebar Menu', 'newspack' ); ?>">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'desktop-sidebar-menu',
+					'container'      => false,
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth'          => 2,
+				)
+			);
+			?>
+		</nav>
+<?php
+}

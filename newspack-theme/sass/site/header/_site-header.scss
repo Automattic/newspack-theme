@@ -79,9 +79,17 @@
 	background-color: #4a4a4a;
 	color: #fff;
 
+	.wrapper {
+		justify-content: flex-start;
+	}
+
 	nav {
 		padding-bottom: #{0.3 * $size__spacing-unit};
 		padding-top: #{0.3 * $size__spacing-unit};
+	}
+
+	#social-nav-contain {
+		margin-left: auto;
 	}
 }
 
