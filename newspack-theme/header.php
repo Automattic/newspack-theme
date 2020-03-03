@@ -40,11 +40,12 @@
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
-					<!-- toggle for desktop menu -->
-					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
-						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-						<?php esc_html_e( 'Menu', 'newspack' ); ?>
-					</button>
+					<?php if ( has_nav_menu( 'desktop-sidebar-menu' ) ) : ?>
+						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+							<?php esc_html_e( 'Menu', 'newspack' ); ?>
+						</button>
+					<?php endif; ?>
 					<div id="secondary-nav-contain">
 						<?php
 						if ( ! newspack_is_amp() ) {
