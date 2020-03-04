@@ -430,6 +430,35 @@ function newspack_customize_register( $wp_customize ) {
 			'section' => 'featured_image_options',
 		)
 	);
+
+	/**
+	 * Comments settings
+	 */
+	$wp_customize->add_section(
+		'comments_options',
+		array(
+			'title' => esc_html__( 'Comments Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'collapse_comments',
+		array(
+			'default'           => false,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'collapse_comments',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
+			'description' => esc_html__( 'Collapse the comments on each post and display a button to open.', 'newspack' ),
+			'section'     => 'comments_options',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
