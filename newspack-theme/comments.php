@@ -67,35 +67,41 @@ $discussion = newspack_get_discussion_data();
 		if ( comments_open() ) {
 			newspack_comment_form( 'desc' );
 		}
-
 		?>
-		<ol class="comment-list">
+		<div id="comments-wrapper" class="comments-wrapper comments-hide" [class]="showComments ? 'comments-wrapper' : 'comments-wrapper comments-hide'">
+			<ol class="comment-list">
+				<?php
+				wp_list_comments(
+					array(
+						'walker'      => new newspack_Walker_Comment(),
+						'avatar_size' => newspack_get_avatar_size(),
+						'short_ping'  => true,
+						'style'       => 'ol',
+					)
+				);
+				?>
+			</ol><!-- .comment-list -->
 			<?php
-			wp_list_comments(
-				array(
-					'walker'      => new newspack_Walker_Comment(),
-					'avatar_size' => newspack_get_avatar_size(),
-					'short_ping'  => true,
-					'style'       => 'ol',
-				)
-			);
+
+			// Show comment navigation
+			if ( have_comments() ) :
+				$prev_icon     = newspack_get_icon_svg( 'chevron_left', 22 );
+				$next_icon     = newspack_get_icon_svg( 'chevron_right', 22 );
+				$comments_text = apply_filters( 'newspack_comments_name_plural', __( 'Comments', 'newspack' ) );
+				the_comments_navigation(
+					array(
+						'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'newspack' ), $comments_text ),
+						'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'newspack' ), $comments_text, $next_icon ),
+					)
+				);
+			endif;
 			?>
-		</ol><!-- .comment-list -->
+			<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
+				<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
+			</button>
+		</div><!-- .comments-wrapper -->
+
 		<?php
-
-		// Show comment navigation
-		if ( have_comments() ) :
-			$prev_icon     = newspack_get_icon_svg( 'chevron_left', 22 );
-			$next_icon     = newspack_get_icon_svg( 'chevron_right', 22 );
-			$comments_text = apply_filters( 'newspack_comments_name_plural', __( 'Comments', 'newspack' ) );
-			the_comments_navigation(
-				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', $prev_icon, __( 'Previous', 'newspack' ), $comments_text ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'newspack' ), $comments_text, $next_icon ),
-				)
-			);
-		endif;
-
 		// Show comment form at bottom if showing newest comments at the bottom.
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
 			$leave_comment_text = apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) );
