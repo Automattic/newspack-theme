@@ -20,6 +20,7 @@ if ( post_password_required() ) {
 }
 
 $discussion = newspack_get_discussion_data();
+$collapse_comments = get_theme_mod( 'collapse_comments', false );
 ?>
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
@@ -68,7 +69,11 @@ $discussion = newspack_get_discussion_data();
 			newspack_comment_form( 'desc' );
 		}
 		?>
-		<div id="comments-wrapper" class="comments-wrapper comments-hide" [class]="showComments ? 'comments-wrapper' : 'comments-wrapper comments-hide'">
+
+		<?php if ( $collapse_comments ) : ?>
+			<div id="comments-wrapper" class="comments-wrapper comments-hide" [class]="showComments ? 'comments-wrapper' : 'comments-wrapper comments-hide'">
+		<?php endif; ?>
+
 			<ol class="comment-list">
 				<?php
 				wp_list_comments(
@@ -96,10 +101,13 @@ $discussion = newspack_get_discussion_data();
 				);
 			endif;
 			?>
-			<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
-				<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
-			</button>
-		</div><!-- .comments-wrapper -->
+
+				<?php if ( $collapse_comments ) : ?>
+					<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
+						<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
+					</button>
+				</div><!-- .comments-wrapper -->
+			<?php endif; ?>
 
 		<?php
 		// Show comment form at bottom if showing newest comments at the bottom.

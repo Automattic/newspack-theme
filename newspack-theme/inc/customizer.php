@@ -446,7 +446,6 @@ function newspack_customize_register( $wp_customize ) {
 		'collapse_comments',
 		array(
 			'default'           => false,
-			'transport'         => 'postMessage',
 			'sanitize_callback' => 'newspack_sanitize_checkbox',
 		)
 	);
@@ -455,7 +454,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
-			'description' => esc_html__( 'Collapse the comments on each post and display a button to open.', 'newspack' ),
+			'description' => esc_html__( 'When using the WordPress default comments, this option will collapse the comments down and display a button to expand.', 'newspack' ),
 			'section'     => 'comments_options',
 		)
 	);
