@@ -42,7 +42,6 @@
 
 		.discussion-meta {
 			@include media( tablet ) {
-				flex: 0 0 calc( 2 * ( 100vw / 12 ) );
 				margin-left: #{$size__spacing-unit};
 				text-align: right;
 			}

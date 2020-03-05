@@ -79,6 +79,7 @@
 		width: 100%;
 		font-family: $font__heading;
 		font-weight: bold;
+		padding: #{0.5 * $size__spacing-unit} 0;
 
 		.secondary-text {
 			display: none;
