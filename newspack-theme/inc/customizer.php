@@ -454,7 +454,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
-			'description' => esc_html__( 'When using the WordPress default comments, this option will collapse the comments down and display a button to expand.', 'newspack' ),
+			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
 			'section'     => 'comments_options',
 		)
 	);

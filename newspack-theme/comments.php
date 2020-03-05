@@ -70,7 +70,7 @@ $collapse_comments = get_theme_mod( 'collapse_comments', false );
 		}
 		?>
 
-		<?php if ( $collapse_comments ) : ?>
+		<?php if ( $collapse_comments && 1 < (int) $discussion->responses ) : ?>
 			<div id="comments-wrapper" class="comments-wrapper comments-hide" [class]="showComments ? 'comments-wrapper' : 'comments-wrapper comments-hide'">
 		<?php endif; ?>
 
@@ -102,12 +102,12 @@ $collapse_comments = get_theme_mod( 'collapse_comments', false );
 			endif;
 			?>
 
-				<?php if ( $collapse_comments ) : ?>
-					<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
-						<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
-					</button>
-				</div><!-- .comments-wrapper -->
-			<?php endif; ?>
+		<?php if ( $collapse_comments && 1 < (int) $discussion->responses ) : ?>
+			</div><!-- .comments-wrapper -->
+			<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
+				<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
+			</button>
+		<?php endif; ?>
 
 		<?php
 		// Show comment form at bottom if showing newest comments at the bottom.
