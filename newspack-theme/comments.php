@@ -98,14 +98,7 @@ $discussion = newspack_get_discussion_data();
 
 		// Show comment form at bottom if showing newest comments at the bottom.
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
-			$leave_comment_text = apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) );
-			?>
-			<div class="comment-form-flex">
-				<span class="screen-reader-text"><?php echo esc_html( $leave_comment_text ); ?></span>
-				<?php newspack_comment_form( 'asc' ); ?>
-				<h2 class="comments-title" aria-hidden="true"><?php echo esc_html( $leave_comment_text ); ?></h2>
-			</div>
-			<?php
+			newspack_comment_form( 'asc' );
 		endif;
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?

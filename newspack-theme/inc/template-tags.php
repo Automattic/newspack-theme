@@ -283,7 +283,7 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 			comment_form(
 				array(
 					'logged_in_as' => null,
-					'title_reply'  => null,
+					'title_reply'  => apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) ),
 				)
 			);
 		}

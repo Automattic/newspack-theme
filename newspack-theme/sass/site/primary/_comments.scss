@@ -87,25 +87,6 @@
 	}
 }
 
-.comment-form-flex {
-	display: flex;
-	flex-direction: column;
-
-	.comments-title {
-		display: none;
-		margin: 0;
-		order: 1;
-	}
-
-	#respond {
-		order: 2;
-
-		+ .comments-title {
-			display: block;
-		}
-	}
-}
-
 .comment-list {
 	list-style: none;
 	padding: 0;
