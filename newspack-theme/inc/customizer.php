@@ -97,6 +97,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - label for slide out menu
+	$wp_customize->add_setting(
+		'slideout_label',
+		array(
+			'default'           => esc_html__( 'Menu', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_label',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
+			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. At least one widget has to be added to the Slide-out Sidebar area for it to appear.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
 	/**
 	 * Primary color.
 	 */

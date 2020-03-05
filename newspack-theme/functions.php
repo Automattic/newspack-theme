@@ -69,12 +69,11 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary-menu'         => __( 'Primary Menu', 'newspack' ),
-				'secondary-menu'       => __( 'Secondary Menu', 'newspack' ),
-				'tertiary-menu'        => __( 'Tertiary Menu', 'newspack' ),
-				'highlight-menu'       => __( 'Topic Highlight Menu', 'newspack' ),
-				'social'               => __( 'Social Links Menu', 'newspack' ),
-				'desktop-sidebar-menu' => __( 'Desktop Sidebar Menu', 'newspack' ),
+				'primary-menu'   => __( 'Primary Menu', 'newspack' ),
+				'secondary-menu' => __( 'Secondary Menu', 'newspack' ),
+				'tertiary-menu'  => __( 'Tertiary Menu', 'newspack' ),
+				'highlight-menu' => __( 'Topic Highlight Menu', 'newspack' ),
+				'social'         => __( 'Social Links Menu', 'newspack' ),
 			)
 		);
 
@@ -244,6 +243,18 @@ function newspack_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title accent-header"><span>',
 			'after_title'   => '</span></h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Slide-out Sidebar', 'newspack' ),
+			'id'            => 'header-1',
+			'description'   => __( 'Add widgets here to appear in an off-screen sidebar.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 		)
 	);
 

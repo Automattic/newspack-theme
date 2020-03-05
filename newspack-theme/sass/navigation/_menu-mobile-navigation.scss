@@ -105,9 +105,10 @@
 	}
 }
 
+// Desktop Sidebar and Widget styles
 .desktop-sidebar {
 	background-color: #fff;
-	max-width: 500px;
+	max-width: 400px;
 
 	@include media( tablet ) {
 		width: 50vw;
@@ -118,34 +119,23 @@
 		color: $color__text-main;
 	}
 
-	ul.menu > li {
-		border-bottom: 1px solid $color__border;
-		clear: both;
-		font-weight: bold;
-		padding: $size__spacing-unit 0;
+	.widget {
+		border-top: 1px solid $color__border;
+		font-size: 0.9em;
+		margin-bottom: #{1.5 * $size__spacing-unit};
 
-		> ul li {
-			display: block;
-			font-weight: normal;
-
-			@include media( tablet ) {
-				float: left;
-				width: 48%;
-
-				&:nth-child( odd ) {
-					padding-right: 4%;
-				}
-			}
+		&:last-child {
+			margin-bottom: #{1.5 * $size__spacing-unit};
 		}
+	}
 
-		&::after {
-			clear: both;
-			content: '';
-			display: table;
-		}
+	.widget-title {
+		font-size: $font__size-md;
+		margin: #{1.5 * $size__spacing-unit} 0 #{0.5 * $size__spacing-unit};
 	}
 }
 
+// Modile Sidebar and Menu styles
 .mobile-sidebar {
 	background-color: $color__primary;
 	color: #fff;

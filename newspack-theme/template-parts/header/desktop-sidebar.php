@@ -20,7 +20,7 @@ if ( newspack_is_amp() ) : ?>
 <?php
 endif;
 
-	newspack_desktop_sidebar_menu();
+dynamic_sidebar( 'header-1' );
 
 if ( newspack_is_amp() ) :
 ?>

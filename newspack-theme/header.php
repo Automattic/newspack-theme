@@ -35,17 +35,18 @@
 		?>
 
 		<?php
-		// Header is NOT short:
-		if ( false === $header_simplified ) :
+		// If header is NOT short, or if header is short and there's a Secondary Menu or Slide-out Sidebar widget.
+		if ( false === $header_simplified || ( true === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
-					<?php if ( has_nav_menu( 'desktop-sidebar-menu' ) ) : ?>
+					<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-							<?php esc_html_e( 'Menu', 'newspack' ); ?>
+							<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
 						</button>
 					<?php endif; ?>
+
 					<div id="secondary-nav-contain">
 						<?php
 						if ( ! newspack_is_amp() ) {
