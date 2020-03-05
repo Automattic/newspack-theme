@@ -19,8 +19,25 @@ if ( post_password_required() ) {
 	return;
 }
 
-$discussion = newspack_get_discussion_data();
-$collapse_comments = get_theme_mod( 'collapse_comments', false );
+$discussion         = newspack_get_discussion_data();
+$collapse_comments  = get_theme_mod( 'collapse_comments', false );
+$on_first_page      = true;
+$comments_collapsed = false;
+$url_end            = '';
+
+if ( isset( $_SERVER['REQUEST_URI'] ) ) {
+	$url_end = basename( sanitize_text_field( $_SERVER['REQUEST_URI'] ) );
+}
+
+// Figure out if we're into comment pagination, to check if there's a new comment, or we're in subpages:
+if ( false !== strpos( $url_end, 'cpage=' ) || false !== strpos( $url_end, 'comment-page-' ) || false !== strpos( $url_end, 'moderation-hash=' ) ) {
+	$on_first_page = false;
+}
+
+// Collapse comments if that's set, if there's more than one, and if we're on the first page:
+if ( $collapse_comments && 1 < (int) $discussion->responses && $on_first_page ) {
+	$comments_collapsed = true;
+}
 ?>
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
@@ -70,7 +87,7 @@ $collapse_comments = get_theme_mod( 'collapse_comments', false );
 		}
 		?>
 
-		<?php if ( $collapse_comments && 1 < (int) $discussion->responses ) : ?>
+		<?php if ( $comments_collapsed ) : ?>
 			<div id="comments-wrapper" class="comments-wrapper comments-hide" [class]="showComments ? 'comments-wrapper' : 'comments-wrapper comments-hide'">
 		<?php endif; ?>
 
@@ -102,7 +119,7 @@ $collapse_comments = get_theme_mod( 'collapse_comments', false );
 			endif;
 			?>
 
-		<?php if ( $collapse_comments && 1 < (int) $discussion->responses ) : ?>
+		<?php if ( $comments_collapsed ) : ?>
 			</div><!-- .comments-wrapper -->
 			<button class="comments-toggle" id="comments-toggle" on="tap:AMP.setState({showComments: !showComments})">
 				<?php echo wp_kses( newspack_get_icon_svg( 'chevron_left', 24 ), newspack_sanitize_svgs() ); ?><span [text]="showComments ? '<?php esc_html_e( 'Collapse comments', 'newspack' ); ?>' : '<?php esc_html_e( 'Expand comments', 'newspack' ); ?>'"><?php esc_html_e( 'Expand comments', 'newspack' ); ?></span>
