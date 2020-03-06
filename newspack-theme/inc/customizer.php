@@ -97,7 +97,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header - label for slide out menu
+	// Header - label for slide out sidebar
 	$wp_customize->add_setting(
 		'slideout_label',
 		array(
@@ -111,6 +111,24 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'text',
 			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
 			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. At least one widget has to be added to the Slide-out Sidebar area for it to appear.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - label for slide out menu
+	$wp_customize->add_setting(
+		'slideout_widget_mobile',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_widget_mobile',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
+			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
 			'section'     => 'newspack_header_options',
 		)
 	);

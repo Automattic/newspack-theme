@@ -161,7 +161,9 @@
 		padding-right: 0;
 	}
 
-	nav + nav {
+	nav + nav,
+	nav + .widget,
+	.widget + .widget {
 		border-top: 1px solid #fff;
 		padding-top: #{0.75 * $size__spacing-unit};
 	}
@@ -181,6 +183,18 @@
 		a {
 			padding: #{0.125 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 		}
+	}
+
+	.widget {
+		font-size: 1em;
+
+		&:last-child {
+			margin-bottom: #{1.5 * $size__spacing-unit};
+		}
+	}
+
+	.widget-title {
+		font-size: 1.1em;
 	}
 }
 
