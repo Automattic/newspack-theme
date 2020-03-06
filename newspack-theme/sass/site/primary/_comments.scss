@@ -71,6 +71,10 @@
 		padding-left: 0;
 	}
 
+	.comment-reply-title {
+		display: none;
+	}
+
 	> small {
 		display: block;
 		font-size: $font__size_base;

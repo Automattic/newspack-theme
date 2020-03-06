@@ -98,6 +98,7 @@ $discussion = newspack_get_discussion_data();
 
 		// Show comment form at bottom if showing newest comments at the bottom.
 		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
+			echo '<h3 class="comment-reply-title">' . esc_html( apply_filters( 'newspack_comments_leave_comment', __( 'Leave a comment', 'newspack' ) ) ) . '</h3>';
 			newspack_comment_form( 'asc' );
 		endif;
 
