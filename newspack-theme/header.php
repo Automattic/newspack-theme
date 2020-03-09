@@ -36,7 +36,7 @@
 
 		<?php
 		// If header is NOT short, or if header is short and there's a Secondary Menu or Slide-out Sidebar widget.
-		if ( false === $header_simplified || ( true === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) ) :
+		if ( false === $header_simplified && ( true === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
@@ -73,6 +73,13 @@
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
+				<?php if ( true === $header_simplified && is_active_sidebar( 'header-1' ) ) : ?>
+					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
+					</button>
+				<?php endif; ?>
+
 				<?php
 				// Centered logo AND NOT short header.
 				if ( true === $header_center_logo && false === $header_simplified ) :

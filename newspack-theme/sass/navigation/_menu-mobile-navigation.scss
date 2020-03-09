@@ -39,6 +39,14 @@
 	padding: #{0.125 * $size__spacing-unit} 0;
 }
 
+.middle-header-contain .desktop-menu-toggle {
+	margin-right: $size__spacing-unit;
+	span {
+		left: -99999em;
+		position: absolute;
+	}
+}
+
 @include media( tablet ) {
 	// Header default height
 

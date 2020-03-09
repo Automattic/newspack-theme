@@ -110,7 +110,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'text',
 			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
-			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. At least one widget has to be added to the Slide-out Sidebar area for it to appear.', 'newspack' ),
+			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. At least one widget has to be added to the Slide-out Sidebar area for the toggle to appear. The text is hidden when using the short header, but always visible to screen readers.', 'newspack' ),
 			'section'     => 'newspack_header_options',
 		)
 	);
