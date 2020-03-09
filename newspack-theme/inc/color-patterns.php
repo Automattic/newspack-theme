@@ -42,7 +42,8 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
 		.entry .entry-content .wp-block-file .wp-block-file__button,
-		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
+		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
+		.comment .comment-author .post-author-badge {
 			background-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 		}
 
@@ -58,6 +59,7 @@ function newspack_custom_colors_css() {
 		.nav1 .main-menu > li > a + svg,
 		.search-form button:active, .search-form button:hover, .search-form button:focus,
 		.entry-footer a,
+		.comment .comment-author .post-author-badge,
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,

@@ -185,7 +185,7 @@
 
 		.fn {
 			position: relative;
-			display: block;
+			display: inline-block;
 
 			a {
 				color: inherit;
@@ -197,25 +197,28 @@
 		}
 
 		.post-author-badge {
+			background: $color__primary;
 			border-radius: 100%;
-			display: block;
-			height: 18px;
-			position: absolute;
-			background: lighten( $color__primary, 8% );
-			right: calc( 100% - #{$size__spacing-unit * 2.5} );
-			top: -3px;
-			width: 18px;
+			color: #fff;
+			display: inline-block;
+			height: 16px;
+			line-height: 16px;
+			margin-left: #{0.25 * $size__spacing-unit};
+			text-align: center;
+			width: 16px;
 
 			@include media( tablet ) {
-				right: calc( 100% + #{$size__spacing-unit * 0.75} );
+				height: 18px;
+				line-height: 18px;
+				width: 18px;
 			}
 
 			svg {
-				width: inherit;
+				display: inline-block;
+				fill: currentColor;
 				height: inherit;
-				display: block;
-				fill: white;
 				transform: scale( 0.875 );
+				width: inherit;
 			}
 		}
 	}
