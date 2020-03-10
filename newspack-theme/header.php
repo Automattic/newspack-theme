@@ -30,17 +30,18 @@
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
 		<?php
-			$header_simplified  = get_theme_mod( 'header_simplified', false );
-			$header_center_logo = get_theme_mod( 'header_center_logo', false );
+			$header_simplified     = get_theme_mod( 'header_simplified', false );
+			$header_center_logo    = get_theme_mod( 'header_center_logo', false );
+			$show_slideout_sidebar = get_theme_mod( 'header_show_slideout', false );
 		?>
 
 		<?php
 		// If header is NOT short, or if header is short and there's a Secondary Menu or Slide-out Sidebar widget.
-		if ( false === $header_simplified && ( true === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) ) :
+		if ( false === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
-					<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
+					<?php if ( true === $show_slideout_sidebar ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
@@ -73,7 +74,7 @@
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
-				<?php if ( true === $header_simplified && is_active_sidebar( 'header-1' ) ) : ?>
+				<?php if ( true === $header_simplified && true === $show_slideout_sidebar ) : ?>
 					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 						<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>

@@ -97,6 +97,28 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option to center logo.
+	$wp_customize->add_setting(
+		'header_show_slideout',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_show_slideout',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show Slide-out Sidebar', 'newspack' ),
+			'description' => sprintf(
+				/* translators: %s: link to Slide Out Sidebar widget panel in Customizer. */
+				esc_html__( 'Show a Slide-out sidebar in the header, which you can populate by adding widgets %1$s.', 'newspack' ),
+				'<a rel="goto-section" href="#sidebar-widgets-header-1">' . __( 'here', 'newspack' ) . '</a>'
+			),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
 	// Header - label for slide out sidebar
 	$wp_customize->add_setting(
 		'slideout_label',
@@ -110,7 +132,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'text',
 			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
-			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. At least one widget has to be added to the Slide-out Sidebar area for the toggle to appear. The text is hidden when using the short header, but always visible to screen readers.', 'newspack' ),
+			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. The text is not visible when using the short header, but can always be read by screen readers.', 'newspack' ),
 			'section'     => 'newspack_header_options',
 		)
 	);
