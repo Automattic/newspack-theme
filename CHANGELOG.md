@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Automattic/newspack-theme/compare/v1.0.0...v1.1.0) (2020-03-10)
+
+
+### Features
+
+* add custom style for the Mailchimp block ([1f6bfa1](https://github.com/Automattic/newspack-theme/commit/1f6bfa1821a72a1a7f2a2af1b0b664c21e9c3679))
+
 # 1.0.0 (2020-03-02)
 
 
