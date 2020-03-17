@@ -53,7 +53,8 @@ function newspack_nelson_custom_colors_css() {
 		$theme_css .= '
 			/* Header solid background */
 			.h-sb .site-header,
-			.h-sb .middle-header-contain {
+			.h-sb .middle-header-contain,
+			.h-sb .site-footer {
 				background-color: ' . esc_html( $header_color ) . ';
 			}
 
@@ -86,7 +87,8 @@ function newspack_nelson_custom_colors_css() {
 			.h-sb .middle-header-contain,
 			.nav1 .sub-menu a,
 			.h-sb .site-header .highlight-menu .menu-label,
-			.h-sb .site-header .highlight-menu a {
+			.h-sb .site-header .highlight-menu a,
+			.h-sb .site-footer {
 				color: ' . esc_html( $header_color_contrast ) . ';
 			}
 		';

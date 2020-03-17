@@ -324,8 +324,13 @@ function newspack_custom_colors_css() {
 				/* Header solid background */
 				.h-sb .site-header,
 				.h-sb .site-header .highlight-menu .menu-label,
-				.h-sb .site-header .highlight-menu a {
+				.h-sb .site-header .highlight-menu a,
+				.h-sb .site-footer {
 					color: ' . esc_html( $header_color_contrast ) . ';
+				}
+
+				.h-sb site-footer {
+					background-color: ' . esc_html( $header_color ) . ';
 				}
 
 				.site-header,

@@ -19,7 +19,7 @@ function newspack_custom_typography_css() {
 	if ( get_theme_mod( 'font_header', '' ) ) {
 		$css_blocks .= '
 		/* _headings.scss */
-		.author-description .author-link,
+		.author-bio .author-link,
 		.comment-metadata,
 		.comment-reply-link,
 		.comments-title,
@@ -54,14 +54,15 @@ function newspack_custom_typography_css() {
 		/* _buttons.scss */
 		.button,
 		button,
-		input[type=\"button\"],
-		input[type=\"reset\"],
-		input[type=\"submit\"],
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
 
 		/* _blocks.scss */
 		.entry .entry-content .wp-block-button .wp-block-button__link,
 
 		/* _captions.scss */
+		figcaption,
 		.wp-caption-text,
 		.gallery-caption,
 		.amp-image-lightbox-caption,
@@ -98,8 +99,10 @@ function newspack_custom_typography_css() {
 
 		/* _blocks.scss */
 		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+		.wp-block-pullquote cite,
 
 		/* _widgets.scss */
+		.widget,
 		.widget_archive ul li,
 		.widget_categories ul li,
 		.widget_meta ul li,
@@ -314,7 +317,6 @@ function newspack_custom_typography_css() {
 		$css_blocks .= '
 		/* _typography.scss */
 		body,
-		button,
 		input,
 		select,
 		optgroup,

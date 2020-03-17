@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdc481e6d19e88ff95c6ca4fa9306d3c",
+    "content-hash": "22d74d96360ca75a516c1f5f90180c52",
     "packages": [
         {
             "name": "composer/installers",
@@ -1070,20 +1070,26 @@
         },
         {
             "name": "xwp/wp-dev-lib",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xwp/wp-dev-lib.git",
-                "reference": "86cc5e69b072804c066d10e9008d1576e26aa3cf"
+                "reference": "3e3ced3fdc5c47bbb59cde2f693ce115f2865f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xwp/wp-dev-lib/zipball/86cc5e69b072804c066d10e9008d1576e26aa3cf",
-                "reference": "86cc5e69b072804c066d10e9008d1576e26aa3cf",
+                "url": "https://api.github.com/repos/xwp/wp-dev-lib/zipball/3e3ced3fdc5c47bbb59cde2f693ce115f2865f82",
+                "reference": "3e3ced3fdc5c47bbb59cde2f693ce115f2865f82",
                 "shasum": ""
             },
             "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "find ./scripts -name *.php -print0 | xargs -0 -n1 -P8 php -l",
+                    "shellcheck **/*.sh || true",
+                    "shellcheck --format json **/*.sh | grep --quiet --invert-match '\"level\":\"error\"'"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -1102,9 +1108,13 @@
             "description": "Common code used during development of WordPress plugins and themes",
             "homepage": "https://github.com/xwp/wp-dev-lib",
             "keywords": [
-                "wordpress"
+                "WordPress"
             ],
-            "time": "2020-01-09T12:33:32+00:00"
+            "support": {
+                "issues": "https://github.com/xwp/wp-dev-lib/issues",
+                "source": "https://github.com/xwp/wp-dev-lib"
+            },
+            "time": "2020-01-17T09:26:20+00:00"
         }
     ],
     "aliases": [],
