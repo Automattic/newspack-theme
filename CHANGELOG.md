@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/Automattic/newspack-theme/compare/v1.1.0...v1.2.0) (2020-03-17)
+
+
+### Bug Fixes
+
+* apply custom header color background to Newspack Nelson's footer ([04e387a](https://github.com/Automattic/newspack-theme/commit/04e387a652fb519773abf07916b9f7901877e971))
+* correct issues in where custom typography is applied ([#831](https://github.com/Automattic/newspack-theme/issues/831)) ([f3d0ec8](https://github.com/Automattic/newspack-theme/commit/f3d0ec896cf4f6c28733fd4843590ab0de4a5340))
+* make sure featured images are visible on pages with all templates ([346a972](https://github.com/Automattic/newspack-theme/commit/346a972f712561f2659d04581f9be7e33415c64d))
+
+
+### Features
+
+* add podigee icon to social icons svgs ([8e973a5](https://github.com/Automattic/newspack-theme/commit/8e973a519c6204642f5607bd096a261748a5aff3))
+
 # [1.1.0](https://github.com/Automattic/newspack-theme/compare/v1.0.0...v1.1.0) (2020-03-10)
 
 
