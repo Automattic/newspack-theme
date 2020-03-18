@@ -44,22 +44,6 @@ class Newspack_Walker_Comment extends Walker_Comment {
 							}
 						}
 
-						/*
-						 * Using the `check` icon instead of `check_circle`, since we can't add a
-						 * fill color to the inner check shape when in circle form.
-						 */
-						if ( newspack_is_comment_by_post_author( $comment ) ) {
-							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', newspack_get_icon_svg( 'check', 24 ) );
-						}
-
-						/*
-						 * Using the `check` icon instead of `check_circle`, since we can't add a
-						 * fill color to the inner check shape when in circle form.
-						 */
-						if ( newspack_is_comment_by_post_author( $comment ) ) {
-							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', newspack_get_icon_svg( 'check', 24 ) );
-						}
-
 						printf(
 							wp_kses(
 								/* translators: %s: comment author link */
@@ -72,6 +56,11 @@ class Newspack_Walker_Comment extends Walker_Comment {
 							),
 							'<b class="fn">' . get_comment_author_link( $comment ) . '</b>'
 						);
+
+						/* Display icon if the commenter is the current post's author. */
+						if ( newspack_is_comment_by_post_author( $comment ) ) {
+							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', wp_kses( newspack_get_icon_svg( 'check', 24 ), newspack_sanitize_svgs() ) );
+						}
 
 						if ( ! empty( $comment_author_url ) ) {
 							echo '</a>';
