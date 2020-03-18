@@ -59,7 +59,6 @@ function newspack_custom_colors_css() {
 		.nav1 .main-menu > li > a + svg,
 		.search-form button:active, .search-form button:hover, .search-form button:focus,
 		.entry-footer a,
-		.comment .comment-author .post-author-badge,
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,
@@ -89,6 +88,7 @@ function newspack_custom_colors_css() {
 		.highlight-menu .menu-label,
 		/* Header default background; default height */
 		body.h-db.h-dh .site-header .nav3 .menu-highlight a,
+		.comment .comment-author .post-author-badge,
 		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
