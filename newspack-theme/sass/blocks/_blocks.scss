@@ -1117,6 +1117,21 @@
 			padding-right: $size__spacing-unit;
 		}
 	}
+
+	// keep nested align-full elements from overflowing the container.
+	.entry .entry-content {
+		.wp-block-column,
+		.wp-block-group,
+		.wp-block-cover {
+			.alignwide,
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 }
 
 //! Mailchimp block
