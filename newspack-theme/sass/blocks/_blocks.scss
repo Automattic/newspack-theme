@@ -1125,7 +1125,7 @@
 		width: 100%;
 	}
 
-	#wp-block-jetpack-mailchimp_consent-text {
+	p[id^='wp-block-jetpack-mailchimp'] {
 		font-size: $font__size-sm;
 	}
 }
