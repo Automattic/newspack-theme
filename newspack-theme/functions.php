@@ -699,6 +699,39 @@ function newspack_coauthors_in_rss( $the_author ) {
 }
 add_filter( 'the_author', 'newspack_coauthors_in_rss' );
 
+
+/**
+ * Comment TK.
+ */
+function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive, $placement, $context ) {
+	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
+	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
+		return true;
+	}
+	return $responsive;
+}
+add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
+
+/**
+ * Comment TK.
+ */
+function newspack_theme_newspack_ads_breakpoint( $breakpoint, $placement, $context ) {
+	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
+	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
+		switch ( get_page_template_slug() ) {
+			case 'single-wide.php':
+				$breakpoint = round( $breakpoint / 0.9 );
+				break;
+			case 'single-feature.php':
+			default:
+				$breakpoint = round( $breakpoint / 0.585 );
+				break;
+		}
+	}
+	return $breakpoint;
+}
+add_filter( 'newspack_ads_breakpoint', 'newspack_theme_newspack_ads_breakpoint', 10, 3 );
+
 /**
  * Notify about child theme deprecation.
  * TODO: Remove after child theme code is removed.
