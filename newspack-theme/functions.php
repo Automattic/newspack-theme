@@ -701,7 +701,29 @@ add_filter( 'the_author', 'newspack_coauthors_in_rss' );
 
 
 /**
- * Comment TK.
+ * Determine minimum theme breakpoint, below which responsive Ads media queries should not have a min-width.
+ *
+ * @param boolean $should_show Default value of whether the min-width should be included.
+ * @param string  $placement ID of the ad placement.
+ * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @param integer $breakpoint The breakpoint to include or not.
+ * @return boolean Whether to include the min-width.
+ */
+function newspack_theme_newspack_ads_should_have_min_width( $should_show, $placement, $context, $breakpoint ) {
+	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
+		return $breakpoint >= 782;
+	}
+	return true;
+}
+add_filter( 'newspack_ads_should_have_min_width', 'newspack_theme_newspack_ads_should_have_min_width', 10, 4 );
+
+/**
+ * Should a particular Ad deployment use responsive placement.
+ *
+ * @param boolean $responsive Default value of whether to use responsive placement.
+ * @param string  $placement ID of the ad placement.
+ * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @return boolean Whether to use responsive placement.
  */
 function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive, $placement, $context ) {
 	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
@@ -713,7 +735,12 @@ function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive
 add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
 
 /**
- * Comment TK.
+ * Filter to set breakpoints for responsive ads.
+ *
+ * @param integer $breakpoint The breakpoint.
+ * @param string  $placement ID of the ad placement.
+ * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @return integer Breakpoint value.
  */
 function newspack_theme_newspack_ads_breakpoint( $breakpoint, $placement, $context ) {
 	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
