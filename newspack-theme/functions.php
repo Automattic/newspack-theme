@@ -699,23 +699,35 @@ function newspack_coauthors_in_rss( $the_author ) {
 }
 add_filter( 'the_author', 'newspack_coauthors_in_rss' );
 
-
 /**
  * Determine minimum theme breakpoint, below which responsive Ads media queries should not have a min-width.
  *
- * @param boolean $should_show Default value of whether the min-width should be included.
+ * @param object  $media_query Default media query elements: min_width, max_width.
  * @param string  $placement ID of the ad placement.
  * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
- * @param integer $breakpoint The breakpoint to include or not.
- * @return boolean Whether to include the min-width.
+ * @param integer $width Width of the Ad Unit.
+ * @param integer $height Height of the Ad Unit.
+ * @return object The correct media query to use.
  */
-function newspack_theme_newspack_ads_should_have_min_width( $should_show, $placement, $context, $breakpoint ) {
+function newspack_theme_newspack_ads_media_query_for_size( $media_query, $placement, $context, $width, $height ) {
 	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
-		return $breakpoint >= 782;
+		switch ( get_page_template_slug() ) {
+			case 'single-wide.php':
+				$media_query['max_width'] = round( $media_query['max_width'] / 0.9 );
+				$media_query['min_width'] = round( $media_query['min_width'] / 0.9 );
+				break;
+			case 'single-feature.php':
+			default:
+				$adjusted_max_width       = round( $media_query['max_width'] / 0.585 );
+				$adjusted_min_width       = round( $media_query['min_width'] / 0.585 );
+				$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : $media_query['max_width'];
+				$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : $media_query['min_width'];
+				break;
+		}
 	}
-	return true;
+	return $media_query;
 }
-add_filter( 'newspack_ads_should_have_min_width', 'newspack_theme_newspack_ads_should_have_min_width', 10, 4 );
+add_filter( 'newspack_ads_media_query_for_size', 'newspack_theme_newspack_ads_media_query_for_size', 10, 5 );
 
 /**
  * Should a particular Ad deployment use responsive placement.
@@ -733,31 +745,6 @@ function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive
 	return $responsive;
 }
 add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
-
-/**
- * Filter to set breakpoints for responsive ads.
- *
- * @param integer $breakpoint The breakpoint.
- * @param string  $placement ID of the ad placement.
- * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
- * @return integer Breakpoint value.
- */
-function newspack_theme_newspack_ads_breakpoint( $breakpoint, $placement, $context ) {
-	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
-	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
-		switch ( get_page_template_slug() ) {
-			case 'single-wide.php':
-				$breakpoint = round( $breakpoint / 0.9 );
-				break;
-			case 'single-feature.php':
-			default:
-				$breakpoint = round( $breakpoint / 0.585 );
-				break;
-		}
-	}
-	return $breakpoint;
-}
-add_filter( 'newspack_ads_breakpoint', 'newspack_theme_newspack_ads_breakpoint', 10, 3 );
 
 /**
  * Notify about child theme deprecation.
