@@ -172,7 +172,7 @@
 		margin-top: 32px;
 
 		&:first-child,
-		&.wpnbha:first-child .article-section-title,
+		&:first-child .article-section-title, // when Load More is enabled.
 		&.accent-header + div.wpnbha {
 			margin-top: 0;
 		}
