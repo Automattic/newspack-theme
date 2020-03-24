@@ -711,33 +711,42 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
 		switch ( get_page_template_slug() ) {
 			case 'single-wide.php':
-				foreach ( $media_queries as &$media_query ) {
+				foreach ( $media_queries as $index => &$media_query ) {
+					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
 					if ( intval( $media_query['width'] ) > 1200 ) {
 						$media_query['min_width'] = null;
 						$media_query['max_width'] = null;
 					} else {
-						$max_width = intval( $media_query['max_width'] );
-						$min_width = intval( $media_query['min_width'] );
-
-						$media_query['max_width'] = round( $max_width / 0.9 );
-						$media_query['min_width'] = round( $min_width / 0.9 );
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
 					}
 				}
 				break;
 			case 'single-feature.php':
 			default:
-				foreach ( $media_queries as &$media_query ) {
+				foreach ( $media_queries as $index => &$media_query ) {
+					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
 					if ( intval( $media_query['width'] ) > 780 ) {
 						$media_query['min_width'] = null;
 						$media_query['max_width'] = null;
+					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
 					} else {
-						$max_width = intval( $media_query['max_width'] );
-						$min_width = intval( $media_query['min_width'] );
-
-						$adjusted_max_width       = round( $max_width / 0.585 );
-						$adjusted_min_width       = round( $min_width / 0.585 );
-						$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : ( $max_width / 0.9 );
-						$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : ( $min_width / 0.9 );
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
 					}
 				}
 				break;
