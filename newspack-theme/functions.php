@@ -713,15 +713,27 @@ function newspack_theme_newspack_ads_media_query_for_size( $media_query, $placem
 	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
 		switch ( get_page_template_slug() ) {
 			case 'single-wide.php':
+				if ( $width > 1200 ) {
+					return array(
+						'min_width' => null,
+						'max_width' => null,
+					);
+				}
 				$media_query['max_width'] = round( $media_query['max_width'] / 0.9 );
 				$media_query['min_width'] = round( $media_query['min_width'] / 0.9 );
 				break;
 			case 'single-feature.php':
 			default:
+				if ( $width > 780 ) {
+					return array(
+						'min_width' => null,
+						'max_width' => null,
+					);
+				}
 				$adjusted_max_width       = round( $media_query['max_width'] / 0.585 );
 				$adjusted_min_width       = round( $media_query['min_width'] / 0.585 );
-				$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : $media_query['max_width'];
-				$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : $media_query['min_width'];
+				$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : ( $media_query['max_width'] / 0.9 );
+				$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : ( $media_query['min_width'] / 0.9 );
 				break;
 		}
 	}
