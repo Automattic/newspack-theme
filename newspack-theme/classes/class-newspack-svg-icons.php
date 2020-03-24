@@ -52,7 +52,7 @@ class Newspack_SVG_Icons {
 				$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );
 				$domains            = array_map( 'trim', $domains ); // Remove leading/trailing spaces, to prevent regex from failing to match.
 				$domains            = array_map( 'preg_quote', $domains );
-				$regex_map[ $icon ] = sprintf( '/(%s)/i', implode( '|', $domains ) );
+				$regex_map[ $icon ] = sprintf( '#(%s)#i', implode( '|', $domains ) );
 			}
 		}
 		foreach ( $regex_map as $icon => $regex ) {
@@ -221,7 +221,7 @@ class Newspack_SVG_Icons {
 			'fb.me',
 		),
 		'feed'        => array(
-			'feed',
+			'/feed',
 		),
 		'google-plus' => array(
 			'plus.google.com',
