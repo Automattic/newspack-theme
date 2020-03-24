@@ -702,44 +702,50 @@ add_filter( 'the_author', 'newspack_coauthors_in_rss' );
 /**
  * Determine minimum theme breakpoint, below which responsive Ads media queries should not have a min-width.
  *
- * @param object  $media_query Default media query elements: min_width, max_width.
- * @param string  $placement ID of the ad placement.
- * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
- * @param integer $width Width of the Ad Unit.
- * @param integer $height Height of the Ad Unit.
- * @return object The correct media query to use.
+ * @param array  $media_queries An array of objects, one for each size, with width|height|min_width|min_height.
+ * @param string $placement ID of the ad placement.
+ * @param string $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @return array The correct array of media query data.
  */
-function newspack_theme_newspack_ads_media_query_for_size( $media_query, $placement, $context, $width, $height ) {
+function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, $context ) {
 	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
 		switch ( get_page_template_slug() ) {
 			case 'single-wide.php':
-				if ( $width > 1200 ) {
-					return array(
-						'min_width' => null,
-						'max_width' => null,
-					);
+				foreach ( $media_queries as &$media_query ) {
+					if ( intval( $media_query['width'] ) > 1200 ) {
+						$media_query['min_width'] = null;
+						$media_query['max_width'] = null;
+					} else {
+						$max_width = intval( $media_query['max_width'] );
+						$min_width = intval( $media_query['min_width'] );
+
+						$media_query['max_width'] = round( $max_width / 0.9 );
+						$media_query['min_width'] = round( $min_width / 0.9 );
+					}
 				}
-				$media_query['max_width'] = round( $media_query['max_width'] / 0.9 );
-				$media_query['min_width'] = round( $media_query['min_width'] / 0.9 );
 				break;
 			case 'single-feature.php':
 			default:
-				if ( $width > 780 ) {
-					return array(
-						'min_width' => null,
-						'max_width' => null,
-					);
+				foreach ( $media_queries as &$media_query ) {
+					if ( intval( $media_query['width'] ) > 780 ) {
+						$media_query['min_width'] = null;
+						$media_query['max_width'] = null;
+					} else {
+						$max_width = intval( $media_query['max_width'] );
+						$min_width = intval( $media_query['min_width'] );
+
+						$adjusted_max_width       = round( $max_width / 0.585 );
+						$adjusted_min_width       = round( $min_width / 0.585 );
+						$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : ( $max_width / 0.9 );
+						$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : ( $min_width / 0.9 );
+					}
 				}
-				$adjusted_max_width       = round( $media_query['max_width'] / 0.585 );
-				$adjusted_min_width       = round( $media_query['min_width'] / 0.585 );
-				$media_query['max_width'] = $adjusted_max_width >= 782 ? $adjusted_max_width : ( $media_query['max_width'] / 0.9 );
-				$media_query['min_width'] = $adjusted_min_width >= 782 ? $adjusted_min_width : ( $media_query['min_width'] / 0.9 );
 				break;
 		}
 	}
-	return $media_query;
+	return $media_queries;
 }
-add_filter( 'newspack_ads_media_query_for_size', 'newspack_theme_newspack_ads_media_query_for_size', 10, 5 );
+add_filter( 'newspack_ads_media_queries', 'newspack_theme_newspack_ads_media_queries', 10, 3 );
 
 /**
  * Should a particular Ad deployment use responsive placement.
