@@ -25,8 +25,6 @@ get_header();
 				// Template part for large featured images.
 				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
-				elseif ( is_page() ) :
-					newspack_post_thumbnail();
 				else :
 				?>
 					<header class="entry-header">
@@ -46,7 +44,11 @@ get_header();
 						newspack_post_thumbnail();
 					}
 
-					get_template_part( 'template-parts/content/content', 'single' );
+					if ( is_page() ) {
+						get_template_part( 'template-parts/content/content', 'page' );
+					} else {
+						get_template_part( 'template-parts/content/content', 'single' );
+					}
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {

@@ -172,7 +172,7 @@
 		margin-top: 32px;
 
 		&:first-child,
-		&.wpnbha:first-child .article-section-title,
+		&:first-child .article-section-title, // when Load More is enabled.
 		&.accent-header + div.wpnbha {
 			margin-top: 0;
 		}
@@ -214,12 +214,6 @@
 
 	.wp-block-cover__inner-container {
 		width: 100%;
-	}
-
-	h2 {
-		max-width: 100%;
-		padding-left: 0;
-		text-align: left;
 	}
 
 	article .entry-meta,
@@ -1117,6 +1111,21 @@
 			padding-right: $size__spacing-unit;
 		}
 	}
+
+	// keep nested align-full elements from overflowing the container.
+	.entry .entry-content {
+		.wp-block-column,
+		.wp-block-group,
+		.wp-block-cover {
+			.alignwide,
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 }
 
 //! Mailchimp block
@@ -1125,7 +1134,7 @@
 		width: 100%;
 	}
 
-	#wp-block-jetpack-mailchimp_consent-text {
+	p[id^='wp-block-jetpack-mailchimp'] {
 		font-size: $font__size-sm;
 	}
 }
