@@ -1,3 +1,21 @@
+# [1.3.0](https://github.com/Automattic/newspack-theme/compare/v1.2.0...v1.3.0) (2020-03-24)
+
+
+### Bug Fixes
+
+* change way featured images are added to fix missing titles ([#837](https://github.com/Automattic/newspack-theme/issues/837)) ([7fb8ff2](https://github.com/Automattic/newspack-theme/commit/7fb8ff26e8f7ad231a146f3d8837df7dbfc583c8))
+* correct position of comment icon indicating current author ([#824](https://github.com/Automattic/newspack-theme/issues/824)) ([6778719](https://github.com/Automattic/newspack-theme/commit/677871992e0de60f4b87e611d59ef11728ea9a5d))
+* prevent id selector format error ([#833](https://github.com/Automattic/newspack-theme/issues/833)) ([2fdb043](https://github.com/Automattic/newspack-theme/commit/2fdb043a10857cb2152ae319eda673489c211fdf))
+* remove style overrides from h2 in cover blocks ([#834](https://github.com/Automattic/newspack-theme/issues/834)) ([15eb042](https://github.com/Automattic/newspack-theme/commit/15eb042e42746f4d422af6ef093c9a7999eb644f))
+* remove top margin on accent-header in column ([#829](https://github.com/Automattic/newspack-theme/issues/829)) ([f72a529](https://github.com/Automattic/newspack-theme/commit/f72a529a7da5f00e6200db4d14be7b58ed11b5a4))
+* set max width for nested full and wide blocks ([#827](https://github.com/Automattic/newspack-theme/issues/827)) ([22e2655](https://github.com/Automattic/newspack-theme/commit/22e26552100192d614b256ca098ba0f3d7b7941b))
+* set size for above copyright widget titles ([#828](https://github.com/Automattic/newspack-theme/issues/828)) ([aa4231f](https://github.com/Automattic/newspack-theme/commit/aa4231fe25ef7850b85a3a29a484fe0e9841778c))
+
+
+### Features
+
+* filters for super cool ad inserter placements ([#839](https://github.com/Automattic/newspack-theme/issues/839)) ([e3ac56b](https://github.com/Automattic/newspack-theme/commit/e3ac56b8a6b31de5d662fc8823e6aa72aecbabd1))
+
 # [1.2.0](https://github.com/Automattic/newspack-theme/compare/v1.1.0...v1.2.0) (2020-03-17)
 
 
