@@ -1,8 +1,10 @@
 // Menu Toggles
 .mobile-menu-toggle,
 .desktop-menu-toggle {
+	align-items: center;
 	background-color: transparent;
 	color: inherit;
+	display: flex;
 	padding: 0;
 
 	&:hover,
@@ -11,9 +13,12 @@
 		color: inherit;
 	}
 
-	.svg-icon {
-		position: relative;
-		top: 5px;
+	&:focus {
+		outline-offset: 0;
+	}
+
+	svg {
+		margin-right: #{0.25 * $size__spacing-unit};
 	}
 }
 
@@ -57,7 +62,7 @@
 
 	// Desktop Menu toggle
 	.h-dh .site-header .desktop-menu-toggle {
-		display: block;
+		display: flex;
 	}
 }
 
@@ -71,7 +76,7 @@
 
 	// Desktop Menu toggle
 	.h-sh .site-header .desktop-menu-toggle {
-		display: block;
+		display: flex;
 	}
 }
 
@@ -111,6 +116,10 @@
 		background: transparent;
 		text-decoration: underline;
 	}
+
+	.widget-title {
+		margin: 0 0 #{0.5 * $size__spacing-unit};
+	}
 }
 
 // Desktop Sidebar and Widget styles
@@ -131,6 +140,7 @@
 		border-top: 1px solid $color__border;
 		font-size: 0.9em;
 		margin-bottom: #{1.5 * $size__spacing-unit};
+		padding-top: #{1.5 * $size__spacing-unit};
 
 		&:last-child {
 			margin-bottom: #{1.5 * $size__spacing-unit};
@@ -139,7 +149,6 @@
 
 	.widget-title {
 		font-size: $font__size-md;
-		margin: #{1.5 * $size__spacing-unit} 0 #{0.5 * $size__spacing-unit};
 	}
 }
 
@@ -173,7 +182,15 @@
 	nav + .widget,
 	.widget + .widget {
 		border-top: 1px solid #fff;
+	}
+
+	nav + nav {
 		padding-top: #{0.75 * $size__spacing-unit};
+	}
+
+	nav + .widget,
+	.widget + .widget {
+		padding-top: $size__spacing-unit;
 	}
 
 	.nav1 .main-menu > li.menu-item-has-children .submenu-expand svg,
@@ -241,6 +258,11 @@
 .desktop-menu-opened #desktop-sidebar-fallback {
 	> * {
 		display: block;
+	}
+
+	> .desktop-menu-toggle,
+	> .mobile-menu-toggle {
+		display: flex;
 	}
 }
 

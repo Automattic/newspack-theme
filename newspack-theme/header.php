@@ -41,7 +41,7 @@
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
-					<?php if ( true === $show_slideout_sidebar ) : ?>
+					<?php if ( true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
@@ -74,7 +74,7 @@
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
-				<?php if ( true === $header_simplified && true === $show_slideout_sidebar ) : ?>
+				<?php if ( true === $header_simplified && true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
 					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 						<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
