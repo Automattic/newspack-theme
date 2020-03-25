@@ -15,7 +15,9 @@ module.exports = {
 		[
 			'semantic-release-version-bump',
 			{
-				files: 'newspack-*/sass/style.scss',
+				// build script is run before semantic-release, so the version in *.css files
+				// have to be updated explicitly
+				files: [ 'newspack-*/sass/style.scss', 'newspack-*/style.css' ],
 				callback: 'npm run release:archive',
 			},
 		],
