@@ -1195,3 +1195,13 @@
 		}
 	}
 }
+
+//! Social Links block
+.entry-content .wp-social-link {
+	a,
+	a:active,
+	a:hover,
+	a:visited {
+		color: currentColor;
+	}
+}
