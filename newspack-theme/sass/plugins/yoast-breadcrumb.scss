@@ -1,6 +1,11 @@
 .site-breadcrumb {
 	color: $color__text-light;
+	display: none;
 	padding: 0.5em 0;
+
+	@include media( tablet ) {
+		display: block;
+	}
 
 	.wrapper {
 		> span {
