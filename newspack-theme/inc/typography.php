@@ -118,9 +118,10 @@ function newspack_custom_typography_css() {
 		blockquote cite,
 
 		/* Jetpack */
-		.entry-content #jp-relatedposts h3.jp-relatedposts-headline,
-		.entry-content #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post .jp-relatedposts-post-title a
-
+		.jp-relatedposts-i2,
+		#jp-relatedposts.jp-relatedposts,
+		.jp-relatedposts-i2 .jp-relatedposts-headline,
+		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
@@ -242,6 +243,8 @@ function newspack_custom_typography_css() {
 		/* Jetpack blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 a,
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 strong,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-date,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-context,
 
 		/* Classic Editor */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption dd,
