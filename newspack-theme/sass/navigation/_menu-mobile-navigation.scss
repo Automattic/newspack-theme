@@ -1,7 +1,10 @@
-.mobile-menu-toggle {
+// Menu Toggles
+.mobile-menu-toggle,
+.desktop-menu-toggle {
+	align-items: center;
 	background-color: transparent;
 	color: inherit;
-	margin-left: auto;
+	display: flex;
 	padding: 0;
 
 	&:hover,
@@ -10,63 +13,97 @@
 		color: inherit;
 	}
 
-	.svg-icon {
-		position: relative;
-		top: 4px;
+	&:focus {
+		outline-offset: 0;
+	}
+
+	svg {
+		margin-right: #{0.25 * $size__spacing-unit};
 	}
 }
 
-.site-header .mobile-menu-toggle {
+.site-header .mobile-menu-toggle,
+.site-header .desktop-menu-toggle {
 	&:hover {
 		color: inherit;
 	}
 }
 
+// Place mobile menu on far right.
+.mobile-menu-toggle {
+	margin-left: auto;
+}
+
+// Hide desktop menu toggle on smaller screens
+.site-header .desktop-menu-toggle {
+	display: none;
+	font-size: $font__size-xs;
+	font-weight: normal;
+	line-height: 2;
+	margin-right: #{1.5 * $size__spacing-unit};
+	padding: #{0.125 * $size__spacing-unit} 0;
+}
+
+.middle-header-contain .desktop-menu-toggle {
+	margin-right: $size__spacing-unit;
+	span {
+		left: -99999em;
+		position: absolute;
+	}
+}
+
 @include media( tablet ) {
 	// Header default height
+
+	// Mobile Menu toggle
 	.h-dh .site-header .mobile-menu-toggle {
 		display: none;
+	}
+
+	// Desktop Menu toggle
+	.h-dh .site-header .desktop-menu-toggle {
+		display: flex;
 	}
 }
 
 @include media( narrowdesktop ) {
 	// Header - short height
+
+	// Mobile Menu toggle
 	.h-sh .site-header .mobile-menu-toggle {
 		display: none;
 	}
+
+	// Desktop Menu toggle
+	.h-sh .site-header .desktop-menu-toggle {
+		display: flex;
+	}
 }
 
-.mobile-sidebar {
-	background-color: $color__primary;
-	color: #fff;
+.mobile-sidebar,
+.desktop-sidebar {
 	font-size: $font__size-sm;
-	width: 90vw;
 	padding: $size__spacing-unit;
-
-	@include media( tablet ) {
-		width: 33vw;
-	}
+	width: 90vw;
 
 	> * {
 		clear: both;
 		margin-bottom: $size__spacing-unit;
 	}
 
-	.mobile-menu-toggle {
+	.mobile-menu-toggle,
+	.desktop-menu-toggle {
 		font-size: 1em;
 		float: right;
 		margin: 0 0 $size__spacing-unit;
 		padding: 0;
 	}
 
-	ul ul {
-		margin-left: $size__spacing-unit;
-	}
-
-	a,
-	a:visited,
-	.nav1 .sub-menu > li > a {
-		color: #fff;
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	a {
@@ -80,15 +117,80 @@
 		text-decoration: underline;
 	}
 
+	.widget-title {
+		margin: 0 0 #{0.5 * $size__spacing-unit};
+	}
+}
+
+// Desktop Sidebar and Widget styles
+.desktop-sidebar {
+	background-color: #fff;
+	max-width: 400px;
+
+	@include media( tablet ) {
+		width: 50vw;
+	}
+
+	a,
+	a:visited {
+		color: $color__text-main;
+	}
+
+	.widget {
+		border-top: 1px solid $color__border;
+		font-size: 0.9em;
+		margin-bottom: #{1.5 * $size__spacing-unit};
+		padding-top: #{1.5 * $size__spacing-unit};
+
+		&:last-child {
+			margin-bottom: #{1.5 * $size__spacing-unit};
+		}
+	}
+
+	.widget-title {
+		font-size: $font__size-md;
+	}
+}
+
+// Modile Sidebar and Menu styles
+.mobile-sidebar {
+	background-color: $color__primary;
+	color: #fff;
+
+	@include media( tablet ) {
+		width: 33vw;
+	}
+
+	a,
+	a:visited,
+	.nav1 .sub-menu > li > a {
+		color: #fff;
+	}
+
+	ul ul {
+		margin-left: $size__spacing-unit;
+	}
+
+	// Styles specific to menus moved from the header
 	nav.secondary-menu a,
 	.nav1 .main-menu > li > a {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	nav.nav1 + nav.secondary-menu {
+	nav + nav,
+	nav + .widget,
+	.widget + .widget {
 		border-top: 1px solid #fff;
+	}
+
+	nav + nav {
 		padding-top: #{0.75 * $size__spacing-unit};
+	}
+
+	nav + .widget,
+	.widget + .widget {
+		padding-top: $size__spacing-unit;
 	}
 
 	.nav1 .main-menu > li.menu-item-has-children .submenu-expand svg,
@@ -107,15 +209,26 @@
 			padding: #{0.125 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 		}
 	}
+
+	.widget {
+		font-size: 1em;
+
+		&:last-child {
+			margin-bottom: #{1.5 * $size__spacing-unit};
+		}
+	}
+
+	.widget-title {
+		font-size: 1.1em;
+	}
 }
 
+#desktop-sidebar-fallback,
 #mobile-sidebar-fallback {
 	bottom: 0;
 	overflow: auto;
 	position: fixed;
-	right: -100%;
 	top: 0;
-	transition: right 0.2s;
 	z-index: 999999;
 
 	> * {
@@ -123,15 +236,38 @@
 	}
 }
 
+#desktop-sidebar-fallback {
+	left: -100%;
+	transition: left 0.2s;
+}
+
+#mobile-sidebar-fallback {
+	right: -100%;
+	transition: right 0.2s;
+}
+
 .menu-opened #mobile-sidebar-fallback {
 	right: 0;
+}
 
+.desktop-menu-opened #desktop-sidebar-fallback {
+	left: 0;
+}
+
+.menu-opened #mobile-sidebar-fallback,
+.desktop-menu-opened #desktop-sidebar-fallback {
 	> * {
 		display: block;
 	}
+
+	> .desktop-menu-toggle,
+	> .mobile-menu-toggle {
+		display: flex;
+	}
 }
 
-.menu-opened::after {
+.menu-opened::after,
+.desktop-menu-opened::after {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	bottom: 0;
 	content: '';

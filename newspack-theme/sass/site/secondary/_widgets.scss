@@ -38,12 +38,15 @@
 
 		li {
 			font-family: $font__heading;
-			margin-bottom: #{0.25 * $size__spacing-unit};
 
 			ul {
 				margin-left: 1.5em;
-				margin-top: #{0.5 * $size__spacing-unit};
 			}
+		}
+
+		a {
+			display: inline-block;
+			padding: #{0.125 * $size__spacing-unit} 0;
 		}
 	}
 }

@@ -6,7 +6,7 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function() {
+( function( $ ) {
 	wp.customize.bind( 'ready', function() {
 		// Only show the color hue control when there's a custom primary color.
 		wp.customize( 'theme_colors', function( setting ) {
@@ -133,6 +133,45 @@
 				};
 				visibility();
 				setting.bind( visibility );
+			} );
+		} );
+
+		// Only show Slide-out Sidebar options when enabled.
+		wp.customize( 'header_show_slideout', function( setting ) {
+			wp.customize.control( 'slideout_label', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'slideout_widget_mobile', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
+		// Lets you jump to specific sections in the Customizer
+		$( [ 'control', 'section', 'panel' ] ).each( function( i, type ) {
+			$( 'a[rel="goto-' + type + '"]' ).click( function( e ) {
+				e.preventDefault();
+				const id = $( this )
+					.attr( 'href' )
+					.replace( '#', '' );
+				if ( wp.customize[ type ].has( id ) ) {
+					wp.customize[ type ].instance( id ).focus();
+				}
 			} );
 		} );
 	} );

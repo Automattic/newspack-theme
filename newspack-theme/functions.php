@@ -248,6 +248,22 @@ function newspack_widgets_init() {
 
 	register_sidebar(
 		array(
+			'name'          => __( 'Slide-out Sidebar', 'newspack' ),
+			'id'            => 'header-1',
+			'description'   => sprintf(
+				/* translators: %s: link to Header Settings panel in Customizer. */
+				__( 'Add widgets here to appear in an off-screen sidebar when it is enabled under %s.', 'newspack' ),
+				'<a rel="goto-control" href="#header_show_slideout">' . __( 'Header Settings', 'newspack' ) . '</a>'
+			),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer', 'newspack' ),
 			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'newspack' ),

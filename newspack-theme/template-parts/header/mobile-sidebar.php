@@ -19,15 +19,21 @@ if ( newspack_is_amp() ) : ?>
 		</button>
 <?php endif; ?>
 
-		<?php newspack_tertiary_menu(); ?>
+		<?php
+		newspack_tertiary_menu();
 
-		<?php get_search_form(); ?>
+		get_search_form();
 
-		<?php newspack_primary_menu(); ?>
+		newspack_primary_menu();
 
-		<?php newspack_secondary_menu(); ?>
+		newspack_secondary_menu();
 
-		<?php newspack_social_menu_header(); ?>
+		newspack_social_menu_header();
+
+		if ( true === get_theme_mod( 'slideout_widget_mobile', false ) && is_active_sidebar( 'header-1' ) ) {
+			dynamic_sidebar( 'header-1' );
+		}
+		?>
 
 <?php if ( newspack_is_amp() ) : ?>
 	</amp-sidebar>
