@@ -1,0 +1,21 @@
+.site-breadcrumb {
+	color: $color__text-light;
+	padding: 0.5em 0;
+
+	.wrapper {
+		> span {
+			font-family: $font__heading;
+			font-size: $font__size-xxs;
+			line-height: $font__line-height-heading;
+		}
+	}
+
+	.breadcrumb_last {
+		color: $color__text-main;
+	}
+
+	// Hide on homepage
+	.home & {
+		display: none;
+	}
+}
