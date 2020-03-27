@@ -391,24 +391,26 @@
 }
 
 .comments-toggle {
+	align-items: center;
 	background: transparent;
 	border-radius: 0;
 	border-top: 1px solid $color__border;
 	color: $color__text-main;
+	display: flex;
 	font-size: $font__size-sm;
+	justify-content: center;
 	margin-top: 0;
 	position: relative;
 	width: 100%;
 
 	svg {
-		position: relative;
-		top: 5px;
 		transform: rotate( 90deg );
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: transparent;
-		color: $color__text-main;
+		color: $color__primary;
 	}
 }
 
