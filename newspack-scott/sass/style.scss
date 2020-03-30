@@ -301,7 +301,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .site-breadcrumb {
 	.wrapper > span {
-		&:before {
+		::before {
 			background-color: $color__primary;
 			content: '';
 			display: inline-block;

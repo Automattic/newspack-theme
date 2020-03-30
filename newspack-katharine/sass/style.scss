@@ -418,7 +418,7 @@ figcaption,
 		.wrapper {
 			border-top: 0;
 
-			& > span:before {
+			> span::before {
 				background-color: $color__primary;
 				content: '';
 				display: block;
