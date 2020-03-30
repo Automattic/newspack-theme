@@ -37,7 +37,7 @@
 
 		<?php
 		// If header is NOT short, or if header is short and there's a Secondary Menu or Slide-out Sidebar widget.
-		if ( false === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary' ) ) ) :
+		if ( false === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary-menu' ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
