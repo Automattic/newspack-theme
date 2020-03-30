@@ -413,32 +413,15 @@ textarea {
 			padding-right: 0.5rem;
 
 			.newspack-popup-wrapper {
-				box-shadow: 0 0 0 1px $color__text-main;
+				box-shadow: 0 0 0 1px;
 				max-height: calc( 100% - 1rem );
 			}
 		}
 
 		.newspack-lightbox__close {
-			background: transparent;
-			border: 1px solid $color__text-main;
-			border-radius: 0;
+			border: 1px solid;
 			border-right: 0;
 			border-top: 0;
-			color: inherit;
-			padding: 5px;
-			right: 0;
-			top: 0;
-
-			&:active,
-			&:focus,
-			&:hover {
-				background: $color__text-main;
-				color: white;
-			}
-
-			svg {
-				transition: fill 150ms ease-in-out;
-			}
 		}
 	}
 }
