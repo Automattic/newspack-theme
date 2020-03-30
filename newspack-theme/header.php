@@ -219,7 +219,7 @@
 
 	<?php
 	if ( function_exists('yoast_breadcrumb') ) {
-		yoast_breadcrumb( '<div class="site-breadcrumb"><div class="wrapper">','</div></div>' );
+		yoast_breadcrumb( '<div class="site-breadcrumb desktop-only"><div class="wrapper">','</div></div>' );
 	}
 	?>
 

@@ -68,6 +68,21 @@ body {
 	}
 }
 
+// Yoast Breadcrumbs
+.site-breadcrumb {
+	border-bottom: 1px solid;
+
+	.has-highlight-menu & {
+		border-top: 1px solid;
+		margin-top: 0.25rem;
+		padding-top: 0;
+
+		.wrapper {
+			border: 0;
+		}
+	}
+}
+
 /* Font Family */
 figcaption,
 .entry-meta,

@@ -408,3 +408,24 @@ figcaption,
 		color: inherit;
 	}
 }
+
+// Yoast Breadcrumbs
+
+.site-breadcrumb {
+	.has-highlight-menu & {
+		padding-top: 0;
+
+		.wrapper {
+			border-top: 0;
+
+			& > span:before {
+				background-color: $color__primary;
+				content: '';
+				display: block;
+				height: 5px;
+				margin: 0 0 #{0.5 * $size__spacing-unit};
+				width: 32px;
+			}
+		}
+	}
+}
