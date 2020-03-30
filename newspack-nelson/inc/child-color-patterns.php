@@ -88,6 +88,9 @@ function newspack_nelson_custom_colors_css() {
 			.nav1 .sub-menu a,
 			.h-sb .site-header .highlight-menu .menu-label,
 			.h-sb .site-header .highlight-menu a,
+			.h-sb .site-breadcrumb,
+			.h-sb .site-breadcrumb a,
+			.h-sb .site-breadcrumb .breadcrumb_last,
 			.h-sb .site-footer {
 				color: ' . esc_html( $header_color_contrast ) . ';
 			}
