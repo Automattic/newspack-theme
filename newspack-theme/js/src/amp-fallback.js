@@ -86,7 +86,7 @@
 	// Make sure comments exist before going any further.
 	if ( null !== commentsToggle ) {
 		const commentsWrapper = document.getElementById( 'comments-wrapper' ),
-		commentsToggleTextContain = commentsToggle.getElementsByTagName( 'span' )[ 0 ];
+			commentsToggleTextContain = commentsToggle.getElementsByTagName( 'span' )[ 0 ];
 
 		commentsToggle.addEventListener(
 			'click',
