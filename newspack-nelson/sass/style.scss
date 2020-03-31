@@ -75,31 +75,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.site-breadcrumb {
-	@include media( tablet ) {
-		margin-bottom: #{3.5 * $size__spacing-unit};
-	}
-
-	@include media( desktop ) {
-		margin-bottom: #{6 * $size__spacing-unit};
-	}
-
-	.h-sb & {
-		color: $color__background-body;
-
-		a,
-		.breadcrumb_last {
-			color: inherit;
-		}
-
-		a:active,
-		a:focus,
-		a:hover {
-			opacity: 0.75;
-		}
-	}
-}
-
 // Header
 
 .site-header,
@@ -539,6 +514,29 @@ blockquote {
 // Yoast Breadcrumb
 
 .site-breadcrumb {
+	@include media( tablet ) {
+		margin-bottom: #{3.5 * $size__spacing-unit};
+	}
+
+	@include media( desktop ) {
+		margin-bottom: #{6 * $size__spacing-unit};
+	}
+
+	.h-sb & {
+		color: $color__background-body;
+
+		a,
+		.breadcrumb_last {
+			color: inherit;
+		}
+
+		a:active,
+		a:focus,
+		a:hover {
+			opacity: 0.75;
+		}
+	}
+
 	.has-highlight-menu & {
 		.wrapper {
 			border-top-color: $color__primary-variation;
