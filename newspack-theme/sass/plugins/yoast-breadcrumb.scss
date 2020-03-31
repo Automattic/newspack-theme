@@ -15,8 +15,10 @@
 		color: $color__text-main;
 	}
 
-	// Hide on homepage
-	.home & {
+	// Hide on homepage and if the Featured Image is Behind or Beside
+	.home &,
+	.single-featured-image-behind &,
+	.single-featured-image-beside & {
 		display: none;
 	}
 
@@ -26,15 +28,6 @@
 
 		.wrapper {
 			border-top: 1px solid $color__border;
-		}
-	}
-
-	.single-featured-image-behind.has-highlight-menu &,
-	.single-featured-image-beside.has-highlight-menu & {
-		padding-top: 0;
-
-		.wrapper {
-			border-top: 0;
 		}
 	}
 }
