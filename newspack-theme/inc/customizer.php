@@ -247,7 +247,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_color_hex',
 		array(
-			'default'           => '#666',
+			'default'           => '#666666',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);

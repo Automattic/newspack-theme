@@ -190,7 +190,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
 					'slug'  => 'dark-gray',
-					'color' => '#111', // color__text-main
+					'color' => '#111111', // color__text-main
 				),
 				array(
 					'name'  => __( 'Medium Gray', 'newspack' ),
@@ -200,12 +200,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Light Gray', 'newspack' ),
 					'slug'  => 'light-gray',
-					'color' => '#eee', // color__background-pre
+					'color' => '#EEEEEE', // color__background-pre
 				),
 				array(
 					'name'  => __( 'White', 'newspack' ),
 					'slug'  => 'white',
-					'color' => '#FFF',
+					'color' => '#FFFFFF',
 				),
 			)
 		);
