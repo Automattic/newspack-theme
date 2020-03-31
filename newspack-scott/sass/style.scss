@@ -300,8 +300,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Yoast Breadcrumbs */
 
 .site-breadcrumb {
-	.wrapper > span {
-		::before {
+	.wrapper {
+		> span::before {
 			background-color: $color__primary;
 			content: '';
 			display: inline-block;
