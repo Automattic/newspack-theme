@@ -535,3 +535,13 @@ blockquote {
 		}
 	}
 }
+
+// Yoast Breadcrumb
+
+.site-breadcrumb {
+	.has-highlight-menu & {
+		.wrapper {
+			border-top-color: $color__primary-variation;
+		}
+	}
+}

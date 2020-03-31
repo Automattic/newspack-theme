@@ -35,7 +35,9 @@ function newspack_nelson_custom_colors_css() {
 		/* Header short height; default background */
 		.h-sh.h-db .site-header,
 		.site-content #primary,
-		#page .site-header {
+		#page .site-header,
+		/* Yoast Breadcrumb */
+		.has-highlight-menu .site-breadcrumb .wrapper {
 			border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 		}
 
