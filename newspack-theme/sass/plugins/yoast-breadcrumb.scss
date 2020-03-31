@@ -27,4 +27,13 @@
 			border-top: 1px solid $color__border;
 		}
 	}
+
+	.single-featured-image-behind.has-highlight-menu &,
+	.single-featured-image-beside.has-highlight-menu & {
+		padding-top: 0;
+
+		.wrapper {
+			border-top: 0;
+		}
+	}
 }
