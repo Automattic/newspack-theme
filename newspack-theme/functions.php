@@ -344,8 +344,10 @@ function newspack_scripts() {
 		}
 
 		$newspack_l10n = array(
-			'open_search'  => esc_html__( 'Open Search', 'newspack' ),
-			'close_search' => esc_html__( 'Close Search', 'newspack' ),
+			'open_search'       => esc_html__( 'Open Search', 'newspack' ),
+			'close_search'      => esc_html__( 'Close Search', 'newspack' ),
+			'expand_comments'   => esc_html__( 'Expand Comments', 'newspack' ),
+			'collapse_comments' => esc_html__( 'Collapse Comments', 'newspack' ),
 		);
 
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );

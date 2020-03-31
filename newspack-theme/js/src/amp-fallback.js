@@ -79,4 +79,27 @@
 			false
 		);
 	}
+
+	// Comments toggle fallback.
+	const commentsToggle = document.getElementById( 'comments-toggle' );
+
+	// Make sure comments exist before going any further.
+	if ( null !== commentsToggle ) {
+		const commentsWrapper = document.getElementById( 'comments-wrapper' ),
+		commentsToggleTextContain = commentsToggle.getElementsByTagName( 'span' )[ 0 ];
+
+		commentsToggle.addEventListener(
+			'click',
+			function() {
+				if ( commentsWrapper.classList.contains( 'comments-hide' ) ) {
+					commentsWrapper.classList.remove( 'comments-hide' );
+					commentsToggleTextContain.innerText = newspackScreenReaderText.collapse_comments;
+				} else {
+					commentsWrapper.classList.add( 'comments-hide' );
+					commentsToggleTextContain.innerText = newspackScreenReaderText.expand_comments;
+				}
+			},
+			false
+		);
+	}
 } )();
