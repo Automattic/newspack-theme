@@ -22,6 +22,7 @@
 <?php do_action( 'before_header' ); ?>
 
 <?php get_template_part( 'template-parts/header/mobile', 'sidebar' ); ?>
+<?php get_template_part( 'template-parts/header/desktop', 'sidebar' ); ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
@@ -29,16 +30,24 @@
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
 		<?php
-			$header_simplified  = get_theme_mod( 'header_simplified', false );
-			$header_center_logo = get_theme_mod( 'header_center_logo', false );
+			$header_simplified     = get_theme_mod( 'header_simplified', false );
+			$header_center_logo    = get_theme_mod( 'header_center_logo', false );
+			$show_slideout_sidebar = get_theme_mod( 'header_show_slideout', false );
 		?>
 
 		<?php
-		// Header is NOT short:
-		if ( false === $header_simplified ) :
+		// If header is NOT short, or if header is short and there's a Secondary Menu or Slide-out Sidebar widget.
+		if ( false === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary-menu' ) ) ) :
 		?>
 			<div class="top-header-contain desktop-only">
 				<div class="wrapper">
+					<?php if ( true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
+						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+							<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
+						</button>
+					<?php endif; ?>
+
 					<div id="secondary-nav-contain">
 						<?php
 						if ( ! newspack_is_amp() ) {
@@ -65,6 +74,13 @@
 
 		<div class="middle-header-contain">
 			<div class="wrapper">
+				<?php if ( true === $header_simplified && true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
+					<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+						<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
+					</button>
+				<?php endif; ?>
+
 				<?php
 				// Centered logo AND NOT short header.
 				if ( true === $header_center_logo && false === $header_simplified ) :

@@ -97,6 +97,64 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option to center logo.
+	$wp_customize->add_setting(
+		'header_show_slideout',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_show_slideout',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show Slide-out Sidebar', 'newspack' ),
+			'description' => sprintf(
+				/* translators: %s: link to Slide Out Sidebar widget panel in Customizer. */
+				esc_html__( 'Show a Slide-out sidebar in the header, which you can populate by adding widgets %1$s.', 'newspack' ),
+				'<a rel="goto-section" href="#sidebar-widgets-header-1">' . __( 'here', 'newspack' ) . '</a>'
+			),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - label for slide out sidebar
+	$wp_customize->add_setting(
+		'slideout_label',
+		array(
+			'default'           => esc_html__( 'Menu', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_label',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
+			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. The text is not visible when using the short header, but can always be read by screen readers.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - label for slide out menu
+	$wp_customize->add_setting(
+		'slideout_widget_mobile',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_widget_mobile',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
+			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
 	/**
 	 * Primary color.
 	 */
@@ -189,7 +247,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_color_hex',
 		array(
-			'default'           => '#666',
+			'default'           => '#666666',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -370,6 +428,34 @@ function newspack_customize_register( $wp_customize ) {
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'featured_image_options',
+		)
+	);
+
+	/**
+	 * Comments settings
+	 */
+	$wp_customize->add_section(
+		'comments_options',
+		array(
+			'title' => esc_html__( 'Comments Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'collapse_comments',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'collapse_comments',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
+			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
+			'section'     => 'comments_options',
 		)
 	);
 }

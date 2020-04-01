@@ -190,7 +190,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
 					'slug'  => 'dark-gray',
-					'color' => '#111', // color__text-main
+					'color' => '#111111', // color__text-main
 				),
 				array(
 					'name'  => __( 'Medium Gray', 'newspack' ),
@@ -200,12 +200,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Light Gray', 'newspack' ),
 					'slug'  => 'light-gray',
-					'color' => '#eee', // color__background-pre
+					'color' => '#EEEEEE', // color__background-pre
 				),
 				array(
 					'name'  => __( 'White', 'newspack' ),
 					'slug'  => 'white',
-					'color' => '#FFF',
+					'color' => '#FFFFFF',
 				),
 			)
 		);
@@ -243,6 +243,22 @@ function newspack_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title accent-header"><span>',
 			'after_title'   => '</span></h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Slide-out Sidebar', 'newspack' ),
+			'id'            => 'header-1',
+			'description'   => sprintf(
+				/* translators: %s: link to Header Settings panel in Customizer. */
+				__( 'Add widgets here to appear in an off-screen sidebar when it is enabled under %s.', 'newspack' ),
+				'<a rel="goto-control" href="#header_show_slideout">' . __( 'Header Settings', 'newspack' ) . '</a>'
+			),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 		)
 	);
 
@@ -328,8 +344,10 @@ function newspack_scripts() {
 		}
 
 		$newspack_l10n = array(
-			'open_search'  => esc_html__( 'Open Search', 'newspack' ),
-			'close_search' => esc_html__( 'Close Search', 'newspack' ),
+			'open_search'       => esc_html__( 'Open Search', 'newspack' ),
+			'close_search'      => esc_html__( 'Close Search', 'newspack' ),
+			'expand_comments'   => esc_html__( 'Expand Comments', 'newspack' ),
+			'collapse_comments' => esc_html__( 'Collapse Comments', 'newspack' ),
 		);
 
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );

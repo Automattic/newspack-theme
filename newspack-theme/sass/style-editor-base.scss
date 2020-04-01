@@ -683,9 +683,9 @@ ul.wp-block-archives,
 
 // Related Posts
 .jp-relatedposts-i2 {
-	border-top: 1px solid $color__border;
-	border-bottom: 1px solid $color__border;
-	padding: $size__spacing-unit 0;
+	a {
+		color: $color__text-main;
+	}
 	a,
 	strong {
 		font-family: $font__heading;
@@ -696,6 +696,7 @@ ul.wp-block-archives,
 
 	.jp-related-posts-i2__post-date,
 	.jp-related-posts-i2__post-context {
+		font-family: $font__heading;
 		font-size: $font__size-xs;
 	}
 }

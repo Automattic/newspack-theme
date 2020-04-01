@@ -42,7 +42,6 @@
 
 		.discussion-meta {
 			@include media( tablet ) {
-				flex: 0 0 calc( 2 * ( 100vw / 12 ) );
 				margin-left: #{$size__spacing-unit};
 				text-align: right;
 			}
@@ -373,5 +372,61 @@
 	input[name='url'] {
 		display: block;
 		width: 100%;
+	}
+}
+
+.comments-wrapper {
+	margin: 0;
+	min-height: 200px;
+
+	&.comments-hide {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.comment-list,
+	.comment-list > li:first-child article {
+		margin-top: 0;
+	}
+}
+
+.comments-toggle {
+	align-items: center;
+	background: transparent;
+	border-radius: 0;
+	border-top: 1px solid $color__border;
+	color: $color__text-main;
+	display: flex;
+	font-size: $font__size-sm;
+	justify-content: center;
+	margin-top: 0;
+	position: relative;
+	width: 100%;
+
+	svg {
+		transform: rotate( 90deg );
+	}
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: $color__primary;
+	}
+}
+
+.comments-hide + .comments-toggle {
+	svg {
+		transform: rotate( 270deg );
+	}
+
+	&::after {
+		background-image: linear-gradient( rgba( 255, 255, 255, 0 ), rgba( 255, 255, 255, 1 ) );
+		content: '';
+		height: 150px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: -151px;
+		z-index: 2;
 	}
 }

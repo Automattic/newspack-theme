@@ -18,7 +18,7 @@ function newspack_custom_colors_css() {
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
-			$header_color          = get_theme_mod( 'header_color_hex', '#666' );
+			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
 			$header_color_contrast = newspack_get_color_contrast( $header_color );
 		} else {
 			$header_color          = $primary_color;
@@ -62,7 +62,8 @@ function newspack_custom_colors_css() {
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,
-		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+		.comments-toggle:hover, .comments-toggle:focus {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
@@ -109,7 +110,9 @@ function newspack_custom_colors_css() {
 			border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 		}
 
-		.mobile-sidebar .nav1 + nav.secondary-menu {
+		.mobile-sidebar nav + nav,
+		.mobile-sidebar nav + .widget,
+		.mobile-sidebar .widget + .widget {
 			border-color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
