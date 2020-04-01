@@ -217,6 +217,12 @@
 
 	</header><!-- #masthead -->
 
+	<?php
+	if ( function_exists('yoast_breadcrumb') ) {
+		yoast_breadcrumb( '<div class="site-breadcrumb desktop-only"><div class="wrapper">','</div></div>' );
+	}
+	?>
+
 	<?php do_action( 'after_header' ); ?>
 
 	<div id="content" class="site-content">

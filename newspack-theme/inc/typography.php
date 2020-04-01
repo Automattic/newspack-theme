@@ -121,7 +121,10 @@ function newspack_custom_typography_css() {
 		.jp-relatedposts-i2,
 		#jp-relatedposts.jp-relatedposts,
 		.jp-relatedposts-i2 .jp-relatedposts-headline,
-		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline
+		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
+
+		/* Yoast Breadcrumbs */
+		.site-breadcrumb .wrapper > span
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
