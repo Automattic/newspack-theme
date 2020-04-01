@@ -1,3 +1,22 @@
+# [1.4.0](https://github.com/Automattic/newspack-theme/compare/v1.3.0...v1.4.0) (2020-04-01)
+
+
+### Bug Fixes
+
+* correct menu name when checking for it in header ([#859](https://github.com/Automattic/newspack-theme/issues/859)) ([b560b28](https://github.com/Automattic/newspack-theme/commit/b560b2802d6e749d19abf2224cd841b969b3a65d))
+* CSS changed by release process ([abb4bf0](https://github.com/Automattic/newspack-theme/commit/abb4bf0c164370688fc5846f3d02c90d5f79a596))
+* editor color palettes and secondary color by adding full, 6-digits, hex codes ([#857](https://github.com/Automattic/newspack-theme/issues/857)) ([0c800a1](https://github.com/Automattic/newspack-theme/commit/0c800a19d3f24a1b43c80f00e1143b18b080e20e))
+* make related posts styles more consistent between formats ([#761](https://github.com/Automattic/newspack-theme/issues/761)) ([b55746d](https://github.com/Automattic/newspack-theme/commit/b55746d2e33dae55153135ee0cbe96b8aa51a1c2))
+* make sure social links block doesn't inherit link color ([#846](https://github.com/Automattic/newspack-theme/issues/846)) ([66c927c](https://github.com/Automattic/newspack-theme/commit/66c927cb3f4d06a9dc899a8cb5961079cc9fd75e))
+* only apply RSS icon to /feed ([#851](https://github.com/Automattic/newspack-theme/issues/851)) ([ce884ac](https://github.com/Automattic/newspack-theme/commit/ce884ace961f4944b69daf2a3cd61b4b5602a113))
+
+
+### Features
+
+* add a desktop slideout widget area ([#816](https://github.com/Automattic/newspack-theme/issues/816)) ([3ed6c77](https://github.com/Automattic/newspack-theme/commit/3ed6c7793d37d2e063004992fa59c11f9f325acf))
+* add option to collapse comments ([#820](https://github.com/Automattic/newspack-theme/issues/820)) ([f67ab51](https://github.com/Automattic/newspack-theme/commit/f67ab51bce77de2a4734e4f4c7a46b0d42cc402c))
+* add telephone icon to social menu ([#849](https://github.com/Automattic/newspack-theme/issues/849)) ([9812b28](https://github.com/Automattic/newspack-theme/commit/9812b286fe2c69e3eb5652674f3cbc2cf88e5add))
+
 # [1.3.0](https://github.com/Automattic/newspack-theme/compare/v1.2.0...v1.3.0) (2020-03-24)
 
 
