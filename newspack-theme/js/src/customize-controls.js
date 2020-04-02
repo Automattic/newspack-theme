@@ -162,6 +162,21 @@
 			} );
 		} );
 
+		// Only show Author Bio truncate options when enabled.
+		wp.customize( 'author_bio_truncate', function( setting ) {
+			wp.customize.control( 'author_bio_length', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
 		// Lets you jump to specific sections in the Customizer
 		$( [ 'control', 'section', 'panel' ] ).each( function( i, type ) {
 			$( 'a[rel="goto-' + type + '"]' ).click( function( e ) {
