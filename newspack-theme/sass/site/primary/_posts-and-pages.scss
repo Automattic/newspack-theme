@@ -377,6 +377,14 @@ body.page {
 		}
 	}
 
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.author-bio-text {
 		width: calc( 100% - 60px - 1em );
 		@include media( mobile ) {
@@ -416,6 +424,7 @@ body.page {
 	.author-link {
 		color: $color__primary;
 		font-weight: bold;
+		text-decoration: none;
 		&:hover {
 			color: $color__primary-variation;
 		}
