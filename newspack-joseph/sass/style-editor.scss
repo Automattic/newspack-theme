@@ -8,11 +8,9 @@ Newspack Sacha Editor Styles
 @import '../../newspack-theme/sass/style-editor-base';
 
 /* Paragraph */
-.wp-block-paragraph {
-	&.has-drop-cap:not( :focus )::first-letter {
-		font-family: $font__heading;
-		font-weight: bold;
-	}
+.has-drop-cap:not( :focus )::first-letter {
+	font-family: $font__heading;
+	font-weight: bold;
 }
 
 /* Columns */
