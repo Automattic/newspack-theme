@@ -502,9 +502,9 @@ function newspack_customize_register( $wp_customize ) {
 			'type'    => 'radio',
 			'label'   => esc_html__( 'Collapse Order Details', 'newspack' ),
 			'choices' => array(
-				'display' => esc_html__( 'Show', 'newspack' ),
 				'hide'    => esc_html__( 'Hide', 'newspack' ),
 				'toggle'  => esc_html__( 'Hide, with ability to toggle open', 'newspack' ),
+				'display' => esc_html__( 'Show', 'newspack' ),
 			),
 			'section' => 'woocommerce_cart_options',
 		)
