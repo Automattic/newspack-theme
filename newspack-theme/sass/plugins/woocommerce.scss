@@ -1513,3 +1513,15 @@ table.variations {
 .order-details-hidden {
 	display: none;
 }
+
+.order-details-summary {
+	h4 {
+		font-size: 0.95em;
+		font-weight: normal;
+
+		> span {
+			color: $color__text-light;
+			display: block;
+		}
+	}
+}

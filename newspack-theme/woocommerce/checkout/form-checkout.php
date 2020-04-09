@@ -41,6 +41,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <?php endif; ?>
 
 <?php if ( 'display' !== $order_details_display ) : ?>
+	<div class="order-details-summary">
 	<?php
 	// Simplified output of order
 	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
@@ -48,23 +49,25 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 		?>
-			<p>
+			<h4>
+				<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' ' . sprintf( '%s&nbsp;&times;', $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<strong>
 					<?php
 						echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' ' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					?>
 				</strong>
+				<span>
 				<?php
-					echo ' - ';
 					echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				?>
-			</p>
+				</span>
+			</h4>
 			<?php
 		}
 	}
 	?>
+	</div><!-- .order-details-summary -->
 <?php endif; ?>
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
