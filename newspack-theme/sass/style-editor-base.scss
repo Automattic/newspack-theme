@@ -467,23 +467,23 @@ figcaption,
 
 .wp-block[data-type='core/pullquote'][data-align='left'],
 .wp-block[data-type='core/pullquote'][data-align='right'] {
+	.is-block-content {
+		max-width: 50%;
+		width: 50%;
+	}
+
 	.wp-block-pullquote {
 		@include media( tablet ) {
 			border-bottom: 0;
 		}
 	}
 
-	.editor-block-list__block-edit {
-		max-width: 50%;
-		width: 50%;
+	.wp-block-pullquote:not( .is-style-solid-color ) {
+		padding: 0;
+	}
 
-		.wp-block-pullquote:not( .is-style-solid-color ) {
-			padding: 0;
-		}
-
-		.wp-block-pullquote.is-style-solid-color {
-			padding: $size__spacing-unit #{2 * $size__spacing-unit};
-		}
+	.wp-block-pullquote.is-style-solid-color {
+		padding: $size__spacing-unit #{2 * $size__spacing-unit};
 	}
 
 	blockquote
