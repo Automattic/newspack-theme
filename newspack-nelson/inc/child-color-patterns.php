@@ -100,7 +100,7 @@ function newspack_nelson_custom_colors_css() {
 	}
 
 	$editor_css = '
-		.block-editor-block-list__layout .block-editor-block-list__block .has-drop-cap:not(:focus)::first-letter {
+		.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
 			color: ' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 		}
 	';
