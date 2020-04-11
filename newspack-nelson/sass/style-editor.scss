@@ -60,12 +60,10 @@ blockquote {
 	}
 }
 
-.wp-block-paragraph {
-	&.has-drop-cap:not( :focus )::first-letter {
-		color: $color__secondary;
-		font-family: $font__heading;
-		font-weight: 800;
-	}
+.has-drop-cap:not( :focus )::first-letter {
+	color: $color__secondary;
+	font-family: $font__heading;
+	font-weight: 800;
 }
 
 .wp-block[data-type='core/pullquote'] {

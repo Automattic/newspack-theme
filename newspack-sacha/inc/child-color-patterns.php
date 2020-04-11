@@ -89,7 +89,7 @@ function newspack_sacha_custom_colors_css() {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+		.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
 			background-color: ' . esc_html( $primary_color ) . ';
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}

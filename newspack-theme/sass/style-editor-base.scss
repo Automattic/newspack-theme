@@ -161,15 +161,13 @@ figcaption,
 		font-weight: bolder;
 	}
 }
-/** === Paragraph === */
 
-.wp-block-paragraph {
-	&.has-drop-cap:not( :focus )::first-letter {
-		font-size: 4em;
-		line-height: 0.75;
-		margin: 0.125em #{0.75 * $size__spacing-unit} 0 0;
-		position: relative;
-	}
+/** === Paragraph === */
+.has-drop-cap:not( :focus )::first-letter {
+	font-size: 4em;
+	line-height: 0.75;
+	margin: 0.125em #{0.75 * $size__spacing-unit} 0 0;
+	position: relative;
 }
 
 /** === Newspack Carousel === */

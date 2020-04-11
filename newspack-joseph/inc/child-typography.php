@@ -45,7 +45,7 @@ function newspack_joseph_custom_typography_css() {
 			}';
 
 		$editor_css_blocks .= '
-			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
+			.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p {
 				font-family: ' . wp_kses( $font_header, null ) . ';
