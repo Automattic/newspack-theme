@@ -102,4 +102,29 @@
 			false
 		);
 	}
+
+	// Checkout toggle fallback.
+	const orderDetailToggle = document.getElementById( 'toggle-order-details' );
+
+	// Make sure checkout details exist before going any further.
+	if ( null !== orderDetailToggle ) {
+		const orderDetailWrapper = document.getElementById( 'order-details-wrapper' ),
+			orderDetailToggleTextContain = orderDetailToggle.getElementsByTagName( 'span' )[ 0 ];
+
+		orderDetailToggle.addEventListener(
+			'click',
+			function() {
+				if ( orderDetailWrapper.classList.contains( 'order-details-hidden' ) ) {
+					orderDetailWrapper.classList.remove( 'order-details-hidden' );
+					orderDetailToggle.classList.remove( 'order-details-hidden' );
+					orderDetailToggleTextContain.innerText = newspackScreenReaderText.hide_order_details;
+				} else {
+					orderDetailWrapper.classList.add( 'order-details-hidden' );
+					orderDetailToggle.classList.add( 'order-details-hidden' );
+					orderDetailToggleTextContain.innerText = newspackScreenReaderText.show_order_details;
+				}
+			},
+			false
+		);
+	}
 } )();
