@@ -22,7 +22,7 @@ class Newspack_SVG_Icons {
 	/**
 	 * Gets the SVG code for a given icon.
 	 */
-	public static function get_svg( $group, $icon, $size, $title ) {
+	public static function get_svg( $group, $icon, $size, $title = '' ) {
 		if ( 'ui' == $group ) {
 			$arr = self::$ui_icons;
 		} elseif ( 'social' == $group ) {
