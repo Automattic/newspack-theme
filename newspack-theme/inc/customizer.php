@@ -478,7 +478,7 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	/**
-	 * Comments settings
+	 * WooCommerce Order Details settings
 	 */
 	$wp_customize->add_section(
 		'woocommerce_cart_options',
@@ -488,7 +488,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add option to collapse the comments.
+	// Add order details visibility options.
 	$wp_customize->add_setting(
 		'collapse_order_details',
 		array(
@@ -500,7 +500,7 @@ function newspack_customize_register( $wp_customize ) {
 		'collapse_order_details',
 		array(
 			'type'    => 'radio',
-			'label'   => esc_html__( 'Collapse Order Details', 'newspack' ),
+			'label'   => esc_html__( 'Order Details Visibility', 'newspack' ),
 			'choices' => array(
 				'hide'    => esc_html__( 'Hide', 'newspack' ),
 				'toggle'  => esc_html__( 'Hide, with ability to toggle open', 'newspack' ),
