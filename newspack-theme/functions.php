@@ -792,6 +792,19 @@ function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive
 add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
 
 /**
+ * Display Featured Images in RSS feed.
+ */
+function newspack_thumbnails_in_rss( $content ) {
+	global $post;
+	if ( has_post_thumbnail( $post->ID ) ) {
+		$content = '<figure>' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</figure>' . $content;
+	}
+	return $content;
+}
+add_filter( 'the_excerpt_rss', 'newspack_thumbnails_in_rss' );
+add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
+
+/**
  * Notify about child theme deprecation.
  * TODO: Remove after child theme code is removed.
  */
