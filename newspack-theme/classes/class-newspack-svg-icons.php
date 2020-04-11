@@ -22,7 +22,7 @@ class Newspack_SVG_Icons {
 	/**
 	 * Gets the SVG code for a given icon.
 	 */
-	public static function get_svg( $group, $icon, $size ) {
+	public static function get_svg( $group, $icon, $size, $title = '' ) {
 		if ( 'ui' == $group ) {
 			$arr = self::$ui_icons;
 		} elseif ( 'social' == $group ) {
@@ -33,6 +33,9 @@ class Newspack_SVG_Icons {
 		if ( array_key_exists( $icon, $arr ) ) {
 			$repl = sprintf( '<svg class="svg-icon" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $size, $size );
 			$svg  = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
+			if ( '' !== $title ) {
+				$svg = preg_replace( '/<\/svg>/', '<title>' . $title . '</title></svg>', $svg ); // Add title tag to SVG if populated.
+			}
 			$svg  = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
 			$svg  = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.
 			return $svg;
@@ -85,7 +88,6 @@ class Newspack_SVG_Icons {
     </clipPath>
     <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
 </svg>',
-
 		'archive'                  => /* material-design – folder */ '
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path>

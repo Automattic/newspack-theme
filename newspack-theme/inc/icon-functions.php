@@ -8,22 +8,22 @@
 /**
  * Gets the SVG code for a given icon.
  */
-function newspack_get_icon_svg( $icon, $size = 24 ) {
-	return Newspack_SVG_Icons::get_svg( 'ui', $icon, $size );
+function newspack_get_icon_svg( $icon, $size = 24, $title = '' ) {
+	return Newspack_SVG_Icons::get_svg( 'ui', $icon, $size, $title );
 }
 
 /**
  * Gets the SVG code for a given social icon.
  */
-function newspack_get_social_icon_svg( $icon, $size = 24 ) {
-	return Newspack_SVG_Icons::get_svg( 'social', $icon, $size );
+function newspack_get_social_icon_svg( $icon, $size = 24, $title = '' ) {
+	return Newspack_SVG_Icons::get_svg( 'social', $icon, $size, $title );
 }
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
  */
-function newspack_get_social_link_svg( $uri, $size = 24 ) {
-	return Newspack_SVG_Icons::get_social_link_svg( $uri, $size );
+function newspack_get_social_link_svg( $uri, $size = 24, $title = '' ) {
+	return Newspack_SVG_Icons::get_social_link_svg( $uri, $size, $title );
 }
 
 /**

@@ -59,7 +59,7 @@ class Newspack_Walker_Comment extends Walker_Comment {
 
 						/* Display icon if the commenter is the current post's author. */
 						if ( newspack_is_comment_by_post_author( $comment ) ) {
-							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', wp_kses( newspack_get_icon_svg( 'check', 24 ), newspack_sanitize_svgs() ) );
+							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', wp_kses( newspack_get_icon_svg( 'person', 24, esc_html__( 'Article author', 'newspack' ) ), newspack_sanitize_svgs() ) );
 						}
 
 						if ( ! empty( $comment_author_url ) ) {
