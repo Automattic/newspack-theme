@@ -1,3 +1,21 @@
+# [1.5.0](https://github.com/Automattic/newspack-theme/compare/v1.4.0...v1.5.0) (2020-04-12)
+
+
+### Bug Fixes
+
+* correct fonts in latest posts block ([#878](https://github.com/Automattic/newspack-theme/issues/878)) ([ce896dd](https://github.com/Automattic/newspack-theme/commit/ce896dd4745d5d46318ad3c41bc4e29e7a226e68))
+* make one column template use max px width not percentage ([#873](https://github.com/Automattic/newspack-theme/issues/873)) ([2558191](https://github.com/Automattic/newspack-theme/commit/255819110a25e727db2b64e693b89dc7231252b9))
+* make sure floated pullquotes are previewing at correct width ([#876](https://github.com/Automattic/newspack-theme/issues/876)) ([cd4fed4](https://github.com/Automattic/newspack-theme/commit/cd4fed4e7a5dc8fe2817081101abf32893fb2366))
+* style billing form to be more compact ([#868](https://github.com/Automattic/newspack-theme/issues/868)) ([c99a3fd](https://github.com/Automattic/newspack-theme/commit/c99a3fd9e962252fc75b604429526c7d038ceb17))
+
+
+### Features
+
+* add ability to turn off author bio truncation and allow HTML ([#862](https://github.com/Automattic/newspack-theme/issues/862)) ([6c6d9bf](https://github.com/Automattic/newspack-theme/commit/6c6d9bfc3146f53434ea429ffd86a9cc1d1b7eae))
+* add featured image to RSS output ([#879](https://github.com/Automattic/newspack-theme/issues/879)) ([8a586e3](https://github.com/Automattic/newspack-theme/commit/8a586e3353a3c91d5d6aaf8e96a7a3943cc6edfd))
+* add option to hide or toggle closed the order details ([#867](https://github.com/Automattic/newspack-theme/issues/867)) ([069cb25](https://github.com/Automattic/newspack-theme/commit/069cb25c520f5e8548cf30fea490f482e9933c96))
+* add support for yoast breadcrumbs ([#855](https://github.com/Automattic/newspack-theme/issues/855)) ([dfdcf28](https://github.com/Automattic/newspack-theme/commit/dfdcf28d7d303fd9c8f58dd8b91f574d114d9d47))
+
 # [1.4.0](https://github.com/Automattic/newspack-theme/compare/v1.3.0...v1.4.0) (2020-04-01)
 
 
