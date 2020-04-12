@@ -379,6 +379,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to hide author email address.
+	$wp_customize->add_setting(
+		'author_bio_truncate',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'author_bio_truncate',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Truncate Author Bio', 'newspack' ),
+			'description' => esc_html__( 'Set a specific length for author bios displayed on single posts.', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
+
 	// Add option to hide the whole author bio.
 	$wp_customize->add_setting(
 		'author_bio_length',
@@ -392,7 +410,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'number',
 			'label'       => esc_html__( 'Author Bio Length (in characters)', 'newspack' ),
-			'description' => esc_html__( 'Truncates the author bio on single posts to this approximate character length, but without breaking a word. The full bio appears on the author archive page.', 'newspack' ),
+			'description' => esc_html__( 'Truncates the author bio on single posts to this approximate character length, but without breaking a word.', 'newspack' ),
 			'section'     => 'author_bio_options',
 		)
 	);
@@ -456,6 +474,39 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
 			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
 			'section'     => 'comments_options',
+		)
+	);
+
+	/**
+	 * WooCommerce Order Details settings
+	 */
+	$wp_customize->add_section(
+		'woocommerce_cart_options',
+		array(
+			'title' => esc_html__( 'Order Details', 'newspack' ),
+			'panel' => 'woocommerce',
+		)
+	);
+
+	// Add order details visibility options.
+	$wp_customize->add_setting(
+		'collapse_order_details',
+		array(
+			'default'           => 'hide',
+			'sanitize_callback' => 'newspack_sanitize_radio',
+		)
+	);
+	$wp_customize->add_control(
+		'collapse_order_details',
+		array(
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Order Details Visibility', 'newspack' ),
+			'choices' => array(
+				'hide'    => esc_html__( 'Hide', 'newspack' ),
+				'toggle'  => esc_html__( 'Hide, with ability to toggle open', 'newspack' ),
+				'display' => esc_html__( 'Show', 'newspack' ),
+			),
+			'section' => 'woocommerce_cart_options',
 		)
 	);
 }
@@ -698,6 +749,21 @@ function newspack_sanitize_checkbox( $input ) {
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Sanitize the radio buttons.
+ */
+function newspack_sanitize_radio( $input, $setting ) {
+
+	// Ensure input is a slug.
+	$input = sanitize_key( $input );
+
+	// Get list of choices from the control associated with the setting.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
 
 /**

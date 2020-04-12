@@ -123,6 +123,14 @@
 .taxonomy-description {
 	color: $color__text-light;
 	font-style: italic;
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .search {

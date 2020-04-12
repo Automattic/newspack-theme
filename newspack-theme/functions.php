@@ -344,10 +344,12 @@ function newspack_scripts() {
 		}
 
 		$newspack_l10n = array(
-			'open_search'       => esc_html__( 'Open Search', 'newspack' ),
-			'close_search'      => esc_html__( 'Close Search', 'newspack' ),
-			'expand_comments'   => esc_html__( 'Expand Comments', 'newspack' ),
-			'collapse_comments' => esc_html__( 'Collapse Comments', 'newspack' ),
+			'open_search'        => esc_html__( 'Open Search', 'newspack' ),
+			'close_search'       => esc_html__( 'Close Search', 'newspack' ),
+			'expand_comments'    => esc_html__( 'Expand Comments', 'newspack' ),
+			'collapse_comments'  => esc_html__( 'Collapse Comments', 'newspack' ),
+			'show_order_details' => esc_html__( 'Show details', 'newspack' ),
+			'hide_order_details' => esc_html__( 'Hide details', 'newspack' ),
 		);
 
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );
@@ -790,6 +792,19 @@ function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive
 	return $responsive;
 }
 add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
+
+/**
+ * Display Featured Images in RSS feed.
+ */
+function newspack_thumbnails_in_rss( $content ) {
+	global $post;
+	if ( has_post_thumbnail( $post->ID ) ) {
+		$content = '<figure>' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</figure>' . $content;
+	}
+	return $content;
+}
+add_filter( 'the_excerpt_rss', 'newspack_thumbnails_in_rss' );
+add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
 
 /**
  * Notify about child theme deprecation.

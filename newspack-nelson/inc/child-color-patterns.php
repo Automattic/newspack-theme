@@ -69,7 +69,9 @@ function newspack_nelson_custom_colors_css() {
 			/* Header short height; default background */
 			.h-sh.h-db .site-header,
 			.site-content #primary,
-			#page .site-header {
+			#page .site-header,
+			/* Yoast Breadcrumb */
+			.has-highlight-menu .site-breadcrumb .wrapper {
 				border-color: ' . esc_html( newspack_adjust_brightness( $header_color, -40 ) ) . ';
 			}
 
@@ -88,6 +90,9 @@ function newspack_nelson_custom_colors_css() {
 			.nav1 .sub-menu a,
 			.h-sb .site-header .highlight-menu .menu-label,
 			.h-sb .site-header .highlight-menu a,
+			.h-sb .site-breadcrumb,
+			.h-sb .site-breadcrumb a,
+			.h-sb .site-breadcrumb .breadcrumb_last,
 			.h-sb .site-footer {
 				color: ' . esc_html( $header_color_contrast ) . ';
 			}
@@ -95,7 +100,7 @@ function newspack_nelson_custom_colors_css() {
 	}
 
 	$editor_css = '
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter {
+		.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
 			color: ' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 		}
 	';

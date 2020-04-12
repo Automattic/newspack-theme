@@ -37,11 +37,9 @@ Newspack Scott Editor Styles
 
 /** === Paragraph === */
 
-.wp-block-paragraph {
-	&.has-drop-cap:not( :focus )::first-letter {
-		font-family: $font__heading;
-		font-weight: bold;
-	}
+.has-drop-cap:not( :focus )::first-letter {
+	font-family: $font__heading;
+	font-weight: bold;
 }
 
 .wp-block[data-type='core/pullquote'] {

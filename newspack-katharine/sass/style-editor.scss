@@ -28,11 +28,9 @@ Newspack Katharine Editor Styles
 	font-size: $font__size-xs;
 }
 
-.wp-block-paragraph {
-	&.has-drop-cap:not( :focus )::first-letter {
-		font-family: $font__heading;
-		font-weight: bold;
-	}
+.has-drop-cap:not( :focus )::first-letter {
+	font-family: $font__heading;
+	font-weight: bold;
 }
 
 .wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )

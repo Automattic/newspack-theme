@@ -337,8 +337,11 @@ cite {
 
 	h2 {
 		color: $color__text-main;
-		text-align: left;
 		margin: 0;
+
+		@include media( tablet ) {
+			text-align: left;
+		}
 	}
 
 	.avatar {
@@ -462,6 +465,14 @@ cite {
 	a:hover,
 	a:visited {
 		color: $color__background-body;
+	}
+}
+
+// Yoast Breadcrumbs
+
+.site-breadcrumb {
+	.wrapper {
+		justify-content: center;
 	}
 }
 

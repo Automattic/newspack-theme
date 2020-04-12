@@ -112,6 +112,10 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-tertiary-menu';
 	}
 
+	if ( has_nav_menu( 'highlight-menu' ) ) {
+		$classes[] = 'has-highlight-menu';
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';

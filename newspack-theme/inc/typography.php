@@ -100,6 +100,8 @@ function newspack_custom_typography_css() {
 		/* _blocks.scss */
 		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 		.wp-block-pullquote cite,
+		.entry .entry-content .wp-block-latest-posts li > a,
+		.entry .entry-content .wp-block-latest-posts time,
 
 		/* _widgets.scss */
 		.widget,
@@ -121,7 +123,10 @@ function newspack_custom_typography_css() {
 		.jp-relatedposts-i2,
 		#jp-relatedposts.jp-relatedposts,
 		.jp-relatedposts-i2 .jp-relatedposts-headline,
-		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline
+		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
+
+		/* Yoast Breadcrumbs */
+		.site-breadcrumb .wrapper > span
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
@@ -235,7 +240,8 @@ function newspack_custom_typography_css() {
 		/* Widget blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block ul.wp-block-archives li,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-categories li,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts li,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts li > a,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts time,
 
 		/* Latest Comments blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,

@@ -32,7 +32,8 @@ function newspack_scott_custom_colors_css() {
 		.accent-header:not(.widget-title):before,
 		.article-section-title:before,
 		.cat-links:before,
-		.page-title:before {
+		.page-title:before,
+		.site-breadcrumb .wrapper > span::before {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
 

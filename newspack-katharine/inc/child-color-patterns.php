@@ -48,7 +48,8 @@ function newspack_katharine_custom_colors_css() {
 		.cat-links:before,
 		.archive .page-title:before,
 		figcaption:after,
-		.wp-caption-text:after {
+		.wp-caption-text:after,
+		.has-highlight-menu .site-breadcrumb .wrapper > span::before {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
 

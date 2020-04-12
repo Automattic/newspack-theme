@@ -296,3 +296,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .site-info {
 	font-family: $font__heading;
 }
+
+/* Yoast Breadcrumbs */
+
+.site-breadcrumb {
+	.wrapper {
+		> span::before {
+			background-color: $color__primary;
+			content: '';
+			display: inline-block;
+			height: 0.75em;
+			margin: 0 0.5em 0 0;
+			width: 0.75em;
+		}
+	}
+}

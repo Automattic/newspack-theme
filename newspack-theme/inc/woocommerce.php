@@ -154,3 +154,16 @@ if ( ! function_exists( 'newspack_woocommerce_wrapper_after' ) ) {
 	}
 }
 add_action( 'woocommerce_after_main_content', 'newspack_woocommerce_wrapper_after' );
+
+/**
+ * Replace .form-row-wide classes with classes to style fields narrower.
+ */
+function newspack_checkout_fields_styling( $fields ) {
+	$fields['billing']['billing_city']['class'][0]     = 'form-row-first';
+	$fields['billing']['billing_postcode']['class'][0] = 'form-row-first';
+	$fields['billing']['billing_state']['class'][0]    = 'form-row-last';
+	$fields['billing']['billing_phone']['class'][0]    = 'form-row-last';
+	return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9999 );
+
