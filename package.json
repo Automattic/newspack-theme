@@ -77,7 +77,8 @@
     "extends @wordpress/browserslist-config"
   ],
   "lint-staged": {
-    "*.scss": "npm run lint:scss:staged"
+    "*.scss": "npm run lint:scss:staged",
+    "*.js": "npm run lint:js:staged"
   },
   "scripts": {
     "cm": "git-cz",
@@ -91,6 +92,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint ./newspack-*/**/*.js",
     "format:js": "prettier './newspack-*/**/*.{js,jsx}' --write",
+    "lint:js:staged": "eslint --ext .js,.jsx",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss",
     "lint:scss:staged": "stylelint --syntax scss",
     "format:scss": "prettier --write \"**/*.scss\"",
