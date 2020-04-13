@@ -74,7 +74,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Solid Background', 'newspack' ),
-			'description' => esc_html__( 'Check to use the primary color as the header background.', 'newspack' ),
+			'description' => esc_html__( 'Check to use the primary color as the header background. Can be changed under "Colors".', 'newspack' ),
 			'section'     => 'newspack_header_options',
 		)
 	);
@@ -97,6 +97,64 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option to center logo.
+	$wp_customize->add_setting(
+		'header_show_slideout',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_show_slideout',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show Slide-out Sidebar', 'newspack' ),
+			'description' => sprintf(
+				/* translators: %s: link to Slide Out Sidebar widget panel in Customizer. */
+				esc_html__( 'Show a Slide-out sidebar in the header, which you can populate by adding widgets %1$s.', 'newspack' ),
+				'<a rel="goto-section" href="#sidebar-widgets-header-1">' . __( 'here', 'newspack' ) . '</a>'
+			),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - label for slide out sidebar
+	$wp_customize->add_setting(
+		'slideout_label',
+		array(
+			'default'           => esc_html__( 'Menu', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_label',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
+			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. The text is not visible when using the short header, but can always be read by screen readers.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Header - label for slide out menu
+	$wp_customize->add_setting(
+		'slideout_widget_mobile',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_widget_mobile',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
+			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
 	/**
 	 * Primary color.
 	 */
@@ -111,14 +169,13 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'theme_colors',
 		array(
-			'type'     => 'radio',
-			'label'    => __( 'Primary Color', 'newspack' ),
+			'type'    => 'radio',
+			'label'   => __( 'Colors', 'newspack' ),
 			'choices'  => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
-			'section'  => 'colors',
-			'priority' => 5,
+			'section' => 'colors',
 		)
 	);
 
@@ -157,6 +214,50 @@ function newspack_customize_register( $wp_customize ) {
 			'secondary_color_hex',
 			array(
 				'description' => __( 'Apply a secondary custom color.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	/**
+	 * Header background_color
+	 */
+	$wp_customize->add_setting(
+		'header_color',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_color_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_color',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Header Background Color', 'newspack' ),
+			'choices' => array(
+				'default' => _x( 'Default', 'header background color', 'newspack' ),
+				'custom'  => _x( 'Custom', 'header background color', 'newspack' ),
+			),
+			'section' => 'colors',
+		)
+	);
+
+	// Add header color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'header_color_hex',
+		array(
+			'default'           => '#666666',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the header.', 'newspack' ),
 				'section'     => 'colors',
 			)
 		)
@@ -278,6 +379,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to hide author email address.
+	$wp_customize->add_setting(
+		'author_bio_truncate',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'author_bio_truncate',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Truncate Author Bio', 'newspack' ),
+			'description' => esc_html__( 'Set a specific length for author bios displayed on single posts.', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
+
 	// Add option to hide the whole author bio.
 	$wp_customize->add_setting(
 		'author_bio_length',
@@ -291,7 +410,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'number',
 			'label'       => esc_html__( 'Author Bio Length (in characters)', 'newspack' ),
-			'description' => esc_html__( 'Truncates the author bio on single posts to this approximate character length, but without breaking a word. The full bio appears on the author archive page.', 'newspack' ),
+			'description' => esc_html__( 'Truncates the author bio on single posts to this approximate character length, but without breaking a word.', 'newspack' ),
 			'section'     => 'author_bio_options',
 		)
 	);
@@ -327,6 +446,67 @@ function newspack_customize_register( $wp_customize ) {
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'featured_image_options',
+		)
+	);
+
+	/**
+	 * Comments settings
+	 */
+	$wp_customize->add_section(
+		'comments_options',
+		array(
+			'title' => esc_html__( 'Comments Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'collapse_comments',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'collapse_comments',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
+			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
+			'section'     => 'comments_options',
+		)
+	);
+
+	/**
+	 * WooCommerce Order Details settings
+	 */
+	$wp_customize->add_section(
+		'woocommerce_cart_options',
+		array(
+			'title' => esc_html__( 'Order Details', 'newspack' ),
+			'panel' => 'woocommerce',
+		)
+	);
+
+	// Add order details visibility options.
+	$wp_customize->add_setting(
+		'collapse_order_details',
+		array(
+			'default'           => 'hide',
+			'sanitize_callback' => 'newspack_sanitize_radio',
+		)
+	);
+	$wp_customize->add_control(
+		'collapse_order_details',
+		array(
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Order Details Visibility', 'newspack' ),
+			'choices' => array(
+				'hide'    => esc_html__( 'Hide', 'newspack' ),
+				'toggle'  => esc_html__( 'Hide, with ability to toggle open', 'newspack' ),
+				'display' => esc_html__( 'Show', 'newspack' ),
+			),
+			'section' => 'woocommerce_cart_options',
 		)
 	);
 }
@@ -569,6 +749,21 @@ function newspack_sanitize_checkbox( $input ) {
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Sanitize the radio buttons.
+ */
+function newspack_sanitize_radio( $input, $setting ) {
+
+	// Ensure input is a slug.
+	$input = sanitize_key( $input );
+
+	// Get list of choices from the control associated with the setting.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
 
 /**

@@ -64,7 +64,7 @@ function newspack_scott_custom_colors_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-colors-scott">
-		<?php echo esc_html( newspack_scott_custom_colors_css() ); ?>
+		<?php echo newspack_scott_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -80,7 +80,7 @@ function newspack_scott_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts-scott">
-		<?php echo wp_kses( newspack_scott_custom_typography_css(), '' ); ?>
+		<?php echo newspack_scott_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 <?php

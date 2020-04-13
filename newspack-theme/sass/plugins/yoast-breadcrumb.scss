@@ -1,0 +1,33 @@
+.site-breadcrumb {
+	color: $color__text-light;
+
+	.wrapper {
+		padding: 0.5em 0;
+
+		> span {
+			font-family: $font__heading;
+			font-size: $font__size-xxs;
+			line-height: $font__line-height-heading;
+		}
+	}
+
+	.breadcrumb_last {
+		color: $color__text-main;
+	}
+
+	// Hide on homepage and if the Featured Image is Behind or Beside
+	.home &,
+	.single-featured-image-behind &,
+	.single-featured-image-beside & {
+		display: none;
+	}
+
+	// Has Highlight Menu
+	.has-highlight-menu & {
+		padding-top: 0.25rem;
+
+		.wrapper {
+			border-top: 1px solid $color__border;
+		}
+	}
+}

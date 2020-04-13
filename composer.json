@@ -14,10 +14,10 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "brainmaestro/composer-git-hooks": "^2.6",
     "automattic/vipwpcs": "^2.0.0",
-    "xwp/wp-dev-lib": "^1.4.0",
     "wptrt/wpthemereview": "*",
     "phpstan/phpstan-shim": "^0.11.12",
-    "szepeviktor/phpstan-wordpress": "^0.2.0"
+    "szepeviktor/phpstan-wordpress": "^0.2.0",
+    "xwp/wp-dev-lib": "^1.5"
   },
   "scripts": {
     "phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
@@ -34,7 +34,10 @@
   },
   "extra": {
     "hooks": {
-      "pre-commit": "DEV_LIB_SKIP=eslint ./vendor/xwp/wp-dev-lib/scripts/pre-commit && ./node_modules/.bin/lint-staged"
+      "pre-commit": "DEV_LIB_SKIP=eslint ./vendor/xwp/wp-dev-lib/scripts/pre-commit && ./node_modules/.bin/lint-staged",
+      "commit-msg": [
+        "cat $1 | ./node_modules/.bin/commitlint"
+      ]
     }
   }
 }

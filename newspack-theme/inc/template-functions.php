@@ -112,6 +112,10 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-tertiary-menu';
 	}
 
+	if ( has_nav_menu( 'highlight-menu' ) ) {
+		$classes[] = 'has-highlight-menu';
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present.
 	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
 		$classes[] = 'has-sidebar';
@@ -165,6 +169,20 @@ function newspack_post_classes( $classes, $class, $post_id ) {
 	return $classes;
 }
 add_filter( 'post_class', 'newspack_post_classes', 10, 3 );
+
+/**
+ * Gets the category and tag classes from the post.
+ */
+function newspack_get_category_tag_classes( $post_id ) {
+	$post_classes    = get_post_class( '', $post_id );
+	$cat_tag_classes = array();
+	foreach ( $post_classes as $post_class ) {
+		if ( 0 === strpos( $post_class, 'category-' ) || 0 === strpos( $post_class, 'tag-' ) ) {
+			$cat_tag_classes[] = $post_class;
+		}
+	}
+	return implode( ' ', $cat_tag_classes );
+}
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -360,6 +378,23 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
 
+/**
+ * The default color used for the primary color throughout this theme
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_primary_color() {
+	return '#3366ff';
+}
+
+/**
+ * The default color used for the secondary color throughout this theme
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_secondary_color() {
+	return '#666666';
+}
 
 /**
  * Adjust a hexidecimal colour value to lighten or darken it.

@@ -32,6 +32,11 @@
 		color: $color__primary;
 		font-weight: bold;
 	}
+
+	a,
+	a:visited {
+		color: $color__link;
+	}
 }
 
 // Header Center Logo

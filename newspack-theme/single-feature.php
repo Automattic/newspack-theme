@@ -13,7 +13,7 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area <?php echo esc_attr( newspack_get_category_tag_classes( get_the_ID() ) ); ?>">
 		<main id="main" class="site-main">
 
 			<?php
@@ -44,7 +44,11 @@ get_header();
 						newspack_post_thumbnail();
 					}
 
-					get_template_part( 'template-parts/content/content', 'single' );
+					if ( is_page() ) {
+						get_template_part( 'template-parts/content/content', 'page' );
+					} else {
+						get_template_part( 'template-parts/content/content', 'single' );
+					}
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {

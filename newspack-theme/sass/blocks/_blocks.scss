@@ -152,6 +152,12 @@
 	}
 }
 
+//! Newspack Carousel Block
+.wp-block-newspack-blocks-carousel h3 a,
+.wp-block-newspack-blocks-carousel h3 a:visited {
+	color: #fff;
+}
+
 //! Columns
 .wp-block-columns {
 	.wp-block-cover,
@@ -166,7 +172,7 @@
 		margin-top: 32px;
 
 		&:first-child,
-		&.wpnbha:first-child .article-section-title,
+		&:first-child .article-section-title, // when Load More is enabled.
 		&.accent-header + div.wpnbha {
 			margin-top: 0;
 		}
@@ -208,12 +214,6 @@
 
 	.wp-block-cover__inner-container {
 		width: 100%;
-	}
-
-	h2 {
-		max-width: 100%;
-		padding-left: 0;
-		text-align: left;
 	}
 
 	article .entry-meta,
@@ -388,24 +388,36 @@
 .wp-block-latest-comments {
 	padding-left: 0;
 
+	.wp-block-latest-comments__comment {
+		font-size: $font__size-sm;
+		line-height: $font__line-height-body;
+	}
+
 	.wp-block-latest-comments__comment-meta {
 		font-family: $font__heading;
 		font-weight: bold;
 
+		a,
+		a:visited {
+			color: $color__text-main;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
 		.wp-block-latest-comments__comment-date {
 			color: $color__text-light;
+			font-size: 0.9em;
 			font-weight: normal;
-			margin: #{0.25 * $size__spacing-unit} 0;
+			margin: #{0.15 * $size__spacing-unit} 0 0;
 		}
 	}
 
-	.wp-block-latest-comments__comment {
-		line-height: $font__line-height-body;
-	}
-
 	.wp-block-latest-comments__comment-excerpt p {
-		font-size: 1.1em;
-		line-height: $font__line-height-body;
+		font-size: 1.05em;
+		margin-top: 0;
 	}
 }
 
@@ -550,10 +562,6 @@
 		list-style: none;
 
 		li {
-			color: $color__text-light;
-			font-family: $font__heading;
-			font-weight: bold;
-			line-height: $font__line-height-heading;
 			padding-bottom: ( 0.75 * $size__spacing-unit );
 
 			&.menu-item-has-children,
@@ -569,6 +577,12 @@
 
 	.wp-block-archives,
 	.wp-block-categories {
+		li {
+			font-family: $font__heading;
+			font-weight: bold;
+			line-height: $font__line-height-heading;
+		}
+
 		&.aligncenter {
 			text-align: center;
 		}
@@ -588,21 +602,35 @@
 		@include nestedSubMenuPadding();
 	}
 
-	//! Latest posts grid view
-	.wp-block-latest-posts.is-grid {
-		li {
-			border-top: 2px solid $color__border;
-			padding-top: ( 1 * $size__spacing-unit );
-			margin-bottom: ( 2 * $size__spacing-unit );
-			a {
-				&::after {
-					content: '';
+	.wp-block-latest-posts {
+		li > a {
+			font-family: $font__heading;
+			font-weight: bold;
+			line-height: $font__line-height-heading;
+		}
+		time {
+			color: $color__text-light;
+			font-family: $font__heading;
+		}
+		.wp-block-latest-posts__post-excerpt {
+			font-size: 0.8em;
+		}
+
+		&.is-grid {
+			li {
+				border-top: 2px solid $color__border;
+				padding-top: ( 1 * $size__spacing-unit );
+				margin-bottom: ( 2 * $size__spacing-unit );
+				a {
+					&::after {
+						content: '';
+					}
 				}
-			}
-			&:last-child {
-				margin-bottom: auto;
-				a::after {
-					content: '';
+				&:last-child {
+					margin-bottom: auto;
+					a::after {
+						content: '';
+					}
 				}
 			}
 		}
@@ -823,24 +851,6 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-		}
-	}
-
-	//! Jetpack Blocks
-	.jp-relatedposts-i2 {
-		border-top: 1px solid $color__border;
-		border-bottom: 1px solid $color__border;
-		padding: $size__spacing-unit 0;
-		a {
-			font-family: $font__heading;
-			font-size: $font__size-base;
-			font-weight: bold;
-			text-decoration: none;
-		}
-
-		.jp-related-posts-i2__post-date,
-		.jp-related-posts-i2__post-context {
-			font-size: $font__size-xs;
 		}
 	}
 
@@ -1099,6 +1109,32 @@
 			padding-right: $size__spacing-unit;
 		}
 	}
+
+	// keep nested align-full elements from overflowing the container.
+	.entry .entry-content {
+		.wp-block-column,
+		.wp-block-group,
+		.wp-block-cover {
+			.alignwide,
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+//! Mailchimp block
+.wp-block-jetpack-mailchimp {
+	input[type='email'] {
+		width: 100%;
+	}
+
+	p[id^='wp-block-jetpack-mailchimp'] {
+		font-size: $font__size-sm;
+	}
 }
 
 //! Organic Profile Block
@@ -1155,5 +1191,15 @@
 				color: inherit;
 			}
 		}
+	}
+}
+
+//! Social Links block
+.entry-content .wp-social-link {
+	a,
+	a:active,
+	a:hover,
+	a:visited {
+		color: currentColor;
 	}
 }

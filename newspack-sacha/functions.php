@@ -64,7 +64,7 @@ function newspack_sacha_custom_colors_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-colors-sacha">
-		<?php echo esc_html( newspack_sacha_custom_colors_css() ); ?>
+		<?php echo newspack_sacha_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -80,7 +80,7 @@ function newspack_sacha_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts-sacha">
-		<?php echo wp_kses( newspack_sacha_custom_typography_css(), '' ); ?>
+		<?php echo newspack_sacha_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 <?php

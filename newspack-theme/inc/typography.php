@@ -17,9 +17,9 @@ function newspack_custom_typography_css() {
 	$editor_css_blocks = '';
 
 	if ( get_theme_mod( 'font_header', '' ) ) {
-		$css_blocks .= "
+		$css_blocks .= '
 		/* _headings.scss */
-		.author-description .author-link,
+		.author-bio .author-link,
 		.comment-metadata,
 		.comment-reply-link,
 		.comments-title,
@@ -54,16 +54,18 @@ function newspack_custom_typography_css() {
 		/* _buttons.scss */
 		.button,
 		button,
-		input[type=\"button\"],
-		input[type=\"reset\"],
-		input[type=\"submit\"],
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
 
 		/* _blocks.scss */
 		.entry .entry-content .wp-block-button .wp-block-button__link,
 
 		/* _captions.scss */
+		figcaption,
 		.wp-caption-text,
 		.gallery-caption,
+		.amp-image-lightbox-caption,
 
 		/* _infinite_scroll.scss */
 		.site-main #infinite-handle span button,
@@ -97,8 +99,12 @@ function newspack_custom_typography_css() {
 
 		/* _blocks.scss */
 		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+		.wp-block-pullquote cite,
+		.entry .entry-content .wp-block-latest-posts li > a,
+		.entry .entry-content .wp-block-latest-posts time,
 
 		/* _widgets.scss */
+		.widget,
 		.widget_archive ul li,
 		.widget_categories ul li,
 		.widget_meta ul li,
@@ -114,57 +120,61 @@ function newspack_custom_typography_css() {
 		blockquote cite,
 
 		/* Jetpack */
-		.entry-content #jp-relatedposts h3.jp-relatedposts-headline,
-		.entry-content #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post .jp-relatedposts-post-title a
+		.jp-relatedposts-i2,
+		#jp-relatedposts.jp-relatedposts,
+		.jp-relatedposts-i2 .jp-relatedposts-headline,
+		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
 
+		/* Yoast Breadcrumbs */
+		.site-breadcrumb .wrapper > span
 		{
-			font-family: $font_header;
-		}";
+			font-family: ' . wp_kses( $font_header, null ) . ';
+		}';
 
 		if ( newspack_is_active_style_pack( 'style-1' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			.has-drop-cap:not(:focus)::first-letter,
 			.wp-block-pullquote,
 			.wp-block-pullquote cite {
-				font-family: $font_header;
-			}";
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			blockquote,
 			.has-drop-cap:not(:focus)::first-letter,
 			.taxonomy-description
 			{
-				font-family: $font_header;
-			}";
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-3' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			.has-drop-cap:not(:focus)::first-letter,
 			.taxonomy-description,
 			.page-title {
-				font-family: $font_header;
-			}";
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-4' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			.site-description,
 			.has-drop-cap:not(:focus)::first-letter,
 			.taxonomy-description,
 			.entry .entry-content blockquote, .entry .entry-content blockquote cite, .wp-block-pullquote cite {
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
-			";
+			';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			.has-drop-cap:not(:focus)::first-letter,
 			.entry .entry-content .wp-block-pullquote {
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
 			figcaption,
 			.entry-meta,
@@ -187,10 +197,10 @@ function newspack_custom_typography_css() {
 			input[type=\"reset\"],
 			input[type=\"submit\"] {
 				font-family: inherit;
-			}";
+			}';
 		}
 
-		$editor_css_blocks .= "
+		$editor_css_blocks .= '
 		.block-editor-block-list__layout .block-editor-block-list__block h1,
 		.block-editor-block-list__layout .block-editor-block-list__block h2,
 		.block-editor-block-list__layout .block-editor-block-list__block h3,
@@ -220,9 +230,9 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote .wp-block-quote__citation,
 
 		/* Pullquote Block */
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='left'] .wp-block-pullquote__citation,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type='core/pullquote'][data-align='right'] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type="core/pullquote"][data-align="left"] .wp-block-pullquote__citation,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block[data-type="core/pullquote"][data-align="right"] .wp-block-pullquote__citation,
 
 		/* File Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-file,
@@ -230,7 +240,8 @@ function newspack_custom_typography_css() {
 		/* Widget blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block ul.wp-block-archives li,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-categories li,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts li,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts li > a,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts time,
 
 		/* Latest Comments blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
@@ -238,82 +249,83 @@ function newspack_custom_typography_css() {
 		/* Jetpack blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 a,
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 strong,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-date,
+		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-context,
 
 		/* Classic Editor */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption dd,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-freeform blockquote cite
 
 		{
-			font-family: $font_header;
+			font-family: ' . wp_kses( $font_header, null ) . ';
 		}
-		";
+		';
 
 		if ( newspack_is_active_style_pack( 'style-1' ) ) {
-			$editor_css_blocks .= "
+			$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text__editable:first-child::before
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text__editable:first-child::before
 
 			{
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
-			";
+			';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-2' ) ) {
-			$editor_css_blocks .= "
+			$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block blockquote,
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
 
 			{
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
-			";
+			';
 		}
 
 
 		if ( newspack_is_active_style_pack( 'style-3' ) ) {
-			$editor_css_blocks .= "
+			$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter
 
 			{
-				font-family: $font_header;
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
-			";
+			';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-4' ) ) {
-			$editor_css_blocks .= "
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty='true']::before,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation,
+			$editor_css_blocks .= '
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .block-library-pullquote__content .editor-rich-text__tinymce[data-is-empty="true"]::before,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
 			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta {
-				font-family: $font_header;
-			}";
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
 		}
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
-			$editor_css_blocks .= "
+			$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-paragraph.has-drop-cap:not(:focus)::first-letter,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] blockquote > .editor-rich-text p,
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] p {
-				font-family: $font_header;
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p {
+				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
 			.block-editor-block-list__layout .block-editor-block-list__block .accent-header {
 				font-family: inherit;
-			}";
+			}';
 		}
 	}
 
 	if ( get_theme_mod( 'font_body', '' ) ) {
-		$css_blocks .= "
+		$css_blocks .= '
 		/* _typography.scss */
 		body,
-		button,
 		input,
 		select,
 		optgroup,
@@ -322,30 +334,30 @@ function newspack_custom_typography_css() {
 		/* _blocks.scss */
 		.entry .entry-content .wp-block-verse
 		{
-			font-family: $font_body;
+			font-family: ' . wp_kses( $font_body, null ) . ';
 		}
-		";
+		';
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
-			$css_blocks .= "
+			$css_blocks .= '
 			.wp-block-pullquote cite {
-				font-family: $font_body;
-			}";
+				font-family: ' . wp_kses( $font_body, null ) . ';
+			}';
 		}
 
-		$editor_css_blocks .= "
+		$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block,
 			.editor-default-block-appender .editor-default-block-appender__content
 			{
-				font-family: $font_body;
+				font-family: ' . wp_kses( $font_body, null ) . ';
 			}
-		";
+		';
 
 		if ( newspack_is_active_style_pack( 'style-5' ) ) {
-			$editor_css_blocks .= "
-			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type='core/pullquote'] .wp-block-pullquote__citation {
-				font-family: $font_body;
-			}";
+			$editor_css_blocks .= '
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation {
+				font-family: ' . wp_kses( $font_body, null ) . ';
+			}';
 		}
 	}
 

@@ -45,7 +45,13 @@ get_header();
 			<span>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					if ( '' !== get_the_archive_description() ) :
+					?>
+						<div class="taxonomy-description">
+							<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+						</div>
+					<?php
+					endif;
 				?>
 			</span>
 

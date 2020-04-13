@@ -152,9 +152,8 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
-		$primary_color           = newspack_get_primary_color();
-		$primary_color_variation = newspack_get_primary_color_variation();
-		$secondary_color         = newspack_get_secondary_color();
+		$primary_color   = newspack_get_primary_color();
+		$secondary_color = newspack_get_secondary_color();
 
 		// Editor color palette.
 		add_theme_support(
@@ -171,7 +170,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 					'name'  => __( 'Primary Variation', 'newspack' ),
 					'slug'  => 'primary-variation',
 					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						$primary_color_variation :
+						newspack_adjust_brightness( $primary_color, -40 ) :
 						newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
 				),
 				array(
@@ -191,7 +190,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
 					'slug'  => 'dark-gray',
-					'color' => '#111', // color__text-main
+					'color' => '#111111', // color__text-main
 				),
 				array(
 					'name'  => __( 'Medium Gray', 'newspack' ),
@@ -201,12 +200,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Light Gray', 'newspack' ),
 					'slug'  => 'light-gray',
-					'color' => '#eee', // color__background-pre
+					'color' => '#EEEEEE', // color__background-pre
 				),
 				array(
 					'name'  => __( 'White', 'newspack' ),
 					'slug'  => 'white',
-					'color' => '#FFF',
+					'color' => '#FFFFFF',
 				),
 			)
 		);
@@ -244,6 +243,22 @@ function newspack_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title accent-header"><span>',
 			'after_title'   => '</span></h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Slide-out Sidebar', 'newspack' ),
+			'id'            => 'header-1',
+			'description'   => sprintf(
+				/* translators: %s: link to Header Settings panel in Customizer. */
+				__( 'Add widgets here to appear in an off-screen sidebar when it is enabled under %s.', 'newspack' ),
+				'<a rel="goto-control" href="#header_show_slideout">' . __( 'Header Settings', 'newspack' ) . '</a>'
+			),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 		)
 	);
 
@@ -329,8 +344,12 @@ function newspack_scripts() {
 		}
 
 		$newspack_l10n = array(
-			'open_search'  => esc_html__( 'Open Search', 'newspack' ),
-			'close_search' => esc_html__( 'Close Search', 'newspack' ),
+			'open_search'        => esc_html__( 'Open Search', 'newspack' ),
+			'close_search'       => esc_html__( 'Close Search', 'newspack' ),
+			'expand_comments'    => esc_html__( 'Expand Comments', 'newspack' ),
+			'collapse_comments'  => esc_html__( 'Collapse Comments', 'newspack' ),
+			'show_order_details' => esc_html__( 'Show details', 'newspack' ),
+			'hide_order_details' => esc_html__( 'Hide details', 'newspack' ),
 		);
 
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );
@@ -512,6 +531,26 @@ function newspack_front_page_template( $template ) {
 add_filter( 'frontpage_template', 'newspack_front_page_template' );
 
 /**
+ * Override Jetpack Image Accelerator (Photon) downsizing of avatars. If an image has a square aspect ratio and the width is between 1-120px, assume it is an avatar and block downsizing.
+ * https://developer.jetpack.com/hooks/jetpack_photon_override_image_downsize/
+ *
+ * @param boolean $default The default value, generally false.
+ * @param array   $args Array of image details.
+ *
+ * @return boolean Should Photon be stopped from downsizing.
+ */
+function newspack_override_avatar_downsizing( $default, $args ) {
+	if ( is_array( $args['size'] ) && 2 === count( $args['size'] ) ) {
+		list( $width, $height ) = $args['size'];
+		if ( $width === $height && $width <= 120 & $width > 0 ) {
+			return true;
+		}
+	}
+	return $default;
+}
+add_filter( 'jetpack_photon_override_image_downsize', 'newspack_override_avatar_downsizing', 10, 2 );
+
+/**
  * Register meta fields:
  * - Featured Image position option
  * - Article Subtitle
@@ -571,15 +610,10 @@ function newspack_colors_css_wrap() {
 	}
 
 	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-
-	$primary_color = newspack_get_primary_color();
-	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
-		$primary_color = get_theme_mod( 'primary_color_hex', $primary_color );
-	}
 	?>
 
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-primary="' . esc_attr( $primary_color ) . '"' : ''; ?>>
-		<?php echo newspack_custom_colors_css(); ?>
+	<style type="text/css" id="custom-theme-colors">
+		<?php echo newspack_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -596,7 +630,7 @@ function newspack_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts">
-		<?php echo wp_kses( newspack_custom_typography_css(), '' ); ?>
+		<?php echo newspack_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 <?php
@@ -673,6 +707,146 @@ function newspack_sanitize_avatars() {
 }
 
 /**
+ * Co-authors in RSS and other feeds
+ * /wp-includes/feed-rss2.php uses the_author(), so we selectively filter the_author value
+ */
+function newspack_coauthors_in_rss( $the_author ) {
+	if ( ! is_feed() || ! function_exists( 'coauthors' ) ) {
+		return $the_author;
+	} else {
+		return coauthors( null, null, null, null, false );
+	}
+}
+add_filter( 'the_author', 'newspack_coauthors_in_rss' );
+
+/**
+ * Determine minimum theme breakpoint, below which responsive Ads media queries should not have a min-width.
+ *
+ * @param array  $media_queries An array of objects, one for each size, with width|height|min_width|min_height.
+ * @param string $placement ID of the ad placement.
+ * @param string $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @return array The correct array of media query data.
+ */
+function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, $context ) {
+	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
+		switch ( get_page_template_slug() ) {
+			case 'single-wide.php':
+				foreach ( $media_queries as $index => &$media_query ) {
+					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
+					if ( intval( $media_query['width'] ) > 1200 ) {
+						$media_query['min_width'] = null;
+						$media_query['max_width'] = null;
+					} else {
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
+					}
+				}
+				break;
+			case 'single-feature.php':
+			default:
+				foreach ( $media_queries as $index => &$media_query ) {
+					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
+					if ( intval( $media_query['width'] ) > 780 ) {
+						$media_query['min_width'] = null;
+						$media_query['max_width'] = null;
+					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
+					} else {
+						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
+						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
+						} else {
+							$media_query['max_width'] = null;
+						}
+					}
+				}
+				break;
+		}
+	}
+	return $media_queries;
+}
+add_filter( 'newspack_ads_media_queries', 'newspack_theme_newspack_ads_media_queries', 10, 3 );
+
+/**
+ * Should a particular Ad deployment use responsive placement.
+ *
+ * @param boolean $responsive Default value of whether to use responsive placement.
+ * @param string  $placement ID of the ad placement.
+ * @param string  $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
+ * @return boolean Whether to use responsive placement.
+ */
+function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive, $placement, $context ) {
+	// Apply Responsive placement to widgets using Super Cool Ad Inserter.
+	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
+		return true;
+	}
+	return $responsive;
+}
+add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
+
+/**
+ * Display Featured Images in RSS feed.
+ */
+function newspack_thumbnails_in_rss( $content ) {
+	global $post;
+	if ( has_post_thumbnail( $post->ID ) ) {
+		$content = '<figure>' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</figure>' . $content;
+	}
+	return $content;
+}
+add_filter( 'the_excerpt_rss', 'newspack_thumbnails_in_rss' );
+add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
+
+/**
+ * Notify about child theme deprecation.
+ * TODO: Remove after child theme code is removed.
+ */
+function newspack_child_theme_deprecation_notification() {
+	$theme = get_option( 'stylesheet', null );
+	if ( 'newspack-theme' !== $theme ) {
+		return;
+	}
+	$style_pack         = get_theme_mod( 'active_style_pack', 'default' );
+	$style_pack_mapping = array(
+		'style-1' => 'scott',
+		'style-2' => 'nelson',
+		'style-3' => 'katharine',
+		'style-4' => 'sacha',
+		'style-5' => 'joseph',
+	);
+	if ( ! isset( $style_pack_mapping[ $style_pack ] ) ) {
+		return;
+	}
+	?>
+	<div class="notice notice-warning">
+		<p>
+			<?php
+			echo wp_kses_post(
+				sprintf(
+					/* translators: warning about upcoming feature deprecation. */
+					__( 'The style pack code will be removed from the Newspack Theme in a future release. If you would like to keep <strong>%1$s</strong> styles, please download and activate the <strong><a href="%2$s">%3$s</a></strong> child theme before upgrading to the next Newspack Theme version.', 'newspack' ),
+					ucfirst( str_replace( '-', ' ', $style_pack ) ),
+					'https://github.com/Automattic/newspack-theme/releases/latest/download/newspack-' . $style_pack_mapping[ $style_pack ] . '.zip',
+					ucfirst( $style_pack_mapping[ $style_pack ] )
+				)
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'newspack_child_theme_deprecation_notification' );
+
+/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
@@ -685,7 +859,7 @@ require get_template_directory() . '/classes/class-newspack-walker-comment.php';
 /**
  * Style pack class.
  */
-if ( ! is_child_theme() ) {
+if ( ! is_child_theme() && ! newspack_is_active_style_pack( 'default' ) ) {
 	require get_template_directory() . '/classes/class-newspack-style-packs-core.php';
 	require get_template_directory() . '/inc/style-packs.php';
 }
@@ -694,11 +868,6 @@ if ( ! is_child_theme() ) {
  * Enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Default color filters.
- */
-require get_template_directory() . '/inc/color-filters.php';
 
 /**
  * Custom typography functions.

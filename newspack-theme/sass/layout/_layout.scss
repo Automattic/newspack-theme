@@ -64,8 +64,7 @@
 .blog #main,
 .search #main,
 .page .main-content,
-.single .main-content,
-.newspack-front-page.page-template-single-feature .site-main {
+.single .main-content {
 	@include media( tablet ) {
 		width: 65%;
 	}
@@ -94,6 +93,8 @@
 .newspack-front-page.page-template-single-feature .site-main {
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 780px;
+	width: 100%;
 }
 
 .page-template-single-feature {
@@ -101,7 +102,8 @@
 		.entry-header {
 			margin-left: auto;
 			margin-right: auto;
-			width: 65%;
+			max-width: 780px;
+			width: 100%;
 		}
 	}
 }
