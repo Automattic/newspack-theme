@@ -260,6 +260,10 @@
 		.nav1 .main-menu > li:last-child {
 			margin-right: 0;
 
+			a {
+				padding-right: 0;
+			}
+
 			.submenu-expand {
 				margin-right: -5px; // offset spacing next to svg icon.
 			}
