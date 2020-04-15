@@ -97,7 +97,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header - add option to center logo.
+	// Header - option for v. simplified header on subpages.
+	$wp_customize->add_setting(
+		'header_sub_simplified',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_sub_simplified',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Simple header on subpages', 'newspack' ),
+			'section' => 'newspack_header_options',
+		)
+	);
+
+	// Header - option to add slideout.
 	$wp_customize->add_setting(
 		'header_show_slideout',
 		array(

@@ -365,8 +365,64 @@
 	justify-content: flex-start;
 }
 
-// Hide desktop menus at specific breakpoints.
+// h-sub
+.h-sub {
+	&.h-sb {
+		.nav1 .main-menu > li,
+		.nav1 .main-menu > li > a {
+			color: $color__text-main;
+		}
 
+		@include media( tablet ) {
+			&.single-featured-image-beside,
+			&.single-featured-image-behind {
+				.middle-header-contain {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	&.single-featured-image-beside,
+	&.single-featured-image-behind {
+		@include media( tablet ) {
+			.site-header {
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+			}
+		}
+	}
+
+	@include media( tablet ) {
+		.featured-image-behind,
+		.featured-image-beside {
+			min-height: 100vh;
+		}
+	}
+
+	.middle-header-contain .wrapper {
+		padding: #{0.5 * $size__spacing-unit} 0;
+
+		@include media( tablet ) {
+			.site-branding {
+				flex-basis: auto;
+			}
+		}
+	}
+
+	&.single-featured-image-beside {
+		.middle-header-contain {
+			max-width: 1200px;
+			.wrapper {
+				margin: 0;
+				width: 50%;
+			}
+		}
+	}
+}
+
+// Hide desktop menus at specific breakpoints.
 .desktop-only {
 	display: none;
 }

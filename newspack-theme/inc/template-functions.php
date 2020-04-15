@@ -86,6 +86,13 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds classes to reflect the header layout
+	$header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
+	if ( true === $header_sub_simplified ) {
+		$classes[] = 'h-sub';
+	} else {
+		$classes[] = 'h-nsub';
+	}
+
 	$header_solid_background = get_theme_mod( 'header_solid_background', false );
 	if ( true === $header_solid_background ) {
 		$classes[] = 'h-sb'; // header - solid background.

@@ -1,6 +1,7 @@
 // Menu Toggles
 .mobile-menu-toggle,
-.desktop-menu-toggle {
+.desktop-menu-toggle,
+.fullmenu-toggle {
 	align-items: center;
 	background-color: transparent;
 	color: inherit;
@@ -23,7 +24,8 @@
 }
 
 .site-header .mobile-menu-toggle,
-.site-header .desktop-menu-toggle {
+.site-header .desktop-menu-toggle,
+.site-header .fullmenu-toggle {
 	&:hover {
 		color: inherit;
 	}
@@ -81,7 +83,8 @@
 }
 
 .mobile-sidebar,
-.desktop-sidebar {
+.desktop-sidebar,
+.fullmenu-sidebar {
 	font-size: $font__size-sm;
 	padding: $size__spacing-unit;
 	width: 90vw;
@@ -123,7 +126,8 @@
 }
 
 // Desktop Sidebar and Widget styles
-.desktop-sidebar {
+.desktop-sidebar,
+.fullmenu-sidebar {
 	background-color: #fff;
 	max-width: 400px;
 
@@ -152,19 +156,10 @@
 	}
 }
 
-// Modile Sidebar and Menu styles
-.mobile-sidebar {
-	background-color: $color__primary;
-	color: #fff;
-
+.mobile-sidebar,
+.fullmenu-sidebar {
 	@include media( tablet ) {
 		width: 33vw;
-	}
-
-	a,
-	a:visited,
-	.nav1 .sub-menu > li > a {
-		color: #fff;
 	}
 
 	ul ul {
@@ -223,8 +218,29 @@
 	}
 }
 
+// Mobile Sidebar and Menu styles
+.mobile-sidebar {
+	background-color: $color__primary;
+	color: #fff;
+
+	a,
+	a:visited,
+	.nav1 .sub-menu > li > a {
+		color: #fff;
+	}
+}
+
+// "Full Menu" Sidebar styles
+.fullmenu-sidebar {
+	.nav1 .sub-menu > li > a,
+	.nav1 .sub-menu > li > a:visited {
+		color: $color__text-main;
+	}
+}
+
 #desktop-sidebar-fallback,
-#mobile-sidebar-fallback {
+#mobile-sidebar-fallback,
+#fullmenu-sidebar-fallback {
 	bottom: 0;
 	overflow: auto;
 	position: fixed;
@@ -236,11 +252,19 @@
 	}
 }
 
-#desktop-sidebar-fallback {
+// Fallback - open from the left
+#desktop-sidebar-fallback,
+#fullmenu-sidebar-fallback {
 	left: -100%;
 	transition: left 0.2s;
 }
 
+.desktop-menu-opened #desktop-sidebar-fallback,
+.fullmenu-sidebar-opened #fullmenu-sidebar-fallback {
+	left: 0;
+}
+
+// Fallback - open from the right
 #mobile-sidebar-fallback {
 	right: -100%;
 	transition: right 0.2s;
@@ -248,10 +272,6 @@
 
 .menu-opened #mobile-sidebar-fallback {
 	right: 0;
-}
-
-.desktop-menu-opened #desktop-sidebar-fallback {
-	left: 0;
 }
 
 .menu-opened #mobile-sidebar-fallback,
