@@ -95,7 +95,8 @@
 	}
 
 	.mobile-menu-toggle,
-	.desktop-menu-toggle {
+	.desktop-menu-toggle,
+	.fullmenu-toggle {
 		font-size: 1em;
 		float: right;
 		margin: 0 0 $size__spacing-unit;
@@ -235,6 +236,12 @@
 	.nav1 .sub-menu > li > a,
 	.nav1 .sub-menu > li > a:visited {
 		color: $color__text-main;
+	}
+
+	nav + nav,
+	nav + .widget,
+	.widget + .widget {
+		border-color: $color__border;
 	}
 }
 
