@@ -21,9 +21,14 @@
 
 .site-header .custom-logo-link .custom-logo {
 	@include media( tabletonly ) {
-		height: auto;
 		max-height: 75px;
 		max-width: 175px;
+	}
+}
+
+.no-amp .site-header .custom-logo-link .custom-logo {
+	@include media( tabletonly ) {
+		height: auto;
 		width: auto;
 	}
 }

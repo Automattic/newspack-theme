@@ -73,6 +73,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'newspack-customizer';
 	endif;
 
+	// Adds a class when amp is enabled.
+	if ( ! newspack_is_amp() ) :
+		$classes[] = 'no-amp';
+	endif;
+
 	$hide_title = get_theme_mod( 'hide_front_page_title', false );
 	if ( true === $hide_title ) {
 		$classes[] = 'hide-homepage-title';
