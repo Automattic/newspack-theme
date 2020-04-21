@@ -173,7 +173,7 @@ add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9
 function newspack_thankyou_page_title( $title, $id ) {
 	if ( function_exists( 'is_order_received_page' ) &&
 		is_order_received_page() && get_the_ID() === $id ) {
-		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Thank you!', 'newspack' ) );
+		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Thank you', 'newspack' ) );
 	}
 	return esc_html( $title );
 }

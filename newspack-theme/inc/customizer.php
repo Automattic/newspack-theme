@@ -525,7 +525,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'woocommerce_thank_you_title',
 		array(
-			'default'           => esc_html__( 'Thank you!', 'newspack' ),
+			'default'           => esc_html__( 'Thank you', 'newspack' ),
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
