@@ -156,6 +156,17 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'hide-author-email';
 	}
 
+	// Adds classes for WooCommerce options
+	$thankyou_display_order_details    = get_theme_mod( 'thank_you_order_details_display', false );
+	$thankyou_display_customer_details = get_theme_mod( 'thank_you_customer_details_display', false );
+	// Check for thank you page:
+	if ( false === $thankyou_display_order_details ) {
+		$classes[] = 'hide-thankyou-order-details';
+	}
+	if ( false === $thankyou_display_customer_details ) {
+		$classes[] = 'hide-thankyou-customer-details';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );

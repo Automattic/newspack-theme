@@ -1186,9 +1186,16 @@ table.variations {
 	.select2-container--focus .select2-selection {
 		border-color: black;
 	}
+
+	&.hide-thankyou-order-details .woocommerce-order-details,
+	&.hide-thankyou-customer-details .woocommerce-customer-details {
+		display: none;
+	}
 }
 
-.woocommerce-checkout-review-order-table {
+.woocommerce-checkout-review-order-table,
+.woocommerce-table--order-details,
+.my_account_orders {
 	border-top: 1px solid $color__border;
 
 	td,

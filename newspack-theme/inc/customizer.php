@@ -509,6 +509,88 @@ function newspack_customize_register( $wp_customize ) {
 			'section' => 'woocommerce_cart_options',
 		)
 	);
+
+	/**
+	 * WooCommerce Thank You page details
+	 */
+	$wp_customize->add_section(
+		'woocommerce_thank_you',
+		array(
+			'title' => esc_html__( 'Thank You Page', 'newspack' ),
+			'panel' => 'woocommerce',
+		)
+	);
+
+	// Thank you message page title.
+	$wp_customize->add_setting(
+		'woocommerce_thank_you_title',
+		array(
+			'default'           => esc_html__( 'Thank you!', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'woocommerce_thank_you_title',
+		array(
+			'type'    => 'text',
+			'label'   => esc_html__( 'Thank You page title', 'newspack' ),
+			'section' => 'woocommerce_thank_you',
+		)
+	);
+
+	// Thank you message text.
+	$wp_customize->add_setting(
+		'woocommerce_thank_you_message',
+		array(
+			'default'           => esc_html__( 'We appreciate your contribution!', 'newspack' ),
+			'sanitize_callback' => 'sanitize_textarea_field',
+		)
+	);
+	$wp_customize->add_control(
+		'woocommerce_thank_you_message',
+		array(
+			'type'        => 'textarea',
+			'label'       => esc_html__( 'Thank You message', 'newspack' ),
+			'description' => esc_html__( 'Text message that displays at the top of the "Thank You" page.' ),
+			'section'     => 'woocommerce_thank_you',
+		)
+	);
+
+	// Thank you - display order details
+	$wp_customize->add_setting(
+		'thank_you_order_details_display',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'thank_you_order_details_display',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display Order Details', 'newspack' ),
+			'description' => esc_html__( 'Display an order details table below your thank you message.', 'newspack' ),
+			'section'     => 'woocommerce_thank_you',
+		)
+	);
+
+	// Thank you - display order details
+	$wp_customize->add_setting(
+		'thank_you_customer_details_display',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'thank_you_customer_details_display',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display Customer Details', 'newspack' ),
+			'description' => esc_html__( 'Display billing and shipping addresses.', 'newspack' ),
+			'section'     => 'woocommerce_thank_you',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
