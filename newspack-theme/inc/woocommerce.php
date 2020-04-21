@@ -175,7 +175,7 @@ function newspack_thankyou_page_title( $title, $id ) {
 		is_order_received_page() && get_the_ID() === $id ) {
 		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Thank you!', 'newspack' ) );
 	}
-	return $title;
+	return esc_html( $title );
 }
 add_filter( 'the_title', 'newspack_thankyou_page_title', 10, 2 );
 
@@ -184,17 +184,14 @@ add_filter( 'the_title', 'newspack_thankyou_page_title', 10, 2 );
  */
 function newspack_thankyou_order_message() {
 	$thank_you_msg = get_theme_mod( 'woocommerce_thank_you_message', esc_html__( 'We appreciate your contribution!', 'newspack' ) );
-	return $thank_you_msg;
+	return esc_html( $thank_you_msg );
 }
 add_filter( 'woocommerce_thankyou_order_received_text', 'newspack_thankyou_order_message' );
 
 /**
- * Change the subscription thank you message after purchase to empty for the time being.
+ * Remove the subscription 'thank you' message.
  */
 function newspack_subscription_thank_you() {
-	$thank_you_message = '';
-	return $thank_you_message;
-
+	return '';
 }
 add_filter( 'woocommerce_subscriptions_thank_you_message', 'newspack_subscription_thank_you' );
-

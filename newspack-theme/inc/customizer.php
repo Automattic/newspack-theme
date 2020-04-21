@@ -543,7 +543,7 @@ function newspack_customize_register( $wp_customize ) {
 		'woocommerce_thank_you_message',
 		array(
 			'default'           => esc_html__( 'We appreciate your contribution!', 'newspack' ),
-			'sanitize_callback' => 'sanitize_textarea_field',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
