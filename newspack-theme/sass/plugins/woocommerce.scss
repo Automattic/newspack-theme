@@ -1194,9 +1194,13 @@ table.variations {
 }
 
 .woocommerce-checkout-review-order-table,
-.woocommerce-table--order-details,
+table.woocommerce-table--order-details.shop_table,
 .my_account_orders {
 	border-top: 1px solid $color__border;
+
+	td {
+		font-weight: normal;
+	}
 
 	td,
 	th {
@@ -1235,6 +1239,10 @@ table.variations {
 
 	.cart-subtotal.recurring-total {
 		font-weight: bold;
+	}
+
+	tfoot th {
+		font-weight: normal;
 	}
 }
 
