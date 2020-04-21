@@ -12,7 +12,7 @@ export const META_FIELD_NAME = 'newspack_post_subtitle';
  * @param  {string} subtitle Subtitle text
  */
 export const appendSubtitleToTitleDOMElement = ( subtitle, isInCodeEditor ) => {
-	const titleEl = document.querySelector( '.editor-post-title__block > div' );
+	const titleEl = document.querySelector( '.editor-post-title__block' );
 	if ( titleEl && typeof subtitle === 'string' ) {
 		let subtitleEl = document.getElementById( SUBTITLE_ID );
 		if ( ! subtitleEl ) {
