@@ -521,7 +521,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Thank you message page title.
+	// Thank you page title.
 	$wp_customize->add_setting(
 		'woocommerce_thank_you_title',
 		array(
@@ -556,25 +556,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Thank you - display order details
-	$wp_customize->add_setting(
-		'thank_you_order_details_display',
-		array(
-			'default'           => false,
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'thank_you_order_details_display',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Display Order Details', 'newspack' ),
-			'description' => esc_html__( 'Display an order details table below your thank you message.', 'newspack' ),
-			'section'     => 'woocommerce_thank_you',
-		)
-	);
-
-	// Thank you - display order details
+	// Thank you - display customer details
 	$wp_customize->add_setting(
 		'thank_you_customer_details_display',
 		array(
@@ -582,12 +564,13 @@ function newspack_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'newspack_sanitize_checkbox',
 		)
 	);
+
 	$wp_customize->add_control(
 		'thank_you_customer_details_display',
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Display Customer Details', 'newspack' ),
-			'description' => esc_html__( 'Display billing and shipping addresses.', 'newspack' ),
+			'description' => esc_html__( 'Display the customer\'s billing address below their transaction details.', 'newspack' ),
 			'section'     => 'woocommerce_thank_you',
 		)
 	);
