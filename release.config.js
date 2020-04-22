@@ -47,7 +47,7 @@ module.exports = {
 			{
 				assets: THEMES.map( name => ( {
 					path: `./release/${ name }.zip`,
-					label: `${ name }.js`,
+					label: `${ name }.zip`,
 				} ) ),
 			},
 		],
