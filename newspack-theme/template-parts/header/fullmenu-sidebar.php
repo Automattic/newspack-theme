@@ -12,7 +12,7 @@ if ( newspack_is_amp() ) : ?>
 			<?php esc_html_e( 'Close', 'newspack' ); ?>
 		</button>
 <?php else : ?>
-	<aside id="fullmenu-fallback" class="fullmenu-sidebar">
+	<aside id="fullmenu-sidebar-fallback" class="fullmenu-sidebar">
 		<button class="fullmenu-toggle">
 			<?php echo wp_kses( newspack_get_icon_svg( 'close', 20 ), newspack_sanitize_svgs() ); ?>
 			<?php esc_html_e( 'Close', 'newspack' ); ?>
