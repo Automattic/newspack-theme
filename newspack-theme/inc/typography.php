@@ -201,21 +201,23 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= '
-		.block-editor-block-list__layout .block-editor-block-list__block h1,
-		.block-editor-block-list__layout .block-editor-block-list__block h2,
-		.block-editor-block-list__layout .block-editor-block-list__block h3,
-		.block-editor-block-list__layout .block-editor-block-list__block h4,
-		.block-editor-block-list__layout .block-editor-block-list__block h5,
-		.block-editor-block-list__layout .block-editor-block-list__block h6,
-		.block-editor-block-list__layout .block-editor-block-list__block figcaption,
-		.block-editor-block-list__layout .block-editor-block-list__block .gallery-caption,
-		.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
+		.block-editor-block-list__layout h1.block-editor-block-list__block,
+		.block-editor-block-list__layout h2.block-editor-block-list__block,
+		.block-editor-block-list__layout h3.block-editor-block-list__block,
+		.block-editor-block-list__layout h4.block-editor-block-list__block,
+		.block-editor-block-list__layout h5.block-editor-block-list__block,
+		.block-editor-block-list__layout h6.block-editor-block-list__block,
+		.block-editor-block-list__layout figcaption,
+		.block-editor-block-list__layout .gallery-caption,
+		.block-editor-block-list__layout .cat-links,
 
 		/* Post Title */
-		.editor-styles-wrapper .editor-post-title .editor-post-title__block .editor-post-title__input,
+		.edit-post-visual-editor.editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table td,
 
 		/* Cover Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-cover h2,
@@ -346,7 +348,7 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= '
-			.block-editor-block-list__layout .block-editor-block-list__block,
+			.block-editor-block-list__layout,
 			.editor-default-block-appender .editor-default-block-appender__content
 			{
 				font-family: ' . wp_kses( $font_body, null ) . ';
