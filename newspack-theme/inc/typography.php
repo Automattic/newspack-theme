@@ -100,8 +100,12 @@ function newspack_custom_typography_css() {
 		/* _blocks.scss */
 		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 		.wp-block-pullquote cite,
+		.entry .entry-content .wp-block-categories li,
+		.entry .entry-content .wp-block-archives li,
 		.entry .entry-content .wp-block-latest-posts li > a,
 		.entry .entry-content .wp-block-latest-posts time,
+		.entry .entry-content .wp-block-file,
+		.entry .entry-content .wp-block-file .wp-block-file__button,
 
 		/* _widgets.scss */
 		.widget,
@@ -201,12 +205,12 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= '
-		.block-editor-block-list__layout h1.block-editor-block-list__block,
-		.block-editor-block-list__layout h2.block-editor-block-list__block,
-		.block-editor-block-list__layout h3.block-editor-block-list__block,
-		.block-editor-block-list__layout h4.block-editor-block-list__block,
-		.block-editor-block-list__layout h5.block-editor-block-list__block,
-		.block-editor-block-list__layout h6.block-editor-block-list__block,
+		.edit-post-visual-editor.editor-styles-wrapper h1,
+		.edit-post-visual-editor.editor-styles-wrapper h2,
+		.edit-post-visual-editor.editor-styles-wrapper h3,
+		.edit-post-visual-editor.editor-styles-wrapper h4,
+		.edit-post-visual-editor.editor-styles-wrapper h5,
+		.edit-post-visual-editor.editor-styles-wrapper h6,
 		.editor-styles-wrapper .wp-block figcaption,
 		.block-editor-block-list__layout .gallery-caption,
 
@@ -219,12 +223,12 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .wpnbha .cat-links,
 
 		/* Table Block */
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table td,
 
 		/* Button Block */
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-button__link,
+		.edit-post-visual-editor.editor-styles-wrapper .wp-block-button__link,
+		.edit-post-visual-editor.editor-styles-wrapper .wp-block-button .wp-block-button__link,
 
 		/* Blockquote Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote cite,
