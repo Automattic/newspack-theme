@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/Automattic/newspack-theme/compare/v1.5.0...v1.6.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* **editor:** make subtitle appear in Gutenberg >v7.8.1 ([488656e](https://github.com/Automattic/newspack-theme/commit/488656edf977494030725bdd3d60d8a50025f76f)), closes [#886](https://github.com/Automattic/newspack-theme/issues/886)
+* change release zips' labels to zip ([a7f6d82](https://github.com/Automattic/newspack-theme/commit/a7f6d8274f835d9ae2add64242e2f49b428c5b4d))
+
+
+### Features
+
+* add hook above comments render ([#895](https://github.com/Automattic/newspack-theme/issues/895)) ([df53d07](https://github.com/Automattic/newspack-theme/commit/df53d0730024f4620fe0653e7034da1cc7b5de40))
+
 # [1.5.0](https://github.com/Automattic/newspack-theme/compare/v1.4.0...v1.5.0) (2020-04-12)
 
 
