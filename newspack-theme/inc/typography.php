@@ -207,24 +207,24 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout h4.block-editor-block-list__block,
 		.block-editor-block-list__layout h5.block-editor-block-list__block,
 		.block-editor-block-list__layout h6.block-editor-block-list__block,
-		.block-editor-block-list__layout figcaption,
+		.editor-styles-wrapper .wp-block figcaption,
 		.block-editor-block-list__layout .gallery-caption,
-		.block-editor-block-list__layout .cat-links,
 
 		/* Post Title */
 		.edit-post-visual-editor.editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
+
+		/* Homepage Posts Block */
+		.block-editor-block-list__layout .wpnbha .entry-title,
+		.block-editor-block-list__layout .wpnbha .entry-meta,
+		.block-editor-block-list__layout .wpnbha .cat-links,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table td,
 
-		/* Cover Block */
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-cover h2,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-cover .wp-block-cover-text,
-
 		/* Button Block */
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-button .wp-block-button__link,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-button__link,
 
 		/* Blockquote Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote cite,
@@ -348,6 +348,7 @@ function newspack_custom_typography_css() {
 		}
 
 		$editor_css_blocks .= '
+			#newspack-post-subtitle-element,
 			.block-editor-block-list__layout,
 			.editor-default-block-appender .editor-default-block-appender__content
 			{
