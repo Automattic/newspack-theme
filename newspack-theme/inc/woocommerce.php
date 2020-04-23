@@ -167,3 +167,31 @@ function newspack_checkout_fields_styling( $fields ) {
 }
 add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9999 );
 
+/**
+ * Filters the page title for the Thank You page.
+ */
+function newspack_thankyou_page_title( $title, $id ) {
+	if ( function_exists( 'is_order_received_page' ) &&
+		is_order_received_page() && get_the_ID() === $id ) {
+		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Order received', 'newspack' ) );
+	}
+	return esc_html( $title );
+}
+add_filter( 'the_title', 'newspack_thankyou_page_title', 10, 2 );
+
+/**
+ * Filters the 'message' for the Thank You page.
+ */
+function newspack_thankyou_order_message() {
+	$thank_you_msg = get_theme_mod( 'woocommerce_thank_you_message', esc_html__( 'Thank you. Your order has been received.', 'newspack' ) );
+	return esc_html( $thank_you_msg );
+}
+add_filter( 'woocommerce_thankyou_order_received_text', 'newspack_thankyou_order_message' );
+
+/**
+ * Remove the subscription 'thank you' message.
+ */
+function newspack_subscription_thank_you() {
+	return '';
+}
+add_filter( 'woocommerce_subscriptions_thank_you_message', 'newspack_subscription_thank_you' );

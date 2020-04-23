@@ -1188,8 +1188,14 @@ table.variations {
 	}
 }
 
-.woocommerce-checkout-review-order-table {
+.woocommerce-checkout-review-order-table,
+table.woocommerce-table--order-details.shop_table,
+.my_account_orders {
 	border-top: 1px solid $color__border;
+
+	td {
+		font-weight: normal;
+	}
 
 	td,
 	th {
@@ -1228,6 +1234,10 @@ table.variations {
 
 	.cart-subtotal.recurring-total {
 		font-weight: bold;
+	}
+
+	tfoot th {
+		font-weight: normal;
 	}
 }
 
@@ -1527,5 +1537,14 @@ table.variations {
 			color: $color__text-light;
 			display: block;
 		}
+	}
+}
+
+.woocommerce-customer-details {
+	border-top: 1px solid $color__border;
+	padding-top: $size__spacing-unit;
+	address {
+		font-size: 90%;
+		font-style: normal;
 	}
 }

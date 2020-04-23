@@ -78,6 +78,7 @@ if ( $collapse_comments && 1 < (int) $discussion->responses && $on_first_page ) 
 		}
 		?>
 	</div><!-- .comments-title-flex -->
+	<?php do_action( 'newspack_comments_above_comments' ); ?>
 	<?php
 	if ( have_comments() ) :
 
