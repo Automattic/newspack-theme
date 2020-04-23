@@ -18,8 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
-// temporarily hide shipping for all:
-$show_shipping = false;
 ?>
 <section class="woocommerce-customer-details">
 
