@@ -211,8 +211,9 @@ function newspack_custom_typography_css() {
 		.edit-post-visual-editor.editor-styles-wrapper h4,
 		.edit-post-visual-editor.editor-styles-wrapper h5,
 		.edit-post-visual-editor.editor-styles-wrapper h6,
-		.editor-styles-wrapper .wp-block figcaption,
-		.block-editor-block-list__layout .gallery-caption,
+		.block-editor-block-list__layout .block-editor-block-list__block figcaption,
+		.block-editor-block-list__layout .block-editor-block-list__block .gallery-caption,
+		.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
 
 		/* Post Title */
 		.edit-post-visual-editor.editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
@@ -220,7 +221,6 @@ function newspack_custom_typography_css() {
 		/* Homepage Posts Block */
 		.block-editor-block-list__layout .wpnbha .entry-title,
 		.block-editor-block-list__layout .wpnbha .entry-meta,
-		.block-editor-block-list__layout .wpnbha .cat-links,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th,
