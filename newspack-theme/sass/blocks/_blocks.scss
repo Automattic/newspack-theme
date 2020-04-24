@@ -895,45 +895,53 @@
 	//! Custom foreground colors
 	.has-primary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p,
+	.wp-block-button.has-primary-color {
 		color: $color__primary;
 	}
 
 	.has-primary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p,
+	.wp-block-button.has-primary-variation-color {
 		color: $color__primary-variation;
 	}
 
 	.has-secondary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p,
+	.wp-block-button.has-secondary-color {
 		color: $color__secondary;
 	}
 
 	.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p,
+	.wp-block-button.has-secondary-variation-color {
 		color: $color__secondary-variation;
 	}
 
 	.has-dark-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
+	.wp-block-button.has-dark-gray-color {
 		color: #111;
 	}
 
 	.has-medium-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-medium-gray-color {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-medium-gray-color,
+	.wp-block-button.has-medium-gray-color {
 		color: #767676;
 	}
 
 	.has-light-gray-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
+	.wp-block-button.has-light-gray-color {
 		color: #eee;
 	}
 
 	.has-white-color,
-	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
+	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color,
+	.wp-block-button.has-white-color {
 		color: #fff;
 	}
 }
