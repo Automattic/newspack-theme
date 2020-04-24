@@ -62,7 +62,6 @@ function newspack_custom_colors_css() {
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		.site-info a:hover,
-		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 		.comments-toggle:hover, .comments-toggle:focus {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
@@ -122,7 +121,7 @@ function newspack_custom_colors_css() {
 
 		/* Set secondary background color */
 
-		.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+		.entry .entry-content .wp-block-button__link:not(.has-background),
 		.button, button, input[type="button"], input[type="reset"], input[type="submit"],
 		.entry .entry-content .has-secondary-background-color,
 		.entry .entry-content *[class^="wp-block-"].has-secondary-background-color,
@@ -132,7 +131,6 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Set colour that contrasts against the secondary background */
-
 		.entry .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background),
 		.button, .button:visited, .entry .entry-content .button, .entry .entry-content .button:visited, button, input[type="button"], input[type="reset"], input[type="submit"] {
 			color: ' . esc_html( $secondary_color_contrast ) . ';
@@ -150,9 +148,9 @@ function newspack_custom_colors_css() {
 		/* Set secondary color with contrast */
 		.site-header .highlight-menu .menu-label,
 		.entry-content a,
-		.entry-content a:visited,
 		.author-bio .author-link,
-		.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+		.entry .entry-content .is-style-outline .wp-block-button__link, /* legacy selector */
+		.entry .entry-content .wp-block-button__link.is-style-outline {
 			color:' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 		}
 
@@ -208,7 +206,6 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p {
 			color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
 		}
-
 		';
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) ) {

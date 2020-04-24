@@ -497,49 +497,41 @@
 		text-decoration: none;
 		padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
 		outline: none;
-
-		&:hover,
-		&.has-background:hover {
-			color: white;
-			background: $color__background-button-hover;
-			cursor: pointer;
-		}
-
-		&:focus,
-		&.has-background:hover {
-			color: white;
-			background: $color__background-button-hover;
-			outline: thin dotted;
-			outline-offset: -4px;
-		}
 	}
 
-	.wp-button-block.is-style-outline .wp-block-button__link,
-	.wp-block-button__link.is-style-outline,
-	.wp-button-block.is-style-outline .wp-block-button__link:focus,
-	.wp-block-button__link.is-style-outline:focus,
-	.wp-button-block.is-style-outline .wp-block-button__link:active,
-	.wp-block-button__link.is-style-outline:active {
+	.is-style-outline .wp-block-button__link, // legacy selector
+	.wp-block-button__link.is-style-outline {
 		@include button-all-transition;
 		border-width: 2px;
 		border-style: solid;
+		color: $color__background-button;
+		border-color: currentColor;
 
 		&:not( .has-background ) {
 			background: transparent;
 		}
-
-		&:not( .has-text-color ) {
-			color: $color__background-button;
-			border-color: currentColor;
-		}
 	}
 
-	.wp-block-button.is-style-outline .wp-block-button__link:hover,
-	.wp-block-button__link.is-style-outline:hover {
-		color: white;
-		border-color: $color__background-button-hover;
-		&:not( .has-background ) {
-			color: $color__background-button-hover;
+	.wp-block-button {
+		.wp-block-button__link, // legacy selector
+		&.wp-block-button__link {
+			&:hover,
+			&:active,
+			&:focus {
+				color: white;
+				background: $color__background-button-hover;
+			}
+
+			&:focus {
+				outline: thin dotted;
+				outline-offset: -4px;
+			}
+
+			&.is-style-outline:hover,
+			&.is-style-outline:active,
+			&.is-style-outline:focus {
+				border-color: $color__background-button-hover;
+			}
 		}
 	}
 
