@@ -59,7 +59,7 @@ function newspack_custom_typography_css() {
 		input[type="submit"],
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-button .wp-block-button__link,
+		.entry .entry-content .wp-block-button__link,
 
 		/* _captions.scss */
 		figcaption,
