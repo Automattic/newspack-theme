@@ -72,6 +72,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"] .has-primary-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
+		.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-color:not(:hover), /* legacy styles */
 		.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-color:not(:hover) {
 			color: ' . esc_html( $primary_color ) . ';
 		}
@@ -143,6 +144,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"] .has-secondary-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
+		.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-color:not(:hover), /* legacy styles */
 		.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-color:not(:hover) {
 			color:' . esc_html( $secondary_color ) . '; /* base: #666 */
 		}
@@ -185,7 +187,8 @@ function newspack_custom_colors_css() {
 		.comment-navigation .nav-previous a:hover,
 		.comment-navigation .nav-next a:hover,
 		#cancel-comment-reply-link:hover,
-		.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-color:not(:hover) {
+		.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-variation-color:not(:hover), /* legacy styles */
+		.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-variation-color:not(:hover) {
 			color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . '; /* base: #0073a8; */
 		}
 
@@ -207,6 +210,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"] .has-secondary-variation-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p,
+		.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
 		.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
 			color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
 		}
