@@ -22,8 +22,6 @@ if ( newspack_is_amp() ) : ?>
 		<?php
 		newspack_tertiary_menu();
 
-		get_search_form();
-
 		newspack_primary_menu();
 
 		newspack_secondary_menu();
