@@ -52,16 +52,19 @@ endif;
 							<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
 						</button>
 					</div>
+
 					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+
 					<?php if ( newspack_has_menus() ) : ?>
 						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<?php esc_html_e( 'Menu', 'newspack' ); ?>
 						</button>
 					<?php endif; ?>
+
+					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
 				</div>
-			</div>
+			</div><!-- .wrapper -->
 		<?php else : ?>
 
 			<?php
