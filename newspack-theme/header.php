@@ -45,12 +45,20 @@ endif;
 		<?php if ( true === $header_sub_simplified ) : ?>
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<button class="fullmenu-toggle" on="tap:fullmenu-sidebar.toggle">
-						<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-						<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
-					</button>
+					<div class="fullmenu-toggle-contain">
+						<button class="fullmenu-toggle" on="tap:fullmenu-sidebar.toggle">
+							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+							<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
+						</button>
+					</div>
 					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 					<?php get_template_part( 'template-parts/header/header', 'search' ); ?>
+					<?php if ( newspack_has_menus() ) : ?>
+						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
+							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+							<?php esc_html_e( 'Menu', 'newspack' ); ?>
+						</button>
+					<?php endif; ?>
 				</div>
 			</div>
 		<?php else : ?>

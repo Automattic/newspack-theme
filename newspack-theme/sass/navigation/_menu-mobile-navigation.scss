@@ -37,7 +37,8 @@
 }
 
 // Hide desktop menu toggle on smaller screens
-.site-header .desktop-menu-toggle {
+.site-header .desktop-menu-toggle,
+.fullmenu-toggle-contain {
 	display: none;
 	font-size: $font__size-xs;
 	font-weight: normal;
@@ -58,12 +59,14 @@
 	// Header default height
 
 	// Mobile Menu toggle
-	.h-dh .site-header .mobile-menu-toggle {
+	.h-dh .site-header .mobile-menu-toggle,
+	.h-sub .site-header .mobile-menu-toggle {
 		display: none;
 	}
 
 	// Desktop Menu toggle
-	.h-dh .site-header .desktop-menu-toggle {
+	.h-dh .site-header .desktop-menu-toggle,
+	.fullmenu-toggle-contain {
 		display: flex;
 	}
 }

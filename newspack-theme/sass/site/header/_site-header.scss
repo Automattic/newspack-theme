@@ -213,16 +213,10 @@
 
 		.site-header .custom-logo-link {
 			margin-right: 0;
-
-			img {
-				height: auto;
-				margin: auto;
-				max-width: 100%;
-			}
 		}
 	}
 
-	@include media( desktop ) {
+	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
 			flex: 1;
 			display: flex;
@@ -259,8 +253,8 @@
 	.site-title a:visited,
 	.site-description,
 	.middle-header-contain,
-	.nav1 .main-menu > li,
-	.nav1 .main-menu > li > a {
+	.middle-header-contain .nav1 .main-menu > li,
+	.middle-header-contain .nav1 .main-menu > li > a {
 		color: #fff;
 	}
 
@@ -367,77 +361,84 @@
 
 // h-sub
 .h-sub {
-	&.h-sb {
-		.nav1 .main-menu > li,
-		.nav1 .main-menu > li > a {
-			color: $color__text-main;
-		}
-
-		@include media( tablet ) {
-			&.single-featured-image-beside,
-			&.single-featured-image-behind {
-				.middle-header-contain {
-					background: transparent;
-				}
-			}
-		}
-	}
-
-	&.single-featured-image-beside {
-		@include media( tablet ) {
-			.site-header {
-				position: absolute;
-				z-index: 10;
-				width: 100%;
-			}
-		}
-
-		.middle-header-contain {
-			border: 0;
-			margin: auto;
-			max-width: 1200px;
-			.wrapper {
-				margin: 0;
-				width: 50%;
-			}
-		}
+	.middle-header-contain .wrapper {
+		padding-bottom: #{0.5 * $size__spacing-unit};
+		padding-top: #{0.5 * $size__spacing-unit};
 	}
 
 	@include media( tablet ) {
-		.featured-image-behind,
-		.featured-image-beside {
-			min-height: 100vh;
+		// Default header background colour
+		&.h-db .middle-header-contain {
+			border-bottom: 1px solid $color__border;
 		}
-	}
 
-	.middle-header-contain {
-		border-bottom: 1px solid $color__border;
-		.wrapper {
-			justify-content: flex-start;
-			padding-bottom: #{0.5 * $size__spacing-unit};
-			padding-top: #{0.5 * $size__spacing-unit};
+		.middle-header-contain {
+			.wrapper {
+				justify-content: flex-start;
 
+				@include media( tablet ) {
+					.site-branding {
+						flex-basis: auto;
+					}
+				}
+			}
+
+			.custom-logo {
+				height: auto;
+				max-height: 50px;
+				max-width: 180px;
+				width: auto;
+			}
+
+			.header-search-contain {
+				margin-left: auto;
+			}
+		}
+
+		// Centered Logo
+		&.h-cl {
+			.site-header .middle-header-contain .wrapper > div {
+				flex: auto;
+			}
+		}
+
+		// Featured template settings
+		&.single-featured-image-beside {
 			@include media( tablet ) {
-				.site-branding {
-					flex-basis: auto;
+				.site-header {
+					position: absolute;
+					z-index: 10;
+					width: 100%;
+				}
+			}
+
+			.middle-header-contain {
+				border: 0;
+				margin: auto;
+				max-width: 1200px;
+				.wrapper {
+					margin: 0;
+					width: 50%;
 				}
 			}
 		}
 
-		.custom-logo {
-			max-height: 50px;
-			max-width: 180px;
+		.h-sb {
+			@include media( tablet ) {
+				&.single-featured-image-beside,
+				&.single-featured-image-behind {
+					.middle-header-contain {
+						background: transparent;
+					}
+				}
+			}
 		}
 
-		.header-search-contain {
-			margin-left: auto;
-		}
-	}
-
-	// Centered Logo
-	&.h-cl {
-		.site-header .middle-header-contain .wrapper > div {
-			flex: auto;
+		@include media( tablet ) {
+			.featured-image-behind,
+			.featured-image-beside {
+				min-height: 100vh;
+			}
 		}
 	}
 }
