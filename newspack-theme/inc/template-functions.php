@@ -87,7 +87,7 @@ function newspack_body_classes( $classes ) {
 
 	// Adds classes to reflect the header layout
 	$header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
-	if ( true === $header_sub_simplified ) {
+	if ( true === $header_sub_simplified && ! is_front_page() ) {
 		$classes[] = 'h-sub';
 	} else {
 		$classes[] = 'h-nsub';

@@ -109,7 +109,7 @@ function newspack_customize_register( $wp_customize ) {
 		'header_sub_simplified',
 		array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Simple header on subpages', 'newspack' ),
+			'label'   => esc_html__( 'Subpage Simple Header', 'newspack' ),
 			'section' => 'newspack_header_options',
 		)
 	);
