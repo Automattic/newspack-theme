@@ -30,8 +30,6 @@
 		max-width: 50%;
 	}
 
-	&.wp-block-image:not( :first-child ) .alignleft,
-	&.wp-block-image:not( :first-child ) .alignright,
 	.alignleft:not( :first-child ),
 	.alignright:not( :first-child ) {
 		margin-top: 0;
