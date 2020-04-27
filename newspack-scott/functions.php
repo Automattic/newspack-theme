@@ -94,12 +94,8 @@ add_action( 'wp_head', 'newspack_scott_typography_css_wrap' );
 function newspack_scott_scripts() {
 	// Enqueue Google fonts.
 	wp_enqueue_style( 'newspack-scott-fonts', newspack_scott_fonts_url(), array(), null );
-	// Enqueue child styles
-	wp_enqueue_style( 'newspack-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
-	// Enqueue child RTL styles
-	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 }
-add_action( 'wp_enqueue_scripts', 'newspack_scott_scripts', 99 );
+add_action( 'wp_enqueue_scripts', 'newspack_scott_scripts' );
 
 
 /**
