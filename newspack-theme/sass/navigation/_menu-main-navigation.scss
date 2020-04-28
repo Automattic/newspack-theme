@@ -57,10 +57,6 @@
 				}
 			}
 
-			&:last-child {
-				margin-right: 0;
-			}
-
 			&.menu-item-has-children {
 				position: inherit;
 
@@ -250,12 +246,28 @@
 }
 
 // Header Center Logo; default height
-.h-cl.h-dh .site-header #site-navigation {
-	flex-basis: 100%;
-	text-align: center;
+.h-cl.h-dh {
+	.site-header {
+		#site-navigation {
+			flex-basis: 100%;
+			text-align: center;
 
-	ul ul {
-		text-align: left;
+			ul ul {
+				text-align: left;
+			}
+		}
+
+		.nav1 .main-menu > li:last-child {
+			margin-right: 0;
+
+			a {
+				padding-right: 0;
+			}
+
+			.submenu-expand {
+				margin-right: -5px; // offset spacing next to svg icon.
+			}
+		}
 	}
 }
 
