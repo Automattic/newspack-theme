@@ -14,7 +14,6 @@
 	&.alignleft {
 		/*rtl:ignore*/
 		float: left;
-		margin-top: 0;
 		margin-left: 0;
 		/*rtl:ignore*/
 		margin-right: $size__spacing-unit;
@@ -25,11 +24,15 @@
 	&.alignright {
 		/*rtl:ignore*/
 		float: right;
-		margin-top: 0;
 		margin-right: 0;
 		/*rtl:ignore*/
 		margin-left: $size__spacing-unit;
 		max-width: 50%;
+	}
+
+	.alignleft:not( :first-child ),
+	.alignright:not( :first-child ) {
+		margin-top: 0;
 	}
 
 	&.aligncenter {
