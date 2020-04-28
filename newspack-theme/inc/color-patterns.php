@@ -97,7 +97,8 @@ function newspack_custom_colors_css() {
 
 		@media only screen and (min-width: 782px) {
 			/* Header default background */
-			.h-db .featured-image-beside .entry-header {
+			.h-db .featured-image-beside .entry-header,
+			.h-db.h-sub.single-featured-image-beside .middle-header-contain {
 				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
 		}

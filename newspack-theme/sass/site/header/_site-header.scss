@@ -223,7 +223,7 @@
 
 	&.h-dh {
 		@include media( tablet ) {
-			.site-header .middle-header-contain .wrapper > div {
+			.site-header .middle-header-contain .wrapper .site-branding {
 				display: flex;
 				justify-content: center;
 			}
@@ -238,8 +238,8 @@
 	}
 
 	&.h-sh {
-		@include media( desktopnarrow ) {
-			.site-header .middle-header-contain .wrapper > div {
+		@include media( narrowdesktop ) {
+			.site-header .middle-header-contain .wrapper .site-branding {
 				display: flex;
 				justify-content: center;
 			}
@@ -423,7 +423,7 @@
 			}
 		}
 
-		// Featured template settings
+		// Featured template settings - featured imgae height
 		&.h-sh,
 		&.h-dh {
 			.featured-image-behind,
@@ -432,6 +432,7 @@
 			}
 		}
 
+		// Featured template settings - header backgrounds
 		&.h-sb {
 			&.single-featured-image-beside,
 			&.single-featured-image-behind {
@@ -443,6 +444,10 @@
 
 		&.single-featured-image-beside,
 		&.single-featured-image-behind {
+			.middle-header-contain {
+				border: 0;
+				color: #fff;
+			}
 			.site-header {
 				position: absolute;
 				z-index: 10;
@@ -450,15 +455,17 @@
 			}
 		}
 
+		// Featured image beside - header layout
 		&.single-featured-image-beside {
 			.middle-header-contain {
-				border: 0;
 				margin: auto;
-				max-width: 1200px;
+				max-width: 90%;
+				width: 1200px;
 
 				.wrapper {
 					margin: 0;
-					width: 50%;
+					max-width: 50%;
+					padding-right: $size__spacing-unit;
 				}
 			}
 		}

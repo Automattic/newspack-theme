@@ -17,7 +17,10 @@
 	&:focus {
 		outline-offset: 0;
 	}
+}
 
+.mobile-menu-toggle,
+.h-dh .desktop-menu-toggle {
 	svg {
 		margin-right: #{0.25 * $size__spacing-unit};
 	}
@@ -43,8 +46,12 @@
 	font-size: $font__size-xs;
 	font-weight: normal;
 	line-height: 2;
-	margin-right: #{1.5 * $size__spacing-unit};
 	padding: #{0.125 * $size__spacing-unit} 0;
+}
+
+.site-header .desktop-menu-toggle,
+.h-ll .fullmenu-toggle-contain {
+	margin-right: #{1.25 * $size__spacing-unit};
 }
 
 .middle-header-contain .desktop-menu-toggle {
@@ -285,19 +292,22 @@
 }
 
 .menu-opened #mobile-sidebar-fallback,
-.desktop-menu-opened #desktop-sidebar-fallback {
+.desktop-menu-opened #desktop-sidebar-fallback,
+.fullmenu-sidebar-opened #fullmenu-sidebar-fallback {
 	> * {
 		display: block;
 	}
 
 	> .desktop-menu-toggle,
-	> .mobile-menu-toggle {
+	> .mobile-menu-toggle,
+	> .fullmenu-toggle {
 		display: flex;
 	}
 }
 
 .menu-opened::after,
-.desktop-menu-opened::after {
+.desktop-menu-opened::after,
+.fullmenu-sidebar-opened::after {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	bottom: 0;
 	content: '';

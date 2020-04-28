@@ -30,11 +30,10 @@ $show_slideout_sidebar = get_theme_mod( 'header_show_slideout', false );
 $header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
 
 get_template_part( 'template-parts/header/mobile', 'sidebar' );
+get_template_part( 'template-parts/header/desktop', 'sidebar' );
 
 if ( true === $header_sub_simplified && ! is_front_page() ) :
 	get_template_part( 'template-parts/header/fullmenu', 'sidebar' );
-else :
-	get_template_part( 'template-parts/header/desktop', 'sidebar' );
 endif;
 ?>
 

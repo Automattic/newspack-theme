@@ -81,25 +81,28 @@
 	}
 
 	// 'Fullmenu' fallback.
-	const fullmenuToggle = document.getElementsByClassName( 'fullmenu-toggle' ),
-		fullmenuSidebar = document.getElementById( 'fullmenu-sidebar-fallback' ),
-		fullmenuOpenButton = headerContain.getElementsByClassName( 'fullmenu-toggle' )[ 0 ],
-		fullmenuCloseButton = fullmenuSidebar.getElementsByClassName( 'fullmenu-toggle' )[ 0 ];
+	const fullmenuToggle = document.getElementsByClassName( 'fullmenu-toggle' );
 
-	for ( let i = 0; i < fullmenuToggle.length; i++ ) {
-		fullmenuToggle[ i ].addEventListener(
-			'click',
-			function() {
-				if ( body.classList.contains( 'fullmenu-opened' ) ) {
-					body.classList.remove( 'fullmenu-opened' );
-					fullmenuOpenButton.focus();
-				} else {
-					body.classList.add( 'fullmenu-opened' );
-					fullmenuCloseButton.focus();
-				}
-			},
-			false
-		);
+	if ( null !== fullmenuToggle ) {
+		const fullmenuSidebar = document.getElementById( 'fullmenu-sidebar-fallback' ),
+			fullmenuOpenButton = headerContain.getElementsByClassName( 'fullmenu-toggle' )[ 0 ],
+			fullmenuCloseButton = fullmenuSidebar.getElementsByClassName( 'fullmenu-toggle' )[ 0 ];
+
+		for ( let i = 0; i < fullmenuToggle.length; i++ ) {
+			fullmenuToggle[ i ].addEventListener(
+				'click',
+				function() {
+					if ( body.classList.contains( 'fullmenu-sidebar-opened' ) ) {
+						body.classList.remove( 'fullmenu-sidebar-opened' );
+						fullmenuOpenButton.focus();
+					} else {
+						body.classList.add( 'fullmenu-sidebar-opened' );
+						fullmenuCloseButton.focus();
+					}
+				},
+				false
+			);
+		}
 	}
 
 	// Comments toggle fallback.
