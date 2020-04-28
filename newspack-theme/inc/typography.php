@@ -59,7 +59,7 @@ function newspack_custom_typography_css() {
 		input[type="submit"],
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-button .wp-block-button__link,
+		.entry .entry-content .wp-block-button__link,
 
 		/* _captions.scss */
 		figcaption,
@@ -227,8 +227,7 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table td,
 
 		/* Button Block */
-		.edit-post-visual-editor.editor-styles-wrapper .wp-block-button__link,
-		.edit-post-visual-editor.editor-styles-wrapper .wp-block-button .wp-block-button__link,
+		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-button__link,
 
 		/* Blockquote Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote cite,

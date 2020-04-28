@@ -331,36 +331,22 @@ figcaption,
 
 /** === Button === */
 
-.wp-block-button {
-	.wp-block-button__link {
-		line-height: 1.8;
-		font-family: $font__heading;
-		font-size: $font__size-sm;
-		font-weight: bold;
-	}
+.wp-block-button__link {
+	background: $color__background-button;
+	border-radius: 5px;
+	line-height: 1.8;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	font-weight: bold;
+}
 
-	&:not( .is-style-outline ) .wp-block-button__link {
-		background: $color__background-button;
-	}
+.is-style-outline .wp-block-button__link, // legacy selector
+.wp-block-button__link.is-style-outline {
+	background: transparent;
+	color: $color__background-button;
 
-	&:not( .is-style-squared ) .wp-block-button__link {
-		border-radius: 5px;
-	}
-
-	&.is-style-outline,
-	&.is-style-outline:hover,
-	&.is-style-outline:focus,
-	&.is-style-outline:active {
-		background: transparent;
+	&:not( .has-text-color ) {
 		color: $color__background-button;
-
-		.wp-block-button__link {
-			background: transparent;
-
-			&:not( .has-text-color ) {
-				color: $color__background-button;
-			}
-		}
 	}
 }
 
