@@ -153,6 +153,18 @@
 	figcaption {
 		max-width: 100%;
 	}
+
+	// Make sure Jetpack Content Options don't override
+	.posted-on,
+	.cat-links,
+	.tags-links,
+	.byline,
+	.author-avatar {
+		clip: auto;
+		height: auto;
+		position: relative;
+		width: auto;
+	}
 }
 
 //! Newspack Carousel Block

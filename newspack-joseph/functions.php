@@ -108,16 +108,10 @@ add_action( 'wp_head', 'newspack_joseph_typography_css_wrap' );
  * Enqueue scripts and styles.
  */
 function newspack_joseph_scripts() {
-	// Dequeue parent styles
-	wp_dequeue_style( 'newspack-style' );
 	// Enqueue Google fonts.
 	wp_enqueue_style( 'newspack-joseph-fonts', newspack_joseph_fonts_url(), array(), null );
-	// Enqueue child styles
-	wp_enqueue_style( 'newspack-joseph-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
-	// Enqueue child RTL styles
-	wp_style_add_data( 'newspack-joseph-style', 'rtl', 'replace' );
 }
-add_action( 'wp_enqueue_scripts', 'newspack_joseph_scripts', 99 );
+add_action( 'wp_enqueue_scripts', 'newspack_joseph_scripts' );
 
 
 /**
