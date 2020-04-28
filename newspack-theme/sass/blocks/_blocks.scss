@@ -1199,3 +1199,9 @@
 		color: currentColor;
 	}
 }
+
+//! Temporary fix for a block button issue
+// See: https://github.com/WordPress/gutenberg/issues/21747
+.wp-block-button.is-style-outline:not( .wp-block-button__link ) {
+	border: 0;
+}
