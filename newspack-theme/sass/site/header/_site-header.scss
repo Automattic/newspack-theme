@@ -417,6 +417,7 @@
 		&.h-cl {
 			.site-header .middle-header-contain .wrapper > div {
 				flex: auto;
+				width: auto;
 				&:last-of-type {
 					text-align: right;
 				}
