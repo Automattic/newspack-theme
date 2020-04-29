@@ -108,10 +108,10 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'header_sub_simplified',
 		array(
-			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Subpage Simple Header', 'newspack' ),
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
 			'description' => esc_html__( 'On subpages, the header only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
-			'section' => 'newspack_header_options',
+			'section'     => 'newspack_header_options',
 		)
 	);
 
