@@ -36,10 +36,21 @@ function newspack_customize_register( $wp_customize ) {
 	/**
 	 * Header Options
 	 */
-	$wp_customize->add_section(
+	$wp_customize->add_panel(
 		'newspack_header_options',
 		array(
 			'title' => esc_html__( 'Header Settings', 'newspack' ),
+		)
+	);
+
+	/**
+	 * Header Appearance
+	 */
+	$wp_customize->add_section(
+		'header_section_appearance',
+		array(
+			'title' => esc_html__( 'Header Appearance', 'newspack' ),
+			'panel' => 'newspack_header_options',
 		)
 	);
 
@@ -57,7 +68,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Center Logo', 'newspack' ),
 			'description' => esc_html__( 'Check to center the logo in the header.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
 		)
 	);
 
@@ -75,7 +86,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Solid Background', 'newspack' ),
 			'description' => esc_html__( 'Check to use the primary color as the header background. Can be changed under "Colors".', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
 		)
 	);
 
@@ -93,7 +104,18 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Short Header', 'newspack' ),
 			'description' => esc_html__( 'Displays header as a shorter, simpler version.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
+		)
+	);
+
+	/**
+	 * Header Slideouts
+	 */
+	$wp_customize->add_section(
+		'header_section_slideout',
+		array(
+			'title' => esc_html__( 'Header Slideout Sidebar', 'newspack' ),
+			'panel' => 'newspack_header_options',
 		)
 	);
 
@@ -115,7 +137,7 @@ function newspack_customize_register( $wp_customize ) {
 				esc_html__( 'Show a Slide-out sidebar in the header, which you can populate by adding widgets %1$s.', 'newspack' ),
 				'<a rel="goto-section" href="#sidebar-widgets-header-1">' . __( 'here', 'newspack' ) . '</a>'
 			),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
 		)
 	);
 
@@ -133,7 +155,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'text',
 			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
 			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. The text is not visible when using the short header, but can always be read by screen readers.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
 		)
 	);
 
@@ -151,11 +173,22 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
 			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
 		)
 	);
 
-		// Header - option for v. simplified header on subpages.
+	/**
+	 * Header Slideouts
+	 */
+	$wp_customize->add_section(
+		'header_section_subpages',
+		array(
+			'title' => esc_html__( 'Header for Subpages', 'newspack' ),
+			'panel' => 'newspack_header_options',
+		)
+	);
+
+	// Header - option for v. simplified header on subpages.
 	$wp_customize->add_setting(
 		'header_sub_simplified',
 		array(
@@ -169,7 +202,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
 			'description' => esc_html__( 'On subpages, the header only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_subpages',
 		)
 	);
 
@@ -189,7 +222,7 @@ function newspack_customize_register( $wp_customize ) {
 			array(
 				'label'       => esc_html__( 'Alternative Logo', 'newspack' ),
 				'description' => esc_html__( 'Upload a flipped "light" version of your logo if your logo is dark.', 'newspack' ),
-				'section'     => 'newspack_header_options',
+				'section'     => 'header_section_subpages',
 				'settings'    => 'newspack_alternative_logo',
 				'flex_width'  => false,
 				'flex_height' => true,
