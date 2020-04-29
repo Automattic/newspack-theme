@@ -500,7 +500,7 @@ function newspack_the_custom_logo() {
 	endif;
 
 	if ( $use_alternative_logo ) : ?>
-		<a class="custom-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<a class="custom-logo-link alternative-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php
 			echo wp_get_attachment_image(
 				get_theme_mod( 'newspack_alternative_logo', '' ),
@@ -511,10 +511,10 @@ function newspack_the_custom_logo() {
 			?>
 		</a>
 	<?php
-	else :
-		// Otherwise, return the regular logo:
-		if ( has_custom_logo() ) {
-			the_custom_logo();
-		}
 	endif;
+
+	// Otherwise, return the regular logo:
+	if ( has_custom_logo() ) {
+		the_custom_logo();
+	}
 }

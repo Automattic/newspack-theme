@@ -221,22 +221,21 @@
 		}
 	}
 
-	&.h-dh {
-		@include media( tablet ) {
-			.site-header .middle-header-contain .wrapper .site-branding {
-				display: flex;
-				justify-content: center;
-			}
+	@include media( tablet ) {
+		.site-header .middle-header-contain .wrapper .site-branding {
+			display: flex;
+			justify-content: center;
+		}
 
-			.site-header .custom-logo-link,
-			.site-title,
-			.site-description {
-				text-align: center;
-				width: 100%;
-			}
+		.site-header .custom-logo-link,
+		.site-title,
+		.site-description {
+			text-align: center;
+			width: 100%;
 		}
 	}
 
+	/*
 	&.h-sh {
 		@include media( narrowdesktop ) {
 			.site-header .middle-header-contain .wrapper .site-branding {
@@ -252,6 +251,7 @@
 			}
 		}
 	}
+	*/
 }
 
 // Solid Background
@@ -375,7 +375,8 @@
 // h-sub
 .h-sub {
 	.site-title,
-	.site-description {
+	.site-description,
+	.alternative-logo {
 		display: none;
 	}
 
@@ -453,6 +454,13 @@
 				position: absolute;
 				z-index: 10;
 				width: 100%;
+			}
+			.alternative-logo {
+				display: inline-block;
+
+				~ .custom-logo-link {
+					display: none;
+				}
 			}
 		}
 
