@@ -1,3 +1,15 @@
+## [1.6.1](https://github.com/Automattic/newspack-theme/compare/v1.6.0...v1.6.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* add a temporary fix for a doubled block button outline ([#907](https://github.com/Automattic/newspack-theme/issues/907)) ([57df314](https://github.com/Automattic/newspack-theme/commit/57df314fb6f6c2d70d3b12846563c48b273800ff))
+* add color selectors for the editor ([#898](https://github.com/Automattic/newspack-theme/issues/898)) ([6e94411](https://github.com/Automattic/newspack-theme/commit/6e94411e94b31fd0f6c4bd29bc0b730c0d8c7adb))
+* improve appearance of caption with beside featured image setting ([#882](https://github.com/Automattic/newspack-theme/issues/882)) ([1da6e44](https://github.com/Automattic/newspack-theme/commit/1da6e4434580c942950fbfef7f8d5916de3f8a01))
+* make sure amp styles work with logo centering ([#887](https://github.com/Automattic/newspack-theme/issues/887)) ([0aaec4c](https://github.com/Automattic/newspack-theme/commit/0aaec4c204d1b6f67f9506680c8122b591e83c79))
+* make sure first floated element has top margin ([#903](https://github.com/Automattic/newspack-theme/issues/903)) ([733d482](https://github.com/Automattic/newspack-theme/commit/733d482e89267a1ae9d54dfc2a583074fa753b5c))
+* tweak primary menu to be properly centred ([#884](https://github.com/Automattic/newspack-theme/issues/884)) ([9897cb1](https://github.com/Automattic/newspack-theme/commit/9897cb10760971de938f83a624cfee74d1c3a10a))
+
 # [1.6.0](https://github.com/Automattic/newspack-theme/compare/v1.5.0...v1.6.0) (2020-04-23)
 
 
