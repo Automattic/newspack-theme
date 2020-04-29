@@ -97,24 +97,6 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header - option for v. simplified header on subpages.
-	$wp_customize->add_setting(
-		'header_sub_simplified',
-		array(
-			'default'           => false,
-			'sanitize_callback' => 'newspack_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'header_sub_simplified',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
-			'description' => esc_html__( 'On subpages, the header only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
-			'section'     => 'newspack_header_options',
-		)
-	);
-
 	// Header - option to add slideout.
 	$wp_customize->add_setting(
 		'header_show_slideout',
@@ -170,6 +152,50 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
 			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
 			'section'     => 'newspack_header_options',
+		)
+	);
+
+		// Header - option for v. simplified header on subpages.
+	$wp_customize->add_setting(
+		'header_sub_simplified',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_sub_simplified',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
+			'description' => esc_html__( 'On subpages, the header only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
+			'section'     => 'newspack_header_options',
+		)
+	);
+
+	// Add option to upload logo specifically for the footer.
+	$wp_customize->add_setting(
+		'newspack_alternative_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'absint',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize,
+			'newspack_alternative_logo',
+			array(
+				'label'       => esc_html__( 'Alternative Logo', 'newspack' ),
+				'description' => esc_html__( 'Upload a flipped "light" version of your logo if your logo is dark.', 'newspack' ),
+				'section'     => 'newspack_header_options',
+				'settings'    => 'newspack_alternative_logo',
+				'flex_width'  => false,
+				'flex_height' => true,
+				'width'       => 400,
+				'height'      => 300,
+			)
 		)
 	);
 
