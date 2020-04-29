@@ -114,7 +114,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_section_slideout',
 		array(
-			'title' => esc_html__( 'Header Slideout Sidebar', 'newspack' ),
+			'title' => esc_html__( 'Slideout Sidebar', 'newspack' ),
 			'panel' => 'newspack_header_options',
 		)
 	);
@@ -183,7 +183,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_section_subpages',
 		array(
-			'title' => esc_html__( 'Header for Subpages', 'newspack' ),
+			'title' => esc_html__( 'Subpage Options', 'newspack' ),
 			'panel' => 'newspack_header_options',
 		)
 	);
