@@ -48,8 +48,7 @@ function newspack_jetpack_setup() {
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
-				'author'     => '.byline',
-				'comment'    => '.comments-link',
+				'author'     => '.byline, .author-avatar',
 			),
 			'featured-images' => array(
 				'archive' => true,

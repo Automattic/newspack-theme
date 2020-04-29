@@ -331,36 +331,22 @@ figcaption,
 
 /** === Button === */
 
-.wp-block-button {
-	.wp-block-button__link {
-		line-height: 1.8;
-		font-family: $font__heading;
-		font-size: $font__size-sm;
-		font-weight: bold;
-	}
+.wp-block-button__link {
+	background: $color__background-button;
+	border-radius: 5px;
+	line-height: 1.8;
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	font-weight: bold;
+}
 
-	&:not( .is-style-outline ) .wp-block-button__link {
-		background: $color__background-button;
-	}
+.is-style-outline .wp-block-button__link, // legacy selector
+.wp-block-button__link.is-style-outline {
+	background: transparent;
+	color: $color__background-button;
 
-	&:not( .is-style-squared ) .wp-block-button__link {
-		border-radius: 5px;
-	}
-
-	&.is-style-outline,
-	&.is-style-outline:hover,
-	&.is-style-outline:focus,
-	&.is-style-outline:active {
-		background: transparent;
+	&:not( .has-text-color ) {
 		color: $color__background-button;
-
-		.wp-block-button__link {
-			background: transparent;
-
-			&:not( .has-text-color ) {
-				color: $color__background-button;
-			}
-		}
 	}
 }
 
@@ -826,4 +812,70 @@ ul.wp-block-archives,
 
 #newspack-post-subtitle-element {
 	font-style: italic;
+}
+
+/** === Custom Colors === */
+
+.has-primary-background-color {
+	background-color: $color__primary;
+}
+
+.has-primary-variation-background-color {
+	background-color: $color__primary-variation;
+}
+
+.has-secondary-background-color {
+	background-color: $color__secondary;
+}
+
+.has-secondary-variation-background-color {
+	background-color: $color__secondary-variation;
+}
+
+.has-dark-gray-background-color {
+	background-color: #111;
+}
+
+.has-medium-gray-background-color {
+	background-color: #767676;
+}
+
+.has-light-gray-background-color {
+	background-color: #eee;
+}
+
+.has-white-background-color {
+	background-color: #fff;
+}
+
+.has-primary-color {
+	color: $color__primary;
+}
+
+.has-primary-variation-color {
+	color: $color__primary-variation;
+}
+
+.has-secondary-color {
+	color: $color__secondary;
+}
+
+.has-secondary-variation-color {
+	color: $color__secondary-variation;
+}
+
+.has-dark-gray-color {
+	color: #111;
+}
+
+.has-medium-gray-color {
+	color: #767676;
+}
+
+.has-light-gray-color {
+	color: #eee;
+}
+
+.has-white-color {
+	color: #fff;
 }

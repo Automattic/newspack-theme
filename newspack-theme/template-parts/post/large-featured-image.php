@@ -33,12 +33,11 @@ if ( 'behind' === newspack_featured_image_position() ) :
 		</div><!-- .wrapper -->
 
 		<?php newspack_post_thumbnail(); ?>
+
+		<?php if ( $caption ) : ?>
+			<figcaption><span><?php echo wp_kses_post( $caption ); ?></span></figcaption>
+		<?php endif; ?>
 	</div><!-- .featured-image-behind -->
-
-	<?php if ( $caption ) : ?>
-		<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
-	<?php endif; ?>
-
 <?php else : ?>
 
 	<header class="entry-header">

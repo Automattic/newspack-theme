@@ -540,7 +540,7 @@ body.page {
 }
 
 .featured-image-behind + figcaption,
-.featured-image-beside + figcaption {
+.featured-image-beside figcaption {
 	margin: #{0.25 * $size__spacing-unit} auto 0;
 	width: 1200px;
 	max-width: 100%;
@@ -608,8 +608,7 @@ body.page {
 		.entry-header {
 			margin-left: auto;
 			max-width: 600px;
-			padding-left: 0;
-			padding-right: 0;
+			padding: #{2 * $size__spacing-unit} 0 $size__spacing-unit;
 
 			a,
 			a:hover,
@@ -647,6 +646,41 @@ body.page {
 
 		.entry-title {
 			font-size: $font__size-xxl;
+		}
+
+		figcaption {
+			bottom: 0;
+			color: #fff;
+			left: 50%;
+			position: absolute;
+			width: 50%;
+
+			a,
+			a:visited {
+				color: #fff;
+				text-decoration: underline;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			> span {
+				display: inline-block;
+				max-width: 780px;
+				padding: #{2 * $size__spacing-unit} $size__spacing-unit $size__spacing-unit;
+				position: relative;
+			}
+
+			&::before {
+				background-image: linear-gradient( rgba( 0, 0, 0, 0 ), rgba( 0, 0, 0, 0.5 ) 50% );
+				bottom: 0;
+				content: '';
+				height: 100%;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
 		}
 	}
 }
