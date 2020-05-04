@@ -49,7 +49,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_section_appearance',
 		array(
-			'title' => esc_html__( 'Header Appearance', 'newspack' ),
+			'title' => esc_html__( 'Appearance', 'newspack' ),
 			'panel' => 'newspack_header_options',
 		)
 	);
@@ -114,7 +114,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_section_slideout',
 		array(
-			'title' => esc_html__( 'Slideout Sidebar', 'newspack' ),
+			'title' => esc_html__( 'Slide-out Sidebar', 'newspack' ),
 			'panel' => 'newspack_header_options',
 		)
 	);
@@ -183,7 +183,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_section_subpages',
 		array(
-			'title' => esc_html__( 'Subpage Options', 'newspack' ),
+			'title' => esc_html__( 'Subpage Header', 'newspack' ),
 			'panel' => 'newspack_header_options',
 		)
 	);
@@ -201,7 +201,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
-			'description' => esc_html__( 'On subpages, the header only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
+			'description' => esc_html__( 'On posts, pages, archive and search results, use a header that only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
 			'section'     => 'header_section_subpages',
 		)
 	);
@@ -221,7 +221,7 @@ function newspack_customize_register( $wp_customize ) {
 			'newspack_alternative_logo',
 			array(
 				'label'       => esc_html__( 'Alternative Logo', 'newspack' ),
-				'description' => esc_html__( 'Upload a flipped "light" version of your logo if your logo is dark.', 'newspack' ),
+				'description' => esc_html__( 'Upload an alternative logo to be used on posts with the featured image behind and featured image beside settings, where the logo will be overlapping.', 'newspack' ),
 				'section'     => 'header_section_subpages',
 				'settings'    => 'newspack_alternative_logo',
 				'flex_width'  => false,
