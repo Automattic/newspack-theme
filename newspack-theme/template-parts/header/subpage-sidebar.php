@@ -6,14 +6,14 @@
  */
 
 if ( newspack_is_amp() ) : ?>
-	<amp-sidebar id="fullmenu-sidebar" layout="nodisplay" side="left" class="fullmenu-sidebar">
-		<button class="fullmenu-toggle" on='tap:fullmenu-sidebar.toggle'>
+	<amp-sidebar id="subpage-sidebar" layout="nodisplay" side="left" class="subpage-sidebar">
+		<button class="subpage-toggle" on='tap:subpage-sidebar.toggle'>
 			<?php echo wp_kses( newspack_get_icon_svg( 'close', 20 ), newspack_sanitize_svgs() ); ?>
 			<?php esc_html_e( 'Close', 'newspack' ); ?>
 		</button>
 <?php else : ?>
-	<aside id="fullmenu-sidebar-fallback" class="fullmenu-sidebar">
-		<button class="fullmenu-toggle">
+	<aside id="subpage-sidebar-fallback" class="subpage-sidebar">
+		<button class="subpage-toggle">
 			<?php echo wp_kses( newspack_get_icon_svg( 'close', 20 ), newspack_sanitize_svgs() ); ?>
 			<?php esc_html_e( 'Close', 'newspack' ); ?>
 		</button>

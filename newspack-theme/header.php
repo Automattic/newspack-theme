@@ -33,7 +33,7 @@ get_template_part( 'template-parts/header/mobile', 'sidebar' );
 get_template_part( 'template-parts/header/desktop', 'sidebar' );
 
 if ( true === $header_sub_simplified && ! is_front_page() ) :
-	get_template_part( 'template-parts/header/fullmenu', 'sidebar' );
+	get_template_part( 'template-parts/header/subpage', 'sidebar' );
 endif;
 ?>
 
@@ -45,8 +45,8 @@ endif;
 		<?php if ( true === $header_sub_simplified && ! is_front_page() ) : ?>
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<div class="fullmenu-toggle-contain">
-						<button class="fullmenu-toggle" on="tap:fullmenu-sidebar.toggle">
+					<div class="subpage-toggle-contain">
+						<button class="subpage-toggle" on="tap:subpage-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
 						</button>

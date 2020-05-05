@@ -80,24 +80,24 @@
 		);
 	}
 
-	// 'Fullmenu' fallback.
-	const fullmenuToggle = document.getElementsByClassName( 'fullmenu-toggle' );
+	// 'Sub page' menu fallback.
+	const subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
 
-	if ( null !== fullmenuToggle ) {
-		const fullmenuSidebar = document.getElementById( 'fullmenu-sidebar-fallback' ),
-			fullmenuOpenButton = headerContain.getElementsByClassName( 'fullmenu-toggle' )[ 0 ],
-			fullmenuCloseButton = fullmenuSidebar.getElementsByClassName( 'fullmenu-toggle' )[ 0 ];
+	if ( null !== subpageToggle ) {
+		const subpageSidebar = document.getElementById( 'subpage-sidebar-fallback' ),
+			subpageOpenButton = headerContain.getElementsByClassName( 'subpage-toggle' )[ 0 ],
+			subpageCloseButton = subpageSidebar.getElementsByClassName( 'subpage-toggle' )[ 0 ];
 
-		for ( let i = 0; i < fullmenuToggle.length; i++ ) {
-			fullmenuToggle[ i ].addEventListener(
+		for ( let i = 0; i < subpageToggle.length; i++ ) {
+			subpageToggle[ i ].addEventListener(
 				'click',
 				function() {
-					if ( body.classList.contains( 'fullmenu-sidebar-opened' ) ) {
-						body.classList.remove( 'fullmenu-sidebar-opened' );
-						fullmenuOpenButton.focus();
+					if ( body.classList.contains( 'subpage-sidebar-opened' ) ) {
+						body.classList.remove( 'subpage-sidebar-opened' );
+						subpageOpenButton.focus();
 					} else {
-						body.classList.add( 'fullmenu-sidebar-opened' );
-						fullmenuCloseButton.focus();
+						body.classList.add( 'subpage-sidebar-opened' );
+						subpageCloseButton.focus();
 					}
 				},
 				false
