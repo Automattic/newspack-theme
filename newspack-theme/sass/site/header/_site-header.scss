@@ -189,6 +189,14 @@
 			&.site-branding {
 				width: 30%;
 			}
+
+			&:first-of-type > * {
+				margin-right: auto;
+			}
+
+			&:last-of-type {
+				justify-content: flex-end;
+			}
 		}
 
 		.site-branding {
@@ -230,14 +238,6 @@
 
 			&.site-branding {
 				width: auto;
-			}
-
-			&:first-of-type > * {
-				margin-right: auto;
-			}
-
-			&:last-of-type {
-				justify-content: flex-end;
 			}
 		}
 
