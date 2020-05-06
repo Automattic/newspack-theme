@@ -963,7 +963,7 @@
 	.has-white-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color,
 	.wp-block-button.has-white-color,
-	.is-style-outline .wp-block-button__link.has-white-colo:not( :hover ), // legacy selector
+	.is-style-outline .wp-block-button__link.has-white-color:not( :hover ), // legacy selector
 	.wp-block-button__link.is-style-outline.has-white-color:not( :hover ) {
 		color: #fff;
 	}
