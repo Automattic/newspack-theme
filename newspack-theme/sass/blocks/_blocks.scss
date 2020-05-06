@@ -911,28 +911,36 @@
 	.has-primary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p,
-	.wp-block-button.has-primary-color {
+	.wp-block-button.has-primary-color,
+	.is-style-outline .wp-block-button__link.has-primary-color:not( :hover ), //legacy selector
+	.wp-block-button__link.is-style-outline.has-primary-color:not( :hover ) {
 		color: $color__primary;
 	}
 
 	.has-primary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p,
-	.wp-block-button.has-primary-variation-color {
+	.wp-block-button.has-primary-variation-color,
+	.is-style-outline .wp-block-button__link.has-primary-variation-color:not( :hover ), //legacy selector
+	.wp-block-button__link.is-style-outline.has-primary-variation-color:not( :hover ) {
 		color: $color__primary-variation;
 	}
 
 	.has-secondary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p,
-	.wp-block-button.has-secondary-color {
+	.wp-block-button.has-secondary-color,
+	.is-style-outline .wp-block-button__link.has-secondary-color:not( :hover ), //legacy selector
+	.wp-block-button__link.is-style-outline.has-secondary-color:not( :hover ) {
 		color: $color__secondary;
 	}
 
 	.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p,
-	.wp-block-button.has-secondary-variation-color {
+	.wp-block-button.has-secondary-variation-color,
+	.is-style-outline .wp-block-button__link.has-secondary-variation-color:not( :hover ), //legacy selector
+	.wp-block-button__link.is-style-outline.has-secondary-variation-color:not( :hover ) {
 		color: $color__secondary-variation;
 	}
 
