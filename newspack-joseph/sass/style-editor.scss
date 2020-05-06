@@ -26,6 +26,10 @@ Newspack Sacha Editor Styles
 	}
 }
 
+.wp-block-group.is-style-border {
+	border: 3px double currentColor;
+}
+
 /* Separator */
 .wp-block-separator {
 	&:not( .is-style-dots ) {
