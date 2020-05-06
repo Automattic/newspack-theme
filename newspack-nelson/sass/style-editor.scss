@@ -60,6 +60,13 @@ blockquote {
 	}
 }
 
+//! Newspack Article Carousel
+.wp-block-newspack-blocks-carousel {
+	.entry-meta .byline a {
+		color: inherit;
+	}
+}
+
 .has-drop-cap:not( :focus )::first-letter {
 	color: $color__secondary;
 	font-family: $font__heading;

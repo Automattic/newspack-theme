@@ -269,8 +269,11 @@ cite {
 }
 
 //! Newspack
-.wpnbha .cat-links {
-	text-align: left;
+.wpnbha,
+.wp-block-newspack-blocks-carousel {
+	.cat-links {
+		text-align: left;
+	}
 }
 
 @include media( tablet ) {
