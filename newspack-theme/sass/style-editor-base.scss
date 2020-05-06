@@ -329,6 +329,12 @@ figcaption,
 	text-align: left;
 }
 
+/** === Group === */
+.wp-block[data-align='left'] .wp-block-group,
+.wp-block[data-align='right'] .wp-block-group {
+	max-width: 50%;
+}
+
 /** === Button === */
 
 .wp-block-button__link {

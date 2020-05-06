@@ -70,6 +70,8 @@ body.newspack-single-column-template {
 	}
 
 	.wp-block[data-align='left'] {
+		position: relative;
+
 		@include media( desktop ) {
 			left: #{-2 * $size__spacing-unit};
 		}
@@ -83,6 +85,8 @@ body.newspack-single-column-template {
 	}
 
 	.wp-block[data-align='right'] {
+		position: relative;
+
 		@include media( desktop ) {
 			right: #{-2 * $size__spacing-unit};
 		}
