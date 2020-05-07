@@ -1,3 +1,13 @@
+## [1.6.2](https://github.com/Automattic/newspack-theme/compare/v1.6.1...v1.6.2) (2020-05-07)
+
+
+### Bug Fixes
+
+* allow html in title filter ([#909](https://github.com/Automattic/newspack-theme/issues/909)) ([6fd81d0](https://github.com/Automattic/newspack-theme/commit/6fd81d09f12066502af79536ffef5d82dd908def))
+* bump woocommerce thank you page version ([#910](https://github.com/Automattic/newspack-theme/issues/910)) ([1c8aa49](https://github.com/Automattic/newspack-theme/commit/1c8aa49f7f8ba7eeaa3212d9fddc3e02eb8d45e3))
+* improve custom color behavior for the button block ([#911](https://github.com/Automattic/newspack-theme/issues/911)) ([34476e5](https://github.com/Automattic/newspack-theme/commit/34476e554fb5540e2aead928ad81e4c0fa05a1b4))
+* move content option fixes to block ([90e487e](https://github.com/Automattic/newspack-theme/commit/90e487e952bdb8ab77068a97d1001fc74eccb1d0))
+
 ## [1.6.1](https://github.com/Automattic/newspack-theme/compare/v1.6.0...v1.6.1) (2020-04-29)
 
 
