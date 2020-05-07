@@ -175,7 +175,7 @@ function newspack_thankyou_page_title( $title, $id ) {
 		is_order_received_page() && get_the_ID() === $id ) {
 		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Order received', 'newspack' ) );
 	}
-	return esc_html( $title );
+	return wp_kses_post( $title );
 }
 add_filter( 'the_title', 'newspack_thankyou_page_title', 10, 2 );
 
