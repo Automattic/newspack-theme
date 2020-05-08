@@ -478,6 +478,34 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Footer settings
+	 */
+	$wp_customize->add_section(
+		'footer_options',
+		array(
+			'title' => esc_html__( 'Footer Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'footer_copyright',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'footer_copyright',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Copyright Information', 'newspack' ),
+			'description' => esc_html__( 'Add custom text to be displayed next to a copyright symbol and current year in the footer. By default, it will display your site title.', 'newspack' ),
+			'section'     => 'footer_options',
+		)
+	);
+
+	/**
 	 * WooCommerce Order Details settings
 	 */
 	$wp_customize->add_section(
