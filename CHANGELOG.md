@@ -1,3 +1,20 @@
+# [1.7.0](https://github.com/Automattic/newspack-theme/compare/v1.6.2...v1.7.0) (2020-05-11)
+
+
+### Bug Fixes
+
+* correct alignment issue with simplified header and centered logo ([#928](https://github.com/Automattic/newspack-theme/issues/928)) ([f20f1fd](https://github.com/Automattic/newspack-theme/commit/f20f1fdbc02de80c4a4b28064645b44b30d907ef))
+* improved styling for shop and products ([7f40004](https://github.com/Automattic/newspack-theme/commit/7f40004368b885bd10c9970826a1475ee93b9fb7))
+* make sure floated group blocks preview at 50% width ([#916](https://github.com/Automattic/newspack-theme/issues/916)) ([80580bb](https://github.com/Automattic/newspack-theme/commit/80580bbcfcf25f56ee533202b53cd0664e8d1b23))
+* make sure full width blocks preview centered in editor ([#914](https://github.com/Automattic/newspack-theme/issues/914)) ([e7db1d1](https://github.com/Automattic/newspack-theme/commit/e7db1d1b07b31c7b661671e4b8c70c566d749ea8))
+* make sure the cover block gradient fills the available space ([#915](https://github.com/Automattic/newspack-theme/issues/915)) ([cc29430](https://github.com/Automattic/newspack-theme/commit/cc29430080b7ac9f23528318314adf6bf12963ea))
+
+
+### Features
+
+* add option to customize copyright text ([#925](https://github.com/Automattic/newspack-theme/issues/925)) ([94961a7](https://github.com/Automattic/newspack-theme/commit/94961a7b7aab5a69a212a4e68a6b69ec0fa4dd5c))
+* add simplied header option for subpages ([#901](https://github.com/Automattic/newspack-theme/issues/901)) ([ed415e5](https://github.com/Automattic/newspack-theme/commit/ed415e5253f8eb45e506c531d180706cfb796cd7))
+
 ## [1.6.2](https://github.com/Automattic/newspack-theme/compare/v1.6.1...v1.6.2) (2020-05-07)
 
 
