@@ -593,7 +593,7 @@ body.page {
 		}
 
 		> .wrapper {
-			padding: 0 #{2 * $size__spacing-unit};
+			padding: 0;
 			margin: auto 0;
 		}
 
@@ -607,8 +607,13 @@ body.page {
 
 		.entry-header {
 			margin-left: auto;
-			max-width: 600px;
-			padding: #{2 * $size__spacing-unit} 0 $size__spacing-unit;
+			max-width: 90%;
+			padding: #{2 * $size__spacing-unit} #{0.5 * $size__spacing-unit} $size__spacing-unit 0;
+			width: 600px;
+
+			@include media( desktop ) {
+				padding-right: $size__spacing-unit;
+			}
 
 			a,
 			a:hover,
@@ -682,6 +687,11 @@ body.page {
 				width: 100%;
 			}
 		}
+	}
+
+	// Header - subpage short
+	.h-sub .featured-image-beside .entry-header {
+		padding-top: #{4 * $size__spacing-unit};
 	}
 }
 

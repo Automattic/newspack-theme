@@ -86,6 +86,13 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds classes to reflect the header layout
+	$header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
+	if ( true === $header_sub_simplified && ! is_front_page() ) {
+		$classes[] = 'h-sub';
+	} else {
+		$classes[] = 'h-nsub';
+	}
+
 	$header_solid_background = get_theme_mod( 'header_solid_background', false );
 	if ( true === $header_solid_background ) {
 		$classes[] = 'h-sb'; // header - solid background.
@@ -474,4 +481,40 @@ function newspack_color_with_contrast( $color ) {
 		return '#5a5a5a';
 	}
 	return $color;
+}
+
+/**
+ * Decides which logo to use, based on Customizer settings and current post.
+ */
+function newspack_the_custom_logo() {
+	// By default, don't use the alternative logo.
+	$use_alternative_logo = false;
+	// Check if the site is set to use the simplified header:
+	$simplified_header_subpages = get_theme_mod( 'header_sub_simplified', false );
+	// Check if an alternative logo has been set:
+	$has_alternative_logo = ( '' !== get_theme_mod( 'newspack_alternative_logo', '' ) && 0 !== get_theme_mod( 'newspack_alternative_logo', '' ) );
+
+	// Check if we're currently on a page where the alternative logo should be used in the short header, if set:
+	if ( $simplified_header_subpages && $has_alternative_logo && in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) ) ) :
+		$use_alternative_logo = true;
+	endif;
+
+	if ( $use_alternative_logo ) : ?>
+		<a class="custom-logo-link alternative-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php
+			echo wp_get_attachment_image(
+				get_theme_mod( 'newspack_alternative_logo', '' ),
+				'newspack-alternative-logo',
+				'',
+				array( 'class' => 'custom-logo' )
+			);
+			?>
+		</a>
+	<?php
+	endif;
+
+	// Otherwise, return the regular logo:
+	if ( has_custom_logo() ) {
+		the_custom_logo();
+	}
 }

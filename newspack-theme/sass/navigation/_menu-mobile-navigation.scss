@@ -1,6 +1,7 @@
 // Menu Toggles
 .mobile-menu-toggle,
-.desktop-menu-toggle {
+.desktop-menu-toggle,
+.subpage-toggle {
 	align-items: center;
 	background-color: transparent;
 	color: inherit;
@@ -16,14 +17,18 @@
 	&:focus {
 		outline-offset: 0;
 	}
+}
 
+.mobile-menu-toggle,
+.h-dh .desktop-menu-toggle {
 	svg {
 		margin-right: #{0.25 * $size__spacing-unit};
 	}
 }
 
 .site-header .mobile-menu-toggle,
-.site-header .desktop-menu-toggle {
+.site-header .desktop-menu-toggle,
+.site-header .subpage-toggle {
 	&:hover {
 		color: inherit;
 	}
@@ -35,13 +40,18 @@
 }
 
 // Hide desktop menu toggle on smaller screens
-.site-header .desktop-menu-toggle {
+.site-header .desktop-menu-toggle,
+.subpage-toggle-contain {
 	display: none;
 	font-size: $font__size-xs;
 	font-weight: normal;
 	line-height: 2;
-	margin-right: #{1.5 * $size__spacing-unit};
 	padding: #{0.125 * $size__spacing-unit} 0;
+}
+
+.site-header .desktop-menu-toggle,
+.h-ll .subpage-toggle-contain {
+	margin-right: #{1.25 * $size__spacing-unit};
 }
 
 .middle-header-contain .desktop-menu-toggle {
@@ -56,12 +66,14 @@
 	// Header default height
 
 	// Mobile Menu toggle
-	.h-dh .site-header .mobile-menu-toggle {
+	.h-dh .site-header .mobile-menu-toggle,
+	.h-sub .site-header .mobile-menu-toggle {
 		display: none;
 	}
 
 	// Desktop Menu toggle
-	.h-dh .site-header .desktop-menu-toggle {
+	.h-dh .site-header .desktop-menu-toggle,
+	.subpage-toggle-contain {
 		display: flex;
 	}
 }
@@ -81,7 +93,8 @@
 }
 
 .mobile-sidebar,
-.desktop-sidebar {
+.desktop-sidebar,
+.subpage-sidebar {
 	font-size: $font__size-sm;
 	padding: $size__spacing-unit;
 	width: 90vw;
@@ -92,7 +105,8 @@
 	}
 
 	.mobile-menu-toggle,
-	.desktop-menu-toggle {
+	.desktop-menu-toggle,
+	.subpage-toggle {
 		font-size: 1em;
 		float: right;
 		margin: 0 0 $size__spacing-unit;
@@ -123,7 +137,8 @@
 }
 
 // Desktop Sidebar and Widget styles
-.desktop-sidebar {
+.desktop-sidebar,
+.subpage-sidebar {
 	background-color: #fff;
 	max-width: 400px;
 
@@ -152,19 +167,10 @@
 	}
 }
 
-// Modile Sidebar and Menu styles
-.mobile-sidebar {
-	background-color: $color__primary;
-	color: #fff;
-
+.mobile-sidebar,
+.subpage-sidebar {
 	@include media( tablet ) {
 		width: 33vw;
-	}
-
-	a,
-	a:visited,
-	.nav1 .sub-menu > li > a {
-		color: #fff;
 	}
 
 	ul ul {
@@ -223,8 +229,35 @@
 	}
 }
 
+// Mobile Sidebar and Menu styles
+.mobile-sidebar {
+	background-color: $color__primary;
+	color: #fff;
+
+	a,
+	a:visited,
+	.nav1 .sub-menu > li > a {
+		color: #fff;
+	}
+}
+
+// "Full Menu" Sidebar styles
+.subpage-sidebar {
+	.nav1 .sub-menu > li > a,
+	.nav1 .sub-menu > li > a:visited {
+		color: $color__text-main;
+	}
+
+	nav + nav,
+	nav + .widget,
+	.widget + .widget {
+		border-color: $color__border;
+	}
+}
+
 #desktop-sidebar-fallback,
-#mobile-sidebar-fallback {
+#mobile-sidebar-fallback,
+#subpage-sidebar-fallback {
 	bottom: 0;
 	overflow: auto;
 	position: fixed;
@@ -236,11 +269,19 @@
 	}
 }
 
-#desktop-sidebar-fallback {
+// Fallback - open from the left
+#desktop-sidebar-fallback,
+#subpage-sidebar-fallback {
 	left: -100%;
 	transition: left 0.2s;
 }
 
+.desktop-menu-opened #desktop-sidebar-fallback,
+.subpage-sidebar-opened #subpage-sidebar-fallback {
+	left: 0;
+}
+
+// Fallback - open from the right
 #mobile-sidebar-fallback {
 	right: -100%;
 	transition: right 0.2s;
@@ -250,24 +291,23 @@
 	right: 0;
 }
 
-.desktop-menu-opened #desktop-sidebar-fallback {
-	left: 0;
-}
-
 .menu-opened #mobile-sidebar-fallback,
-.desktop-menu-opened #desktop-sidebar-fallback {
+.desktop-menu-opened #desktop-sidebar-fallback,
+.subpage-sidebar-opened #subpage-sidebar-fallback {
 	> * {
 		display: block;
 	}
 
 	> .desktop-menu-toggle,
-	> .mobile-menu-toggle {
+	> .mobile-menu-toggle,
+	> .subpage-toggle {
 		display: flex;
 	}
 }
 
 .menu-opened::after,
-.desktop-menu-opened::after {
+.desktop-menu-opened::after,
+.subpage-sidebar-opened::after {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	bottom: 0;
 	content: '';
