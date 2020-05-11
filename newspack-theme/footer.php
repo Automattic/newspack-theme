@@ -25,9 +25,15 @@
 			<?php get_template_part( 'template-parts/footer/below-footer', 'widgets' ); ?>
 
 			<div class="wrapper site-info-contain">
-				<?php $blog_info = get_bloginfo( 'name' ); ?>
-				<?php if ( ! empty( $blog_info ) ) : ?>
-					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.</span>
+				<?php
+					$copyright_info   = get_bloginfo( 'name' );
+					$custom_copyright = get_theme_mod( 'footer_copyright', '' );
+					if ( ! empty( $custom_copyright ) ) {
+						$copyright_info = $custom_copyright;
+					}
+				?>
+				<?php if ( ! empty( $copyright_info ) ) : ?>
+					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( $copyright_info ); ?>.</span>
 				<?php endif; ?>
 
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'newspack' ) ); ?>" class="imprint">
