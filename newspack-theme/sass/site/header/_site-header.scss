@@ -223,16 +223,35 @@
 	}
 
 	@include media( tablet ) {
-		.site-header .middle-header-contain .wrapper .site-branding {
-			display: flex;
-			justify-content: center;
-		}
+		&.h-dh,
+		&.h-sub {
+			.site-header .middle-header-contain .wrapper .site-branding {
+				display: flex;
+				justify-content: center;
+			}
 
-		.site-header .custom-logo-link,
-		.site-title,
-		.site-description {
-			text-align: center;
-			width: 100%;
+			.site-header .custom-logo-link,
+			.site-title,
+			.site-description {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	@include media( narrowdesktop ) {
+		&.h-sh {
+			.site-header .middle-header-contain .wrapper .site-branding {
+				display: flex;
+				justify-content: center;
+			}
+
+			.site-header .custom-logo-link,
+			.site-title,
+			.site-description {
+				text-align: center;
+				width: 100%;
+			}
 		}
 	}
 }
