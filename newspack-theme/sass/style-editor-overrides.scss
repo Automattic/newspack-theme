@@ -12,10 +12,11 @@
 /** === Default Template === */
 
 @include media( mobile ) {
-	body.newspack-default-template .wp-block[data-align='full'] {
+	body.newspack-default-template
+		.block-editor-block-list__layout.is-root-container
+		> .wp-block[data-align='full'] {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 780px;
 	}
 }
 
@@ -70,6 +71,8 @@ body.newspack-single-column-template {
 	}
 
 	.wp-block[data-align='left'] {
+		position: relative;
+
 		@include media( desktop ) {
 			left: #{-2 * $size__spacing-unit};
 		}
@@ -83,6 +86,8 @@ body.newspack-single-column-template {
 	}
 
 	.wp-block[data-align='right'] {
+		position: relative;
+
 		@include media( desktop ) {
 			right: #{-2 * $size__spacing-unit};
 		}

@@ -80,6 +80,31 @@
 		);
 	}
 
+	// 'Sub page' menu fallback.
+	const subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
+
+	if ( null !== subpageToggle ) {
+		const subpageSidebar = document.getElementById( 'subpage-sidebar-fallback' ),
+			subpageOpenButton = headerContain.getElementsByClassName( 'subpage-toggle' )[ 0 ],
+			subpageCloseButton = subpageSidebar.getElementsByClassName( 'subpage-toggle' )[ 0 ];
+
+		for ( let i = 0; i < subpageToggle.length; i++ ) {
+			subpageToggle[ i ].addEventListener(
+				'click',
+				function() {
+					if ( body.classList.contains( 'subpage-sidebar-opened' ) ) {
+						body.classList.remove( 'subpage-sidebar-opened' );
+						subpageOpenButton.focus();
+					} else {
+						body.classList.add( 'subpage-sidebar-opened' );
+						subpageCloseButton.focus();
+					}
+				},
+				false
+			);
+		}
+	}
+
 	// Comments toggle fallback.
 	const commentsToggle = document.getElementById( 'comments-toggle' );
 

@@ -7,9 +7,7 @@
 ?>
 <div class="site-branding">
 
-	<?php if ( has_custom_logo() ) : ?>
-		<?php the_custom_logo(); ?>
-	<?php endif; ?>
+	<?php newspack_the_custom_logo(); ?>
 
 	<div class="site-identity">
 		<?php $blog_info = get_bloginfo( 'name' ); ?>

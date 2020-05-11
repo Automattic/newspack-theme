@@ -183,11 +183,19 @@
 .h-cl {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
-			justify-content: center;
+			flex: 1;
 			width: 35%;
 
 			&.site-branding {
 				width: 30%;
+			}
+
+			&:first-of-type > * {
+				margin-right: auto;
+			}
+
+			&:last-of-type {
+				justify-content: flex-end;
 			}
 		}
 
@@ -200,49 +208,50 @@
 			flex-direction: column;
 		}
 
-		.site-header .custom-logo-link,
-		.site-title,
-		.site-description {
-			text-align: center;
-			width: 100%;
-		}
-
 		.site-description {
 			padding-top: #{0.25 * $size__spacing-unit};
 		}
 
 		.site-header .custom-logo-link {
 			margin-right: 0;
-
-			img {
-				height: auto;
-				margin: auto;
-				max-width: 100%;
-			}
-		}
-	}
-
-	@include media( desktop ) {
-		.site-header .middle-header-contain .wrapper > div {
-			flex: 1;
-			display: flex;
-			width: auto;
-
-			&.site-branding {
-				width: auto;
-			}
-
-			&:first-of-type > * {
-				margin-right: auto;
-			}
-
-			&:last-of-type {
-				justify-content: flex-end;
-			}
 		}
 
 		.site-header .custom-logo-link img {
 			max-width: inherit;
+			margin: auto;
+		}
+	}
+
+	@include media( tablet ) {
+		&.h-dh,
+		&.h-sub {
+			.site-header .middle-header-contain .wrapper .site-branding {
+				display: flex;
+				justify-content: center;
+			}
+
+			.site-header .custom-logo-link,
+			.site-title,
+			.site-description {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	@include media( narrowdesktop ) {
+		&.h-sh {
+			.site-header .middle-header-contain .wrapper .site-branding {
+				display: flex;
+				justify-content: center;
+			}
+
+			.site-header .custom-logo-link,
+			.site-title,
+			.site-description {
+				text-align: center;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -259,8 +268,8 @@
 	.site-title a:visited,
 	.site-description,
 	.middle-header-contain,
-	.nav1 .main-menu > li,
-	.nav1 .main-menu > li > a {
+	.middle-header-contain .nav1 .main-menu > li,
+	.middle-header-contain .nav1 .main-menu > li > a {
 		color: #fff;
 	}
 
@@ -365,8 +374,116 @@
 	justify-content: flex-start;
 }
 
-// Hide desktop menus at specific breakpoints.
+// h-sub
+.h-sub {
+	.site-title,
+	.site-description,
+	.alternative-logo {
+		display: none;
+	}
 
+	.middle-header-contain .wrapper {
+		padding-bottom: #{0.5 * $size__spacing-unit};
+		padding-top: #{0.5 * $size__spacing-unit};
+	}
+
+	@include media( tablet ) {
+		// Default header background colour
+		&.h-db .middle-header-contain {
+			border-bottom: 1px solid $color__border;
+		}
+
+		.middle-header-contain {
+			.wrapper {
+				justify-content: flex-start;
+
+				@include media( tablet ) {
+					.site-branding {
+						flex-basis: auto;
+					}
+				}
+			}
+
+			.custom-logo {
+				height: auto;
+				max-height: 50px;
+				max-width: 180px;
+				width: auto;
+			}
+
+			.header-search-contain {
+				margin-left: auto;
+			}
+		}
+
+		// Centered Logo
+		&.h-cl {
+			.site-header .middle-header-contain .wrapper > div {
+				flex: auto;
+				width: auto;
+				&:last-of-type {
+					text-align: right;
+				}
+			}
+		}
+
+		// Featured template settings - featured imgae height
+		&.h-sh,
+		&.h-dh {
+			.featured-image-behind,
+			.featured-image-beside {
+				min-height: 100vh;
+			}
+		}
+
+		// Featured template settings - header backgrounds
+		&.h-sb {
+			&.single-featured-image-beside,
+			&.single-featured-image-behind {
+				.middle-header-contain {
+					background: transparent;
+				}
+			}
+		}
+
+		&.single-featured-image-beside,
+		&.single-featured-image-behind {
+			.middle-header-contain {
+				border: 0;
+				color: #fff;
+			}
+			.site-header {
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+			}
+			.alternative-logo {
+				display: inline-block;
+
+				~ .custom-logo-link {
+					display: none;
+				}
+			}
+		}
+
+		// Featured image beside - header layout
+		&.single-featured-image-beside {
+			.middle-header-contain {
+				margin: auto;
+				max-width: 90%;
+				width: 1200px;
+
+				.wrapper {
+					margin: 0;
+					max-width: 50%;
+					padding-right: $size__spacing-unit;
+				}
+			}
+		}
+	}
+}
+
+// Hide desktop menus at specific breakpoints.
 .desktop-only {
 	display: none;
 }

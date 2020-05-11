@@ -63,6 +63,10 @@ a.button {
 		}
 	}
 
+	.page-description {
+		font-size: 1em;
+	}
+
 	form .form-row {
 		.required {
 			color: firebrick;
@@ -252,6 +256,7 @@ ul.products {
 
 	li.product {
 		list-style: none;
+		display: block;
 
 		.woocommerce-loop-product__link {
 			display: block;
@@ -292,6 +297,7 @@ ul.products {
 
 		.button {
 			vertical-align: middle;
+			word-break: normal;
 
 			&.loading {
 				opacity: 0.5;
@@ -407,6 +413,7 @@ dl.variation,
 	.entry {
 		.entry-title {
 			margin-top: 0;
+			font-size: 2em;
 
 			&::before {
 				margin-top: 0;

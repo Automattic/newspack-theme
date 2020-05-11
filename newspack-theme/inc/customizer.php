@@ -36,10 +36,21 @@ function newspack_customize_register( $wp_customize ) {
 	/**
 	 * Header Options
 	 */
-	$wp_customize->add_section(
+	$wp_customize->add_panel(
 		'newspack_header_options',
 		array(
 			'title' => esc_html__( 'Header Settings', 'newspack' ),
+		)
+	);
+
+	/**
+	 * Header Appearance
+	 */
+	$wp_customize->add_section(
+		'header_section_appearance',
+		array(
+			'title' => esc_html__( 'Appearance', 'newspack' ),
+			'panel' => 'newspack_header_options',
 		)
 	);
 
@@ -57,7 +68,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Center Logo', 'newspack' ),
 			'description' => esc_html__( 'Check to center the logo in the header.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
 		)
 	);
 
@@ -75,7 +86,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Solid Background', 'newspack' ),
 			'description' => esc_html__( 'Check to use the primary color as the header background. Can be changed under "Colors".', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
 		)
 	);
 
@@ -93,11 +104,22 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Short Header', 'newspack' ),
 			'description' => esc_html__( 'Displays header as a shorter, simpler version.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_appearance',
 		)
 	);
 
-	// Header - add option to center logo.
+	/**
+	 * Header Slideouts
+	 */
+	$wp_customize->add_section(
+		'header_section_slideout',
+		array(
+			'title' => esc_html__( 'Slide-out Sidebar', 'newspack' ),
+			'panel' => 'newspack_header_options',
+		)
+	);
+
+	// Header - option to add slideout.
 	$wp_customize->add_setting(
 		'header_show_slideout',
 		array(
@@ -115,7 +137,7 @@ function newspack_customize_register( $wp_customize ) {
 				esc_html__( 'Show a Slide-out sidebar in the header, which you can populate by adding widgets %1$s.', 'newspack' ),
 				'<a rel="goto-section" href="#sidebar-widgets-header-1">' . __( 'here', 'newspack' ) . '</a>'
 			),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
 		)
 	);
 
@@ -133,7 +155,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'text',
 			'label'       => esc_html__( 'Slide-out Sidebar Text', 'newspack' ),
 			'description' => esc_html__( 'Use this field to change the text on the Slide-out Sidebar toggle. The text is not visible when using the short header, but can always be read by screen readers.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
 		)
 	);
 
@@ -151,7 +173,62 @@ function newspack_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Add slide-out widgets to mobile menu', 'newspack' ),
 			'description' => esc_html__( 'Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, too.', 'newspack' ),
-			'section'     => 'newspack_header_options',
+			'section'     => 'header_section_slideout',
+		)
+	);
+
+	/**
+	 * Header Slideouts
+	 */
+	$wp_customize->add_section(
+		'header_section_subpages',
+		array(
+			'title' => esc_html__( 'Subpage Header', 'newspack' ),
+			'panel' => 'newspack_header_options',
+		)
+	);
+
+	// Header - option for v. simplified header on subpages.
+	$wp_customize->add_setting(
+		'header_sub_simplified',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_sub_simplified',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Use simple header on subpages', 'newspack' ),
+			'description' => esc_html__( 'On posts, pages, archive and search results, use a header that only displays the site logo and search icon, with all menus hidden under a toggle.', 'newspack' ),
+			'section'     => 'header_section_subpages',
+		)
+	);
+
+	// Add option to upload logo specifically for the footer.
+	$wp_customize->add_setting(
+		'newspack_alternative_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'absint',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize,
+			'newspack_alternative_logo',
+			array(
+				'label'       => esc_html__( 'Alternative Logo', 'newspack' ),
+				'description' => esc_html__( 'Upload an alternative logo to be used on posts with the featured image behind and featured image beside settings, where the logo will be overlapping.', 'newspack' ),
+				'section'     => 'header_section_subpages',
+				'settings'    => 'newspack_alternative_logo',
+				'flex_width'  => false,
+				'flex_height' => true,
+				'width'       => 400,
+				'height'      => 300,
+			)
 		)
 	);
 
@@ -474,6 +551,34 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
 			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
 			'section'     => 'comments_options',
+		)
+	);
+
+	/**
+	 * Footer settings
+	 */
+	$wp_customize->add_section(
+		'footer_options',
+		array(
+			'title' => esc_html__( 'Footer Settings', 'newspack' ),
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'footer_copyright',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'footer_copyright',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Copyright Information', 'newspack' ),
+			'description' => esc_html__( 'Add custom text to be displayed next to a copyright symbol and current year in the footer. By default, it will display your site title.', 'newspack' ),
+			'section'     => 'footer_options',
 		)
 	);
 

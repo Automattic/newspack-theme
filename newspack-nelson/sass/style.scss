@@ -76,7 +76,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 // Header
-
 .site-header,
 .h-db .middle-header-contain, // Header default background
 .h-sh.h-db .site-header, // Header short height; header default background
@@ -86,8 +85,24 @@ body:not( .h-sb ) .site-header {
 }
 
 // Header short height; Header default bg
-.h-sh.h-db .middle-header-contain {
+.h-sh.h-db .middle-header-contain,
+.h-sub.h-db .middle-header-contain {
 	border-bottom: 0;
+}
+
+// Featured templates - Short header on subpages
+.single-featured-image-beside,
+.single-featured-image-behind {
+	@include media( tablet ) {
+		&.h-sub.h-db,
+		&.h-sub.h-sb {
+			.site-header,
+			.middle-header-contain,
+			&:not( .h-sb ) .site-header {
+				background: transparent;
+			}
+		}
+	}
 }
 
 #page .site-header {
@@ -174,11 +189,6 @@ body:not( .h-sb ) .site-header {
 		#primary {
 			border-top: 0;
 			padding-top: 0;
-		}
-
-		.entry-header {
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
 		}
 	}
 }
