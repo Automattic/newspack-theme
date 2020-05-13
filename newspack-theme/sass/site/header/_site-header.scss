@@ -183,7 +183,6 @@
 .h-cl {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
-			flex: 1;
 			width: 35%;
 
 			&.site-branding {
@@ -217,12 +216,11 @@
 		}
 
 		.site-header .custom-logo-link img {
-			max-width: inherit;
+			height: auto;
+			max-width: 100%;
 			margin: auto;
 		}
-	}
 
-	@include media( tablet ) {
 		&.h-dh,
 		&.h-sub {
 			.site-header .middle-header-contain .wrapper .site-branding {
@@ -252,6 +250,21 @@
 				text-align: center;
 				width: 100%;
 			}
+		}
+	}
+
+	@include media( desktop ) {
+		.site-header .middle-header-contain .wrapper > div {
+			flex: 1;
+			width: auto;
+
+			&.site-branding {
+				width: auto;
+			}
+		}
+
+		.site-header .custom-logo-link img {
+			max-width: inherit;
 		}
 	}
 }
