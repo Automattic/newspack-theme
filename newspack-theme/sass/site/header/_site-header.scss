@@ -22,8 +22,7 @@
 .site-header .custom-logo-link .custom-logo {
 	@include media( tabletonly ) {
 		height: auto;
-		max-height: 75px;
-		max-width: 175px;
+		min-height: 45px;
 		width: auto;
 	}
 }
@@ -401,6 +400,11 @@
 	}
 
 	@include media( tablet ) {
+		.site-header .custom-logo {
+			width: auto;
+			height: auto;
+		}
+
 		// Default header background colour
 		&.h-db .middle-header-contain {
 			border-bottom: 1px solid $color__border;
@@ -417,13 +421,6 @@
 				}
 			}
 
-			.custom-logo {
-				height: auto;
-				max-height: 50px;
-				max-width: 180px;
-				width: auto;
-			}
-
 			.header-search-contain {
 				margin-left: auto;
 			}
@@ -438,6 +435,15 @@
 					text-align: right;
 				}
 			}
+		}
+
+		&.h-ll {
+			// Make sure the alt logo still sits to the left if smaller than the main logo.
+			/* stylelint-disable selector-type-no-unknown  */
+			.site-header .custom-logo-link amp-img.amp-wp-enforced-sizes[layout='intrinsic'] > img {
+				object-position: left center;
+			}
+			/* stylelint-enable */
 		}
 
 		// Featured template settings - featured imgae height
