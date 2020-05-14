@@ -98,7 +98,7 @@ function newspack_customize_logo_resize( $html ) {
 		$mobile_max_height = 65;
 
 		$subhead_max_width  = 200;
-		$subhead_max_height = 50;
+		$subhead_max_height = 60;
 
 		$mobile  = newspack_logo_small_sizes( $img['width'], $img['height'], $mobile_max_width, $mobile_max_height );
 		$subhead = newspack_logo_small_sizes( $img['width'], $img['height'], $subhead_max_width, $subhead_max_height );
