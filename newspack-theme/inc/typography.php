@@ -100,10 +100,10 @@ function newspack_custom_typography_css() {
 		/* _blocks.scss */
 		.wp-block-latest-comments .wp-block-latest-comments__comment-meta,
 		.wp-block-pullquote cite,
-		.entry .entry-content .wp-block-categories li,
-		.entry .entry-content .wp-block-archives li,
-		.entry .entry-content .wp-block-latest-posts li > a,
-		.entry .entry-content .wp-block-latest-posts time,
+		.wp-block-categories li,
+		.wp-block-archives li,
+		.wp-block-latest-posts li > a,
+		.wp-block-latest-posts time,
 		.entry .entry-content .wp-block-file,
 		.entry .entry-content .wp-block-file .wp-block-file__button,
 
