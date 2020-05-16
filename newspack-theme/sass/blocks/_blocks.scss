@@ -424,6 +424,17 @@
 	}
 }
 
+//! Video
+.wp-block-video {
+	video {
+		width: 100%;
+	}
+
+	figcaption {
+		text-align: left;
+	}
+}
+
 .entry .entry-content {
 	/*
 	 * Unset nested content selector styles
@@ -467,17 +478,6 @@
 			@include media( wide ) {
 				max-width: ( 0.33 * $desktop_width );
 			}
-		}
-
-		figcaption {
-			text-align: left;
-		}
-	}
-
-	//! Video
-	.wp-block-video {
-		video {
-			width: 100%;
 		}
 
 		figcaption {
