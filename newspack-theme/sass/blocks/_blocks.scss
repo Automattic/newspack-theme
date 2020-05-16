@@ -424,6 +424,13 @@
 	}
 }
 
+//! Latest preformatted text
+.wp-block-preformatted {
+	font-size: $font__size-xs;
+	line-height: 1.8;
+	padding: $size__spacing-unit;
+}
+
 .entry .entry-content {
 	/*
 	 * Unset nested content selector styles
@@ -618,13 +625,6 @@
 				}
 			}
 		}
-	}
-
-	//! Latest preformatted text
-	.wp-block-preformatted {
-		font-size: $font__size-xs;
-		line-height: 1.8;
-		padding: $size__spacing-unit;
 	}
 
 	//! Verse
