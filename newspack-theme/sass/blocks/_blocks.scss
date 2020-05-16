@@ -148,6 +148,10 @@
 	position: relative;
 }
 
+p.has-background {
+	padding: 20px 30px;
+}
+
 //! Newspack Article Block
 .wpnbha {
 	figcaption {
@@ -441,11 +445,6 @@
 			max-width: inherit;
 			padding: inherit;
 		}
-	}
-
-	//! Paragraphs
-	p.has-background {
-		padding: 20px 30px;
 	}
 
 	//! Audio
