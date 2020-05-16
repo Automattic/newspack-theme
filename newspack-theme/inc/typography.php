@@ -337,7 +337,7 @@ function newspack_custom_typography_css() {
 		textarea,
 
 		/* _blocks.scss */
-		.entry .entry-content .wp-block-verse
+		.wp-block-verse
 		{
 			font-family: ' . wp_kses( $font_body, null ) . ';
 		}

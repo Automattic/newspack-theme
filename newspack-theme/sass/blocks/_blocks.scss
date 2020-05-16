@@ -424,6 +424,13 @@
 	}
 }
 
+//! Verse
+.wp-block-verse {
+	font-family: $font__body;
+	font-size: $font__size_base;
+	line-height: 1.8;
+}
+
 .entry .entry-content {
 	/*
 	 * Unset nested content selector styles
@@ -625,13 +632,6 @@
 		font-size: $font__size-xs;
 		line-height: 1.8;
 		padding: $size__spacing-unit;
-	}
-
-	//! Verse
-	.wp-block-verse {
-		font-family: $font__body;
-		font-size: $font__size_base;
-		line-height: 1.8;
 	}
 
 	//! Blockquote
