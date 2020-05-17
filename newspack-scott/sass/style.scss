@@ -265,6 +265,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	display: none;
 }
 
+//! Newspack Article Carousel
+.wp-block-newspack-blocks-carousel {
+	.cat-links::before {
+		display: none;
+	}
+}
+
 // Archive
 
 .archive .page-title {
