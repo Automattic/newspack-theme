@@ -152,7 +152,7 @@ function newspack_logo_resize_min_max( $short, $long, $short_max, $long_max, $pe
 }
 
 /**
- * Helper function to return smaller versionf of the logo size
+ * Helper function to return smaller version of the logo size
  */
 function newspack_logo_small_sizes( $width, $height, $maxwidth, $maxheight ) {
 	$smallsize['width']  = round( $maxheight * ( $width / $height ) );
