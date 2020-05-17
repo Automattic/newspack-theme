@@ -66,6 +66,10 @@ blockquote {
 	font-weight: 800;
 }
 
+.wp-block-group.is-style-border {
+	border-color: currentColor;
+}
+
 .wp-block[data-type='core/pullquote'] {
 	.wp-block-pullquote {
 		border-width: 16px 0 4px;
