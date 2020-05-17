@@ -154,16 +154,18 @@ function newspack_logo_resize_min_max( $short, $long, $short_max, $long_max, $pe
 /**
  * Helper function to return smaller version of the logo size
  */
-function newspack_logo_small_sizes( $width, $height, $maxwidth, $maxheight ) {
-	$smallsize['width']  = round( $maxheight * ( $width / $height ) );
-	$smallsize['height'] = $maxheight;
+function newspack_logo_small_sizes( $width, $height, $max_width, $max_height ) {
+	$size = array(
+		'width'  => round( $max_height * ( $width / $height ) ),
+		'height' => $max_height,
+	);
 
-	if ( $smallsize['width'] > $maxwidth ) {
-		$smallsize['height'] = round( $maxwidth * ( $height / $width ) );
-		$smallsize['width']  = $maxwidth;
+	if ( $size['width'] > $max_width ) {
+		$size['height'] = round( $max_width * ( $height / $width ) );
+		$size['width']  = $max_width;
 	}
 
-	return $smallsize;
+	return $size;
 }
 
 /**
