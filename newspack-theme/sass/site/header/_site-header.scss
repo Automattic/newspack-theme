@@ -266,6 +266,14 @@
 			max-width: inherit;
 		}
 	}
+
+	// IE 11-specific logo fix
+	@media screen and ( -ms-high-contrast: none ) and ( min-width: $desktop_width ) {
+		.site-header .custom-logo-link img {
+			height: auto;
+			max-width: 100%;
+		}
+	}
 }
 
 // Solid Background
