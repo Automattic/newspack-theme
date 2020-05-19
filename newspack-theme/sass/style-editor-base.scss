@@ -122,6 +122,7 @@ figcaption,
 		font-family: $font__heading;
 		font-size: $font__size-xxl;
 		font-weight: 700;
+		line-height: 1.2;
 
 		@include media( desktop ) {
 			font-size: $font__size-xxxl;
