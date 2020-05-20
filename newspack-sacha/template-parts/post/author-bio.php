@@ -5,6 +5,11 @@
  * @package Newspack Sacha
  */
 
+// Check if the author bio is turned on
+if ( false === get_theme_mod( 'show_author_bio', true ) ) {
+	return;
+}
+
 $author_bio_length = get_theme_mod( 'author_bio_length', 200 );
 
 if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
