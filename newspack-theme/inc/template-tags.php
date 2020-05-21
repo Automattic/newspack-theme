@@ -123,6 +123,43 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_author_social_links' ) ) :
+	/**
+	 * Prints list of social links for the current author.
+	 */
+	function newspack_author_social_links( $author ) {
+
+		$social_profiles = array(
+			'facebook',
+			'twitter',
+			'instagram',
+			'linkedin',
+			'myspace',
+			'pinterest',
+			'soundcloud',
+			'tumblr',
+			'youtube',
+			'wikipedia',
+		);
+
+		$links = '';
+
+		foreach ( $social_profiles as $profile ) {
+			if ( '' !== $author->$profile ) {
+				if ( 'twitter' === $profile ) {
+					$links .= '<li><a href="https://twitter.com/' . esc_attr( $author->$profile ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, 24, $profile ) . '</a></li>';
+				} else {
+					$links .= '<li><a href="' . esc_url( $author->$profile ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, 24, $profile ) . '</a></li>';
+				}
+			}
+		}
+
+		if ( '' !== $links ) {
+			return '<ul>' . $links . '</ul>';
+		}
+	}
+endif;
+
 if ( ! function_exists( 'newspack_comment_count' ) ) :
 	/**
 	 * Prints HTML with the comment count for the current post.
