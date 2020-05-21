@@ -558,3 +558,17 @@ blockquote {
 		}
 	}
 }
+
+// Ads
+
+body {
+	// Reduce space on top of the content a bit when there's an ad below the header.
+	&:not( .newspack-front-page ) .newspack_global_ad.global_below_header + .site-content {
+		margin-top: 0;
+	}
+
+	// This theme can't really support an ad below the header because the content is inset into the header.
+	.newspack_global_ad.global_below_header {
+		display: none;
+	}
+}

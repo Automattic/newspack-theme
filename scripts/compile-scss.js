@@ -87,31 +87,6 @@ const compileAllStylesheets = () => {
 const SASS_STYLESHEETS = [
 	{ inFile: 'newspack-theme/sass/style.scss', outFile: 'newspack-theme/style.css', withRTL: true },
 	{
-		inFile: 'newspack-theme/sass/styles/style-1/style-1.scss',
-		outFile: 'newspack-theme/styles/style-1.css',
-		withRTL: true,
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-2/style-2.scss',
-		outFile: 'newspack-theme/styles/style-2.css',
-		withRTL: true,
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-3/style-3.scss',
-		outFile: 'newspack-theme/styles/style-3.css',
-		withRTL: true,
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-4/style-4.scss',
-		outFile: 'newspack-theme/styles/style-4.css',
-		withRTL: true,
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-5/style-5.scss',
-		outFile: 'newspack-theme/styles/style-5.css',
-		withRTL: true,
-	},
-	{
 		inFile: 'newspack-theme/sass/style-editor.scss',
 		outFile: 'newspack-theme/styles/style-editor.css',
 	},
@@ -122,26 +97,6 @@ const SASS_STYLESHEETS = [
 	{
 		inFile: 'newspack-theme/sass/style-editor-customizer.scss',
 		outFile: 'newspack-theme/styles/style-editor-customizer.css',
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-1/style-1-editor.scss',
-		outFile: 'newspack-theme/styles/style-1-editor.css',
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-2/style-2-editor.scss',
-		outFile: 'newspack-theme/styles/style-2-editor.css',
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-3/style-3-editor.scss',
-		outFile: 'newspack-theme/styles/style-3-editor.css',
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-4/style-4-editor.scss',
-		outFile: 'newspack-theme/styles/style-4-editor.css',
-	},
-	{
-		inFile: 'newspack-theme/sass/styles/style-5/style-5-editor.scss',
-		outFile: 'newspack-theme/styles/style-5-editor.css',
 	},
 	{
 		inFile: 'newspack-theme/sass/plugins/woocommerce.scss',
