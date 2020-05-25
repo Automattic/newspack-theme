@@ -65,6 +65,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .site-content,
 .newspack-front-page.hide-homepage-title .site-content,
+body:not( .newspack-front-page ) .newspack_global_ad.global_below_header + .site-content,
 .site-breadcrumb {
 	@include media( tablet ) {
 		margin-top: #{-3.5 * $size__spacing-unit};
@@ -582,4 +583,9 @@ blockquote {
 
 .entry-meta .trust-label {
 	margin-top: #{0.5 * $size__spacing-unit};
+}
+
+// Ads
+.newspack_global_ad.global_below_header {
+	display: none;
 }
