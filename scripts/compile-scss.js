@@ -159,6 +159,10 @@ const SASS_STYLESHEETS = [
 		inFile: 'newspack-sacha/sass/style-editor.scss',
 		outFile: 'newspack-sacha/styles/style-editor.css',
 	},
+	{
+		inFile: 'newspack-sacha/sass/child-style-editor-overrides.scss',
+		outFile: 'newspack-sacha/styles/child-style-editor-overrides.css',
+	},
 	// Newspack Scott Child theme
 	{
 		inFile: 'newspack-scott/sass/style.scss',
