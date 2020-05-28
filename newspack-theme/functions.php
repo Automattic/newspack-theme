@@ -807,6 +807,28 @@ add_filter( 'the_excerpt_rss', 'newspack_thumbnails_in_rss' );
 add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
 
 /**
+ * Add a extra span and class to the_archive_title, for easier styling.
+ */
+function newspack_update_the_archive_title( $title ) {
+	// Split the title into parts so we can wrap them with spans:
+	$title_parts = explode( '<span class="page-description">', $title, 2 );
+	// Glue it back together again.
+	if ( ! empty( $title_parts[1] ) ) {
+		$title = wp_kses(
+			$title_parts[1],
+			array(
+				'span' => array(
+					'class' => array(),
+				),
+			)
+		);
+		$title = '<span class="page-subtitle">' . esc_html( $title_parts[0] ) . '</span><span class="page-description">' . $title;
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'newspack_update_the_archive_title', 11, 1 );
+
+/**
  * Notify about child theme deprecation.
  * TODO: Remove after child theme code is removed.
  */
