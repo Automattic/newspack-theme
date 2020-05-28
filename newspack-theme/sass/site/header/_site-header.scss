@@ -23,6 +23,7 @@
 	@include media( tabletonly ) {
 		height: auto;
 		min-height: 45px;
+		object-fit: contain;
 		width: auto;
 	}
 }
