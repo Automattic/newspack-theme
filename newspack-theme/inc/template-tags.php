@@ -127,7 +127,7 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 	/**
 	 * Prints list of social links for the current author.
 	 */
-	function newspack_author_social_links( $author_id ) {
+	function newspack_author_social_links( $author_id, $size = 24 ) {
 
 		// Get list of available social profiles.
 		$social_profiles = array(
@@ -160,9 +160,9 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 		foreach ( $social_profiles as $profile ) {
 			if ( '' !== get_the_author_meta( $profile, $author_id ) ) {
 				if ( 'twitter' === $profile ) {
-					$links .= '<li><a href="https://twitter.com/' . esc_attr( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, 24, $profile ) . '</a></li>';
+					$links .= '<li><a href="https://twitter.com/' . esc_attr( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
 				} else {
-					$links .= '<li><a href="' . esc_url( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, 24, $profile ) . '</a></li>';
+					$links .= '<li><a href="' . esc_url( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
 				}
 			}
 		}

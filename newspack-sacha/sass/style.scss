@@ -399,6 +399,11 @@ cite {
 	justify-content: center;
 }
 
+.single .author-social-links {
+	justify-content: center;
+	margin-top: #{0.75 * $size__spacing-unit};
+}
+
 // Archives
 
 .page-title {
