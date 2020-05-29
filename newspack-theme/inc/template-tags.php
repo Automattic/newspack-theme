@@ -167,7 +167,7 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 			}
 		}
 
-		if ( '' !== $links ) {
+		if ( '' !== $links && true === get_theme_mod( 'show_author_social', false ) ) {
 			echo '<ul class="author-social-links">' . wp_kses( $links, $allowed_html ) . '</ul>';
 		}
 	}
