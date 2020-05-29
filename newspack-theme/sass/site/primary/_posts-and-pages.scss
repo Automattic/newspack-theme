@@ -448,6 +448,28 @@ body.page {
 	}
 }
 
+.author-meta {
+	align-items: center;
+	display: flex;
+}
+
+.author-social-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&:not( :first-child ) {
+		border-left: 1px solid $color__border;
+		margin-left: $size__spacing-unit;
+		padding-left: $size__spacing-unit;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: #{0.5 * $size__spacing-unit};
+	}
+}
+
 /* Featured Image - special styles */
 
 .has-large-featured-image.single-featured-image-behind {
