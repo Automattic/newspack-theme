@@ -152,17 +152,6 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
-	// Adds a class if the author bio is hidden.
-	$display_author_bio = get_theme_mod( 'show_author_bio', true );
-	if ( false === $display_author_bio ) {
-		$classes[] = 'hide-author-bio';
-	}
-
-	$display_author_email = get_theme_mod( 'show_author_email', false );
-	if ( false === $display_author_email ) {
-		$classes[] = 'hide-author-email';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );

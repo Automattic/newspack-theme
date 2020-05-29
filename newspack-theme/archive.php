@@ -43,16 +43,27 @@ get_header();
 				}
 			?>
 			<span>
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					if ( '' !== get_the_archive_description() ) :
-					?>
-						<div class="taxonomy-description">
-							<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
-						</div>
-					<?php
-					endif;
-				?>
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+
+				<?php if ( '' !== get_the_archive_description() ) : ?>
+					<div class="taxonomy-description">
+						<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( is_author() ) : ?>
+					<div class="author-meta">
+						<?php
+							$author_email = get_the_author_meta( 'user_email', get_query_var( 'author' ) );
+							if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author_email ) :
+							?>
+							<a class="author-email" href="<?php echo 'mailto:' . esc_attr( $author_email ); ?>">
+								<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
+								<?php echo esc_html( $author_email ); ?>
+							</a>
+						<?php endif; ?>
+					</div><!-- .author-meta -->
+				<?php endif; ?>
 			</span>
 
 		</header><!-- .page-header -->

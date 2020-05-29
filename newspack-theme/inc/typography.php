@@ -20,6 +20,7 @@ function newspack_custom_typography_css() {
 		$css_blocks .= '
 		/* _headings.scss */
 		.author-bio .author-link,
+		.author-meta,
 		.comment-metadata,
 		.comment-reply-link,
 		.comments-title,
