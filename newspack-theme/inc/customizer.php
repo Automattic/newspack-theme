@@ -467,7 +467,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Display Author Social Media links', 'newspack' ),
-			'description' => esc_html__( 'Display social media links with the author bio on individual posts and author archives.', 'newspack' ),
+			'description' => esc_html__( 'Display social media links with the author bio on individual posts and author archives (this option requires the Yoast plugin).', 'newspack' ),
 			'section'     => 'author_bio_options',
 		)
 	);
