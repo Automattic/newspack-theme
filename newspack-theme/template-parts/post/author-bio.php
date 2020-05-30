@@ -56,12 +56,14 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 								<span><?php // TODO: Add Job title ?></span>
 							</h2>
 
-							<?php if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) : ?>
+							<?php if ( ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
 								<div class="author-meta">
-									<a class="author-email" href="<?php echo 'mailto:' . esc_attr( $author->user_email ); ?>">
-										<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
-										<?php echo esc_html( $author->user_email ); ?>
-									</a>
+									<?php if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) : ?>
+										<a class="author-email" href="<?php echo 'mailto:' . esc_attr( $author->user_email ); ?>">
+											<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
+											<?php echo esc_html( $author->user_email ); ?>
+										</a>
+									<?php endif; ?>
 									<?php newspack_author_social_links( $author->ID ); ?>
 								</div><!-- .author-meta -->
 							<?php endif; ?>
@@ -129,12 +131,14 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 					<?php echo esc_html( get_the_author() ); ?>
 					<span><?php // TODO: Add Job title ?></span>
 				</h2>
-				<?php if ( true === get_theme_mod( 'show_author_email', false ) ) : ?>
+				<?php if ( true === get_theme_mod( 'show_author_email', false ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
 					<div class="author-meta">
-						<a class="author-email" href="<?php echo 'mailto:' . esc_attr( get_the_author_meta( 'user_email' ) ); ?>">
-							<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
-							<?php echo esc_html( get_the_author_meta( 'user_email' ) ); ?>
-						</a>
+						<?php if ( true === get_theme_mod( 'show_author_email', false ) ) : ?>
+							<a class="author-email" href="<?php echo 'mailto:' . esc_attr( get_the_author_meta( 'user_email' ) ); ?>">
+								<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
+								<?php echo esc_html( get_the_author_meta( 'user_email' ) ); ?>
+							</a>
+						<?php endif; ?>
 						<?php newspack_author_social_links( get_the_author_meta( 'ID' ) ); ?>
 					</div><!-- .author-meta -->
 				<?php endif; ?>
