@@ -195,3 +195,21 @@ function newspack_subscription_thank_you() {
 	return '';
 }
 add_filter( 'woocommerce_subscriptions_thank_you_message', 'newspack_subscription_thank_you' );
+
+
+/**
+ * Override the Woo function that prints the shop page content.
+ */
+function woocommerce_product_archive_description() {
+	// Don't display the description on search results page.
+	if ( is_search() ) {
+		return;
+	}
+
+	if ( is_post_type_archive( 'product' ) && in_array( absint( get_query_var( 'paged' ) ), array( 0, 1 ), true ) ) {
+		$shop_page = get_post( wc_get_page_id( 'shop' ) );
+		if ( $shop_page ) {
+			echo $shop_page->post_content;
+		}
+	}
+}
