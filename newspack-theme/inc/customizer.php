@@ -454,6 +454,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to hide author social links.
+	$wp_customize->add_setting(
+		'show_author_social',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_author_social',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display Author Social Media links', 'newspack' ),
+			'description' => esc_html__( 'Display social media links with the author bio on individual posts and author archives (this option requires the Yoast plugin).', 'newspack' ),
+			'section'     => 'author_bio_options',
+		)
+	);
+
 	// Add option to hide author email address.
 	$wp_customize->add_setting(
 		'author_bio_truncate',
