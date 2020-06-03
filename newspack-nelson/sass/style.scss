@@ -317,6 +317,11 @@ blockquote {
 	font-weight: 800;
 }
 
+//! Group Block
+.wp-block-group.is-style-border {
+	border-color: currentColor;
+}
+
 //! Newspack Article Block
 .wpnbha {
 	article .entry-meta {

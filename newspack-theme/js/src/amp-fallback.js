@@ -83,7 +83,7 @@
 	// 'Sub page' menu fallback.
 	const subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
 
-	if ( null !== subpageToggle ) {
+	if ( 0 < subpageToggle.length ) {
 		const subpageSidebar = document.getElementById( 'subpage-sidebar-fallback' ),
 			subpageOpenButton = headerContain.getElementsByClassName( 'subpage-toggle' )[ 0 ],
 			subpageCloseButton = subpageSidebar.getElementsByClassName( 'subpage-toggle' )[ 0 ];

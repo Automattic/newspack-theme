@@ -126,6 +126,10 @@ function newspack_sacha_editor_customizer_styles() {
 		// Add inline styles:
 		wp_add_inline_style( 'newspack-sacha-editor-inline-styles', $theme_customizations );
 	}
+
+	// Enqueue CSS styles for the editor that use the <body> tag.
+	wp_enqueue_style( 'newspack-sacha-editor-overrides', get_theme_file_uri( '/styles/child-style-editor-overrides.css' ), array(), null, 'all' );
+
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_styles' );
 

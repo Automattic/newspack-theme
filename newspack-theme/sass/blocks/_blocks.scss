@@ -156,9 +156,15 @@
 }
 
 //! Newspack Carousel Block
-.wp-block-newspack-blocks-carousel h3 a,
-.wp-block-newspack-blocks-carousel h3 a:visited {
-	color: #fff;
+.wp-block-newspack-blocks-carousel {
+	h3 a,
+	h3 a:visited,
+	.entry-meta .byline a,
+	.entry-meta .byline a:visited,
+	.cat-links a,
+	.cat-links a:visited {
+		color: inherit;
+	}
 }
 
 //! Columns

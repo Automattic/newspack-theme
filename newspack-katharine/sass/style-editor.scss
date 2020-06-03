@@ -207,3 +207,8 @@ hr {
 		}
 	}
 }
+
+.wp-block-group.is-style-border {
+	border-style: dotted;
+	border-color: $color__text-main;
+}

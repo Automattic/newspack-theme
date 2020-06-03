@@ -94,6 +94,15 @@ function newspack_customize_logo_resize( $html ) {
 			);
 		}
 
+		$mobile_max_width  = 175;
+		$mobile_max_height = 65;
+
+		$subhead_max_width  = 200;
+		$subhead_max_height = 60;
+
+		$mobile  = newspack_logo_small_sizes( $img['width'], $img['height'], $mobile_max_width, $mobile_max_height );
+		$subhead = newspack_logo_small_sizes( $img['width'], $img['height'], $subhead_max_width, $subhead_max_height );
+
 		// add the CSS
 		$css = '
 		<style>
@@ -102,6 +111,20 @@ function newspack_customize_logo_resize( $html ) {
 			max-height: ' . $max['height'] . 'px;
 			max-width: ' . $max['width'] . 'px;
 			width: ' . $img['width'] . 'px;
+		}
+
+		@media (max-width: 781px) {
+			.site-header .custom-logo {
+				max-width: ' . $mobile['width'] . 'px;
+				max-height: ' . $mobile['height'] . 'px;
+			}
+		}
+
+		@media (min-width: 782px) {
+			.h-sub .site-header .custom-logo {
+				max-width: ' . $subhead['width'] . 'px;
+				max-height: ' . $subhead['height'] . 'px;
+			}
 		}
 		</style>';
 
@@ -124,6 +147,23 @@ function newspack_logo_resize_min_max( $short, $long, $short_max, $long_max, $pe
 
 	$size['short'] = round( $min + ( $percent * $ppp ) );
 	$size['long']  = round( $size['short'] / ( $short / $long ) );
+
+	return $size;
+}
+
+/**
+ * Helper function to return smaller version of the logo size
+ */
+function newspack_logo_small_sizes( $width, $height, $max_width, $max_height ) {
+	$size = array(
+		'width'  => round( $max_height * ( $width / $height ) ),
+		'height' => $max_height,
+	);
+
+	if ( $size['width'] > $max_width ) {
+		$size['height'] = round( $max_width * ( $height / $width ) );
+		$size['width']  = $max_width;
+	}
 
 	return $size;
 }

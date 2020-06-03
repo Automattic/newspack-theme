@@ -42,6 +42,13 @@ Newspack Scott Editor Styles
 	font-weight: bold;
 }
 
+//! Newspack Article Carousel
+.wp-block-newspack-blocks-carousel {
+	.entry-meta .byline a {
+		color: inherit;
+	}
+}
+
 .wp-block[data-type='core/pullquote'] {
 	.wp-block-pullquote {
 		border-width: 0;

@@ -318,6 +318,10 @@ textarea {
 	}
 }
 
+.wp-block-group.is-style-border {
+	border: 3px double currentColor;
+}
+
 //! Pullquote
 .wp-block-pullquote {
 	border: 0;

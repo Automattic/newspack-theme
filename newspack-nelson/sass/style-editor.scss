@@ -60,10 +60,21 @@ blockquote {
 	}
 }
 
+//! Newspack Article Carousel
+.wp-block-newspack-blocks-carousel {
+	.entry-meta .byline a {
+		color: inherit;
+	}
+}
+
 .has-drop-cap:not( :focus )::first-letter {
 	color: $color__secondary;
 	font-family: $font__heading;
 	font-weight: 800;
+}
+
+.wp-block-group.is-style-border {
+	border-color: currentColor;
 }
 
 .wp-block[data-type='core/pullquote'] {

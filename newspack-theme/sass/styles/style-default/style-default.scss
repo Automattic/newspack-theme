@@ -104,6 +104,14 @@
 	}
 }
 
+//! Newspack Article Carousel
+.wp-block-newspack-blocks-carousel {
+	.cat-links a {
+		background: transparent;
+		padding: 0;
+	}
+}
+
 .featured-image-behind .cat-links {
 	font-size: $font__size-sm;
 	a,

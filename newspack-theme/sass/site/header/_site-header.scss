@@ -22,8 +22,8 @@
 .site-header .custom-logo-link .custom-logo {
 	@include media( tabletonly ) {
 		height: auto;
-		max-height: 75px;
-		max-width: 175px;
+		min-height: 45px;
+		object-fit: contain;
 		width: auto;
 	}
 }
@@ -97,7 +97,7 @@
 .middle-header-contain .wrapper {
 	align-items: center;
 	padding: $size__spacing-unit 0;
-	@include media( mobile ) {
+	@include media( tablet ) {
 		padding: #{1.5 * $size__spacing-unit} 0;
 	}
 }
@@ -183,7 +183,6 @@
 .h-cl {
 	@include media( tablet ) {
 		.site-header .middle-header-contain .wrapper > div {
-			flex: 1;
 			width: 35%;
 
 			&.site-branding {
@@ -217,12 +216,11 @@
 		}
 
 		.site-header .custom-logo-link img {
-			max-width: inherit;
+			height: auto;
+			max-width: 100%;
 			margin: auto;
 		}
-	}
 
-	@include media( tablet ) {
 		&.h-dh,
 		&.h-sub {
 			.site-header .middle-header-contain .wrapper .site-branding {
@@ -252,6 +250,29 @@
 				text-align: center;
 				width: 100%;
 			}
+		}
+	}
+
+	@include media( desktop ) {
+		.site-header .middle-header-contain .wrapper > div {
+			flex: 1;
+			width: auto;
+
+			&.site-branding {
+				width: auto;
+			}
+		}
+
+		.site-header .custom-logo-link img {
+			max-width: inherit;
+		}
+	}
+
+	// IE 11-specific logo fix
+	@media screen and ( -ms-high-contrast: none ) and ( min-width: $desktop_width ) {
+		.site-header .custom-logo-link img {
+			height: auto;
+			max-width: 100%;
 		}
 	}
 }
@@ -388,6 +409,11 @@
 	}
 
 	@include media( tablet ) {
+		.site-header .custom-logo {
+			width: auto;
+			height: auto;
+		}
+
 		// Default header background colour
 		&.h-db .middle-header-contain {
 			border-bottom: 1px solid $color__border;
@@ -404,13 +430,6 @@
 				}
 			}
 
-			.custom-logo {
-				height: auto;
-				max-height: 50px;
-				max-width: 180px;
-				width: auto;
-			}
-
 			.header-search-contain {
 				margin-left: auto;
 			}
@@ -425,6 +444,15 @@
 					text-align: right;
 				}
 			}
+		}
+
+		&.h-ll {
+			// Make sure the alt logo still sits to the left if smaller than the main logo.
+			/* stylelint-disable selector-type-no-unknown  */
+			.site-header .custom-logo-link amp-img.amp-wp-enforced-sizes[layout='intrinsic'] > img {
+				object-position: left center;
+			}
+			/* stylelint-enable */
 		}
 
 		// Featured template settings - featured imgae height

@@ -285,8 +285,11 @@ cite {
 }
 
 //! Newspack
-.wpnbha .cat-links {
-	text-align: left;
+.wpnbha,
+.wp-block-newspack-blocks-carousel {
+	.cat-links {
+		text-align: left;
+	}
 }
 
 @include media( tablet ) {
@@ -392,6 +395,10 @@ cite {
 	}
 }
 
+.author-meta {
+	justify-content: center;
+}
+
 // Archives
 
 .page-title {
@@ -416,6 +423,10 @@ cite {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 85%;
+
+		+ .author-meta {
+			margin: #{-2 * $size__spacing-unit} auto #{3 * $size__spacing-unit};
+		}
 	}
 }
 
