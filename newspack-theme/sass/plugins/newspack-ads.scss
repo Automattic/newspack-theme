@@ -31,3 +31,17 @@ body {
 		}
 	}
 }
+
+// The Subpage header + special featured image placements also can't really support an ad in this spot.
+.h-sub {
+	&.single-featured-image-beside,
+	&.single-featured-image-behind {
+		.global_below_header {
+			display: none;
+		}
+
+		&:not( .newspack-front-page ):not( .style-pack-style-2 ) .global_below_header + .site-content {
+			margin-top: 0;
+		}
+	}
+}
