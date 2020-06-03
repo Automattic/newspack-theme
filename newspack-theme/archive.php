@@ -68,6 +68,8 @@ get_header();
 
 		</header><!-- .page-header -->
 
+		<?php do_action( 'before_archive_posts' ); ?>
+
 		<main id="main" class="site-main">
 
 		<?php
