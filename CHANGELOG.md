@@ -1,3 +1,26 @@
+# [1.8.0](https://github.com/Automattic/newspack-theme/compare/v1.7.0...v1.8.0) (2020-06-03)
+
+
+### Bug Fixes
+
+* add a line height to the block editor title ([#940](https://github.com/Automattic/newspack-theme/issues/940)) ([84b8c90](https://github.com/Automattic/newspack-theme/commit/84b8c90580954ad02d5ee07721333d8a284b7802))
+* correct centered logo sizing ([#930](https://github.com/Automattic/newspack-theme/issues/930)) ([a9c4bfd](https://github.com/Automattic/newspack-theme/commit/a9c4bfd77233dd751236558f686d7f13416a79a5))
+* correct logo size display issues with AMP ([#935](https://github.com/Automattic/newspack-theme/issues/935)) ([ff1ad1c](https://github.com/Automattic/newspack-theme/commit/ff1ad1ceae476ae0852f111b594b11945db77e90))
+* correct Newspack Sacha editor styles ([#952](https://github.com/Automattic/newspack-theme/issues/952)) ([6c68408](https://github.com/Automattic/newspack-theme/commit/6c684089452cde084179d3d4a705234568a62a1c))
+* improve carousel link and category styles ([#920](https://github.com/Automattic/newspack-theme/issues/920)) ([e4d6a90](https://github.com/Automattic/newspack-theme/commit/e4d6a90fea4038df0bd0abf71f07f935041df8ae))
+* improve subpage header code to remove AMP errors ([#937](https://github.com/Automattic/newspack-theme/issues/937)) ([1f2d309](https://github.com/Automattic/newspack-theme/commit/1f2d3091e270f1d149d3e0bd7c8a962678395cce))
+* make sure special featured image styles show credits ([#929](https://github.com/Automattic/newspack-theme/issues/929)) ([e7ba924](https://github.com/Automattic/newspack-theme/commit/e7ba9245513de2599bbd45028346fa6cea764e52))
+* prevent centered logo from getting cut off in IE11 ([#932](https://github.com/Automattic/newspack-theme/issues/932)) ([a87a9be](https://github.com/Automattic/newspack-theme/commit/a87a9be5c4e804ad8abd4d43c2bdf9e74da3d0d8))
+* prevent error in subpage menu amp fallback javascript ([#933](https://github.com/Automattic/newspack-theme/issues/933)) ([ed773f0](https://github.com/Automattic/newspack-theme/commit/ed773f03ab3d1cf0e89ed8bc83a1baa5385cbf18))
+* prevent issues with logo minimum height ([#938](https://github.com/Automattic/newspack-theme/issues/938)) ([f5bf7a0](https://github.com/Automattic/newspack-theme/commit/f5bf7a096302ab029cc54f6e9b262cd12a1bdd76))
+* woocommerce shop description markup ([82723b4](https://github.com/Automattic/newspack-theme/commit/82723b4558f4bbdd24113a8dd17ce83b589dc4ec))
+
+
+### Features
+
+* add author email to archive and improve appearance ([#954](https://github.com/Automattic/newspack-theme/issues/954)) ([7e05912](https://github.com/Automattic/newspack-theme/commit/7e05912655fb1665c186b8d0e7235e34e2f4d915))
+* customize group block border styles for some themes ([#917](https://github.com/Automattic/newspack-theme/issues/917)) ([c20dd6b](https://github.com/Automattic/newspack-theme/commit/c20dd6b84a661276eec4fd7138eb91ad69bc291b))
+
 # [1.7.0](https://github.com/Automattic/newspack-theme/compare/v1.6.2...v1.7.0) (2020-05-11)
 
 
