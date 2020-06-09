@@ -1,3 +1,18 @@
+# [1.9.0](https://github.com/Automattic/newspack-theme/compare/v1.8.0...v1.9.0) (2020-06-09)
+
+
+### Bug Fixes
+
+* correct path to WooCommerce fonts in theme ([#959](https://github.com/Automattic/newspack-theme/issues/959)) ([0240bbe](https://github.com/Automattic/newspack-theme/commit/0240bbe18a8ec57892a26962bfa469a63bbf3d44))
+* hide ad below header in certain cases ([#962](https://github.com/Automattic/newspack-theme/issues/962)) ([ce41115](https://github.com/Automattic/newspack-theme/commit/ce41115f64d59add5d37b0af7f592041df95d4d2))
+* make sure subpage menu toggle is not there when empty ([#963](https://github.com/Automattic/newspack-theme/issues/963)) ([c14e147](https://github.com/Automattic/newspack-theme/commit/c14e14744f9babb7c6eb57f7f983261bc0fdb4b0))
+
+
+### Features
+
+* add hook above archive posts ([#945](https://github.com/Automattic/newspack-theme/issues/945)) ([36c3423](https://github.com/Automattic/newspack-theme/commit/36c3423622ed911afff7d92bb7ef58553f048040))
+* add option to display social icons from Yoast ([#955](https://github.com/Automattic/newspack-theme/issues/955)) ([9352ae0](https://github.com/Automattic/newspack-theme/commit/9352ae07131e86dc3c2b2d17a3166a08c6cff5ad))
+
 # [1.8.0](https://github.com/Automattic/newspack-theme/compare/v1.7.0...v1.8.0) (2020-06-03)
 
 
