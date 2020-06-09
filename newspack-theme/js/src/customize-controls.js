@@ -134,6 +134,17 @@
 				visibility();
 				setting.bind( visibility );
 			} );
+			wp.customize.control( 'show_author_social', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
 		} );
 
 		// Only show Slide-out Sidebar options when enabled.

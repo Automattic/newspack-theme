@@ -76,6 +76,8 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
 						</a>
 					<?php endif; ?>
 
+					<?php newspack_author_social_links( $author->ID ); ?>
+
 				</div><!-- .author-bio-text -->
 
 			</div><!-- .author-bio -->
@@ -135,6 +137,8 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 				?>
 			</a>
 		<?php endif; ?>
+
+		<?php newspack_author_social_links( get_the_author_meta( 'ID' ) ); ?>
 
 	</div><!-- .author-bio-text -->
 </div><!-- .author-bio -->

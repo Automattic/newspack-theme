@@ -45,12 +45,14 @@ endif;
 		<?php if ( true === $header_sub_simplified && ! is_front_page() ) : ?>
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<div class="subpage-toggle-contain">
-						<button class="subpage-toggle" on="tap:subpage-sidebar.toggle">
-							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-							<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
-						</button>
-					</div>
+					<?php if ( newspack_has_menus() || ( true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) ) : ?>
+						<div class="subpage-toggle-contain">
+							<button class="subpage-toggle" on="tap:subpage-sidebar.toggle">
+								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
+							</button>
+						</div>
+					<?php endif; ?>
 
 					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 

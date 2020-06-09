@@ -62,11 +62,15 @@ get_header();
 								<?php echo esc_html( $author_email ); ?>
 							</a>
 						<?php endif; ?>
+
+						<?php newspack_author_social_links( get_the_author_meta( 'ID' ), 20 ); ?>
 					</div><!-- .author-meta -->
 				<?php endif; ?>
 			</span>
 
 		</header><!-- .page-header -->
+
+		<?php do_action( 'before_archive_posts' ); ?>
 
 		<main id="main" class="site-main">
 
