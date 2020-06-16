@@ -13,7 +13,7 @@ if ( false === get_theme_mod( 'show_author_bio', true ) ) {
 
 $author_bio_length = get_theme_mod( 'author_bio_length', 200 );
 
-if ( function_exists( 'coauthors_posts_links' ) && is_single() ) :
+if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
 
 	$authors      = get_coauthors();
 	$author_count = count( $authors );
