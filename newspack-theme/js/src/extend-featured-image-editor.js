@@ -55,7 +55,8 @@ const wrapPostFeaturedImage = OriginalComponent => {
 	return props => {
 		const post_type = select( 'core/editor' ).getCurrentPostType();
 
-		if ( 'post' !== post_type ) {
+		// eslint-disable-next-line no-undef
+		if ( ! newspack_theme_featured_image_post_types.includes( post_type ) ) {
 			return <OriginalComponent { ...props } />;
 		}
 

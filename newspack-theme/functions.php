@@ -373,8 +373,19 @@ add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
  * - Article Subtitle
  */
 function newspack_enqueue_scripts() {
-	wp_enqueue_script( 'newspack-extend-featured-image-script', get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ), array( 'wp-blocks', 'wp-components' ), wp_get_theme()->get( 'Version' ) );
+	wp_register_script( 
+		'newspack-extend-featured-image-script',
+		get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ),
+		array( 'wp-blocks', 'wp-components' ),
+		wp_get_theme()->get( 'Version' )
+	);
 	wp_set_script_translations( 'newspack-extend-featured-image-script', 'newspack', get_parent_theme_file_path( '/languages' ) );
+	wp_localize_script(
+		'newspack-extend-featured-image-script',
+		'newspack_theme_featured_image_post_types',
+		newspack_get_featured_image_post_types()
+	);
+	wp_enqueue_script( 'newspack-extend-featured-image-script' );
 
 	if ( 'post' === get_current_screen()->post_type ) {
 		wp_enqueue_script( 'newspack-post-subtitle', get_theme_file_uri( '/js/dist/post-subtitle.js' ), array(), wp_get_theme()->get( 'Version' ), true );
@@ -556,15 +567,19 @@ add_filter( 'jetpack_photon_override_image_downsize', 'newspack_override_avatar_
  * - Article Subtitle
  */
 function newspack_register_meta() {
-	register_meta(
-		'post',
-		'newspack_featured_image_position',
-		array(
-			'show_in_rest' => true,
-			'single'       => true,
-			'type'         => 'string',
-		)
-	);
+	$featured_image_post_types = newspack_get_featured_image_post_types();
+
+	foreach ( $featured_image_post_types as $post_type ) {
+		register_post_meta(
+			$post_type,
+			'newspack_featured_image_position',
+			array(
+				'show_in_rest' => true,
+				'single'       => true,
+				'type'         => 'string',
+			)
+		);
+	}
 
 	register_post_meta(
 		'post',
@@ -704,6 +719,15 @@ function newspack_sanitize_avatars() {
 	);
 
 	return $avatar_args;
+}
+
+/**
+ * Get post types that support featured image settings.
+ *
+ * @return array Array of post type slugs.
+ */
+function newspack_get_featured_image_post_types() {
+	return apply_filters( 'newspack_theme_featured_image_post_types', [ 'post' ] );
 }
 
 /**
