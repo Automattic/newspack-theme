@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/Automattic/newspack-theme/compare/v1.9.0...v1.10.0) (2020-06-23)
+
+
+### Bug Fixes
+
+* fallback to author if coauthors fails ([d8fa254](https://github.com/Automattic/newspack-theme/commit/d8fa25473a3989caa8a2523066e2b689443a4476))
+
+
+### Features
+
+* allow cpts to add featured image support ([82b0c45](https://github.com/Automattic/newspack-theme/commit/82b0c45c2b18afb56a3de33b1ad05e0d3392cc22))
+
 # [1.9.0](https://github.com/Automattic/newspack-theme/compare/v1.8.0...v1.9.0) (2020-06-09)
 
 
