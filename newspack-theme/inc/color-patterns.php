@@ -185,6 +185,7 @@ function newspack_custom_colors_css() {
 		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color p,
 		.comment .comment-author .fn a:hover,
 		.comment-reply-link:hover,
+		.comment-reply-login:hover,
 		.comment-navigation .nav-previous a:hover,
 		.comment-navigation .nav-next a:hover,
 		#cancel-comment-reply-link:hover,

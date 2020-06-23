@@ -23,6 +23,7 @@ function newspack_custom_typography_css() {
 		.author-meta,
 		.comment-metadata,
 		.comment-reply-link,
+		.comment-reply-login,
 		.comments-title,
 		.comment-author .fn,
 		.discussion-meta-info,

@@ -149,6 +149,7 @@
 		display: none;
 	}
 
+	.comment-reply-login,
 	.comment-reply-link {
 		display: inline-block;
 	}
@@ -301,8 +302,14 @@
 	}
 }
 
+.must-log-in {
+	font-size: $font__size-sm;
+	font-style: italic;
+}
+
 .comment-reply-link,
-#cancel-comment-reply-link {
+#cancel-comment-reply-link,
+.comment-reply-login {
 	font-weight: 500;
 
 	&:hover {
