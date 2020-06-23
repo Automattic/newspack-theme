@@ -96,7 +96,7 @@
 		mobileToggle[ i ].addEventListener(
 			'click',
 			function() {
-				if ( body.classList.contains( 'menu-opened' ) ) {
+				if ( body.classList.contains( 'mobile-menu-opened' ) ) {
 					closeMenu( 'mobile-menu-opened', mobileOpenButton, 'mask-mobile' );
 				} else {
 					openMenu( 'mobile-menu-opened', mobileCloseButton, 'mask-mobile' );
