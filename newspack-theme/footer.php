@@ -36,11 +36,8 @@
 					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( $copyright_info ); ?>.</span>
 				<?php endif; ?>
 
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'newspack' ) ); ?>" class="imprint">
-					<?php
-					/* translators: %s: WordPress. */
-					printf( esc_html__( 'Proudly powered by %s.', 'newspack' ), 'WordPress' );
-					?>
+				<a href="<?php echo esc_url( __( 'https://newspack.pub/', 'newspack' ) ); ?>" class="imprint">
+					<?php echo esc_html__( 'Proudly powered by Newspack on WordPress.com', 'newspack' ); ?>
 				</a>
 
 				<?php

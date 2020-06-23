@@ -60,7 +60,7 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	 */
 	function newspack_posted_by() {
 
-		if ( function_exists( 'coauthors_posts_links' ) ) :
+		if ( function_exists( 'coauthors_posts_links' ) && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
 
 			$authors      = get_coauthors();
 			$author_count = count( $authors );
