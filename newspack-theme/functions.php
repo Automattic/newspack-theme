@@ -373,7 +373,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
  * - Article Subtitle
  */
 function newspack_enqueue_scripts() {
-	wp_register_script( 
+	wp_register_script(
 		'newspack-extend-featured-image-script',
 		get_theme_file_uri( '/js/dist/extend-featured-image-editor.js' ),
 		array( 'wp-blocks', 'wp-components' ),
@@ -891,6 +891,23 @@ function newspack_child_theme_deprecation_notification() {
 	<?php
 }
 add_action( 'admin_notices', 'newspack_child_theme_deprecation_notification' );
+
+/**
+ * When new post is created, maybe set the post template.
+ *
+ * @param integer $post_ID The post ID.
+ * @param WP_Post $post Post object.
+ * @param boolean $update Whether this is an existing post being updated or not.
+ */
+function newspack_maybe_set_default_post_template( $post_ID, $post, $update ) {
+	if ( ! $update && 'post' === $post->post_type ) {
+		$post_template_default = get_theme_mod( 'post_template_default' );
+		if ( 'default' !== $post_template_default ) {
+			update_post_meta( $post_ID, '_wp_page_template', $post_template_default );
+		}
+	}
+}
+add_action( 'wp_insert_post', 'newspack_maybe_set_default_post_template', 10, 3 );
 
 /**
  * SVG Icons class.
