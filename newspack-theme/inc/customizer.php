@@ -509,12 +509,12 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	/**
-	 * Default Post Settings
+	 * Template Settings
 	 */
 	$wp_customize->add_section(
 		'post_default_settings',
 		array(
-			'title' => esc_html__( 'Post Defaults', 'newspack' ),
+			'title' => esc_html__( 'Template Settings', 'newspack' ),
 		)
 	);
 
