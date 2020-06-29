@@ -509,12 +509,12 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	/**
-	 * Featured Image settings
+	 * Template Settings
 	 */
 	$wp_customize->add_section(
-		'featured_image_options',
+		'post_default_settings',
 		array(
-			'title' => esc_html__( 'Featured Image Settings', 'newspack' ),
+			'title' => esc_html__( 'Template Settings', 'newspack' ),
 		)
 	);
 
@@ -538,7 +538,29 @@ function newspack_customize_register( $wp_customize ) {
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
-			'section' => 'featured_image_options',
+			'section' => 'post_default_settings',
+		)
+	);
+
+	// Add option to select the default post template
+	$wp_customize->add_setting(
+		'post_template_default',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_post_template',
+		)
+	);
+	$wp_customize->add_control(
+		'post_template_default',
+		array(
+			'type'    => 'select',
+			'label'   => __( 'Default Post Template', 'newspack' ),
+			'choices' => array(
+				'default'            => esc_html__( 'Default Template', 'newspack' ),
+				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
+				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
+			),
+			'section' => 'post_default_settings',
 		)
 	);
 
@@ -920,6 +942,26 @@ function newspack_sanitize_feature_image_position( $choice ) {
 	}
 
 	return 'large';
+}
+
+/**
+ * Sanitize post template.
+ *
+ * @param string $choice Post template file name.
+ *
+ * @return string
+ */
+function newspack_sanitize_post_template( $choice ) {
+	$valid = array(
+		'single-feature.php',
+		'single-wide.php',
+	);
+
+	if ( in_array( $choice, $valid, true ) ) {
+		return $choice;
+	}
+
+	return 'default';
 }
 
 /**
