@@ -274,9 +274,9 @@ function newspack_customize_register( $wp_customize ) {
 
 	// Mobile CTA - button color.
 	$wp_customize->add_setting(
-		'mobile_cta_color',
+		'mobile_cta_hex',
 		array(
-			'default'           => '#dd3333',
+			'default'           => newspack_get_mobile_cta_color(),
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -284,7 +284,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'mobile_cta_color',
+			'mobile_cta_hex',
 			array(
 				'description' => __( 'Apply a primary custom color.', 'newspack' ),
 				'section'     => 'header_section_donate',

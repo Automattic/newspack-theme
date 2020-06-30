@@ -12,10 +12,12 @@ function newspack_custom_colors_css() {
 
 	$primary_color   = newspack_get_primary_color();
 	$secondary_color = newspack_get_secondary_color();
+	$cta_color       = newspack_get_mobile_cta_color();
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
+		$cta_color       = get_theme_mod( 'mobile_cta_hex', $cta_color );
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
@@ -29,6 +31,7 @@ function newspack_custom_colors_css() {
 	// Set colour contrasts.
 	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
 	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
+	$cta_color_contrast       = newspack_get_color_contrast( $cta_color );
 
 	$theme_css = '
 		/* Set primary background color */
@@ -215,6 +218,12 @@ function newspack_custom_colors_css() {
 		.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
 		.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
 			color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
+		}
+
+		/* Set Mobile CTA Colors */
+		.button.mb-cta {
+			background-color: ' . esc_html( $cta_color ) . ';
+			color: ' . esc_html( $cta_color_contrast ) . ';
 		}
 		';
 

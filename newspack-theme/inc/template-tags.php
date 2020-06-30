@@ -388,7 +388,7 @@ if ( ! function_exists( 'newspack_mobile_cta' ) ) :
 		$cta_page_id = get_theme_mod( 'mobile_cta_page', 0 );
 
 		if ( true === $cta_show && 0 !== $cta_page_id ) {
-			echo '<a class="mobile-cta" href="' . esc_url( get_permalink( $cta_page_id ) ) . '">' . esc_html( $cta_text ) . '</a>';
+			echo '<a class="button mb-cta" href="' . esc_url( get_permalink( $cta_page_id ) ) . '">' . esc_html( $cta_text ) . '</a>';
 		}
 	}
 endif;
