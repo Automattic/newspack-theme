@@ -210,7 +210,7 @@ function newspack_customize_register( $wp_customize ) {
 	 * Header - Mobile Donate CTA
 	 */
 	$wp_customize->add_section(
-		'header_section_donate',
+		'header_section_cta',
 		array(
 			'title' => esc_html__( 'Mobile Call-to-Action', 'newspack' ),
 			'panel' => 'newspack_header_options',
@@ -219,43 +219,43 @@ function newspack_customize_register( $wp_customize ) {
 
 	// Mobile CTA - toggle on and off.
 	$wp_customize->add_setting(
-		'show_mobile_cta',
+		'show_header_cta',
 		array(
 			'default'           => false,
 			'sanitize_callback' => 'newspack_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'show_mobile_cta',
+		'show_header_cta',
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Show Mobile CTA', 'newspack' ),
 			'description' => esc_html__( 'Show a call-to-action button in the mobile header that can be used to link to an important page, like for donations.', 'newspack' ),
-			'section'     => 'header_section_donate',
+			'section'     => 'header_section_cta',
 		)
 	);
 
 	// Mobile CTA - button text.
 	$wp_customize->add_setting(
-		'mobile_cta_text',
+		'header_cta_text',
 		array(
 			'default'           => esc_html__( 'Donate', 'newspack' ),
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 	$wp_customize->add_control(
-		'mobile_cta_text',
+		'header_cta_text',
 		array(
 			'type'        => 'text',
 			'label'       => esc_html__( 'Button Text', 'newspack' ),
 			'description' => esc_html__( 'Text to use for the mobile call-to-action button.', 'newspack' ),
-			'section'     => 'header_section_donate',
+			'section'     => 'header_section_cta',
 		)
 	);
 
 	// Mobile CTA - URL.
 	$wp_customize->add_setting(
-		'mobile_cta_page',
+		'header_cta_page',
 		array(
 			'default'           => 0,
 			'sanitize_callback' => 'newspack_sanitize_numeric_value',
@@ -263,18 +263,18 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'mobile_cta_page',
+		'header_cta_page',
 		array(
 			'label'       => esc_html__( 'Button Link', 'newspack' ),
 			'description' => esc_html__( 'Pick a page that the call-to-action button should link to.', 'newspack' ),
 			'type'        => 'dropdown-pages',
-			'section'     => 'header_section_donate',
+			'section'     => 'header_section_cta',
 		)
 	);
 
 	// Mobile CTA - button color.
 	$wp_customize->add_setting(
-		'mobile_cta_hex',
+		'header_cta_hex',
 		array(
 			'default'           => newspack_get_mobile_cta_color(),
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -284,11 +284,11 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'mobile_cta_hex',
+			'header_cta_hex',
 			array(
 				'label'       => esc_html__( 'Background Color', 'newspack' ),
 				'description' => __( 'Apply a custom background color to the Mobile CTA. Picking something different than your site\'s color palette will help it stand out more.', 'newspack' ),
-				'section'     => 'header_section_donate',
+				'section'     => 'header_section_cta',
 			)
 		)
 	);
