@@ -206,6 +206,92 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Header - Mobile Donate CTA
+	 */
+	$wp_customize->add_section(
+		'header_section_donate',
+		array(
+			'title' => esc_html__( 'Mobile Call-to-Action', 'newspack' ),
+			'panel' => 'newspack_header_options',
+		)
+	);
+
+	// Mobile CTA - toggle on and off.
+	$wp_customize->add_setting(
+		'show_mobile_cta',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_mobile_cta',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show Mobile CTA', 'newspack' ),
+			'description' => esc_html__( 'Show a call-to-action button in the mobile header that can be used to link to a donate or subscription page.', 'newspack' ),
+			'section'     => 'header_section_donate',
+		)
+	);
+
+	// Mobile CTA - button text.
+	$wp_customize->add_setting(
+		'mobile_cta_text',
+		array(
+			'default'           => esc_html__( 'Donate', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'mobile_cta_text',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Mobile CTA Text', 'newspack' ),
+			'description' => esc_html__( 'Text to use for the mobile call-to-action button.', 'newspack' ),
+			'section'     => 'header_section_donate',
+		)
+	);
+
+	// Mobile CTA - URL.
+	$wp_customize->add_setting(
+		'mobile_cta_page',
+		array(
+			'default'           => 0,
+			'sanitize_callback' => 'newspack_sanitize_numeric_value',
+		)
+	);
+
+	$wp_customize->add_control(
+		'mobile_cta_page',
+		array(
+			'label'       => esc_html__( 'Mobile CTA Link', 'newspack' ),
+			'description' => esc_html__( 'Page the Donate CTA should link to.', 'newspack' ),
+			'type'        => 'dropdown-pages',
+			'section'     => 'header_section_donate',
+		)
+	);
+
+	// Mobile CTA - button color.
+	$wp_customize->add_setting(
+		'mobile_cta_color',
+		array(
+			'default'           => '#dd3333',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'mobile_cta_color',
+			array(
+				'description' => __( 'Apply a primary custom color.', 'newspack' ),
+				'section'     => 'header_section_donate',
+			)
+		)
+	);
+
 	// Add option to upload logo specifically for the footer.
 	$wp_customize->add_setting(
 		'newspack_alternative_logo',
@@ -976,6 +1062,21 @@ function newspack_sanitize_checkbox( $input ) {
 		return true;
 	} else {
 		return false;
+	}
+}
+
+/**
+ * Sanitize a numeric value.
+ *
+ * @param number $input Value of dropdown.
+ *
+ * @return number A valid number, or returns 0.
+ */
+function newspack_sanitize_numeric_value( $input ) {
+	if ( is_numeric( $input ) ) {
+		return intval( $input );
+	} else {
+		return 0;
 	}
 }
 

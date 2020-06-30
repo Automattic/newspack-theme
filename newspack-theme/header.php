@@ -56,6 +56,8 @@ endif;
 
 					<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
+					<?php newspack_mobile_cta(); ?>
+
 					<?php if ( newspack_has_menus() ) : ?>
 						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
@@ -187,6 +189,8 @@ endif;
 							endif;
 						?>
 					</div><!-- .nav-wrapper -->
+
+					<?php newspack_mobile_cta(); ?>
 
 					<?php if ( newspack_has_menus() ) : ?>
 						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
