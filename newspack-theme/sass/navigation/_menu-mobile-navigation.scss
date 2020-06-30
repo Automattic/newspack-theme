@@ -43,8 +43,9 @@
 .button.mb-cta {
 	background: #d33;
 	color: #fff;
-	font-size: $font__size-xs;
+	font-size: 0.7em;
 	margin-left: auto;
+	padding: #{0.6 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
 
 	&:hover {
 		background: $color__text-main;
@@ -58,6 +59,11 @@
 			display: inline-block;
 			overflow: hidden;
 			width: 0;
+		}
+
+		svg {
+			height: 29px;
+			width: 29px;
 		}
 	}
 }
