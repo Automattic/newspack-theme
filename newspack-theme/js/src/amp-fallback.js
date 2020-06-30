@@ -35,54 +35,93 @@
 		false
 	);
 
-	// Mobile menu fallback.
-	const menuToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
+	// Menu toggle variables.
+	const mobileToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
 		body = document.getElementsByTagName( 'body' )[ 0 ],
 		mobileSidebar = document.getElementById( 'mobile-sidebar-fallback' ),
-		menuOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
-		menuCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ];
+		mobileOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
+		mobileCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
+		desktopToggle = document.getElementsByClassName( 'desktop-menu-toggle' ),
+		desktopSidebar = document.getElementById( 'desktop-sidebar-fallback' ),
+		desktopOpenButton = headerContain.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
+		desktopCloseButton = desktopSidebar.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
+		subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
 
-	for ( let i = 0; i < menuToggle.length; i++ ) {
-		menuToggle[ i ].addEventListener(
+	/**
+	 * @description Creates semi-transparent overlay behind menus.
+	 * @param {string} maskId The ID to add to the div.
+	 */
+	function createOverlay( maskId ) {
+		const mask = document.createElement( 'div' );
+		mask.setAttribute( 'class', 'overlay-mask' );
+		mask.setAttribute( 'id', maskId );
+		document.body.appendChild( mask );
+	}
+
+	/**
+	 * @description Removes semi-transparent overlay behind menus.
+	 * @param {string} maskId The ID to use for the overlay.
+	 */
+	function removeOverlay( maskId ) {
+		const mask = document.getElementById( maskId );
+		mask.parentNode.removeChild( mask );
+	}
+
+	/**
+	 * @description Opens specifed slide-out menu.
+	 * @param {string} menuClass  The class to add to the body to toggle menu visibility.
+	 * @param {string} openButton The button used to open the menu.
+	 * @param {string} maskId     The ID to use for the overlay.
+	 */
+	function openMenu( menuClass, openButton, maskId ) {
+		body.classList.add( menuClass );
+		openButton.focus();
+		createOverlay( maskId );
+	}
+
+	/**
+	 * @description Closes specifed slide-out menu.
+	 * @param {string} menuClass  The class to remove from the body to toggle menu visibility.
+	 * @param {string} openButton The button used to open the menu.
+	 * @param {string} maskId The ID to use for the overlay.
+	 */
+	function closeMenu( menuClass, openButton, maskId ) {
+		body.classList.remove( menuClass );
+		openButton.focus();
+		removeOverlay( maskId );
+	}
+
+	// Mobile menu fallback.
+	for ( let i = 0; i < mobileToggle.length; i++ ) {
+		mobileToggle[ i ].addEventListener(
 			'click',
 			function() {
-				if ( body.classList.contains( 'menu-opened' ) ) {
-					body.classList.remove( 'menu-opened' );
-					menuOpenButton.focus();
+				if ( body.classList.contains( 'mobile-menu-opened' ) ) {
+					closeMenu( 'mobile-menu-opened', mobileOpenButton, 'mask-mobile' );
 				} else {
-					body.classList.add( 'menu-opened' );
-					menuCloseButton.focus();
+					openMenu( 'mobile-menu-opened', mobileCloseButton, 'mask-mobile' );
 				}
 			},
 			false
 		);
 	}
 
-	// Desktop menu fallback.
-	const desktopToggle = document.getElementsByClassName( 'desktop-menu-toggle' ),
-		desktopSidebar = document.getElementById( 'desktop-sidebar-fallback' ),
-		desktopOpenButton = headerContain.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
-		desktopCloseButton = desktopSidebar.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ];
-
+	// Desktop menu (AKA slide-out sidebar) fallback.
 	for ( let i = 0; i < desktopToggle.length; i++ ) {
 		desktopToggle[ i ].addEventListener(
 			'click',
 			function() {
 				if ( body.classList.contains( 'desktop-menu-opened' ) ) {
-					body.classList.remove( 'desktop-menu-opened' );
-					desktopOpenButton.focus();
+					closeMenu( 'desktop-menu-opened', desktopOpenButton, 'mask-desktop' );
 				} else {
-					body.classList.add( 'desktop-menu-opened' );
-					desktopCloseButton.focus();
+					openMenu( 'desktop-menu-opened', desktopCloseButton, 'mask-desktop' );
 				}
 			},
 			false
 		);
 	}
 
-	// 'Sub page' menu fallback.
-	const subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
-
+	// 'Subpage' menu fallback.
 	if ( 0 < subpageToggle.length ) {
 		const subpageSidebar = document.getElementById( 'subpage-sidebar-fallback' ),
 			subpageOpenButton = headerContain.getElementsByClassName( 'subpage-toggle' )[ 0 ],
@@ -92,18 +131,27 @@
 			subpageToggle[ i ].addEventListener(
 				'click',
 				function() {
-					if ( body.classList.contains( 'subpage-sidebar-opened' ) ) {
-						body.classList.remove( 'subpage-sidebar-opened' );
-						subpageOpenButton.focus();
+					if ( body.classList.contains( 'subpage-menu-opened' ) ) {
+						closeMenu( 'subpage-menu-opened', subpageOpenButton, 'mask-subpage' );
 					} else {
-						body.classList.add( 'subpage-sidebar-opened' );
-						subpageCloseButton.focus();
+						openMenu( 'subpage-menu-opened', subpageCloseButton, 'mask-subpage' );
 					}
 				},
 				false
 			);
 		}
 	}
+
+	// Add listener to the menu overlays, so they can be closed on click.
+	document.addEventListener( 'click', function( e ) {
+		if ( e.target && e.target.className === 'overlay-mask' ) {
+			const maskId = e.target.id;
+			const menu = maskId.split( '-' );
+
+			body.classList.remove( menu[ 1 ] + '-menu-opened' );
+			removeOverlay( maskId );
+		}
+	} );
 
 	// Comments toggle fallback.
 	const commentsToggle = document.getElementById( 'comments-toggle' );
