@@ -230,7 +230,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Show Mobile CTA', 'newspack' ),
-			'description' => esc_html__( 'Show a call-to-action button in the mobile header that can be used to link to a donate or subscription page.', 'newspack' ),
+			'description' => esc_html__( 'Show a call-to-action button in the mobile header that can be used to link to an important page, like for donations.', 'newspack' ),
 			'section'     => 'header_section_donate',
 		)
 	);
