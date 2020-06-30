@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/Automattic/newspack-theme/compare/v1.10.0...v1.11.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* close menus on overlay click when not using AMP ([#985](https://github.com/Automattic/newspack-theme/issues/985)) ([c1aa673](https://github.com/Automattic/newspack-theme/commit/c1aa673f68d00155c00eb379bcb1cb919ecf41f8))
+* improve appearance of comment log in messages ([#987](https://github.com/Automattic/newspack-theme/issues/987)) ([3a6329f](https://github.com/Automattic/newspack-theme/commit/3a6329fac53c9cfc850ff509e57148d8706e0003))
+
+
+### Features
+
+* default post template selection ([#988](https://github.com/Automattic/newspack-theme/issues/988)) ([7fd29d8](https://github.com/Automattic/newspack-theme/commit/7fd29d83916ea9344b6059ee6d8c059f6df07107))
+
 # [1.10.0](https://github.com/Automattic/newspack-theme/compare/v1.9.0...v1.10.0) (2020-06-23)
 
 
