@@ -26,7 +26,7 @@ endif;
 add_action( 'after_setup_theme', 'newspack_sacha_setup', 12 );
 
 /**
- * Function to load style pack's Google Fonts.
+ * Function to load child theme's Google Fonts.
  */
 function newspack_sacha_fonts_url() {
 	$fonts_url = '';
@@ -138,8 +138,3 @@ add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_sty
  */
 
 require get_stylesheet_directory() . '/inc/child-typography.php';
-
-/**
- * Customizer functions.
- */
-require get_stylesheet_directory() . '/inc/child-customizer.php';
