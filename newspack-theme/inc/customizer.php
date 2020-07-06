@@ -272,6 +272,25 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Mobile CTA - link target.
+	$wp_customize->add_setting(
+		'header_cta_target',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_cta_target',
+		array(
+			'label'   => esc_html__( 'Open link in new window', 'newspack' ),
+			'type'    => 'checkbox',
+			'section' => 'header_section_cta',
+		)
+	);
+
+
 	// Mobile CTA - button color.
 	$wp_customize->add_setting(
 		'header_cta_hex',
