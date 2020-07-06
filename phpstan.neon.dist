@@ -23,7 +23,6 @@ parameters:
         - %currentWorkingDirectory%/inc/color-patterns.php
         - %currentWorkingDirectory%/classes/class-newspack-svg-icons.php
         - %currentWorkingDirectory%/classes/class-newspack-walker-comment.php
-        - %currentWorkingDirectory%/classes/class-newspack-style-packs-core.php
         - %currentWorkingDirectory%/inc/template-functions.php
         - %currentWorkingDirectory%/inc/color-filters.php
         - %currentWorkingDirectory%/inc/typography.php
@@ -33,7 +32,6 @@ parameters:
         - %currentWorkingDirectory%/inc/jetpack.php
         - %currentWorkingDirectory%/inc/woocommerce.php
         # Nothing to load
-        #- %currentWorkingDirectory%/inc/style-packs.php
     ignoreErrors:
         # Uses func_get_args()
         - '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
