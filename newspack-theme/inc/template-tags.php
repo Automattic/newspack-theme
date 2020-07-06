@@ -383,12 +383,12 @@ if ( ! function_exists( 'newspack_mobile_cta' ) ) :
 	 * Echo a CTA link in the mobile header.
 	 */
 	function newspack_mobile_cta() {
-		$cta_show    = get_theme_mod( 'show_header_cta', false );
-		$cta_text    = get_theme_mod( 'header_cta_text', esc_html__( 'Donate', 'newspack' ) );
-		$cta_page_id = get_theme_mod( 'header_cta_page', 0 );
+		$cta_show = get_theme_mod( 'show_header_cta', false );
+		$cta_text = get_theme_mod( 'header_cta_text', esc_html__( 'Donate', 'newspack' ) );
+		$cta_url  = get_theme_mod( 'header_cta_url', '' );
 
-		if ( true === $cta_show && 0 !== $cta_page_id ) {
-			echo '<a class="button mb-cta" href="' . esc_url( get_permalink( $cta_page_id ) ) . '">' . esc_html( $cta_text ) . '</a>';
+		if ( true === $cta_show && '' !== $cta_url ) {
+			echo '<a class="button mb-cta" href="' . esc_url( $cta_url ) . '">' . esc_html( $cta_text ) . '</a>';
 		}
 	}
 endif;

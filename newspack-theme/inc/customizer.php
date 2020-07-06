@@ -255,19 +255,19 @@ function newspack_customize_register( $wp_customize ) {
 
 	// Mobile CTA - URL.
 	$wp_customize->add_setting(
-		'header_cta_page',
+		'header_cta_url',
 		array(
-			'default'           => 0,
-			'sanitize_callback' => 'newspack_sanitize_numeric_value',
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
 		)
 	);
 
 	$wp_customize->add_control(
-		'header_cta_page',
+		'header_cta_url',
 		array(
-			'label'       => esc_html__( 'Button Link', 'newspack' ),
-			'description' => esc_html__( 'Pick a page that the call-to-action button should link to.', 'newspack' ),
-			'type'        => 'dropdown-pages',
+			'label'       => esc_html__( 'Button URL', 'newspack' ),
+			'description' => esc_html__( 'Add a webpage URL that the call-to-action button should link to.', 'newspack' ),
+			'type'        => 'text',
 			'section'     => 'header_section_cta',
 		)
 	);
@@ -1063,21 +1063,6 @@ function newspack_sanitize_checkbox( $input ) {
 		return true;
 	} else {
 		return false;
-	}
-}
-
-/**
- * Sanitize a numeric value.
- *
- * @param number $input Value of dropdown.
- *
- * @return number A valid number, or returns 0.
- */
-function newspack_sanitize_numeric_value( $input ) {
-	if ( is_numeric( $input ) ) {
-		return intval( $input );
-	} else {
-		return 0;
 	}
 }
 
