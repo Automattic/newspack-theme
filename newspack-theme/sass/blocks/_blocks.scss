@@ -842,6 +842,10 @@
 				margin-bottom: 0;
 			}
 		}
+
+		&.has-background + .wp-block-group.has-background {
+			margin-top: -32px;
+		}
 	}
 
 	//! Font Sizes

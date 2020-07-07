@@ -321,12 +321,18 @@ add_action( 'widgets_init', 'newspack_widgets_init' );
  * @global int $content_width Content width.
  */
 function newspack_content_width() {
+	$content_width = 780;
+
+	// Check if front page or using One-Column Wide template
+	if ( ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) || is_page_template( 'single-wide.php' ) ) {
+		$content_width = 1200;
+	}
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'newspack_content_width', 960 );
+	$GLOBALS['content_width'] = apply_filters( 'newspack_content_width', $content_width );
 }
-add_action( 'after_setup_theme', 'newspack_content_width', 0 );
+add_action( 'template_redirect', 'newspack_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
@@ -352,7 +358,7 @@ function newspack_scripts() {
 			'hide_order_details' => esc_html__( 'Hide details', 'newspack' ),
 		);
 
-		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), '1.0', true );
+		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
 	// Load custom fonts, if any.
@@ -462,25 +468,6 @@ function newspack_is_static_front_page() {
 }
 
 /**
- * Check if the current style pack is a particular option.
- *
- * Pass in a style pack slug or list of slugs separated by commas (default|style-1|style-2|style-3|style-4)
- *
- * @return bool If current style pack is one of the passed options.
- */
-function newspack_is_active_style_pack() {
-	$args              = func_get_args();
-	$active_style_pack = '';
-
-	// Only assign an active style pack if not using a child theme.
-	if ( ! is_child_theme() ) {
-		$active_style_pack = get_theme_mod( 'active_style_pack', 'default' );
-	}
-
-	return in_array( $active_style_pack, $args );
-}
-
-/**
  * Check for specific templates.
  */
 function newspack_check_current_template() {
@@ -498,10 +485,6 @@ function newspack_filter_admin_body_class( $classes ) {
 
 	if ( newspack_is_static_front_page() ) {
 		$classes .= ' newspack-static-front-page';
-	}
-
-	if ( 'default' !== get_theme_mod( 'active_style_pack', 'default' ) ) {
-		$classes .= ' style-pack-' . get_theme_mod( 'active_style_pack', 'default' );
 	}
 
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -853,46 +836,6 @@ function newspack_update_the_archive_title( $title ) {
 add_filter( 'get_the_archive_title', 'newspack_update_the_archive_title', 11, 1 );
 
 /**
- * Notify about child theme deprecation.
- * TODO: Remove after child theme code is removed.
- */
-function newspack_child_theme_deprecation_notification() {
-	$theme = get_option( 'stylesheet', null );
-	if ( 'newspack-theme' !== $theme ) {
-		return;
-	}
-	$style_pack         = get_theme_mod( 'active_style_pack', 'default' );
-	$style_pack_mapping = array(
-		'style-1' => 'scott',
-		'style-2' => 'nelson',
-		'style-3' => 'katharine',
-		'style-4' => 'sacha',
-		'style-5' => 'joseph',
-	);
-	if ( ! isset( $style_pack_mapping[ $style_pack ] ) ) {
-		return;
-	}
-	?>
-	<div class="notice notice-warning">
-		<p>
-			<?php
-			echo wp_kses_post(
-				sprintf(
-					/* translators: warning about upcoming feature deprecation. */
-					__( 'The style pack code will be removed from the Newspack Theme in a future release. If you would like to keep <strong>%1$s</strong> styles, please download and activate the <strong><a href="%2$s">%3$s</a></strong> child theme before upgrading to the next Newspack Theme version.', 'newspack' ),
-					ucfirst( str_replace( '-', ' ', $style_pack ) ),
-					'https://github.com/Automattic/newspack-theme/releases/latest/download/newspack-' . $style_pack_mapping[ $style_pack ] . '.zip',
-					ucfirst( $style_pack_mapping[ $style_pack ] )
-				)
-			);
-			?>
-		</p>
-	</div>
-	<?php
-}
-add_action( 'admin_notices', 'newspack_child_theme_deprecation_notification' );
-
-/**
  * When new post is created, maybe set the post template.
  *
  * @param integer $post_ID The post ID.
@@ -918,14 +861,6 @@ require get_template_directory() . '/classes/class-newspack-svg-icons.php';
  * Custom Comment Walker template.
  */
 require get_template_directory() . '/classes/class-newspack-walker-comment.php';
-
-/**
- * Style pack class.
- */
-if ( ! is_child_theme() && ! newspack_is_active_style_pack( 'default' ) ) {
-	require get_template_directory() . '/classes/class-newspack-style-packs-core.php';
-	require get_template_directory() . '/inc/style-packs.php';
-}
 
 /**
  * Enhance the theme by hooking into WordPress.
