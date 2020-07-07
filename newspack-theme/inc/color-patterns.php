@@ -34,6 +34,7 @@ function newspack_custom_colors_css() {
 
 	$theme_css = '';
 
+	// Front-end colors that require the theme_colors to be set to 'custom':
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$theme_css .= '
 			/* Set primary background color */
@@ -318,7 +319,7 @@ function newspack_custom_colors_css() {
 		}
 	}
 
-	/* Set Mobile CTA Colors */
+	// Front-end colors that don't require the theme_colors to be set to 'custom':
 	if ( newspack_get_mobile_cta_color() !== $cta_color ) {
 		$theme_css .= '
 			.button.mb-cta,
