@@ -426,7 +426,7 @@ function newspack_editor_customizer_styles() {
 
 	// Check for color or font customizations.
 	$theme_customizations = '';
-	if ( 'custom' === get_theme_mod( 'theme_colors' ) || newspack_get_mobile_cta_color() !== get_theme_mod( 'mobile_cta_hex', newspack_get_mobile_cta_color() ) ) {
+	if ( 'custom' === get_theme_mod( 'theme_colors' ) || newspack_get_mobile_cta_color() !== get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() ) ) {
 		// Include color patterns.
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		$theme_customizations .= newspack_custom_colors_css();
@@ -597,7 +597,7 @@ add_action( 'after_switch_theme', 'newspack_migrate_settings', 10, 2 );
 function newspack_colors_css_wrap() {
 
 	// Only bother if we haven't customized the color.
-	if ( ( ! is_customize_preview() && ( 'default' === get_theme_mod( 'theme_colors', 'default' ) || newspack_get_mobile_cta_color() === get_theme_mod( 'mobile_cta_hex', newspack_get_mobile_cta_color() ) ) ) || is_admin() ) {
+	if ( ( ! is_customize_preview() && ( 'default' === get_theme_mod( 'theme_colors', 'default' ) && newspack_get_mobile_cta_color() === get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() ) ) ) || is_admin() ) {
 		return;
 	}
 
