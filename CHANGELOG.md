@@ -1,3 +1,12 @@
+## [1.11.1](https://github.com/Automattic/newspack-theme/compare/v1.11.0...v1.11.1) (2020-07-07)
+
+
+### Bug Fixes
+
+* correct $content_width setting in theme ([#972](https://github.com/Automattic/newspack-theme/issues/972)) ([ea6e57b](https://github.com/Automattic/newspack-theme/commit/ea6e57b662dcc6a94820555b4bc88164773f4295))
+* make sure amp fallback script always loads latest version ([#993](https://github.com/Automattic/newspack-theme/issues/993)) ([83d61e4](https://github.com/Automattic/newspack-theme/commit/83d61e42d5c717db745b87b2dd8a21d7ef4bfb79))
+* remove space between group blocks with backgrounds ([#986](https://github.com/Automattic/newspack-theme/issues/986)) ([055ec0e](https://github.com/Automattic/newspack-theme/commit/055ec0e05791b96a22566b5a193b5eba361e0efb))
+
 # [1.11.0](https://github.com/Automattic/newspack-theme/compare/v1.10.0...v1.11.0) (2020-06-30)
 
 
