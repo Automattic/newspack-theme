@@ -426,7 +426,7 @@ function newspack_editor_customizer_styles() {
 
 	// Check for color or font customizations.
 	$theme_customizations = '';
-	if ( 'custom' === get_theme_mod( 'theme_colors' ) || newspack_get_mobile_cta_color() !== get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() ) ) {
+	if ( 'custom' === get_theme_mod( 'theme_colors' ) ) {
 		// Include color patterns.
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		$theme_customizations .= newspack_custom_colors_css();
