@@ -517,3 +517,36 @@ cite {
 		}
 	}
 }
+
+// Trust Indicators
+
+.entry-meta a.trust-label {
+	max-width: 100%;
+	justify-content: center;
+}
+
+.featured-image-behind {
+	.entry-meta a.trust-label {
+		color: #FFF;
+	}
+
+	.entry-meta a.trust-label {
+		max-width: 100%;
+		justify-content: center;
+		margin-top: #{.5 * $size__spacing-unit};
+	}
+}
+
+@include media( mobile ) {
+	.entry-meta a.trust-label {
+		justify-content: left;
+	}
+}
+
+@include media( tablet ) {
+	.featured-image-beside {
+		.entry-meta a.trust-label {
+			justify-content: center;
+		}
+	}
+}

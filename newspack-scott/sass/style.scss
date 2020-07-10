@@ -318,3 +318,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		}
 	}
 }
+
+/* Trust Indicators */
+
+.featured-image-behind {
+	.entry-meta a.trust-label {
+		color: #FFF;
+	}
+}
+
+@include media( tablet ) {
+	.entry-meta a.trust-label {
+		margin-left: #{1.5 * $size__spacing-unit};
+		margin-top: 0;
+	}
+}

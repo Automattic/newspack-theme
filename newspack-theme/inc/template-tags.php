@@ -153,16 +153,18 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 				'title'  => array(),
 				'target' => array(),
 			),
-			'li' => array(),
+			'li' => array(
+				'class' => array(),
+			),
 		);
 		$allowed_html = array_merge( $allowed_html, newspack_sanitize_svgs() );
 
 		foreach ( $social_profiles as $profile ) {
 			if ( '' !== get_the_author_meta( $profile, $author_id ) ) {
 				if ( 'twitter' === $profile ) {
-					$links .= '<li><a href="https://twitter.com/' . esc_attr( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
+					$links .= '<li class="twitter"><a href="https://twitter.com/' . esc_attr( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
 				} else {
-					$links .= '<li><a href="' . esc_url( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
+					$links .= '<li class="' . esc_attr( $profile ) . '"><a href="' . esc_url( get_the_author_meta( $profile, $author_id ) ) . '" target="_blank">' . newspack_get_social_icon_svg( $profile, $size, $profile ) . '</a></li>';
 				}
 			}
 		}
@@ -219,7 +221,7 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
 				'<span class="cat-links"><span class="screen-reader-text">%1$s</span>%2$s</span>',
 				esc_html__( 'Posted in', 'newspack' ),
-				$categories_list
+				apply_filters( 'newspack_theme_categories', $categories_list )
 			); // WPCS: XSS OK.
 		}
 	}

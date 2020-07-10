@@ -558,3 +558,24 @@ blockquote {
 		}
 	}
 }
+
+/* Trust Indicators */
+
+@include media( tablet ) {
+	.featured-image-beside {
+		.entry-meta a.trust-label {
+			color: #FFF;
+		}
+	} 
+}
+
+.featured-image-behind {
+	.entry-meta a.trust-label {
+		color: #FFF;
+	}
+}
+
+.entry-meta a.trust-label {
+	margin-top: #{.5 * $size__spacing-unit};
+}
+

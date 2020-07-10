@@ -1,0 +1,133 @@
+@import '../variables-site/variables-site';
+@import '../mixins/mixins-master';
+
+a.trust-label {
+	display: flex;
+	align-items: center;
+	max-width: 300px;
+}
+
+span.trust-label__message {
+	margin-left: 0.5em;
+}
+
+.single .cat-links {
+	font-size: 0.66rem;
+
+	.type-of-work {
+		margin-left: 0.5em;
+		padding: 0.5em;
+	}
+}
+
+.author-expanded-social-link {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+
+	svg {
+		margin-right: 0.33rem;
+	}
+}
+
+/* Author archives */
+.archive.author {
+
+	/* Hide sidebar */
+	#secondary {
+		display: none;
+	}
+	#main {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Hide default archive title */
+	.page-title .page-subtitle {
+		display: none;
+	}
+
+	/* Hide default social links */
+	.author-meta {
+		display: none;
+	}
+
+	.author-meta.trust-indicators {
+		display: flex;
+	}
+
+	.author-social-links {
+		border-left: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.author-meta.trust-indicators {
+		flex-wrap: wrap;
+	}
+
+	/* Hide small Twitter icon, because a bigger one is present */
+	.author-social-links .twitter {
+		display: none;
+	}
+}
+
+.author-additional-infos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.author-additional-info {
+	width: 100%;
+}
+
+.author-expanded-social-link {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.featured-image-behind,
+.featured-image-beside {
+	.trust-label:hover {
+		color: inherit;
+	}
+
+	svg.trust-label__icon path {
+		fill: inherit;
+	}
+}
+
+.featured-image-behind {
+	a.trust-label {
+		color: #FFF;
+	}
+}
+
+@include media( mobile ) {
+	.author-additional-info {
+		width: 50%;
+	}
+	.author-expanded-social-link {
+		width: inherit;
+	}
+	.archive.author {
+		.author-meta.trust-indicators {
+			flex-wrap: nowrap;
+
+			.author-social-links {
+				margin: 0;
+				margin-bottom: 0.33rem;
+			}
+		}
+	}
+
+	a.trust-label {
+		margin-top: 0.33rem;
+	}
+}
+
+@include media( tablet ) {
+	.single .cat-links {
+		font-size: inherit;
+	}
+}

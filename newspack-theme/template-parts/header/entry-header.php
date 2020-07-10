@@ -38,6 +38,7 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 		<div class="entry-meta">
 			<?php newspack_posted_by(); ?>
 			<?php newspack_posted_on(); ?>
+			<?php do_action( 'newspack_theme_entry_meta' ); ?>
 		</div><!-- .meta-info -->
 		<?php
 			// Display Jetpack Share icons, if enabled

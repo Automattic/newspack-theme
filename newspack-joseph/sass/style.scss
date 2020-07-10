@@ -444,3 +444,12 @@ textarea {
 		}
 	}
 }
+
+/* Trust Indicators */
+
+@include media( tablet ) {
+	.entry-meta a.trust-label {
+		margin-left: #{1.5 * $size__spacing-unit};
+		margin-top: 0;
+	}
+}
