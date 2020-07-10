@@ -60,7 +60,17 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	 */
 	function newspack_posted_by() {
 
-		if ( function_exists( 'coauthors_posts_links' ) && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
+		if ( function_exists( 'newspack_sponsor_name' ) ) :
+
+			printf(
+				/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
+				'<span class="author-avatar">%1$s</span><span class="byline"><span>%2$s</span> <span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
+				wp_kses( newspack_sponsor_logo(), newspack_sponsor_logo_allowed_tags() ),
+				esc_html__( 'paid for by', 'newspack' ),
+				esc_url( newspack_sponsor_url() ),
+				esc_html( newspack_sponsor_name() )
+			);
+		elseif ( function_exists( 'coauthors_posts_links' ) && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
 
 			$authors      = get_coauthors();
 			$author_count = count( $authors );
@@ -215,12 +225,20 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 		}
 
 		if ( $categories_list ) {
+			echo '<span class="cat-links">';
+
+			if ( function_exists( 'newspack_sponsor_label' ) ) :
+				newspack_sponsor_label();
+			endif;
+
 			printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-				'<span class="cat-links"><span class="screen-reader-text">%1$s</span>%2$s</span>',
+				'<span class="screen-reader-text">%1$s</span>%2$s',
 				esc_html__( 'Posted in', 'newspack' ),
 				$categories_list
 			); // WPCS: XSS OK.
+
+			echo '</span>';
 		}
 	}
 endif;

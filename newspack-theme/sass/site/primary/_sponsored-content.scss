@@ -1,0 +1,20 @@
+.sponsored-cat {
+	display: inline-block;
+	+ .sep {
+		display: none;
+	}
+}
+
+.archive:not( .paged ) article.has-post-thumbnail:first-of-type .sponsored-cat {
+	margin-top: $size__spacing-unit;
+}
+
+.featured-image-behind .sponsored-cat {
+	color: inherit;
+}
+
+@include media( tablet ) {
+	.featured-image-beside .sponsored-cat {
+		color: inherit;
+	}
+}

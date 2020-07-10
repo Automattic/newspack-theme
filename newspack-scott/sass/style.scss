@@ -52,6 +52,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-size: $font__size-sm;
 }
 
+.sponsored-cat {
+	color: $color__text-light;
+
+	&::after {
+		border-right: 1px solid currentColor;
+		content: '';
+		height: 1em;
+		margin: 0 1rem;
+	}
+}
+
 #secondary .widget-title {
 	font-size: $font__size-lg;
 }
@@ -59,8 +70,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Posts & Pages */
 
 @include media( tablet ) {
-	.featured-image-beside .cat-links::before {
-		background-color: $color__background-body;
+	.featured-image-beside {
+		.cat-links::before {
+			background-color: $color__background-body;
+		}
 	}
 }
 

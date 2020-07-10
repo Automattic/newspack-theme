@@ -125,6 +125,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+.sponsored-cat {
+	color: $color__text-light;
+
+	&::after {
+		border-right: 1px solid currentColor;
+		content: '';
+		height: 1em;
+		margin: 0 1rem;
+	}
+}
+
+.featured-image-beside {
+	@include media( tablet ) {
+		.sponsored-cat {
+			color: $color__text-light;
+		}
+	}
+}
+
 .blog,
 .search {
 	.cat-links {

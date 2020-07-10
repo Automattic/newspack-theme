@@ -14,6 +14,12 @@
 	<?php newspack_post_thumbnail(); ?>
 
 	<div class="entry-container">
+		<?php
+		if ( function_exists( 'newspack_sponsor_label' ) ) {
+			newspack_sponsor_label( '<span class="cat-links">', '</span>' );
+		}
+		?>
+
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</header><!-- .entry-header -->

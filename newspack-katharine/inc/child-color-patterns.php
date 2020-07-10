@@ -56,7 +56,8 @@ function newspack_katharine_custom_colors_css() {
 		@media only screen and (min-width: 782px) {
 			.featured-image-beside a,
 			.featured-image-beside a:visited,
-			.featured-image-beside .cat-links a {
+			.featured-image-beside .cat-links,
+			.featured-image-beside .sponsored-cat {
 				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
 

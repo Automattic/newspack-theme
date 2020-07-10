@@ -104,6 +104,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	color: $color__primary;
 }
 
+.sponsored-cat {
+	color: $color__text_light;
+	margin-right: $size__spacing-unit;
+}
+
 .author-bio {
 	h2 {
 		color: inherit;
@@ -168,7 +173,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 // Posts & Pages
-
 @include media( tablet ) {
 	.featured-image-beside {
 		.cat-links a {

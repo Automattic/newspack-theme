@@ -178,6 +178,19 @@ body:not( .h-sb ) .site-header {
 			border-top: 0;
 		}
 	}
+
+	.sponsored-cat {
+		background: transparent;
+		margin: 0;
+		padding: 0;
+
+		&::after {
+			border-right: 1px solid currentColor;
+			content: '';
+			height: 1em;
+			margin: 0 1rem;
+		}
+	}
 }
 
 @include media( tablet ) {
@@ -189,6 +202,19 @@ body:not( .h-sb ) .site-header {
 		#primary {
 			border-top: 0;
 			padding-top: 0;
+		}
+
+		.sponsored-cat {
+			background: transparent;
+			margin: 0;
+			padding: 0;
+
+			&::after {
+				border-right: 1px solid currentColor;
+				content: '';
+				height: 1em;
+				margin: 0 1rem;
+			}
 		}
 	}
 }
@@ -228,6 +254,12 @@ h4,
 	@include media( tablet ) {
 		margin-bottom: #{2.5 * $size__spacing-unit};
 	}
+}
+
+.sponsored-cat {
+	background: $color__background-pre;
+	margin-right: $size__spacing-unit;
+	padding: #{0.25 * $size__spacing-unit};
 }
 
 #secondary .accent-header {

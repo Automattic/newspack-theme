@@ -872,6 +872,11 @@ require get_template_directory() . '/inc/typography.php';
 require get_template_directory() . '/inc/icon-functions.php';
 
 /**
+ * Load Sponsored Posts compatibility file.
+ */
+require get_template_directory() . '/inc/sponsored-posts.php';
+
+/**
  * Custom template tags for the theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

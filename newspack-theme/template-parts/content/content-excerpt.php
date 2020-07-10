@@ -15,9 +15,15 @@
 
 	<div class="entry-container">
 		<?php
-		if ( 'page' !== get_post_type() && ! is_archive() ) :
-			newspack_categories();
-		endif;
+		if ( 'page' !== get_post_type() ) {
+			if ( ! is_archive() ) {
+				newspack_categories();
+			} else {
+				if ( function_exists( 'newspack_sponsor_label' ) ) {
+					newspack_sponsor_label( '<span class="cat-links">', '</span>' );
+				}
+			}
+		}
 		?>
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

@@ -91,6 +91,14 @@
 	}
 }
 
+// Sponsored Content
+.sponsored-cat {
+	background: $color__background-pre;
+	margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+	padding: 0.5em 0.75em;
+}
+
+// Newspack Block
 .wpnbha .cat-links {
 	a {
 		margin: 0;
@@ -125,6 +133,15 @@
 	.sep {
 		display: inline;
 	}
+
+	.sponsored-cat {
+		background: transparent;
+		border: 1px solid currentColor;
+		margin-right: $size__spacing-unit;
+		+ .sep {
+			display: none;
+		}
+	}
 }
 
 @include media( tablet ) {
@@ -139,6 +156,15 @@
 		}
 		.sep {
 			display: inline;
+		}
+
+		.sponsored-cat {
+			background: transparent;
+			border: 1px solid currentColor;
+			margin-right: $size__spacing-unit;
+			+ .sep {
+				display: none;
+			}
 		}
 	}
 }
@@ -167,6 +193,14 @@
 		a {
 			padding: 0.25em 0.5em;
 		}
+	}
+}
+
+.blog,
+.search,
+.archives {
+	.sponsored-cat {
+		padding: 0.25em 0.5em;
 	}
 }
 

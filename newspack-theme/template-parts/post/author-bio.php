@@ -13,7 +13,37 @@ if ( false === get_theme_mod( 'show_author_bio', true ) ) {
 
 $author_bio_length = get_theme_mod( 'author_bio_length', 200 );
 
-if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
+if ( function_exists( 'newspack_sponsor_name' ) ) : ?>
+	<div class="author-bio">
+
+		<?php echo wp_kses( newspack_sponsor_logo( 80, 80 ), newspack_sponsor_logo_allowed_tags() ); ?>
+
+		<div class="author-bio-text">
+			<div class="author-bio-header">
+				<div>
+					<h2 class="accent-header">
+						<?php
+							/* translators: %s is the current author's name. */
+							printf( esc_html__( 'Sponsored by %s', 'newspack' ), esc_html( newspack_sponsor_name() ) );
+						?>
+						<span><?php // TODO: Add Job title ?></span>
+					</h2>
+				</div>
+			</div><!-- .author-bio-header -->
+
+			<?php echo esc_html( newspack_sponsor_info() ); ?>
+
+			<a class="author-link" href="<?php echo esc_url( newspack_sponsor_url() ); ?>" rel="author">
+				<?php
+					/* translators: %s is the current author's name. */
+					printf( esc_html__( 'Learn more about %s', 'newspack' ), esc_html( newspack_sponsor_name() ) );
+				?>
+			</a>
+
+		</div><!-- .author-bio-text -->
+	</div><!-- .author-bio -->
+<?php
+elseif ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
 
 	$authors      = get_coauthors();
 	$author_count = count( $authors );
