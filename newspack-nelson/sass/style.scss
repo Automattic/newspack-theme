@@ -90,6 +90,11 @@ body:not( .h-sb ) .site-header {
 	border-bottom: 0;
 }
 
+// Mobile CTA
+.button.mb-cta {
+	border-radius: 0;
+}
+
 // Featured templates - Short header on subpages
 .single-featured-image-beside,
 .single-featured-image-behind {

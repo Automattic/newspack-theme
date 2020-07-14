@@ -393,6 +393,15 @@ function newspack_get_secondary_color() {
 }
 
 /**
+ * The default color used for the mobile cta in the header.
+ *
+ * @return string the default hexidecimal color.
+ */
+function newspack_get_mobile_cta_color() {
+	return '#dd3333';
+}
+
+/**
  * Adjust a hexidecimal colour value to lighten or darken it.
  *
  * @param  string $hex Hexidecimal value of the color to adjust.
