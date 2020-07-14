@@ -378,6 +378,26 @@ if ( ! function_exists( 'newspack_the_posts_navigation' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_mobile_cta' ) ) :
+	/**
+	 * Echo a CTA link in the mobile header.
+	 */
+	function newspack_mobile_cta() {
+		$cta_show   = get_theme_mod( 'show_header_cta', false );
+		$cta_text   = get_theme_mod( 'header_cta_text', esc_html__( 'Donate', 'newspack' ) );
+		$cta_url    = get_theme_mod( 'header_cta_url', '' );
+		$cta_target = get_theme_mod( 'header_cta_target', false );
+
+		if ( true === $cta_show && '' !== $cta_url ) {
+			echo '<a class="button mb-cta" href="' . esc_url( $cta_url ) . '"';
+			if ( true === $cta_target ) {
+				echo ' target="_blank"';
+			}
+			echo '>' . esc_html( $cta_text ) . '</a>';
+		}
+	}
+endif;
+
 /**
  * Check if any header menus are applied; used to show menu toggle on smaller screens.
  */

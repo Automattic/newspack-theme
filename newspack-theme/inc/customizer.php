@@ -206,6 +206,110 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Header - Mobile Donate CTA
+	 */
+	$wp_customize->add_section(
+		'header_section_cta',
+		array(
+			'title' => esc_html__( 'Mobile Call-to-Action', 'newspack' ),
+			'panel' => 'newspack_header_options',
+		)
+	);
+
+	// Mobile CTA - toggle on and off.
+	$wp_customize->add_setting(
+		'show_header_cta',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_header_cta',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show Mobile CTA', 'newspack' ),
+			'description' => esc_html__( 'Show an essential call-to-action button in the mobile header, that is always visible.', 'newspack' ),
+			'section'     => 'header_section_cta',
+		)
+	);
+
+	// Mobile CTA - button text.
+	$wp_customize->add_setting(
+		'header_cta_text',
+		array(
+			'default'           => esc_html__( 'Donate', 'newspack' ),
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'header_cta_text',
+		array(
+			'type'    => 'text',
+			'label'   => esc_html__( 'Button Text', 'newspack' ),
+			'section' => 'header_section_cta',
+		)
+	);
+
+	// Mobile CTA - URL.
+	$wp_customize->add_setting(
+		'header_cta_url',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_cta_url',
+		array(
+			'label'   => esc_html__( 'Button URL', 'newspack' ),
+			'type'    => 'text',
+			'section' => 'header_section_cta',
+		)
+	);
+
+	// Mobile CTA - link target.
+	$wp_customize->add_setting(
+		'header_cta_target',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_cta_target',
+		array(
+			'label'   => esc_html__( 'Open link in new window', 'newspack' ),
+			'type'    => 'checkbox',
+			'section' => 'header_section_cta',
+		)
+	);
+
+
+	// Mobile CTA - button color.
+	$wp_customize->add_setting(
+		'header_cta_hex',
+		array(
+			'default'           => newspack_get_mobile_cta_color(),
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_cta_hex',
+			array(
+				'label'       => esc_html__( 'Background Color', 'newspack' ),
+				'description' => __( 'Selecting a strong, non-palette color is recommended to ensure the CTA stands out.', 'newspack' ),
+				'section'     => 'header_section_cta',
+			)
+		)
+	);
+
 	// Add option to upload logo specifically for the footer.
 	$wp_customize->add_setting(
 		'newspack_alternative_logo',

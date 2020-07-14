@@ -603,7 +603,7 @@ add_action( 'after_switch_theme', 'newspack_migrate_settings', 10, 2 );
 function newspack_colors_css_wrap() {
 
 	// Only bother if we haven't customized the color.
-	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'theme_colors', 'default' ) ) || is_admin() ) {
+	if ( ( ! is_customize_preview() && ( 'default' === get_theme_mod( 'theme_colors', 'default' ) && newspack_get_mobile_cta_color() === get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() ) ) ) || is_admin() ) {
 		return;
 	}
 

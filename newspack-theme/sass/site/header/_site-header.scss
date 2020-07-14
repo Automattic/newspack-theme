@@ -96,7 +96,7 @@
 // Middle bar
 .middle-header-contain .wrapper {
 	align-items: center;
-	padding: $size__spacing-unit 0;
+	padding: #{0.75 * $size__spacing-unit} 0;
 	@include media( tablet ) {
 		padding: #{1.5 * $size__spacing-unit} 0;
 	}
