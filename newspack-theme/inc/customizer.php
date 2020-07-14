@@ -230,7 +230,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Show Mobile CTA', 'newspack' ),
-			'description' => esc_html__( 'Show a call-to-action button in the mobile header that can be used to link to an important page, like for donations.', 'newspack' ),
+			'description' => esc_html__( 'Show an essential call-to-action button in the mobile header, that is always visible.', 'newspack' ),
 			'section'     => 'header_section_cta',
 		)
 	);
@@ -246,10 +246,9 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'header_cta_text',
 		array(
-			'type'        => 'text',
-			'label'       => esc_html__( 'Button Text', 'newspack' ),
-			'description' => esc_html__( 'Text to use for the mobile call-to-action button.', 'newspack' ),
-			'section'     => 'header_section_cta',
+			'type'    => 'text',
+			'label'   => esc_html__( 'Button Text', 'newspack' ),
+			'section' => 'header_section_cta',
 		)
 	);
 
@@ -265,10 +264,9 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'header_cta_url',
 		array(
-			'label'       => esc_html__( 'Button URL', 'newspack' ),
-			'description' => esc_html__( 'Add a webpage URL that the call-to-action button should link to.', 'newspack' ),
-			'type'        => 'text',
-			'section'     => 'header_section_cta',
+			'label'   => esc_html__( 'Button URL', 'newspack' ),
+			'type'    => 'text',
+			'section' => 'header_section_cta',
 		)
 	);
 
@@ -306,7 +304,7 @@ function newspack_customize_register( $wp_customize ) {
 			'header_cta_hex',
 			array(
 				'label'       => esc_html__( 'Background Color', 'newspack' ),
-				'description' => __( 'Apply a custom background color to the Mobile CTA. Picking something different than your site\'s color palette will help it stand out more.', 'newspack' ),
+				'description' => __( 'Selecting a strong, non-palette color is recommended to ensure the CTA stands out.', 'newspack' ),
 				'section'     => 'header_section_cta',
 			)
 		)
