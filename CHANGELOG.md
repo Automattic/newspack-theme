@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/Automattic/newspack-theme/compare/v1.11.1...v1.12.0) (2020-07-14)
+
+
+### Features
+
+* add mobile-specific call-to-action button ([#989](https://github.com/Automattic/newspack-theme/issues/989)) ([1a78a36](https://github.com/Automattic/newspack-theme/commit/1a78a36071c1d90b4cb3f0fc620f57cb4fd75e99))
+
 ## [1.11.1](https://github.com/Automattic/newspack-theme/compare/v1.11.0...v1.11.1) (2020-07-07)
 
 
