@@ -448,7 +448,7 @@ function newspack_secondary_menu() {
 
 	// Only set a toolbar-target attributes if the secondary menu container exists in the header - if not short or subpage header.
 	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_simplified', false ) && ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) ) {
+	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
 		$toolbar_attributes = 'toolbar-target="secondary-nav-contain" toolbar="(min-width: 767px)"';
 	}
 
@@ -524,7 +524,7 @@ function newspack_social_menu_header() {
 
 	// Only set a toolbar-target attributes if the social menu container exists in the header - if not short or subpage header.
 	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_simplified', false ) && ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) ) {
+	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
 		$toolbar_attributes = 'toolbar="(min-width: 767px)" toolbar-target="social-nav-contain"';
 	}
 	?>

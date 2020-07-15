@@ -7,7 +7,7 @@
 	justify-content: flex-start;
 	position: relative;
 	@include media( tablet ) {
-		flex-basis: 60%;
+		margin-right: auto;
 	}
 }
 
@@ -186,6 +186,7 @@
 			width: 35%;
 
 			&.site-branding {
+				margin-right: auto;
 				width: 30%;
 			}
 
