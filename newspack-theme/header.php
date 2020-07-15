@@ -74,7 +74,7 @@ endif;
 				</div>
 			</div><!-- .wrapper -->
 		<?php else : ?>
-			<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
+			<?php if ( has_nav_menu( 'secondary-menu' ) || ( true === $show_slideout_sidebar && false === $header_simplified ) ) : ?>
 				<div class="top-header-contain desktop-only">
 					<div class="wrapper">
 						<?php if ( true === $show_slideout_sidebar ) : ?>
@@ -113,7 +113,7 @@ endif;
 
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) ) : ?>
+					<?php if ( true === $show_slideout_sidebar && ( ! has_nav_menu( 'secondary-menu' ) && true === $header_simplified ) ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
