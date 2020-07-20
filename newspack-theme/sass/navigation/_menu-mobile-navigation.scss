@@ -39,6 +39,35 @@
 	margin-left: auto;
 }
 
+// Mobile CTA
+.button.mb-cta {
+	background: #d33;
+	color: #fff;
+	font-size: 0.7em;
+	margin-left: auto;
+	padding: #{0.6 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+
+	&:hover {
+		background: $color__text-main;
+		color: #fff;
+	}
+
+	+ .mobile-menu-toggle {
+		margin-left: $size__spacing-unit;
+
+		span {
+			display: inline-block;
+			overflow: hidden;
+			width: 0;
+		}
+
+		svg {
+			height: 29px;
+			width: 29px;
+		}
+	}
+}
+
 // Hide desktop menu toggle on smaller screens
 .site-header .desktop-menu-toggle,
 .subpage-toggle-contain {
@@ -67,7 +96,8 @@
 
 	// Mobile Menu toggle
 	.h-dh .site-header .mobile-menu-toggle,
-	.h-sub .site-header .mobile-menu-toggle {
+	.h-sub .site-header .mobile-menu-toggle,
+	.h-dh .mb-cta {
 		display: none;
 	}
 
@@ -82,7 +112,8 @@
 	// Header - short height
 
 	// Mobile Menu toggle
-	.h-sh .site-header .mobile-menu-toggle {
+	.h-sh .site-header .mobile-menu-toggle,
+	.h-sh .mb-cta {
 		display: none;
 	}
 

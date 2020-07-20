@@ -321,12 +321,18 @@ add_action( 'widgets_init', 'newspack_widgets_init' );
  * @global int $content_width Content width.
  */
 function newspack_content_width() {
+	$content_width = 780;
+
+	// Check if front page or using One-Column Wide template
+	if ( ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) || is_page_template( 'single-wide.php' ) ) {
+		$content_width = 1200;
+	}
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'newspack_content_width', 960 );
+	$GLOBALS['content_width'] = apply_filters( 'newspack_content_width', $content_width );
 }
-add_action( 'after_setup_theme', 'newspack_content_width', 0 );
+add_action( 'template_redirect', 'newspack_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
@@ -597,7 +603,7 @@ add_action( 'after_switch_theme', 'newspack_migrate_settings', 10, 2 );
 function newspack_colors_css_wrap() {
 
 	// Only bother if we haven't customized the color.
-	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'theme_colors', 'default' ) ) || is_admin() ) {
+	if ( ( ! is_customize_preview() && ( 'default' === get_theme_mod( 'theme_colors', 'default' ) && newspack_get_mobile_cta_color() === get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() ) ) ) || is_admin() ) {
 		return;
 	}
 

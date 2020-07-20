@@ -41,6 +41,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+// Mobile CTA
+.button.mb-cta {
+	border-radius: 0;
+}
+
 .accent-header,
 .wp-block-columns .wp-block-column > .accent-header,
 .entry .wpnbha .article-section-title {

@@ -12,6 +12,7 @@ function newspack_custom_colors_css() {
 
 	$primary_color   = newspack_get_primary_color();
 	$secondary_color = newspack_get_secondary_color();
+	$cta_color       = get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() );
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
@@ -29,199 +30,56 @@ function newspack_custom_colors_css() {
 	// Set colour contrasts.
 	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
 	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
+	$cta_color_contrast       = newspack_get_color_contrast( $cta_color );
 
-	$theme_css = '
-		/* Set primary background color */
+	$theme_css = '';
 
-		.mobile-sidebar,
-		/* Header default background; header default height */
-		body.h-db.h-dh .site-header .nav3 .menu-highlight a,
-		.entry .entry-content .has-primary-background-color,
-		.entry .entry-content *[class^="wp-block-"].has-primary-background-color,
-		.entry .entry-content *[class^="wp-block-"] .has-primary-background-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
-		.entry .entry-content .wp-block-file .wp-block-file__button,
-		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
-		.comment .comment-author .post-author-badge {
-			background-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
-		}
-
-		@media only screen and (min-width: 782px) {
-			/* Header default background */
-			.h-db .featured-image-beside {
-				background-color: ' . esc_html( $primary_color ) . ';
-			}
-		}
-
-		/* Set primary color that contrasts against white */
-		.entry .entry-content .more-link:hover,
-		.nav1 .main-menu > li > a + svg,
-		.search-form button:active, .search-form button:hover, .search-form button:focus,
-		.entry-footer a,
-		.comment .comment-metadata > a:hover,
-		.comment .comment-metadata .comment-edit-link:hover,
-		.site-info a:hover,
-		.comments-toggle:hover, .comments-toggle:focus {
-			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
-		}
-
-		/* Set primary color */
-
-		.entry .entry-content .has-primary-color,
-		.entry .entry-content *[class^="wp-block-"] .has-primary-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
-		.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-color:not(:hover), /* legacy styles */
-		.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-color:not(:hover) {
-			color: ' . esc_html( $primary_color ) . ';
-		}
-
-		.mobile-sidebar,
-		.mobile-sidebar button:hover,
-		.mobile-sidebar a,
-		.mobile-sidebar a:visited,
-		.mobile-sidebar .nav1 .sub-menu > li > a,
-		.mobile-sidebar .nav1 ul.main-menu > li > a,
-		.site-header .nav1 .sub-menu a:hover,
-		.site-header .nav1 .sub-menu a:focus,
-		.site-header .nav1 .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
-		.site-header .nav1 .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
-		.highlight-menu .menu-label,
-		/* Header default background; default height */
-		body.h-db.h-dh .site-header .nav3 .menu-highlight a,
-		.comment .comment-author .post-author-badge,
-		.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
-			color: ' . esc_html( $primary_color_contrast ) . ';
-		}
-
-		@media only screen and (min-width: 782px) {
-			/* Header default background */
-			.h-db .featured-image-beside .entry-header,
-			.h-db.h-sub.single-featured-image-beside .middle-header-contain {
-				color: ' . esc_html( $primary_color_contrast ) . ';
-			}
-		}
-
-		/* Set primary border color */
-
-		blockquote,
-		.entry .entry-content blockquote,
-		.entry .entry-content .wp-block-quote:not(.is-large),
-		.entry .entry-content .wp-block-quote:not(.is-style-large) {
-			border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
-		}
-
-		.mobile-sidebar nav + nav,
-		.mobile-sidebar nav + .widget,
-		.mobile-sidebar .widget + .widget {
-			border-color: ' . esc_html( $primary_color_contrast ) . ';
-		}
-
-		.gallery-item > div > a:focus {
-			box-shadow: 0 0 0 2px ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
-		}
-
-		/* Set secondary background color */
-
-		.entry .entry-content .wp-block-button__link:not(.has-background),
-		.button, button, input[type="button"], input[type="reset"], input[type="submit"],
-		.entry .entry-content .has-secondary-background-color,
-		.entry .entry-content *[class^="wp-block-"].has-secondary-background-color,
-		.entry .entry-content *[class^="wp-block-"] .has-secondary-background-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
-			background-color:' . esc_html( $secondary_color ) . '; /* base: #666 */
-		}
-
-		/* Set colour that contrasts against the secondary background */
-		.entry .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background),
-		.button, .button:visited, .entry .entry-content .button, .entry .entry-content .button:visited, button, input[type="button"], input[type="reset"], input[type="submit"] {
-			color: ' . esc_html( $secondary_color_contrast ) . ';
-		}
-
-		/* Set secondary color */
-
-		.entry .entry-content .has-secondary-color,
-		.entry .entry-content *[class^="wp-block-"] .has-secondary-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
-		.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-color:not(:hover), /* legacy styles */
-		.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-color:not(:hover) {
-			color:' . esc_html( $secondary_color ) . '; /* base: #666 */
-		}
-
-		/* Set secondary color with contrast */
-		.site-header .highlight-menu .menu-label,
-		.entry-content a,
-		.author-bio .author-link,
-		.entry .entry-content .is-style-outline .wp-block-button__link, /* legacy selector */
-		.entry .entry-content .wp-block-button__link.is-style-outline {
-			color:' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
-		}
-
-		/* Set primary variation background color */
-
-		.site-header .nav1 .sub-menu > li > a:hover,
-		.site-header .nav1 .sub-menu > li > a:focus,
-		.site-header .nav1 .sub-menu > li > a:hover:after,
-		.site-header .nav1 .sub-menu > li > a:focus:after,
-		.site-header .nav1 .sub-menu > li > .menu-item-link-return:hover,
-		.site-header .nav1 .sub-menu > li > .menu-item-link-return:focus,
-		.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):hover,
-		.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):focus,
-		.entry .entry-content .has-primary-variation-background-color,
-		.entry .entry-content *[class^="wp-block-"].has-primary-variation-background-color,
-		.entry .entry-content *[class^="wp-block-"] .has-primary-variation-background-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color  {
-			background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . '; /* base: #005177; */
-		}
-
-		/* Set primary variation color */
-
-		.author-bio .author-description .author-link:hover,
-		.entry .entry-content .has-primary-variation-color,
-		.entry .entry-content *[class^="wp-block-"] .has-primary-variation-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color p,
-		.comment .comment-author .fn a:hover,
-		.comment-reply-link:hover,
-		.comment-reply-login:hover,
-		.comment-navigation .nav-previous a:hover,
-		.comment-navigation .nav-next a:hover,
-		#cancel-comment-reply-link:hover,
-		.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-variation-color:not(:hover), /* legacy styles */
-		.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-variation-color:not(:hover) {
-			color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . '; /* base: #0073a8; */
-		}
-
-		/* Set secondary variation background color */
-
-		.entry .entry-content .has-secondary-variation-background-color,
-		.entry .entry-content *[class^="wp-block-"].has-secondary-variation-ackground-color,
-		.entry .entry-content *[class^="wp-block-"] .has-secondary-variation-background-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color {
-			background-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
-		}
-
-		/* Set secondary variation color */
-
-		.entry-content a:hover,
-		.widget a:hover,
-		.author-bio .author-link:hover,
-		.entry .entry-content .has-secondary-variation-color,
-		.entry .entry-content *[class^="wp-block-"] .has-secondary-variation-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
-		.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p,
-		.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
-		.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
-			color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
-		}
-		';
-
-	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+	// Front-end colors that require the theme_colors to be set to 'custom':
+	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$theme_css .= '
-			.mobile-sidebar {
-				background: ' . esc_html( $header_color ) . ';
+			/* Set primary background color */
+			.mobile-sidebar,
+			/* Header default background; header default height */
+			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
+			.entry .entry-content .has-primary-background-color,
+			.entry .entry-content *[class^="wp-block-"].has-primary-background-color,
+			.entry .entry-content *[class^="wp-block-"] .has-primary-background-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
+			.entry .entry-content .wp-block-file .wp-block-file__button,
+			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
+			.comment .comment-author .post-author-badge {
+				background-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
+			}
+
+			@media only screen and (min-width: 782px) {
+				/* Header default background */
+				.h-db .featured-image-beside {
+					background-color: ' . esc_html( $primary_color ) . ';
+				}
+			}
+
+			/* Set primary color that contrasts against white */
+			.entry .entry-content .more-link:hover,
+			.nav1 .main-menu > li > a + svg,
+			.search-form button:active, .search-form button:hover, .search-form button:focus,
+			.entry-footer a,
+			.comment .comment-metadata > a:hover,
+			.comment .comment-metadata .comment-edit-link:hover,
+			.site-info a:hover,
+			.comments-toggle:hover, .comments-toggle:focus {
+				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
+			}
+
+			/* Set primary color */
+
+			.entry .entry-content .has-primary-color,
+			.entry .entry-content *[class^="wp-block-"] .has-primary-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
+			.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-color:not(:hover), /* legacy styles */
+			.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-color:not(:hover) {
+				color: ' . esc_html( $primary_color ) . ';
 			}
 
 			.mobile-sidebar,
@@ -229,89 +87,249 @@ function newspack_custom_colors_css() {
 			.mobile-sidebar a,
 			.mobile-sidebar a:visited,
 			.mobile-sidebar .nav1 .sub-menu > li > a,
-			.mobile-sidebar .nav1 ul.main-menu > li > a {
-				color: ' . esc_html( $header_color_contrast ) . ';
+			.mobile-sidebar .nav1 ul.main-menu > li > a,
+			.site-header .nav1 .sub-menu a:hover,
+			.site-header .nav1 .sub-menu a:focus,
+			.site-header .nav1 .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
+			.site-header .nav1 .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
+			.highlight-menu .menu-label,
+			/* Header default background; default height */
+			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
+			.comment .comment-author .post-author-badge,
+			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
+				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
-		';
-	}
 
-	if ( ! is_child_theme() ) {
-		$theme_css .= '
-			.mobile-sidebar .nav3 a {
-				background: transparent;
+			@media only screen and (min-width: 782px) {
+				/* Header default background */
+				.h-db .featured-image-beside .entry-header,
+				.h-db.h-sub.single-featured-image-beside .middle-header-contain {
+					color: ' . esc_html( $primary_color_contrast ) . ';
+				}
 			}
-			.mobile-sidebar .nav3 .menu-highlight a {
-				background: ' . esc_html( newspack_adjust_brightness( $primary_color, -20 ) ) . ';
+
+			/* Set primary border color */
+
+			blockquote,
+			.entry .entry-content blockquote,
+			.entry .entry-content .wp-block-quote:not(.is-large),
+			.entry .entry-content .wp-block-quote:not(.is-style-large) {
+				border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
-			.cat-links a,
-			.cat-links a:visited,
-			.site-header .nav3 .menu-highlight a {
-				background-color: ' . esc_html( $primary_color ) . ';
-				color: ' . esc_html( $primary_color_contrast ) . ';
+
+			.mobile-sidebar nav + nav,
+			.mobile-sidebar nav + .widget,
+			.mobile-sidebar .widget + .widget {
+				border-color: ' . esc_html( $primary_color_contrast ) . ';
 			}
-			.cat-links a:hover {
-				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
-				color: ' . esc_html( $primary_color_contrast ) . ';
+
+			.gallery-item > div > a:focus {
+				box-shadow: 0 0 0 2px ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
-			.accent-header, .article-section-title,
-			.entry .entry-footer a:hover {
-				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
+
+			/* Set secondary background color */
+
+			.entry .entry-content .wp-block-button__link:not(.has-background),
+			.button, button, input[type="button"], input[type="reset"], input[type="submit"],
+			.entry .entry-content .has-secondary-background-color,
+			.entry .entry-content *[class^="wp-block-"].has-secondary-background-color,
+			.entry .entry-content *[class^="wp-block-"] .has-secondary-background-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
+				background-color:' . esc_html( $secondary_color ) . '; /* base: #666 */
 			}
-		';
+
+			/* Set colour that contrasts against the secondary background */
+			.entry .entry-content .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background),
+			.button, .button:visited, .entry .entry-content .button, .entry .entry-content .button:visited, button, input[type="button"], input[type="reset"], input[type="submit"] {
+				color: ' . esc_html( $secondary_color_contrast ) . ';
+			}
+
+			/* Set secondary color */
+
+			.entry .entry-content .has-secondary-color,
+			.entry .entry-content *[class^="wp-block-"] .has-secondary-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
+			.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-color:not(:hover), /* legacy styles */
+			.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-color:not(:hover) {
+				color:' . esc_html( $secondary_color ) . '; /* base: #666 */
+			}
+
+			/* Set secondary color with contrast */
+			.site-header .highlight-menu .menu-label,
+			.entry-content a,
+			.author-bio .author-link,
+			.entry .entry-content .is-style-outline .wp-block-button__link, /* legacy selector */
+			.entry .entry-content .wp-block-button__link.is-style-outline {
+				color:' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
+			}
+
+			/* Set primary variation background color */
+
+			.site-header .nav1 .sub-menu > li > a:hover,
+			.site-header .nav1 .sub-menu > li > a:focus,
+			.site-header .nav1 .sub-menu > li > a:hover:after,
+			.site-header .nav1 .sub-menu > li > a:focus:after,
+			.site-header .nav1 .sub-menu > li > .menu-item-link-return:hover,
+			.site-header .nav1 .sub-menu > li > .menu-item-link-return:focus,
+			.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):hover,
+			.site-header .nav1 .sub-menu > li > a:not(.submenu-expand):focus,
+			.entry .entry-content .has-primary-variation-background-color,
+			.entry .entry-content *[class^="wp-block-"].has-primary-variation-background-color,
+			.entry .entry-content *[class^="wp-block-"] .has-primary-variation-background-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color  {
+				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . '; /* base: #005177; */
+			}
+
+			/* Set primary variation color */
+
+			.author-bio .author-description .author-link:hover,
+			.entry .entry-content .has-primary-variation-color,
+			.entry .entry-content *[class^="wp-block-"] .has-primary-variation-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color p,
+			.comment .comment-author .fn a:hover,
+			.comment-reply-link:hover,
+			.comment-reply-login:hover,
+			.comment-navigation .nav-previous a:hover,
+			.comment-navigation .nav-next a:hover,
+			#cancel-comment-reply-link:hover,
+			.entry .entry-content .is-style-outline .wp-block-button__link.has-primary-variation-color:not(:hover), /* legacy styles */
+			.entry .entry-content .wp-block-button__link.is-style-outline.has-primary-variation-color:not(:hover) {
+				color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . '; /* base: #0073a8; */
+			}
+
+			/* Set secondary variation background color */
+
+			.entry .entry-content .has-secondary-variation-background-color,
+			.entry .entry-content *[class^="wp-block-"].has-secondary-variation-ackground-color,
+			.entry .entry-content *[class^="wp-block-"] .has-secondary-variation-background-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color {
+				background-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
+			}
+
+			/* Set secondary variation color */
+
+			.entry-content a:hover,
+			.widget a:hover,
+			.author-bio .author-link:hover,
+			.entry .entry-content .has-secondary-variation-color,
+			.entry .entry-content *[class^="wp-block-"] .has-secondary-variation-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
+			.entry .entry-content *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p,
+			.entry .entry-content .is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
+			.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
+				color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
+			}
+			';
 
 		if ( true === get_theme_mod( 'header_solid_background', false ) ) {
 			$theme_css .= '
+				.mobile-sidebar {
+					background: ' . esc_html( $header_color ) . ';
+				}
+
+				.mobile-sidebar,
+				.mobile-sidebar button:hover,
+				.mobile-sidebar a,
+				.mobile-sidebar a:visited,
+				.mobile-sidebar .nav1 .sub-menu > li > a,
+				.mobile-sidebar .nav1 ul.main-menu > li > a {
+					color: ' . esc_html( $header_color_contrast ) . ';
+				}
+			';
+		}
+
+		if ( ! is_child_theme() ) {
+			$theme_css .= '
+				.mobile-sidebar .nav3 a {
+					background: transparent;
+				}
 				.mobile-sidebar .nav3 .menu-highlight a {
-					background: ' . esc_html( newspack_adjust_brightness( $header_color, -20 ) ) . ';
+					background: ' . esc_html( newspack_adjust_brightness( $primary_color, -20 ) ) . ';
 				}
-				.h-sb .site-header .nav3 a {
-					background-color: ' . newspack_adjust_brightness( $header_color, -17 ) . ';
-					color: ' . esc_html( $header_color_contrast ) . ';
+				.cat-links a,
+				.cat-links a:visited,
+				.site-header .nav3 .menu-highlight a {
+					background-color: ' . esc_html( $primary_color ) . ';
+					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
-				.h-sb .site-header .nav3 .menu-highlight a {
-					background-color: ' . $secondary_color . ';
-					color: ' . esc_html( $secondary_color_contrast ) . ';
+				.cat-links a:hover {
+					background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
+					color: ' . esc_html( $primary_color_contrast ) . ';
+				}
+				.accent-header, .article-section-title,
+				.entry .entry-footer a:hover {
+					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 				}
 			';
+
+			if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+				$theme_css .= '
+					.mobile-sidebar .nav3 .menu-highlight a {
+						background: ' . esc_html( newspack_adjust_brightness( $header_color, -20 ) ) . ';
+					}
+					.h-sb .site-header .nav3 a {
+						background-color: ' . newspack_adjust_brightness( $header_color, -17 ) . ';
+						color: ' . esc_html( $header_color_contrast ) . ';
+					}
+					.h-sb .site-header .nav3 .menu-highlight a {
+						background-color: ' . $secondary_color . ';
+						color: ' . esc_html( $secondary_color_contrast ) . ';
+					}
+				';
+			}
+		}
+
+		if ( ! is_child_theme() ) {
+			$theme_css .= '
+				.archive .page-title,
+				.entry-meta .byline a, .entry-meta .byline a:visited,
+				.entry .entry-content .entry-meta .byline a, .entry .entry-content .entry-meta .byline a:visited,
+				.entry .entry-meta a:hover {
+					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
+				}
+			';
+
+			if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+				$theme_css .= '
+					/* Header solid background */
+					.h-sb .middle-header-contain {
+						background-color: ' . esc_html( $header_color ) . ';
+					}
+					.h-sb .top-header-contain {
+						background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -10 ) ) . ';
+						border-bottom-color: ' . esc_html( newspack_adjust_brightness( $header_color, -15 ) ) . ';
+					}
+					.h-sb .site-header,
+					.h-sb .site-title,
+					.h-sb .site-title a:link,
+					.h-sb .site-title a:visited,
+					.h-sb .site-description,
+					/* Header solid background; short height */
+					.h-sb.h-sh .site-header .nav1 .main-menu > li,
+					.h-sb.h-sh .site-header .nav1 ul.main-menu > li > a,
+					.h-sb.h-sh .site-header .nav1 ul.main-menu > li > a:hover,
+					.h-sb .top-header-contain,
+					.h-sb .middle-header-contain {
+						color: ' . esc_html( $header_color_contrast ) . ';
+					}
+				';
+			}
 		}
 	}
 
-	if ( ! is_child_theme() ) {
+	// Front-end colors that don't require the theme_colors to be set to 'custom':
+	if ( newspack_get_mobile_cta_color() !== $cta_color ) {
 		$theme_css .= '
-			.archive .page-title,
-			.entry-meta .byline a, .entry-meta .byline a:visited,
-			.entry .entry-content .entry-meta .byline a, .entry .entry-content .entry-meta .byline a:visited,
-			.entry .entry-meta a:hover {
-				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
+			.button.mb-cta,
+			.button.mb-cta:not(:hover):visited {
+				background-color: ' . esc_html( $cta_color ) . ';
+				color: ' . esc_html( $cta_color_contrast ) . ';
 			}
 		';
-
-		if ( true === get_theme_mod( 'header_solid_background', false ) ) {
-			$theme_css .= '
-				/* Header solid background */
-				.h-sb .middle-header-contain {
-					background-color: ' . esc_html( $header_color ) . ';
-				}
-				.h-sb .top-header-contain {
-					background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -10 ) ) . ';
-					border-bottom-color: ' . esc_html( newspack_adjust_brightness( $header_color, -15 ) ) . ';
-				}
-				.h-sb .site-header,
-				.h-sb .site-title,
-				.h-sb .site-title a:link,
-				.h-sb .site-title a:visited,
-				.h-sb .site-description,
-				/* Header solid background; short height */
-				.h-sb.h-sh .site-header .nav1 .main-menu > li,
-				.h-sb.h-sh .site-header .nav1 ul.main-menu > li > a,
-				.h-sb.h-sh .site-header .nav1 ul.main-menu > li > a:hover,
-				.h-sb .top-header-contain,
-				.h-sb .middle-header-contain {
-					color: ' . esc_html( $header_color_contrast ) . ';
-				}
-			';
-		}
 	}
+
 
 	$editor_css = '
 		/*
