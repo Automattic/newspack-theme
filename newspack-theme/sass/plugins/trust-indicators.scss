@@ -1,19 +1,21 @@
 @import '../variables-site/variables-site';
 @import '../mixins/mixins-master';
 
-a.trust-label {
-	display: flex;
-	align-items: center;
-	max-width: 300px;
-}
+.trust-label {
+	display: block;
+	font-size: 90%;
 
-span.trust-label__message {
-	margin-left: 0.5em;
+	@include media( mobile ) {
+		display: inline;
+		margin-left: $size__spacing-unit;
+	}
+	svg {
+		margin-right: #{0.25 * $size__spacing-unit};
+		vertical-align: middle;
+	}
 }
 
 .single .cat-links {
-	font-size: 0.66rem;
-
 	.type-of-work {
 		margin-left: 0.5em;
 		padding: 0.5em;
@@ -23,7 +25,8 @@ span.trust-label__message {
 .author-expanded-social-link {
 	display: flex;
 	align-items: center;
-	margin-right: 1rem;
+	margin: 0 1rem 0.5rem 0;
+	width: 100%;
 
 	svg {
 		margin-right: 0.33rem;
@@ -32,8 +35,7 @@ span.trust-label__message {
 
 /* Author archives */
 .archive.author {
-
-	/* Hide sidebar */
+	// Hide sidebar
 	#secondary {
 		display: none;
 	}
@@ -42,28 +44,28 @@ span.trust-label__message {
 		margin-right: auto;
 	}
 
-	/* Hide default archive title */
-	.page-title .page-subtitle {
-		display: none;
-	}
-
-	/* Hide default social links */
+	// Hide default archive title & accent
+	.page-subtitle,
+	.page-title::before,
+	// Hide default social links
 	.author-meta {
 		display: none;
 	}
 
+	.author-job-title {
+		display: block;
+		margin-top: #{0.25 * $size__spacing-unit};
+	}
+
 	.author-meta.trust-indicators {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.author-social-links {
 		border-left: none;
 		margin-left: 0;
 		padding-left: 0;
-	}
-
-	.author-meta.trust-indicators {
-		flex-wrap: wrap;
 	}
 
 	/* Hide small Twitter icon, because a bigger one is present */
@@ -75,15 +77,17 @@ span.trust-label__message {
 .author-additional-infos {
 	display: flex;
 	flex-wrap: wrap;
+	font-size: $font__size-sm;
 }
 
 .author-additional-info {
 	width: 100%;
-}
-
-.author-expanded-social-link {
-	width: 100%;
-	margin-bottom: 0.5rem;
+	h4 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
 }
 
 .featured-image-behind,
@@ -98,8 +102,16 @@ span.trust-label__message {
 }
 
 .featured-image-behind {
-	a.trust-label {
-		color: #FFF;
+	.trust-label {
+		color: #fff;
+	}
+}
+
+.featured-image-beside {
+	.trust-label {
+		display: block;
+		margin: #{0.25 * $size__spacing-unit} 0 0;
+		width: 100%;
 	}
 }
 
@@ -112,22 +124,9 @@ span.trust-label__message {
 	}
 	.archive.author {
 		.author-meta.trust-indicators {
-			flex-wrap: nowrap;
-
 			.author-social-links {
-				margin: 0;
-				margin-bottom: 0.33rem;
+				margin: 0 0 0.33rem;
 			}
 		}
-	}
-
-	a.trust-label {
-		margin-top: 0.33rem;
-	}
-}
-
-@include media( tablet ) {
-	.single .cat-links {
-		font-size: inherit;
 	}
 }

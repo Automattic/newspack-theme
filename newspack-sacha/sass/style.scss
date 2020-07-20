@@ -525,33 +525,32 @@ cite {
 
 // Trust Indicators
 
-.entry-meta a.trust-label {
+.entry-meta .trust-label {
 	max-width: 100%;
 	justify-content: center;
+
+	@include media( mobile ) {
+		justify-content: left;
+	}
 }
 
 .featured-image-behind {
-	.entry-meta a.trust-label {
-		color: #FFF;
-	}
-
-	.entry-meta a.trust-label {
-		max-width: 100%;
+	.entry-meta .trust-label {
+		color: #fff;
 		justify-content: center;
-		margin-top: #{.5 * $size__spacing-unit};
-	}
-}
-
-@include media( mobile ) {
-	.entry-meta a.trust-label {
-		justify-content: left;
+		margin-top: #{0.5 * $size__spacing-unit};
+		max-width: 100%;
 	}
 }
 
 @include media( tablet ) {
 	.featured-image-beside {
-		.entry-meta a.trust-label {
+		.entry-meta .trust-label {
 			justify-content: center;
 		}
 	}
+}
+
+.author-expanded-social-link {
+	justify-content: center;
 }

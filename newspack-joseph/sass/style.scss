@@ -257,6 +257,7 @@ input[type='submit'] {
 	@include media( tablet ) {
 		align-items: center;
 		display: flex;
+		flex-wrap: wrap;
 
 		.posted-on {
 			margin-left: #{1.5 * $size__spacing-unit};
@@ -447,14 +448,5 @@ textarea {
 			border-right: 0;
 			border-top: 0;
 		}
-	}
-}
-
-/* Trust Indicators */
-
-@include media( tablet ) {
-	.entry-meta a.trust-label {
-		margin-left: #{1.5 * $size__spacing-unit};
-		margin-top: 0;
 	}
 }

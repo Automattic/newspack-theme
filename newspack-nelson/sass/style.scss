@@ -568,19 +568,18 @@ blockquote {
 
 @include media( tablet ) {
 	.featured-image-beside {
-		.entry-meta a.trust-label {
-			color: #FFF;
+		.entry-meta .trust-label {
+			color: #fff;
 		}
-	} 
-}
-
-.featured-image-behind {
-	.entry-meta a.trust-label {
-		color: #FFF;
 	}
 }
 
-.entry-meta a.trust-label {
-	margin-top: #{.5 * $size__spacing-unit};
+.featured-image-behind {
+	.entry-meta .trust-label {
+		color: #fff;
+	}
 }
 
+.entry-meta .trust-label {
+	margin-top: #{0.5 * $size__spacing-unit};
+}

@@ -39,11 +39,6 @@ function newspack_trust_indicators_customizer_styles() {
 			color: <?php echo esc_attr( $primary_color_contrast ); ?>;
 			background: <?php echo esc_attr( $primary_color ) ?>;
 		}
-
-		h4.author-job-title {
-			color: <?php echo esc_attr( $primary_color ) ?>;
-		}
-
 	</style>
 	<?php
 }
@@ -85,28 +80,24 @@ function newspack_trust_indicators_output_why_trust_link() {
 	/* translators: %s - site name */
 	$message = sprintf( __( 'Why you can trust %s', 'newspack' ), $site_name );
 	?>
-	
+
 	<a href="<?php echo esc_url( $publishing_principles_url ); ?>" class="trust-label">
 		<svg data-v-22ae94a0="" data-v-2f899364="" width="16" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="trust-label__icon"><path data-v-22ae94a0="" d="M16.8 0C18.56 0 20 1.44 20 3.2v13.6c0 1.76-1.44 3.2-3.2 3.2H3.2A3.21 3.21 0 0 1 0 16.8V3.2C0 1.44 1.44 0 3.2 0h13.6zm0 1.2H3.2c-1.1 0-2 .9-2 2v13.6c0 1.1.9 2 2 2h13.6c1.1 0 2-.9 2-2V3.2c0-1.1-.9-2-2-2zm-1 3.38c.08 0 .14.06.14.14V8.2c0 .08-.06.14-.14.14h-3.54c-.08 0-.14.06-.14.14v6.74c0 .08-.06.14-.14.14H8.04c-.08 0-.14-.06-.14-.14V8.5c0-.1-.08-.18-.18-.18H4.2c-.08 0-.14-.06-.14-.14V4.72c0-.08.06-.14.14-.14h11.6z" fill="#666"></path></svg>
-		<span class="trust-label__message"><?php echo esc_html( $message ); ?></span> 
+		<span class="trust-label__message"><?php echo esc_html( $message ); ?></span>
 	</a>
 	<?php
 }
 add_action( 'newspack_theme_entry_meta', 'newspack_trust_indicators_output_why_trust_link' );
 
 /**
- * Output author role and work contact info on author archives.
+ * Output author work contact info on author archives.
  */
-function newspack_trust_indicators_output_author_job_info() {
+function newspack_trust_indicators_output_author_info() {
 	if ( ! is_author() || ! class_exists( 'Trust_Indicators_User_Settings' ) ) {
 		return;
 	}
 
 	$author = get_queried_object();
-	$role = get_user_meta( $author->ID, 'title', true );
-	if ( $role ) {
-		?><h4 class="author-job-title"><?php echo esc_html( $role ); ?></h4><?php
-	}
 
 	$author_email = '';
 	if ( true === get_theme_mod( 'show_author_email', false ) ) {
@@ -145,7 +136,23 @@ function newspack_trust_indicators_output_author_job_info() {
 	</div>
 	<?php
 }
-add_action( 'newspack_theme_below_archive_title', 'newspack_trust_indicators_output_author_job_info' );
+add_action( 'newspack_theme_below_archive_title', 'newspack_trust_indicators_output_author_info' );
+
+
+/**
+ * Adds author title to the_archive_title().
+ */
+function newspack_trust_indicators_output_author_job_title( $title ) {
+	if ( is_author() ) {
+		$author = get_queried_object();
+		$role   = get_user_meta( $author->ID, 'title', true );
+		if ( $role ) {
+			$title .= '<span class="author-job-title">' . $role . '</span>';
+		}
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_job_title' );
 
 /**
  * Output location and expertise info on author archive pages.
@@ -175,7 +182,7 @@ function newspack_trust_indicators_output_author_details() {
 
 			<div class="author-additional-info">
 				<h4><?php echo esc_html( $all_settings_fields[ $field ]['label'] ); ?></h4>
-				<p><?php echo wp_kses_post( wpautop( $value ) ); ?></p>
+				<?php echo wp_kses_post( wpautop( $value ) ); ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
