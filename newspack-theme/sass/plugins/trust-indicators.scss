@@ -35,15 +35,6 @@
 
 /* Author archives */
 .archive.author {
-	// Hide sidebar
-	#secondary {
-		display: none;
-	}
-	#main {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 	// Hide default archive title & accent
 	.page-subtitle,
 	.page-title::before,
