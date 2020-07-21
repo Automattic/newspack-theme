@@ -51,7 +51,7 @@ add_action( 'wp_head', 'newspack_trust_indicators_customizer_styles' );
  * @return string Modified $categories_html
  */
 function newspack_trust_indicators_add_type_of_work_label( $categories_html ) {
-	if ( ! taxonomy_exists( 'type-of-work' ) ) {
+	if ( ! taxonomy_exists( 'type-of-work' ) || ! is_single() ) {
 		return $categories_html;
 	}
 
