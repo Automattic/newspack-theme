@@ -80,6 +80,7 @@
 	color: #fff;
 
 	.wrapper {
+		align-items: center;
 		justify-content: flex-start;
 	}
 
@@ -91,6 +92,10 @@
 	#social-nav-contain {
 		margin-left: auto;
 	}
+}
+
+.h-sh .top-header-contain nav {
+	padding: #{0.125 * $size__spacing-unit} 0;
 }
 
 // Middle bar
