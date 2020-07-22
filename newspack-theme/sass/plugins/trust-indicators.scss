@@ -10,15 +10,17 @@
 		margin-left: $size__spacing-unit;
 	}
 	svg {
-		margin-right: #{0.25 * $size__spacing-unit};
-		vertical-align: middle;
+		margin-right: #{0.1 * $size__spacing-unit};
+		position: relative;
+		top: 5px;
 	}
 }
 
 .single .cat-links {
+	vertical-align: middle;
 	.type-of-work {
-		margin-left: 0.5em;
-		padding: 0.5em;
+		color: $color__text-main;
+		margin-right: 0.5em;
 	}
 }
 
@@ -29,7 +31,7 @@
 	width: 100%;
 
 	svg {
-		margin-right: 0.33rem;
+		margin-right: #{0.25 * $size__spacing-unit};
 	}
 }
 
@@ -83,6 +85,7 @@
 
 .featured-image-behind,
 .featured-image-beside {
+	.cat-links .type-of-work,
 	.trust-label:hover {
 		color: inherit;
 	}

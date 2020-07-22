@@ -22,29 +22,6 @@ function newspack_trust_indicators_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'newspack_trust_indicators_enqueue_styles' );
 
 /**
- * Add custom colors to trust indicators.
- */
-function newspack_trust_indicators_customizer_styles() {
-	$primary_color   = newspack_get_primary_color();
-
-	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
-		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
-	}
-
-	// Set colour contrasts.
-	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
-	?>
-	<style>
-		.cat-links .type-of-work {
-			color: <?php echo esc_attr( $primary_color_contrast ); ?>;
-			background: <?php echo esc_attr( $primary_color ) ?>;
-		}
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'newspack_trust_indicators_customizer_styles' );
-
-/**
  * Add a label saying what type of work a post is (analysis, opinion, etc.)
  *
  * @param string $categories_html HTML for the category label on an article.
@@ -57,9 +34,8 @@ function newspack_trust_indicators_add_type_of_work_label( $categories_html ) {
 
 	$type_of_work_terms = get_the_terms( get_the_ID(), 'type-of-work' );
 	if ( $type_of_work_terms ) {
-		foreach ( $type_of_work_terms as $type_of_work_term ) {
-			$categories_html .= '<span class="type-of-work">' . esc_html( $type_of_work_term->name ) . '</span>';
-		}
+		$terms_list      = join( ', ', wp_list_pluck( $type_of_work_terms, 'name' ) );
+		$categories_html = '<span class="type-of-work">' . esc_html( $terms_list ) . ':</span>' . $categories_html;
 	}
 
 	return $categories_html;
