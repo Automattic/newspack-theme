@@ -103,6 +103,11 @@ const SASS_STYLESHEETS = [
 		outFile: 'newspack-theme/styles/woocommerce.css',
 		withRTL: true,
 	},
+	{
+		inFile: 'newspack-theme/sass/plugins/trust-indicators.scss',
+		outFile: 'newspack-theme/styles/trust-indicators.css',
+		withRTL: true,
+	},
 	{ inFile: 'newspack-theme/sass/print.scss', outFile: 'newspack-theme/styles/print.css' },
 	// Newspack Sacha Child theme
 	{

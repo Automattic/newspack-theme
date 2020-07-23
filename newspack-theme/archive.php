@@ -45,6 +45,8 @@ get_header();
 			<span>
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 
+				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
+
 				<?php if ( '' !== get_the_archive_description() ) : ?>
 					<div class="taxonomy-description">
 						<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
@@ -65,6 +67,9 @@ get_header();
 
 						<?php newspack_author_social_links( get_the_author_meta( 'ID' ), 20 ); ?>
 					</div><!-- .author-meta -->
+
+					<?php do_action( 'newspack_theme_below_author_archive_meta' ); ?>
+
 				<?php endif; ?>
 			</span>
 
