@@ -1,3 +1,18 @@
+# [1.13.0](https://github.com/Automattic/newspack-theme/compare/v1.12.0...v1.13.0) (2020-07-28)
+
+
+### Bug Fixes
+
+* only output type of work on singles ([1c4affc](https://github.com/Automattic/newspack-theme/commit/1c4affc5efcc37a835373492ec77fc0edcf390cd))
+
+
+### Features
+
+* adjust placement of trust label for Newspack Scott ([3d84c27](https://github.com/Automattic/newspack-theme/commit/3d84c27804b05a718af35b13e8b18005cf825d11))
+* trust indicators support ([e85bd7e](https://github.com/Automattic/newspack-theme/commit/e85bd7e17d60d195be7d4d00506aec3510763b16))
+* tweak type of work visuals ([8b606b1](https://github.com/Automattic/newspack-theme/commit/8b606b1f672860370a4f821f3cde8d14db017461))
+* tweaks to visual elements of the trust indicators ([ebe144b](https://github.com/Automattic/newspack-theme/commit/ebe144be627894a20dda0a8d454c0f5d48f41107))
+
 # [1.12.0](https://github.com/Automattic/newspack-theme/compare/v1.11.1...v1.12.0) (2020-07-14)
 
 
