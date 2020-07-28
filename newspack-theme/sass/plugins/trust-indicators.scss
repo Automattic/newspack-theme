@@ -1,0 +1,126 @@
+@import '../variables-site/variables-site';
+@import '../mixins/mixins-master';
+
+.trust-label {
+	display: block;
+	font-size: 90%;
+
+	@include media( mobile ) {
+		display: inline;
+		margin-left: $size__spacing-unit;
+	}
+	svg {
+		margin-right: #{0.1 * $size__spacing-unit};
+		position: relative;
+		top: 5px;
+	}
+}
+
+.single .cat-links {
+	vertical-align: middle;
+	.type-of-work {
+		color: $color__text-main;
+		margin-right: 0.5em;
+	}
+}
+
+.author-expanded-social-link {
+	display: flex;
+	align-items: center;
+	margin: 0 1rem 0.5rem 0;
+	width: 100%;
+
+	svg {
+		margin-right: #{0.25 * $size__spacing-unit};
+	}
+}
+
+/* Author archives */
+.archive.author {
+	// Hide default archive title & accent
+	.page-subtitle,
+	.page-title::before,
+	// Hide default social links
+	.author-meta {
+		display: none;
+	}
+
+	.author-job-title {
+		display: block;
+		margin-top: #{0.25 * $size__spacing-unit};
+	}
+
+	.author-meta.trust-indicators {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.author-social-links {
+		border-left: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	/* Hide small Twitter icon, because a bigger one is present */
+	.author-social-links .twitter {
+		display: none;
+	}
+}
+
+.author-additional-infos {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $font__size-sm;
+}
+
+.author-additional-info {
+	width: 100%;
+	h4 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
+}
+
+.featured-image-behind,
+.featured-image-beside {
+	.cat-links .type-of-work,
+	.trust-label:hover {
+		color: inherit;
+	}
+
+	svg.trust-label__icon path {
+		fill: inherit;
+	}
+}
+
+.featured-image-behind {
+	.trust-label {
+		color: #fff;
+	}
+}
+
+.featured-image-beside {
+	.trust-label {
+		display: block;
+		margin: #{0.25 * $size__spacing-unit} 0 0;
+		width: 100%;
+	}
+}
+
+@include media( mobile ) {
+	.author-additional-info {
+		width: 50%;
+	}
+	.author-expanded-social-link {
+		width: inherit;
+	}
+	.archive.author {
+		.author-meta.trust-indicators {
+			.author-social-links {
+				margin: 0 0 0.33rem;
+			}
+		}
+	}
+}

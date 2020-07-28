@@ -96,6 +96,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		.entry-meta {
 			align-items: center;
 			display: flex;
+			flex-wrap: wrap;
 		}
 
 		&.single-featured-image-default .posted-on {
@@ -321,5 +322,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			margin: 0 0.5em 0 0;
 			width: 0.75em;
 		}
+	}
+}
+
+// Trust label
+.entry-subhead {
+	.trust-label {
+		margin-bottom: 5px;
 	}
 }
