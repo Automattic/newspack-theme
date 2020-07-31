@@ -55,10 +55,12 @@ function newspack_post_has_sponsors( $post_id ) {
 			}
 		}
 	}
-	if ( $sponsors ) {
+
+	if ( ! empty( $sponsors ) ) {
 		return $sponsors;
+	} else {
+		return false;
 	}
-	return;
 }
 
 if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
@@ -115,6 +117,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 		<span class="cat-links sponsor-label" [class]="infoVisible ? 'cat-links sponsor-label show-info' : 'cat-links sponsor-label'">
 			<span class="flag">
 				<?php echo wp_kses( newspack_get_icon_svg( 'money', 16 ), newspack_sanitize_svgs() ); ?>
+				<?php // TODO: Replace with user editable content. ?>
 				<?php echo esc_html__( 'Sponsored', 'newspack' ); ?>
 			</span>
 			<?php
@@ -129,6 +132,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 						'title'  => array(),
 					),
 				);
+				// TODO: Replace with user editable content.
 				$sponsor_information = 'Filler content for the sponsor info including <a href="#">a link</a>.';
 			?>
 				<button id="sponsor-info-toggle" on="tap:AMP.setState( { infoVisible: !infoVisible } )" aria-controls="sponsor-info" [aria-expanded]="infoVisible ? 'true' : 'false'" aria-expanded="false">

@@ -11,6 +11,7 @@
 
 // Category replacement - tag
 .sponsor-label {
+	display: flex;
 	position: relative;
 	.flag,
 	button {
@@ -49,7 +50,8 @@
 		}
 	}
 
-	&::before {
+	&::before,
+	&::after {
 		display: none;
 	}
 }
@@ -64,14 +66,16 @@
 	letter-spacing: 0;
 	line-height: $font__line-height-body;
 	opacity: 0;
-	padding: #{ 0.75 * $size__spacing-unit };
+	padding: #{0.75 * $size__spacing-unit} $size__spacing-unit;
 	position: absolute;
 	transition: opacity 0.2s;
 	text-transform: none;
 	top: calc( 100% + 5px );
 	width: 300px;
 	z-index: 5;
+}
 
+.sponsor-label .sponsor-info {
 	a,
 	a:visited {
 		color: #fff;
@@ -94,7 +98,6 @@
 // Author byline replacement - avatars
 .sponsor-logos {
 	align-items: center;
-
 	@include media( mobile ) {
 		border-right: 1px solid $color__border;
 		margin: 0 #{0.75 * $size__spacing-unit} 0 0;
@@ -109,7 +112,6 @@
 // Author byline replacement - text
 .sponsor-byline {
 	color: $color__text-main;
-	font-weight: bold;
 }
 
 // Featured image beside/behind adjustments
@@ -128,6 +130,16 @@
 	}
 	.sponsor-byline {
 		color: inherit;
+	}
+}
+
+.featured-image-behind {
+	.sponsor-info {
+		background: rgba( 0, 0, 0, 0.95 );
+	}
+
+	.sponsor-label button::after {
+		border-bottom-color: rgba( 0, 0, 0, 0.95 );
 	}
 }
 
