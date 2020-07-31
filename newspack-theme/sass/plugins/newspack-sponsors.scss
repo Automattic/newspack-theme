@@ -1,0 +1,163 @@
+@import '../variables-site/variables-site';
+@import '../mixins/mixins-master';
+
+.sponsor-label,
+.sponsor-label button,
+.sponsor-logos,
+.entry-sponsor {
+	align-items: stretch;
+	display: inline-flex;
+}
+
+// Category replacement - tag
+.sponsor-label {
+	position: relative;
+	.flag,
+	button {
+		align-items: center;
+		display: inline-flex;
+		position: relative;
+	}
+
+	.flag {
+		align-items: center;
+		background: $color__highlight;
+		color: $color__text-main;
+		display: inline-flex;
+		padding: 0.3em 0.5em;
+		text-transform: uppercase;
+	}
+
+	button {
+		background: transparent;
+		color: inherit;
+		margin-left: #{0.25 * $size__spacing-unit};
+		padding: 0;
+		position: relative;
+
+		&::after {
+			border-color: transparent transparent rgba( 0, 0, 0, 0.8 );
+			border-style: solid;
+			border-width: 0 8px 8px 8px;
+			display: block;
+			content: '';
+			height: 0;
+			opacity: 0;
+			position: absolute;
+			top: calc( 100% - 3px );
+			width: 0;
+		}
+	}
+
+	&::before {
+		display: none;
+	}
+}
+
+.sponsor-info {
+	background: rgba( 0, 0, 0, 0.8 );
+	border-radius: 5px;
+	color: #fff;
+	font-size: 90%;
+	font-weight: normal;
+	left: -9999em;
+	letter-spacing: 0;
+	line-height: $font__line-height-body;
+	opacity: 0;
+	padding: #{ 0.75 * $size__spacing-unit };
+	position: absolute;
+	transition: opacity 0.2s;
+	text-transform: none;
+	top: calc( 100% + 5px );
+	width: 300px;
+	z-index: 5;
+
+	a,
+	a:visited {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		opacity: 0.8;
+	}
+}
+
+.show-info {
+	.sponsor-info,
+	button::after {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+// Author byline replacement - avatars
+.sponsor-logos {
+	align-items: center;
+
+	@include media( mobile ) {
+		border-right: 1px solid $color__border;
+		margin: 0 #{0.75 * $size__spacing-unit} 0 0;
+	}
+
+	a {
+		margin-right: #{0.75 * $size__spacing-unit};
+		line-height: 1;
+	}
+}
+
+// Author byline replacement - text
+.sponsor-byline {
+	color: $color__text-main;
+	font-weight: bold;
+}
+
+// Featured image beside/behind adjustments
+.featured-image-beside,
+.featured-image-behind {
+	.entry-sponsor > span {
+		align-items: center;
+		display: inline-flex;
+	}
+
+	.sponsor-logos {
+		@include media( mobile ) {
+			border: 0;
+			padding-right: 0;
+		}
+	}
+	.sponsor-byline {
+		color: inherit;
+	}
+}
+
+.featured-image-beside {
+	.entry-sponsor {
+		display: block;
+	}
+	.sponsor-logos {
+		margin: 0 0 $size__spacing-unit;
+	}
+}
+
+// Author bio replacement
+.sponsor-bio {
+	@include media( mobile ) {
+		.avatar {
+			height: auto;
+			width: auto;
+		}
+	}
+
+	h2 a {
+		text-decoration: none;
+	}
+}
+
+// Archives
+.search,
+.archive {
+	.sponsor-logos {
+		display: none;
+	}
+}

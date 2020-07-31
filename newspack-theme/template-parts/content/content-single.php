@@ -44,8 +44,12 @@
 		<?php newspack_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
-	<?php endif; ?>
+	<?php
+	if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) :
+		newspack_sponsor_footer_bio( get_the_id() );
+	elseif ( ! is_singular( 'attachment' ) ) :
+		get_template_part( 'template-parts/post/author', 'bio' );
+	endif;
+	?>
 
 </article><!-- #post-${ID} -->

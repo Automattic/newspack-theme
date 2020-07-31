@@ -11,7 +11,11 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 <?php if ( is_singular() ) : ?>
 	<?php
 	if ( ! is_page() ) :
-		newspack_categories();
+		if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) {
+			newspack_sponsor_label( true );
+		} else {
+			newspack_categories();
+		}
 	endif;
 	?>
 	<?php
@@ -33,13 +37,29 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 	</h2>
 <?php endif; ?>
 
+
 <?php if ( ! is_page() ) : ?>
 	<div class="entry-subhead">
-		<div class="entry-meta">
-			<?php newspack_posted_by(); ?>
-			<?php newspack_posted_on(); ?>
-			<?php do_action( 'newspack_theme_entry_meta' ); ?>
-		</div><!-- .meta-info -->
+		<?php if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) : ?>
+			<div class="entry-meta entry-sponsor">
+				<?php newspack_sponsor_logo_list( get_the_id() ); ?>
+				<span>
+					<?php
+						newspack_sponsor_byline( get_the_id() );
+						newspack_posted_on();
+						do_action( 'newspack_theme_entry_meta' );
+					?>
+				</span>
+			</div>
+		<?php else : ?>
+			<div class="entry-meta">
+				<?php
+					newspack_posted_by();
+					newspack_posted_on();
+					do_action( 'newspack_theme_entry_meta' );
+				?>
+			</div><!-- .meta-info -->
+		<?php endif; ?>
 		<?php
 			// Display Jetpack Share icons, if enabled
 			if ( function_exists( 'sharing_display' ) ) {
