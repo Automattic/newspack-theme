@@ -74,34 +74,29 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 			$i             = 1;
 			?>
 			<span class="byline sponsor-byline">
-				<span>
-					<span>
-						<?php echo esc_html( $sponsors[0]['sponsor_byline'] ); ?>
-					</span>
+				<?php echo esc_html( $sponsors[0]['sponsor_byline'] ); ?>
+				<?php
+				foreach ( $sponsors as $sponsor ) {
+					$i++;
+					if ( $sponsor_count === $i ) :
+						/* translators: separates last two sponsor names; needs a space on either side. */
+						$sep = esc_html__( ' and ', 'newspack' );
+					elseif ( $sponsor_count > $i ) :
+						/* translators: separates all but the last two sponsor names; needs a space at the end. */
+						$sep = esc_html__( ', ', 'newspack' );
+					else :
+						$sep = '';
+					endif;
 
-					<?php
-					foreach ( $sponsors as $sponsor ) {
-						$i++;
-						if ( $sponsor_count === $i ) :
-							/* translators: separates last two sponsor names; needs a space on either side. */
-							$sep = esc_html__( ' and ', 'newspack' );
-						elseif ( $sponsor_count > $i ) :
-							/* translators: separates all but the last two sponsor names; needs a space at the end. */
-							$sep = esc_html__( ', ', 'newspack' );
-						else :
-							$sep = '';
-						endif;
-
-						printf(
-							/* translators: 1: sponsor link. 2: sponsor name. 3. variable seperator (comma, 'and', or empty) */
-							'<span class="author"><a target="_blank" href="%1$s">%2$s</a></span>%3$s ',
-							esc_url( $sponsor['sponsor_url'] ),
-							esc_html( $sponsor['sponsor_name'] ),
-							esc_html( $sep )
-						);
-					}
-					?>
-				</span>
+					printf(
+						/* translators: 1: sponsor link. 2: sponsor name. 3. variable seperator (comma, 'and', or empty) */
+						'<span class="author"><a target="_blank" href="%1$s">%2$s</a></span>%3$s ',
+						esc_url( $sponsor['sponsor_url'] ),
+						esc_html( $sponsor['sponsor_name'] ),
+						esc_html( $sep )
+					);
+				}
+				?>
 			</span><!-- .byline -->
 		<?php
 		}
