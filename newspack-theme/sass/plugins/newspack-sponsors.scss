@@ -3,6 +3,7 @@
 
 .sponsor-label,
 .sponsor-label button,
+.sponsor-label .flag,
 .sponsor-logos,
 .entry-sponsor {
 	align-items: stretch;
@@ -21,10 +22,9 @@
 	}
 
 	.flag {
-		align-items: center;
 		background: $color__highlight;
 		color: $color__text-main;
-		display: inline-flex;
+		line-height: 1;
 		padding: 0.3em 0.5em;
 		text-transform: uppercase;
 	}
