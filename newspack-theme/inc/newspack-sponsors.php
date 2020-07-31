@@ -156,13 +156,18 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 
 			echo '<span class="sponsor-logos">';
 				foreach ( $sponsors as $sponsor ) {
-					$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_logo'] );
-					?>
-					<a href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>" target="_blank">
-						<img src="<?php echo esc_url( $logo_info['url'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
-					</a>
-
-				<?php
+					if ( '' !== $sponsor['sponsor_logo'] ) :
+						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_logo'] );
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+						}
+						?>
+							<img src="<?php echo esc_url( $logo_info['url'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
+						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
+							</a>
+						<?php endif; ?>
+					<?php
+					endif;
 				}
 			echo '</span>';
 		}
@@ -187,7 +192,7 @@ function newspack_sponsor_logo_sized( $sponsor_id, $maxwidth = 130, $maxheight =
 	$logo_info['img_width']  = ( $image_width / $image_height ) * $logo_info['img_height'];
 
 	// If the new width is too wide, set to the max-width and update height based off that to maintain aspect ratio.
-	if ( 130 < $logo_info['img_width'] ) {
+	if ( $maxwidth < $logo_info['img_width'] ) {
 		$logo_info['img_width']  = $maxwidth;
 		$logo_info['img_height'] = ( $image_height / $image_width ) * $logo_info['img_width'];
 	}
