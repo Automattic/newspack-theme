@@ -173,3 +173,16 @@
 		display: none;
 	}
 }
+
+// Newspack Blocks
+.wpnbha {
+	.sponsor-logos {
+		border: 0;
+		padding: 0;
+		margin: 0 0 #{0.5 * $size__spacing-unit};
+		width: 100%;
+	}
+	&.image-aligntop .sponsor-logos {
+		margin-top: #{0.5 * $size__spacing-unit};
+	}
+}

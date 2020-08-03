@@ -113,6 +113,11 @@ const SASS_STYLESHEETS = [
 		outFile: 'newspack-theme/styles/newspack-sponsors.css',
 		withRTL: true,
 	},
+	{
+		inFile: 'newspack-theme/sass/plugins/newspack-sponsors-editor.scss',
+		outFile: 'newspack-theme/styles/newspack-sponsors-editor.css',
+		withRTL: true,
+	},
 	{ inFile: 'newspack-theme/sass/print.scss', outFile: 'newspack-theme/styles/print.css' },
 	// Newspack Sacha Child theme
 	{

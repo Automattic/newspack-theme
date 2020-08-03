@@ -12,7 +12,7 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 	<?php
 	if ( ! is_page() ) :
 		if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) {
-			newspack_sponsor_label( true );
+			newspack_sponsor_label( get_the_id(), true );
 		} else {
 			newspack_categories();
 		}
