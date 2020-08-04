@@ -1,3 +1,11 @@
+## [1.13.1](https://github.com/Automattic/newspack-theme/compare/v1.13.0...v1.13.1) (2020-08-04)
+
+
+### Bug Fixes
+
+* remove assumption of hosted Newspack in footer wording ([7d6ca8e](https://github.com/Automattic/newspack-theme/commit/7d6ca8eddf49ef2b883e91c42653716f77fb13b6))
+* remove URLs from print styles ([#1002](https://github.com/Automattic/newspack-theme/issues/1002)) ([8cc7cc0](https://github.com/Automattic/newspack-theme/commit/8cc7cc03c389ebe987bd8bc1a030a687e7f885d3))
+
 # [1.13.0](https://github.com/Automattic/newspack-theme/compare/v1.12.0...v1.13.0) (2020-07-28)
 
 
