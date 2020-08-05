@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_sponsors_enqueue_styles' );
  * Enqueue scripts needed for the sponsors.
  */
 function newspack_sponsors_enqueue_scripts() {
-	if ( ! newspack_is_amp() && is_single() ) {
+	if ( ! newspack_is_amp() && ( is_single() || is_archive() ) ) {
 		$newspack_l10n = array(
 			'open_info'  => esc_html__( 'Learn More', 'newspack' ),
 			'close_info' => esc_html__( 'Close', 'newspack' ),
@@ -45,18 +45,26 @@ function newspack_sponsor_editor_styles() {
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_sponsor_editor_styles' );
 
+
 /**
  * Function to check if plugin is enabled, and if there are sponsors.
  */
-function newspack_post_has_sponsors( $post_id ) {
+function newspack_has_sponsors( $id, $scope = 'native', $type = 'post' ) {
 	if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) { // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
 		// Get all assigned sponsors.
-		$sponsors_all = \Newspack_Sponsors\get_sponsors_for_post( $post_id ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
+		if ( 'archive' === $type ) {
+			$sponsors_all = \Newspack_Sponsors\get_sponsors_for_archive( $id ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
+		} else {
+			$sponsors_all = \Newspack_Sponsors\get_sponsors_for_post( $id ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
+		}
 
 		// Loop through sponsors and remove duplicates.
 		$sponsors   = array();
 		$duplicates = array();
 		foreach ( $sponsors_all as $sponsor ) {
+			if ( $scope !== $sponsor['sponsor_scope'] ) {
+				continue;
+			}
 			if ( ! in_array( $sponsor['sponsor_id'], $duplicates ) ) {
 				$duplicates[] = $sponsor['sponsor_id'];
 				$sponsors[]   = $sponsor;
@@ -71,13 +79,26 @@ function newspack_post_has_sponsors( $post_id ) {
 	}
 }
 
+/**
+ * Add classes to sponsored posts.
+ */
+function newspack_sponsor_body_classes( $classes ) {
+
+	if ( ( is_category() || is_tag() ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
+		$classes[] = 'native-sponsor';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'newspack_sponsor_body_classes' );
+
+
 if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 	/**
 	 * Outputs the sponsor byline markup for the theme.
 	 */
-	function newspack_sponsor_byline( $post_id ) {
-		if ( newspack_post_has_sponsors( $post_id ) ) {
-			$sponsors      = newspack_post_has_sponsors( $post_id );
+	function newspack_sponsor_byline( $id, $scope = 'native', $type = 'post' ) {
+		if ( newspack_has_sponsors( $id, $scope, $type ) ) {
+			$sponsors      = newspack_has_sponsors( $id, $scope, $type );
 			$sponsor_count = count( $sponsors );
 			$i             = 1;
 			?>
@@ -119,11 +140,11 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 	/**
 	 * Outputs the text 'sponsored' in place of the article category.
 	 */
-	function newspack_sponsor_label( $post_id, $show_info = false ) {
-		if ( newspack_post_has_sponsors( $post_id ) ) :
-			$sponsors     = newspack_post_has_sponsors( $post_id );
-			$sponsor_flag = $sponsors[0]['sponsor_flag'];
-			$sponsor_info = get_option( 'newspack_sponsors_explanation' );
+	function newspack_sponsor_label( $id, $scope = 'native', $type = 'post', $show_info = false ) {
+		if ( newspack_has_sponsors( $id, $scope, $type ) ) :
+			$sponsors           = newspack_has_sponsors( $id, $scope, $type );
+			$sponsor_flag       = $sponsors[0]['sponsor_flag'];
+			$sponsor_disclaimer = $sponsors[0]['sponsor_disclaimer'];
 			?>
 
 			<span class="cat-links sponsor-label" [class]="infoVisible ? 'cat-links sponsor-label show-info' : 'cat-links sponsor-label'">
@@ -135,7 +156,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 					?>
 				</span>
 				<?php
-				if ( true === $show_info && '' !== $sponsor_info ) :
+				if ( true === $show_info && '' !== $sponsor_disclaimer ) :
 					$allowed_html = array(
 						'a' => array(
 							'alt'    => array(),
@@ -154,7 +175,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 						</span>
 					</button>
 					<span id="sponsor-info" class="sponsor-info" [aria-expanded]="infoVisible ? 'true' : 'false'" aria-expanded="false">
-						<?php echo wp_kses( $sponsor_info, $allowed_html ); ?>
+						<?php echo wp_kses( $sponsor_disclaimer, $allowed_html ); ?>
 					</span>
 				<?php endif; ?>
 			</span><!-- .sponsor-label -->
@@ -167,9 +188,9 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 	/**
 	 * Outputs set of sponsor logos with links.
 	 */
-	function newspack_sponsor_logo_list( $post_id ) {
-		if ( newspack_post_has_sponsors( $post_id ) ) {
-			$sponsors = newspack_post_has_sponsors( $post_id );
+	function newspack_sponsor_logo_list( $id, $scope = 'native', $type = 'post' ) {
+		if ( newspack_has_sponsors( $id, $scope, $type ) ) {
+			$sponsors = newspack_has_sponsors( $id, $scope, $type );
 
 			echo '<span class="sponsor-logos">';
 				foreach ( $sponsors as $sponsor ) {
@@ -179,7 +200,7 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}
 						?>
-							<img src="<?php echo esc_url( $logo_info['url'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
+							<img src="<?php echo esc_url( $logo_info['src'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
 						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
 							</a>
 						<?php endif; ?>
@@ -200,8 +221,8 @@ function newspack_sponsor_logo_sized( $sponsor_id, $maxwidth = 130, $maxheight =
 	$image_info = wp_get_attachment_image_src( get_post_thumbnail_id( $sponsor_id ), 'medium' );
 
 	if ( '' !== $image_info ) {
-		// Break out URL, original width and original height.
-		$logo_info['url'] = $image_info[0];
+		// Break out src, original width and original height.
+		$logo_info['src'] = $image_info[0];
 		$image_width      = $image_info[1];
 		$image_height     = $image_info[2];
 
@@ -222,9 +243,9 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 	/**
 	 * Outputs the 'bio' for the sponsor.
 	 */
-	function newspack_sponsor_footer_bio( $post_id ) {
-		if ( newspack_post_has_sponsors( $post_id ) ) {
-			$sponsors = newspack_post_has_sponsors( $post_id );
+	function newspack_sponsor_footer_bio( $id, $scope = 'native', $type = 'post' ) {
+		if ( newspack_has_sponsors( $id, $scope, $type ) ) {
+			$sponsors = newspack_has_sponsors( $id, $scope, $type );
 
 			foreach ( $sponsors as $sponsor ) {
 				$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 150, 100 );
@@ -232,7 +253,7 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 
 				<div class="author-bio sponsor-bio">
 					<a href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>" class="avatar" target="_blank">
-						<img src="<?php echo esc_url( $logo_info['url'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
+						<img src="<?php echo esc_url( $logo_info['src'] ); ?>" width="<?php echo esc_attr( $logo_info['img_width'] ); ?>" height="<?php echo esc_attr( $logo_info['img_height'] ); ?>">
 					</a>
 
 					<div class="author-bio-text">
@@ -267,6 +288,91 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 		}
 	}
 endif;
+
+/**
+ * Outputs the 'bio' for the sponsor.
+ */
+function newspack_sponsor_archive_description( $id, $scope = 'native', $type = 'post' ) {
+	if ( newspack_has_sponsors( $id, $scope, $type ) ) {
+		$sponsors = newspack_has_sponsors( $id, $scope, $type );
+
+		foreach ( $sponsors as $sponsor ) {
+			$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 150, 100 );
+			?>
+			<div class="sponsor-archive">
+
+				<span class="sponsor-brand">
+					<?php if ( '' !== $sponsor['sponsor_logo'] ) : ?>
+						<?php
+						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 100, 80 );
+
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+						}
+						echo '<img src="' . esc_url( $logo_info['src'] ) . '" width="' . esc_attr( $logo_info['img_width'] ) . '" height="' . esc_attr( $logo_info['img_height'] ) . '" alt="' . esc_attr( $sponsor['sponsor_name'] ) . '">';
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '</a>';
+						}
+						?>
+					<?php endif; ?>
+
+					<span class="entry-meta">
+						<span class="byline sponsor-byline">
+							<?php echo esc_html( $sponsor['sponsor_byline'] ); ?>
+
+							<span class="author">
+								<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
+									<a target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
+								<?php endif; ?>
+									<?php echo esc_html( $sponsor['sponsor_name'] ); ?>
+								<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
+									</a>
+								<?php endif; ?>
+							</span><!-- .author -->
+						</span><!-- .sponsor-byline -->
+					</span><!-- .entry-meta -->
+				</span><!-- .logo -->
+
+				<div class="info">
+					<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
+				</div><!-- .info -->
+			</div><!-- .sponsor-archive -->
+		<?php
+		}
+	}
+}
+
+/**
+ * Outputs the 'underwriters' information for the top of single posts.
+ */
+function newspack_sponsored_underwriters_info( $id, $scope = 'native', $type = 'post' ) {
+	if ( newspack_has_sponsors( $id, $scope, $type ) ) {
+		$sponsors = newspack_has_sponsors( $id, $scope, $type );
+		foreach ( $sponsors as $sponsor ) {
+			?>
+			<div class="sponsor-uw-info">
+				<span class="logo">
+					<?php if ( '' !== $sponsor['sponsor_logo'] ) : ?>
+						<?php
+						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 150, 80 );
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+						}
+						echo '<img src="' . esc_url( $logo_info['src'] ) . '" width="' . esc_attr( $logo_info['img_width'] ) . '" height="' . esc_attr( $logo_info['img_height'] ) . '" alt="' . esc_attr( $sponsor['sponsor_name'] ) . '">';
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '</a>';
+						}
+						?>
+					<?php endif; ?>
+				</span>
+				<div class="info">
+					<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
+				</div>
+			</div>
+		<?php
+		}
+	}
+}
 
 /**
  * Adds section to customizer for Sponsored Content options.
@@ -304,18 +410,36 @@ add_action( 'customize_register', 'newspack_sponsored_customize_register' );
 /**
  * Add custom colors to trust indicators.
  */
-function newspack_sponsored_customizer_styles() {
+function newspack_sponsored_styles() {
 	$flag_color          = get_theme_mod( 'sponsored_flag_hex', '#FED850' );
 	$flag_color_contrast = newspack_get_color_contrast( $flag_color );
 	?>
 	<style>
-		.sponsor-label strong {
+		.sponsor-label .flag  {
 			background: <?php echo esc_attr( $flag_color ); ?>;
 			color: <?php echo esc_attr( $flag_color_contrast ); ?>;
 		}
 	</style>
 	<?php
 }
-add_action( 'wp_head', 'newspack_sponsored_customizer_styles' );
+add_action( 'wp_head', 'newspack_sponsored_styles' );
+
+/**
+ * Add custom colors for trust indicators to editor.
+ */
+function newspack_sponsored_styles_editor() {
+	$flag_color          = get_theme_mod( 'sponsored_flag_hex', '#FED850' );
+	$flag_color_contrast = newspack_get_color_contrast( $flag_color );
+
+	$sponsor_customizations = '
+		.editor-styles-wrapper .sponsor-label .flag  {
+			background: ' . esc_attr( $flag_color ) . ';
+			color: ' . esc_attr( $flag_color_contrast ) . ';
+		}
+	';
+
+	wp_add_inline_style( 'newspack-sponsor-editor-styles', $sponsor_customizations );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_sponsored_styles_editor' );
 
 

@@ -16,8 +16,8 @@
 	<div class="entry-container">
 		<?php
 		if ( 'page' !== get_post_type() ) :
-			if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) :
-				newspack_sponsor_label();
+			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+				newspack_sponsor_label( get_the_id() );
 			endif;
 		elseif ( ! is_archive() ) :
 			newspack_categories();
@@ -28,7 +28,7 @@
 		</header><!-- .entry-header -->
 
 		<?php if ( 'page' !== get_post_type() ) : ?>
-			<?php if ( function_exists( 'newspack_post_has_sponsors' ) && newspack_post_has_sponsors( get_the_id() ) ) : ?>
+			<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) : ?>
 				<div class="entry-meta entry-sponsor">
 					<?php newspack_sponsor_logo_list( get_the_id() ); ?>
 					<span>

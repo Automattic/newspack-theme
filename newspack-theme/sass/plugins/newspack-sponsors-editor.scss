@@ -10,7 +10,24 @@
 		background: $color__highlight;
 		color: $color__text-main;
 		line-height: 1;
-		padding: 0.3em 0.5em;
+		padding: 0.5em 0.5em 0.4em;
 		text-transform: uppercase;
+	}
+}
+
+.sponsor-logos {
+	align-items: center;
+	display: inline-flex;
+
+	a {
+		margin-right: #{0.75 * $size__spacing-unit};
+		line-height: 1;
+	}
+}
+
+.wpnbha {
+	.sponsor-logos {
+		margin: 0 0 #{0.5 * $size__spacing-unit};
+		width: 100%;
 	}
 }

@@ -103,9 +103,9 @@
 		margin: 0 #{0.75 * $size__spacing-unit} 0 0;
 	}
 
-	a {
-		margin-right: #{0.75 * $size__spacing-unit};
+	> * {
 		line-height: 1;
+		margin-right: #{0.75 * $size__spacing-unit};
 	}
 }
 
@@ -147,7 +147,7 @@
 	.entry-sponsor {
 		display: block;
 	}
-	.sponsor-logos {
+	.sponsor-logos > * {
 		margin: 0 0 $size__spacing-unit;
 	}
 }
@@ -169,20 +169,108 @@
 // Archives
 .search,
 .archive {
-	.sponsor-logos {
+	article .sponsor-logos {
 		display: none;
 	}
 }
 
+.sponsor-label + .page-title {
+	&::before,
+	&::after,
+	.page-subtitle {
+		display: none;
+	}
+}
+
+// Underwritten content
+.sponsor-archive {
+	@include media( mobile ) {
+		align-items: center;
+		display: flex;
+
+		.entry-meta,
+		.author {
+			display: block;
+		}
+	}
+
+	.sponsor-brand {
+		align-items: center;
+		display: flex;
+		@include media( mobile ) {
+			display: block;
+			flex-shrink: 0;
+			margin-right: #{1.5 * $size__spacing-unit};
+		}
+
+		img {
+			margin: 0 #{0.5 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+		}
+	}
+
+	.info {
+		color: $color__text-light;
+		font-style: italic;
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 // Newspack Blocks
-.wpnbha {
+.wpnbha,
+.wp-block-newspack-blocks-carousel {
 	.sponsor-logos {
 		border: 0;
 		padding: 0;
-		margin: 0 0 #{0.5 * $size__spacing-unit};
+	}
+
+	.flag {
+		padding: 0.5em 0.5em 0.4em;
+	}
+}
+
+.wpnbha {
+	.sponsor-logos {
 		width: 100%;
 	}
+
 	&.image-aligntop .sponsor-logos {
-		margin-top: #{0.5 * $size__spacing-unit};
+		margin-top: #{0.25 * $size__spacing-unit};
+	}
+}
+
+.wp-block-newspack-blocks-carousel {
+	.sponsor-byline {
+		color: #fff;
+	}
+}
+
+// Underwritten content
+.sponsor-uw-info {
+	align-items: center;
+	background: $color__background-pre;
+	border: 1px solid $color__border;
+	border-left: 4px solid $color__primary;
+	font-size: 80%;
+	display: flex;
+	padding: $size__spacing-unit;
+
+	.logo {
+		flex-shrink: 0;
+		margin-right: $size__spacing-unit;
+	}
+
+	.info {
+		font-style: italic;
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
