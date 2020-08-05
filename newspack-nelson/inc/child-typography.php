@@ -38,7 +38,7 @@ function newspack_nelson_custom_typography_css() {
 			.accent-header,
 			.cat-links,
 			.site-content .wpnbha .article-section-title,
-			.entry-meta .byline a,
+			.entry-meta .byline .author,
 			.tags-links a,
 			.post-edit-link,
 			.author-bio h2 span,

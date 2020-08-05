@@ -163,7 +163,7 @@
 .blog,
 .search {
 	.cat-links {
-		margin-bottom: 0;
+		margin-bottom: #{0.5 * $size__spacing-unit};
 		a {
 			padding: 0.25em 0.5em;
 		}

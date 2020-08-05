@@ -46,7 +46,7 @@ get_header();
 
 				<?php
 					if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
-						newspack_sponsor_label( get_queried_object_id(), 'native', 'archive', true );
+						newspack_sponsor_label( get_queried_object_id(), true, 'native', 'archive' );
 					}
 				?>
 

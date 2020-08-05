@@ -1,19 +1,12 @@
 @import '../variables-site/variables-site';
 @import '../mixins/mixins-master';
 
-.sponsor-label,
-.sponsor-label button,
-.sponsor-label .flag,
-.sponsor-logos,
-.entry-sponsor {
-	align-items: stretch;
-	display: inline-flex;
-}
-
 // Category replacement - tag
 .sponsor-label {
-	display: flex;
+	align-items: stretch;
+	display: inline-flex;
 	position: relative;
+
 	.flag,
 	button {
 		align-items: center;
@@ -31,7 +24,7 @@
 
 	button {
 		background: transparent;
-		color: inherit;
+		color: $color__text-light;
 		margin-left: #{0.25 * $size__spacing-unit};
 		padding: 0;
 		position: relative;
@@ -95,34 +88,43 @@
 	}
 }
 
-// Author byline replacement - avatars
 .sponsor-logos {
 	align-items: center;
+	display: inline-flex;
+	line-height: 1;
 	@include media( mobile ) {
 		border-right: 1px solid $color__border;
 		margin: 0 #{0.75 * $size__spacing-unit} 0 0;
 	}
 
 	> * {
-		line-height: 1;
 		margin-right: #{0.75 * $size__spacing-unit};
 	}
 }
 
-// Author byline replacement - text
-.sponsor-byline {
-	color: $color__text-main;
+.entry-sponsor {
+	align-items: stretch;
+	display: inline-flex;
+}
+
+.sponsor-byline .author {
+	font-weight: bold;
 }
 
 // Featured image beside/behind adjustments
 .featured-image-beside,
 .featured-image-behind {
-	.entry-sponsor > span {
+	.entry-sponsor {
 		align-items: center;
-		display: inline-flex;
+	}
+
+	.sponsor-label button {
+		color: inherit;
 	}
 
 	.sponsor-logos {
+		margin-right: 0;
+
 		@include media( mobile ) {
 			border: 0;
 			padding-right: 0;
@@ -141,36 +143,40 @@
 	.sponsor-label button::after {
 		border-bottom-color: rgba( 0, 0, 0, 0.95 );
 	}
-}
 
-.featured-image-beside {
-	.entry-sponsor {
-		display: block;
-	}
-	.sponsor-logos > * {
-		margin: 0 0 $size__spacing-unit;
+	.sponsor-logos {
+		margin: 0;
 	}
 }
 
 // Author bio replacement
 .sponsor-bio {
-	@include media( mobile ) {
-		.avatar {
-			height: auto;
-			width: auto;
-		}
+	.avatar {
+		height: auto;
+		width: auto;
 	}
 
-	h2 a {
-		text-decoration: none;
+	h2 {
+		margin-top: 0;
+
+		a {
+			text-decoration: none;
+		}
 	}
 }
 
 // Archives
 .search,
-.archive {
-	article .sponsor-logos {
-		display: none;
+.archive,
+.blog {
+	article {
+		.sponsor-logos {
+			display: none;
+		}
+
+		.sponsor-label {
+			font-size: 65%;
+		}
 	}
 }
 
@@ -182,19 +188,20 @@
 	}
 }
 
-// Underwritten content
 .sponsor-archive {
 	@include media( mobile ) {
-		align-items: center;
 		display: flex;
-
 		.entry-meta,
 		.author {
 			display: block;
 		}
 	}
 
-	.sponsor-brand {
+	@include media( desktop ) {
+		align-items: center;
+	}
+
+	.details {
 		align-items: center;
 		display: flex;
 		@include media( mobile ) {
@@ -204,12 +211,46 @@
 		}
 
 		img {
-			margin: 0 #{0.5 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
+			margin: 0 $size__spacing-unit $size__spacing-unit 0;
+
+			@include media( mobile ) {
+				margin: 0;
+			}
 		}
 	}
 
 	.info {
-		color: $color__text-light;
+		font-size: 90%;
+		text-align: left;
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	+ .sponsor-archive {
+		margin-top: #{1.5 * $size__spacing-unit};
+	}
+}
+
+// Underwritten content
+.sponsor-uw-info {
+	align-items: center;
+	background: $color__background-pre;
+	border: 1px solid $color__border;
+	border-left: 4px solid $color__primary;
+	display: flex;
+	font-size: 80%;
+	padding: $size__spacing-unit;
+
+	.logo {
+		flex-shrink: 0;
+		margin-right: #{1.5 * $size__spacing-unit};
+	}
+
+	.info {
 		font-style: italic;
 		> *:first-child {
 			margin-top: 0;
@@ -223,23 +264,20 @@
 // Newspack Blocks
 .wpnbha,
 .wp-block-newspack-blocks-carousel {
+	.sponsor-label {
+		display: flex;
+	}
+
 	.sponsor-logos {
 		border: 0;
 		padding: 0;
-	}
-
-	.flag {
-		padding: 0.5em 0.5em 0.4em;
 	}
 }
 
 .wpnbha {
 	.sponsor-logos {
+		margin: #{0.125 * $size__spacing-unit} 0 #{0.25 * $size__spacing-unit};
 		width: 100%;
-	}
-
-	&.image-aligntop .sponsor-logos {
-		margin-top: #{0.25 * $size__spacing-unit};
 	}
 }
 
@@ -247,30 +285,8 @@
 	.sponsor-byline {
 		color: #fff;
 	}
-}
 
-// Underwritten content
-.sponsor-uw-info {
-	align-items: center;
-	background: $color__background-pre;
-	border: 1px solid $color__border;
-	border-left: 4px solid $color__primary;
-	font-size: 80%;
-	display: flex;
-	padding: $size__spacing-unit;
-
-	.logo {
-		flex-shrink: 0;
-		margin-right: $size__spacing-unit;
-	}
-
-	.info {
-		font-style: italic;
-		> *:first-child {
-			margin-top: 0;
-		}
-		> *:last-child {
-			margin-bottom: 0;
-		}
+	.sponsor-logos {
+		margin: 0;
 	}
 }

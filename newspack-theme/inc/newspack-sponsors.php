@@ -104,7 +104,7 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 			?>
 			<span class="byline sponsor-byline">
 				<?php
-				echo esc_html( $sponsors[0]['sponsor_byline'] );
+				echo esc_html( $sponsors[0]['sponsor_byline'] ) . ' ';
 
 				foreach ( $sponsors as $sponsor ) {
 					$i++;
@@ -117,19 +117,16 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 					else :
 						$sep = '';
 					endif;
-					?>
 
-					<span class="author">
-						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
-							<a target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
-						<?php endif; ?>
-							<?php echo esc_html( $sponsor['sponsor_name'] ); ?>
-						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
-							</a>
-						<?php endif; ?>
-					</span>
-					<?php echo esc_html( $sep ); ?>
-				<?php } ?>
+					printf(
+						/* translators: 1: sponsor link. 2: sponsor name. 3: sponsor seperator - either a comma or 'and'. */
+						'<span class="author"><a target="_blank" href="%1$s">%2$s</a></span>%3$s',
+						esc_url( $sponsor['sponsor_url'] ),
+						esc_html( $sponsor['sponsor_name'] ),
+						esc_html( $sep )
+					);
+				}
+				?>
 			</span><!-- .byline -->
 		<?php
 		}
@@ -140,7 +137,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 	/**
 	 * Outputs the text 'sponsored' in place of the article category.
 	 */
-	function newspack_sponsor_label( $id, $scope = 'native', $type = 'post', $show_info = false ) {
+	function newspack_sponsor_label( $id, $show_info = false, $scope = 'native', $type = 'post' ) {
 		if ( newspack_has_sponsors( $id, $scope, $type ) ) :
 			$sponsors           = newspack_has_sponsors( $id, $scope, $type );
 			$sponsor_flag       = $sponsors[0]['sponsor_flag'];
@@ -297,15 +294,12 @@ function newspack_sponsor_archive_description( $id, $scope = 'native', $type = '
 		$sponsors = newspack_has_sponsors( $id, $scope, $type );
 
 		foreach ( $sponsors as $sponsor ) {
-			$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 150, 100 );
 			?>
 			<div class="sponsor-archive">
-
-				<span class="sponsor-brand">
-					<?php if ( '' !== $sponsor['sponsor_logo'] ) : ?>
-						<?php
-						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 100, 80 );
-
+				<span class="details">
+					<?php
+					if ( '' !== $sponsor['sponsor_logo'] ) :
+						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 130, 80 );
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}
@@ -313,13 +307,12 @@ function newspack_sponsor_archive_description( $id, $scope = 'native', $type = '
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '</a>';
 						}
-						?>
-					<?php endif; ?>
+					endif;
+					?>
 
 					<span class="entry-meta">
 						<span class="byline sponsor-byline">
 							<?php echo esc_html( $sponsor['sponsor_byline'] ); ?>
-
 							<span class="author">
 								<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
 									<a target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
@@ -354,7 +347,7 @@ function newspack_sponsored_underwriters_info( $id, $scope = 'native', $type = '
 				<span class="logo">
 					<?php if ( '' !== $sponsor['sponsor_logo'] ) : ?>
 						<?php
-						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 150, 80 );
+						$logo_info = newspack_sponsor_logo_sized( $sponsor['sponsor_id'], 130, 80 );
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}

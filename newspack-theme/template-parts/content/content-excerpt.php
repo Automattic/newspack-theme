@@ -18,9 +18,9 @@
 		if ( 'page' !== get_post_type() ) :
 			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
 				newspack_sponsor_label( get_the_id() );
+			elseif ( ! is_archive() ) :
+				newspack_categories();
 			endif;
-		elseif ( ! is_archive() ) :
-			newspack_categories();
 		endif;
 		?>
 		<header class="entry-header">
