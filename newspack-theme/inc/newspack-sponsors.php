@@ -137,8 +137,9 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 	 */
 	function newspack_sponsor_label( $id, $show_info = false, $scope = 'native', $type = 'post' ) {
 		if ( newspack_has_sponsors( $id, $scope, $type ) ) :
-			$sponsors     = newspack_has_sponsors( $id, $scope, $type );
-			$sponsor_flag = $sponsors[0]['sponsor_flag'];
+			$sponsors           = newspack_has_sponsors( $id, $scope, $type );
+			$sponsor_flag       = $sponsors[0]['sponsor_flag'];
+			$sponsor_disclaimer = $sponsors[0]['sponsor_disclaimer'];
 			?>
 
 			<span class="cat-links sponsor-label" [class]="infoVisible ? 'cat-links sponsor-label show-info' : 'cat-links sponsor-label'">
@@ -150,7 +151,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 					?>
 				</span>
 				<?php
-				if ( true === $show_info && '' !== $sponsors[0]['sponsor_disclaimer'] ) :
+				if ( true === $show_info && '' !== $sponsor_disclaimer ) :
 					$allowed_html = array(
 						'a' => array(
 							'alt'    => array(),
@@ -169,11 +170,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 						</span>
 					</button>
 					<span id="sponsor-info" class="sponsor-info" [aria-expanded]="infoVisible ? 'true' : 'false'" aria-expanded="false">
-						<?php
-							foreach ( $sponsors as $sponsor ) {
-								echo '<span>' . wp_kses( $sponsor['sponsor_disclaimer'], $allowed_html ) . '</span>';
-							}
-						?>
+						<?php echo wp_kses( $sponsor_disclaimer, $allowed_html ); ?>
 					</span>
 				<?php endif; ?>
 			</span><!-- .sponsor-label -->
@@ -402,7 +399,7 @@ function newspack_sponsored_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'newspack_sponsored_customize_register' );
 
 /**
- * Add custom colors the Sponsored flag.
+ * Add custom colors to trust indicators.
  */
 function newspack_sponsored_styles() {
 	$flag_color          = get_theme_mod( 'sponsored_flag_hex', '#FED850' );
@@ -419,7 +416,7 @@ function newspack_sponsored_styles() {
 add_action( 'wp_head', 'newspack_sponsored_styles' );
 
 /**
- * Add custom colors the Sponsored flag for the editor.
+ * Add custom colors for trust indicators to editor.
  */
 function newspack_sponsored_styles_editor() {
 	$flag_color          = get_theme_mod( 'sponsored_flag_hex', '#FED850' );
