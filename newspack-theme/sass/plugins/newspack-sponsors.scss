@@ -66,6 +66,14 @@
 	top: calc( 100% + 5px );
 	width: 300px;
 	z-index: 5;
+
+	span {
+		display: block;
+
+		+ span {
+			margin-top: $size__spacing-unit;
+		}
+	}
 }
 
 .sponsor-label .sponsor-info {
@@ -153,7 +161,8 @@
 .sponsor-bio {
 	.avatar {
 		height: auto;
-		width: auto;
+		text-align: center;
+		width: 20%;
 	}
 
 	h2 {

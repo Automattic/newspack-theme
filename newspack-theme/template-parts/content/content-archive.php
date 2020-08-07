@@ -14,6 +14,11 @@
 	<?php newspack_post_thumbnail(); ?>
 
 	<div class="entry-container">
+		<?php
+			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+				newspack_sponsor_label( get_the_id() );
+			endif;
+		?>
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</header><!-- .entry-header -->
