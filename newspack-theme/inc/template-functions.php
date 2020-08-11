@@ -114,6 +114,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'h-dh'; // Header default height.
 	}
 
+	$cta_show = get_theme_mod( 'show_header_cta', false );
+	$cta_url  = get_theme_mod( 'header_cta_url', '' );
+	if ( true === $cta_show && '' !== $cta_url ) {
+		$classes[] = 'h-cta'; // Mobile CTA is showing.
+	}
+
 	// Adds classes if menus are assigned
 	if ( has_nav_menu( 'tertiary-menu' ) ) {
 		$classes[] = 'has-tertiary-menu';
