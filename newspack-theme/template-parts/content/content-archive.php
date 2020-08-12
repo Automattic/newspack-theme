@@ -24,10 +24,24 @@
 		</header><!-- .entry-header -->
 
 		<?php if ( ! is_page() ) : ?>
-			<div class="entry-meta">
-				<?php newspack_posted_by(); ?>
-				<?php newspack_posted_on(); ?>
-			</div><!-- .meta-info -->
+			<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) : ?>
+				<div class="entry-meta entry-sponsor">
+					<?php newspack_sponsor_logo_list( get_the_id() ); ?>
+					<span>
+						<?php
+							newspack_sponsor_byline( get_the_id() );
+							newspack_posted_on();
+						?>
+					</span>
+				</div>
+			<?php else : ?>
+				<div class="entry-meta">
+					<?php
+						newspack_posted_by();
+						newspack_posted_on();
+					?>
+				</div><!-- .meta-info -->
+			<?php endif; ?>
 		<?php endif; ?>
 	</div><!-- .entry-container -->
 </article><!-- #post-${ID} -->

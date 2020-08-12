@@ -54,7 +54,7 @@ get_header();
 
 				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
 
-				<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) : ?>
+				<?php if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) : ?>
 					<?php newspack_sponsor_archive_description( get_queried_object_id(), 'native', 'archive' ); ?>
 				<?php elseif ( '' !== get_the_archive_description() ) : ?>
 					<div class="taxonomy-description">
