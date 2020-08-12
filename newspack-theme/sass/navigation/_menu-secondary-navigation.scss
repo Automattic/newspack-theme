@@ -9,10 +9,10 @@
 	a {
 		color: inherit;
 		padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+	}
 
-		&:hover {
-			opacity: 0.75;
-		}
+	> ul > li > a:hover {
+		opacity: 0.75;
 	}
 }
 
@@ -30,7 +30,7 @@
 			margin-right: #{$size__spacing-unit};
 		}
 
-		li:first-child a {
+		> li:first-child a {
 			padding-left: 0;
 		}
 
