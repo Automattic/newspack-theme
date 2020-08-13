@@ -1,0 +1,33 @@
+@import '../variables-site/variables-site';
+@import '../mixins/mixins-master';
+
+// Newspack Blocks
+.sponsor-label {
+	align-items: center;
+	display: flex;
+
+	.flag {
+		background: $color__highlight;
+		color: $color__text-main;
+		line-height: 1;
+		padding: 0.3em 0.5em;
+		text-transform: uppercase;
+	}
+}
+
+.sponsor-logos {
+	align-items: center;
+	display: inline-flex;
+	line-height: 1;
+
+	img {
+		margin-right: #{0.75 * $size__spacing-unit};
+	}
+}
+
+.wpnbha {
+	.sponsor-logos {
+		margin: #{0.125 * $size__spacing-unit} 0 #{0.25 * $size__spacing-unit};
+		width: 100%;
+	}
+}

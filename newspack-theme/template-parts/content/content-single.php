@@ -11,6 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
+
+		<?php
+			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id(), 'underwritten' ) ) :
+				newspack_sponsored_underwriters_info( get_the_id(), 'underwritten' );
+			endif;
+		?>
+
 		<?php
 		the_content(
 			sprintf(
@@ -44,8 +51,12 @@
 		<?php newspack_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
-	<?php endif; ?>
+	<?php
+	if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+		newspack_sponsor_footer_bio( get_the_id() );
+	elseif ( ! is_singular( 'attachment' ) ) :
+		get_template_part( 'template-parts/post/author', 'bio' );
+	endif;
+	?>
 
 </article><!-- #post-${ID} -->
