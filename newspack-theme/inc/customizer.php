@@ -177,6 +177,27 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - slide out menu position
+	$wp_customize->add_setting(
+		'slideout_sidebar_side',
+		array(
+			'default'           => 'left',
+			'sanitize_callback' => 'newspack_sanitize_slideout_sidebar_side',
+		)
+	);
+	$wp_customize->add_control(
+		'slideout_sidebar_side',
+		array(
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Slide-out sidebar side', 'newspack' ),
+			'choices' => array(
+				'left'  => _x( 'Left', 'slide-out menu side', 'newspack' ),
+				'right' => _x( 'Right', 'slide-out menu side', 'newspack' ),
+			),
+			'section' => 'header_section_slideout',
+		)
+	);
+
 	/**
 	 * Header Slideouts
 	 */
@@ -1066,6 +1087,26 @@ function newspack_sanitize_post_template( $choice ) {
 	}
 
 	return 'default';
+}
+
+/**
+ * Sanitize slide-out sidebar side
+ *
+ * @param string $choice The side to display the slide-out sidebar.
+ *
+ * @return string
+ */
+function newspack_sanitize_slideout_sidebar_side( $choice ) {
+	$valid = array(
+		'left',
+		'right',
+	);
+
+	if ( in_array( $choice, $valid, true ) ) {
+		return $choice;
+	}
+
+	return 'left';
 }
 
 /**

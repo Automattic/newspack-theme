@@ -27,6 +27,7 @@ do_action( 'before_header' );
 $header_simplified     = get_theme_mod( 'header_simplified', false );
 $header_center_logo    = get_theme_mod( 'header_center_logo', false );
 $show_slideout_sidebar = get_theme_mod( 'header_show_slideout', false );
+$slideout_sidebar_side = get_theme_mod( 'slideout_sidebar_side', 'left' );
 $header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
 
 // Even if 'Show Slideout Sidebar' is checked, don't show it if no widgets are assigned.
