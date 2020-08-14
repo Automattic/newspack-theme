@@ -19,8 +19,8 @@
 /* Desktop-specific styles */
 .site-header {
 	.nav2 {
-		ul,
-		li {
+		> ul,
+		> ul > li {
 			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
