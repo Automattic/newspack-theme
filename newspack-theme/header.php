@@ -29,6 +29,11 @@ $header_center_logo    = get_theme_mod( 'header_center_logo', false );
 $show_slideout_sidebar = get_theme_mod( 'header_show_slideout', false );
 $header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
 
+// Even if 'Show Slideout Sidebar' is checked, don't show it if no widgets are assigned.
+if ( ! is_active_sidebar( 'header-1' ) ) {
+	$show_slideout_sidebar = false;
+}
+
 get_template_part( 'template-parts/header/mobile', 'sidebar' );
 get_template_part( 'template-parts/header/desktop', 'sidebar' );
 
@@ -45,7 +50,7 @@ endif;
 		<?php if ( true === $header_sub_simplified && ! is_front_page() ) : ?>
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<?php if ( newspack_has_menus() || ( true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) ) : ?>
+					<?php if ( newspack_has_menus() || true === $show_slideout_sidebar ) : ?>
 						<div class="subpage-toggle-contain">
 							<button class="subpage-toggle" on="tap:subpage-sidebar.toggle">
 								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
@@ -69,14 +74,10 @@ endif;
 				</div>
 			</div><!-- .wrapper -->
 		<?php else : ?>
-
-			<?php
-			// If header is NOT short, and if there's a Secondary Menu or Slide-out Sidebar widget.
-			if ( false === $header_simplified && ( is_active_sidebar( 'header-1' ) || has_nav_menu( 'secondary-menu' ) ) ) :
-			?>
+			<?php if ( has_nav_menu( 'secondary-menu' ) || ( true === $show_slideout_sidebar && false === $header_simplified ) ) : ?>
 				<div class="top-header-contain desktop-only">
 					<div class="wrapper">
-						<?php if ( true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
+						<?php if ( true === $show_slideout_sidebar && has_nav_menu( 'secondary-menu' ) ) : ?>
 							<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 								<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
@@ -92,8 +93,11 @@ endif;
 						</div>
 
 						<?php
-						// Logo is NOT centered:
-						if ( false === $header_center_logo ) :
+						// If logo is NOT centered:
+						if (
+							( false === $header_center_logo && false === $header_simplified ) ||
+							( true === $header_simplified )
+							) :
 						?>
 							<div id="social-nav-contain">
 								<?php
@@ -109,7 +113,7 @@ endif;
 
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<?php if ( true === $header_simplified && true === $show_slideout_sidebar && is_active_sidebar( 'header-1' ) ) : ?>
+					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
