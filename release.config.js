@@ -8,7 +8,13 @@ const THEMES = [
 ];
 
 module.exports = {
-	branches: [ 'release' ],
+	branches: [
+		'release',
+		{
+			name: 'alpha',
+			prerelease: 'alpha',
+		},
+	],
 	prepare: [
 		'@semantic-release/changelog',
 		'@semantic-release/npm',
