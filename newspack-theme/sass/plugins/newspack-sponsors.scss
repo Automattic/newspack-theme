@@ -236,6 +236,13 @@
 	}
 }
 
+// Hide sponsor flags on articles in native-sponsor archives.
+.native-sponsor {
+	article .sponsor-label {
+		display: none;
+	}
+}
+
 // Underwritten content
 .sponsor-uw-info {
 	align-items: center;
