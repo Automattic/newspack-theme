@@ -64,8 +64,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Posts & Pages */
 
 @include media( tablet ) {
-	.featured-image-beside .cat-links::before {
-		background-color: $color__background-body;
+	.featured-image-beside {
+		.cat-links::before {
+			background-color: $color__background-body;
+		}
 	}
 }
 
@@ -99,8 +101,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			flex-wrap: wrap;
 		}
 
-		&.single-featured-image-default .posted-on {
-			margin-left: #{1.5 * $size__spacing-unit};
+		&.single-featured-image-default .byline {
+			margin-right: #{1.5 * $size__spacing-unit};
 		}
 	}
 }
@@ -330,4 +332,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	.trust-label {
 		margin-bottom: 5px;
 	}
+}
+
+// Sponsored Content
+.single .sponsor-label {
+	font-size: $font__size-sm;
 }

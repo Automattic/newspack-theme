@@ -232,6 +232,10 @@ input[type='submit'] {
 	.featured-image-beside {
 		@include media( tablet ) {
 			background-color: $color__text-main;
+
+			.entry-header {
+				color: $color__background-body;
+			}
 		}
 	}
 }
@@ -259,8 +263,8 @@ input[type='submit'] {
 		display: flex;
 		flex-wrap: wrap;
 
-		.posted-on {
-			margin-left: #{1.5 * $size__spacing-unit};
+		.byline {
+			margin-right: #{1.5 * $size__spacing-unit};
 		}
 	}
 }
@@ -449,4 +453,15 @@ textarea {
 			border-top: 0;
 		}
 	}
+}
+
+// Sponsored Content
+
+.sponsor-label {
+	font-size: $font__size-sm;
+}
+
+.single .sponsor-label {
+	align-items: stretch;
+	font-size: $font__size-sm;
 }

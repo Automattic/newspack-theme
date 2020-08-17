@@ -21,6 +21,7 @@ jobs:
           paths:
             - project
 
+  # Linting
   lint:
     docker:
       - image: circleci/node:12
@@ -30,6 +31,7 @@ jobs:
           name: Run Linter
           command: npm run lint
 
+  # Release job
   release:
     docker:
       - image: circleci/node:12
@@ -39,9 +41,23 @@ jobs:
           name: Release new version
           command: npm run release
 
+  # Reset alpha branch after a release
+  post_release:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout_code
+      - run:
+          name: Set tip of alpha branch on top of release and force-push it to remote
+          command: |
+            git pull origin release
+            git checkout alpha
+            git reset --hard release
+            git push "https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" --force
+
 workflows:
   version: 2
-  all:
+  main:
     jobs:
       - build
       - lint:
@@ -52,4 +68,13 @@ workflows:
             - build
           filters:
             branches:
-              only: release
+              only:
+                - release
+                - alpha
+      - post_release:
+          requires:
+            - release
+          filters:
+            branches:
+              only:
+                - release

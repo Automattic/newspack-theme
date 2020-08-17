@@ -679,12 +679,7 @@ body.page {
 
 				.byline {
 					display: inline-block;
-
-					&::after {
-						content: '|';
-						display: inline-block;
-						margin: 0 #{0.75 * $size__spacing-unit} 0 $size__spacing-unit;
-					}
+					margin-right: $size__spacing-unit;
 				}
 			}
 

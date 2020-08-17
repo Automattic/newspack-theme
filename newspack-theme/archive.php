@@ -43,15 +43,32 @@ get_header();
 				}
 			?>
 			<span>
+
+				<?php
+					if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
+						newspack_sponsor_label( get_queried_object_id(), true, 'native', 'archive' );
+					}
+				?>
+
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 
 				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
 
-				<?php if ( '' !== get_the_archive_description() ) : ?>
+				<?php if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) : ?>
+					<?php newspack_sponsor_archive_description( get_queried_object_id(), 'native', 'archive' ); ?>
+				<?php elseif ( '' !== get_the_archive_description() ) : ?>
 					<div class="taxonomy-description">
 						<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
 					</div>
 				<?php endif; ?>
+
+				<?php
+				if ( is_category() || is_tag() ) {
+					if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'underwritten', 'archive' ) ) {
+						newspack_sponsored_underwriters_info( get_queried_object_id(), 'underwritten', 'archive' );
+					}
+				}
+			?>
 
 				<?php if ( is_author() ) : ?>
 					<div class="author-meta">

@@ -20,10 +20,14 @@
 }
 
 .mobile-menu-toggle,
-.h-dh .desktop-menu-toggle {
+.desktop-menu-toggle {
 	svg {
 		margin-right: #{0.25 * $size__spacing-unit};
 	}
+}
+
+.middle-header-contain .desktop-menu-toggle svg {
+	margin-right: 0;
 }
 
 .site-header .mobile-menu-toggle,

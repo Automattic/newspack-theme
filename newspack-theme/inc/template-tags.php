@@ -450,7 +450,7 @@ function newspack_secondary_menu() {
 
 	// Only set a toolbar-target attributes if the secondary menu container exists in the header - if not short or subpage header.
 	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_simplified', false ) && ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) ) {
+	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
 		$toolbar_attributes = 'toolbar-target="secondary-nav-contain" toolbar="(min-width: 767px)"';
 	}
 
@@ -524,10 +524,19 @@ function newspack_social_menu_header() {
 		return;
 	}
 
-	// Only set a toolbar-target attributes if the social menu container exists in the header - if not short or subpage header.
-	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_simplified', false ) && ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) ) {
-		$toolbar_attributes = 'toolbar="(min-width: 767px)" toolbar-target="social-nav-contain"';
+	$header_simplified     = get_theme_mod( 'header_simplified', false );
+	$header_center_logo    = get_theme_mod( 'header_center_logo', false );
+	$header_sub_simplified = get_theme_mod( 'header_sub_simplified', false );
+
+	$toolbar_attributes = 'toolbar="(min-width: 767px)" toolbar-target="social-nav-contain"';
+
+	// In some cases when this menu won't appear on desktop, override the Toobar Attributes for AMP, so it doesn't try to "move" it.
+	if (
+		( true === $header_simplified && ! has_nav_menu( 'secondary-menu' ) ) ||
+		( true === $header_sub_simplified && ! is_front_page() ) ||
+		( false === $header_simplified && ! has_nav_menu( 'secondary-menu' ) && false === $header_center_logo )
+	) {
+		$toolbar_attributes = '';
 	}
 	?>
 	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

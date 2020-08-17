@@ -46,9 +46,9 @@ function newspack_jetpack_setup() {
 			'post-details'    => array(
 				'stylesheet' => 'newspack-style',
 				'date'       => '.posted-on',
-				'categories' => '.cat-links',
+				'categories' => '.cat-links:not(.sponsor-label)',
 				'tags'       => '.tags-links',
-				'author'     => '.byline, .author-avatar',
+				'author'     => '.byline:not(.sponsor-byline), .author-avatar',
 			),
 			'featured-images' => array(
 				'archive' => true,
