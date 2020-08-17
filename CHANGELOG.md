@@ -1,3 +1,11 @@
+# [1.14.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.13.1...v1.14.0-alpha.1) (2020-08-17)
+
+
+### Features
+
+* add visual elements for sponsored posts ([#1008](https://github.com/Automattic/newspack-theme/issues/1008)) ([3b92793](https://github.com/Automattic/newspack-theme/commit/3b92793c8ede0720d414a93643f475aaffc0e0f9))
+* make secondary menu visible when using the short header ([#1001](https://github.com/Automattic/newspack-theme/issues/1001)) ([728728f](https://github.com/Automattic/newspack-theme/commit/728728f402f67131d1c56d7986af74a5398e8354))
+
 ## [1.13.1](https://github.com/Automattic/newspack-theme/compare/v1.13.0...v1.13.1) (2020-08-04)
 
 
