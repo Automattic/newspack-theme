@@ -83,7 +83,7 @@ function newspack_has_sponsors( $id, $scope = 'native', $type = 'post' ) {
 function newspack_sponsor_body_classes( $classes ) {
 
 	if ( ( is_category() || is_tag() ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
-		$classes[] = 'native-sponsor';
+		$classes[] = 'sponsored-archive';
 	}
 	return $classes;
 }
