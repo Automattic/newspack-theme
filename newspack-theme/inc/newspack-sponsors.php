@@ -56,6 +56,10 @@ function newspack_has_sponsors( $id, $scope = 'native', $type = 'post' ) {
 			$sponsors_all = \Newspack_Sponsors\get_sponsors_for_post( $id ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
 		}
 
+		if ( empty( $sponsors_all ) ) {
+			return false;
+		}
+
 		// Loop through sponsors and remove duplicates.
 		$sponsors   = array();
 		$duplicates = array();
@@ -70,11 +74,7 @@ function newspack_has_sponsors( $id, $scope = 'native', $type = 'post' ) {
 		}
 	}
 
-	if ( ! empty( $sponsors ) ) {
-		return $sponsors;
-	} else {
-		return false;
-	}
+	return $sponsors;
 }
 
 /**
