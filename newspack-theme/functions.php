@@ -906,6 +906,16 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
+/**
+ * Load Trust Indicators compatibility file.
+ */
 if ( class_exists( 'Trust_Indicators' ) ) {
 	require get_template_directory() . '/inc/trust-indicators.php';
+}
+
+/**
+ * Load Sponsored Content compatibility file.
+ */
+if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
+	require get_template_directory() . '/inc/newspack-sponsors.php';
 }
