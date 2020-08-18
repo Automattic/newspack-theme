@@ -1,3 +1,18 @@
+# [1.14.0](https://github.com/Automattic/newspack-theme/compare/v1.13.1...v1.14.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* hide sponsor flag on sponsored category/tag archives ([#1027](https://github.com/Automattic/newspack-theme/issues/1027)) ([c0e24be](https://github.com/Automattic/newspack-theme/commit/c0e24be3b82f60764d6ca420f14fddb8fb28a85d))
+* prevent errors when no sponsors assigned ([#1032](https://github.com/Automattic/newspack-theme/issues/1032)) ([c72b184](https://github.com/Automattic/newspack-theme/commit/c72b18461ec22a0b39ea44bf38aec0bfc38eefab))
+* prevent JavaScript error in sponsor AMP-fallback code ([#1031](https://github.com/Automattic/newspack-theme/issues/1031)) ([0858174](https://github.com/Automattic/newspack-theme/commit/08581749c28084d5ed9edda29ad71068ed98f00e))
+
+
+### Features
+
+* add visual elements for sponsored posts ([#1008](https://github.com/Automattic/newspack-theme/issues/1008)) ([3b92793](https://github.com/Automattic/newspack-theme/commit/3b92793c8ede0720d414a93643f475aaffc0e0f9))
+* make secondary menu visible when using the short header ([#1001](https://github.com/Automattic/newspack-theme/issues/1001)) ([728728f](https://github.com/Automattic/newspack-theme/commit/728728f402f67131d1c56d7986af74a5398e8354))
+
 ## [1.13.1](https://github.com/Automattic/newspack-theme/compare/v1.13.0...v1.13.1) (2020-08-04)
 
 
