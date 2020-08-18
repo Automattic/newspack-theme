@@ -74,7 +74,7 @@ endif;
 				</div>
 			</div><!-- .wrapper -->
 		<?php else : ?>
-			<?php if ( has_nav_menu( 'secondary-menu' ) || ( true === $show_slideout_sidebar && false === $header_simplified ) ) : ?>
+			<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
 				<div class="top-header-contain desktop-only">
 					<div class="wrapper">
 						<?php if ( true === $show_slideout_sidebar && has_nav_menu( 'secondary-menu' ) ) : ?>
