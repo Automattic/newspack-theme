@@ -1,3 +1,12 @@
+# [1.14.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.14.0-alpha.1...v1.14.0-alpha.2) (2020-08-18)
+
+
+### Bug Fixes
+
+* hide sponsor flag on sponsored category/tag archives ([#1027](https://github.com/Automattic/newspack-theme/issues/1027)) ([c0e24be](https://github.com/Automattic/newspack-theme/commit/c0e24be3b82f60764d6ca420f14fddb8fb28a85d))
+* prevent errors when no sponsors assigned ([#1032](https://github.com/Automattic/newspack-theme/issues/1032)) ([c72b184](https://github.com/Automattic/newspack-theme/commit/c72b18461ec22a0b39ea44bf38aec0bfc38eefab))
+* prevent JavaScript error in sponsor AMP-fallback code ([#1031](https://github.com/Automattic/newspack-theme/issues/1031)) ([0858174](https://github.com/Automattic/newspack-theme/commit/08581749c28084d5ed9edda29ad71068ed98f00e))
+
 # [1.14.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.13.1...v1.14.0-alpha.1) (2020-08-17)
 
 
