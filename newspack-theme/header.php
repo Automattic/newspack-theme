@@ -78,7 +78,7 @@ endif;
 			<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
 				<div class="top-header-contain desktop-only">
 					<div class="wrapper">
-						<?php if ( true === $show_slideout_sidebar ) : ?>
+						<?php if ( true === $show_slideout_sidebar && 'left' === $slideout_sidebar_side ) : ?>
 							<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 								<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
@@ -108,13 +108,20 @@ endif;
 								?>
 							</div>
 						<?php endif; ?>
+
+						<?php if ( true === $show_slideout_sidebar && 'right' === $slideout_sidebar_side ) : ?>
+							<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+								<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
+							</button>
+						<?php endif; ?>
 					</div><!-- .wrapper -->
 				</div><!-- .top-header-contain -->
 			<?php endif; ?>
 
 			<div class="middle-header-contain">
 				<div class="wrapper">
-					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) ) : ?>
+					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) && 'left' === $slideout_sidebar_side ) : ?>
 						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
@@ -196,6 +203,13 @@ endif;
 					</div><!-- .nav-wrapper -->
 
 					<?php newspack_mobile_cta(); ?>
+
+					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) && 'right' === $slideout_sidebar_side ) : ?>
+						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
+							<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
+						</button>
+					<?php endif; ?>
 
 					<?php if ( newspack_has_menus() ) : ?>
 						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">

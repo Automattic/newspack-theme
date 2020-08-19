@@ -315,11 +315,14 @@
 }
 
 // Fallback - open from the right
-#mobile-sidebar-fallback {
+#mobile-sidebar-fallback,
+#desktop-sidebar-fallback.dir-right {
+	left: auto;
 	right: -100%;
 	transition: right 0.2s;
 }
 
+.desktop-menu-opened #desktop-sidebar-fallback.dir-right,
 .mobile-menu-opened #mobile-sidebar-fallback {
 	right: 0;
 }
