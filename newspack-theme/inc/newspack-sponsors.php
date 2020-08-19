@@ -44,7 +44,7 @@ function newspack_sponsor_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'newspack_sponsor_editor_styles' );
 
 /**
- *
+ * Returns post or category sponsors.
  */
 function newspack_get_all_sponsors( $id = null, $scope = null, $type = null, $logo_options = array() ) {
 	if ( function_exists( '\Newspack_Sponsors\get_all_sponsors' ) ) {
