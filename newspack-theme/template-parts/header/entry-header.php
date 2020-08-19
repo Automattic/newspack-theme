@@ -5,13 +5,14 @@
  * @package Newspack
  */
 
-$discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_discussion_data() : null; ?>
+$discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_discussion_data() : null;
 
+?>
 
 <?php if ( is_singular() ) : ?>
 	<?php
 	if ( ! is_page() ) :
-		if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) {
+		if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id() ) ) {
 			newspack_sponsor_label( get_the_id(), true );
 		} else {
 			newspack_categories();
@@ -40,7 +41,7 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 
 <?php if ( ! is_page() ) : ?>
 	<div class="entry-subhead">
-		<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) : ?>
+		<?php if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native' ) ) : ?>
 			<div class="entry-meta entry-sponsor">
 				<?php newspack_sponsor_logo_list( get_the_id() ); ?>
 				<span>

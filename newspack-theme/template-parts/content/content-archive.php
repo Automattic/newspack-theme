@@ -6,7 +6,6 @@
  *
  * @package Newspack
  */
-
 ?>
 
 
@@ -15,7 +14,7 @@
 
 	<div class="entry-container">
 		<?php
-			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+			if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) :
 				newspack_sponsor_label( get_the_id() );
 			endif;
 		?>
@@ -24,7 +23,7 @@
 		</header><!-- .entry-header -->
 
 		<?php if ( ! is_page() ) : ?>
-			<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) : ?>
+			<?php if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) : ?>
 				<div class="entry-meta entry-sponsor">
 					<?php newspack_sponsor_logo_list( get_the_id() ); ?>
 					<span>

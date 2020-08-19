@@ -6,7 +6,6 @@
  *
  * @package Newspack
  */
-
 get_header();
 ?>
 
@@ -45,7 +44,7 @@ get_header();
 			<span>
 
 				<?php
-					if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
+					if ( ( is_category() || is_tag() ) && function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id() ) ) {
 						newspack_sponsor_label( get_queried_object_id(), true, 'native', 'archive' );
 					}
 				?>
@@ -54,7 +53,7 @@ get_header();
 
 				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
 
-				<?php if ( ( is_category() || is_tag() ) && function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'native', 'archive' ) ) : ?>
+				<?php if ( ( is_category() || is_tag() ) && function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id(), 'native' ) ) : ?>
 					<?php newspack_sponsor_archive_description( get_queried_object_id(), 'native', 'archive' ); ?>
 				<?php elseif ( '' !== get_the_archive_description() ) : ?>
 					<div class="taxonomy-description">
@@ -64,7 +63,7 @@ get_header();
 
 				<?php
 				if ( is_category() || is_tag() ) {
-					if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_queried_object_id(), 'underwritten', 'archive' ) ) {
+					if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id(), 'underwritten', 'archive' ) ) {
 						newspack_sponsored_underwriters_info( get_queried_object_id(), 'underwritten', 'archive' );
 					}
 				}
