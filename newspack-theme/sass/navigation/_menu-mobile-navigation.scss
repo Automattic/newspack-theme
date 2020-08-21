@@ -103,7 +103,7 @@
 	}
 
 	&.dir-right {
-		margin: 0 0 0 $size__spacing-unit;
+		margin: 0 0 0 #{0.75 * $size__spacing-unit};
 	}
 }
 
