@@ -81,7 +81,7 @@ endif;
 						<?php if ( true === $show_slideout_sidebar && 'left' === $slideout_sidebar_side ) : ?>
 							<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
 								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-								<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
+								<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
 							</button>
 						<?php endif; ?>
 
@@ -110,9 +110,9 @@ endif;
 						<?php endif; ?>
 
 						<?php if ( true === $show_slideout_sidebar && 'right' === $slideout_sidebar_side ) : ?>
-							<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+							<button class="desktop-menu-toggle dir-right" on="tap:desktop-sidebar.toggle">
 								<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
-								<?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?>
+								<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
 							</button>
 						<?php endif; ?>
 					</div><!-- .wrapper -->
@@ -205,7 +205,7 @@ endif;
 					<?php newspack_mobile_cta(); ?>
 
 					<?php if ( true === $show_slideout_sidebar && ! has_nav_menu( 'secondary-menu' ) && 'right' === $slideout_sidebar_side ) : ?>
-						<button class="desktop-menu-toggle" on="tap:desktop-sidebar.toggle">
+						<button class="desktop-menu-toggle dir-right" on="tap:desktop-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span><?php echo esc_html( get_theme_mod( 'slideout_label', esc_html__( 'Menu', 'newspack' ) ) ); ?></span>
 						</button>
