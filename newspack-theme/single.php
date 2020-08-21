@@ -26,7 +26,6 @@ get_header();
 					<header class="entry-header">
 						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 					</header>
-
 				<?php endif; ?>
 
 				<div class="main-content">
