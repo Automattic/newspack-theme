@@ -355,7 +355,7 @@ add_filter( 'nav_menu_link_attributes', 'newspack_nav_menu_link_attributes', 10,
 function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
-	if ( ! isset( $args->theme_location ) || 'primary-menu' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || ( 'primary-menu' !== $args->theme_location && 'secondary-menu' !== $args->theme_location ) ) {
 		return $output;
 	}
 
