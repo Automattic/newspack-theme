@@ -49,7 +49,7 @@
 	color: #fff;
 	font-size: 0.7em;
 	margin-left: auto;
-	padding: #{0.6 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+	padding: #{0.6 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 
 	&:hover {
 		background: $color__text-main;
@@ -57,7 +57,7 @@
 	}
 
 	+ .mobile-menu-toggle {
-		margin-left: $size__spacing-unit;
+		margin-left: #{0.5 * $size__spacing-unit};
 
 		span {
 			display: inline-block;
