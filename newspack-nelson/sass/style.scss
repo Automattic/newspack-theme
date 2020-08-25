@@ -47,18 +47,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Header short
 .h-sh {
-	.site-header {
+	.middle-header-contain {
 		@include media( tablet ) {
 			padding-top: #{0.5 * $size__spacing-unit};
 		}
 
 		@include media( desktop ) {
-			padding: $size__spacing-unit 0 #{10 * $size__spacing-unit};
+			padding-top: $size__spacing-unit 0;
+		}
+	}
 
-			.highlight-menu-contain {
-				position: relative;
-				top: #{3 * $size__spacing-unit};
-			}
+	@include media( desktop ) {
+		.site-header {
+			padding-bottom: #{10 * $size__spacing-unit};
+		}
+
+		.highlight-menu-contain {
+			position: relative;
+			top: #{3 * $size__spacing-unit};
 		}
 	}
 }
