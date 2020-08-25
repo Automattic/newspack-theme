@@ -98,9 +98,12 @@ body.page {
 	.byline {
 		display: block;
 
+		.author {
+			font-weight: bold;
+		}
+
 		a {
 			color: $color__primary;
-			font-weight: bold;
 			text-decoration: none;
 
 			&:visited {
