@@ -6,14 +6,13 @@
  *
  * @package Newspack
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
 		<?php
-			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id(), 'underwritten' ) ) :
+			if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'underwritten' ) ) :
 				newspack_sponsored_underwriters_info( get_the_id(), 'underwritten' );
 			endif;
 		?>
@@ -52,7 +51,7 @@
 	</footer><!-- .entry-footer -->
 
 	<?php
-	if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+	if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native' ) ) :
 		newspack_sponsor_footer_bio( get_the_id() );
 	elseif ( ! is_singular( 'attachment' ) ) :
 		get_template_part( 'template-parts/post/author', 'bio' );

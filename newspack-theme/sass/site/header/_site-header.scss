@@ -17,6 +17,16 @@
 	line-height: 1;
 	margin: 0 $size__spacing-unit 0 0;
 	overflow: hidden;
+	@include media( mobile ) {
+		margin-right: #{0.5 * $size__spacing-unit};
+	}
+}
+
+.h-cta .custom-logo-link {
+	max-width: 130px;
+	@include media( mobile ) {
+		max-width: 100%;
+	}
 }
 
 .site-header .custom-logo-link .custom-logo {

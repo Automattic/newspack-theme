@@ -425,7 +425,7 @@ function newspack_primary_menu() {
 		$toolbar_attributes = 'toolbar-target="site-navigation" toolbar="(min-width: 767px)"';
 	}
 	?>
-	<nav class="main-navigation nav1" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<nav class="main-navigation nav1 dd-menu" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
 		wp_nav_menu(
 			array(
@@ -455,7 +455,7 @@ function newspack_secondary_menu() {
 	}
 
 	?>
-	<nav class="secondary-menu nav2" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<nav class="secondary-menu nav2 dd-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php
 		wp_nav_menu(
 			array(
@@ -463,7 +463,6 @@ function newspack_secondary_menu() {
 				'menu_class'     => 'secondary-menu',
 				'container'      => false,
 				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'depth'          => 1,
 			)
 		);
 		?>

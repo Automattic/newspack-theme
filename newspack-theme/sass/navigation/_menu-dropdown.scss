@@ -1,0 +1,213 @@
+/** === Dropdown menus === */
+
+.dd-menu {
+	// Unstyle buttons
+	button {
+		display: inline-block;
+		border: none;
+		padding: 0;
+		margin: 0;
+		font-family: $font__heading;
+		line-height: 1.2;
+		text-decoration: none;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+		transition: background 250ms ease-in-out, transform 150ms ease;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		&:hover,
+		&:focus {
+			background: transparent;
+		}
+
+		&:focus {
+			outline: 1px solid transparent;
+			outline-offset: -4px;
+		}
+
+		&:active {
+			transform: scale( 0.99 );
+		}
+	}
+
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		position: relative;
+	}
+
+	.submenu-expand {
+		display: inline-block;
+	}
+
+	.sub-menu {
+		> li {
+			display: block;
+			&.menu-item-has-children {
+				.submenu-expand {
+					position: absolute;
+					width: calc( 24px + #{$size__spacing-unit} );
+					bottom: 0;
+					color: white;
+					line-height: 1;
+					padding: calc( 0.5 * #{$size__spacing-unit} );
+					margin-right: 0;
+
+					svg {
+						top: 0;
+					}
+				}
+			}
+
+			> a {
+				display: inline-block;
+			}
+
+			> a:empty {
+				display: none;
+			}
+		}
+	}
+}
+
+.dd-menu > ul {
+	overflow: visible;
+	width: 100%;
+
+	> li {
+		&.menu-item-has-children {
+			position: inherit;
+
+			@include media( tablet ) {
+				position: relative;
+			}
+
+			.submenu-expand {
+				height: 18px;
+				width: 24px;
+
+				.wp-customizer-unloading &,
+				&.is-empty {
+					display: none;
+				}
+
+				svg {
+					position: relative;
+					top: -0.2em;
+				}
+			}
+		}
+	}
+}
+
+.site-header .dd-menu {
+	> ul > li {
+		@include media( tablet ) {
+			&.menu-item-has-children > a {
+				padding-right: 0;
+			}
+		}
+
+		> .sub-menu {
+			padding-top: 12px;
+
+			&::before {
+				border-style: solid;
+				border-width: 0 8px 8px 8px;
+				border-color: transparent transparent $color__background-dark transparent;
+				content: '';
+				display: inline-block;
+				height: 0;
+				left: 10px;
+				position: absolute;
+				top: 4px;
+				width: 0;
+			}
+		}
+	}
+
+	.sub-menu {
+		color: $color__background-body;
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.2s;
+		left: -9999px;
+		z-index: 99999;
+
+		a {
+			background-color: $color__background-dark;
+			color: $color__background-body;
+			display: block;
+			line-height: $font__line-height-heading;
+			padding: calc( 0.75 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} )
+				calc( 0.75 * #{$size__spacing-unit} ) $size__spacing-unit;
+
+			&:hover,
+			&:focus {
+				background: $color__primary-variation;
+			}
+		}
+
+		.submenu-expand {
+			right: #{0.25 * $size__spacing-unit};
+			top: #{0.65 * $size__spacing-unit};
+			transform: rotate( -90deg );
+		}
+	}
+
+	/*
+	 * Sub-menu styles
+	 *
+	 * :focus-within needs its own selector so other similar
+	 * selectors don’t get ignored if a browser doesn’t recognize it
+	 */
+	.menu-item-has-children:not( .off-canvas ):focus-within > .sub-menu {
+		display: block;
+		margin-top: 0;
+		opacity: 1;
+		position: absolute;
+		left: 0;
+		right: auto;
+		top: 100%;
+		bottom: auto;
+		height: auto;
+		transform: none;
+		width: #{12.5 * $size__spacing-unit};
+	}
+
+	.sub-menu .menu-item-has-children:not( .off-canvas ):focus-within > .sub-menu {
+		left: 100%;
+		top: 0;
+	}
+
+	.menu-item-has-children:not( .off-canvas ):hover > .sub-menu,
+	.menu-item-has-children:not( .off-canvas ):focus > .sub-menu,
+	.menu-item-has-children.is-focused:not( .off-canvas ) > .sub-menu {
+		display: block;
+		float: none;
+		margin-top: 0;
+		opacity: 1;
+		position: absolute;
+		left: 0;
+		right: auto;
+		top: 100%;
+		bottom: auto;
+		height: auto;
+		transform: none;
+		width: #{12.5 * $size__spacing-unit};
+	}
+
+	.sub-menu .menu-item-has-children:not( .off-canvas ):hover > .sub-menu,
+	.sub-menu .menu-item-has-children:not( .off-canvas ):focus > .sub-menu,
+	.sub-menu .menu-item-has-children.is-focused:not( .off-canvas ) > .sub-menu {
+		left: 100%;
+		top: 0;
+	}
+}
