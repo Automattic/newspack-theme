@@ -1,3 +1,10 @@
+# [1.15.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.15.0-alpha.1...v1.15.0-alpha.2) (2020-08-26)
+
+
+### Bug Fixes
+
+* make sure sponsor links, logos exist before outputting ([#1042](https://github.com/Automattic/newspack-theme/issues/1042)) ([eebb644](https://github.com/Automattic/newspack-theme/commit/eebb64441bd0eb5781974ff7986800b1cd902f97))
+
 # [1.15.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.14.0...v1.15.0-alpha.1) (2020-08-25)
 
 
