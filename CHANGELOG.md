@@ -1,3 +1,20 @@
+# [1.15.0](https://github.com/Automattic/newspack-theme/compare/v1.14.0...v1.15.0) (2020-08-26)
+
+
+### Bug Fixes
+
+* correct logic for when top menu area should be shown ([#1035](https://github.com/Automattic/newspack-theme/issues/1035)) ([d52302d](https://github.com/Automattic/newspack-theme/commit/d52302d5e57d787af1795572cda145878c288883))
+* hide customize buttons link for share buttons ([#1013](https://github.com/Automattic/newspack-theme/issues/1013)) ([6d8eb30](https://github.com/Automattic/newspack-theme/commit/6d8eb30e6bbd15b57b79556b74e39bb6e63d7cc5))
+* make sure sponsor links, logos exist before outputting ([#1042](https://github.com/Automattic/newspack-theme/issues/1042)) ([eebb644](https://github.com/Automattic/newspack-theme/commit/eebb64441bd0eb5781974ff7986800b1cd902f97))
+* prevent gap above the short header ([#1039](https://github.com/Automattic/newspack-theme/issues/1039)) ([9f8f182](https://github.com/Automattic/newspack-theme/commit/9f8f182ea826a6d01ab30a7b5e5f288c6c773fd2))
+* prevent wrapping with mobile CTA ([#1017](https://github.com/Automattic/newspack-theme/issues/1017)) ([913de14](https://github.com/Automattic/newspack-theme/commit/913de144bf7f29fd7eddbd3b21ee2fec658bbbdb))
+* update ad styles from style pack to Nelson child theme ([#951](https://github.com/Automattic/newspack-theme/issues/951)) ([8e28bcf](https://github.com/Automattic/newspack-theme/commit/8e28bcf563bd6fa555ca7fd803087aa672ec07b5))
+
+
+### Features
+
+* add dropdowns to the secondary menu ([#1024](https://github.com/Automattic/newspack-theme/issues/1024)) ([eee2daa](https://github.com/Automattic/newspack-theme/commit/eee2daa179b525b6b003e80810d0db0dde424a53))
+
 # [1.14.0](https://github.com/Automattic/newspack-theme/compare/v1.13.1...v1.14.0) (2020-08-18)
 
 
