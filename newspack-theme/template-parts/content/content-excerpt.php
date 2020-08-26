@@ -6,9 +6,7 @@
  *
  * @package Newspack
  */
-
 ?>
-
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php newspack_post_thumbnail(); ?>
@@ -16,7 +14,7 @@
 	<div class="entry-container">
 		<?php
 		if ( 'page' !== get_post_type() ) :
-			if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) :
+			if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) :
 				newspack_sponsor_label( get_the_id() );
 			elseif ( ! is_archive() ) :
 				newspack_categories();
@@ -28,7 +26,7 @@
 		</header><!-- .entry-header -->
 
 		<?php if ( 'page' !== get_post_type() ) : ?>
-			<?php if ( function_exists( 'newspack_has_sponsors' ) && newspack_has_sponsors( get_the_id() ) ) : ?>
+			<?php if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) : ?>
 				<div class="entry-meta entry-sponsor">
 					<?php newspack_sponsor_logo_list( get_the_id() ); ?>
 					<span>

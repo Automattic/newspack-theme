@@ -98,9 +98,12 @@ body.page {
 	.byline {
 		display: block;
 
+		.author {
+			font-weight: bold;
+		}
+
 		a {
 			color: $color__primary;
-			font-weight: bold;
 			text-decoration: none;
 
 			&:visited {
@@ -320,16 +323,17 @@ body.page {
 			}
 		}
 	}
+}
 
-	div.sharedaddy h3.sd-title {
-		display: none;
-	}
+div.sharedaddy h3.sd-title,
+.share-customize-link {
+	display: none;
+}
 
-	.sd-content {
-		margin-bottom: -0.7em; // offsets Jetpack's default styles w/out using !important
-		ul li {
-			margin-bottom: 0;
-		}
+.sd-content {
+	margin-bottom: -0.7em; // offsets Jetpack's default styles w/out using !important
+	ul li {
+		margin-bottom: 0;
 	}
 }
 

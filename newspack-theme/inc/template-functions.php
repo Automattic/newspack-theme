@@ -114,6 +114,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'h-dh'; // Header default height.
 	}
 
+	$cta_show = get_theme_mod( 'show_header_cta', false );
+	$cta_url  = get_theme_mod( 'header_cta_url', '' );
+	if ( true === $cta_show && '' !== $cta_url ) {
+		$classes[] = 'h-cta'; // Mobile CTA is showing.
+	}
+
 	// Adds classes if menus are assigned
 	if ( has_nav_menu( 'tertiary-menu' ) ) {
 		$classes[] = 'has-tertiary-menu';
@@ -355,7 +361,7 @@ add_filter( 'nav_menu_link_attributes', 'newspack_nav_menu_link_attributes', 10,
 function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
-	if ( ! isset( $args->theme_location ) || 'primary-menu' !== $args->theme_location ) {
+	if ( ! isset( $args->theme_location ) || ( 'primary-menu' !== $args->theme_location && 'secondary-menu' !== $args->theme_location ) ) {
 		return $output;
 	}
 

@@ -49,7 +49,7 @@
 	color: #fff;
 	font-size: 0.7em;
 	margin-left: auto;
-	padding: #{0.6 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+	padding: #{0.6 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
 
 	&:hover {
 		background: $color__text-main;
@@ -57,7 +57,7 @@
 	}
 
 	+ .mobile-menu-toggle {
-		margin-left: $size__spacing-unit;
+		margin-left: #{0.5 * $size__spacing-unit};
 
 		span {
 			display: inline-block;
@@ -234,8 +234,6 @@
 		padding-top: $size__spacing-unit;
 	}
 
-	.nav1 .main-menu > li.menu-item-has-children .submenu-expand svg,
-	.nav1 .sub-menu > li.menu-item-has-children .submenu-expand,
 	.submenu-expand {
 		display: none;
 	}
