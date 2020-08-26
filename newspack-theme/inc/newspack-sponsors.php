@@ -96,13 +96,15 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 						$sep = '';
 					endif;
 
-					printf(
-						/* translators: 1: sponsor link. 2: sponsor name. 3: sponsor seperator - either a comma or 'and'. */
-						'<span class="author"><a target="_blank" href="%1$s">%2$s</a></span>%3$s',
-						esc_url( $sponsor['sponsor_url'] ),
-						esc_html( $sponsor['sponsor_name'] ),
-						esc_html( $sep )
-					);
+					echo '<span class="author">';
+					if ( '' !== $sponsor['sponsor_url'] ) {
+						echo '<a target="_blank" href="' . esc_url( $sponsor['sponsor_url'] ) . '">';
+					}
+					echo esc_html( $sponsor['sponsor_name'] );
+					if ( '' !== $sponsor['sponsor_url'] ) {
+						echo '</a>';
+					}
+					echo '</span>' . esc_html( $sep );
 				}
 				?>
 			</span><!-- .byline -->
@@ -168,7 +170,7 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 		if ( ! empty( $sponsors ) ) {
 			echo '<span class="sponsor-logos">';
 				foreach ( $sponsors as $sponsor ) {
-					if ( '' !== $sponsor['sponsor_logo'] ) :
+					if ( ! empty( $sponsor['sponsor_logo'] ) ) :
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}
@@ -204,34 +206,48 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 			?>
 
 				<div class="author-bio sponsor-bio">
-					<a href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>" class="avatar" target="_blank">
-						<img src="<?php echo esc_url( $sponsor['sponsor_logo']['src'] ); ?>" width="<?php echo esc_attr( $sponsor['sponsor_logo']['img_width'] ); ?>" height="<?php echo esc_attr( $sponsor['sponsor_logo']['img_height'] ); ?>">
-					</a>
+
+					<?php
+					if ( ! empty( $sponsor['sponsor_logo'] ) ) {
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" class="avatar" target="_blank">';
+						}
+						echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '">';
+						if ( '' !== $sponsor['sponsor_url'] ) {
+							echo '</a>';
+						}
+					}
+					?>
 
 					<div class="author-bio-text">
 						<div class="author-bio-header">
-							<?php
-								printf(
-									/* translators: 1: sponsor preface. 2: sponsor link. 3: sponsor name. */
-									'<h2 class="accent-header">%1$s <a target="_blank" href="%2$s">%3$s</a></h2>',
-									esc_html( $sponsor['sponsor_byline'] ),
-									esc_url( $sponsor['sponsor_url'] ),
-									esc_html( $sponsor['sponsor_name'] )
-									);
+							<h2 class="accent-header">
+								<?php
+								echo esc_html( $sponsor['sponsor_byline'] ) . ' ';
+								if ( '' !== $sponsor['sponsor_url'] ) {
+									echo '<a target="_blank" href="' . esc_url( $sponsor['sponsor_url'] ) . '">';
+								}
+								echo esc_html( $sponsor['sponsor_name'] );
+								if ( '' !== $sponsor['sponsor_url'] ) {
+									echo '</a>';
+								}
 								?>
+							</h2>
 						</div><!-- .author-bio-header -->
 
 						<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
 
-						<a class="author-link" target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
-							<?php
-								printf(
-									/* translators: %s is the post's sponsor's name. */
-									esc_html__( 'Learn more about %s', 'newspack' ),
-									esc_html( $sponsor['sponsor_name'] )
-								);
-							?>
-						</a>
+						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
+							<a class="author-link" target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
+								<?php
+									printf(
+										/* translators: %s is the post's sponsor's name. */
+										esc_html__( 'Learn more about %s', 'newspack' ),
+										esc_html( $sponsor['sponsor_name'] )
+									);
+								?>
+							</a>
+						<?php endif; ?>
 
 					</div><!-- .author-bio-text -->
 				</div><!-- .author-bio -->
@@ -252,7 +268,7 @@ function newspack_sponsor_archive_description( $id, $scope = 'native', $type = '
 			<div class="sponsor-archive">
 				<span class="details">
 					<?php
-					if ( '' !== $sponsor['sponsor_logo'] ) :
+					if ( ! empty( $sponsor['sponsor_logo'] ) ) :
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}
@@ -298,7 +314,7 @@ function newspack_sponsored_underwriters_info( $id, $scope = 'native', $type = '
 			?>
 			<div class="sponsor-uw-info">
 				<span class="logo">
-					<?php if ( '' !== $sponsor['sponsor_logo'] ) : ?>
+					<?php if ( ! empty( $sponsor['sponsor_logo'] ) ) : ?>
 						<?php
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
