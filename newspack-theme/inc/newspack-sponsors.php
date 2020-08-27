@@ -376,7 +376,8 @@ function newspack_sponsored_styles() {
 	$flag_color_contrast = newspack_get_color_contrast( $flag_color );
 	?>
 	<style>
-		.sponsor-label .flag  {
+		.sponsor-label .flag,
+		amp-script .sponsor-label .flag  {
 			background: <?php echo esc_attr( $flag_color ); ?>;
 			color: <?php echo esc_attr( $flag_color_contrast ); ?>;
 		}
