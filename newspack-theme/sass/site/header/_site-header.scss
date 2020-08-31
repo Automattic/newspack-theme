@@ -22,10 +22,13 @@
 	}
 }
 
-.h-cta .custom-logo-link {
-	max-width: 130px;
-	@include media( mobile ) {
-		max-width: 100%;
+@include media( mobileonly ) {
+	.h-cta .site-header .custom-logo-link {
+		max-width: 140px;
+
+		.custom-logo {
+			max-width: 100%;
+		}
 	}
 }
 
