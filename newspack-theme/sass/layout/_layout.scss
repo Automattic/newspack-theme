@@ -124,3 +124,45 @@
 		}
 	}
 }
+
+.newspack-front-page {
+	.wrapper {
+		width: 1520px;
+	}
+
+	#page {
+		overflow: visible;
+	}
+
+	.desktop-sidebar-sticky {
+		display: none;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	@include media( desktop ) {
+		#primary {
+			align-items: flex-start;
+			display: flex;
+			width: 1520px;
+		}
+
+		#main {
+			max-width: 1200px;
+		}
+
+		.desktop-sidebar-sticky {
+			display: block;
+			margin-left: 20px;
+			min-width: 300px;
+			padding-top: 32px;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+		}
+	}
+}

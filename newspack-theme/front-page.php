@@ -33,9 +33,25 @@ get_header();
 
 			endwhile; // End of the loop.
 			?>
-
 		</main><!-- #main -->
+
+		<section id="sticky-sidebar" class="desktop-sidebar-sticky">
+			<?php
+			if ( ! newspack_is_amp() ) {
+				get_template_part( 'template-parts/sidebar/sidebar', 'sticky' );
+			}
+			?>
+		</section>
 	</section><!-- #primary -->
+
+	<?php if ( newspack_is_amp() ) : ?>
+	<amp-sidebar id="sidebar-desktop"
+		class="desktop-sidebar"
+		layout="nodisplay"
+		side="left">
+		<?php get_template_part( 'template-parts/sidebar/sidebar', 'sticky' ); ?>
+	</amp-sidebar>
+	<?php endif; ?>
 
 <?php
 get_footer();
