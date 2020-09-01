@@ -1,3 +1,10 @@
+# [1.16.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.15.0...v1.16.0-alpha.1) (2020-09-01)
+
+
+### Features
+
+* add option to switch desktop menu side ([#1037](https://github.com/Automattic/newspack-theme/issues/1037)) ([0ed4e3a](https://github.com/Automattic/newspack-theme/commit/0ed4e3a50fb1ad45ab3642ba5fc476c123bfbb4e))
+
 # [1.15.0](https://github.com/Automattic/newspack-theme/compare/v1.14.0...v1.15.0) (2020-08-26)
 
 
