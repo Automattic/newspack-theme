@@ -171,6 +171,17 @@
 				visibility();
 				setting.bind( visibility );
 			} );
+			wp.customize.control( 'slideout_sidebar_side', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
 		} );
 
 		// Only show Alternative Logo option if 'simple subpage header' is picked

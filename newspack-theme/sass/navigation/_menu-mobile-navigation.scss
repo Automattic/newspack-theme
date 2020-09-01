@@ -84,14 +84,26 @@
 
 .site-header .desktop-menu-toggle,
 .h-ll .subpage-toggle-contain {
-	margin-right: #{1.25 * $size__spacing-unit};
+	margin: 0 #{1.25 * $size__spacing-unit} 0 0;
+}
+
+.site-header .desktop-menu-toggle.dir-right {
+	margin: 0 0 0 #{1.25 * $size__spacing-unit};
+}
+
+.site-header #secondary-nav-contain + .desktop-menu-toggle.dir-right {
+	margin: 0 0 0 auto;
 }
 
 .middle-header-contain .desktop-menu-toggle {
-	margin-right: $size__spacing-unit;
+	margin: 0 $size__spacing-unit 0 0;
 	span {
 		left: -99999em;
 		position: absolute;
+	}
+
+	&.dir-right {
+		margin: 0 0 0 #{0.75 * $size__spacing-unit};
 	}
 }
 
@@ -315,11 +327,14 @@
 }
 
 // Fallback - open from the right
-#mobile-sidebar-fallback {
+#mobile-sidebar-fallback,
+#desktop-sidebar-fallback.dir-right {
+	left: auto;
 	right: -100%;
 	transition: right 0.2s;
 }
 
+.desktop-menu-opened #desktop-sidebar-fallback.dir-right,
 .mobile-menu-opened #mobile-sidebar-fallback {
 	right: 0;
 }
