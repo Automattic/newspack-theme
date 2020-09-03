@@ -210,6 +210,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
+		// Remove support for block widgets for now.
+		remove_theme_support( 'widgets-block-editor' );
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
