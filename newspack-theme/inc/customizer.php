@@ -701,7 +701,7 @@ function newspack_customize_register( $wp_customize ) {
 		'post_time_ago',
 		array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Use "time ago" date format', 'newspack' ),
+			'label'   => esc_html__( 'Use "time ago" date format', 'newspack' ),
 			'section' => 'post_default_settings',
 		)
 	);
@@ -709,7 +709,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'post_time_ago_cut_off',
 		array(
-			'default'           => 1209600, // Two weeks.
+			'default'           => '14', // Two weeks.
 			'sanitize_callback' => 'absint',
 		)
 	);
@@ -717,10 +717,9 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'post_time_ago_cut_off',
 		array(
-			'type'        => 'text',
-			'label'       => esc_html__( 'Cut off for "time ago" date in seconds', 'newspack' ),
-			'description' => esc_html__( 'The default (1209600 seconds) is equal to two weeks. 604800 seconds equals one week.', 'newspack' ),
-			'section'     => 'post_default_settings',
+			'type'    => 'text',
+			'label'   => esc_html__( 'Cut off for "time ago" date in days.', 'newspack' ),
+			'section' => 'post_default_settings',
 		)
 	);
 

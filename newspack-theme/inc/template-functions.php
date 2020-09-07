@@ -534,9 +534,12 @@ function newspack_convert_to_time_ago( $post_time ) {
 		$date         = new DateTime();
 		$current_time = $date->getTimestamp();
 		$org_time     = strtotime( $post->post_date );
-		$cut_off      = get_theme_mod( 'post_time_ago_cut_off', '1209600' );
+		$cut_off      = get_theme_mod( 'post_time_ago_cut_off', '14' );
 
-		if ( $cut_off >= ( $current_time - $org_time ) ) {
+		// Transform cut off from days to seconds.
+		$cut_off_seconds = $cut_off * 86400;
+
+		if ( $cut_off_seconds >= ( $current_time - $org_time ) ) {
 			$post_time = sprintf(
 				/* translators: %s: Time ago date format */
 				esc_html__( '%s ago', 'newspack' ),
