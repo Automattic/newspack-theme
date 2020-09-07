@@ -220,11 +220,17 @@ function newspack_get_the_archive_title() {
 	} elseif ( is_author() ) {
 		$title = esc_html__( 'Author Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 		$title = esc_html__( 'Yearly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 	} elseif ( is_month() ) {
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 		$title = esc_html__( 'Monthly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 	} elseif ( is_day() ) {
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 		$title = esc_html__( 'Daily Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
 	} elseif ( is_post_type_archive() ) {
 		$title = esc_html__( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
 	} elseif ( is_tax() ) {
@@ -549,8 +555,4 @@ function newspack_convert_to_time_ago( $post_time ) {
 	}
 	return $post_time;
 }
-
 add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
-add_filter( 'the_date', 'newspack_convert_to_time_ago', 10, 1 );
-add_filter( 'get_the_time', 'newspack_convert_to_time_ago', 10, 1 );
-add_filter( 'the_time', 'newspack_convert_to_time_ago', 10, 1 );

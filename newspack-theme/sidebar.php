@@ -12,6 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
+	<?php remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 ); ?>
 	<?php do_action( 'before_sidebar' ); ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	<?php do_action( 'after_sidebar' ); ?>
