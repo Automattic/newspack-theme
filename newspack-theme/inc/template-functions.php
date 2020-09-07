@@ -522,3 +522,32 @@ function newspack_the_custom_logo() {
 		the_custom_logo();
 	}
 }
+
+/**
+ * Change date to 'time ago' format if enabled in the Customizer.
+ */
+function newspack_convert_to_time_ago( $post_time ) {
+	global $post;
+	$use_time_ago = get_theme_mod( 'post_time_ago', false );
+
+	if ( true === $use_time_ago ) {
+		$date         = new DateTime();
+		$current_time = $date->getTimestamp();
+		$org_time     = strtotime( $post->post_date );
+		$cut_off      = get_theme_mod( 'post_time_ago_cut_off', '1209600' );
+
+		if ( $cut_off >= ( $current_time - $org_time ) ) {
+			$post_time = sprintf(
+				/* translators: %s: Time ago date format */
+				esc_html__( '%s ago', 'newspack' ),
+				human_time_diff( $org_time, $current_time )
+			);
+		}
+	}
+	return $post_time;
+}
+
+add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
+add_filter( 'the_date', 'newspack_convert_to_time_ago', 10, 1 );
+add_filter( 'get_the_time', 'newspack_convert_to_time_ago', 10, 1 );
+add_filter( 'the_time', 'newspack_convert_to_time_ago', 10, 1 );

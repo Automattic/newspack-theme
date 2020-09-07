@@ -643,7 +643,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add option to hide the whole author bio.
+	// Add option to set a featured image default.
 	$wp_customize->add_setting(
 		'featured_image_default',
 		array(
@@ -686,6 +686,41 @@ function newspack_customize_register( $wp_customize ) {
 				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
 			'section' => 'post_default_settings',
+		)
+	);
+
+	// Add option to use a time ago date format
+	$wp_customize->add_setting(
+		'post_time_ago',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_time_ago',
+		array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Use "time ago" date format', 'newspack' ),
+			'section' => 'post_default_settings',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'post_time_ago_cut_off',
+		array(
+			'default'           => 1209600, // Two weeks.
+			'sanitize_callback' => 'absint',
+		)
+	);
+
+	$wp_customize->add_control(
+		'post_time_ago_cut_off',
+		array(
+			'type'        => 'text',
+			'label'       => esc_html__( 'Cut off for "time ago" date in seconds', 'newspack' ),
+			'description' => esc_html__( 'The default (1209600 seconds) is equal to two weeks. 604800 seconds equals one week.', 'newspack' ),
+			'section'     => 'post_default_settings',
 		)
 	);
 
