@@ -532,11 +532,12 @@ function newspack_the_custom_logo() {
 /**
  * Change date to 'time ago' format if enabled in the Customizer.
  */
-function newspack_convert_to_time_ago( $post_time ) {
+function newspack_convert_to_time_ago( $post_time, $format ) {
 	global $post;
 	$use_time_ago = get_theme_mod( 'post_time_ago', false );
 
-	if ( true === $use_time_ago ) {
+	// Only filter time when $use_time_ago is enabled, and it's not using a machine-readable format (for datetime).
+	if ( true === $use_time_ago && 'Y-m-d\TH:i:sP' !== $format ) {
 		$date         = new DateTime();
 		$current_time = $date->getTimestamp();
 		$org_time     = strtotime( $post->post_date );
@@ -555,4 +556,4 @@ function newspack_convert_to_time_ago( $post_time ) {
 	}
 	return $post_time;
 }
-add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
+add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
