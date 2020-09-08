@@ -1,3 +1,20 @@
+# [1.17.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.16.0...v1.17.0-alpha.1) (2020-09-08)
+
+
+### Bug Fixes
+
+* harmonise how the author link is printed regardless of truncation ([#1053](https://github.com/Automattic/newspack-theme/issues/1053)) ([8aeec3d](https://github.com/Automattic/newspack-theme/commit/8aeec3d5cd63ffc4316fe3e178203e431b576b8c))
+* improve logo size behavior with mobile CTA ([#1049](https://github.com/Automattic/newspack-theme/issues/1049)) ([2b09606](https://github.com/Automattic/newspack-theme/commit/2b096067fcd8b0483b82ac9ce638994d1e1f6486))
+* make sure sponsor flag is not cut off for Newspack Katharine ([#1045](https://github.com/Automattic/newspack-theme/issues/1045)) ([b75e2b9](https://github.com/Automattic/newspack-theme/commit/b75e2b94c34513610f162fbdccd19b05e57b7c3b))
+* make sure sponsored content styles survive tree shaking ([#1046](https://github.com/Automattic/newspack-theme/issues/1046)) ([4b2dbe4](https://github.com/Automattic/newspack-theme/commit/4b2dbe4f390443225e79b26b4ba4189be12da04e))
+* prevent gap between mobile CTA and menu toggle ([#1052](https://github.com/Automattic/newspack-theme/issues/1052)) ([cb34485](https://github.com/Automattic/newspack-theme/commit/cb34485eb2556f0be4b332828d827f28f86054c9))
+* prevent gaps above captions in mobile Safari ([#1058](https://github.com/Automattic/newspack-theme/issues/1058)) ([a77f147](https://github.com/Automattic/newspack-theme/commit/a77f147ca2c306687c54adf5b541db46ab6340ab))
+
+
+### Features
+
+* add 'time ago' date option to theme ([#1059](https://github.com/Automattic/newspack-theme/issues/1059)) ([ced75fe](https://github.com/Automattic/newspack-theme/commit/ced75fe4670ea68b533e3b1ba6b42c028e444052))
+
 # [1.16.0](https://github.com/Automattic/newspack-theme/compare/v1.15.0...v1.16.0) (2020-09-01)
 
 
