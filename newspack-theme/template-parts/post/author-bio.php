@@ -141,7 +141,7 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 		<?php else : ?>
 			<?php echo wp_kses_post( wpautop( get_the_author_meta( 'description' ) ) ); ?>
 
-			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
+			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 				<?php
 					/* translators: %s is the current author's name. */
 					printf( esc_html__( 'More by %s', 'newspack' ), esc_html( get_the_author() ) );
