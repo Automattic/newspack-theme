@@ -60,11 +60,14 @@ body.page {
 	}
 }
 
-.cat-links {
+/* stylelint-disable selector-type-no-unknown  */
+.cat-links,
+amp-script .cat-links {
 	display: block;
 	font-size: $font__size-xs;
 	margin: 0 0 #{0.75 * $size__spacing-unit};
 }
+/* stylelint-enable */
 
 .tags-links {
 	> * {

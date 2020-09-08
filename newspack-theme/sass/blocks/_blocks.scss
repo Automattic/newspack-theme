@@ -702,16 +702,19 @@
 			display: block;
 		}
 
-		.aligncenter {
-			margin: 0 auto;
-		}
-
 		figcaption {
 			text-align: left;
 		}
 
-		.alignleft > figcaption,
-		.alignright > figcaption {
+		.alignleft,
+		.aligncenter,
+		.alignright {
+			figcaption {
+				display: block;
+			}
+		}
+
+		.aligncenter {
 			display: block;
 		}
 	}

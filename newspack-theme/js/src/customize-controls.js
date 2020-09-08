@@ -214,6 +214,21 @@
 			} );
 		} );
 
+		// Only show 'time ago' cutoff field when enabled.
+		wp.customize( 'post_time_ago', function( setting ) {
+			wp.customize.control( 'post_time_ago_cut_off', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
 		// Lets you jump to specific sections in the Customizer
 		$( [ 'control', 'section', 'panel' ] ).each( function( i, type ) {
 			$( 'a[rel="goto-' + type + '"]' ).click( function( e ) {

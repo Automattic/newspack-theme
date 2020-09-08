@@ -28,6 +28,7 @@ function newspack_custom_typography_css() {
 		.comment-author .fn,
 		.discussion-meta-info,
 		.cat-links,
+		amp-script .cat-links,
 		.entry-meta,
 		.entry-footer,
 		.nav1,
