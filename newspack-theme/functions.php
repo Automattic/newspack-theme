@@ -155,6 +155,14 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		$primary_color   = newspack_get_primary_color();
 		$secondary_color = newspack_get_secondary_color();
 
+		if ( 'default' !== get_theme_mod( 'theme_colors' ) ) {
+			$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
+			$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
+		}
+
+		$primary_color_variation   = newspack_adjust_brightness( $primary_color, -40 );
+		$secondary_color_variation = newspack_adjust_brightness( $secondary_color, -40 );
+
 		// Editor color palette.
 		add_theme_support(
 			'editor-color-palette',
@@ -162,30 +170,22 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 				array(
 					'name'  => __( 'Primary', 'newspack' ),
 					'slug'  => 'primary',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						$primary_color :
-						get_theme_mod( 'primary_color_hex', $primary_color ),
+					'color' => $primary_color,
 				),
 				array(
 					'name'  => __( 'Primary Variation', 'newspack' ),
 					'slug'  => 'primary-variation',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						newspack_adjust_brightness( $primary_color, -40 ) :
-						newspack_adjust_brightness( get_theme_mod( 'primary_color_hex', $primary_color ), -40 ),
+					'color' => $primary_color_variation,
 				),
 				array(
 					'name'  => __( 'Secondary', 'newspack' ),
 					'slug'  => 'secondary',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						$secondary_color :
-						get_theme_mod( 'secondary_color_hex', $secondary_color ),
+					'color' => $secondary_color,
 				),
 				array(
 					'name'  => __( 'Secondary Variation', 'newspack' ),
 					'slug'  => 'secondary-variation',
-					'color' => 'default' === get_theme_mod( 'theme_colors' ) ?
-						newspack_adjust_brightness( $secondary_color, -40 ) :
-						newspack_adjust_brightness( get_theme_mod( 'secondary_color_hex', $secondary_color ), -40 ),
+					'color' => $secondary_color_variation,
 				),
 				array(
 					'name'  => __( 'Dark Gray', 'newspack' ),
@@ -232,6 +232,16 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 					'name'     => __( 'Light gray to white', 'newspack' ),
 					'gradient' => 'linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% )',
 					'slug'     => 'grad-4',
+				),
+				array(
+					'name'     => __( 'Primary to primary variation', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $primary_color ) . ' 0%, ' . esc_attr( $primary_color_variation ) . ' 100% )',
+					'slug'     => 'grad-5',
+				),
+				array(
+					'name'     => __( 'Secondary to secondary variation', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $secondary_color ) . ' 0%, ' . esc_attr( $secondary_color_variation ) . ' 100% )',
+					'slug'     => 'grad-6',
 				),
 			)
 		);

@@ -225,6 +225,14 @@ function newspack_custom_colors_css() {
 			.entry .entry-content .wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
 				color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
 			}
+
+			/* Set gradients */
+			.entry .entry-content .has-grad-5-gradient-background {
+				background-image: linear-gradient( 135deg, ' . esc_html( $primary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ' 100% );
+			}
+			.entry .entry-content .has-grad-6-gradient-background {
+				background-image: linear-gradient( 135deg, ' . esc_html( $secondary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . ' 100% );
+			}
 			';
 
 		if ( true === get_theme_mod( 'header_solid_background', false ) ) {
@@ -447,6 +455,14 @@ function newspack_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-variation-background-color {
 			background-color: ' . esc_html( newspack_adjust_brightness( $secondary_color, -30 ) ) . ';
+		}
+
+		/* Set gradients */
+		.edit-post-visual-editor.editor-styles-wrapper .has-grad-5-gradient-background {
+			background-image: linear-gradient( 135deg, ' . esc_html( $primary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ' 100% );
+		}
+		.edit-post-visual-editor.editor-styles-wrapper .has-grad-6-gradient-background {
+			background-image: linear-gradient( 135deg, ' . esc_html( $secondary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . ' 100% );
 		}
 		';
 

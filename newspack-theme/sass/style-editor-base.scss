@@ -940,3 +940,13 @@ ul.wp-block-archives,
 .has-grad-4-gradient-background {
 	background-image: linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% );
 }
+.has-grad-5-gradient-background {
+	background-image: linear-gradient( 135deg, $color__primary 0%, $color__primary-variation 100% );
+}
+.has-grad-6-gradient-background {
+	background-image: linear-gradient(
+		135deg,
+		$color__secondary 0%,
+		$color__secondary-variation 100%
+	);
+}
