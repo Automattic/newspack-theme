@@ -214,33 +214,33 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => __( 'Black to medium gray', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, rgb( 17, 17, 17 ) 0%, rgb( 85, 85, 85 ) 100% )',
-					'slug'     => 'grad-1',
-				),
-				array(
-					'name'     => __( 'Dark gray to medium gray', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, rgb( 68, 68, 68 ) 0%, rgb( 136, 136, 136 ) 100% )',
-					'slug'     => 'grad-2',
-				),
-				array(
-					'name'     => __( 'Medium gray to light gray', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, rgb( 119, 119, 119 ) 0%, rgb( 221, 221, 221 ) 100% )',
-					'slug'     => 'grad-3',
-				),
-				array(
-					'name'     => __( 'Light gray to white', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% )',
-					'slug'     => 'grad-4',
-				),
-				array(
 					'name'     => __( 'Primary to primary variation', 'newspack' ),
 					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $primary_color ) . ' 0%, ' . esc_attr( $primary_color_variation ) . ' 100% )',
-					'slug'     => 'grad-5',
+					'slug'     => 'grad-1',
 				),
 				array(
 					'name'     => __( 'Secondary to secondary variation', 'newspack' ),
 					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $secondary_color ) . ' 0%, ' . esc_attr( $secondary_color_variation ) . ' 100% )',
+					'slug'     => 'grad-2',
+				),
+				array(
+					'name'     => __( 'Black to medium gray', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, rgb( 17, 17, 17 ) 0%, rgb( 85, 85, 85 ) 100% )',
+					'slug'     => 'grad-3',
+				),
+				array(
+					'name'     => __( 'Dark gray to medium gray', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, rgb( 68, 68, 68 ) 0%, rgb( 136, 136, 136 ) 100% )',
+					'slug'     => 'grad-4',
+				),
+				array(
+					'name'     => __( 'Medium gray to light gray', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, rgb( 119, 119, 119 ) 0%, rgb( 221, 221, 221 ) 100% )',
+					'slug'     => 'grad-5',
+				),
+				array(
+					'name'     => __( 'Light gray to white', 'newspack' ),
+					'gradient' => 'linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% )',
 					'slug'     => 'grad-6',
 				),
 			)
