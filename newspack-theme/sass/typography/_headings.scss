@@ -33,6 +33,12 @@ h6 {
 	font-family: $font__heading;
 }
 
+/* stylelint-disable selector-type-no-unknown  */
+amp-script .cat-links {
+	font-family: $font__heading;
+}
+/* stylelint-enable */
+
 .page-description,
 .not-found .page-title,
 .error-404 .page-title,

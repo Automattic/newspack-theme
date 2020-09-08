@@ -138,15 +138,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-bottom-color: $color__text-main;
 }
 
-.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-	.post-has-image
+.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category ) .post-has-image {
 	.entry-title {
-	background-color: $color__background-body;
-	margin-top: -1.5em;
-	padding: 0.5em 0.25em 0 0;
-	position: relative;
-	width: 85%;
-	z-index: 1;
+		background-color: $color__background-body;
+		margin-top: -1.5em;
+		padding: 0.5em 0.25em 0 0;
+		position: relative;
+		width: 85%;
+		z-index: 1;
+	}
+	.sponsor-label + .entry-title {
+		margin-top: 0;
+		padding: 0;
+	}
 }
 
 .wpnbha figcaption::after {

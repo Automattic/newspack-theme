@@ -14,14 +14,6 @@
 		position: relative;
 	}
 
-	.flag {
-		background: $color__highlight;
-		color: $color__text-main;
-		line-height: 1;
-		padding: 0.3em 0.5em;
-		text-transform: uppercase;
-	}
-
 	button {
 		background: transparent;
 		color: $color__text-light;
@@ -48,6 +40,19 @@
 		display: none;
 	}
 }
+
+/* stylelint-disable selector-type-no-unknown  */
+.sponsor-label,
+amp-script .sponsor-label {
+	.flag {
+		background: $color__highlight;
+		color: $color__text-main;
+		line-height: 1;
+		padding: 0.3em 0.5em;
+		text-transform: uppercase;
+	}
+}
+/* stylelint-enable */
 
 .sponsor-info {
 	background: rgba( 0, 0, 0, 0.8 );
@@ -270,8 +275,11 @@
 }
 
 // Newspack Blocks
+/* stylelint-disable selector-type-no-unknown  */
 .wpnbha,
-.wp-block-newspack-blocks-carousel {
+amp-script .wpnbha,
+.wp-block-newspack-blocks-carousel,
+amp-script .wp-block-newspack-blocks-carousel {
 	.sponsor-label {
 		display: flex;
 	}
@@ -282,12 +290,14 @@
 	}
 }
 
-.wpnbha {
+.wpnbha,
+amp-script .wpnbha {
 	.sponsor-logos {
 		margin: #{0.125 * $size__spacing-unit} 0 #{0.25 * $size__spacing-unit};
 		width: 100%;
 	}
 }
+/* stylelint-enable  */
 
 .wp-block-newspack-blocks-carousel {
 	.sponsor-byline {

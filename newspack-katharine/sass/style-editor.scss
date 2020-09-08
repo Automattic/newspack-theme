@@ -34,14 +34,19 @@ Newspack Katharine Editor Styles
 }
 
 .wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-	.post-has-image
+	.post-has-image {
 	.entry-title {
-	background-color: $color__background-body;
-	margin-top: -1.75em;
-	padding: 0.5em 0.25em 0 0;
-	position: relative;
-	width: 85%;
-	z-index: 1;
+		background-color: $color__background-body;
+		margin-top: -1.75em;
+		padding: 0.5em 0.25em 0 0;
+		position: relative;
+		width: 85%;
+		z-index: 1;
+	}
+	.sponsor-label + .entry-title {
+		margin-top: 0;
+		padding: 0;
+	}
 }
 
 .wp-block-newspack-blocks-homepage-articles figcaption::after {
