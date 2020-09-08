@@ -215,12 +215,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			array(
 				array(
 					'name'     => __( 'Primary to primary variation', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $primary_color ) . ' 0%, ' . esc_attr( $primary_color_variation ) . ' 100% )',
+					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( newspack_hex_to_rgb( $primary_color ) ) . ' 0%, ' . esc_attr( newspack_hex_to_rgb( $primary_color_variation ) ) . ' 100% )',
 					'slug'     => 'grad-1',
 				),
 				array(
 					'name'     => __( 'Secondary to secondary variation', 'newspack' ),
-					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( $secondary_color ) . ' 0%, ' . esc_attr( $secondary_color_variation ) . ' 100% )',
+					'gradient' => 'linear-gradient( 135deg, ' . esc_attr( newspack_hex_to_rgb( $secondary_color ) ) . ' 0%, ' . esc_attr( newspack_hex_to_rgb( $secondary_color_variation ) ) . ' 100% )',
 					'slug'     => 'grad-2',
 				),
 				array(
