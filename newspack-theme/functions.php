@@ -210,6 +210,42 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
+		add_theme_support(
+			'editor-gradient-presets',
+			array(
+				array(
+					'name'     => __( 'Black to medium gray', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(17, 17, 17) 0%, rgb(85, 85, 85) 100%)',
+					'slug'     => 'grad-1',
+				),
+				array(
+					'name'     => __( 'Medium gray to light gray', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(85, 85, 85) 0%, rgb(221, 221, 221) 100%)',
+					'slug'     => 'grad-2',
+				),
+				array(
+					'name'     => __( 'Light gray to white', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(221, 221, 221) 0%, rgb(255, 255, 255) 100%)',
+					'slug'     => 'grad-3',
+				),
+				array(
+					'name'     => __( 'Blue to light blue', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(0, 113, 161) 0%, rgb(142, 209, 252) 100%)',
+					'slug'     => 'grad-4',
+				),
+				array(
+					'name'     => __( 'Red to orange', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(207, 46, 46) 0%, rgb(255, 105, 0) 100%)',
+					'slug'     => 'grad-5',
+				),
+				array(
+					'name'     => __( 'Orange to yellow', 'newspack' ),
+					'gradient' => 'linear-gradient(135deg, rgb(255, 105, 0) 0%, rgb(252, 185, 0) 100%)',
+					'slug'     => 'grad-6',
+				),
+			)
+		);
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
