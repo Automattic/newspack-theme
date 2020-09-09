@@ -494,6 +494,14 @@ function newspack_color_with_contrast( $color ) {
 }
 
 /**
+ * Turns hex color value into RGB.
+ */
+function newspack_hex_to_rgb( $hex ) {
+	list( $r, $g, $b ) = sscanf( $hex, '#%02x%02x%02x' );
+	return 'rgb( ' . $r . ', ' . $g . ', ' . $b . ')';
+}
+
+/**
  * Decides which logo to use, based on Customizer settings and current post.
  */
 function newspack_the_custom_logo() {
