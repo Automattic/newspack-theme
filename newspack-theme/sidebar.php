@@ -13,10 +13,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="secondary" class="widget-area">
 	<?php
-		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
 		do_action( 'before_sidebar' );
 		dynamic_sidebar( 'sidebar-1' );
 		do_action( 'after_sidebar' );
-		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 1 );
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
 	?>
 </aside><!-- #secondary -->
