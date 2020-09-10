@@ -1,3 +1,16 @@
+# [1.18.0](https://github.com/Automattic/newspack-theme/compare/v1.17.0...v1.18.0) (2020-09-10)
+
+
+### Bug Fixes
+
+* prevent PHP errors from the time ago functionality ([#1071](https://github.com/Automattic/newspack-theme/issues/1071)) ([38a9feb](https://github.com/Automattic/newspack-theme/commit/38a9feb8f904fd2fd1870677e5d6f6f6dcbab463))
+* update method for getting current time ([#1068](https://github.com/Automattic/newspack-theme/issues/1068)) ([5db474c](https://github.com/Automattic/newspack-theme/commit/5db474c46e1bf32f314eca556f687e87b4d40c62))
+
+
+### Features
+
+* simplified gradient set ([#1060](https://github.com/Automattic/newspack-theme/issues/1060)) ([a9bac04](https://github.com/Automattic/newspack-theme/commit/a9bac0435a872392265d019d8514c42c69c34901))
+
 # [1.17.0](https://github.com/Automattic/newspack-theme/compare/v1.16.0...v1.17.0) (2020-09-08)
 
 
