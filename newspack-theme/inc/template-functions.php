@@ -546,8 +546,7 @@ function newspack_convert_to_time_ago( $post_time, $format ) {
 
 	// Only filter time when $use_time_ago is enabled, and it's not using a machine-readable format (for datetime).
 	if ( true === $use_time_ago && 'Y-m-d\TH:i:sP' !== $format ) {
-		$date         = new DateTime();
-		$current_time = $date->getTimestamp();
+		$current_time = current_time( 'timestamp' ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
 		$org_time     = strtotime( $post->post_date );
 		$cut_off      = get_theme_mod( 'post_time_ago_cut_off', '14' );
 
