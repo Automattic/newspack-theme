@@ -155,32 +155,35 @@
 	}
 
 	article.format-aside {
-		font-family: $font__heading;
-
-		.entry-wrapper {
-			//border: 1px solid rgba(200,200,200,0.5);
-			//padding: #{ 1.5 * $size__spacing-unit };
-		}
-
 		.entry-meta > a,
 		.entry-meta .byline {
 			display: none;
 		}
+	}
 
-		.entry-title {
-			display: flex;
-			align-items: center;
+	&.ts-4,
+	&.ts-5,
+	&.ts-6,
+	&.ts-7,
+	&.ts-8,
+	&.ts-9,
+	&.ts-10 {
+		article.format-aside {
+			.entry-title {
+				font-size: 1em;
+			}
+			.entry-wrapper {
+				font-size: 90%;
+			}
 		}
+	}
 
-		.entry-title::before {
-			background-image: url( 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE3IDNIN2MtMS4xIDAtMS45OS45LTEuOTkgMkw1IDIxbDctMyA3IDNWNWMwLTEuMS0uOS0yLTItMnoiLz48L3N2Zz4=' );
-			content: '';
-			display: inline-block;
-			height: 1.25em;
-			width: 1.25em;
-			margin-right: #{0.25 * $size__spacing-unit};
-			background-size: contain;
-		}
+	&.ts-3 article.format-aside .entry-title {
+		font-size: 0.8em;
+	}
+
+	&.ts-2 article.format-aside .entry-title {
+		font-size: 0.7em;
 	}
 }
 

@@ -171,6 +171,46 @@ figcaption,
 	position: relative;
 }
 
+/** === Homepage Posts === */
+
+.wpnbha {
+	article.format-aside {
+		.entry-meta > a,
+		.entry-meta .byline {
+			display: none;
+		}
+	}
+
+	&.ts-4,
+	&.ts-5,
+	&.ts-6,
+	&.ts-7,
+	&.ts-8,
+	&.ts-9,
+	&.ts-10 {
+		article.format-aside {
+			.entry-title {
+				font-size: 1em;
+			}
+			.entry-wrapper {
+				font-size: 90%;
+			}
+
+			p {
+				font-size: inherit;
+			}
+		}
+	}
+
+	&.ts-3 article.format-aside .entry-title {
+		font-size: 0.8em;
+	}
+
+	&.ts-2 article.format-aside .entry-title {
+		font-size: 0.7em;
+	}
+}
+
 /** === Newspack Carousel === */
 .wp-block-newspack-blocks-carousel h3 a,
 .wp-block-newspack-blocks-carousel h3 a:visited {
