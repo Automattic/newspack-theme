@@ -1,11 +1,4 @@
-const THEMES = [
-	'newspack-joseph',
-	'newspack-katharine',
-	'newspack-nelson',
-	'newspack-sacha',
-	'newspack-scott',
-	'newspack-theme',
-];
+const { THEMES } = require( './scripts/create-child-releases.js' );
 
 module.exports = {
 	branches: [

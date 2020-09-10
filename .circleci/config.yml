@@ -40,8 +40,12 @@ jobs:
       - run:
           name: Release new version
           command: npm run release
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project
 
-  # Reset alpha branch after a release
+  # Reset alpha branch after a release and publish child themes' releases
   post_release:
     docker:
       - image: circleci/node:12
@@ -52,8 +56,11 @@ jobs:
           command: |
             git pull origin release
             git checkout alpha
-            git reset --hard release
+            git reset --hard release --
             git push "https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" --force
+      - run:
+          name: Publish child themes' releases
+          command: node scripts/create-child-releases.js --run
 
 workflows:
   version: 2
