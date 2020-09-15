@@ -1,3 +1,16 @@
+# [1.19.0](https://github.com/Automattic/newspack-theme/compare/v1.18.0...v1.19.0) (2020-09-15)
+
+
+### Bug Fixes
+
+* improve contrast in light grey text ([#1070](https://github.com/Automattic/newspack-theme/issues/1070)) ([ab60940](https://github.com/Automattic/newspack-theme/commit/ab60940cc9e0b41ecbd2f90b389371de543dc640))
+* show credit if credit is set and caption is not ([#1077](https://github.com/Automattic/newspack-theme/issues/1077)) ([54cec99](https://github.com/Automattic/newspack-theme/commit/54cec990d5de6053b94fd8fd9d5a8dac80474c39))
+
+
+### Features
+
+* support aside post format ([#1074](https://github.com/Automattic/newspack-theme/issues/1074)) ([2ff4416](https://github.com/Automattic/newspack-theme/commit/2ff441603f0b0ccab4b5e578302da33676d1c311))
+
 # [1.18.0](https://github.com/Automattic/newspack-theme/compare/v1.17.0...v1.18.0) (2020-09-10)
 
 
