@@ -540,8 +540,7 @@ function newspack_the_custom_logo() {
 /**
  * Change date to 'time ago' format if enabled in the Customizer.
  */
-function newspack_convert_to_time_ago( $post_time, $format ) {
-	global $post;
+function newspack_convert_to_time_ago( $post_time, $format, $post ) {
 	$use_time_ago = get_theme_mod( 'post_time_ago', false );
 
 	// Only filter time when $use_time_ago is enabled, and it's not using a machine-readable format (for datetime).
@@ -563,4 +562,4 @@ function newspack_convert_to_time_ago( $post_time, $format ) {
 	}
 	return $post_time;
 }
-add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
