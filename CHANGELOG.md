@@ -1,3 +1,17 @@
+# [1.20.0](https://github.com/Automattic/newspack-theme/compare/v1.19.0...v1.20.0) (2020-09-22)
+
+
+### Bug Fixes
+
+* argument count for every instance of newspack_convert_to_time_ago ([af062dc](https://github.com/Automattic/newspack-theme/commit/af062dc958055c14fa807f4cc66a56584e731525))
+* relative time filter should use the correct $post object ([8cb31e7](https://github.com/Automattic/newspack-theme/commit/8cb31e777d7972ad85751249503b7dbb314c4af9))
+* update sharing title styles to be more specific ([1bf59ca](https://github.com/Automattic/newspack-theme/commit/1bf59cac9e97ac67ab051e4446ba1a1b0d26d140))
+
+
+### Features
+
+* update facebook's svg icon ([#1082](https://github.com/Automattic/newspack-theme/issues/1082)) ([384b09b](https://github.com/Automattic/newspack-theme/commit/384b09b4128928256faccc162da80412cd8e2aa6))
+
 # [1.19.0](https://github.com/Automattic/newspack-theme/compare/v1.18.0...v1.19.0) (2020-09-15)
 
 
