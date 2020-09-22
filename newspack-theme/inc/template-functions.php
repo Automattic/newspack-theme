@@ -220,17 +220,17 @@ function newspack_get_the_archive_title() {
 	} elseif ( is_author() ) {
 		$title = esc_html__( 'Author Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
-		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 		$title = esc_html__( 'Yearly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'Y', 'yearly archives date format', 'newspack' ) ) . '</span>';
-		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 	} elseif ( is_month() ) {
-		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 		$title = esc_html__( 'Monthly Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date( _x( 'F Y', 'monthly archives date format', 'newspack' ) ) . '</span>';
-		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 	} elseif ( is_day() ) {
-		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 		$title = esc_html__( 'Daily Archives: ', 'newspack' ) . '<span class="page-description">' . get_the_date() . '</span>';
-		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+		add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 	} elseif ( is_post_type_archive() ) {
 		$title = esc_html__( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
 	} elseif ( is_tax() ) {
@@ -540,8 +540,7 @@ function newspack_the_custom_logo() {
 /**
  * Change date to 'time ago' format if enabled in the Customizer.
  */
-function newspack_convert_to_time_ago( $post_time, $format ) {
-	global $post;
+function newspack_convert_to_time_ago( $post_time, $format, $post ) {
 	$use_time_ago = get_theme_mod( 'post_time_ago', false );
 
 	// Only filter time when $use_time_ago is enabled, and it's not using a machine-readable format (for datetime).
@@ -563,4 +562,4 @@ function newspack_convert_to_time_ago( $post_time, $format ) {
 	}
 	return $post_time;
 }
-add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 2 );
+add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
