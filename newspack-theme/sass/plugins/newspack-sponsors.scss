@@ -7,16 +7,11 @@
 	display: inline-flex;
 	position: relative;
 
-	.flag,
 	button {
 		align-items: center;
-		display: inline-flex;
-		position: relative;
-	}
-
-	button {
 		background: transparent;
 		color: $color__text-light;
+		display: inline-flex;
 		margin-left: #{0.25 * $size__spacing-unit};
 		padding: 0;
 		position: relative;
