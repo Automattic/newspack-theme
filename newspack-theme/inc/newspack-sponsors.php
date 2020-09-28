@@ -127,7 +127,6 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 			<span class="cat-links sponsor-label" [class]="infoVisible ? 'cat-links sponsor-label show-info' : 'cat-links sponsor-label'">
 				<span class="flag">
 					<?php
-						echo wp_kses( newspack_get_icon_svg( 'money', 16 ), newspack_sanitize_svgs() );
 						// If multiple sponsors, use Sponsor Flag from the first one in the array.
 						echo esc_html( $sponsors[0]['sponsor_flag'] );
 					?>
