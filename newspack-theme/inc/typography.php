@@ -40,6 +40,7 @@ function newspack_custom_typography_css() {
 		.pagination .nav-links,
 		.sticky-post,
 		.site-title,
+		.site-description,
 		.site-info,
 		#cancel-comment-reply-link,
 		.entry .entry-content .jp-relatedposts-i2 a,

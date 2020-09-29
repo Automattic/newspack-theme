@@ -88,10 +88,6 @@ function newspack_custom_colors_css() {
 			.mobile-sidebar a:visited,
 			.mobile-sidebar .nav1 .sub-menu > li > a,
 			.mobile-sidebar .nav1 ul.main-menu > li > a,
-			.site-header .dd-menu .sub-menu a:hover,
-			.site-header .dd-menu .sub-menu a:focus,
-			.site-header .dd-menu .sub-menu > li.menu-item-has-children a:hover + .submenu-expand,
-			.site-header .dd-menu .sub-menu > li.menu-item-has-children a:focus + .submenu-expand,
 			.highlight-menu .menu-label,
 			/* Header default background; default height */
 			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
@@ -169,15 +165,6 @@ function newspack_custom_colors_css() {
 			}
 
 			/* Set primary variation background color */
-
-			.site-header .dd-menu .sub-menu > li > a:hover,
-			.site-header .dd-menu .sub-menu > li > a:focus,
-			.site-header .dd-menu .sub-menu > li > a:hover:after,
-			.site-header .dd-menu .sub-menu > li > a:focus:after,
-			.site-header .dd-menu .sub-menu > li > .menu-item-link-return:hover,
-			.site-header .dd-menu .sub-menu > li > .menu-item-link-return:focus,
-			.site-header .dd-menu .sub-menu > li > a:not(.submenu-expand):hover,
-			.site-header .dd-menu .sub-menu > li > a:not(.submenu-expand):focus,
 			.entry .entry-content .has-primary-variation-background-color,
 			.entry .entry-content *[class^="wp-block-"].has-primary-variation-background-color,
 			.entry .entry-content *[class^="wp-block-"] .has-primary-variation-background-color,
