@@ -1,3 +1,11 @@
+## [1.20.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.20.0...v1.20.1-alpha.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* apply custom font to tagline ([84d11de](https://github.com/Automattic/newspack-theme/commit/84d11de3458fa315c0dfd8496d0c532ae8080205))
+* remove $ sign from sponsored flag ([d9f71f0](https://github.com/Automattic/newspack-theme/commit/d9f71f0e2ed8438c876571e3c3199f40b6a7697b))
+
 # [1.20.0](https://github.com/Automattic/newspack-theme/compare/v1.19.0...v1.20.0) (2020-09-22)
 
 
