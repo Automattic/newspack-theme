@@ -1,3 +1,10 @@
+## [1.20.1-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.20.1-alpha.1...v1.20.1-alpha.2) (2020-09-29)
+
+
+### Bug Fixes
+
+* improve contrast on hover in dropdown menus ([#1090](https://github.com/Automattic/newspack-theme/issues/1090)) ([422c425](https://github.com/Automattic/newspack-theme/commit/422c425eb2f3c942c835198127bcd03be612c210))
+
 ## [1.20.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.20.0...v1.20.1-alpha.1) (2020-09-29)
 
 
