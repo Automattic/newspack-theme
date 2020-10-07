@@ -1,3 +1,10 @@
+## [1.20.2](https://github.com/Automattic/newspack-theme/compare/v1.20.1...v1.20.2) (2020-10-07)
+
+
+### Bug Fixes
+
+* make sure footer inherits custom fonts in Newspack Scott ([#1091](https://github.com/Automattic/newspack-theme/issues/1091)) ([e383eb9](https://github.com/Automattic/newspack-theme/commit/e383eb9cb51ba27a0e6c7ff71a9e33bd57183b62))
+
 ## [1.20.1](https://github.com/Automattic/newspack-theme/compare/v1.20.0...v1.20.1) (2020-09-29)
 
 
