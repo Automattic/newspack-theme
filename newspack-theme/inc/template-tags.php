@@ -201,7 +201,7 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 		$primary_cat_enabled = get_theme_mod( 'post_primary_category', true );
 
 		// Only display Yoast primary category if set.
-		if ( class_exists( 'WPSEO_Primary_Term' ) && true === $primary_cat_enabled ) {
+		if ( class_exists( 'WPSEO_Primary_Term' ) && $primary_cat_enabled ) {
 			$primary_term = new WPSEO_Primary_Term( 'category', get_the_ID() );
 			$category_id = $primary_term->get_primary_term();
 			if ( $category_id ) {
