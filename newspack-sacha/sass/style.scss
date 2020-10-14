@@ -39,24 +39,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-// Header solid background; header short height
-.h-sb.h-sh {
-	.site-header .nav1 .main-menu .sub-menu {
-		a {
-			background-color: $color__text-main;
-
-			&:hover,
-			&:focus {
-				background-color: $color__primary;
-			}
-		}
-
-		&::before {
-			border-color: transparent transparent $color__text-main transparent;
-		}
-	}
-}
-
 // Subpage header with a solid background
 .h-sub.h-sb.single-featured-image-beside {
 	@include media( tablet ) {

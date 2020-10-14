@@ -46,13 +46,6 @@ function newspack_sacha_custom_colors_css() {
 	';
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
-		$theme_css .= '
-			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
-			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
-				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
-			}
-		';
-
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$theme_css .= '
 				/* Header solid background */
