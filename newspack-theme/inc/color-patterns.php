@@ -457,7 +457,7 @@ function newspack_custom_colors_css() {
 		$editor_css .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title,
-			.block-editor-block-list__layout .block-editor-block-list__block .accent-header {
+			.block-editor-block-list__layout .block-editor-block-list__block.accent-header {
 				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 			}
 		';

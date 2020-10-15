@@ -11,7 +11,8 @@ Newspack Katharine Editor Styles
 .article-section-title {
 	color: $color__primary;
 	font-size: $font__size-xs;
-	margin: 0 0 #{1.5 * $size__spacing-unit};
+	margin-bottom: #{1.5 * $size__spacing-unit};
+	margin-top: 0;
 
 	&::before {
 		background-color: $color__primary;
