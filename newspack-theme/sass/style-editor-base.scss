@@ -245,7 +245,8 @@ figcaption,
 	.entry-meta a,
 	.entry-meta a:visited,
 	.entry-meta .byline a,
-	.entry-meta .byline a:visited {
+	.entry-meta .byline a:visited,
+	cite {
 		color: inherit;
 	}
 
@@ -498,6 +499,10 @@ figcaption,
 			content: '\2014';
 			margin-right: #{0.25 * $size__spacing-unit};
 		}
+	}
+
+	div.wp-block-pullquote__citation {
+		opacity: 0.8;
 	}
 
 	em {
