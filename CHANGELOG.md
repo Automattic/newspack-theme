@@ -1,3 +1,20 @@
+# [1.21.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.20.2...v1.21.0-alpha.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* correct dropdown colors for Newspack Katharine ([#1110](https://github.com/Automattic/newspack-theme/issues/1110)) ([01ee559](https://github.com/Automattic/newspack-theme/commit/01ee559fce5275b4248ae1f731dd277f6e779cde))
+* correct dropdown colors for Newspack Sacha ([#1111](https://github.com/Automattic/newspack-theme/issues/1111)) ([3748d6f](https://github.com/Automattic/newspack-theme/commit/3748d6f7a091911ebe3cd4001797044ed36829b9))
+* make pullquote citations inherit correct color ([#1116](https://github.com/Automattic/newspack-theme/issues/1116)) ([f537fd6](https://github.com/Automattic/newspack-theme/commit/f537fd69de886715b5fa01ff1bf7dd769ddc6271))
+* make sure accent header in the editor matches the front end ([#1112](https://github.com/Automattic/newspack-theme/issues/1112)) ([11e4970](https://github.com/Automattic/newspack-theme/commit/11e49709b174b506c8c25add7f2ed04a08b6c0da))
+* prevent captions from getting cut off with image-beside setting ([#1113](https://github.com/Automattic/newspack-theme/issues/1113)) ([2d779a8](https://github.com/Automattic/newspack-theme/commit/2d779a87495826f7ad95e48de0d6b35e446297b9))
+* target only smaller screen sizes for image block caption fix ([#1109](https://github.com/Automattic/newspack-theme/issues/1109)) ([0f8a7bc](https://github.com/Automattic/newspack-theme/commit/0f8a7bc6448c6abe0b74ede975ecea65831c7835))
+
+
+### Features
+
+* add option to turn off Yoast's primary category functionality ([#1104](https://github.com/Automattic/newspack-theme/issues/1104)) ([95083c7](https://github.com/Automattic/newspack-theme/commit/95083c79611e792155a1df4ca53e1ba523280eb2))
+
 ## [1.20.2](https://github.com/Automattic/newspack-theme/compare/v1.20.1...v1.20.2) (2020-10-07)
 
 
