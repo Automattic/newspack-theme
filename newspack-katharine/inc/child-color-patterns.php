@@ -79,11 +79,6 @@ function newspack_katharine_custom_colors_css() {
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
 			}
-
-			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:hover,
-			.h-sb.h-sh .site-header .nav1 .main-menu .sub-menu a:focus {
-				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
-			}
 		';
 
 
