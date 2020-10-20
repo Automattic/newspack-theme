@@ -723,6 +723,25 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to turn off Yoast's Primary Category functionality.
+	if ( class_exists( 'WPSEO_Primary_Term' ) ) {
+		$wp_customize->add_setting(
+			'post_primary_category',
+			array(
+				'default'           => 'true',
+				'sanitize_callback' => 'newspack_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'post_primary_category',
+			array(
+				'type'    => 'checkbox',
+				'label'   => __( 'Use Yoast\'s primary category functionality', 'newspack' ),
+				'section' => 'post_default_settings',
+			)
+		);
+	}
+
 	/**
 	 * Comments settings
 	 */
