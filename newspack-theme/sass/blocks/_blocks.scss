@@ -335,10 +335,12 @@
 
 	cite {
 		display: inline-block;
+		color: inherit;
 		font-family: $font__heading;
+		font-size: $font__size-xs;
+		opacity: 0.8;
 		line-height: 1.6;
 		text-transform: none;
-		font-size: $font__size-xs;
 
 		&::before {
 			content: '\2014';
@@ -738,16 +740,22 @@
 			text-align: left;
 		}
 
-		.alignleft,
-		.aligncenter,
-		.alignright {
-			figcaption {
-				display: block;
+		@include media( mobileonly ) {
+			.alignleft,
+			.aligncenter,
+			.alignright {
+				figcaption {
+					display: block;
+				}
 			}
-		}
 
-		.aligncenter {
-			display: block;
+			.aligncenter {
+				display: block;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
 		}
 	}
 
