@@ -740,16 +740,22 @@
 			text-align: left;
 		}
 
-		.alignleft,
-		.aligncenter,
-		.alignright {
-			figcaption {
-				display: block;
+		@include media( mobileonly ) {
+			.alignleft,
+			.aligncenter,
+			.alignright {
+				figcaption {
+					display: block;
+				}
 			}
-		}
 
-		.aligncenter {
-			display: block;
+			.aligncenter {
+				display: block;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
 		}
 	}
 
