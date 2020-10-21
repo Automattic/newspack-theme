@@ -19,7 +19,7 @@ get_header();
 				the_post();
 
 				// Template part for large featured images.
-				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) :
+				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) && is_singular( 'post' ) ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :
 				?>
@@ -37,7 +37,7 @@ get_header();
 					}
 
 					// Place smaller featured images inside of 'content' area.
-					if ( 'small' === newspack_featured_image_position() ) :
+					if ( 'small' === newspack_featured_image_position() || ! is_singular( 'post' ) ) :
 						newspack_post_thumbnail();
 					endif;
 

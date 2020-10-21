@@ -140,12 +140,14 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds special classes, depending on the featured image position.
-	if ( 'behind' === newspack_featured_image_position() ) {
-		$classes[] = 'single-featured-image-behind';
-	} elseif ( 'beside' === newspack_featured_image_position() ) {
-		$classes[] = 'single-featured-image-beside';
-	} elseif ( is_single() ) {
-		$classes[] = 'single-featured-image-default';
+	if ( is_singular( 'post' ) ) {
+		if ( 'behind' === newspack_featured_image_position() ) {
+			$classes[] = 'single-featured-image-behind';
+		} elseif ( 'beside' === newspack_featured_image_position() ) {
+			$classes[] = 'single-featured-image-beside';
+		} elseif ( is_single() ) {
+			$classes[] = 'single-featured-image-default';
+		}
 	}
 
 	// Adds a class if singular post has a large featured image
