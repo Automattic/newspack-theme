@@ -38,8 +38,8 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 			$position = $default_image_pos;
 		}
 
-		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large.
-		if ( 'large' === $position && 1200 > $img_width ) {
+		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large, or if not a post post-type.
+		if ( ( 'large' === $position && 1200 > $img_width ) || ! is_singular( 'post' ) ) {
 			$position = 'small';
 		}
 
@@ -140,14 +140,12 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds special classes, depending on the featured image position.
-	if ( is_singular( 'post' ) ) {
-		if ( 'behind' === newspack_featured_image_position() ) {
-			$classes[] = 'single-featured-image-behind';
-		} elseif ( 'beside' === newspack_featured_image_position() ) {
-			$classes[] = 'single-featured-image-beside';
-		} elseif ( is_single() ) {
-			$classes[] = 'single-featured-image-default';
-		}
+	if ( 'behind' === newspack_featured_image_position() ) {
+		$classes[] = 'single-featured-image-behind';
+	} elseif ( 'beside' === newspack_featured_image_position() ) {
+		$classes[] = 'single-featured-image-beside';
+	} elseif ( is_single() ) {
+		$classes[] = 'single-featured-image-default';
 	}
 
 	// Adds a class if singular post has a large featured image
