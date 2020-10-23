@@ -340,8 +340,11 @@ div.sharedaddy .sd-social h3.sd-title,
 	}
 }
 
-.page:not( .home ) article.page > .post-thumbnail {
-	margin-top: #{1.5 * $size__spacing-unit};
+.page {
+	.entry-header + .post-thumbnail,
+	.main-content > .post-thumbnail:first-child {
+		margin-top: #{1.5 * $size__spacing-unit};
+	}
 }
 
 .page.home .entry .entry-content {
@@ -582,6 +585,14 @@ div.sharedaddy .sd-social h3.sd-title,
 	.entry-meta .byline {
 		display: inline-block;
 		margin-right: $size__spacing-unit;
+	}
+}
+
+@include media( tablet ) {
+	.page .featured-image-behind {
+		.entry-header {
+			margin-bottom: #{3 * $size__spacing-unit};
+		}
 	}
 }
 
