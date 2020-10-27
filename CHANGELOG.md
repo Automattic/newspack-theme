@@ -1,3 +1,11 @@
+## [1.21.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.21.0...v1.21.1-alpha.1) (2020-10-27)
+
+
+### Bug Fixes
+
+* avoid error with AMP fallback when search is present ([#1121](https://github.com/Automattic/newspack-theme/issues/1121)) ([d26a763](https://github.com/Automattic/newspack-theme/commit/d26a763e26c437101e834606349bfa11ef2f4239))
+* limit featured image placement to posts, not custom post types ([#1120](https://github.com/Automattic/newspack-theme/issues/1120)) ([3876357](https://github.com/Automattic/newspack-theme/commit/38763578857855a85b498de62725cf97f134af62))
+
 # [1.21.0](https://github.com/Automattic/newspack-theme/compare/v1.20.2...v1.21.0) (2020-10-20)
 
 
