@@ -38,8 +38,8 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 			$position = $default_image_pos;
 		}
 
-		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large.
-		if ( 'large' === $position && 1200 > $img_width ) {
+		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large, or if not a post post-type.
+		if ( ( 'large' === $position && 1200 > $img_width ) || ! is_singular( 'post' ) ) {
 			$position = 'small';
 		}
 
