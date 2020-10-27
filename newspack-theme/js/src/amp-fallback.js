@@ -7,33 +7,36 @@
 ( function() {
 	// Search toggle.
 	const headerContain = document.getElementById( 'masthead' ),
-		headerSearch = document.getElementById( 'header-search' ),
-		headerSearchInput = headerSearch.getElementsByTagName( 'input' )[ 0 ],
-		searchToggle = document.getElementById( 'search-toggle' ),
-		searchToggleTextContain = searchToggle.getElementsByTagName( 'span' )[ 0 ],
-		searchToggleTextDefault = searchToggleTextContain.innerText;
+		searchToggle = document.getElementById( 'search-toggle' );
 
-	searchToggle.addEventListener(
-		'click',
-		function() {
-			// Toggle the search visibility.
-			headerContain.classList.toggle( 'hide-header-search' );
+	if ( null !== searchToggle ) {
+		const headerSearch = document.getElementById( 'header-search' ),
+			headerSearchInput = headerSearch.getElementsByTagName( 'input' )[ 0 ],
+			searchToggleTextContain = searchToggle.getElementsByTagName( 'span' )[ 0 ],
+			searchToggleTextDefault = searchToggleTextContain.innerText;
 
-			// Toggle screen reader text label and aria settings.
-			if ( searchToggleTextDefault === searchToggleTextContain.innerText ) {
-				searchToggleTextContain.innerText = newspackScreenReaderText.close_search;
-				headerSearch.setAttribute( 'aria-expanded', 'true' );
-				searchToggle.setAttribute( 'aria-expanded', 'true' );
-				headerSearchInput.focus();
-			} else {
-				searchToggleTextContain.innerText = searchToggleTextDefault;
-				headerSearch.setAttribute( 'aria-expanded', 'false' );
-				searchToggle.setAttribute( 'aria-expanded', 'false' );
-				searchToggle.focus();
-			}
-		},
-		false
-	);
+		searchToggle.addEventListener(
+			'click',
+			function() {
+				// Toggle the search visibility.
+				headerContain.classList.toggle( 'hide-header-search' );
+
+				// Toggle screen reader text label and aria settings.
+				if ( searchToggleTextDefault === searchToggleTextContain.innerText ) {
+					searchToggleTextContain.innerText = newspackScreenReaderText.close_search;
+					headerSearch.setAttribute( 'aria-expanded', 'true' );
+					searchToggle.setAttribute( 'aria-expanded', 'true' );
+					headerSearchInput.focus();
+				} else {
+					searchToggleTextContain.innerText = searchToggleTextDefault;
+					headerSearch.setAttribute( 'aria-expanded', 'false' );
+					searchToggle.setAttribute( 'aria-expanded', 'false' );
+					searchToggle.focus();
+				}
+			},
+			false
+		);
+	}
 
 	// Menu toggle variables.
 	const mobileToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
