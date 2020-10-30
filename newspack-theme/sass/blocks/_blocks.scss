@@ -464,7 +464,8 @@
 	}
 }
 
-.entry .entry-content {
+.entry .entry-content,
+.newspack-inline-popup {
 	/*
 	 * Unset nested content selector styles
 	 * - Prevents layout styles from cascading too deeply
