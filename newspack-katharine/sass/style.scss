@@ -333,21 +333,19 @@ figcaption,
 	}
 }
 
-.entry .entry-content {
-	.wp-block-embed figcaption,
-	.wp-block-image figcaption,
-	.wp-block-audio figcaption,
-	.wp-block-video figcaption,
-	.wp-caption-text {
-		padding-left: 0;
-		padding-right: 0;
-		text-align: left;
-	}
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-video figcaption,
+.wp-caption-text {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: left;
+}
 
-	.wp-block-separator,
-	hr {
-		border-top: 1px dotted $color__text-main;
-	}
+.wp-block-separator,
+hr {
+	border-top: 1px dotted $color__text-main;
 }
 
 // Archives

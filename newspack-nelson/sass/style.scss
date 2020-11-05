@@ -228,7 +228,7 @@ h4,
 
 .accent-header,
 .wp-block-columns .wp-block-column > .accent-header,
-.entry-content .wpnbha .article-section-title {
+.wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
 		margin-bottom: #{1.5 * $size__spacing-unit};
@@ -406,17 +406,15 @@ blockquote {
 	}
 }
 
-.entry .entry-content {
-	.wp-block-separator {
-		border-top: 2px solid $color__text-main;
+.wp-block-separator {
+	border-top: 2px solid $color__text-main;
 
-		&:not( .is-style-dots ):not( .is-style-wide ) {
-			border-top: 5px solid $color__text-main;
-		}
+	&:not( .is-style-dots ):not( .is-style-wide ) {
+		border-top: 5px solid $color__text-main;
+	}
 
-		&.is-style-dots::before {
-			color: $color__text-main;
-		}
+	&.is-style-dots::before {
+		color: $color__text-main;
 	}
 }
 
