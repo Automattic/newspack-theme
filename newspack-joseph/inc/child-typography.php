@@ -35,7 +35,7 @@ function newspack_joseph_custom_typography_css() {
 			.widget,
 			.widget-title.accent-header,
 			.accent-header,
-			.wp-block-button__link,
+			.wp-block-button .wp-block-button__link,
 			.entry .article-section-title,
 			button,
 			input[type="button"],
