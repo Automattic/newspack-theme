@@ -44,7 +44,7 @@ function newspack_katharine_custom_colors_css() {
 		}
 
 		.accent-header:before,
-		.site-content .wpnbha .article-section-title:before,
+		div.wpnbha .article-section-title:before,
 		.cat-links:before,
 		.archive .page-title:before,
 		figcaption:after,
