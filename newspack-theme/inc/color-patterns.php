@@ -21,7 +21,7 @@ function newspack_custom_colors_css() {
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color                = get_theme_mod( 'header_color_hex', '#666666' );
 			$header_color_contrast       = newspack_get_color_contrast( $header_color );
-			$primary_menu_color          = get_theme_mod( 'header_primary_menu_color_hex', '#4a4a4a' );
+			$primary_menu_color          = get_theme_mod( 'header_primary_menu_color_hex', '' );
 			$primary_menu_color_contrast = newspack_get_color_contrast( $primary_menu_color );
 		} else {
 			$header_color          = $primary_color;
@@ -245,7 +245,7 @@ function newspack_custom_colors_css() {
 				}
 			';
 
-			if ( isset( $primary_menu_color ) && '#4a4a4a' !== $primary_menu_color ) {
+			if ( isset( $primary_menu_color ) && '' !== $primary_menu_color ) {
 				$theme_css .= '
 					.h-sb .bottom-header-contain {
 						background: ' . esc_html( $primary_menu_color ) . ';
