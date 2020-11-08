@@ -465,6 +465,50 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Footer background_color
+	 */
+	$wp_customize->add_setting(
+		'footer_color',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_color_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'footer_color',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Footer Background Color', 'newspack' ),
+			'choices' => array(
+				'default' => _x( 'Default', 'footer background color', 'newspack' ),
+				'custom'  => _x( 'Custom', 'footer background color', 'newspack' ),
+			),
+			'section' => 'colors',
+		)
+	);
+
+	// Add header color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'footer_color_hex',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the footer.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
 	// Header - add option to hide tagline.
 	$wp_customize->add_setting(
 		'header_display_tagline',
