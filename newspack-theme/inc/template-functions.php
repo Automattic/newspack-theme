@@ -146,6 +146,8 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'single-featured-image-behind';
 	} elseif ( 'beside' === newspack_featured_image_position() ) {
 		$classes[] = 'single-featured-image-beside';
+	} elseif ( 'above' === newspack_featured_image_position() ) {
+		$classes[] = 'single-featured-image-above';
 	} elseif ( is_single() ) {
 		$classes[] = 'single-featured-image-default';
 	}

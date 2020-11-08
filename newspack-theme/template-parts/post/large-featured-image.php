@@ -41,6 +41,15 @@ if ( 'behind' === newspack_featured_image_position() ) :
 			<figcaption><span><?php echo wp_kses_post( $caption ); ?></span></figcaption>
 		<?php endif; ?>
 	</div><!-- .featured-image-behind -->
+
+<?php elseif ( 'above' === newspack_featured_image_position() ) : ?>
+
+	<?php newspack_post_thumbnail(); ?>
+
+	<header class="entry-header">
+		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+	</header>
+
 <?php else : ?>
 
 	<header class="entry-header">
