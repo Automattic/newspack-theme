@@ -101,7 +101,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 			flex-wrap: wrap;
 		}
 
-		&.single-featured-image-default .byline {
+		&.single-featured-image-default .byline,
+		&.single-featured-image-above .byline {
 			margin-right: #{1.5 * $size__spacing-unit};
 		}
 	}
