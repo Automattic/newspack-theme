@@ -44,11 +44,13 @@ if ( 'behind' === newspack_featured_image_position() ) :
 
 <?php elseif ( 'above' === newspack_featured_image_position() ) : ?>
 
-	<?php newspack_post_thumbnail(); ?>
+	<div class="featured-image-above">
+		<?php newspack_post_thumbnail(); ?>
 
-	<header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-	</header>
+		<header class="entry-header">
+			<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+		</header>
+	</div><!-- featured-image-above -->
 
 <?php else : ?>
 
