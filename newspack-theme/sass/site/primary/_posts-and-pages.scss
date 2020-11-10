@@ -6,6 +6,10 @@
 	display: none;
 }
 
+.show-updated .entry-header .updated:not( .published ) {
+	display: inline-block;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 calc( 1.5 * #{$size__spacing-unit} );
