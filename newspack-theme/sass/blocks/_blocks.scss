@@ -830,8 +830,8 @@ hr {
 
 //! Table
 .wp-block-table {
-	th,
-	td {
+	&.is-style-stripes td,
+	&.is-style-stripes th {
 		border-color: $color__text-light;
 	}
 
