@@ -1,3 +1,11 @@
+## [1.21.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.21.1...v1.21.2-alpha.1) (2020-11-11)
+
+
+### Bug Fixes
+
+* correct caption width issue ([#1129](https://github.com/Automattic/newspack-theme/issues/1129)) ([59e7693](https://github.com/Automattic/newspack-theme/commit/59e769391ed519c7a139550e79757f9fd9835457))
+* use feat img function to preserve backwards compat ([0f1583c](https://github.com/Automattic/newspack-theme/commit/0f1583cc3ff1a378bc879b048984d3b8d9030ddf))
+
 ## [1.21.1](https://github.com/Automattic/newspack-theme/compare/v1.21.0...v1.21.1) (2020-10-27)
 
 
