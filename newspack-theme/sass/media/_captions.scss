@@ -23,3 +23,21 @@ figcaption,
 	font-family: $font__heading;
 	line-height: $font__line-height-pre;
 }
+
+.entry-content {
+	.wp-caption-text,
+	figcaption {
+		max-width: 780px;
+	}
+}
+
+.newspack-front-page,
+.post-template-single-wide,
+.page-template-single-wide {
+	.entry-content {
+		.wp-caption-text,
+		figcaption {
+			max-width: 1200px;
+		}
+	}
+}
