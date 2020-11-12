@@ -51,7 +51,7 @@ $underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 				<?php
 				if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) {
 					// Get label for native archive sponsors.
-					newspack_sponsor_label( $native_sponsors );
+					newspack_sponsor_label( $native_sponsors, null, true );
 				}
 				?>
 
