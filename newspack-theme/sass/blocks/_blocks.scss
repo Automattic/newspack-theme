@@ -320,7 +320,7 @@ p.has-background {
 	}
 }
 
-.entry-content .wp-block-cover {
+.wp-block-cover .wp-block-cover__inner-container {
 	a,
 	a:hover,
 	a:visited {
@@ -550,7 +550,7 @@ p.has-background {
 	text-decoration: none;
 }
 
-.is-style-outline .wp-block-button__link, // legacy selector
+.is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline {
 	@include button-all-transition;
 	border-width: 2px;
@@ -830,8 +830,8 @@ hr {
 
 //! Table
 .wp-block-table {
-	th,
-	td {
+	&.is-style-stripes td,
+	&.is-style-stripes th {
 		border-color: $color__text-light;
 	}
 
@@ -844,6 +844,7 @@ hr {
 //! File
 .wp-block-file {
 	font-family: $font__heading;
+	font-size: $font__size-sm;
 
 	.wp-block-file__button {
 		display: table;
@@ -852,7 +853,7 @@ hr {
 		border-radius: 5px;
 		background: $color__background-button;
 		font-family: $font__heading;
-		font-size: $font__size-base;
+		font-size: inherit;
 		line-height: $font__line-height-heading;
 		text-decoration: none;
 		font-weight: bold;
@@ -860,11 +861,6 @@ hr {
 		color: #fff;
 		margin-left: 0;
 		margin-top: calc( 0.75 * #{$size__spacing-unit} );
-
-		@include media( desktop ) {
-			font-size: $font__size-base;
-			padding: ( $size__spacing-unit * 0.875 ) ( $size__spacing-unit * 1.5 );
-		}
 
 		&:hover,
 		&:focus {
@@ -1009,49 +1005,57 @@ hr {
 //! Custom background colors
 .has-primary-background-color,
 .has-primary-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-primary-background-color {
+.wp-block-pullquote.is-style-solid-color.has-primary-background-color,
+.is-style-outline .wp-block-button__link.has-primary-background-color:not( :hover ) {
 	background-color: $color__primary;
 }
 
 .has-primary-variation-background-color,
 .has-primary-variation-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-primary-variation-background-color {
+.wp-block-pullquote.is-style-solid-color.has-primary-variation-background-color,
+.is-style-outline .wp-block-button__link.has-primary-variation-background-color:not( :hover ) {
 	background-color: $color__primary-variation;
 }
 
 .has-secondary-background-color,
 .has-secondary-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
+.wp-block-pullquote.is-style-solid-color.has-secondary-background-color,
+.is-style-outline .wp-block-button__link.has-secondary-background-color:not( :hover ) {
 	background-color: $color__secondary;
 }
 
 .has-secondary-variation-background-color,
 .has-secondary-variation-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-secondary-variation-background-color {
+.wp-block-pullquote.is-style-solid-color.has-secondary-variation-background-color,
+.is-style-outline .wp-block-button__link.has-secondary-variation-background-color:not( :hover ) {
 	background-color: $color__secondary-variation;
 }
 
 .has-dark-gray-background-color,
 .has-dark-gray-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
+.wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color,
+.is-style-outline .wp-block-button__link.has-dark-gray-background-color:not( :hover ) {
 	background-color: #111;
 }
 
 .has-medium-gray-background-color,
 .has-medium-gray-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-medium-gray-background-color {
+.wp-block-pullquote.is-style-solid-color.has-medium-gray-background-color,
+.is-style-outline .wp-block-button__link.has-medium-gray-background-color:not( :hover ) {
 	background-color: #767676;
 }
 
 .has-light-gray-background-color,
 .has-light-gray-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
+.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color,
+.is-style-outline .wp-block-button__link.has-light-gray-background-color:not( :hover ) {
 	background-color: #eee;
 }
 
 .has-white-background-color,
 .has-white-background-color.has-background-dim,
-.wp-block-pullquote.is-style-solid-color.has-white-background-color {
+.wp-block-pullquote.is-style-solid-color.has-white-background-color,
+.is-style-outline .wp-block-button__link.has-white-background-color:not( :hover ) {
 	background-color: #fff;
 }
 
