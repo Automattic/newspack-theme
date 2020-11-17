@@ -18,7 +18,7 @@ $underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 
 	<div class="entry-container">
 		<?php
-		if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) {
+		if ( ! empty( $native_sponsors ) ) {
 			// Get label for native post sponsors.
 			newspack_sponsor_label( $native_sponsors );
 		}
