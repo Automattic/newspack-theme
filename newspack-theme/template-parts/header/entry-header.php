@@ -16,8 +16,8 @@ $underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 <?php if ( is_singular() ) : ?>
 	<?php
 	if ( ! is_page() ) :
-		if ( ! empty( $all_sponsors ) ) {
-			newspack_sponsor_label( $all_sponsors, null, true );
+		if ( ! empty( $native_sponsors ) ) {
+			newspack_sponsor_label( $native_sponsors, null, true );
 		} else {
 			newspack_categories();
 		}
