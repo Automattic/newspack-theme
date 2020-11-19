@@ -529,6 +529,8 @@ p.has-background {
 //! Button
 .wp-block-button__link {
 	background-color: $color__background-button;
+	color: #fff;
+
 	@include button-transition;
 	border: none;
 	border-radius: 5px;
@@ -541,7 +543,7 @@ p.has-background {
 	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
 	outline: none;
 
-	&:not( .has-text-color ) {
+	&:visited {
 		color: #fff;
 	}
 }
@@ -569,7 +571,7 @@ p.has-background {
 		&:hover,
 		&:active,
 		&:focus {
-			color: white;
+			color: #fff;
 			background: $color__background-button-hover;
 		}
 
@@ -1063,7 +1065,8 @@ hr {
 .has-primary-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p,
-.wp-block-button.has-primary-color,
+.wp-block-button__link.has-primary-color,
+.wp-block-button__link.has-primary-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-primary-color:not( :hover ), //legacy selector
 .wp-block-button__link.is-style-outline.has-primary-color:not( :hover ) {
 	color: $color__primary;
@@ -1072,7 +1075,8 @@ hr {
 .has-primary-variation-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-primary-variation-color p,
-.wp-block-button.has-primary-variation-color,
+.wp-block-button__link.has-primary-variation-color,
+.wp-block-button__link.has-primary-variation-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-primary-variation-color:not( :hover ), //legacy selector
 .wp-block-button__link.is-style-outline.has-primary-variation-color:not( :hover ) {
 	color: $color__primary-variation;
@@ -1081,7 +1085,8 @@ hr {
 .has-secondary-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p,
-.wp-block-button.has-secondary-color,
+.wp-block-button__link.has-secondary-color,
+.wp-block-button__link.has-secondary-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-secondary-color:not( :hover ), //legacy selector
 .wp-block-button__link.is-style-outline.has-secondary-color:not( :hover ) {
 	color: $color__secondary;
@@ -1090,7 +1095,8 @@ hr {
 .has-secondary-variation-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-secondary-variation-color p,
-.wp-block-button.has-secondary-variation-color,
+.wp-block-button__link.has-secondary-variation-color,
+.wp-block-button__link.has-secondary-variation-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-secondary-variation-color:not( :hover ), //legacy selector
 .wp-block-button__link.is-style-outline.has-secondary-variation-color:not( :hover ) {
 	color: $color__secondary-variation;
@@ -1098,7 +1104,8 @@ hr {
 
 .has-dark-gray-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
-.wp-block-button.has-dark-gray-color,
+.wp-block-button__link.has-dark-gray-color,
+.wp-block-button__link.has-dark-gray-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-dark-gray-color:not( :hover ), // legacy selector
 .wp-block-button__link.is-style-outline.has-dark-gray-color:not( :hover ) {
 	color: #111;
@@ -1106,7 +1113,8 @@ hr {
 
 .has-medium-gray-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-medium-gray-color,
-.wp-block-button.has-medium-gray-color,
+.wp-block-button__link.has-medium-gray-color,
+.wp-block-button__link.has-medium-gray-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-medium-gray-color:not( :hover ), // legacy selector
 .wp-block-button__link.is-style-outline.has-medium-gray-color:not( :hover ) {
 	color: #767676;
@@ -1114,7 +1122,8 @@ hr {
 
 .has-light-gray-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
-.wp-block-button.has-light-gray-color,
+.wp-block-button__link.has-light-gray-color,
+.wp-block-button__link.has-light-gray-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-light-gray-color:not( :hover ), // legacy selector
 .wp-block-button__link.is-style-outline.has-light-gray-color:not( :hover ) {
 	color: #eee;
@@ -1122,7 +1131,8 @@ hr {
 
 .has-white-color,
 .wp-block-pullquote.is-style-solid-color blockquote.has-white-color,
-.wp-block-button.has-white-color,
+.wp-block-button__link.has-white-color,
+.wp-block-button__link.has-white-color:visited:not( :hover ),
 .is-style-outline .wp-block-button__link.has-white-color:not( :hover ), // legacy selector
 .wp-block-button__link.is-style-outline.has-white-color:not( :hover ) {
 	color: #fff;

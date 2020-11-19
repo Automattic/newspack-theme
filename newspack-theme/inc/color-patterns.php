@@ -75,6 +75,7 @@ function newspack_custom_colors_css() {
 
 			.has-primary-color,
 			*[class^="wp-block-"] .has-primary-color,
+			*[class^="wp-block-"] .has-primary-color:visited:not(:hover),
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
 			.is-style-outline .wp-block-button__link.has-primary-color:not(:hover), /* legacy styles */
@@ -138,7 +139,8 @@ function newspack_custom_colors_css() {
 			.has-secondary-background-color,
 			*[class^="wp-block-"].has-secondary-background-color,
 			*[class^="wp-block-"] .has-secondary-background-color,
-			*[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
+			*[class^="wp-block-"].is-style-solid-color.has-secondary-background-color,
+			.is-style-outline .wp-block-button__link.has-secondary-background-color:not( :hover ) {
 				background-color:' . esc_html( $secondary_color ) . '; /* base: #666 */
 			}
 
@@ -157,6 +159,7 @@ function newspack_custom_colors_css() {
 
 			.has-secondary-color,
 			*[class^="wp-block-"] .has-secondary-color,
+			*[class^="wp-block-"] .has-secondary-color:visited:not(:hover),
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
 			.is-style-outline .wp-block-button__link.has-secondary-color:not(:hover), /* legacy styles */
@@ -177,7 +180,8 @@ function newspack_custom_colors_css() {
 			.has-primary-variation-background-color,
 			*[class^="wp-block-"].has-primary-variation-background-color,
 			*[class^="wp-block-"] .has-primary-variation-background-color,
-			*[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color  {
+			*[class^="wp-block-"].is-style-solid-color.has-primary-variation-background-color,
+			.is-style-outline .wp-block-button__link.has-primary-variation-background-color:not( :hover )  {
 				background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . '; /* base: #005177; */
 			}
 
@@ -186,6 +190,7 @@ function newspack_custom_colors_css() {
 			.author-bio .author-description .author-link:hover,
 			.has-primary-variation-color,
 			*[class^="wp-block-"] .has-primary-variation-color,
+			*[class^="wp-block-"] .has-primary-variation-color:visited:not(:hover),
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color,
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-primary-variation-color p,
 			.comment .comment-author .fn a:hover,
@@ -204,7 +209,8 @@ function newspack_custom_colors_css() {
 			.has-secondary-variation-background-color,
 			*[class^="wp-block-"].has-secondary-variation-ackground-color,
 			*[class^="wp-block-"] .has-secondary-variation-background-color,
-			*[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color {
+			*[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color,
+			.is-style-outline .wp-block-button__link.has-secondary-variation-background-color:not( :hover ) {
 				background-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
 			}
 
@@ -215,6 +221,7 @@ function newspack_custom_colors_css() {
 			.author-bio .author-link:hover,
 			.has-secondary-variation-color,
 			*[class^="wp-block-"] .has-secondary-variation-color,
+			*[class^="wp-block-"] .has-secondary-variation-color:visited:not(:hover),
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color,
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-variation-color p,
 			.is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
