@@ -140,7 +140,7 @@ div.wpnbha .article-section-title {
 //! Pullquote
 .wp-block-pullquote {
 	border-width: 0;
-	border-color: transparent;
+	border-color: $color__primary;
 	font-family: $font__heading;
 	font-weight: bold;
 	padding-top: #{4 * $size__spacing-unit};
