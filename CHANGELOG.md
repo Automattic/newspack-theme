@@ -1,3 +1,10 @@
+# [1.22.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.21.2...v1.22.0-alpha.1) (2020-11-20)
+
+
+### Features
+
+* optimize sponsors queries; fix phpcs lint rules ([#1144](https://github.com/Automattic/newspack-theme/issues/1144)) ([f7de210](https://github.com/Automattic/newspack-theme/commit/f7de2101df022af5dcd99aa59cf2a1f9f81f9fa4))
+
 ## [1.21.2](https://github.com/Automattic/newspack-theme/compare/v1.21.1...v1.21.2) (2020-11-11)
 
 
