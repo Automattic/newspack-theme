@@ -44,24 +44,62 @@ function newspack_sponsor_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'newspack_sponsor_editor_styles' );
 
 /**
- * Returns post or category sponsors.
+ * Returns post or taxonomy sponsors.
  */
-function newspack_get_all_sponsors( $id = null, $scope = null, $type = null, $logo_options = array() ) {
+function newspack_get_all_sponsors( $id = null, $scope = null, $type = null, $logo_options = [] ) {
 	if ( function_exists( '\Newspack_Sponsors\get_all_sponsors' ) ) {
-		$sponsors = \Newspack_Sponsors\get_all_sponsors( $id, $scope, $type, $logo_options ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
-		if ( $sponsors ) {
-			return $sponsors;
-		} else {
-			return false;
-		}
+		return \Newspack_Sponsors\get_all_sponsors( $id, $scope, $type, $logo_options );
 	}
+
+	return false;
+}
+
+/**
+ * Filters given sponsors for 'native' sponsors.
+ *
+ * @param array $sponsors Array of sponsors.
+ * @return array|boolean Native sponsors only, or false if $sponsors is invalid.
+ */
+function newspack_get_native_sponsors( $sponsors = [] ) {
+	if ( empty( $sponsors ) || ! is_array( $sponsors ) ) {
+		return false;
+	}
+
+	return array_values(
+		array_filter(
+			$sponsors,
+			function( $sponsor ) {
+				return isset( $sponsor['sponsor_scope'] ) && 'native' === $sponsor['sponsor_scope'];
+			}
+		)
+	);
+}
+
+/**
+ * Filters given sponsors for 'underwiter' sponsors.
+ *
+ * @param array $sponsors Array of sponsors.
+ * @return array|boolean Underwriter sponsors only, or false if $sponsors is invalid.
+ */
+function newspack_get_underwriter_sponsors( $sponsors = [] ) {
+	if ( empty( $sponsors ) || ! is_array( $sponsors ) ) {
+		return false;
+	}
+
+	return array_values(
+		array_filter(
+			$sponsors,
+			function( $sponsor ) {
+				return isset( $sponsor['sponsor_scope'] ) && 'underwritten' === $sponsor['sponsor_scope'];
+			}
+		)
+	);
 }
 
 /**
  * Add classes to sponsored posts.
  */
 function newspack_sponsor_body_classes( $classes ) {
-
 	if ( ( is_category() || is_tag() ) && newspack_get_all_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
 		$classes[] = 'sponsored-archive';
 	}
@@ -74,8 +112,16 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 	/**
 	 * Outputs the sponsor byline markup for the theme.
 	 */
-	function newspack_sponsor_byline( $id, $scope = 'native', $type = 'post' ) {
-		$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+	function newspack_sponsor_byline( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
+		if ( null === $sponsors ) {
+			// Can't proceed if we don't have an id to query with.
+			if ( empty( $id ) ) {
+				return;
+			}
+
+			$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+		}
+
 		if ( ! empty( $sponsors ) ) {
 			$sponsor_count = count( $sponsors );
 			$i             = 1;
@@ -117,8 +163,16 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 	/**
 	 * Outputs the text 'sponsored' in place of the article category.
 	 */
-	function newspack_sponsor_label( $id, $show_info = false, $scope = 'native', $type = 'post' ) {
-		$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+	function newspack_sponsor_label( $sponsors = null, $id = null, $show_info = false, $scope = 'native', $type = 'post' ) {
+		if ( null === $sponsors ) {
+			// Can't proceed if we don't have an id to query with.
+			if ( empty( $id ) ) {
+				return;
+			}
+
+			$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+		}
+
 		if ( ! empty( $sponsors ) ) :
 			$sponsor_flag       = $sponsors[0]['sponsor_flag'];
 			$sponsor_disclaimer = $sponsors[0]['sponsor_disclaimer'];
@@ -164,8 +218,16 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 	/**
 	 * Outputs set of sponsor logos with links.
 	 */
-	function newspack_sponsor_logo_list( $id, $scope = 'native', $type = 'post' ) {
-		$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+	function newspack_sponsor_logo_list( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
+		if ( null === $sponsors ) {
+			// Can't proceed if we don't have an id to query with.
+			if ( empty( $id ) ) {
+				return;
+			}
+
+			$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+		}
+
 		if ( ! empty( $sponsors ) ) {
 			echo '<span class="sponsor-logos">';
 				foreach ( $sponsors as $sponsor ) {
@@ -190,7 +252,7 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 	/**
 	 * Outputs the 'bio' for the sponsor.
 	 */
-	function newspack_sponsor_footer_bio( $id, $scope = 'native', $type = 'post' ) {
+	function newspack_sponsor_footer_bio( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
 		$sponsors = newspack_get_all_sponsors(
 			$id,
 			$scope,
@@ -259,8 +321,14 @@ endif;
 /**
  * Outputs the 'bio' for the sponsor.
  */
-function newspack_sponsor_archive_description( $id, $scope = 'native', $type = 'post' ) {
-	$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+function newspack_sponsor_archive_description( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
+	if ( null === $sponsors ) {
+		if ( empty( $id ) ) {
+			return;
+		}
+		$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+	}
+
 	if ( ! empty( $sponsors ) ) {
 		foreach ( $sponsors as $sponsor ) {
 			?>
@@ -306,8 +374,14 @@ function newspack_sponsor_archive_description( $id, $scope = 'native', $type = '
 /**
  * Outputs the 'underwriters' information for the top of single posts.
  */
-function newspack_sponsored_underwriters_info( $id, $scope = 'native', $type = 'post' ) {
-	$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
+	if ( null === $sponsors ) {
+		if ( empty( $id ) ) {
+			return;
+		}
+		$sponsors = newspack_get_all_sponsors( $id, $scope, $type );
+	}
+
 	if ( ! empty( $sponsors ) ) {
 		foreach ( $sponsors as $sponsor ) {
 			?>
@@ -402,5 +476,3 @@ function newspack_sponsored_styles_editor() {
 	wp_add_inline_style( 'newspack-sponsor-editor-styles', $sponsor_customizations );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_sponsored_styles_editor' );
-
-
