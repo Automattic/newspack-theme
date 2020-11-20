@@ -227,12 +227,21 @@
 // Temporarily make some column styles more specific
 .entry .entry-content > .wp-block-columns {
 	@include media( mobile ) {
-		margin-left: -16px;
-		max-width: calc( 100% + 32px );
+		&:not( .stack-col ) {
+			margin-left: -16px;
+			max-width: calc( 100% + 32px );
+		}
+	}
+
+	@include media( desktop ) {
+		&.stack-col {
+			margin-left: -16px;
+			max-width: calc( 100% + 32px );
+		}
 	}
 
 	@include media( tablet ) {
-		&.is-style-borders {
+		&:not( .stack-col ).is-style-borders {
 			margin-left: -24px;
 			max-width: calc( 100% + 48px );
 		}
