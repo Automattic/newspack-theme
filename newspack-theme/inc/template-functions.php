@@ -605,20 +605,14 @@ function newspack_should_display_updated_date() {
 		return false;
 	}
 
-	$post = get_post();
-
+	$post          = get_post();
 	$publish_date  = $post->post_date;
 	$modified_date = $post->post_modified;
 
-	// Exclude posts updated during launch.
-	// if ( 0 === strpos( $modified_date, '2020-06-23' ) ) {
-	// return false;
-	// }
-
 	$publish_timestamp  = strtotime( $publish_date );
 	$modified_timestamp = strtotime( $modified_date );
+	$modified_cutoff    = strtotime( 'tomorrow midnight', $publish_timestamp );
 
-	$modified_cutoff = strtotime( 'tomorrow midnight', $publish_timestamp );
 	if ( $modified_timestamp > $modified_cutoff ) {
 		return true;
 	}
