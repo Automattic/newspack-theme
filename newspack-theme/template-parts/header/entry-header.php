@@ -13,9 +13,6 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
 	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 }
-
-// Filter for Newspack Listings plugin.
-$listing_hide_author = apply_filters( 'newspack_listings_hide_author', false );
 ?>
 
 <?php if ( is_singular() ) : ?>
@@ -48,7 +45,7 @@ $listing_hide_author = apply_filters( 'newspack_listings_hide_author', false );
 <?php endif; ?>
 
 
-<?php if ( ! is_page() && ! $listing_hide_author ) : ?>
+<?php if ( ! is_page() ) : ?>
 	<div class="entry-subhead">
 		<?php if ( ! empty( $native_sponsors ) ) : ?>
 			<div class="entry-meta entry-sponsor">
