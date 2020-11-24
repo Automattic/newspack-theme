@@ -7,6 +7,13 @@
  * @package Newspack
  */
 get_header();
+
+// Get sponsors for this taxonomy archive.
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors( get_queried_object_id() );
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
 ?>
 
 	<section id="primary" class="content-area">
@@ -44,28 +51,31 @@ get_header();
 			<span>
 
 				<?php
-					if ( ( is_category() || is_tag() ) && function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id() ) ) {
-						newspack_sponsor_label( get_queried_object_id(), true, 'native', 'archive' );
-					}
+				if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) {
+					// Get label for native archive sponsors.
+					newspack_sponsor_label( $native_sponsors, null, true );
+				}
 				?>
 
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 
 				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
 
-				<?php if ( ( is_category() || is_tag() ) && function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id(), 'native' ) ) : ?>
-					<?php newspack_sponsor_archive_description( get_queried_object_id(), 'native', 'archive' ); ?>
-				<?php elseif ( '' !== get_the_archive_description() ) : ?>
-					<div class="taxonomy-description">
-						<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
-					</div>
+				<?php
+				if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) :
+					// Get description for native archive sponsors.
+					newspack_sponsor_archive_description( $native_sponsors );
+				elseif ( '' !== get_the_archive_description() ) :
+					?>
+				<div class="taxonomy-description">
+					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+				</div>
 				<?php endif; ?>
 
 				<?php
-				if ( is_category() || is_tag() ) {
-					if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_queried_object_id(), 'underwritten', 'archive' ) ) {
-						newspack_sponsored_underwriters_info( get_queried_object_id(), 'underwritten', 'archive' );
-					}
+				if ( ( is_category() || is_tag() ) && ! empty( $underwriter_sponsors ) ) {
+					// Get info for underwriter archive sponsors.
+					newspack_sponsored_underwriters_info( $underwriter_sponsors );
 				}
 			?>
 

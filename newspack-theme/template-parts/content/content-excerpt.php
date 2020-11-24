@@ -6,6 +6,13 @@
  *
  * @package Newspack
  */
+
+// Get sponsors for this post.
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors( get_the_id(), null, 'post' );
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -14,8 +21,9 @@
 	<div class="entry-container">
 		<?php
 		if ( 'page' !== get_post_type() ) :
-			if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) :
-				newspack_sponsor_label( get_the_id() );
+			if ( ! empty( $native_sponsors ) ) :
+				// Get label for native post sponsors.
+				newspack_sponsor_label( $native_sponsors );
 			elseif ( ! is_archive() ) :
 				newspack_categories();
 			endif;
@@ -26,12 +34,12 @@
 		</header><!-- .entry-header -->
 
 		<?php if ( 'page' !== get_post_type() ) : ?>
-			<?php if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native', 'post' ) ) : ?>
+			<?php if ( ! empty( $native_sponsors ) ) : ?>
 				<div class="entry-meta entry-sponsor">
-					<?php newspack_sponsor_logo_list( get_the_id() ); ?>
+					<?php newspack_sponsor_logo_list( $native_sponsors ); ?>
 					<span>
 						<?php
-							newspack_sponsor_byline( get_the_id() );
+							newspack_sponsor_byline( $native_sponsors );
 							newspack_posted_on();
 							do_action( 'newspack_theme_entry_meta' );
 						?>
@@ -53,4 +61,3 @@
 		</div><!-- .entry-content -->
 	</div><!-- .entry-container -->
 </article><!-- #post-${ID} -->
-

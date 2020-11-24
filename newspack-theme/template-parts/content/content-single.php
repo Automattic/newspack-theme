@@ -6,15 +6,30 @@
  *
  * @package Newspack
  */
+
+// Get sponsors for this taxonomy archive.
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors(
+		get_the_id(),
+		null,
+		'post',
+		[
+			'maxwidth'  => 150,
+			'maxheight' => 100,
+		]
+	);
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
 		<?php
-			if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'underwritten' ) ) :
-				newspack_sponsored_underwriters_info( get_the_id(), 'underwritten' );
-			endif;
+		if ( ! empty( $underwriter_sponsors ) ) :
+			newspack_sponsored_underwriters_info( $underwriter_sponsors );
+		endif;
 		?>
 
 		<?php
@@ -51,8 +66,8 @@
 	</footer><!-- .entry-footer -->
 
 	<?php
-	if ( function_exists( 'newspack_get_all_sponsors' ) && newspack_get_all_sponsors( get_the_id(), 'native' ) ) :
-		newspack_sponsor_footer_bio( get_the_id() );
+	if ( ! empty( $native_sponsors ) ) :
+		newspack_sponsor_footer_bio( $native_sponsors );
 	elseif ( ! is_singular( 'attachment' ) ) :
 		get_template_part( 'template-parts/post/author', 'bio' );
 	endif;

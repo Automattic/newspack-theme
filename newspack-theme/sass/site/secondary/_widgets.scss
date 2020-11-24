@@ -141,6 +141,10 @@
 	padding-top: calc( #{$size__spacing-unit} * 1.5 );
 }
 
+.page #secondary {
+	padding-top: $size__spacing-unit;
+}
+
 .above-content {
 	margin: $size__spacing-unit 0 0;
 }

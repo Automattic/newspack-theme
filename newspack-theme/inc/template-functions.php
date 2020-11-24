@@ -13,7 +13,7 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 	 */
 	function newspack_featured_image_position() {
 		// If we're not on a single page, or if there's no thumbnail, return.
-		if ( ! is_single() || ! has_post_thumbnail() ) {
+		if ( ( ! is_single() && ! is_page() ) || ! has_post_thumbnail() ) {
 			return '';
 		}
 
@@ -24,9 +24,6 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 		// Get per-post image position setting.
 		$image_pos = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
 
-		// Get default image position setting from the Customizer.
-		$default_image_pos = get_theme_mod( 'featured_image_default', 'large' );
-
 		// Set a position value to return.
 		$position = '';
 
@@ -35,10 +32,15 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 			$position = $image_pos;
 		// If this post doesn't have a setting, fall back to the default.
 		} else {
-			$position = $default_image_pos;
+			if ( is_single() ) {
+				// Set default if a post:
+				$position = get_theme_mod( 'featured_image_default', 'large' );
+			} elseif ( is_page() ) {
+				// Set default if a page:
+				$position = get_theme_mod( 'page_featured_image_default', 'small' );
+			}
 		}
 
-		// Fallback to the small inline posiiton if the image isn't large enough to be, uh, large, or if not a featured image post post-type.
 		if ( ( 'large' === $position && 1200 > $img_width ) || ! in_array( get_post_type(), newspack_get_featured_image_post_types() ) ) {
 			$position = 'small';
 		}
