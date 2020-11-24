@@ -23,7 +23,7 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 				$time_string,
 				esc_attr( get_the_date( DATE_W3C ) ),
 				esc_html( get_the_date() ),
-				'<span>' . esc_html__( 'Updated', 'newspack' ) . '</span>',
+				'<span class="updated-label">' . esc_html__( 'Updated', 'newspack' ) . ' </span>',
 				esc_attr( get_the_modified_date( DATE_W3C ) ),
 				esc_html( get_the_modified_date() )
 			);
@@ -50,7 +50,9 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 							'class'    => array(),
 							'datetime' => array(),
 						),
-						'span' => array(),
+						'span' => array(
+							'class' => array(),
+						),
 					)
 				)
 			);

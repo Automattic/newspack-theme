@@ -161,7 +161,7 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Add a class if updated date should display
-	if ( is_single() && newspack_should_display_updated_date() ) {
+	if ( newspack_should_display_updated_date() ) {
 		$classes[] = 'show-updated';
 	}
 
@@ -565,6 +565,10 @@ function newspack_math_to_time_ago( $post_time, $format, $post, $updated ) {
 		// Transform cut off from days to seconds.
 		$cut_off_seconds = $cut_off * 86400;
 
+		if ( true === newspack_should_display_updated_date() ) {
+			$cut_off_seconds = 86400;
+		}
+
 		if ( $cut_off_seconds >= ( $current_time - $org_time ) ) {
 			$post_time = sprintf(
 				/* translators: %s: Time ago date format */
@@ -597,6 +601,10 @@ function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
  * Check whether updated date should be displayed.
  */
 function newspack_should_display_updated_date() {
+	if ( ! is_single() ) {
+		return false;
+	}
+
 	$post = get_post();
 
 	$publish_date  = $post->post_date;
