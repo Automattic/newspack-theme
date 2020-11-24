@@ -636,10 +636,21 @@ function newspack_customize_register( $wp_customize ) {
 	/**
 	 * Template Settings
 	 */
+	$wp_customize->add_panel(
+		'newspack_template_settings',
+		array(
+			'title' => esc_html__( 'Template Settings', 'newspack' ),
+		)
+	);
+
+	/**
+	 * Post Template Settings
+	 */
 	$wp_customize->add_section(
 		'post_default_settings',
 		array(
-			'title' => esc_html__( 'Template Settings', 'newspack' ),
+			'title' => esc_html__( 'Post Settings', 'newspack' ),
+			'panel' => 'newspack_template_settings',
 		)
 	);
 
@@ -741,6 +752,41 @@ function newspack_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	/**
+	 * Page Template Settings
+	 */
+	$wp_customize->add_section(
+		'page_default_settings',
+		array(
+			'title' => esc_html__( 'Page Settings', 'newspack' ),
+			'panel' => 'newspack_template_settings',
+		)
+	);
+
+	// Add option to set a featured image default.
+	$wp_customize->add_setting(
+		'page_featured_image_default',
+		array(
+			'default'           => 'small',
+			'sanitize_callback' => 'newspack_sanitize_feature_image_position',
+		)
+	);
+	$wp_customize->add_control(
+		'page_featured_image_default',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Featured Image Default Position', 'newspack' ),
+			'choices' => array(
+				'large'  => esc_html__( 'Large', 'newspack' ),
+				'small'  => esc_html__( 'Small', 'newspack' ),
+				'behind' => esc_html__( 'Behind article title', 'newspack' ),
+				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'hidden' => esc_html__( 'Hidden', 'newspack' ),
+			),
+			'section' => 'page_default_settings',
+		)
+	);
 
 	/**
 	 * Comments settings

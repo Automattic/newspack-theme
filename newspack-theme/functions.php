@@ -749,7 +749,7 @@ function newspack_sanitize_avatars() {
  * @return array Array of post type slugs.
  */
 function newspack_get_featured_image_post_types() {
-	return apply_filters( 'newspack_theme_featured_image_post_types', [ 'post' ] );
+	return apply_filters( 'newspack_theme_featured_image_post_types', array( 'post', 'page' ) );
 }
 
 /**
