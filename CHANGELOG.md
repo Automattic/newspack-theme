@@ -1,3 +1,10 @@
+# [1.22.0-alpha.3](https://github.com/Automattic/newspack-theme/compare/v1.22.0-alpha.2...v1.22.0-alpha.3) (2020-11-24)
+
+
+### Features
+
+* trigger release ([66b21a6](https://github.com/Automattic/newspack-theme/commit/66b21a666506579eb663e9240aadf6a5feb5f814))
+
 # [1.22.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.22.0-alpha.1...v1.22.0-alpha.2) (2020-11-24)
 
 
