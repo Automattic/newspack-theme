@@ -1,3 +1,10 @@
+# [1.22.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.22.0-alpha.1...v1.22.0-alpha.2) (2020-11-24)
+
+
+### Features
+
+* add featured image position options for pages ([#1123](https://github.com/Automattic/newspack-theme/issues/1123)) ([1576c9d](https://github.com/Automattic/newspack-theme/commit/1576c9d99cd3e409da031fa2fa7fde5bdc42e47f))
+
 # [1.22.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.21.2...v1.22.0-alpha.1) (2020-11-20)
 
 
