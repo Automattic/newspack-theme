@@ -8,9 +8,14 @@
 $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_discussion_data() : null;
 
 // Get sponsors for this post.
-$all_sponsors         = newspack_get_all_sponsors( get_the_id() );
-$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
-$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors( get_the_id() );
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
+
+// Filter for Newspack Listings plugin.
+$listing_hide_author = apply_filters( 'newspack_listings_hide_author', false );
 ?>
 
 <?php if ( is_singular() ) : ?>
@@ -43,7 +48,7 @@ $underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 <?php endif; ?>
 
 
-<?php if ( ! is_page() ) : ?>
+<?php if ( ! is_page() && ! $listing_hide_author ) : ?>
 	<div class="entry-subhead">
 		<?php if ( ! empty( $native_sponsors ) ) : ?>
 			<div class="entry-meta entry-sponsor">

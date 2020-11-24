@@ -9,9 +9,11 @@
 get_header();
 
 // Get sponsors for this taxonomy archive.
-$all_sponsors         = newspack_get_all_sponsors( get_queried_object_id() );
-$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
-$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors( get_queried_object_id() );
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
 ?>
 
 	<section id="primary" class="content-area">

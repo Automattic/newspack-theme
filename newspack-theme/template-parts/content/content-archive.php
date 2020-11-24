@@ -8,9 +8,11 @@
  */
 
 // Get sponsors for this post.
-$all_sponsors         = newspack_get_all_sponsors( get_the_id(), null, 'post' );
-$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
-$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors         = newspack_get_all_sponsors( get_the_id(), null, 'post' );
+	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
