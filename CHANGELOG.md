@@ -1,3 +1,11 @@
+# [1.22.0](https://github.com/Automattic/newspack-theme/compare/v1.21.2...v1.22.0) (2020-11-24)
+
+
+### Features
+
+* add featured image position options for pages ([#1123](https://github.com/Automattic/newspack-theme/issues/1123)) ([1576c9d](https://github.com/Automattic/newspack-theme/commit/1576c9d99cd3e409da031fa2fa7fde5bdc42e47f))
+* optimize sponsors queries; fix phpcs lint rules ([#1144](https://github.com/Automattic/newspack-theme/issues/1144)) ([f7de210](https://github.com/Automattic/newspack-theme/commit/f7de2101df022af5dcd99aa59cf2a1f9f81f9fa4))
+
 ## [1.21.2](https://github.com/Automattic/newspack-theme/compare/v1.21.1...v1.21.2) (2020-11-11)
 
 
