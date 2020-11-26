@@ -229,7 +229,7 @@
 			} );
 		} );
 
-		// Diable 'time ago cutoff' when post updated date is enabled.
+		// Disable 'time ago cutoff' when post updated date is enabled.
 		wp.customize( 'post_updated_date', function( setting ) {
 			wp.customize.control( 'post_time_ago_cut_off', function( control ) {
 				const visibility = function() {
