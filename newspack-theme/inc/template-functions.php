@@ -566,6 +566,7 @@ function newspack_math_to_time_ago( $post_time, $format, $post, $updated ) {
 		$cut_off_seconds = $cut_off * 86400;
 
 		if ( true === newspack_should_display_updated_date() ) {
+			// Switch cut off to one day if updated date is displayed.
 			$cut_off_seconds = 86400;
 		}
 
