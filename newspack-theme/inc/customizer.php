@@ -747,7 +747,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'checkbox',
 			'label'       => esc_html__( 'Show "last updated" date', 'newspack' ),
-			'description' => esc_html__( 'When paired with the "time ago" date format, the cut off for that format will automatically be switched to one day on posts that are updated.', 'newspack' ),
+			'description' => esc_html__( 'When paired with the "time ago" date format, the cut off for that format will automatically be switched to one day.', 'newspack' ),
 			'section'     => 'post_default_settings',
 		)
 	);
