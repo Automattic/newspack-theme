@@ -746,7 +746,7 @@ function newspack_customize_register( $wp_customize ) {
 		'post_updated_date',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Show "last updated" date', 'newspack' ),
+			'label'       => esc_html__( 'Show "last updated" date on single posts', 'newspack' ),
 			'description' => esc_html__( 'When paired with the "time ago" date format, the cut off for that format will automatically be switched to one day.', 'newspack' ),
 			'section'     => 'post_default_settings',
 		)
