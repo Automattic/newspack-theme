@@ -565,8 +565,8 @@ function newspack_math_to_time_ago( $post_time, $format, $post, $updated ) {
 		// Transform cut off from days to seconds.
 		$cut_off_seconds = $cut_off * 86400;
 
-		if ( true === newspack_should_display_updated_date() ) {
-			// Switch cut off to one day if updated date is displayed.
+		if ( true === get_theme_mod( 'post_updated_date', false ) ) {
+			// Switch cut off to 24 hours.
 			$cut_off_seconds = 86400;
 		}
 
@@ -602,21 +602,20 @@ function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
  * Check whether updated date should be displayed.
  */
 function newspack_should_display_updated_date() {
-	if ( ! is_single() ) {
-		return false;
+	if ( is_single() && true === get_theme_mod( 'post_updated_date', false ) ) {
+		$post          = get_post();
+		$publish_date  = $post->post_date;
+		$modified_date = $post->post_modified;
+
+		$publish_timestamp  = strtotime( $publish_date );
+		$modified_timestamp = strtotime( $modified_date );
+		$modified_cutoff    = strtotime( 'tomorrow midnight', $publish_timestamp );
+
+		if ( $modified_timestamp > $modified_cutoff ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-
-	$post          = get_post();
-	$publish_date  = $post->post_date;
-	$modified_date = $post->post_modified;
-
-	$publish_timestamp  = strtotime( $publish_date );
-	$modified_timestamp = strtotime( $modified_date );
-	$modified_cutoff    = strtotime( 'tomorrow midnight', $publish_timestamp );
-
-	if ( $modified_timestamp > $modified_cutoff ) {
-		return true;
-	}
-
 	return false;
 }

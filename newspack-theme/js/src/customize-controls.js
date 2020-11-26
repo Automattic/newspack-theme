@@ -229,6 +229,21 @@
 			} );
 		} );
 
+		// Diable 'time ago cutoff' when post updated date is enabled.
+		wp.customize( 'post_updated_date', function( setting ) {
+			wp.customize.control( 'post_time_ago_cut_off', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						$( 'input', control.selector ).prop( 'disabled', true );
+					} else {
+						$( 'input', control.selector ).prop( 'disabled', false );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
 		// Lets you jump to specific sections in the Customizer
 		$( [ 'control', 'section', 'panel' ] ).each( function( i, type ) {
 			$( 'a[rel="goto-' + type + '"]' ).click( function( e ) {
