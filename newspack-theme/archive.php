@@ -116,7 +116,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 				$post_count++;
 				the_post();
 
-				if ( 1 === $post_count ) {
+				if ( 1 === $post_count || true === get_theme_mod( 'archive_show_excerpt', false ) ) {
 					get_template_part( 'template-parts/content/content', 'excerpt' );
 				} else {
 					get_template_part( 'template-parts/content/content', 'archive' );
