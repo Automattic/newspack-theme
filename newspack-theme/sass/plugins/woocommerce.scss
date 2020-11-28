@@ -405,6 +405,10 @@ dl.variation,
  * Single product
  */
 .single-product {
+	&.has-sidebar #main {
+		display: block;
+	}
+
 	div.product {
 		position: relative;
 	}
@@ -1547,6 +1551,11 @@ table.woocommerce-table--order-details.shop_table,
 			color: $color__text-light;
 			display: block;
 		}
+	}
+
+	.woocommerce-remove-coupon {
+		font-size: 0.9em;
+		margin-left: 0.5em;
 	}
 }
 
