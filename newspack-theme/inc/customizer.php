@@ -465,6 +465,26 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add primary menu color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'header_primary_menu_color_hex',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_primary_menu_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the primary menu.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
 	/**
 	 * Footer background_color
 	 */
@@ -489,7 +509,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add header color hexidecimal setting and control.
+	// Add footer color hexidecimal setting and control.
 	$wp_customize->add_setting(
 		'footer_color_hex',
 		array(

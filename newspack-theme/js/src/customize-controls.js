@@ -68,6 +68,25 @@
 				setting.bind( visibility );
 			} );
 
+			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						// Make sure the site is set to use a solid header background.
+						if (
+							true === wp.customize.value( 'header_solid_background' )() &&
+							false === wp.customize.value( 'header_simplified' )() &&
+							'custom' === wp.customize.value( 'header_color' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+
 			// Footer Color
 			wp.customize.control( 'footer_color', function( control ) {
 				const visibility = function() {
@@ -128,9 +147,64 @@
 				visibility();
 				setting.bind( visibility );
 			} );
+
+			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						if (
+							'custom' === wp.customize.value( 'header_color' )() &&
+							'custom' === wp.customize.value( 'theme_colors' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+
+			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						if (
+							'custom' === wp.customize.value( 'header_color' )() &&
+							'custom' === wp.customize.value( 'theme_colors' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
 		} );
 
-		// Controls to show/hide when the Solid Background is toggled.
+		// Controls to show/hide when Short Header is toggled
+		wp.customize( 'header_simplified', function( setting ) {
+			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
+				const visibility = function() {
+					if ( false === setting.get() ) {
+						if (
+							'custom' === wp.customize.value( 'header_color' )() &&
+							'custom' === wp.customize.value( 'theme_colors' )() &&
+							true === wp.customize.value( 'header_solid_background' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
+		// Controls to show/hide when the Custom Header Color is toggled.
 		wp.customize( 'header_color', function( setting ) {
 			wp.customize.control( 'header_color_hex', function( control ) {
 				const visibility = function() {
