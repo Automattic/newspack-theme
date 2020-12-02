@@ -19,6 +19,11 @@ function newspack_joseph_custom_colors_css() {
 			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
 			$header_color_contrast = newspack_get_color_contrast( $header_color );
 		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$footer_color          = get_theme_mod( 'footer_color_hex', '' );
+			$footer_color_contrast = newspack_get_color_contrast( $footer_color );
+		}
 	}
 
 	// Set colour contrasts.
@@ -57,6 +62,21 @@ function newspack_joseph_custom_colors_css() {
 			.h-sb .top-header-contain,
 			.h-sb .middle-header-contain {
 				color: ' . esc_html( $header_color_contrast ) . ';
+			}
+		';
+	}
+
+	if ( isset( $footer_color ) && '' !== $footer_color ) {
+		$theme_css .= '
+			#colophon,
+			#colophon .widget-title,
+			#colophon .social-navigation a {
+				color: ' . esc_html( $footer_color_contrast ) . ';
+			}
+
+			#colophon .footer-branding .wrapper,
+			#colophon .footer-widgets:first-child {
+				border-top: 0;
 			}
 		';
 	}

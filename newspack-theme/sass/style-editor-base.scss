@@ -372,6 +372,10 @@ figcaption,
 	text-align: left;
 }
 
+.wp-block-video video {
+	width: 100%;
+}
+
 /** === Group === */
 .wp-block[data-align='left'] .wp-block-group,
 .wp-block[data-align='right'] .wp-block-group {
