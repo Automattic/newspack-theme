@@ -153,24 +153,8 @@
 					if ( true === setting.get() ) {
 						if (
 							'custom' === wp.customize.value( 'header_color' )() &&
-							'custom' === wp.customize.value( 'theme_colors' )()
-						) {
-							control.container.slideDown( 180 );
-						}
-					} else {
-						control.container.slideUp( 180 );
-					}
-				};
-				visibility();
-				setting.bind( visibility );
-			} );
-
-			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
-				const visibility = function() {
-					if ( true === setting.get() ) {
-						if (
-							'custom' === wp.customize.value( 'header_color' )() &&
-							'custom' === wp.customize.value( 'theme_colors' )()
+							'custom' === wp.customize.value( 'theme_colors' )() &&
+							false === wp.customize.value( 'header_simplified' )()
 						) {
 							control.container.slideDown( 180 );
 						}
@@ -212,6 +196,24 @@
 						if (
 							true === wp.customize.value( 'header_solid_background' )() &&
 							'custom' === wp.customize.value( 'theme_colors' )()
+						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+
+			wp.customize.control( 'header_primary_menu_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						if (
+							true === wp.customize.value( 'header_solid_background' )() &&
+							'custom' === wp.customize.value( 'theme_colors' )() &&
+							false === wp.customize.value( 'header_simplified' )()
 						) {
 							control.container.slideDown( 180 );
 						}
