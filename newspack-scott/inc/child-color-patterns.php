@@ -22,6 +22,11 @@ function newspack_scott_custom_colors_css() {
 			$header_color          = $primary_color;
 			$header_color_contrast = newspack_get_color_contrast( $primary_color );
 		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$footer_color          = get_theme_mod( 'footer_color_hex', '' );
+			$footer_color_contrast = newspack_get_color_contrast( $footer_color );
+		}
 	}
 
 	// Set colour contrasts.
@@ -76,6 +81,23 @@ function newspack_scott_custom_colors_css() {
 			}
 		';
 	}
+
+	if ( isset( $footer_color ) && '' !== $footer_color ) {
+		$theme_css .= '
+			#colophon,
+			#colophon .widget-title,
+			#colophon .social-navigation a {
+				color: ' . esc_html( $footer_color_contrast ) . ';
+			}
+
+			#colophon .footer-branding .wrapper,
+			#colophon .footer-widgets:first-child {
+				border: 0;
+			}
+		';
+	}
+
+
 
 	$editor_css = '
 		.block-editor-block-list__layout .block-editor-block-list__block.accent-header:before,

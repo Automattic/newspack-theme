@@ -25,6 +25,11 @@ function newspack_custom_colors_css() {
 			$header_color          = $primary_color;
 			$header_color_contrast = newspack_get_color_contrast( $primary_color );
 		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$footer_color          = get_theme_mod( 'footer_color_hex', '' );
+			$footer_color_contrast = newspack_get_color_contrast( $footer_color );
+		}
 	}
 
 	// Set colour contrasts.
@@ -239,6 +244,32 @@ function newspack_custom_colors_css() {
 			';
 		}
 
+		if ( isset( $footer_color ) && '' !== $footer_color ) {
+			$theme_css .= '
+				.site-footer {
+					background: ' . esc_html( $footer_color ) . ';
+				}
+
+				.site-footer,
+				.site-footer a,
+				.site-footer a:hover,
+				.site-footer .widget-title,
+				.site-info {
+					color: ' . esc_html( $footer_color_contrast ) . ';
+				}
+
+				.site-footer a:hover,
+				.site-footer .widget a:hover {
+					opacity: 0.7;
+				}
+
+				.site-info .widget-area .wrapper,
+				.site-info .site-info-contain:first-child {
+					border-top-color: ' . esc_html( newspack_adjust_brightness( $footer_color, -20 ) ) . ';
+				}
+			';
+		}
+
 		if ( ! is_child_theme() ) {
 			$theme_css .= '
 				.mobile-sidebar .nav3 a {
@@ -275,6 +306,15 @@ function newspack_custom_colors_css() {
 					.h-sb .site-header .nav3 .menu-highlight a {
 						background-color: ' . $secondary_color . ';
 						color: ' . esc_html( $secondary_color_contrast ) . ';
+					}
+				';
+			}
+
+			if ( isset( $footer_color ) && '' !== $footer_color ) {
+				$theme_css .= '
+					.site-footer .footer-branding .wrapper,
+					.site-footer .footer-widgets:first-child .wrapper {
+						border-top: 0;
 					}
 				';
 			}

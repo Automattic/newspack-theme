@@ -34,6 +34,8 @@
 				visibility();
 				setting.bind( visibility );
 			} );
+
+			// Header Color
 			wp.customize.control( 'header_color', function( control ) {
 				const visibility = function() {
 					if ( 'custom' === setting.get() ) {
@@ -56,6 +58,33 @@
 							true === wp.customize.value( 'header_solid_background' )() &&
 							'custom' === wp.customize.value( 'header_color' )()
 						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+
+			// Footer Color
+			wp.customize.control( 'footer_color', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'footer_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						// Make sure the site is set to use a custom footer color.
+						if ( 'custom' === wp.customize.value( 'footer_color' )() ) {
 							control.container.slideDown( 180 );
 						}
 					} else {
@@ -110,6 +139,23 @@
 							true === wp.customize.value( 'header_solid_background' )() &&
 							'custom' === wp.customize.value( 'theme_colors' )()
 						) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
+		// Controls to show/hide when the Footer Backround is toggled.
+		wp.customize( 'footer_color', function( setting ) {
+			wp.customize.control( 'footer_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						if ( 'custom' === wp.customize.value( 'theme_colors' )() ) {
 							control.container.slideDown( 180 );
 						}
 					} else {
