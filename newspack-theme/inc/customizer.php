@@ -798,6 +798,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to display updated date.
+	$wp_customize->add_setting(
+		'post_updated_date',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_updated_date',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show "last updated" date on single posts', 'newspack' ),
+			'description' => esc_html__( 'When paired with the "time ago" date format, the cut off for that format will automatically be switched to one day.', 'newspack' ),
+			'section'     => 'post_default_settings',
+		)
+	);
+
 	// Add option to turn off Yoast's Primary Category functionality.
 	if ( class_exists( 'WPSEO_Primary_Term' ) ) {
 		$wp_customize->add_setting(

@@ -36,6 +36,7 @@ function newspack_katharine_custom_typography_css() {
 			.author-bio h2 span,
 			.entry-meta .byline a,
 			.entry-meta .entry-date,
+			.entry-meta .updated,
 			.site-footer .widget-title,
 			.site-info {
 				text-transform: uppercase;

@@ -160,6 +160,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	// Add a class if updated date should display
+	if ( newspack_should_display_updated_date() ) {
+		$classes[] = 'show-updated';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
@@ -539,20 +544,31 @@ function newspack_the_custom_logo() {
 	}
 }
 
+// post_modified
+
 /**
  * Change date to 'time ago' format if enabled in the Customizer.
  */
-function newspack_convert_to_time_ago( $post_time, $format, $post ) {
+function newspack_math_to_time_ago( $post_time, $format, $post, $updated ) {
 	$use_time_ago = get_theme_mod( 'post_time_ago', false );
 
 	// Only filter time when $use_time_ago is enabled, and it's not using a machine-readable format (for datetime).
 	if ( true === $use_time_ago && 'Y-m-d\TH:i:sP' !== $format ) {
 		$current_time = current_time( 'timestamp' ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
-		$org_time     = strtotime( $post->post_date );
 		$cut_off      = get_theme_mod( 'post_time_ago_cut_off', '14' );
+		$org_time     = strtotime( $post->post_date );
+
+		if ( true === $updated ) {
+			$org_time = strtotime( $post->post_modified );
+		}
 
 		// Transform cut off from days to seconds.
 		$cut_off_seconds = $cut_off * 86400;
+
+		if ( true === get_theme_mod( 'post_updated_date', false ) ) {
+			// Switch cut off to 24 hours.
+			$cut_off_seconds = 86400;
+		}
 
 		if ( $cut_off_seconds >= ( $current_time - $org_time ) ) {
 			$post_time = sprintf(
@@ -562,6 +578,44 @@ function newspack_convert_to_time_ago( $post_time, $format, $post ) {
 			);
 		}
 	}
+
 	return $post_time;
 }
+
+/**
+ * Apply time ago format to publish dates if enabled.
+ */
+function newspack_convert_to_time_ago( $post_time, $format, $post ) {
+	return newspack_math_to_time_ago( $post_time, $format, $post, false );
+}
 add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
+
+/**
+ * Apply time ago format to modified dates if enabled.
+ */
+function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
+	return newspack_math_to_time_ago( $post_time, $format, $post, true );
+}
+
+
+/**
+ * Check whether updated date should be displayed.
+ */
+function newspack_should_display_updated_date() {
+	if ( is_single() && true === get_theme_mod( 'post_updated_date', false ) ) {
+		$post          = get_post();
+		$publish_date  = $post->post_date;
+		$modified_date = $post->post_modified;
+
+		$publish_timestamp  = strtotime( $publish_date );
+		$modified_timestamp = strtotime( $modified_date );
+		$modified_cutoff    = strtotime( 'tomorrow midnight', $publish_timestamp );
+
+		if ( $modified_timestamp > $modified_cutoff ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	return false;
+}
