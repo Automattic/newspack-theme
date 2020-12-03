@@ -1,3 +1,10 @@
+# [1.23.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.23.0-alpha.1...v1.23.0-alpha.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* correct issue with primary menu background control ([#1167](https://github.com/Automattic/newspack-theme/issues/1167)) ([3c928ae](https://github.com/Automattic/newspack-theme/commit/3c928ae9f9fd738bee7b30abcc983e3076823b36))
+
 # [1.23.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.22.0...v1.23.0-alpha.1) (2020-12-02)
 
 
