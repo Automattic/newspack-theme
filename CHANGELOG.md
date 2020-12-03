@@ -1,3 +1,18 @@
+# [1.23.0](https://github.com/Automattic/newspack-theme/compare/v1.22.0...v1.23.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* correct issue with primary menu background control ([#1167](https://github.com/Automattic/newspack-theme/issues/1167)) ([3c928ae](https://github.com/Automattic/newspack-theme/commit/3c928ae9f9fd738bee7b30abcc983e3076823b36))
+* correct video width preview in editor ([#1158](https://github.com/Automattic/newspack-theme/issues/1158)) ([94dd628](https://github.com/Automattic/newspack-theme/commit/94dd62847b442ac8c42750554697ec4ed432eed0))
+
+
+### Features
+
+* add option to change footer background color ([#1135](https://github.com/Automattic/newspack-theme/issues/1135)) ([8c308dc](https://github.com/Automattic/newspack-theme/commit/8c308dc41e4e49b5fd85be1feab7536647a9d858))
+* add option to display updated date on single posts ([#1154](https://github.com/Automattic/newspack-theme/issues/1154)) ([aff70b0](https://github.com/Automattic/newspack-theme/commit/aff70b0fc0d9d0112ef2c7e892f1d2752e978cd8))
+* add seperate color control for the primary menu background ([#1134](https://github.com/Automattic/newspack-theme/issues/1134)) ([ce576e3](https://github.com/Automattic/newspack-theme/commit/ce576e33d86870b2ec0ff53b57b4039490a49eae))
+
 # [1.22.0](https://github.com/Automattic/newspack-theme/compare/v1.21.2...v1.22.0) (2020-11-24)
 
 
