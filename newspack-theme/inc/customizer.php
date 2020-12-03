@@ -465,6 +465,70 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add primary menu color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'header_primary_menu_color_hex',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_primary_menu_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the primary menu.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	/**
+	 * Footer background_color
+	 */
+	$wp_customize->add_setting(
+		'footer_color',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_color_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'footer_color',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Footer Background Color', 'newspack' ),
+			'choices' => array(
+				'default' => _x( 'Default', 'footer background color', 'newspack' ),
+				'custom'  => _x( 'Custom', 'footer background color', 'newspack' ),
+			),
+			'section' => 'colors',
+		)
+	);
+
+	// Add footer color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'footer_color_hex',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the footer.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
 	// Header - add option to hide tagline.
 	$wp_customize->add_setting(
 		'header_display_tagline',
@@ -731,6 +795,24 @@ function newspack_customize_register( $wp_customize ) {
 			'type'    => 'number',
 			'label'   => esc_html__( 'Cut off for "time ago" date in days.', 'newspack' ),
 			'section' => 'post_default_settings',
+		)
+	);
+
+	// Add option to display updated date.
+	$wp_customize->add_setting(
+		'post_updated_date',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_updated_date',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show "last updated" date on single posts', 'newspack' ),
+			'description' => esc_html__( 'When paired with the "time ago" date format, the cut off for that format will automatically be switched to one day.', 'newspack' ),
+			'section'     => 'post_default_settings',
 		)
 	);
 

@@ -19,6 +19,11 @@ function newspack_sacha_custom_colors_css() {
 			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
 			$header_color_contrast = newspack_get_color_contrast( $header_color );
 		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$footer_color          = get_theme_mod( 'footer_color_hex', '' );
+			$footer_color_contrast = newspack_get_color_contrast( $footer_color );
+		}
 	}
 
 	// Set colour contrasts.
@@ -73,6 +78,19 @@ function newspack_sacha_custom_colors_css() {
 				}
 			';
 		}
+	}
+
+	if ( isset( $footer_color ) && '' !== $footer_color ) {
+		$theme_css .= '
+			.site-footer .widget .widget-title,
+			.site-info a:visited {
+				color: ' . esc_html( $footer_color_contrast ) . ';
+			}
+
+			.site-info {
+				background-color: ' . esc_html( newspack_adjust_brightness( $footer_color, -10 ) ) . ';
+			}
+		';
 	}
 
 	$editor_css = '
