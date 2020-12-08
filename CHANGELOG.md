@@ -1,3 +1,16 @@
+# [1.24.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.23.0...v1.24.0-alpha.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* center sponsor flag in Newspack Sacha ([#1156](https://github.com/Automattic/newspack-theme/issues/1156)) ([2b268eb](https://github.com/Automattic/newspack-theme/commit/2b268eb36b9cc4759e0688fe4e9d755adf66fad6))
+* correct width of columns block with wide alignment ([#1161](https://github.com/Automattic/newspack-theme/issues/1161)) ([42386e1](https://github.com/Automattic/newspack-theme/commit/42386e1789e1037f3099d131249f8280372e4ba9))
+
+
+### Features
+
+* add option to show excerpts on archives ([#1157](https://github.com/Automattic/newspack-theme/issues/1157)) ([cf4282c](https://github.com/Automattic/newspack-theme/commit/cf4282c35689a05785b25951f52ee83546ed35e8))
+
 # [1.23.0](https://github.com/Automattic/newspack-theme/compare/v1.22.0...v1.23.0) (2020-12-03)
 
 
