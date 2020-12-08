@@ -104,7 +104,7 @@ figcaption,
 .widget,
 .widget-title.accent-header,
 .accent-header,
-.entry .entry-content .wp-block-button .wp-block-button__link,
+.wp-block-button__link,
 .entry .article-section-title,
 button,
 input[type='button'],
@@ -372,17 +372,15 @@ textarea {
 }
 
 /* Blocks */
-.entry .entry-content {
-	.wp-block-separator,
-	hr {
-		background: transparent !important;
-		border-color: currentColor;
-		border-top-style: double;
-		border-top-width: 3px;
+.wp-block-separator,
+hr {
+	background: transparent !important;
+	border-color: currentColor;
+	border-top-style: double;
+	border-top-width: 3px;
 
-		&.is-style-dots::before {
-			color: currentColor;
-		}
+	&.is-style-dots::before {
+		color: currentColor;
 	}
 }
 

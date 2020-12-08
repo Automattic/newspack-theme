@@ -17,7 +17,7 @@ function newspack_joseph_custom_typography_css() {
 	if ( get_theme_mod( 'font_header', '' ) ) {
 		$css_blocks .= '
 			.has-drop-cap:not(:focus)::first-letter,
-			.entry .entry-content .wp-block-pullquote {
+			.wp-block-pullquote {
 				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
 
@@ -35,7 +35,7 @@ function newspack_joseph_custom_typography_css() {
 			.widget,
 			.widget-title.accent-header,
 			.accent-header,
-			.entry .entry-content .wp-block-button__link,
+			.wp-block-button .wp-block-button__link,
 			.entry .article-section-title,
 			button,
 			input[type="button"],
