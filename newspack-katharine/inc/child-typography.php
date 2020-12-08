@@ -31,7 +31,7 @@ function newspack_katharine_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header,
-			.site-content .wpnbha .article-section-title,
+			div.wpnbha .article-section-title,
 			.archive .page-title,
 			.author-bio h2 span,
 			.entry-meta .byline a,

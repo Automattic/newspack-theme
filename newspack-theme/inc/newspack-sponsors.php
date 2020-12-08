@@ -133,10 +133,10 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 				foreach ( $sponsors as $sponsor ) {
 					$i++;
 					if ( $sponsor_count === $i ) :
-						/* translators: separates last two sponsor names; needs a space on either side. */
+						/* translators: separates last two names; needs a space on either side. */
 						$sep = esc_html__( ' and ', 'newspack' );
 					elseif ( $sponsor_count > $i ) :
-						/* translators: separates all but the last two sponsor names; needs a space at the end. */
+						/* translators: separates all but the last two names; needs a space at the end. */
 						$sep = esc_html__( ', ', 'newspack' );
 					else :
 						$sep = '';

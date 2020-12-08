@@ -46,6 +46,10 @@ function newspack_scott_custom_colors_css() {
 			color: ' . esc_html( $primary_color ) . ';
 		}
 
+		.wp-block-pullquote {
+			border-color: ' . esc_html( $primary_color ) . ';
+		}
+
 		@media only screen and (min-width: 782px) {
 			/* Header default background */
 			.h-db .featured-image-beside .cat-links:before {

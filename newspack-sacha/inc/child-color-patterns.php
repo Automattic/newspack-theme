@@ -33,8 +33,8 @@ function newspack_sacha_custom_colors_css() {
 	$theme_css = '
 		.archive .page-title,
 		.h-sb .featured-image-beside .cat-links,
-		.entry-meta .byline a, .entry-meta .byline a:visited,
-		.entry .entry-content .entry-meta .byline a, .entry .entry-content .entry-meta .byline a:visited,
+		.entry-meta .byline a,
+		.entry-meta .byline a:visited,
 		.entry .entry-meta a:hover,
 		.accent-header,
 		.article-section-title,
