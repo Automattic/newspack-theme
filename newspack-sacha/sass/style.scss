@@ -194,10 +194,6 @@ cite {
 }
 
 .single {
-	.cat-links {
-		text-align: center;
-	}
-
 	.featured-image-behind {
 		.entry-subhead {
 			border: 0;
@@ -216,10 +212,8 @@ cite {
 	}
 
 	.entry-header {
-		.entry-title,
-		.newspack-post-subtitle {
-			text-align: center;
-		}
+		text-align: center;
+
 		.entry-title {
 			margin-bottom: #{1.5 * $size__spacing-unit};
 			margin-top: $size__spacing-unit;
