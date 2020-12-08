@@ -209,12 +209,7 @@ amp-script .cat-links {
 	}
 
 	a {
-		color: $color__link;
 		text-decoration: underline;
-
-		&:visited {
-			color: $color__link-visited;
-		}
 
 		&:hover,
 		&:active {
