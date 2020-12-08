@@ -1,3 +1,10 @@
+# [1.24.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.24.0-alpha.1...v1.24.0-alpha.2) (2020-12-08)
+
+
+### Bug Fixes
+
+* make sure block styles are applied outside of content area ([#1133](https://github.com/Automattic/newspack-theme/issues/1133)) ([f8c51b5](https://github.com/Automattic/newspack-theme/commit/f8c51b5981d153ad5a0c38113ec596181966cab9))
+
 # [1.24.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.23.0...v1.24.0-alpha.1) (2020-12-08)
 
 
