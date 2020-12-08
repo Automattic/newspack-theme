@@ -871,6 +871,34 @@ function newspack_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Archive settings
+	 */
+	$wp_customize->add_section(
+		'archive_options',
+		array(
+			'title' => esc_html__( 'Archive Settings', 'newspack' ),
+			'panel' => 'newspack_template_settings',
+		)
+	);
+
+	// Add option to show excerpts for all archives.
+	$wp_customize->add_setting(
+		'archive_show_excerpt',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'archive_show_excerpt',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show excerpts for all archives', 'newspack' ),
+			'section' => 'archive_options',
+		)
+	);
+
+	/**
 	 * Comments settings
 	 */
 	$wp_customize->add_section(
