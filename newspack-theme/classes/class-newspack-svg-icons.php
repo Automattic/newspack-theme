@@ -347,7 +347,7 @@ class Newspack_SVG_Icons {
 
 		'flipboard'   => '
 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<polygon points="2.9,2.9 2.9,21.1 9,21.1 9,15 15,15 15,9 21.1,9 21.1,2.9 "/>
+	<polygon points="3.3,3.3 3.3,20.7 9.1,20.7 9.1,14.9 14.9,14.9 14.9,9.1 20.7,9.1 20.7,3.3 "/>
 </svg>
 ',
 
