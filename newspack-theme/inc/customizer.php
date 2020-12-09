@@ -1160,6 +1160,7 @@ function newspack_sanitize_feature_image_position( $choice ) {
 		'small',
 		'behind',
 		'beside',
+		'above',
 		'hidden',
 	);
 
