@@ -35,6 +35,8 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		<!-- IS SUBSCRIBED TO SITE (ACTIVE SUBSCRIPTION IS AVAILABLE) -->
 		<?php if ( newspack_is_amp() ) : ?>
 			<section amp-access="isSubscribedToSite" amp-access-hide>
+
+				<p><a on="tap:amp-access.login-sign-out">Log Out</a></p>
 				<?php
 				the_content(
 					sprintf(

@@ -22,18 +22,18 @@
 		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 		<script id="amp-access" type="application/json">
-			{
-				"authorization": "https://www.pelcro.com/integrations/amp/auth/authorization?site_id=1155&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
-				"pingback": "https://www.pelcro.com/integrations/amp/auth/pingBack?site_id=1155&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
-				"login": {
-					"sign-in": "https://www.pelcro.com/integrations/amp/login?site_id=1155&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL",
-					"sign-out": "https://www.pelcro.com/integrations/amp/logout?site_id=1155&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL"
-				},
-				"authorizationFallbackResponse": {
-					"isAuthorized":false,
-					"isSubscribedToSite":false
-				}
+		{
+			"authorization": "https://staging.pelcro.com/integrations/amp/auth/authorization?site_id=240&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
+			"pingback": "https://staging.pelcro.com/integrations/amp/auth/pingBack?site_id=240&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
+			"login": {
+				"sign-in": "https://staging.pelcro.com/integrations/amp/login?site_id=240&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL",
+				"sign-out": "https://staging.pelcro.com/integrations/amp/logout?site_id=240&rid=READER_ID&source_url=SOURCE_URL&return_url=RETURN_URL"
+			},
+			"authorizationFallbackResponse": {
+				"isAuthorized":false,
+				"isSubscribedToSite":true
 			}
+		}
 		</script>
 	<?php endif; ?>
 

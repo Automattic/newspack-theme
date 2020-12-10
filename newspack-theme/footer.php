@@ -58,8 +58,8 @@
 
 <?php wp_footer(); ?>
 
-<script>var Pelcro = window.Pelcro || (window.Pelcro = {}); Pelcro.siteid = "1155";</script>
-<script async src="//js.pelcro.com/sdk/main.min.js" type="text/javascript"></script>
+<script>var Pelcro = window.Pelcro || (window.Pelcro = {});Pelcro.siteid = "240";Pelcro.environment = {};Pelcro.environment.stripe = "pk_test_aThAAdvPHgIdAziZweywBWNk";Pelcro.environment.domain = "https://staging.pelcro.com";</script>
+<script src="https://js.pelcro.com/sdk/main.min.js"></script>
 
 </body>
 </html>
