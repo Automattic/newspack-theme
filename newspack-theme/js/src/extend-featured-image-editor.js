@@ -21,6 +21,7 @@ class RadioCustom extends Component {
 					{ label: __( 'Small', 'newspack' ), value: 'small' },
 					{ label: __( 'Behind article title', 'newspack' ), value: 'behind' },
 					{ label: __( 'Beside article title', 'newspack' ), value: 'beside' },
+					{ label: __( 'Above article title', 'newspack' ), value: 'above' },
 					{ label: __( 'Hidden', 'newspack' ), value: 'hidden' },
 				] }
 				onChange={ value => {
