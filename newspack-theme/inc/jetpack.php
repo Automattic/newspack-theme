@@ -39,10 +39,6 @@ function newspack_jetpack_setup() {
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'blog-display'    => array(
-				'content',
-				'excerpt',
-			),
 			'post-details'    => array(
 				'stylesheet' => 'newspack-style',
 				'date'       => '.posted-on',
@@ -52,7 +48,6 @@ function newspack_jetpack_setup() {
 			),
 			'featured-images' => array(
 				'archive' => true,
-				'page'    => true,
 			),
 		)
 	);
