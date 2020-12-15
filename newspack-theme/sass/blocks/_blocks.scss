@@ -799,6 +799,7 @@ hr {
 	height: 1px;
 	margin: ( 2 * $size__spacing-unit ) auto;
 	max-width: #{5 * $size__spacing-unit};
+	opacity: 1;
 
 	&.is-style-wide {
 		max-width: 100%;

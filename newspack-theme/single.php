@@ -19,7 +19,7 @@ get_header();
 				the_post();
 
 				// Template part for large featured images.
-				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) :
+				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside', 'above' ) ) ) :
 					get_template_part( 'template-parts/post/large-featured-image' );
 				else :
 				?>
