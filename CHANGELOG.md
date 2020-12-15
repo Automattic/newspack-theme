@@ -1,3 +1,17 @@
+# [1.25.0](https://github.com/Automattic/newspack-theme/compare/v1.24.0...v1.25.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* override semi-transparent styles for separator block ([#1178](https://github.com/Automattic/newspack-theme/issues/1178)) ([77c2403](https://github.com/Automattic/newspack-theme/commit/77c240382ada1f42de26ab68fd99e9f197f7b415))
+
+
+### Features
+
+* add above title placement for featured images ([#1137](https://github.com/Automattic/newspack-theme/issues/1137)) ([adfbbd8](https://github.com/Automattic/newspack-theme/commit/adfbbd8f4f95c7cb8a372e3f2b0502db3ab23a16))
+* add Apple News icon for the social links menu ([#1177](https://github.com/Automattic/newspack-theme/issues/1177)) ([0b04e6c](https://github.com/Automattic/newspack-theme/commit/0b04e6c08ff0a66d7868df14bc34ecc5b334bc5a))
+* add Flipboard icon for the social links menu ([#1176](https://github.com/Automattic/newspack-theme/issues/1176)) ([717cf9b](https://github.com/Automattic/newspack-theme/commit/717cf9bb94a08bf8be0ec1b42c5a5dc7c6bed2bd))
+
 # [1.24.0](https://github.com/Automattic/newspack-theme/compare/v1.23.0...v1.24.0) (2020-12-08)
 
 
