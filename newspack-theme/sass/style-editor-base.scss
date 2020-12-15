@@ -604,6 +604,7 @@ figcaption,
 /** === Separator === */
 
 .wp-block-separator {
+	opacity: 1;
 	&:not( .is-style-dots ) {
 		border: 0;
 		border-top: 1px solid $color__border;

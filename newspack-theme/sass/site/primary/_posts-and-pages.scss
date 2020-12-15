@@ -755,6 +755,36 @@ div.sharedaddy .sd-social h3.sd-title,
 	}
 }
 
+/* Featured Image Above */
+.single-featured-image-above {
+	.site-content {
+		margin-top: 0;
+	}
+}
+
+.featured-image-above {
+	width: 100%;
+
+	.post-thumbnail {
+		margin: 0 calc( 50% - 50vw ) $size__spacing-unit;
+		width: 100vw;
+
+		@include media( tablet ) {
+			margin-bottom: #{2 * $size__spacing-unit};
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	figcaption {
+		margin: #{0.25 * $size__spacing-unit} auto 0;
+		max-width: 90%;
+		width: 1200px;
+	}
+}
+
 /* Aside */
 .single-format-aside {
 	.author-avatar,

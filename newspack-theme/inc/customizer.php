@@ -736,6 +736,7 @@ function newspack_customize_register( $wp_customize ) {
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'post_default_settings',
@@ -864,6 +865,7 @@ function newspack_customize_register( $wp_customize ) {
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
+				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
 			'section' => 'page_default_settings',
@@ -1268,6 +1270,7 @@ function newspack_sanitize_feature_image_position( $choice ) {
 		'small',
 		'behind',
 		'beside',
+		'above',
 		'hidden',
 	);
 
