@@ -435,6 +435,11 @@ function newspack_enqueue_scripts() {
 	if ( 'post' === get_current_screen()->post_type ) {
 		wp_enqueue_script( 'newspack-post-subtitle', get_theme_file_uri( '/js/dist/post-subtitle.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 		wp_set_script_translations( 'newspack-post-subtitle', 'newspack', get_parent_theme_file_path( '/languages' ) );
+
+		if ( true === get_theme_mod( 'post_updated_date', false ) ) {
+			wp_enqueue_script( 'newspack-post-date-updated', get_theme_file_uri( '/js/dist/post-date-updated.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+			wp_set_script_translations( 'newspack-post-date-updated', 'newspack', get_parent_theme_file_path( '/languages' ) );
+		}
 	}
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
@@ -610,6 +615,16 @@ function newspack_register_meta() {
 			'show_in_rest' => true,
 			'single'       => true,
 			'type'         => 'string',
+		)
+	);
+
+	register_post_meta(
+		'post',
+		'newspack_hide_updated_date',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'boolean',
 		)
 	);
 }

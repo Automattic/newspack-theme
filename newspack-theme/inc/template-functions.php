@@ -604,7 +604,7 @@ function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
  * Check whether updated date should be displayed.
  */
 function newspack_should_display_updated_date() {
-	if ( is_single() && true === get_theme_mod( 'post_updated_date', false ) ) {
+	if ( is_single() && true === get_theme_mod( 'post_updated_date', false ) && ! get_post_meta( get_the_ID(), 'newspack_hide_updated_date', true ) ) {
 		$post          = get_post();
 		$publish_date  = $post->post_date;
 		$modified_date = $post->post_modified;
