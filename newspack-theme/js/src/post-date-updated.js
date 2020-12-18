@@ -14,7 +14,7 @@ const updatedDateToggle = ( { meta, updateMetaValue } ) => {
 	return (
 		<PluginPostStatusInfo>
 			<ToggleControl
-				label={ __( 'Show updated date', 'newspack' ) }
+				label={ __( 'Hide updated date', 'newspack' ) }
 				checked={ newspack_show_updated_date }
 				onChange={ value => updateMetaValue( 'newspack_show_updated_date', value ) }
 			/>
