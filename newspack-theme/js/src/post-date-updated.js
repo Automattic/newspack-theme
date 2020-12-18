@@ -1,6 +1,6 @@
 'use strict';
 
-import { ToggleControl } from '@wordpress/components';
+import { FormToggle } from '@wordpress/components';
 import { withDispatch, withSelect } from '@wordpress/data';
 
 import { registerPlugin } from '@wordpress/plugins';
@@ -13,10 +13,13 @@ const updatedDateToggle = ( { meta, updateMetaValue } ) => {
 
 	return (
 		<PluginPostStatusInfo>
-			<ToggleControl
-				label={ __( 'Hide updated date', 'newspack' ) }
+			<label htmlFor="hide_updated_date">{ __( 'Hide updated date', 'newspack' ) }</label>
+			<FormToggle
 				checked={ newspack_hide_updated_date }
-				onChange={ value => updateMetaValue( 'newspack_hide_updated_date', value ) }
+				onChange={ () =>
+					updateMetaValue( 'newspack_hide_updated_date', ! newspack_hide_updated_date )
+				}
+				id="hide_updated_date"
 			/>
 		</PluginPostStatusInfo>
 	);
