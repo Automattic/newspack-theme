@@ -1,0 +1,17 @@
+{
+	"translation-revision-date": "2020-12-18 15:45+0000",
+	"generator": "WP-CLI/2.4.0",
+	"source": "js/src/extend-featured-image-editor.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": { "domain": "messages", "lang": "fr_BE", "plural-forms": "nplurals=2; plural=(n > 1);" },
+			"Small": ["Petit"],
+			"Large": ["Large"],
+			"Behind article title": ["Derri\u00e8re le titre de l\u2019article"],
+			"Beside article title": ["\u00c0 c\u00f4t\u00e9 du titre de l\u2019article"],
+			"Hidden": ["Masqu\u00e9"],
+			"Default (set in Customizer)": ["Par d\u00e9faut (d\u00e9fini dans le personnalisateur)"]
+		}
+	}
+}
