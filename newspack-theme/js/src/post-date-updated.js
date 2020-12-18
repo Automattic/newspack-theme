@@ -9,14 +9,14 @@ import { compose } from '@wordpress/compose';
 import { __ } from '@wordpress/i18n';
 
 const updatedDateToggle = ( { meta, updateMetaValue } ) => {
-	const { newspack_show_updated_date } = meta;
+	const { newspack_hide_updated_date } = meta;
 
 	return (
 		<PluginPostStatusInfo>
 			<ToggleControl
 				label={ __( 'Hide updated date', 'newspack' ) }
-				checked={ newspack_show_updated_date }
-				onChange={ value => updateMetaValue( 'newspack_show_updated_date', value ) }
+				checked={ newspack_hide_updated_date }
+				onChange={ value => updateMetaValue( 'newspack_hide_updated_date', value ) }
 			/>
 		</PluginPostStatusInfo>
 	);
@@ -38,9 +38,9 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
-const showUpdatedDate = compose( [
+const hideUpdatedDate = compose( [
 	withSelect( mapStateToProps ),
 	withDispatch( mapDispatchToProps ),
 ] )( updatedDateToggle );
 
-registerPlugin( 'show-updated-date', { render: showUpdatedDate } );
+registerPlugin( 'hide-updated-date', { render: hideUpdatedDate } );
