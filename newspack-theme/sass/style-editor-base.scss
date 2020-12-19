@@ -96,6 +96,24 @@ a {
 	}
 }
 
+.more-link {
+	color: inherit;
+	font-size: 0.9em;
+	@include link-transition;
+	text-decoration: none;
+
+	&::after {
+		content: '\02192';
+		display: inline-block;
+		margin-left: 0.25em;
+	}
+
+	&:hover {
+		color: $color__primary-variation;
+		text-decoration: underline;
+	}
+}
+
 table td,
 table th {
 	font-family: $font__body;
