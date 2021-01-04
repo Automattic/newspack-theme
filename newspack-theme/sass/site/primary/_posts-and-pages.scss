@@ -193,15 +193,11 @@ amp-script .cat-links {
 
 	.more-link {
 		color: inherit;
+		display: block;
 		font-size: 0.8em;
 		@include link-transition;
+		margin: 0.5em 0;
 		text-decoration: none;
-
-		&::after {
-			content: '\02192';
-			display: inline-block;
-			margin-left: 0.25em;
-		}
 
 		&:hover {
 			text-decoration: underline;

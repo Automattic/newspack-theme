@@ -98,15 +98,10 @@ a {
 
 .more-link {
 	color: inherit;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	@include link-transition;
+	margin: 0.5em 0;
 	text-decoration: none;
-
-	&::after {
-		content: '\02192';
-		display: inline-block;
-		margin-left: 0.25em;
-	}
 
 	&:hover {
 		color: $color__primary-variation;
@@ -192,6 +187,10 @@ figcaption,
 /** === Homepage Posts === */
 
 .wpnbha {
+	.more-link + .entry-meta {
+		margin-top: #{0.75 * $size__spacing-unit};
+	}
+
 	article.format-aside {
 		.entry-meta > a,
 		.entry-meta .byline,
