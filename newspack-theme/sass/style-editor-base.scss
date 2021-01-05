@@ -96,6 +96,13 @@ a {
 	}
 }
 
+.more-link {
+	color: inherit;
+	font-size: 0.8em;
+	@include link-transition;
+	margin: 0.5em 0;
+}
+
 table td,
 table th {
 	font-family: $font__body;
@@ -174,6 +181,10 @@ figcaption,
 /** === Homepage Posts === */
 
 .wpnbha {
+	.more-link + .entry-meta {
+		margin-top: #{0.75 * $size__spacing-unit};
+	}
+
 	article.format-aside {
 		.entry-meta > a,
 		.entry-meta .byline,

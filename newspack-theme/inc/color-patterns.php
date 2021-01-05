@@ -481,6 +481,7 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Do not overwrite solid color pullquote or cover links */
+		.block-editor-block-list__layout .block-editor-block-list__block a.more-link,
 		.block-editor-block-list__layout .block-editor-block-list__block .has-text-color a,
 		.block-editor-block-list__layout .block-editor-block-list__block .has-text-color a:hover,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-pullquote.is-style-solid-color a,
