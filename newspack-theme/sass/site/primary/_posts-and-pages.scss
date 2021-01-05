@@ -197,11 +197,6 @@ amp-script .cat-links {
 		font-size: 0.8em;
 		@include link-transition;
 		margin: 0.5em 0;
-		text-decoration: none;
-
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 
 	a {

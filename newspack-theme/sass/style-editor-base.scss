@@ -101,12 +101,6 @@ a {
 	font-size: 0.8em;
 	@include link-transition;
 	margin: 0.5em 0;
-	text-decoration: none;
-
-	&:hover {
-		color: $color__primary-variation;
-		text-decoration: underline;
-	}
 }
 
 table td,
