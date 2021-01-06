@@ -88,10 +88,6 @@ blockquote {
 	blockquote p {
 		font-size: $font__size-lg;
 
-		em {
-			font-style: italic;
-		}
-
 		@include media( tablet ) {
 			font-size: $font__size-xl;
 		}
@@ -100,6 +96,10 @@ blockquote {
 	p {
 		font-style: normal;
 		font-weight: bold;
+	}
+
+	em {
+		font-style: italic;
 	}
 
 	.wp-block-pullquote__citation {
