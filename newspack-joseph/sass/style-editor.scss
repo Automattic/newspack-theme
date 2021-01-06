@@ -53,13 +53,25 @@ Newspack Sacha Editor Styles
 	font-style: normal;
 	font-weight: bold;
 
+	p {
+		font-style: inherit;
+
+		em {
+			font-style: italic;
+		}
+
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
+	&.is-style-solid-color {
+		border: 0;
+	}
+
 	blockquote {
 		border-color: inherit;
 		text-align: center;
-	}
-
-	p {
-		font-style: normal;
 	}
 
 	&.is-style-solid-color {
