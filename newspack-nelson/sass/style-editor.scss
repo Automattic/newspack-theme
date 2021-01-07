@@ -77,27 +77,25 @@ blockquote {
 	border-color: currentColor;
 }
 
-.wp-block[data-type='core/pullquote'] {
-	.wp-block-pullquote {
-		border-width: 16px 0 4px;
-	}
+.wp-block-pullquote {
+	border-width: 16px 0 4px;
 
 	blockquote {
 		margin: #{2 * $size__spacing-unit} 0;
 	}
 
-	blockquote
-		> .block-library-pullquote__content
-		.editor-rich-text__tinymce[data-is-empty='true']::before,
-	blockquote > .editor-rich-text p,
-	p {
+	&.is-style-solid-color blockquote p,
+	blockquote p {
 		font-size: $font__size-lg;
-		font-style: normal;
-		font-weight: bold;
 
 		@include media( tablet ) {
 			font-size: $font__size-xl;
 		}
+	}
+
+	p {
+		font-style: normal;
+		font-weight: bold;
 	}
 
 	.wp-block-pullquote__citation {
@@ -106,35 +104,32 @@ blockquote {
 		opacity: 0.9;
 		text-transform: uppercase;
 	}
+}
 
-	&[data-align='left'] .wp-block-pullquote,
-	&[data-align='right'] .wp-block-pullquote {
-		border-width: 0;
-		position: relative;
+[data-align='left'] .wp-block-pullquote,
+[data-align='right'] .wp-block-pullquote {
+	border-width: 0;
+	position: relative;
 
-		blockquote {
-			margin-top: #{1.5 * $size__spacing-unit};
-			margin-bottom: #{1.5 * $size__spacing-unit};
+	blockquote {
+		margin-top: #{1.5 * $size__spacing-unit};
+		margin-bottom: #{1.5 * $size__spacing-unit};
+	}
+
+	@include media( tablet ) {
+		&.is-style-solid-color blockquote p,
+		blockquote p {
+			font-size: $font__size-lg;
 		}
+	}
 
-		@include media( tablet ) {
-			blockquote
-				> .block-library-pullquote__content
-				.editor-rich-text__tinymce[data-is-empty='true']::before,
-			blockquote > .editor-rich-text p,
-			p {
-				font-size: $font__size-md;
-			}
-		}
-
-		&::before {
-			border-color: inherit;
-			border-width: 10px 0 0;
-			border-style: solid;
-			content: '';
-			display: block;
-			width: 75%;
-		}
+	&::before {
+		border-color: inherit;
+		border-width: 10px 0 0;
+		border-style: solid;
+		content: '';
+		display: block;
+		width: 75%;
 	}
 }
 
