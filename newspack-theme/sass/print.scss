@@ -22,6 +22,10 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		margin: 2cm;
 	}
 
+	#primary {
+		padding: 0;
+	}
+
 	.entry {
 		margin-top: 1em;
 	}
@@ -29,6 +33,13 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.entry .entry-header,
 	.site-footer .site-info {
 		margin: 0;
+	}
+
+	/* Borders */
+
+	#page .site-header,
+	#primary {
+		border: 0;
 	}
 
 	/* Fonts */
@@ -134,7 +145,9 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.footer-branding,
 	.site-info a.privacy-policy-link,
 	.wc-memberships-frontend-banner,
-	#atomic-proxy-bar {
+	#atomic-proxy-bar,
+	.newspack-lightbox,
+	.newspack-inline-popup {
 		display: none;
 	}
 
