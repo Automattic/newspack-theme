@@ -378,8 +378,7 @@ div.sharedaddy .sd-social h3.sd-title,
 	}
 }
 
-/* Page */
-
+/* Pages */
 .page {
 	.entry-header + .post-thumbnail,
 	.main-content > .post-thumbnail:first-child {
@@ -391,15 +390,29 @@ div.sharedaddy .sd-social h3.sd-title,
 	max-width: 100%;
 }
 
-/* Static Front Page. */
-
-.newspack-front-page {
-	&.hide-homepage-title .entry-header {
+.hide-page-title {
+	.entry-header {
 		display: none;
 	}
 
 	.site-content {
 		margin-top: 0;
+		@include media( tablet ) {
+			margin-top: #{0.5 * $size__spacing-unit};
+		}
+	}
+}
+
+/* Static Front Page. */
+
+.newspack-front-page {
+	.hide-homepage-title .entry-header {
+		display: none;
+	}
+
+	.site-content {
+		margin-top: 0;
+
 		@include media( tablet ) {
 			margin-top: #{0.5 * $size__spacing-unit};
 		}
