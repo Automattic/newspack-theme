@@ -77,7 +77,7 @@ function newspack_body_classes( $classes ) {
 
 	// Hide homepage title.
 	$hide_title = get_theme_mod( 'hide_front_page_title', false );
-	if ( true === $hide_title && ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
+	if ( true === $hide_title ) {
 		$classes[] = 'hide-homepage-title';
 	}
 
