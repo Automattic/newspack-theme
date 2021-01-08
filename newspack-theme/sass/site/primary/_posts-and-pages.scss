@@ -406,7 +406,7 @@ div.sharedaddy .sd-social h3.sd-title,
 /* Static Front Page. */
 
 .newspack-front-page {
-	.hide-homepage-title .entry-header {
+	&.hide-homepage-title .entry-header {
 		display: none;
 	}
 

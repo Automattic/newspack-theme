@@ -75,13 +75,16 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'newspack-customizer';
 	endif;
 
+	// Hide homepage title.
 	$hide_title = get_theme_mod( 'hide_front_page_title', false );
-	if ( true === $hide_title && ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
+	if ( true === $hide_title ) {
 		$classes[] = 'hide-homepage-title';
 	}
 
-	$page_hide_title = get_post_meta( get_the_ID(), 'newspack_hide_page_title', true );
-	if ( true === $hide_title ) {
+	// Hide specific page title.
+	$page_id         = get_queried_object_id();
+	$page_hide_title = get_post_meta( $page_id, 'newspack_hide_page_title', true );
+	if ( $page_hide_title ) {
 		$classes[] = 'hide-page-title';
 	}
 

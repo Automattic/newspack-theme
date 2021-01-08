@@ -71,6 +71,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .site-content,
+.hide-page-title .site-content,
 .newspack-front-page.hide-homepage-title .site-content,
 body:not( .newspack-front-page ) .newspack_global_ad.global_below_header + .site-content,
 .site-breadcrumb {
