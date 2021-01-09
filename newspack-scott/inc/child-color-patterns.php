@@ -108,8 +108,12 @@ function newspack_scott_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .article-section-title:before {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
-		.editor-styles-wrapper .wp-block[data-type="core/pullquote"] .wp-block-pullquote:not(.is-style-solid-color) blockquote > .editor-rich-text__editable:first-child:before {
+		.editor-styles-wrapper .wp-block-pullquote:not(.is-style-solid-color) blockquote p:first-of-type::before {
 			color: ' . esc_html( $primary_color ) . ';
+		}
+		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-pullquote:not(.is-style-solid-color):not([style*="border-color"]) blockquote::before,
+		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-pullquote:not(.is-style-solid-color):not([style*="border-color"]) blockquote::after {
+			border-top-color: ' . esc_html( $primary_color ) . ';
 		}
 	';
 
