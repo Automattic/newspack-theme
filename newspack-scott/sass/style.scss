@@ -148,7 +148,8 @@ div.wpnbha .article-section-title {
 	padding-top: #{4 * $size__spacing-unit};
 	position: relative;
 
-	p {
+	&.is-style-solid-color blockquote p,
+	blockquote p {
 		@include media( tablet ) {
 			font-size: $font__size-xl;
 		}
@@ -242,20 +243,21 @@ div.wpnbha .article-section-title {
 			}
 		}
 
+		&.is-style-solid-color blockquote p,
+		blockquote p {
+			font-size: $font__size-md;
+		}
+
 		&,
 		&.is-style-solid-color {
 			padding-top: #{3 * $size__spacing-unit};
 		}
 
-		p {
-			font-size: $font__size-md;
-
-			&:first-of-type::before {
-				font-size: calc( 1rem * 5 );
-				left: 0;
-				text-align: left;
-				width: 0.5em;
-			}
+		p:first-of-type::before {
+			font-size: calc( 1rem * 5 );
+			left: 0;
+			text-align: left;
+			width: 0.5em;
 		}
 
 		&.is-style-solid-color {

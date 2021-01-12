@@ -179,6 +179,10 @@ p.has-background {
 		max-width: 100%;
 	}
 
+	.more-link + .entry-meta {
+		margin-top: #{0.75 * $size__spacing-unit};
+	}
+
 	article.format-aside {
 		.entry-meta > a,
 		.entry-meta .byline {
@@ -342,8 +346,12 @@ p.has-background {
 		padding-left: 0;
 	}
 
+	blockquote p,
+	&.is-style-solid-color blockquote p {
+		font-size: $font__size-lg;
+	}
+
 	p {
-		font-size: $font__size-md;
 		font-style: italic;
 		line-height: 1.3;
 		margin-bottom: 0.5em;

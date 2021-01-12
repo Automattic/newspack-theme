@@ -80,6 +80,9 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 	 * Prints HTML with meta information about theme author.
 	 */
 	function newspack_posted_by() {
+		if ( true === apply_filters( 'newspack_listings_hide_author', false ) ) {
+			return;
+		}
 
 		if ( function_exists( 'coauthors_posts_links' ) && ! empty( get_coauthors() ) ) : // phpcs:ignore PHPCompatibility.LanguageConstructs.NewEmptyNonVariable.Found
 

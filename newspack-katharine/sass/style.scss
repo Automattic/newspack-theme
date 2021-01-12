@@ -254,15 +254,17 @@ figcaption,
 	border-width: 0;
 	position: relative;
 
+	blockquote p,
+	&.is-style-solid-color blockquote p {
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
 	blockquote {
 		font-weight: bold;
 		p {
 			font-style: normal;
-			font-size: $font__size-lg;
-
-			@include media( tablet ) {
-				font-size: $font__size-xl;
-			}
 		}
 	}
 
