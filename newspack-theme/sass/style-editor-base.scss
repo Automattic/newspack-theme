@@ -8,12 +8,6 @@ body {
 	background-color: $color__background-body;
 }
 
-/** === Content Width === */
-
-.wp-block {
-	max-width: 810px; // 780px + 30px to offset padding
-}
-
 /** === Base Typography === */
 
 // stylelint-disable-next-line no-duplicate-selectors
