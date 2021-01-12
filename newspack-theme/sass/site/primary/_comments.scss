@@ -107,6 +107,10 @@
 
 .comment-policy {
 	font-size: $font__size-sm;
+
+	a {
+		text-decoration: underline;
+	}
 }
 
 .comment-list {
