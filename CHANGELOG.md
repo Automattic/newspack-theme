@@ -1,3 +1,21 @@
+# [1.26.0](https://github.com/Automattic/newspack-theme/compare/v1.25.0...v1.26.0) (2021-01-12)
+
+
+### Bug Fixes
+
+* correct pullquote block preview ([#1196](https://github.com/Automattic/newspack-theme/issues/1196)) ([b7317de](https://github.com/Automattic/newspack-theme/commit/b7317de9fbd72435a2248038ac01836a6b962105))
+* correct pullquote font size with solid background ([#1195](https://github.com/Automattic/newspack-theme/issues/1195)) ([bf47eed](https://github.com/Automattic/newspack-theme/commit/bf47eedf910dc0a0567e3ae4d5935166653c9a6b))
+* minor improvements to print styles ([#1197](https://github.com/Automattic/newspack-theme/issues/1197)) ([dddfebe](https://github.com/Automattic/newspack-theme/commit/dddfebe72e2ea984b17fc5ef8f66e05b8e8cb3ba))
+* remove hyphenation styles from pullquote blocks ([#1194](https://github.com/Automattic/newspack-theme/issues/1194)) ([709504f](https://github.com/Automattic/newspack-theme/commit/709504f5fb64460e5c6c99e359acde46ba347b1d))
+
+
+### Features
+
+* add fr_BE translations to the theme ([#1188](https://github.com/Automattic/newspack-theme/issues/1188)) ([e1b834c](https://github.com/Automattic/newspack-theme/commit/e1b834c597d56c5d102303d9a34e48b40e54a5a0))
+* add per-post option for last updated date ([#1189](https://github.com/Automattic/newspack-theme/issues/1189)) ([40f438d](https://github.com/Automattic/newspack-theme/commit/40f438d8bc2ccbec73da484b4489a1c2244aa9cf))
+* add styles for the block 'read more' links ([#1191](https://github.com/Automattic/newspack-theme/issues/1191)) ([40c6cfe](https://github.com/Automattic/newspack-theme/commit/40c6cfefcf07ebdd9e36ed19dc2b34fa1a000717))
+* add support for Listings "hide author" option ([#1186](https://github.com/Automattic/newspack-theme/issues/1186)) ([246fd6b](https://github.com/Automattic/newspack-theme/commit/246fd6bc73e543739420661b261ed709e6364d5a))
+
 # [1.25.0](https://github.com/Automattic/newspack-theme/compare/v1.24.0...v1.25.0) (2020-12-15)
 
 
