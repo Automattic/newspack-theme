@@ -354,16 +354,18 @@ blockquote {
 .wp-block-pullquote {
 	border-width: 16px 0 4px;
 
+	blockquote p,
+	&.is-style-solid-color blockquote p {
+		@include media( tablet ) {
+			font-size: $font__size-xl;
+		}
+	}
+
 	blockquote {
 		margin: #{2 * $size__spacing-unit} 0;
 
 		p {
-			font-size: $font__size-lg;
 			font-style: normal;
-
-			@include media( tablet ) {
-				font-size: $font__size-xl;
-			}
 		}
 	}
 
@@ -386,7 +388,8 @@ blockquote {
 		margin-bottom: #{1.5 * $size__spacing-unit};
 
 		@include media( tablet ) {
-			p {
+			blockquote p,
+			&.is-style-solid-color blockquote p {
 				font-size: $font__size-lg;
 			}
 		}

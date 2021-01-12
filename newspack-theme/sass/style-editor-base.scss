@@ -96,6 +96,13 @@ a {
 	}
 }
 
+.more-link {
+	color: inherit;
+	font-size: 0.8em;
+	@include link-transition;
+	margin: 0.5em 0;
+}
+
 table td,
 table th {
 	font-family: $font__body;
@@ -174,6 +181,10 @@ figcaption,
 /** === Homepage Posts === */
 
 .wpnbha {
+	.more-link + .entry-meta {
+		margin-top: #{0.75 * $size__spacing-unit};
+	}
+
 	article.format-aside {
 		.entry-meta > a,
 		.entry-meta .byline,
@@ -452,8 +463,44 @@ figcaption,
 	padding: $size__spacing-unit 0;
 	text-align: left;
 
+	&.is-style-solid-color blockquote p,
+	p {
+		font-size: $font__size-md;
+
+		@include media( tablet ) {
+			font-size: $font__size-lg;
+		}
+	}
+
 	blockquote {
 		margin: #{1.5 * $size__spacing-unit} 0;
+	}
+
+	p {
+		font-style: italic;
+		line-height: 1.3;
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
+	}
+
+	.wp-block-pullquote__citation {
+		font-family: $font__heading;
+		font-size: $font__size-xs;
+		line-height: 1.6;
+		text-transform: none;
+
+		&::before {
+			content: '\2014';
+			margin-right: #{0.25 * $size__spacing-unit};
+		}
+	}
+
+	div.wp-block-pullquote__citation {
+		opacity: 0.8;
+	}
+
+	em {
+		font-style: normal;
 	}
 
 	&.is-style-solid-color {
@@ -476,69 +523,24 @@ figcaption,
 	}
 }
 
-.wp-block[data-type='core/pullquote'] {
-	blockquote
-		> .block-library-pullquote__content
-		.editor-rich-text__tinymce[data-is-empty='true']::before,
-	blockquote > .editor-rich-text p,
-	p {
-		font-size: $font__size-md;
-		font-style: italic;
-		line-height: 1.3;
-		margin-bottom: 0.5em;
-		margin-top: 0.5em;
+[data-align='left'] .wp-block-pullquote,
+[data-align='right'] .wp-block-pullquote {
+	max-width: 50%;
+	width: 50%;
 
-		@include media( tablet ) {
-			font-size: $font__size-lg;
-		}
+	@include media( tablet ) {
+		border-bottom: 0;
 	}
 
-	.wp-block-pullquote__citation {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
-		line-height: 1.6;
-		text-transform: none;
-
-		&::before {
-			content: '\2014';
-			margin-right: #{0.25 * $size__spacing-unit};
-		}
-	}
-
-	div.wp-block-pullquote__citation {
-		opacity: 0.8;
-	}
-
-	em {
-		font-style: normal;
-	}
-}
-
-.wp-block[data-type='core/pullquote'][data-align='left'],
-.wp-block[data-type='core/pullquote'][data-align='right'] {
-	.is-block-content {
-		max-width: 50%;
-		width: 50%;
-	}
-
-	.wp-block-pullquote {
-		@include media( tablet ) {
-			border-bottom: 0;
-		}
-	}
-
-	.wp-block-pullquote:not( .is-style-solid-color ) {
+	&:not( .is-style-solid-color ) {
 		padding: 0;
 	}
 
-	.wp-block-pullquote.is-style-solid-color {
+	&.is-style-solid-color {
 		padding: $size__spacing-unit #{2 * $size__spacing-unit};
 	}
 
-	blockquote
-		> .block-library-pullquote__content
-		.editor-rich-text__tinymce[data-is-empty='true']::before,
-	blockquote > .editor-rich-text p,
+	&.is-style-solid-color blockquote p,
 	p {
 		font-size: 1rem;
 

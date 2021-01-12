@@ -71,43 +71,44 @@ Newspack Katharine Editor Styles
 	}
 }
 
-.wp-block[data-type='core/pullquote'] {
-	.wp-block-pullquote {
-		border-width: 0;
-		position: relative;
+figure.wp-block-pullquote {
+	border-width: 0;
+}
 
-		&:not( .is-style-solid-color ) {
-			blockquote {
-				padding-left: #{2 * $size__spacing-unit};
-			}
+.wp-block-pullquote {
+	position: relative;
 
-			&::before {
-				border-top: 8px solid;
-				border-left: 8px solid;
-				border-color: inherit;
-				content: '';
-				display: block;
-				height: 40px;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 40px;
-			}
+	&:not( .is-style-solid-color ) {
+		blockquote {
+			padding-left: #{2 * $size__spacing-unit};
+		}
+
+		&::before {
+			border-top: 8px solid;
+			border-left: 8px solid;
+			border-color: inherit;
+			content: '';
+			display: block;
+			height: 40px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 40px;
 		}
 	}
 
-	blockquote
-		> .block-library-pullquote__content
-		.editor-rich-text__tinymce[data-is-empty='true']::before,
-	blockquote > .editor-rich-text p,
-	p {
+	blockquote p,
+	&.is-style-solid-color blockquote p {
 		font-size: $font__size-lg;
-		font-style: normal;
-		font-weight: bold;
 
 		@include media( tablet ) {
 			font-size: $font__size-xl;
 		}
+	}
+
+	p {
+		font-style: normal;
+		font-weight: bold;
 	}
 
 	.wp-block-pullquote__citation {
@@ -115,22 +116,18 @@ Newspack Katharine Editor Styles
 		opacity: 0.6;
 		text-transform: uppercase;
 	}
+}
 
-	&[data-align='left'],
-	&[data-align='right'] {
-		@include media( tablet ) {
-			.wp-block-pullquote blockquote p {
-				font-size: $font__size-lg;
-			}
+[data-align='left'] .wp-block-pullquote,
+[data-align='right'] .wp-block-pullquote {
+	@include media( tablet ) {
+		blockquote p,
+		&.is-style-solid-color blockquote p {
+			font-size: $font__size-lg;
 		}
 	}
 
-	&[data-align='left']
-		.editor-block-list__block-edit
-		.wp-block-pullquote:not( .is-style-solid-color ),
-	&[data-align='right']
-		.editor-block-list__block-edit
-		.wp-block-pullquote:not( .is-style-solid-color ) {
+	&:not( .is-style-solid-color ) {
 		padding-top: $size__spacing-unit;
 
 		blockquote {

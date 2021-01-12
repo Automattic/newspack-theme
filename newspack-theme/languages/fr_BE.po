@@ -1,0 +1,1129 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Newspack 1.0.0-alpha.33\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-11T00:01:08+00:00\n"
+"PO-Revision-Date: 2020-12-18 15:45+0000\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: newspack\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_BE\n"
+
+#. Theme Name of the theme
+msgid "Newspack"
+msgstr "Newspack"
+
+#. Theme URI of the theme
+msgid "https://github.com/Automattic/newspack-theme"
+msgstr "https://github.com/Automattic/newspack-theme"
+
+#. Author of the theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Author URI of the theme
+msgid "https://newspack.blog"
+msgstr "https://newspack.blog"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "La page que vous recherchez est introuvable."
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Nous n’avons trouvé aucun résultat à votre requête. Vous pouvez tenter une "
+"autre recherche avec le formulaire ci-dessous."
+
+#. translators: %s: comment author link
+#: classes/class-newspack-walker-comment.php:50
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr "%s <span class=\"screen-reader-text says\">dit :</span>"
+
+#: classes/class-newspack-walker-comment.php:62
+msgid "Article author"
+msgstr "Auteur de l’article"
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-newspack-walker-comment.php:75
+msgid "%1$s at %2$s"
+msgstr "%1$s ​à %2$s"
+
+#: classes/class-newspack-walker-comment.php:83
+msgid "Edit"
+msgstr "Modifier"
+
+#: classes/class-newspack-walker-comment.php:88
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: comments.php:49
+msgid "Join the Conversation"
+msgstr "Rejoindre la conversation"
+
+#: comments.php:51 comments.php:133
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+#. translators: %s: post title
+#: comments.php:56
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr "1 réponse sur « %2$s »"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:60
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s réponse sur « %2$s »"
+msgstr[1] "%1$s réponses sur « %2$s »"
+
+#: comments.php:113
+msgid "Comments"
+msgstr "Commentaires"
+
+#: comments.php:116
+msgid "Previous"
+msgstr "Précédent"
+
+#: comments.php:117
+msgid "Next"
+msgstr "Suivant"
+
+#: comments.php:126
+msgid "Collapse comments"
+msgstr "Réduire les commentaires"
+
+#: comments.php:126
+msgid "Expand comments"
+msgstr "Étendre les commentaires"
+
+#: comments.php:148
+msgid "Comments are closed."
+msgstr "Commentaires fermés."
+
+#: footer.php:40
+msgid "https://newspack.pub/"
+msgstr "https://newspack.pub/"
+
+#: footer.php:41
+msgid "Proudly powered by Newspack by Automattic"
+msgstr "Propulsé par Newspack de Automattic"
+
+#: functions.php:72
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:73 inc/template-tags.php:467
+msgid "Secondary Menu"
+msgstr "Menu secondaire"
+
+#: functions.php:74 inc/template-tags.php:496
+msgid "Tertiary Menu"
+msgstr "Menu tertiaire"
+
+#: functions.php:75
+msgid "Topic Highlight Menu"
+msgstr "Menu grands titres"
+
+#: functions.php:76 inc/template-tags.php:550 inc/template-tags.php:564
+msgid "Social Links Menu"
+msgstr "Menu social"
+
+#: functions.php:129 inc/customizer.php:661
+#: js/src/extend-featured-image-editor.js:21
+msgid "Small"
+msgstr "Petit"
+
+#: functions.php:130
+msgid "S"
+msgstr "S"
+
+#: functions.php:135
+msgid "Normal"
+msgstr "Moyen"
+
+#: functions.php:136
+msgid "M"
+msgstr "M"
+
+#: functions.php:141 inc/customizer.php:660
+#: js/src/extend-featured-image-editor.js:20
+msgid "Large"
+msgstr "Large"
+
+#: functions.php:142
+msgid "L"
+msgstr "L"
+
+#: functions.php:147
+msgid "Huge"
+msgstr "Extra large"
+
+#: functions.php:148
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:171
+msgid "Primary"
+msgstr "Couleur principale"
+
+#: functions.php:176
+msgid "Primary Variation"
+msgstr "Variation de la couleur principale"
+
+#: functions.php:181
+msgid "Secondary"
+msgstr "Couleur secondaire"
+
+#: functions.php:186
+msgid "Secondary Variation"
+msgstr "Variation de la couleur secondaire"
+
+#: functions.php:191
+msgid "Dark Gray"
+msgstr "Gris foncé"
+
+#: functions.php:196
+msgid "Medium Gray"
+msgstr "Gris moyen foncé"
+
+#: functions.php:201
+msgid "Light Gray"
+msgstr "Gris clair"
+
+#: functions.php:206
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:217
+msgid "Primary to primary variation"
+msgstr "Couleur principale vers variation de la couleur principale"
+
+#: functions.php:222
+msgid "Secondary to secondary variation"
+msgstr "Couleur secondaire vers variation de la couleur secondaire"
+
+#: functions.php:227
+msgid "Black to medium gray"
+msgstr "Noir vers gris moyen foncé"
+
+#: functions.php:232
+msgid "Dark gray to medium gray"
+msgstr "Gris foncé vers gris moyen foncé"
+
+#: functions.php:237
+msgid "Medium gray to light gray"
+msgstr "Gris moyen foncé vers gris clair"
+
+#: functions.php:242
+msgid "Light gray to white"
+msgstr "Gris clair vers blanc"
+
+#: functions.php:278
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: functions.php:280
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent dans votre barre latérale."
+
+#: functions.php:290 inc/customizer.php:117
+msgid "Slide-out Sidebar"
+msgstr "Barre latérale coulissante"
+
+#. translators: %s: link to Header Settings panel in Customizer.
+#: functions.php:294
+msgid ""
+"Add widgets here to appear in an off-screen sidebar when it is enabled under "
+"%s."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent dans une barre latérale "
+"hors écran lorsqu’elle est activée sous %s."
+
+#: functions.php:295 inc/customizer.php:42
+msgid "Header Settings"
+msgstr "Paramètres d’en-tête"
+
+#: functions.php:306 template-parts/footer/footer-widgets.php:10
+msgid "Footer"
+msgstr "Pied de page"
+
+#: functions.php:308
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent dans votre pied de page."
+
+#: functions.php:318
+msgid "Above Copyright"
+msgstr "Au-dessus du droit d’auteur"
+
+#: functions.php:320
+msgid ""
+"Add widgets here to appear below the footer, above the copyright information."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent sous le pied de page, au-"
+"dessus des informations du droit d’auteur."
+
+#: functions.php:330
+msgid "Article above content"
+msgstr "Article au-dessus du contenu"
+
+#: functions.php:332
+msgid "Add widgets here to appear above article content."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent au-dessus du contenu de "
+"l’article."
+
+#: functions.php:342
+msgid "Article below content"
+msgstr "Article en-dessous du contenu"
+
+#: functions.php:344
+msgid "Add widgets here to appear below article content."
+msgstr ""
+"Ajouter des widgets ici pour qu’ils apparaissent en-dessous du contenu de "
+"l’article."
+
+#: functions.php:392 template-parts/header/header-search.php:11
+#: template-parts/header/header-search.php:12
+msgid "Open Search"
+msgstr "Ouvrir la recherche"
+
+#: functions.php:393 template-parts/header/header-search.php:11
+msgid "Close Search"
+msgstr "Fermer la recherche"
+
+#: functions.php:394
+msgid "Expand Comments"
+msgstr "Étendre les commentaires"
+
+#: functions.php:395 inc/customizer.php:767
+msgid "Collapse Comments"
+msgstr "Réduire les commentaires"
+
+#: functions.php:396 woocommerce/checkout/form-checkout.php:38
+msgid "Show details"
+msgstr "Afficher les détails"
+
+#: functions.php:397 woocommerce/checkout/form-checkout.php:38
+msgid "Hide details"
+msgstr "Masquer les détails"
+
+#: header.php:47
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#: header.php:58 header.php:70 header.php:84 header.php:115 header.php:127
+#: header.php:208 header.php:217 inc/customizer.php:148
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:257
+msgid "Highlight Menu"
+msgstr "Menu grands titres"
+
+#: image.php:46 template-parts/content/content-page.php:21
+#: template-parts/content/content-single.php:38
+#: template-parts/content/content.php:38
+msgid "Pages:"
+msgstr "Pages :"
+
+#: image.php:50
+msgid "Page"
+msgstr "Page"
+
+#: image.php:64
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Taille réelle"
+
+#: image.php:81
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><br><span class=\"post-title\">"
+"%title</span>"
+msgstr ""
+"<span class=\"meta-nav\">Publié dans</span><br><span class=\"post-title\">"
+"%title</span>"
+
+#. translators: %s: WordPress version used by current site.
+#: inc/back-compat.php:38 inc/back-compat.php:52 inc/back-compat.php:72
+msgid ""
+"Newspack Theme requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"Le thème Newspack nécessite au moins la version 4.7 de WordPress. Vous "
+"utilisez la version %s. Veuillez mettre à jour et réessayez."
+
+#: inc/customizer.php:17
+msgid "Display Site Title"
+msgstr "Afficher le titre du site"
+
+#: inc/customizer.php:52
+msgid "Appearance"
+msgstr "Apparence"
+
+#: inc/customizer.php:69
+msgid "Center Logo"
+msgstr "Centrer le logo"
+
+#: inc/customizer.php:70
+msgid "Check to center the logo in the header."
+msgstr "Centrer le logo dans l’en-tête."
+
+#: inc/customizer.php:87
+msgid "Solid Background"
+msgstr "Arrière-plan en couleur"
+
+#: inc/customizer.php:88
+msgid ""
+"Check to use the primary color as the header background. Can be changed "
+"under \"Colors\"."
+msgstr ""
+"Utiliser la couleur principale comme arrière-plan de l’en-tête. Peut être "
+"changé dans l’onglet « Couleurs »."
+
+#: inc/customizer.php:105
+msgid "Short Header"
+msgstr "En-tête court"
+
+#: inc/customizer.php:106
+msgid "Displays header as a shorter, simpler version."
+msgstr "Affiche l’en-tête dans une version plus courte et plus simple."
+
+#: inc/customizer.php:134
+msgid "Show Slide-out Sidebar"
+msgstr "Afficher la barre latérale coulissante"
+
+#. translators: %s: link to Slide Out Sidebar widget panel in Customizer.
+#: inc/customizer.php:137
+msgid ""
+"Show a Slide-out sidebar in the header, which you can populate by adding "
+"widgets %1$s."
+msgstr ""
+"Afficher une barre latérale coulissante dans l’en-tête, que vous pouvez "
+"remplir en ajoutant les widgets %1$s."
+
+#: inc/customizer.php:138
+msgid "here"
+msgstr "Ici"
+
+#: inc/customizer.php:156
+msgid "Slide-out Sidebar Text"
+msgstr "Texte de la barre latérale coulissante"
+
+#: inc/customizer.php:157
+msgid ""
+"Use this field to change the text on the Slide-out Sidebar toggle. The text "
+"is not visible when using the short header, but can always be read by screen "
+"readers."
+msgstr ""
+"Utiliser ce champ pour modifier le texte du bouton de la barre latérale "
+"coulissante. Le texte n’est pas visible lors de l’utilisation de l’en-tête "
+"court, mais peut toujours être lu par les lecteurs d’écran."
+
+#: inc/customizer.php:174
+msgid "Add slide-out widgets to mobile menu"
+msgstr "Ajouter les widgets coulissants au menu mobile"
+
+#: inc/customizer.php:175
+msgid ""
+"Adds the widgets assigned to the Slide-out Sidebar area to the mobile menu, "
+"too."
+msgstr ""
+"Ajoute les widgets affectés à la zone de la barre latérale coulissante au "
+"menu mobile."
+
+#: inc/customizer.php:192
+msgid "Slide-out sidebar side"
+msgstr "Côté de la barre latérale coulissante"
+
+#: inc/customizer.php:194
+msgctxt "slide-out menu side"
+msgid "Left"
+msgstr "Gauche"
+
+#: inc/customizer.php:195
+msgctxt "slide-out menu side"
+msgid "Right"
+msgstr "Droite"
+
+#: inc/customizer.php:207
+msgid "Subpage Header"
+msgstr "En-tête de sous-page"
+
+#: inc/customizer.php:224
+msgid "Use simple header on subpages"
+msgstr "Utiliser un en-tête simple pour les sous-pages"
+
+#: inc/customizer.php:225
+msgid ""
+"On posts, pages, archive and search results, use a header that only displays "
+"the site logo and search icon, with all menus hidden under a toggle."
+msgstr ""
+"Sur les articles, les pages, les archives et les résultats de recherche, "
+"utilisez un en-tête qui affiche uniquement le logo du site et l’icône de "
+"recherche, tous les menus étant masqués sous un bouton à bascule."
+
+#: inc/customizer.php:236
+msgid "Mobile Call-to-Action"
+msgstr "Button sur mobile"
+
+#: inc/customizer.php:253
+msgid "Show Mobile CTA"
+msgstr "Afficher le bouton sur mobile"
+
+#: inc/customizer.php:254
+msgid ""
+"Show an essential call-to-action button in the mobile header, that is always "
+"visible."
+msgstr ""
+"Affiche un bouton dans l’en-tête sur mobiles, qui est toujours visible."
+
+#: inc/customizer.php:263 inc/template-tags.php:398
+msgid "Donate"
+msgstr "Donation"
+
+#: inc/customizer.php:271
+msgid "Button Text"
+msgstr "Texte du bouton"
+
+#: inc/customizer.php:288
+msgid "Button URL"
+msgstr "Lien du bouton"
+
+#: inc/customizer.php:306
+msgid "Open link in new window"
+msgstr "Ouvrir le lien dans une nouvelle fenêtre"
+
+#: inc/customizer.php:327
+msgid "Background Color"
+msgstr "Couleur de l’arrière plan"
+
+#: inc/customizer.php:328
+msgid ""
+"Selecting a strong, non-palette color is recommended to ensure the CTA "
+"stands out."
+msgstr ""
+"Il est recommandé de sélectionner une couleur forte et complémentaire de "
+"votre couleur principale pour s’assurer que le bouton se démarque."
+
+#: inc/customizer.php:348
+msgid "Alternative Logo"
+msgstr "Logo alternatif"
+
+#: inc/customizer.php:349
+msgid ""
+"Upload an alternative logo to be used on posts with the featured image "
+"behind and featured image beside settings, where the logo will be "
+"overlapping."
+msgstr ""
+
+#: inc/customizer.php:375
+msgid "Colors"
+msgstr "Couleurs"
+
+#: inc/customizer.php:377
+msgctxt "primary color"
+msgid "Default"
+msgstr "Défaut"
+
+#: inc/customizer.php:378
+msgctxt "primary color"
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: inc/customizer.php:398
+msgid "Apply a primary custom color."
+msgstr "Appliquer une couleur personnalisée principale."
+
+#: inc/customizer.php:418
+msgid "Apply a secondary custom color."
+msgstr "Appliquer une couleur personnalisée secondaire."
+
+#: inc/customizer.php:439
+msgid "Header Background Color"
+msgstr "Couleur d’arrière-plan de l’en-tête"
+
+#: inc/customizer.php:441
+msgctxt "header background color"
+msgid "Default"
+msgstr "Défaut"
+
+#: inc/customizer.php:442
+msgctxt "header background color"
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: inc/customizer.php:462
+msgid "Apply a background color to the header."
+msgstr "Appliquer une couleur d’arrière-plan à l’en-tête."
+
+#: inc/customizer.php:481
+msgid "Display Tagline"
+msgstr "Afficher le slogan"
+
+#: inc/customizer.php:500
+msgid "Hide Homepage Title"
+msgstr "Masquer le titre de la page d’accueil"
+
+#: inc/customizer.php:501
+msgid ""
+"Check to hide the page title, if your homepage is set to display a static "
+"page."
+msgstr ""
+"Masquer le titre de la page, si votre page d’accueil est configurée pour "
+"afficher une page statique."
+
+#: inc/customizer.php:523
+msgid "Footer logo"
+msgstr "Logo du pied de page"
+
+#: inc/customizer.php:524
+msgid "Optional alternative logo to be displayed in the footer."
+msgstr "Logo alternatif facultatif à afficher dans le pied de page."
+
+#: inc/customizer.php:542
+msgid "Author Bio Settings"
+msgstr "Paramètres de biographie de l’auteur"
+
+#: inc/customizer.php:558
+msgid "Display Author Bio"
+msgstr "Afficher la biographie de l’auteur"
+
+#: inc/customizer.php:559
+msgid "Display Author Bio under individual posts."
+msgstr "Afficher la biographie de l’auteur sous les articles."
+
+#: inc/customizer.php:576
+msgid "Display Author Email"
+msgstr "Afficher l’e-mail de l’auteur"
+
+#: inc/customizer.php:577
+msgid "Display Author email with bio on individual posts and author archives."
+msgstr ""
+"Afficher l’email de l’auteur avec la biographie sur les articles et les "
+"archives de l’auteur."
+
+#: inc/customizer.php:594
+msgid "Display Author Social Media links"
+msgstr "Afficher les liens des réseaux sociaux de l'auteur"
+
+#: inc/customizer.php:595
+msgid ""
+"Display social media links with the author bio on individual posts and "
+"author archives (this option requires the Yoast plugin)."
+msgstr ""
+"Afficher les liens de réseaux sociaux avec la biographie de l’auteur sur les "
+"articles et les archives de l’auteur (cette option nécessite le plugin "
+"Yoast)."
+
+#: inc/customizer.php:612
+msgid "Truncate Author Bio"
+msgstr "Tronquer la biographie de l’auteur"
+
+#: inc/customizer.php:613
+msgid "Set a specific length for author bios displayed on single posts."
+msgstr ""
+"Définit une longueur spécifique pour les biographies des auteurs affichées "
+"sur des articles."
+
+#: inc/customizer.php:630
+msgid "Author Bio Length (in characters)"
+msgstr "Longueur de la biographie de l’auteur (en caractères)"
+
+#: inc/customizer.php:631
+msgid ""
+"Truncates the author bio on single posts to this approximate character "
+"length, but without breaking a word."
+msgstr ""
+"Tronque la biographie de l’auteur sur les articles à cette longueur de "
+"caractère approximative, mais sans casser un mot."
+
+#: inc/customizer.php:642
+msgid "Template Settings"
+msgstr "Paramètres"
+
+#: inc/customizer.php:658
+msgid "Featured Image Default Position"
+msgstr "Position par défaut de l’image en vedette"
+
+#: inc/customizer.php:662 js/src/extend-featured-image-editor.js:22
+msgid "Behind article title"
+msgstr "Derrière le titre de l’article"
+
+#: inc/customizer.php:663 js/src/extend-featured-image-editor.js:23
+msgid "Beside article title"
+msgstr "À côté du titre de l’article"
+
+#: inc/customizer.php:664 js/src/extend-featured-image-editor.js:24
+msgid "Hidden"
+msgstr "Masqué"
+
+#: inc/customizer.php:682
+msgid "Default Post Template"
+msgstr "Défaut"
+
+#: inc/customizer.php:684
+msgid "Default Template"
+msgstr "Défaut"
+
+#: inc/customizer.php:685
+msgid "One Column"
+msgstr "1 colonne"
+
+#: inc/customizer.php:686
+msgid "One Column Wide"
+msgstr "1 colonne, large"
+
+#: inc/customizer.php:704
+msgid "Use \"time ago\" date format"
+msgstr "Utiliser le format de date « il y a … »"
+
+#: inc/customizer.php:721
+msgid "Cut off for \"time ago\" date in days."
+msgstr "Limite pour le format de date « il y a … » en jours."
+
+#: inc/customizer.php:739
+msgid "Use Yoast's primary category functionality"
+msgstr "Utiliser la fonctionnalité de catégorie principale de Yoast"
+
+#: inc/customizer.php:751
+msgid "Comments Settings"
+msgstr "Paramètres des commentaires"
+
+#: inc/customizer.php:768
+msgid ""
+"When using WordPress's default comments, checking this option will collapse "
+"the comments section when there is more than one comment, and display a "
+"button to expand."
+msgstr ""
+"Lorsque vous utilisez les commentaires par défaut de WordPress, cocher cette "
+"option réduira la section des commentaires lorsqu’il y a plus d’un "
+"commentaire et affichera un bouton pour développer."
+
+#: inc/customizer.php:779
+msgid "Footer Settings"
+msgstr "Paramètres du pied de page"
+
+#: inc/customizer.php:795
+msgid "Copyright Information"
+msgstr "Informations sur le droit d’auteur"
+
+#: inc/customizer.php:796
+msgid ""
+"Add custom text to be displayed next to a copyright symbol and current year "
+"in the footer. By default, it will display your site title."
+msgstr ""
+"Ajoute un texte personnalisé à afficher à côté d’un symbole de copyright et "
+"de l’année en cours dans le pied de page. Par défaut, il affichera le titre "
+"de votre site."
+
+#: inc/customizer.php:807 woocommerce/checkout/form-checkout.php:82
+msgid "Order Details"
+msgstr "Détails de la commande"
+
+#: inc/customizer.php:824
+msgid "Order Details Visibility"
+msgstr "Visibilité des détails de la commande"
+
+#: inc/customizer.php:826
+msgid "Hide"
+msgstr "Masquer"
+
+#: inc/customizer.php:827
+msgid "Hide, with ability to toggle open"
+msgstr "Masquer, avec possibilité d’afficher"
+
+#: inc/customizer.php:828
+msgid "Show"
+msgstr "Afficher"
+
+#: inc/customizer.php:840
+msgid "Thank You Page"
+msgstr "Page de remerciement"
+
+#: inc/customizer.php:849 inc/woocommerce.php:176
+msgid "Order received"
+msgstr "Commande reçue"
+
+#: inc/customizer.php:857
+msgid "Thank You page title"
+msgstr "Titre de la page de remerciement"
+
+#: inc/customizer.php:866 inc/woocommerce.php:186
+#: woocommerce/checkout/thankyou.php:47 woocommerce/checkout/thankyou.php:99
+msgid "Thank you. Your order has been received."
+msgstr "Merci. Votre commande a été reçue."
+
+#: inc/customizer.php:874
+msgid "Thank You message"
+msgstr "Message de remerciement"
+
+#: inc/customizer.php:893
+msgid "Display Customer Details"
+msgstr "Afficher les détails du client"
+
+#: inc/customizer.php:894
+msgid "Display the customer's billing address below their transaction details."
+msgstr ""
+"Affiche l’adresse de facturation du client sous les détails de sa "
+"transaction."
+
+#: inc/customizer.php:913
+msgid "Typography"
+msgstr "Typographie"
+
+#: inc/customizer.php:960
+msgid "Font Provider Import Code or URL"
+msgstr "Code d’importation ou URL du fournisseur de polices"
+
+#: inc/customizer.php:970
+msgid "Secondary Font Provider Import Code or URL"
+msgstr "Deuxième code d’importation ou URL du fournisseur de polices"
+
+#: inc/customizer.php:979
+msgid "Header Font"
+msgstr "Police d’en-tête"
+
+#: inc/customizer.php:995
+msgid "Header Font Fallback Stack"
+msgstr "Alternative à la police d’en-tête"
+
+#: inc/customizer.php:1005
+msgid "Body Font"
+msgstr "Police du corps"
+
+#: inc/customizer.php:1014
+msgid "Body Font Fallback Stack"
+msgstr "Alternative à la police du corps"
+
+#: inc/customizer.php:1033
+msgid "Use all-caps for accent text."
+msgstr "Utilise des majuscules pour le texte accentué."
+
+#: inc/logo-resizer.php:28
+msgid "Logo Size"
+msgstr "Taille du logo"
+
+#: inc/newspack-sponsors.php:28 inc/newspack-sponsors.php:150
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: inc/newspack-sponsors.php:29 template-parts/header/desktop-sidebar.php:14
+#: template-parts/header/desktop-sidebar.php:20
+#: template-parts/header/mobile-sidebar.php:12
+#: template-parts/header/mobile-sidebar.php:18
+#: template-parts/header/subpage-sidebar.php:12
+#: template-parts/header/subpage-sidebar.php:18
+msgid "Close"
+msgstr "Fermer"
+
+#. translators: separates last two names; needs a space on either side.
+#: inc/newspack-sponsors.php:91 inc/template-tags.php:93
+msgid " and "
+msgstr " et "
+
+#. translators: separates all but the last two names; needs a space at the end.
+#: inc/newspack-sponsors.php:94 inc/template-tags.php:96
+msgid ", "
+msgstr ", "
+
+#. translators: %s is the post's sponsor's name.
+#: inc/newspack-sponsors.php:244
+msgid "Learn more about %s"
+msgstr "En savoir plus sur %s"
+
+#: inc/newspack-sponsors.php:344
+msgid "Sponsored Content"
+msgstr "Contenu sponsorisé"
+
+#: inc/newspack-sponsors.php:361
+msgid "Sponsored Content Label"
+msgstr "Label du contenu sponsorisé"
+
+#: inc/newspack-sponsors.php:362
+msgid ""
+"Changes the background of the sponsored content flag that appears on posts "
+"and blocks. It should stand out boldly against your site's color scheme."
+msgstr ""
+"Modifie l’arrière-plan de l’indicateur de contenu sponsorisé qui apparaît "
+"sur les publications et les blocs. Il doit se démarquer de la palette de "
+"couleurs de votre site."
+
+#: inc/template-functions.php:217
+msgid "Category: "
+msgstr "Catégorie : "
+
+#: inc/template-functions.php:219
+msgid "Tag: "
+msgstr "Mot-clé : "
+
+#: inc/template-functions.php:221
+msgid "Author Archives: "
+msgstr "Archives d’auteur : "
+
+#: inc/template-functions.php:224
+msgid "Yearly Archives: "
+msgstr "Archives annuelles : "
+
+#: inc/template-functions.php:224
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/template-functions.php:228
+msgid "Monthly Archives: "
+msgstr "Archives mensuelles : "
+
+#: inc/template-functions.php:228
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-functions.php:232
+msgid "Daily Archives: "
+msgstr "Archives journalières : "
+
+#: inc/template-functions.php:235
+msgid "Post Type Archives: "
+msgstr "Archives de type de message "
+
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:239
+msgid "%s Archives:"
+msgstr "Archives %s :"
+
+#: inc/template-functions.php:241
+msgid "Archives:"
+msgstr "Archives :"
+
+#. translators: %s: Time ago date format
+#: inc/template-functions.php:558
+msgid "%s ago"
+msgstr "Il y a %s"
+
+#: inc/template-tags.php:86 inc/template-tags.php:117
+msgid "by"
+msgstr "par"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:188
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Publier un commentaire<span class=\"screen-reader-text\"> pour %s</span>"
+
+#. translators: used between list items; followed by a space.
+#: inc/template-tags.php:217 inc/template-tags.php:240
+msgid ","
+msgstr ", "
+
+#: inc/template-tags.php:224
+msgid "Posted in"
+msgstr "Publié dans"
+
+#: inc/template-tags.php:245
+msgid "Tagged:"
+msgstr "Mots-clés :"
+
+#. translators: %s: Name of current post; only visible to screen readers.
+#: inc/template-tags.php:256 template-parts/content/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:380
+msgid "Newer posts"
+msgstr "Articles plus Récents"
+
+#: inc/template-tags.php:384
+msgid "Older posts"
+msgstr "Articles plus anciens"
+
+#: inc/template-tags.php:437
+msgid "Top Menu"
+msgstr "Menu du haut"
+
+#. translators: %s - site name
+#: inc/trust-indicators.php:57
+msgid "Why you can trust %s"
+msgstr "Pourquoi vous pouvez faire confiance à %s"
+
+#: inc/woocommerce.php:93
+msgid "Payment info"
+msgstr "Information de paiement"
+
+#: inc/woocommerce.php:111
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: offline.php:27
+msgid "Offline"
+msgstr "Hors ligne"
+
+#: search.php:17
+msgid "Search results"
+msgstr "Résultat de recherche"
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Rechercher pour :"
+
+#: searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Rechercher &hellip;"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "Rechercher"
+
+#. Template Name of the theme
+msgid "One column"
+msgstr "1 colonne"
+
+#. Template Name of the theme
+msgid "One column wide"
+msgstr "1 colonne, large"
+
+#: template-parts/content/content-none.php:14
+msgid "Nothing Found"
+msgstr "Rien trouvé"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article&nbsp;? <a href=\"%1$s\">Lancez-vous</"
+"a>&nbsp;!"
+
+#: template-parts/content/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond à vos termes de recherche. Veuillez "
+"réessayer avec différents mots-clés."
+
+#: template-parts/content/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semble que nous ne puissions pas trouver ce que vous cherchez. Le moteur "
+"de recherche sera peut-être plus fructueux."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-single.php:25
+#: template-parts/content/content.php:25
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+"Continuer la lecture<span class=\"screen-reader-text\"> de « %s »</span>"
+
+#: template-parts/footer/below-footer-widgets.php:9
+msgid "Below Footer"
+msgstr "Sous le pied de page"
+
+#. translators: %s is the current author's name.
+#: template-parts/post/author-bio.php:74 template-parts/post/author-bio.php:84
+#: template-parts/post/author-bio.php:137
+#: template-parts/post/author-bio.php:147
+msgid "More by %s"
+msgstr "Plus par %s"
+
+#. translators: %1(X comments)$s
+#: template-parts/post/discussion-meta.php:14
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] "%d commentaire"
+msgstr[1] "%d commentaires"
+
+#: template-parts/post/discussion-meta.php:21
+msgid "No comments"
+msgstr "Aucun commentaire"
+
+#: woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr "Vous devez être connecté pour payer."
+
+#: woocommerce/checkout/form-checkout.php:35
+#: woocommerce/checkout/thankyou.php:50
+msgid "Summary"
+msgstr "Récapitulation"
+
+#: woocommerce/checkout/thankyou.php:34
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+"Malheureusement, votre commande ne peut pas être traitée car la banque / le "
+"commerçant a refusé votre transaction. Veuillez réessayer votre achat."
+
+#: woocommerce/checkout/thankyou.php:38
+msgid "Pay"
+msgstr "Payer"
+
+#: woocommerce/checkout/thankyou.php:40
+msgid "My account"
+msgstr "Mon compte"
+
+#: woocommerce/checkout/thankyou.php:55
+msgid "Date:"
+msgstr "Date :"
+
+#: woocommerce/checkout/thankyou.php:61
+msgid "Email:"
+msgstr "Email :"
+
+#: woocommerce/checkout/thankyou.php:67
+msgid "Total:"
+msgstr "Total :"
+
+#: woocommerce/checkout/thankyou.php:73
+msgid "Payment method:"
+msgstr "Mode de paiement :"
+
+#: woocommerce/checkout/thankyou.php:79
+msgid "Transaction:"
+msgstr "Transaction :"
+
+#: woocommerce/order/order-details-customer.php:24
+msgid "Your Information"
+msgstr "Vos informations"
+
+#: woocommerce/order/order-details-customer.php:34
+msgid "Billing address"
+msgstr "Adresse de facturation"
+
+#: woocommerce/order/order-details-customer.php:38
+#: woocommerce/order/order-details-customer.php:56
+msgid "N/A"
+msgstr "N / A"
+
+#: woocommerce/order/order-details-customer.php:54
+msgid "Shipping address"
+msgstr "Adresse de livraison"
+
+#: js/src/extend-featured-image-editor.js:19
+msgid "Default (set in Customizer)"
+msgstr "Par défaut (défini dans le personnalisateur)"
+
+#: js/src/post-subtitle/index.js:31
+msgid "Article Subtitle"
+msgstr "Sous-titre de l’article"
+
+#: js/src/post-subtitle/index.js:34
+msgid "Set a Subtitle for the Article"
+msgstr "Définir un sous-titre pour l’article"
