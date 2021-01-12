@@ -380,9 +380,10 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 			);
 
 			$comment_policy = get_theme_mod( 'comment_policy', '' );
+			$display_policy = get_theme_mod( 'display_comment_policy', false );
 
 			// Check if there's a comment policy set in the Customizer.
-			if ( '' !== $comment_policy ) {
+			if ( $display_policy && '' !== $comment_policy ) {
 				$comment_attributes['title_reply_before'] = '<span class="comment-policy">' . wp_kses_post( $comment_policy ) . '</span>';
 			}
 

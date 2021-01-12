@@ -928,6 +928,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'display_comment_policy',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'display_comment_policy',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display comment policy', 'newspack' ),
+			'description' => esc_html__( 'Allows you to add an optional comment policy above the comment form when using WordPress\'s default comments.', 'newspack' ),
+			'section'     => 'comments_options',
+		)
+	);
+
 	// Add option to display comment policy.
 	$wp_customize->add_setting(
 		'comment_policy',
@@ -939,10 +957,9 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'comment_policy',
 		array(
-			'type'        => 'textarea',
-			'label'       => esc_html__( 'Commenting policy', 'newspack' ),
-			'description' => esc_html__( 'Allows you to add an optional comment policy above the comment form when using WordPress\'s default comments.', 'newspack' ),
-			'section'     => 'comments_options',
+			'type'    => 'textarea',
+			'label'   => esc_html__( 'Comment policy text', 'newspack' ),
+			'section' => 'comments_options',
 		)
 	);
 
