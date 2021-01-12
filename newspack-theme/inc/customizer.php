@@ -928,6 +928,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to display comment policy.
+	$wp_customize->add_setting(
+		'comment_policy',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'wp_kses_post',
+		)
+	);
+	$wp_customize->add_control(
+		'comment_policy',
+		array(
+			'type'        => 'textarea',
+			'label'       => esc_html__( 'Commenting policy', 'newspack' ),
+			'description' => esc_html__( 'Allows you to add an optional comment policy above the comment form when using WordPress\'s default comments.', 'newspack' ),
+			'section'     => 'comments_options',
+		)
+	);
+
 	/**
 	 * Footer settings
 	 */

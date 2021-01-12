@@ -374,12 +374,19 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 	function newspack_comment_form( $order ) {
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 
-			comment_form(
-				array(
-					'logged_in_as' => null,
-					'title_reply'  => null,
-				)
+			$comment_attributes = array(
+				'logged_in_as' => null,
+				'title_reply'  => null,
 			);
+
+			$comment_policy = get_theme_mod( 'comment_policy', '' );
+
+			// Check if there's a comment policy set in the Customizer.
+			if ( '' !== $comment_policy ) {
+				$comment_attributes['title_reply_before'] = '<span class="comment-policy">' . wp_kses_post( $comment_policy ) . '</span>';
+			}
+
+			comment_form( $comment_attributes );
 		}
 	}
 endif;
