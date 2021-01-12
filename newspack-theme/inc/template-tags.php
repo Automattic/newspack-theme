@@ -384,7 +384,7 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 
 			// Check if there's a comment policy set in the Customizer.
 			if ( $display_policy && '' !== $comment_policy ) {
-				$comment_attributes['title_reply_before'] = '<span class="comment-policy">' . wp_kses_post( $comment_policy ) . '</span>';
+				$comment_attributes['title_reply_before'] = '<div class="comment-policy">' . wp_kses_post( $comment_policy ) . '</div>';
 			}
 
 			comment_form( $comment_attributes );
