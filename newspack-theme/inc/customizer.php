@@ -951,7 +951,7 @@ function newspack_customize_register( $wp_customize ) {
 		'comment_policy',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'wp_kses_post',
+			'sanitize_callback' => 'newspack_sanitize_textarea_balance',
 		)
 	);
 	$wp_customize->add_control(
@@ -1384,6 +1384,19 @@ function newspack_sanitize_radio( $input, $setting ) {
 
 	// If the input is a valid key, return it; otherwise, return the default.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+/**
+ * Sanitize and balance tags in textareas.
+ *
+ * @param string $input Value of textarea.
+ *
+ * @return string The textarea value, sanitized and with HTML tags balanced.
+ */
+function newspack_sanitize_textarea_balance( $input ) {
+	$input = wp_kses_post( force_balance_tags( $input ) );
+
+	return $input;
 }
 
 /**
