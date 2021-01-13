@@ -836,6 +836,23 @@ function newspack_customize_register( $wp_customize ) {
 		);
 	}
 
+	// Add option to display previous and next links on single posts.
+	$wp_customize->add_setting(
+		'post_previous_next',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_previous_next',
+		array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Display previous and next links at the bottom of each post.', 'newspack' ),
+			'section' => 'post_default_settings',
+		)
+	);
+
 	/**
 	 * Page Template Settings
 	 */

@@ -257,14 +257,18 @@ if ( ! function_exists( 'newspack_previous_next' ) ) :
 	 * Prints previous and next links for single posts.
 	 */
 	function newspack_previous_next() {
-		the_post_navigation(
-			array(
-				'next_text' => '<span class="meta-nav">' . __( 'Next', 'newspack' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav">' . __( 'Previous', 'newspack' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			)
-		);
+		$show_prev_next_links = get_theme_mod( 'post_previous_next', false );
+
+		if ( true === $show_prev_next_links && is_singular( 'post' ) ) {
+			the_post_navigation(
+				array(
+					'next_text' => '<span class="meta-nav">' . __( 'Next', 'newspack' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav">' . __( 'Previous', 'newspack' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+				)
+			);
+		}
 	}
 endif;
 
