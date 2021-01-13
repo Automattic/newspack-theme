@@ -19,9 +19,14 @@
 		background-color: $color__background-body;
 		box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
 		bottom: 0;
+		display: none;
 		position: fixed;
 		width: 100%;
 		z-index: 1;
+
+		&.active {
+			display: block;
+		}
 
 		button {
 			align-items: center;

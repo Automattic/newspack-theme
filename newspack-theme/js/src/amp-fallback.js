@@ -217,6 +217,7 @@
 			const stickyAdSlot = stickyAd.querySelector( '#' + renderedSlotId );
 
 			if ( stickyAdSlot ) {
+				stickyAd.classList.add( 'active' );
 				body.style.paddingBottom = stickyAd.clientHeight + 'px';
 			}
 		} );
