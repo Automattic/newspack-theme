@@ -334,6 +334,52 @@ div.sharedaddy .sd-social h3.sd-title,
 	}
 }
 
+.post-navigation {
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: $color__border;
+	margin: #{2 * $size__spacing-unit} 0 $size__spacing-unit;
+
+	a {
+		color: #111;
+
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.nav-previous,
+	.nav-next {
+		margin: #{1.5 * $size__spacing-unit} 0;
+	}
+
+	.meta-nav {
+		color: $color__text-light;
+		display: block;
+		margin: 0 0 #{0.25 * $size__spacing-unit};
+	}
+
+	@include media( tablet ) {
+		.nav-links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.nav-previous,
+		.nav-next {
+			margin: #{2 * $size__spacing-unit} 0;
+			width: calc( 50% - #{2 * $size__spacing-unit} );
+		}
+
+		.nav-next {
+			text-align: right;
+		}
+	}
+}
+
+/* Page */
+
 .page {
 	.entry-header + .post-thumbnail,
 	.main-content > .post-thumbnail:first-child {
