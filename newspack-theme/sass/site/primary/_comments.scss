@@ -105,6 +105,15 @@
 	}
 }
 
+.comment-policy {
+	font-size: $font__size-sm;
+	margin: #{0.5 * $size__spacing-unit} 0 $size__spacing-unit;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
 .comment-list {
 	list-style: none;
 	padding: 0;
