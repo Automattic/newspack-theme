@@ -754,6 +754,17 @@ ul.wp-block-archives,
 	}
 }
 
+// Custom HTML
+.wp-block[data-type='core/html'] {
+	font-family: $font__code;
+	font-size: $font__size-sm;
+
+	textarea {
+		border: 1px solid $color__border;
+		padding: #{0.5 * $size__spacing-unit};
+	}
+}
+
 /** === Jetpack Blocks === */
 
 // Related Posts
