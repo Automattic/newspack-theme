@@ -1,0 +1,13 @@
+{
+	"translation-revision-date": "2020-12-18 15:45+0000",
+	"generator": "WP-CLI/2.4.0",
+	"source": "js/src/post-subtitle/index.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": { "domain": "messages", "lang": "fr_BE", "plural-forms": "nplurals=2; plural=(n > 1);" },
+			"Article Subtitle": ["Sous-titre de l\u2019article"],
+			"Set a Subtitle for the Article": ["D\u00e9finir un sous-titre pour l\u2019article"]
+		}
+	}
+}
