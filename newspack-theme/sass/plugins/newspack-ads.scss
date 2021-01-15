@@ -20,8 +20,6 @@
 		box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
 		bottom: 0;
 		display: none;
-		max-height: 100px;
-		overflow-y: hidden;
 		position: fixed;
 		width: 100%;
 		z-index: 1;
@@ -53,6 +51,7 @@
 
 		> * {
 			margin: 0;
+			max-height: 100px;
 		}
 	}
 }
