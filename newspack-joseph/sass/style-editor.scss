@@ -1,5 +1,5 @@
 /*!
-Newspack Sacha Editor Styles
+Newspack Joseph Editor Styles
 */
 
 /** === Includes === */
@@ -59,9 +59,6 @@ Newspack Sacha Editor Styles
 		em {
 			font-style: italic;
 		}
-
-		@include media( tablet ) {
-			font-size: $font__size-xl;
 	}
 
 	&.is-style-solid-color {
@@ -71,10 +68,6 @@ Newspack Sacha Editor Styles
 	blockquote {
 		border-color: inherit;
 		text-align: center;
-	}
-
-	&.is-style-solid-color {
-		border: 0;
 	}
 
 	.wp-block-pullquote__citation {
