@@ -215,6 +215,13 @@ endif;
 								newspack_tertiary_menu();
 							}
 							?>
+							<?php if ( newspack_is_amp() ) : ?>
+								<nav amp-access="isSubscribedToSite" amp-access-hide class="tertiary-menu nav3">
+									<ul>
+										<li><a on="tap:amp-access.login-sign-out">Log Out</a></li>
+									</ul>
+								</nav>
+							<?php endif; ?>
 						</div><!-- #tertiary-nav-contain -->
 
 						<?php

@@ -36,7 +36,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		<?php if ( newspack_is_amp() ) : ?>
 			<section amp-access="isSubscribedToSite" amp-access-hide>
 
-				<p><a on="tap:amp-access.login-sign-out">Log Out</a></p>
+				<?php // <p><a on="tap:amp-access.login-sign-out">Log Out</a></p> ?>
 				<?php
 				the_content(
 					sprintf(
@@ -68,7 +68,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 
 			<section amp-access="NOT isSubscribedToSite" amp-access-hide>
 				<?php the_excerpt(); ?>
-				<p>You do not have an active subscription. Please subscribe or login. <a>Subscribe</a> | <a on="tap:amp-access.login-sign-in">Login</a></p>
+				<p class="pelcro-subscribe">You do not have an active subscription. Please subscribe or login. <a>Subscribe</a> | <a on="tap:amp-access.login-sign-in">Login</a></p>
 			</section>
 		<?php else : ?>
 			<?php
