@@ -1,3 +1,13 @@
+# [1.27.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.26.0...v1.27.0-alpha.1) (2021-01-19)
+
+
+### Features
+
+* add a sticky ad slot to the Advertising wizard ([#1208](https://github.com/Automattic/newspack-theme/issues/1208)) ([85b4ceb](https://github.com/Automattic/newspack-theme/commit/85b4ceb82527c2b453ea59bf95a0ac9da1c18edf))
+* add fr-BR JSON files for the editor ([#1190](https://github.com/Automattic/newspack-theme/issues/1190)) ([3f18538](https://github.com/Automattic/newspack-theme/commit/3f1853815751fd145a0b2fa870a2082c26d1ebd2))
+* add option to display a comment policy  ([#1205](https://github.com/Automattic/newspack-theme/issues/1205)) ([0018c43](https://github.com/Automattic/newspack-theme/commit/0018c43575ff0a330e3947924186dddd438b9e8f))
+* add previous and next links to single posts ([#1206](https://github.com/Automattic/newspack-theme/issues/1206)) ([d3a1cd1](https://github.com/Automattic/newspack-theme/commit/d3a1cd1c749f5917a6210c9be761c2766c45f71c))
+
 # [1.26.0](https://github.com/Automattic/newspack-theme/compare/v1.25.0...v1.26.0) (2021-01-12)
 
 
