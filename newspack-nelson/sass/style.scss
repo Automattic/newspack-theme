@@ -312,6 +312,11 @@ div.wpnbha .article-section-title {
 	}
 }
 
+.post-navigation {
+	border-color: $color__text-main;
+	border-top-width: 4px;
+}
+
 // Blocks
 
 blockquote {
@@ -366,6 +371,14 @@ blockquote {
 
 		p {
 			font-style: normal;
+
+			em {
+				font-style: italic;
+			}
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
 		}
 	}
 

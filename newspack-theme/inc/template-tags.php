@@ -252,6 +252,26 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_previous_next' ) ) :
+	/**
+	 * Prints previous and next links for single posts.
+	 */
+	function newspack_previous_next() {
+		$show_prev_next_links = get_theme_mod( 'post_previous_next', false );
+
+		if ( true === $show_prev_next_links && is_singular( 'post' ) ) {
+			the_post_navigation(
+				array(
+					'next_text' => '<span class="meta-nav">' . __( 'Next', 'newspack' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav">' . __( 'Previous', 'newspack' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+				)
+			);
+		}
+	}
+endif;
+
 if ( ! function_exists( 'newspack_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the tags and comments.
@@ -374,12 +394,20 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 	function newspack_comment_form( $order ) {
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 
-			comment_form(
-				array(
-					'logged_in_as' => null,
-					'title_reply'  => null,
-				)
+			$comment_attributes = array(
+				'logged_in_as' => null,
+				'title_reply'  => null,
 			);
+
+			$comment_policy = get_theme_mod( 'comment_policy', '' );
+			$display_policy = get_theme_mod( 'display_comment_policy', false );
+
+			// Check if there's a comment policy set in the Customizer.
+			if ( $display_policy && '' !== trim( $comment_policy ) ) {
+				$comment_attributes['title_reply_before'] = '<div class="comment-policy">' . wp_kses_post( $comment_policy ) . '</div>';
+			}
+
+			comment_form( $comment_attributes );
 		}
 	}
 endif;

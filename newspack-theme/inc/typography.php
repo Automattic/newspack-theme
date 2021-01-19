@@ -92,6 +92,7 @@ function newspack_custom_typography_css() {
 		/* _next_previous.scss */
 		.comment-navigation .nav-previous,
 		.comment-navigation .nav-next,
+		.post-navigation,
 
 		/* _comments.scss */
 		.comment-list .pingback .comment-body,

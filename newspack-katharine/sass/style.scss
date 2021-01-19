@@ -244,7 +244,8 @@ figcaption,
 
 //! Columns Block
 .wp-block-columns.is-style-borders .wp-block-column::after,
-.wp-block-group.is-style-border {
+.wp-block-group.is-style-border,
+.post-navigation {
 	border-style: dotted;
 	border-color: $color__text-main;
 }
@@ -265,6 +266,15 @@ figcaption,
 		font-weight: bold;
 		p {
 			font-style: normal;
+			font-size: $font__size-lg;
+
+			em {
+				font-style: italic;
+			}
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
 		}
 	}
 
