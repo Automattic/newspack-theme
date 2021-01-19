@@ -18,6 +18,7 @@
 .page-links,
 .page-description,
 .pagination .nav-links,
+.post-navigation,
 .site-title,
 .site-description,
 .site-info,
@@ -48,6 +49,7 @@ amp-script .cat-links {
 .comment-author .fn,
 .no-comments,
 .site-title,
+.post-navigation .post-title,
 h1,
 h2,
 h3,
@@ -111,6 +113,7 @@ h3 {
 .no-comments,
 h2.author-title,
 p.author-bio,
+.post-navigation .post-title,
 h4 {
 	font-size: $font__size-md;
 }

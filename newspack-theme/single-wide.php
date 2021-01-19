@@ -50,6 +50,8 @@ get_header();
 						get_template_part( 'template-parts/content/content', 'single' );
 					}
 
+					newspack_previous_next();
+
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
 						newspack_comments_template();

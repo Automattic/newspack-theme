@@ -836,6 +836,23 @@ function newspack_customize_register( $wp_customize ) {
 		);
 	}
 
+	// Add option to display previous and next links on single posts.
+	$wp_customize->add_setting(
+		'post_previous_next',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_previous_next',
+		array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Display previous and next links at the bottom of each post.', 'newspack' ),
+			'section' => 'post_default_settings',
+		)
+	);
+
 	/**
 	 * Page Template Settings
 	 */
@@ -925,6 +942,41 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => esc_html__( 'Collapse Comments', 'newspack' ),
 			'description' => esc_html__( 'When using WordPress\'s default comments, checking this option will collapse the comments section when there is more than one comment, and display a button to expand.', 'newspack' ),
 			'section'     => 'comments_options',
+		)
+	);
+
+	// Add option to collapse the comments.
+	$wp_customize->add_setting(
+		'display_comment_policy',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'display_comment_policy',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Display comment policy', 'newspack' ),
+			'description' => esc_html__( 'Allows you to add an optional comment policy above the comment form when using WordPress\'s default comments.', 'newspack' ),
+			'section'     => 'comments_options',
+		)
+	);
+
+	// Add option to display comment policy.
+	$wp_customize->add_setting(
+		'comment_policy',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'newspack_sanitize_textarea_balance',
+		)
+	);
+	$wp_customize->add_control(
+		'comment_policy',
+		array(
+			'type'    => 'textarea',
+			'label'   => esc_html__( 'Comment policy text', 'newspack' ),
+			'section' => 'comments_options',
 		)
 	);
 
@@ -1349,6 +1401,19 @@ function newspack_sanitize_radio( $input, $setting ) {
 
 	// If the input is a valid key, return it; otherwise, return the default.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+/**
+ * Sanitize and balance tags in textareas.
+ *
+ * @param string $input Value of textarea.
+ *
+ * @return string The textarea value, sanitized and with HTML tags balanced.
+ */
+function newspack_sanitize_textarea_balance( $input ) {
+	$input = wp_kses_post( force_balance_tags( $input ) );
+
+	return $input;
 }
 
 /**
