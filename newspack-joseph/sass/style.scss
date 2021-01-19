@@ -345,8 +345,8 @@ textarea {
 	p {
 		font-style: inherit;
 
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		em {
+			font-style: italic;
 		}
 	}
 
