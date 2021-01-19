@@ -1,3 +1,10 @@
+# [1.27.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.27.0-alpha.1...v1.27.0-alpha.2) (2021-01-19)
+
+
+### Features
+
+* make sure italics are working in the Pullquote block ([#1193](https://github.com/Automattic/newspack-theme/issues/1193)) ([a4f1c25](https://github.com/Automattic/newspack-theme/commit/a4f1c25316b9e243a68fe4a2bc60175da45b1c61))
+
 # [1.27.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.26.0...v1.27.0-alpha.1) (2021-01-19)
 
 
