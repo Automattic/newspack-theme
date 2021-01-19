@@ -266,6 +266,15 @@ figcaption,
 		font-weight: bold;
 		p {
 			font-style: normal;
+			font-size: $font__size-lg;
+
+			em {
+				font-style: italic;
+			}
+
+			@include media( tablet ) {
+				font-size: $font__size-xl;
+			}
 		}
 	}
 
