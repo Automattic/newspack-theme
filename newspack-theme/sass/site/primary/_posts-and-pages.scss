@@ -182,10 +182,6 @@ amp-script .cat-links {
 	}
 }
 
-.page .post-thumbnail {
-	text-align: center;
-}
-
 .entry-content {
 	p {
 		word-wrap: break-word;
@@ -391,10 +387,6 @@ div.sharedaddy .sd-social h3.sd-title,
 }
 
 .hide-page-title {
-	.entry-header {
-		display: none;
-	}
-
 	.site-content {
 		margin-top: 0;
 		@include media( tablet ) {
