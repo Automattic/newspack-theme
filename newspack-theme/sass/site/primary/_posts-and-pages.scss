@@ -45,6 +45,15 @@
 	}
 }
 
+.newspack-post-hat {
+	margin-bottom: 1.3em;
+	text-transform: uppercase;
+    font-size: small;
+	@include media( mobile ) {
+		margin-bottom: 0;
+	}
+}
+
 .newspack-post-subtitle {
 	margin-bottom: 1.3em;
 	font-style: italic;

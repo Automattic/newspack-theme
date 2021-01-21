@@ -220,6 +220,7 @@ function newspack_custom_typography_css() {
 		';
 
 		$editor_css_blocks .= '
+			#newspack-post-hat-element,
 			#newspack-post-subtitle-element,
 			.block-editor-block-list__layout,
 			.editor-default-block-appender .editor-default-block-appender__content

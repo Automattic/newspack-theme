@@ -26,8 +26,14 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	endif;
 	?>
 	<?php
+		$hat = get_post_meta( $post->ID, 'newspack_post_hat', true );
 		$subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 	?>
+	<?php if ( $hat ) : ?>
+		<div class="newspack-post-hat">
+			<?php echo esc_html( $hat ); ?>
+		</div>
+	<?php endif; ?>
 	<h1 class="entry-title <?php echo $subtitle ? 'entry-title--with-subtitle' : ''; ?>">
 		<?php echo wp_kses_post( get_the_title() ); ?>
 	</h1>
