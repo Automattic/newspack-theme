@@ -800,14 +800,14 @@ function newspack_get_featured_image_post_types() {
  * @return array Array of post type slugs.
  */
 function newspack_get_post_toggle_post_types() {
-	$hide_date_post_types = '';
+	$hide_date_post_types = [];
 	if ( true === get_theme_mod( 'post_updated_date', false ) ) {
-		$hide_date_post_types = 'post';
+		$hide_date_post_types[] = 'post';
 	}
 
 	return array(
 		'hide_date'  => $hide_date_post_types,
-		'hide_title' => 'page',
+		'hide_title' => [ 'page' ],
 	);
 }
 
