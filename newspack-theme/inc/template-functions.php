@@ -75,9 +75,17 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'newspack-customizer';
 	endif;
 
+	// Hide homepage title.
 	$hide_title = get_theme_mod( 'hide_front_page_title', false );
 	if ( true === $hide_title ) {
 		$classes[] = 'hide-homepage-title';
+	}
+
+	// Hide specific page title.
+	$page_id         = get_queried_object_id();
+	$page_hide_title = get_post_meta( $page_id, 'newspack_hide_page_title', true );
+	if ( $page_hide_title ) {
+		$classes[] = 'hide-page-title';
 	}
 
 	$show_tagline = get_theme_mod( 'header_display_tagline', true );
