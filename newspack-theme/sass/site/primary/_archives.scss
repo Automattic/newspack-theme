@@ -76,7 +76,7 @@
 	}
 
 	@include media( tablet ) {
-		&:not( .paged ) article.has-post-thumbnail:first-of-type {
+		&:not( .paged ).feature-latest article.has-post-thumbnail:first-of-type {
 			display: block;
 
 			.post-thumbnail {
@@ -110,6 +110,10 @@
 				width: 120px;
 			}
 		}
+	}
+
+	.cat-links:not( .sponsor-label ) {
+		display: none;
 	}
 }
 

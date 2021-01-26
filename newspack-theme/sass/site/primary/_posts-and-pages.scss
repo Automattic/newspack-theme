@@ -182,10 +182,6 @@ amp-script .cat-links {
 	}
 }
 
-.page .post-thumbnail {
-	text-align: center;
-}
-
 .entry-content {
 	p {
 		word-wrap: break-word;
@@ -378,8 +374,7 @@ div.sharedaddy .sd-social h3.sd-title,
 	}
 }
 
-/* Page */
-
+/* Pages */
 .page {
 	.entry-header + .post-thumbnail,
 	.main-content > .post-thumbnail:first-child {
@@ -391,6 +386,15 @@ div.sharedaddy .sd-social h3.sd-title,
 	max-width: 100%;
 }
 
+.hide-page-title {
+	.site-content {
+		margin-top: 0;
+		@include media( tablet ) {
+			margin-top: #{0.5 * $size__spacing-unit};
+		}
+	}
+}
+
 /* Static Front Page. */
 
 .newspack-front-page {
@@ -400,6 +404,7 @@ div.sharedaddy .sd-social h3.sd-title,
 
 	.site-content {
 		margin-top: 0;
+
 		@include media( tablet ) {
 			margin-top: #{0.5 * $size__spacing-unit};
 		}

@@ -88,7 +88,7 @@ h1,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
-.archive:not( .paged ) article.entry:first-of-type .entry-title,
+.archive:not( .paged ).feature-latest article.entry:first-of-type .entry-title,
 h2 {
 	font-size: $font__size-lg;
 
