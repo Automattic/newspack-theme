@@ -939,6 +939,25 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+
+	// Add option to change the first archive's layout.
+	$wp_customize->add_setting(
+		'archive_feature_latest_post',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'archive_feature_latest_post',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Use a large, featured display for the latest post in the archives', 'newspack' ),
+			'section' => 'archive_options',
+		)
+	);
+
 	/**
 	 * Comments settings
 	 */
