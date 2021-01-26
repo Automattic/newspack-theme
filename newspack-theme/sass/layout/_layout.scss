@@ -90,6 +90,7 @@
 // Single-column layouts
 .post-template-single-feature .main-content,
 .page-template-single-feature .main-content,
+.archive-one-column #main,
 .newspack-front-page.page-template-single-feature .site-main {
 	margin-left: auto;
 	margin-right: auto;
@@ -97,8 +98,8 @@
 	width: 100%;
 }
 
-.page-template-single-feature {
-	@include media( tablet ) {
+@include media( tablet ) {
+	.page-template-single-feature {
 		.entry-header {
 			margin-left: auto;
 			margin-right: auto;
@@ -106,6 +107,10 @@
 			width: 100%;
 		}
 	}
+}
+
+.archive-one-column-wide #main {
+	width: 100%;
 }
 
 .newspack-front-page,

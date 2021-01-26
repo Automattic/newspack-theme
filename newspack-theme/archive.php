@@ -135,7 +135,12 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		endif;
 		?>
 		</main><!-- #main -->
-		<?php get_sidebar(); ?>
+		<?php
+		$archive_layout = get_theme_mod( 'archive_layout', 'default' );
+		if ( 'default' === $archive_layout ) {
+			get_sidebar();
+		}
+		?>
 	</section><!-- #primary -->
 
 <?php

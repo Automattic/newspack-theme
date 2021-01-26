@@ -16,7 +16,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php newspack_post_thumbnail(); ?>
+	<?php newspack_post_thumbnail( 'newspack-archive-image' ); ?>
 
 	<div class="entry-container">
 		<?php

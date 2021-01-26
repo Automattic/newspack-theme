@@ -175,6 +175,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'show-updated';
 	}
 
+	// Adds a class for the archive page layout.
+	$archive_layout = get_theme_mod( 'archive_layout', 'default' );
+	if ( is_archive() && 'default' !== $archive_layout ) {
+		$classes[] = 'archive-' . esc_attr( $archive_layout );
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
