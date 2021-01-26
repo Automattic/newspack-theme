@@ -136,6 +136,14 @@
 					margin-right: auto;
 					max-width: 1200px;
 				}
+
+				> div > .wp-block-columns:not( .alignfull ):not( .alignwide ) {
+					max-width: 1232px;
+				}
+
+				> div > .wp-block-columns.is-style-borders:not( .alignfull ):not( .alignwide ) {
+					max-width: 1264px;
+				}
 			}
 		}
 	}
@@ -1308,6 +1316,14 @@ hr {
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 780px;
+			}
+
+			> div > .wp-block-columns:not( .alignfull ):not( .alignwide ) {
+				max-width: 812px;
+			}
+
+			> div > .wp-block-columns.is-style-borders:not( .alignfull ):not( .alignwide ) {
+				max-width: 848px;
 			}
 		}
 	}
