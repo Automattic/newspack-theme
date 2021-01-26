@@ -118,7 +118,8 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 				$post_count++;
 				the_post();
 
-				if ( ( 1 === $post_count && true === $feature_latest_post ) || true === $show_excerpt ) {
+				// Check if you're on the first post of the first page and if it should be styled differently, or if excerpts are enabled.
+				if ( ( 1 === $post_count && 0 === get_query_var( 'paged' ) && true === $feature_latest_post ) || true === $show_excerpt ) {
 					get_template_part( 'template-parts/content/content', 'excerpt' );
 				} else {
 					get_template_part( 'template-parts/content/content', 'archive' );
