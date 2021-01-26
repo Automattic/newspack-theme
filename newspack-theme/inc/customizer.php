@@ -917,6 +917,28 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to change archive layouts.
+	$wp_customize->add_setting(
+		'archive_layout',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_radio',
+		)
+	);
+	$wp_customize->add_control(
+		'archive_layout',
+		array(
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Archive Layout', 'newspack' ),
+			'choices' => array(
+				'default'         => esc_html__( 'Default', 'newspack' ),
+				'one-column'      => esc_html__( 'One column', 'newspack' ),
+				'one-column-wide' => esc_html__( 'One column wide', 'newspack' ),
+			),
+			'section' => 'archive_options',
+		)
+	);
+
 	/**
 	 * Comments settings
 	 */

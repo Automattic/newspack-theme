@@ -318,7 +318,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function newspack_post_thumbnail() {
+	function newspack_post_thumbnail( $size = 'newspack-featured-image' ) {
 		if ( ! newspack_can_show_post_thumbnail() ) {
 			return;
 		}
@@ -333,7 +333,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 				if ( in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) ) ) :
 
 					the_post_thumbnail(
-						'newspack-featured-image',
+						$size,
 						array(
 							'object-fit' => 'cover',
 						)
@@ -342,13 +342,13 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 					if ( 'above' === newspack_featured_image_position() ) :
 						the_post_thumbnail(
-							'newspack-featured-image',
+							$size,
 							array(
 								'layout' => 'responsive',
 							)
 						);
 					else :
-						the_post_thumbnail( 'newspack-featured-image' );
+						the_post_thumbnail( $size );
 					endif;
 
 					$caption = get_the_excerpt( get_post_thumbnail_id() );
@@ -377,7 +377,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 			<figure class="post-thumbnail">
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail( 'newspack-archive-image' ); ?>
+					<?php the_post_thumbnail( $size ); ?>
 				</a>
 			</figure>
 
