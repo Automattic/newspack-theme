@@ -24,7 +24,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 			if ( ! empty( $native_sponsors ) ) :
 				// Get label for native post sponsors.
 				newspack_sponsor_label( $native_sponsors );
-			elseif ( ! is_archive() ) :
+			else :
 				newspack_categories();
 			endif;
 		endif;

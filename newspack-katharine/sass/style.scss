@@ -78,11 +78,15 @@ div.wpnbha .article-section-title,
 	font-size: $font__size-xs;
 }
 
-.search .cat-links {
-	margin-bottom: #{0.5 * $size__spacing-unit};
+.blog,
+.search,
+.archive {
+	.cat-links {
+		margin-bottom: #{0.5 * $size__spacing-unit};
 
-	&::before {
-		display: none;
+		&::before {
+			display: none;
+		}
 	}
 }
 
