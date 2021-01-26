@@ -181,6 +181,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'archive-' . esc_attr( $archive_layout );
 	}
 
+	// Add a class when using the 'featured latest' archive layout.
+	$feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
+	if ( is_archive() && true === $feature_latest_post ) {
+		$classes[] = 'feature-latest';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
