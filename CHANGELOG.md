@@ -1,3 +1,18 @@
+# [1.28.0](https://github.com/Automattic/newspack-theme/compare/v1.27.0...v1.28.0) (2021-01-28)
+
+
+### Bug Fixes
+
+* outlined button apply correct primary color ([#1211](https://github.com/Automattic/newspack-theme/issues/1211)) ([d0c76bd](https://github.com/Automattic/newspack-theme/commit/d0c76bd1acb1e0f0e16946f80d613a239f98a018))
+
+
+### Features
+
+* add option to change archive layout ([#1222](https://github.com/Automattic/newspack-theme/issues/1222)) ([d0b113e](https://github.com/Automattic/newspack-theme/commit/d0b113e1af9b2e9f992543ac7d9cc96428fed677))
+* add option to change latest archive layout ([#1223](https://github.com/Automattic/newspack-theme/issues/1223)) ([4537e4a](https://github.com/Automattic/newspack-theme/commit/4537e4a29d85fd49101e8200e88c78746a54d827))
+* add option to hide page title on a per-page basis ([#1200](https://github.com/Automattic/newspack-theme/issues/1200)) ([e213a2e](https://github.com/Automattic/newspack-theme/commit/e213a2e5d51346961593db5e378c6fc02066c63d))
+* make hidden categories on archives more flexible ([#1224](https://github.com/Automattic/newspack-theme/issues/1224)) ([975c864](https://github.com/Automattic/newspack-theme/commit/975c864b233cbcad8e9ff3aeb2a392a7aa9efb4f))
+
 # [1.27.0](https://github.com/Automattic/newspack-theme/compare/v1.26.0...v1.27.0) (2021-01-19)
 
 
