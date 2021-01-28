@@ -161,10 +161,13 @@
 /* Archives */
 
 .blog,
-.search {
+.search,
+.archive {
 	.cat-links {
 		margin-bottom: #{0.5 * $size__spacing-unit};
 		a {
+			font-size: 0.65rem;
+			margin-bottom: 0;
 			padding: 0.25em 0.5em;
 		}
 	}

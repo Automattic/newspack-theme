@@ -14,6 +14,10 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
 	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
 }
+
+$feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
+$show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
+
 ?>
 
 	<section id="primary" class="content-area">
@@ -108,15 +112,14 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		<?php
 		if ( have_posts() ) :
 			$post_count = 0;
-			?>
 
-			<?php
 			// Start the Loop.
 			while ( have_posts() ) :
 				$post_count++;
 				the_post();
 
-				if ( 1 === $post_count || true === get_theme_mod( 'archive_show_excerpt', false ) ) {
+				// Check if you're on the first post of the first page and if it should be styled differently, or if excerpts are enabled.
+				if ( ( 1 === $post_count && 0 === get_query_var( 'paged' ) && true === $feature_latest_post ) || true === $show_excerpt ) {
 					get_template_part( 'template-parts/content/content', 'excerpt' );
 				} else {
 					get_template_part( 'template-parts/content/content', 'archive' );
@@ -135,7 +138,12 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		endif;
 		?>
 		</main><!-- #main -->
-		<?php get_sidebar(); ?>
+		<?php
+		$archive_layout = get_theme_mod( 'archive_layout', 'default' );
+		if ( 'default' === $archive_layout ) {
+			get_sidebar();
+		}
+		?>
 	</section><!-- #primary -->
 
 <?php

@@ -12,11 +12,10 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 	function newspack_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>%3$s<time class="updated" datetime="%4$s">%5$s</time>';
-		}
-
 		if ( newspack_should_display_updated_date() ) {
+			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>%3$s<time class="updated" datetime="%4$s">%5$s</time>';
+			}
 			add_filter( 'get_the_modified_date', 'newspack_convert_modified_to_time_ago', 10, 3 );
 
 			$time_string = sprintf(
@@ -31,13 +30,13 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 			remove_filter( 'get_the_modified_date', 'newspack_convert_modified_to_time_ago', 10, 3 );
 		} else {
 			$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			'',
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
-		);
+				$time_string,
+				esc_attr( get_the_date( DATE_W3C ) ),
+				esc_html( get_the_date() ),
+				'',
+				esc_attr( get_the_modified_date( DATE_W3C ) ),
+				esc_html( get_the_modified_date() )
+			);
 		}
 
 		if ( is_single() ) {
@@ -319,7 +318,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function newspack_post_thumbnail() {
+	function newspack_post_thumbnail( $size = 'newspack-featured-image' ) {
 		if ( ! newspack_can_show_post_thumbnail() ) {
 			return;
 		}
@@ -334,7 +333,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 				if ( in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) ) ) :
 
 					the_post_thumbnail(
-						'newspack-featured-image',
+						$size,
 						array(
 							'object-fit' => 'cover',
 						)
@@ -343,13 +342,13 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 					if ( 'above' === newspack_featured_image_position() ) :
 						the_post_thumbnail(
-							'newspack-featured-image',
+							$size,
 							array(
 								'layout' => 'responsive',
 							)
 						);
 					else :
-						the_post_thumbnail( 'newspack-featured-image' );
+						the_post_thumbnail( $size );
 					endif;
 
 					$caption = get_the_excerpt( get_post_thumbnail_id() );
@@ -378,7 +377,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 			<figure class="post-thumbnail">
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail( 'newspack-archive-image' ); ?>
+					<?php the_post_thumbnail( $size ); ?>
 				</a>
 			</figure>
 
