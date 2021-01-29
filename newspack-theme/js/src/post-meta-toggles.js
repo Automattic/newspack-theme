@@ -37,7 +37,7 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 					/>
 				</>
 			) }
-			{ hideTitle && 'post' === postType && (
+			{ hideTitle && 'page' === postType && (
 				<>
 					<label htmlFor="hide_page_title">{ __( 'Hide page title', 'newspack' ) }</label>
 					<FormToggle
