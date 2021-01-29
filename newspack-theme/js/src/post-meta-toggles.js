@@ -12,6 +12,9 @@ import { __ } from '@wordpress/i18n';
  * Hide updated date
  */
 const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
+	if ( ! meta ) {
+		return null;
+	}
 	const { newspack_hide_page_title, newspack_hide_updated_date } = meta;
 	const { hide_date = [], hide_title = [] } = window.newspack_post_meta_post_types;
 	const hideDate = 0 <= hide_date.indexOf( postType );
@@ -20,10 +23,9 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 	if ( ! hideDate && ! hideTitle ) {
 		return null;
 	}
-
 	return (
 		<PluginPostStatusInfo>
-			{ hideDate && (
+			{ hideDate && 'post' === postType && (
 				<>
 					<label htmlFor="hide_updated_date">{ __( 'Hide updated date', 'newspack' ) }</label>
 					<FormToggle
@@ -35,7 +37,7 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 					/>
 				</>
 			) }
-			{ hideTitle && (
+			{ hideTitle && 'page' === postType && (
 				<>
 					<label htmlFor="hide_page_title">{ __( 'Hide page title', 'newspack' ) }</label>
 					<FormToggle
