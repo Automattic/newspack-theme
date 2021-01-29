@@ -1,3 +1,10 @@
+## [1.28.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.28.0...v1.28.1-alpha.1) (2021-01-29)
+
+
+### Bug Fixes
+
+* add check for meta and post types before loading toggles ([#1227](https://github.com/Automattic/newspack-theme/issues/1227)) ([76ff524](https://github.com/Automattic/newspack-theme/commit/76ff524300451f522030df29fd57c329162d41ac))
+
 # [1.28.0](https://github.com/Automattic/newspack-theme/compare/v1.27.0...v1.28.0) (2021-01-28)
 
 
