@@ -363,7 +363,7 @@ function newspack_custom_colors_css() {
 
 				.entry-meta .byline a:hover,
 				.entry-meta .byline a:visited:hover {
-					color: ' . esc_html( newspack_color_with_contrast( newspack_adjust_brightness( $primary_color, -20 ) ) ) . ';
+					color: ' . esc_html( newspack_color_with_contrast( newspack_adjust_brightness( $primary_color, -40 ) ) ) . ';
 				}
 			';
 
