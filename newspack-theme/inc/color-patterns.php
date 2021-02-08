@@ -356,9 +356,14 @@ function newspack_custom_colors_css() {
 		if ( ! is_child_theme() ) {
 			$theme_css .= '
 				.archive .page-title,
-				.entry-meta .byline a, .entry-meta .byline a:visited,
-				.entry .entry-meta a:hover {
+				.entry-meta .byline a,
+				.entry-meta .byline a:visited {
 					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
+				}
+
+				.entry-meta .byline a:hover,
+				.entry-meta .byline a:visited:hover {
+					color: ' . esc_html( newspack_color_with_contrast( newspack_adjust_brightness( $primary_color, -40 ) ) ) . ';
 				}
 			';
 
