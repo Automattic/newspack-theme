@@ -44,6 +44,11 @@ function newspack_sacha_custom_colors_css() {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
+		.entry-meta .byline a:hover,
+		.entry-meta .byline a:hover:visited {
+			color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
+		}
+
 		.has-drop-cap:not(:focus)::first-letter {
 			background-color: ' . esc_html( $primary_color ) . ';
 			color: ' . esc_html( $primary_color_contrast ) . ';
