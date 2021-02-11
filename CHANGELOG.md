@@ -1,3 +1,10 @@
+## [1.28.2](https://github.com/Automattic/newspack-theme/compare/v1.28.1...v1.28.2) (2021-02-11)
+
+
+### Bug Fixes
+
+* correct over color for author links ([#1232](https://github.com/Automattic/newspack-theme/issues/1232)) ([bca6511](https://github.com/Automattic/newspack-theme/commit/bca6511dbf9ce9469ab8c0392ac0e94fd377c1bf))
+
 ## [1.28.1](https://github.com/Automattic/newspack-theme/compare/v1.28.0...v1.28.1) (2021-01-29)
 
 
