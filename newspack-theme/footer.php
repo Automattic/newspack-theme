@@ -38,7 +38,7 @@
 				<?php endif; ?>
 
 				<a href="<?php echo esc_url( __( 'https://newspack.pub/', 'newspack' ) ); ?>" class="imprint">
-					<?php echo esc_html__( 'Proudly powered by Newspack by Automattic', 'newspack' ); ?>
+					<?php echo esc_html__( 'Proudly powered by Newspack, a service of WordPress.com', 'newspack' ); ?>
 				</a>
 
 				<?php
