@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/Automattic/newspack-theme/compare/v1.28.2...v1.29.0) (2021-02-16)
+
+
+### Features
+
+* add Portuguese translations to the theme ([#1236](https://github.com/Automattic/newspack-theme/issues/1236)) ([aaef8a1](https://github.com/Automattic/newspack-theme/commit/aaef8a13b59519982004c82168620f402f24531f))
+
 ## [1.28.2](https://github.com/Automattic/newspack-theme/compare/v1.28.1...v1.28.2) (2021-02-11)
 
 
