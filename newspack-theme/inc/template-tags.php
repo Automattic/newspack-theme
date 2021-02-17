@@ -11,11 +11,11 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 	 */
 	function newspack_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>%3$s<time class="updated" datetime="%4$s">%5$s</time>';
+		}
 
 		if ( newspack_should_display_updated_date() ) {
-			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>%3$s<time class="updated" datetime="%4$s">%5$s</time>';
-			}
 			add_filter( 'get_the_modified_date', 'newspack_convert_modified_to_time_ago', 10, 3 );
 
 			$time_string = sprintf(
@@ -29,6 +29,7 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 
 			remove_filter( 'get_the_modified_date', 'newspack_convert_modified_to_time_ago', 10, 3 );
 		} else {
+
 			$time_string = sprintf(
 				$time_string,
 				esc_attr( get_the_date( DATE_W3C ) ),
