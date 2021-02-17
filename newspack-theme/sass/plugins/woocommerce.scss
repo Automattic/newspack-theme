@@ -1,8 +1,6 @@
 /**
  * Sass variables
  */
-$primary_color: #36f;
-
 @import '../variables-site/variables-site';
 @import '../mixins/mixins-master';
 
@@ -116,7 +114,7 @@ a.button {
 	top: 0;
 	left: 0;
 	display: inline-block;
-	background: $primary_color;
+	background: $color__primary;
 	color: #fff;
 	font-size: 0.71111em;
 	font-weight: 700;
@@ -170,7 +168,7 @@ a.button {
 }
 
 .woocommerce-store-notice {
-	background: $primary_color;
+	background: $color__primary;
 	color: #fff;
 	padding: 1rem;
 	position: absolute;
