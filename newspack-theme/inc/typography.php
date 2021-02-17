@@ -194,6 +194,11 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-date,
 		.block-editor-block-list__layout .block-editor-block-list__block .jp-relatedposts-i2 .jp-related-posts-i2__post-context,
 
+		/* Donate block */
+		.block-editor-block-list__layout .block-editor-block-list__block .wpbnbd .freq-label,
+		.block-editor-block-list__layout .block-editor-block-list__block .wpbnbd .tier-label,
+		.block-editor-block-list__layout .block-editor-block-list__block .wpbnbd button,
+
 		/* Classic Editor */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption dd,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-freeform blockquote cite
