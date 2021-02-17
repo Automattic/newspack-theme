@@ -111,6 +111,8 @@ function newspack_custom_typography_css() {
 		.wp-block-latest-posts time,
 		.wp-block-file,
 		.wp-block-file .wp-block-file__button,
+		.wpbnbd .freq-label,
+		.wpbnbd .tier-label,
 
 		/* _widgets.scss */
 		.widget,
@@ -122,7 +124,6 @@ function newspack_custom_typography_css() {
 		.widget_recent_comments ul li,
 		.widget_recent_entries ul li,
 		.widget_rss ul li,
-
 		.widget_tag_cloud .tagcloud,
 
 		/* _copy.scss */
