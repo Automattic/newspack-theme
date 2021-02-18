@@ -48,32 +48,6 @@ function newspack_dequeue_styles( $enqueue_styles ) {
 }
 add_filter( 'woocommerce_enqueue_styles', 'newspack_dequeue_styles' );
 
-
-/**
- * Use theme's custom color for WooCommerce elements.
- */
-function newspack_woo_custom_colors_css( $css, $primary_color ) {
-	if ( function_exists( 'register_block_type' ) && is_admin() ) {
-		return $css;
-	}
-	$css      .= '
-		.onsale,
-		.woocommerce-store-notice {
-			background-color: ' . $primary_color . ';
-		}
-		.woocommerce-tabs ul li.active a {
-			color:  ' . $primary_color . ';
-			box-shadow: 0 2px 0 ' . $primary_color . ';
-		}
-		.woocommerce-tabs ul li a:hover {
-			color: ' . newspack_adjust_brightness( $primary_color, -40 ) . ';
-		}
-	';
-	return $css;
-}
-add_filter( 'newspack_custom_colors_css', 'newspack_woo_custom_colors_css', 10, 2 );
-
-
 /**
  * Remove WooCommerce sidebar - this theme doesn't have a traditional sidebar.
  */
