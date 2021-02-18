@@ -1,3 +1,7 @@
+.site-header {
+	background: $color__background-body;
+}
+
 // Site branding
 .site-branding {
 	align-items: center;
@@ -527,6 +531,14 @@
 				}
 			}
 		}
+	}
+}
+
+.h-stk {
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 99;
 	}
 }
 
