@@ -108,6 +108,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header - add option for simplified short header.
+	$wp_customize->add_setting(
+		'header_sticky',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'header_sticky',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Sticky Header', 'newspack' ),
+			'description' => esc_html__( 'Makes header "stick" to the top of the page on scroll. Forces a fixed height.', 'newspack' ),
+			'section'     => 'header_section_appearance',
+		)
+	);
+
 	/**
 	 * Header Slideouts
 	 */
