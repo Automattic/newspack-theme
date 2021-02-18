@@ -135,6 +135,9 @@ function newspack_custom_typography_css() {
 		.jp-relatedposts-i2 .jp-relatedposts-headline,
 		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
 
+		/* WooCommerce */
+		.woocommerce-results-wrapper,
+
 		/* Yoast Breadcrumbs */
 		.site-breadcrumb .wrapper > span,
 
