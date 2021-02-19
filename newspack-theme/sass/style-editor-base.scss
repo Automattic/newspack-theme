@@ -845,6 +845,13 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Donate Block === */
+.wpbnbd .freq-label,
+.wpbnbd .tier-label,
+.wpbnbd button {
+	font-family: $font__heading;
+}
+
 /** === Classic Editor === */
 
 /* Properly center-align captions in the classic-editor block */
