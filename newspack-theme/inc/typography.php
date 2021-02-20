@@ -136,7 +136,21 @@ function newspack_custom_typography_css() {
 		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
 
 		/* Yoast Breadcrumbs */
-		.site-breadcrumb .wrapper > span
+		.site-breadcrumb .wrapper > span,
+
+		/* WooCommerce */
+		.woocommerce-breadcrumb,
+		.woocommerce-pagination,
+		.woocommerce .onsale,
+		.woocommerce .price,
+		.woocommerce .product_meta,
+		.woocommerce .first-payment-date,
+		.woocommerce-message,
+		.woocommerce-error,
+		.woocommerce-info,
+		ul.products .added_to_cart,
+		.woocommerce-tabs ul,
+		.woocommerce-MyAccount-navigation
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';

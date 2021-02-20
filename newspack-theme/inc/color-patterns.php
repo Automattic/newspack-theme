@@ -56,7 +56,9 @@ function newspack_custom_colors_css() {
 			.is-style-outline .wp-block-button__link.has-primary-background-color:not( :hover ),
 			.wp-block-file .wp-block-file__button,
 			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
-			.comment .comment-author .post-author-badge {
+			.comment .comment-author .post-author-badge,
+			.woocommerce .onsale,
+			.woocommerce-store-notice {
 				background-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
 
@@ -91,6 +93,7 @@ function newspack_custom_colors_css() {
 				color: ' . esc_html( $primary_color ) . ';
 			}
 
+			/* Set color that contrasts against the primary color */
 			.mobile-sidebar,
 			.mobile-sidebar button:hover,
 			.mobile-sidebar a,
@@ -102,7 +105,9 @@ function newspack_custom_colors_css() {
 			/* Header default background; default height */
 			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
 			.comment .comment-author .post-author-badge,
-			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label {
+			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
+			.woocommerce .onsale,
+			.woocommerce-store-notice {
 				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
 
