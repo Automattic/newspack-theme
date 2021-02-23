@@ -194,7 +194,7 @@ function woocommerce_product_archive_description() {
 function woocommerce_loop_columns() {
 	return 4;
 }
-add_filter( 'loop_shop_columns', 'newspack_loop_columns', 999 );
+add_filter( 'loop_shop_columns', 'woocommerce_loop_columns', 999 );
 
 
 /**
