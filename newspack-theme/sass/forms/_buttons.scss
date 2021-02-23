@@ -19,14 +19,14 @@ input[type='submit'] {
 	text-decoration: none;
 	vertical-align: bottom;
 
-	&:hover {
+	&:hover,
+	&:hover:visited {
 		background: $color__background-button-hover;
 		color: $color__background-body;
 		cursor: pointer;
 	}
 
-	&:visited,
-	&:visited:hover {
+	&:visited {
 		color: inherit;
 		text-decoration: none;
 	}
