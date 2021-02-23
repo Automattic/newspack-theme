@@ -1,3 +1,17 @@
+# [1.30.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.29.0...v1.30.0-alpha.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* make sure updated date is always output ([#1248](https://github.com/Automattic/newspack-theme/issues/1248)) ([e06a7eb](https://github.com/Automattic/newspack-theme/commit/e06a7ebdfb9d237079460d98c69a9266c477798c))
+* make sure WooCommerce pages use custom colors and fonts ([#1251](https://github.com/Automattic/newspack-theme/issues/1251)) ([4b4e100](https://github.com/Automattic/newspack-theme/commit/4b4e1007372d5fc0fda2d0b3fd9181024b021f17))
+* only show sticky ad at mobile viewports ([#1253](https://github.com/Automattic/newspack-theme/issues/1253)) ([1782279](https://github.com/Automattic/newspack-theme/commit/1782279449e9bc0be84d95db9d0eb956ff57ce5e))
+
+
+### Features
+
+* switch Donate block to use the header font ([#1250](https://github.com/Automattic/newspack-theme/issues/1250)) ([7c6dd72](https://github.com/Automattic/newspack-theme/commit/7c6dd723b11fe65b96fe91fc03f72d757b516ec2))
+
 # [1.29.0](https://github.com/Automattic/newspack-theme/compare/v1.28.2...v1.29.0) (2021-02-16)
 
 
