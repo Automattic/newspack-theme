@@ -14,32 +14,30 @@ Newspack Sacha Editor Styles
 
 .accent-header,
 .article-section-title {
+	align-items: center;
 	color: $color__primary;
+	display: flex;
 	font-size: $font__size-xs;
-	text-align: center;
-}
-
-.article-section-title {
 	margin-bottom: #{1.5 * $size__spacing-unit};
-	position: relative;
 	overflow: hidden;
+	text-align: center;
+	width: 100%;
 
 	&::before,
 	&::after {
-		border-top: 1px solid $color__border;
+		background: $color__border;
 		content: '';
-		display: block;
-		position: absolute;
-		top: 50%;
-		width: 25%;
+		flex: 1 0 0.5rem;
+		height: 1px;
+		position: static;
 	}
 
 	&::before {
-		right: 0;
+		margin-right: #{0.5 * $size__spacing-unit};
 	}
 
 	&::after {
-		left: 0;
+		margin-left: #{0.5 * $size__spacing-unit};
 	}
 }
 
