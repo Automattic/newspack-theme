@@ -1,3 +1,11 @@
+# [1.30.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.30.0-alpha.1...v1.30.0-alpha.2) (2021-02-24)
+
+
+### Bug Fixes
+
+* correct link color in the gallery block captions ([#1258](https://github.com/Automattic/newspack-theme/issues/1258)) ([5fa21a1](https://github.com/Automattic/newspack-theme/commit/5fa21a19e6cf7c9ef2578a9f4678d157d32691d3))
+* update styles for Newspack Sacha's accent header ([#1257](https://github.com/Automattic/newspack-theme/issues/1257)) ([89ed83f](https://github.com/Automattic/newspack-theme/commit/89ed83fb893ea8c8793f36b8ec79af511bca501d))
+
 # [1.30.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.29.0...v1.30.0-alpha.1) (2021-02-23)
 
 
