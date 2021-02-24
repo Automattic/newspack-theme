@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Newspack\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
-"POT-Creation-Date: 2021-02-24T16:47:21+00:00\n"
-"PO-Revision-Date: 2021-02-24 16:48+0000\n"
+"POT-Creation-Date: 2021-02-24 17:24+0000\n"
+"PO-Revision-Date: 2021-02-24 17:25+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -24,22 +24,6 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#. Theme Name of the theme
-msgid "Newspack"
-msgstr ""
-
-#. Theme URI of the theme
-msgid "https://github.com/Automattic/newspack-theme"
-msgstr ""
-
-#. Author of the theme
-msgid "Automattic"
-msgstr "Automattic"
-
-#. Author URI of the theme
-msgid "https://newspack.blog"
-msgstr ""
-
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "¡Vaya! No se puede encontrar esa página."
@@ -51,6 +35,7 @@ msgstr ""
 
 #. translators: %s: comment author link
 #: classes/class-newspack-walker-comment.php:50
+#, php-format
 msgid "%s <span class=\"screen-reader-text says\">says:</span>"
 msgstr "%s <span class=\"screen-reader-text says\">dice:</span>"
 
@@ -60,6 +45,7 @@ msgstr ""
 
 #. translators: 1: comment date, 2: comment time
 #: classes/class-newspack-walker-comment.php:75
+#, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s en %2$s"
 
@@ -81,12 +67,13 @@ msgstr "Deja un comentario"
 
 #. translators: %s: post title
 #: comments.php:56
+#, php-format
 msgctxt "comments title"
 msgid "One reply on &ldquo;%s&rdquo;"
 msgstr ""
 
-#. translators: 1: number of comments, 2: post title
-#: comments.php:60
+#: comments.php:61
+#, php-format
 msgctxt "comments title"
 msgid "%1$s reply on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
@@ -249,6 +236,7 @@ msgstr ""
 
 #. translators: %s: link to Header Settings panel in Customizer.
 #: functions.php:295
+#, php-format
 msgid ""
 "Add widgets here to appear in an off-screen sidebar when it is enabled under "
 "%s."
@@ -353,6 +341,7 @@ msgstr ""
 
 #. translators: %s: WordPress version used by current site.
 #: inc/back-compat.php:38 inc/back-compat.php:52 inc/back-compat.php:72
+#, php-format
 msgid ""
 "Newspack Theme requires at least WordPress version 4.7. You are running "
 "version %s. Please upgrade and try again."
@@ -398,6 +387,7 @@ msgstr ""
 
 #. translators: %s: link to Slide Out Sidebar widget panel in Customizer.
 #: inc/customizer.php:137
+#, php-format
 msgid ""
 "Show a Slide-out sidebar in the header, which you can populate by adding "
 "widgets %1$s."
@@ -752,12 +742,10 @@ msgstr "Archivos:"
 msgid "Default"
 msgstr "Por defecto"
 
-#. Template Name of the theme
 #: inc/customizer.php:935
 msgid "One column"
 msgstr ""
 
-#. Template Name of the theme
 #: inc/customizer.php:936
 msgid "One column wide"
 msgstr ""
@@ -846,6 +834,10 @@ msgstr "Gracias. Tu orden ha sido recibida."
 msgid "Thank You message"
 msgstr ""
 
+#: inc/customizer.php:1126
+msgid "Text message that displays at the top of the \"Thank You\" page."
+msgstr ""
+
 #: inc/customizer.php:1144
 msgid "Display Customer Details"
 msgstr ""
@@ -862,6 +854,13 @@ msgstr "Tipografía"
 msgid "Font Provider Import Code or URL"
 msgstr ""
 
+#: inc/customizer.php:1212
+msgid ""
+"Example: &lt;link href=\"https://fonts.googleapis.com/css?family=Open"
+"+Sans&display=swap\" rel=\"stylesheet\"&gt; or https://fonts.googleapis.com/"
+"css?family=Open+Sans"
+msgstr ""
+
 #: inc/customizer.php:1221
 msgid "Secondary Font Provider Import Code or URL"
 msgstr ""
@@ -869,6 +868,10 @@ msgstr ""
 #: inc/customizer.php:1230
 msgid "Header Font"
 msgstr "Fuente de cabecera"
+
+#: inc/customizer.php:1231
+msgid "Example: Open Sans"
+msgstr ""
 
 #: inc/customizer.php:1246
 msgid "Header Font Fallback Stack"
@@ -915,6 +918,7 @@ msgstr ""
 
 #. translators: %s is the post's sponsor's name.
 #: inc/newspack-sponsors.php:306
+#, php-format
 msgid "Learn more about %s"
 msgstr ""
 
@@ -972,6 +976,7 @@ msgstr "Archivo de tipo de contenido: "
 
 #. translators: %s: Taxonomy singular name
 #: inc/template-functions.php:268
+#, php-format
 msgid "%s Archives:"
 msgstr "Archivo de %s:"
 
@@ -981,6 +986,7 @@ msgstr "Archivos:"
 
 #. translators: %s: Time ago date format
 #: inc/template-functions.php:598
+#, php-format
 msgid "%s ago"
 msgstr ""
 
@@ -994,6 +1000,7 @@ msgstr "por"
 
 #. translators: %s: Name of current post. Only visible to screen readers.
 #: inc/template-tags.php:212
+#, php-format
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Deja un comentario<span class=\"screen-reader-text\"> en %s</span>"
 
@@ -1012,6 +1019,7 @@ msgstr "Etiquetado:"
 
 #. translators: %s: Name of current post; only visible to screen readers.
 #: inc/template-tags.php:300 template-parts/content/content-page.php:33
+#, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
 
@@ -1029,8 +1037,17 @@ msgstr "Menú Superior"
 
 #. translators: %s - site name
 #: inc/trust-indicators.php:57
+#, php-format
 msgid "Why you can trust %s"
 msgstr ""
+
+#: inc/typography.php:321
+msgid "Serif"
+msgstr "Serif"
+
+#: inc/typography.php:330
+msgid "Sans Serif"
+msgstr "Sans Serif"
 
 #: inc/woocommerce.php:67
 msgid "Payment info"
@@ -1039,6 +1056,30 @@ msgstr "Información de pago"
 #: inc/woocommerce.php:85
 msgid "Create an account"
 msgstr "Crear una cuenta"
+
+#: js/src/extend-featured-image-editor.js:16
+msgid "Featured Image Position"
+msgstr ""
+
+#: js/src/extend-featured-image-editor.js:19
+msgid "Default (set in Customizer)"
+msgstr ""
+
+#: js/src/post-meta-toggles.js:30
+msgid "Hide updated date"
+msgstr ""
+
+#: js/src/post-meta-toggles.js:42
+msgid "Hide page title"
+msgstr ""
+
+#: js/src/post-subtitle/index.js:31
+msgid "Article Subtitle"
+msgstr ""
+
+#: js/src/post-subtitle/index.js:34
+msgid "Set a Subtitle for the Article"
+msgstr ""
 
 #: offline.php:27
 msgid "Offline"
@@ -1069,6 +1110,7 @@ msgstr "Nada Encontrado"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content/content-none.php:24
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
@@ -1093,6 +1135,7 @@ msgstr ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content/content-single.php:40
 #: template-parts/content/content.php:25
+#, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
 
@@ -1104,11 +1147,12 @@ msgstr ""
 #: template-parts/post/author-bio.php:74 template-parts/post/author-bio.php:84
 #: template-parts/post/author-bio.php:137
 #: template-parts/post/author-bio.php:147
+#, php-format
 msgid "More by %s"
 msgstr "Más de %s"
 
-#. translators: %1(X comments)$s
-#: template-parts/post/discussion-meta.php:14
+#: template-parts/post/discussion-meta.php:15
+#, php-format
 msgid "%d Comment"
 msgid_plural "%d Comments"
 msgstr[0] "%d comentario"
@@ -1180,25 +1224,8 @@ msgstr "N/A"
 msgid "Shipping address"
 msgstr "Dirección de envío"
 
-#: js/src/extend-featured-image-editor.js:19
-msgid "Default (set in Customizer)"
-msgstr ""
-
-#: js/src/post-meta-toggles.js:30
-msgid "Hide updated date"
-msgstr ""
-
-#: js/src/post-meta-toggles.js:42
-msgid "Hide page title"
-msgstr ""
-
-#: js/src/post-subtitle/index.js:31
-msgid "Article Subtitle"
-msgstr ""
-
-#: js/src/post-subtitle/index.js:34
-msgid "Set a Subtitle for the Article"
-msgstr ""
+#~ msgid "Automattic"
+#~ msgstr "Automattic"
 
 #~ msgid "https://wordpress.org/"
 #~ msgstr "https://wordpress.org/"
@@ -1220,9 +1247,3 @@ msgstr ""
 
 #~ msgid "Style 5"
 #~ msgstr "Estilo 5"
-
-#~ msgid "Serif"
-#~ msgstr "Serif"
-
-#~ msgid "Sans Serif"
-#~ msgstr "Sans Serif"
