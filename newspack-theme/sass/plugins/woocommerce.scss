@@ -40,7 +40,7 @@ a.button {
 	box-sizing: border-box;
 	word-break: break-all;
 	color: #fff;
-	text-decoration: none !important;
+	text-decoration: none;
 
 	&:hover,
 	&:visited {
@@ -219,6 +219,10 @@ a.button {
  * Shop page
  */
 
+.archive .woocommerce-products-header__title.page-title {
+	color: $color__text-main;
+}
+
 .woocommerce-products-header__title.page-title {
 	font-size: 1.6875em;
 	font-weight: 700;
@@ -233,6 +237,7 @@ a.button {
 }
 
 .woocommerce-results-wrapper {
+	font-size: $font__size-sm;
 	margin-bottom: #{0.5 * $size__spacing-unit};
 
 	@include media( mobile ) {
