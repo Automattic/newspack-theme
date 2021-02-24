@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: Newspack\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/newspack-theme\n"
 "POT-Creation-Date: 2021-02-24 17:24+0000\n"
-"PO-Revision-Date: 2021-02-24 17:25+0000\n"
+"PO-Revision-Date: 2021-02-24 15:50-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -542,23 +542,15 @@ msgid "Apply a background color to the primary menu."
 msgstr ""
 
 #: inc/customizer.php:503
-#, fuzzy
-#| msgid "Solid Background"
 msgid "Footer Background Color"
-msgstr "Fondo sólido"
+msgstr ""
 
 #: inc/customizer.php:505
-#, fuzzy
-#| msgctxt "primary color"
-#| msgid "Default"
 msgctxt "footer background color"
 msgid "Default"
 msgstr "Por defecto"
 
 #: inc/customizer.php:506
-#, fuzzy
-#| msgctxt "primary color"
-#| msgid "Custom"
 msgctxt "footer background color"
 msgid "Custom"
 msgstr "Personalizado"
@@ -642,10 +634,8 @@ msgid "Template Settings"
 msgstr ""
 
 #: inc/customizer.php:716
-#, fuzzy
-#| msgid "Header Settings"
 msgid "Post Settings"
-msgstr "Ajustes de Cabecera"
+msgstr ""
 
 #: inc/customizer.php:733 inc/customizer.php:879
 msgid "Featured Image Default Position"
@@ -714,33 +704,24 @@ msgid "Display previous and next links at the bottom of each post."
 msgstr ""
 
 #: inc/customizer.php:862
-#, fuzzy
-#| msgid "Header Settings"
 msgid "Page Settings"
-msgstr "Ajustes de Cabecera"
+msgstr ""
 
 #: inc/customizer.php:898
-#, fuzzy
-#| msgid "Header Settings"
 msgid "Archive Settings"
-msgstr "Ajustes de Cabecera"
+msgstr ""
 
 #: inc/customizer.php:915
 msgid "Show excerpts for all archives"
 msgstr ""
 
 #: inc/customizer.php:932
-#, fuzzy
-#| msgid "Archives:"
 msgid "Archive Layout"
-msgstr "Archivos:"
+msgstr ""
 
 #: inc/customizer.php:934
-#, fuzzy
-#| msgctxt "primary color"
-#| msgid "Default"
 msgid "Default"
-msgstr "Por defecto"
+msgstr ""
 
 #: inc/customizer.php:935
 msgid "One column"

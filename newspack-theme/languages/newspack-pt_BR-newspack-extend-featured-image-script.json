@@ -1,5 +1,5 @@
 {
-	"translation-revision-date": "2020-11-10 16:16-0800",
+	"translation-revision-date": "2021-02-24 08:32-0800",
 	"generator": "WP-CLI/2.4.0",
 	"source": "js/src/extend-featured-image-editor.js",
 	"domain": "messages",
@@ -10,6 +10,7 @@
 			"Large": ["Amplo"],
 			"Behind article title": [""],
 			"Beside article title": [""],
+			"Above article title": [""],
 			"Hidden": [""],
 			"Default (set in Customizer)": [""]
 		}
