@@ -372,8 +372,15 @@ figcaption,
 
 /** === Gallery === */
 
-.wp-block-gallery figcaption {
-	margin-bottom: 0;
+.wp-block-gallery {
+	figcaption {
+		margin-bottom: 0;
+
+		a,
+		a:hover {
+			color: #fff;
+		}
+	}
 }
 
 /** === Audio & Video === */
