@@ -90,7 +90,7 @@ body:not( .h-stk ) .site-breadcrumb {
 .site-header {
 	border-bottom: 2px solid $color__primary-variation;
 	@include media( tablet ) {
-		border-bottom: 0;
+		border-bottom-width: 0;
 	}
 }
 
@@ -165,7 +165,7 @@ body:not( .h-sb ) .site-header {
 			}
 		}
 
-		&.h-stk {
+		&.h-sub.h-stk {
 			.site-header {
 				border-bottom: 0;
 			}
