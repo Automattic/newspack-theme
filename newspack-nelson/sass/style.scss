@@ -70,11 +70,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.site-content,
-.hide-page-title .site-content,
-.newspack-front-page.hide-homepage-title .site-content,
-body:not( .newspack-front-page ) .newspack_global_ad.global_below_header + .site-content,
-.site-breadcrumb {
+body:not( .h-stk ) .site-content,
+body:not( .h-stk ).hide-page-title .site-content,
+body:not( .h-stk ).newspack-front-page.hide-homepage-title .site-content,
+body:not( .h-stk ):not( .newspack-front-page )
+	.newspack_global_ad.global_below_header
+	+ .site-content,
+body:not( .h-stk ) .site-breadcrumb {
 	@include media( tablet ) {
 		margin-top: #{-3.5 * $size__spacing-unit};
 	}
@@ -85,6 +87,13 @@ body:not( .newspack-front-page ) .newspack_global_ad.global_below_header + .site
 }
 
 // Header
+.site-header {
+	border-bottom: 2px solid $color__primary-variation;
+	@include media( tablet ) {
+		border-bottom: 0;
+	}
+}
+
 .site-header,
 .h-db .middle-header-contain, // Header default background
 .h-sh.h-db .site-header, // Header short height; header default background
@@ -102,28 +111,6 @@ body:not( .h-sb ) .site-header {
 // Mobile CTA
 .button.mb-cta {
 	border-radius: 0;
-}
-
-// Featured templates - Short header on subpages
-.single-featured-image-beside,
-.single-featured-image-behind {
-	@include media( tablet ) {
-		&.h-sub.h-db,
-		&.h-sub.h-sb {
-			.site-header,
-			.middle-header-contain,
-			&:not( .h-sb ) .site-header {
-				background: transparent;
-			}
-		}
-	}
-}
-
-#page .site-header {
-	border-bottom: 2px solid $color__primary-variation;
-	@include media( tablet ) {
-		border-bottom: 0;
-	}
 }
 
 .bottom-header-contain .wrapper {
@@ -145,6 +132,43 @@ body:not( .h-sb ) .site-header {
 	color: #fff;
 }
 
+// Header - sticky
+.h-stk {
+	#primary {
+		border: 0;
+		padding-top: 0;
+	}
+
+	@include media( tablet ) {
+		.site-header {
+			border-bottom-style: solid;
+			border-bottom-width: 4px;
+			padding: 0;
+		}
+	}
+}
+
+// Featured templates - Short header on subpages
+.single-featured-image-beside,
+.single-featured-image-behind {
+	@include media( tablet ) {
+		&.h-sub.h-db,
+		&.h-sub.h-sb {
+			.site-header,
+			.middle-header-contain,
+			&:not( .h-sb ) .site-header {
+				background: transparent;
+			}
+		}
+
+		&.h-stk {
+			.site-header {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
 // Content Area
 
 #primary {
@@ -162,8 +186,8 @@ body:not( .h-sb ) .site-header {
 	}
 }
 
-.newspack-front-page:not( .page-template-single-feature ) #primary {
-	@include media( tablet ) {
+@include media( tablet ) {
+	.newspack-front-page:not( .page-template-single-feature ) #primary {
 		padding-top: $size__spacing-unit;
 	}
 }
