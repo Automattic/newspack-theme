@@ -793,7 +793,8 @@ p.has-background {
 		margin-bottom: 16px;
 	}
 
-	figcaption a {
+	figcaption a,
+	figcaption a:hover {
 		color: #fff;
 	}
 }

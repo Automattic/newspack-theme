@@ -57,6 +57,12 @@
 }
 
 .newspack_amp_sticky_ad {
+	&__container {
+		@include media( mobile ) {
+			display: none;
+		}
+	}
+
 	* {
 		margin: auto;
 	}

@@ -372,8 +372,15 @@ figcaption,
 
 /** === Gallery === */
 
-.wp-block-gallery figcaption {
-	margin-bottom: 0;
+.wp-block-gallery {
+	figcaption {
+		margin-bottom: 0;
+
+		a,
+		a:hover {
+			color: #fff;
+		}
+	}
 }
 
 /** === Audio & Video === */
@@ -843,6 +850,13 @@ ul.wp-block-archives,
 			}
 		}
 	}
+}
+
+/** === Donate Block === */
+.wpbnbd .freq-label,
+.wpbnbd .tier-label,
+.wpbnbd button {
+	font-family: $font__heading;
 }
 
 /** === Classic Editor === */
