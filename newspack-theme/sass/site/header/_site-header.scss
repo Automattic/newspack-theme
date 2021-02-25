@@ -530,6 +530,7 @@
 	}
 }
 
+// Sticky header
 .site-header {
 	background: $color__background-body;
 }
@@ -554,6 +555,14 @@
 		// Tighten up the padding a bit
 		&.h-dh:not( .h-sub ) .middle-header-contain .wrapper {
 			padding: #{0.75 * $size__spacing-unit} 0;
+		}
+
+		&.h-db .bottom-header-contain {
+			border-bottom: 1px solid $color__border;
+			border-top: 1px solid $color__border;
+			.wrapper {
+				border: 0;
+			}
 		}
 	}
 

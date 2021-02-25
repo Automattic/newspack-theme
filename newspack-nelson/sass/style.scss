@@ -145,6 +145,10 @@ body:not( .h-sb ) .site-header {
 			border-bottom-width: 4px;
 			padding: 0;
 		}
+
+		&.h-db .bottom-header-contain {
+			border: 0;
+		}
 	}
 }
 
