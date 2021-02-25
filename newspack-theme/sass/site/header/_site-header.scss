@@ -234,7 +234,7 @@
 			margin-right: 0;
 		}
 
-		.site-header .custom-logo-link img {
+		.site-header .custom-logo {
 			height: auto;
 			max-width: 100%;
 			margin: auto;
@@ -282,7 +282,7 @@
 			}
 		}
 
-		.site-header .custom-logo-link img {
+		.site-header .custom-logo {
 			max-width: inherit;
 		}
 	}
@@ -538,7 +538,7 @@
 	.site-header {
 		position: sticky;
 		top: 0;
-		z-index: 99;
+		z-index: 999;
 	}
 
 	&.admin-bar .site-header {
