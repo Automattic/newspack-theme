@@ -542,16 +542,16 @@
 .h-stk {
 	.site-header {
 		position: sticky;
-		top: -1px; // to prevent random 1px gap at top.
+		top: 0;
 		z-index: 999;
 	}
 
 	&.admin-bar .site-header {
 		@include media( mobile ) {
-			top: 45px; // height of admin toolbar - 1px.
+			top: 46px;
 		}
 		@include media( tablet ) {
-			top: 31px; // height of admin toolbar - 1px.
+			top: 32px;
 		}
 	}
 
@@ -600,6 +600,10 @@
 				}
 			}
 		}
+	}
+
+	.highlight-menu-contain {
+		display: none;
 	}
 }
 
