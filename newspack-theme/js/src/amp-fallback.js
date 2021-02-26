@@ -258,7 +258,7 @@
 		 * @description Limit onscroll checkes and add CSS class when scrolled least 200px down the page.
 		 */
 		function toggleHeaderClass() {
-			const scrollBarPosition = document.body.scrollTop,
+			const scrollBarPosition = window.pageYOffset,
 				minScrollTime = 100,
 				now = new Date().getTime();
 
