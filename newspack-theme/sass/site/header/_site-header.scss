@@ -418,7 +418,7 @@
 .h-sub {
 	@include media( tablet ) {
 		.site-header {
-			height: 80px;
+			min-height: 80px;
 		}
 	}
 
