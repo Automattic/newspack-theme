@@ -70,12 +70,13 @@ body {
 }
 
 // Header - sticky
-.h-stk {
-	&.h-sub.single-featured-image-behind,
-	&.h-sub.single-featured-image-beside {
-		.site-header {
-			position: sticky;
-			margin-bottom: -83px;
+@include media( tablet ) {
+	.h-stk {
+		&.h-sub.single-featured-image-behind,
+		&.h-sub.single-featured-image-beside {
+			.site-header {
+				margin-bottom: -81px;
+			}
 		}
 	}
 }
