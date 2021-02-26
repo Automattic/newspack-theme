@@ -100,7 +100,7 @@ function newspack_customize_logo_resize( $html ) {
 		$subhead_max_width  = 200;
 		$subhead_max_height = 60;
 
-		$sticky_max_width  = 300;
+		$sticky_max_width  = 400;
 		$sticky_max_height = 90;
 
 		$mobile  = newspack_logo_small_sizes( $img['width'], $img['height'], $mobile_max_width, $mobile_max_height );
