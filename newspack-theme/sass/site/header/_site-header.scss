@@ -416,8 +416,10 @@
 
 // h-sub
 .h-sub {
-	.site-header {
-		height: 80px;
+	@include media( tablet ) {
+		.site-header {
+			height: 80px;
+		}
 	}
 
 	.site-title,
@@ -483,7 +485,7 @@
 		&.h-dh {
 			.featured-image-behind,
 			.featured-image-beside {
-				min-height: 100vh;
+				min-height: 101vh;
 			}
 		}
 
