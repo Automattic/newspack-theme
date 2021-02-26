@@ -23,6 +23,11 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 }
 ?>
 
+<?php if ( newspack_is_sticky_animated_header() ) : ?>
+	<?php // If the header is sticky, add a position observer. ?>
+	<amp-position-observer target="" on="enter:headerFadeIn.start; exit:headerFadeOut.start;" layout="nodisplay"></amp-position-observer>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 

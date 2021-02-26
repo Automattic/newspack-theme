@@ -70,6 +70,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+// Site Content - not applied when sticky header is active
 body:not( .h-stk ) .site-content,
 body:not( .h-stk ).hide-page-title .site-content,
 body:not( .h-stk ).newspack-front-page.hide-homepage-title .site-content,
@@ -144,6 +145,10 @@ body:not( .h-sb ) .site-header {
 			border-bottom-style: solid;
 			border-bottom-width: 4px;
 			padding: 0;
+		}
+
+		.middle-header-contain {
+			padding-top: 0;
 		}
 
 		&.h-db .bottom-header-contain {

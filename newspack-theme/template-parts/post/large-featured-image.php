@@ -9,6 +9,7 @@ $caption = get_the_excerpt( get_post_thumbnail_id() );
 // Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
 $caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
 
+$header_sticky = get_theme_mod( 'header_sticky', false );
 
 if ( 'behind' === newspack_featured_image_position() ) :
 ?>

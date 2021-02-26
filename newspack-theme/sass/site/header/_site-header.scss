@@ -416,6 +416,10 @@
 
 // h-sub
 .h-sub {
+	.site-header {
+		height: 80px;
+	}
+
 	.site-title,
 	.site-description,
 	.alternative-logo {
@@ -538,16 +542,16 @@
 .h-stk {
 	.site-header {
 		position: sticky;
-		top: 0;
+		top: -1px; // to prevent random 1px gap at top.
 		z-index: 999;
 	}
 
 	&.admin-bar .site-header {
 		@include media( mobile ) {
-			top: 46px;
+			top: 45px; // height of admin toolbar - 1px.
 		}
 		@include media( tablet ) {
-			top: 32px;
+			top: 31px; // height of admin toolbar - 1px.
 		}
 	}
 
@@ -576,24 +580,23 @@
 			.site-header {
 				margin-bottom: -80px;
 				background: transparent;
-			}
 
-			.site::before {
-				content: '';
-				background: rgba( 60, 60, 60, 0.8 );
-				display: block;
-				width: 100%;
-				height: 80px;
-				position: fixed;
-				top: 0;
-			}
-
-			&.admin-bar .site::before {
-				@include media( mobile ) {
-					top: 46px;
+				.sticky-bg {
+					bottom: 0;
+					content: '';
+					background: #000;
+					display: block;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: -1;
+					transition: opacity 0.5s ease-in;
 				}
-				@include media( tablet ) {
-					top: 32px;
+
+				&.head-scroll .sticky-bg {
+					opacity: 0.7;
 				}
 			}
 		}
