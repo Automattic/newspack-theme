@@ -1,0 +1,15 @@
+.amp-wp-default-form-message {
+	p {
+		font-size: $font__size-sm;
+		font-weight: bold;
+	}
+	small {
+		font-size: inherit;
+		font-weight: normal;
+	}
+
+	&[submit-success] > p:not( .amp-wp-form-redirecting ) {
+		border-color: #84c46e;
+		background: #a1e789;
+	}
+}
