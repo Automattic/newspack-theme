@@ -148,7 +148,6 @@ a.button {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: $font__size-sm;
-	justify-content: center;
 	list-style: none;
 	margin-bottom: 1.5rem;
 	padding: #{0.5 * $size__spacing-unit} $size__spacing-unit;
@@ -156,12 +155,12 @@ a.button {
 
 	.button {
 		float: none;
+		margin-left: 1em;
 		order: 2;
 	}
 
-	.button,
 	.showcoupon {
-		margin-left: 1em;
+		margin-left: 0.5em;
 	}
 }
 
