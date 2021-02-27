@@ -144,13 +144,17 @@ function newspack_custom_typography_css() {
 		.woocommerce .onsale,
 		.woocommerce .price,
 		.woocommerce .product_meta,
+		.woocommerce-review-link,
+		.woocommerce-grouped-product-list,
 		.woocommerce .first-payment-date,
 		.woocommerce-message,
 		.woocommerce-error,
 		.woocommerce-info,
 		ul.products .added_to_cart,
 		.woocommerce-tabs ul,
-		.woocommerce-MyAccount-navigation
+		.woocommerce-MyAccount-navigation,
+		.woocommerce-Reviews .comment-reply-title,
+		.product .nyp
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
