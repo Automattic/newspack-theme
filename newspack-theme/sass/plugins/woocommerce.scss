@@ -987,9 +987,34 @@ table.variations {
 /**
  * Cart
  */
-.woocommerce-cart {
+.page-template-single-wide.woocommerce-cart .woocommerce {
 	@include media( desktop ) {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.woocommerce-notices-wrapper {
+			width: 100%;
+		}
+
+		.woocommerce-cart-form {
+			width: 62%;
+		}
+
+		.cart-collaterals {
+			background: $color__background-pre;
+			padding: 0 $size__spacing-unit $size__spacing-unit;
+			width: 35%;
+
+			.cart_totals {
+				float: none;
+				width: 100%;
+			}
+		}
+
+		.woocommerce-shipping-calculator {
+			width: 200px;
+		}
 	}
 }
 
