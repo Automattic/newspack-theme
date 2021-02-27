@@ -185,7 +185,9 @@
 	// Make sure checkout details exist before going any further.
 	if ( null !== orderDetailToggle ) {
 		const orderDetailWrapper = document.getElementById( 'order-details-wrapper' ),
-			orderDetailToggleTextContain = orderDetailToggle.getElementsByTagName( 'span' )[ 0 ];
+			orderDetailToggleTextContain = orderDetailToggle.getElementsByTagName( 'span' )[ 0 ],
+			hideOrderDetails = newspackScreenReaderText.hide_order_details,
+			showOrderDetails = newspackScreenReaderText.show_order_details;
 
 		orderDetailToggle.addEventListener(
 			'click',
@@ -193,11 +195,11 @@
 				if ( orderDetailWrapper.classList.contains( 'order-details-hidden' ) ) {
 					orderDetailWrapper.classList.remove( 'order-details-hidden' );
 					orderDetailToggle.classList.remove( 'order-details-hidden' );
-					orderDetailToggleTextContain.innerText = newspackScreenReaderText.hide_order_details;
+					orderDetailToggleTextContain.innerText = hideOrderDetails;
 				} else {
 					orderDetailWrapper.classList.add( 'order-details-hidden' );
 					orderDetailToggle.classList.add( 'order-details-hidden' );
-					orderDetailToggleTextContain.innerText = newspackScreenReaderText.show_order_details;
+					orderDetailToggleTextContain.innerText = showOrderDetails;
 				}
 			},
 			false

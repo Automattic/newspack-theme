@@ -51,7 +51,6 @@ a.button {
 .woocommerce {
 	.content-area {
 		.site-main {
-			margin: 32px 0;
 			max-width: 100%;
 		}
 	}
@@ -136,6 +135,11 @@ a.button {
 	font-size: $font__size-sm;
 }
 
+.woocommerce-notices-wrapper {
+	margin-bottom: $size__spacing-unit;
+	width: 100%;
+}
+
 .woocommerce-message,
 .woocommerce-error,
 .woocommerce-info {
@@ -144,6 +148,7 @@ a.button {
 	display: flex;
 	flex-wrap: wrap;
 	font-size: $font__size-sm;
+	justify-content: center;
 	list-style: none;
 	margin-bottom: 1.5rem;
 	padding: #{0.5 * $size__spacing-unit} $size__spacing-unit;
@@ -151,8 +156,12 @@ a.button {
 
 	.button {
 		float: none;
-		margin-left: 1em;
 		order: 2;
+	}
+
+	.button,
+	.showcoupon {
+		margin-left: 1em;
 	}
 }
 
@@ -1136,6 +1145,33 @@ table.variations {
 	}
 }
 
+/**
+ * One-page checkout
+ */
+/* stylelint-disable selector-id-pattern  */
+#order_review .opc_order_review {
+	.product-name {
+		align-items: center;
+		display: flex;
+		height: 100%;
+	}
+
+	.product-remove {
+		float: none;
+		margin-right: #{0.25 * $size__spacing-unit};
+		order: -1;
+	}
+
+	.product-quantity {
+		margin: 0 $size__spacing-unit 0 auto;
+
+		@include media( tablet ) {
+			margin-right: #{3 * $size__spacing-unit};
+		}
+	}
+}
+/* stylelint-enable */
+
 .woocommerce-no-js {
 	form.woocommerce-form-login,
 	form.woocommerce-form-coupon {
@@ -1306,6 +1342,7 @@ table.woocommerce-table--order-details.shop_table,
 			// stylelint-disable-next-line function-calc-no-invalid
 			font-size: calc( $font__size-sm * 1rem );
 			font-weight: normal;
+			vertical-align: middle;
 		}
 	}
 
