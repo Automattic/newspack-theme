@@ -208,15 +208,15 @@ function newspack_checkout_fields_styling( $fields ) {
 	unset( $fields['billing']['billing_phone'] );
 
 	// Check to see if there are only virtual items in the cart.
-	$only_virtual = true;
+	$needs_shipping = false;
 	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		if ( ! $cart_item['data']->is_virtual() ) {
-			$only_virtual = false;
+		if ( $cart_item['data']->needs_shipping() ) {
+			$needs_shipping = true;
 		}
 	}
 
 	// If the cart only has virtual products, simplify checkout further.
-	if ( $only_virtual ) {
+	if ( ! $needs_shipping ) {
 		unset( $fields['billing']['billing_address_1'] );
 		unset( $fields['billing']['billing_city'] );
 		unset( $fields['billing']['billing_postcode'] );
@@ -226,7 +226,7 @@ function newspack_checkout_fields_styling( $fields ) {
 	}
 
 	// If the cart has physical items, replace .form-row-wide classes with classes to style fields narrower.
-	if ( ! $only_virtual ) {
+	if ( $needs_shipping ) {
 		$fields['billing']['billing_email']['class'] = array( 'form-row-last' );
 	}
 
