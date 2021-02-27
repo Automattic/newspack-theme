@@ -224,7 +224,8 @@ function newspack_custom_colors_css() {
 			*[class^="wp-block-"].has-secondary-variation-ackground-color,
 			*[class^="wp-block-"] .has-secondary-variation-background-color,
 			*[class^="wp-block-"].is-style-solid-color.has-secondary-variation-background-color,
-			.is-style-outline .wp-block-button__link.has-secondary-variation-background-color:not( :hover ) {
+			.is-style-outline .wp-block-button__link.has-secondary-variation-background-color:not( :hover ),
+			#ship-to-different-address label input[type="checkbox"]:checked + span::before {
 				background-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
 			}
 
@@ -241,6 +242,11 @@ function newspack_custom_colors_css() {
 			.is-style-outline .wp-block-button__link.has-secondary-variation-color:not(:hover), /* legacy styles */
 			.wp-block-button__link.is-style-outline.has-secondary-variation-color:not(:hover){
 				color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . '; /* base: #666 */
+			}
+
+			/* Set secondary border */
+			#ship-to-different-address label input[type="checkbox"]:checked + span::before {
+				border-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . ';
 			}
 
 			/* Set gradients */

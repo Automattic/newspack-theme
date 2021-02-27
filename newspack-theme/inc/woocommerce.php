@@ -196,6 +196,22 @@ function woocommerce_before_shop_loop_wrapper_close() {
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_before_shop_loop_wrapper_close', 40 );
 
+/*
+ * Check if any products in the card need shipping.
+ *
+ * @return bool $needs_shipping Whether the cart requires shipping.
+ */
+function newspack_checkout_needs_shipping() {
+	// Check to see if there are only virtual items in the cart.
+	$needs_shipping = false;
+	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+		if ( $cart_item['data']->needs_shipping() ) {
+			$needs_shipping = true;
+		}
+	}
+	return $needs_shipping;
+}
+
 /**
  * Improve appearance of WooCommerce checkout
  *
@@ -206,17 +222,12 @@ function newspack_checkout_fields_styling( $fields ) {
 	unset( $fields['billing']['billing_company'] );
 	unset( $fields['billing']['billing_address_2'] );
 	unset( $fields['billing']['billing_phone'] );
-
-	// Check to see if there are only virtual items in the cart.
-	$needs_shipping = false;
-	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		if ( $cart_item['data']->needs_shipping() ) {
-			$needs_shipping = true;
-		}
-	}
+	unset( $fields['shipping']['shipping_company'] );
+	unset( $fields['shipping']['shipping_address_2'] );
+	unset( $fields['shipping']['shipping_phone'] );
 
 	// If the cart only has virtual products, simplify checkout further.
-	if ( ! $needs_shipping ) {
+	if ( ! newspack_checkout_needs_shipping() ) {
 		unset( $fields['billing']['billing_address_1'] );
 		unset( $fields['billing']['billing_city'] );
 		unset( $fields['billing']['billing_postcode'] );
@@ -226,10 +237,9 @@ function newspack_checkout_fields_styling( $fields ) {
 	}
 
 	// If the cart has physical items, replace .form-row-wide classes with classes to style fields narrower.
-	if ( $needs_shipping ) {
+	if ( newspack_checkout_needs_shipping() ) {
 		$fields['billing']['billing_email']['class'] = array( 'form-row-last' );
 	}
-
 	return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9999 );
