@@ -322,7 +322,7 @@ function newspack_custom_typography_link( $theme_mod ) {
 function newspack_get_font_stacks() {
 	return array(
 		'serif'      => array(
-			'name'  => __( 'Serif' ),
+			'name'  => __( 'Serif', 'newspack' ),
 			'fonts' => array(
 				'Georgia',
 				'Garamond',
@@ -331,7 +331,7 @@ function newspack_get_font_stacks() {
 			),
 		),
 		'sans_serif' => array(
-			'name'  => __( 'Sans Serif' ),
+			'name'  => __( 'Sans Serif', 'newspack' ),
 			'fonts' => array(
 				'-apple-system',
 				'BlinkMacSystemFont',
@@ -344,6 +344,37 @@ function newspack_get_font_stacks() {
 				'Droid Sans',
 				'Helvetica Neue',
 				'sans-serif',
+			),
+		),
+		'display'    => array(
+			'name'  => __( 'Display', 'newspack' ),
+			'fonts' => array(
+				'Impact',
+				'Haettenschweiler',
+				'Franklin Gothic Bold',
+				'Charcoal',
+				'Helvetica Inserat',
+				'Bitstream Vera Sans Bold',
+				'Arial Black',
+				'sans-serif',
+			),
+		),
+		'monospace'  => array(
+			'name'  => __( 'Monospace', 'newspack' ),
+			'fonts' => array(
+				'Consolas',
+				'Andale Mono WT',
+				'Andale Mono',
+				'Lucida Console',
+				'Lucida Sans Typewriter',
+				'DejaVu Sans Mono',
+				'Bitstream Vera Sans Mono',
+				'Liberation Mono',
+				'Nimbus Mono L',
+				'Monaco',
+				'Courier New',
+				'Courier',
+				'monospace'
 			),
 		),
 	);
