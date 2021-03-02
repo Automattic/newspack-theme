@@ -154,6 +154,7 @@ function newspack_custom_typography_css() {
 		.woocommerce-tabs ul,
 		.woocommerce-MyAccount-navigation,
 		.woocommerce-Reviews .comment-reply-title,
+		.woocommerce-results-wrapper,
 		.product .nyp
 		{
 			font-family: ' . wp_kses( $font_header, null ) . ';
