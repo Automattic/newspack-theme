@@ -1,3 +1,17 @@
+# [1.31.0](https://github.com/Automattic/newspack-theme/compare/v1.30.0...v1.31.0) (2021-03-03)
+
+
+### Bug Fixes
+
+* improve appearance of WooCommerce shop page ([#1278](https://github.com/Automattic/newspack-theme/issues/1278)) ([6a87808](https://github.com/Automattic/newspack-theme/commit/6a878080246139ef92adab3d1b5ed32757548af6))
+* improve the single product page appearance ([#1271](https://github.com/Automattic/newspack-theme/issues/1271)) ([cc804b4](https://github.com/Automattic/newspack-theme/commit/cc804b42ae22a3c9b3082873da88983521fbbf87))
+* improve WooCommerce cart appearance ([#1274](https://github.com/Automattic/newspack-theme/issues/1274)) ([295ede5](https://github.com/Automattic/newspack-theme/commit/295ede58f4ab44d095aa2860a05a4db67fcf5f3d))
+
+
+### Features
+
+* add display and monospace to the font fallback stack ([#1280](https://github.com/Automattic/newspack-theme/issues/1280)) ([ba8c0a8](https://github.com/Automattic/newspack-theme/commit/ba8c0a87f4657e2a6eba1c376845eadace37b878))
+
 # [1.30.0](https://github.com/Automattic/newspack-theme/compare/v1.29.0...v1.30.0) (2021-02-25)
 
 
