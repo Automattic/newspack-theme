@@ -123,7 +123,8 @@ function newspack_custom_colors_css() {
 
 			blockquote,
 			.wp-block-quote:not(.is-large),
-			.wp-block-quote:not(.is-style-large) {
+			.wp-block-quote:not(.is-style-large),
+			.woocommerce-tabs ul li.active a {
 				border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
 
