@@ -406,7 +406,7 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
 
 		$output .= sprintf(
-			'<button class="submenu-expand" tabindex="-1">%s</button>',
+			'<button class="submenu-expand" tabindex="-1" role="presentation">%s</button>',
 			$icon
 		);
 	}
