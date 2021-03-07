@@ -7,7 +7,9 @@
  */
 ( function( $ ) {
 	const api = wp.customize;
-	const Logo = new NewspackLogo();
+	const Logo = new NewspackLogo( '.site-header .custom-logo' );
+	const FooterLogo = new NewspackLogo( '.site-footer .footer-logo, .site-footer .custom-logo' );
+
 	let resizeTimer;
 
 	api( 'custom_logo', function( value ) {
@@ -18,6 +20,16 @@
 	api( 'logo_size', function( value ) {
 		Logo.resize( value() );
 		value.bind( Logo.resize );
+	} );
+
+	api( 'newspack_footer_logo', function( value ) {
+		handleLogoFooterDetection( value() );
+		value.bind( handleLogoFooterDetection );
+	} );
+
+	api( 'footer_logo_size', function( value ) {
+		FooterLogo.resize( value() );
+		value.bind( FooterLogo.resize );
 	} );
 
 	/**
@@ -34,10 +46,21 @@
 		initial = to;
 	}
 
+	function handleLogoFooterDetection( to, initial ) {
+		if ( '' === to ) {
+			FooterLogo.remove();
+		} else if ( undefined === initial ) {
+			FooterLogo.add();
+		} else {
+			FooterLogo.change();
+		}
+		initial = to;
+	}
+
 	/**
 	 *
 	 */
-	function NewspackLogo() {
+	function NewspackLogo( logo_class ) {
 		let hasLogo = null;
 		const min = 48;
 
@@ -45,7 +68,7 @@
 			resize( to ) {
 				if ( hasLogo ) {
 					const img = new Image();
-					const logo = $( '.custom-logo' );
+					const logo = $( logo_class );
 
 					let size = {
 						width: parseInt( logo.attr( 'width' ), 10 ),
@@ -97,7 +120,7 @@
 
 			add() {
 				const intId = setInterval( function() {
-					const logo = $( '.custom-logo[src]' );
+					const logo = $( logo_class + '[src]' );
 					if ( logo.length ) {
 						clearInterval( intId );
 						hasLogo = true;
@@ -106,9 +129,9 @@
 			},
 
 			change() {
-				const oldlogo = $( '.custom-logo' ).attr( 'src' );
+				const oldlogo = $( logo_class ).attr( 'src' );
 				const intId = setInterval( function() {
-					const logo = $( '.custom-logo' ).attr( 'src' );
+					const logo = $( logo_class ).attr( 'src' );
 					if ( logo !== oldlogo ) {
 						clearInterval( intId );
 						hasLogo = true;
