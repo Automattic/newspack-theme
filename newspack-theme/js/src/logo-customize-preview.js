@@ -8,7 +8,10 @@
 ( function( $ ) {
 	const api = wp.customize;
 	const Logo = new NewspackLogo( '.site-header .custom-logo' );
-	const FooterLogo = new NewspackLogo( '.site-footer .footer-logo, .site-footer .custom-logo' );
+	const FooterLogo = new NewspackLogo(
+		'.site-footer .footer-logo, .site-footer .custom-logo',
+		400
+	);
 
 	let resizeTimer;
 
@@ -33,7 +36,7 @@
 	} );
 
 	/**
-	 *
+	 * Make changes to the header logo.
 	 */
 	function handleLogoDetection( to, initial ) {
 		if ( '' === to ) {
@@ -46,6 +49,9 @@
 		initial = to;
 	}
 
+	/**
+	 * Make changes to the footer logo.
+	 */
 	function handleLogoFooterDetection( to, initial ) {
 		if ( '' === to ) {
 			FooterLogo.remove();
@@ -58,11 +64,10 @@
 	}
 
 	/**
-	 *
+	 * Figure out the size the logo should update to.
 	 */
-	function NewspackLogo( logo_class ) {
+	function NewspackLogo( logo_class, setMax = 600, setMin = 48 ) {
 		let hasLogo = null;
-		const min = 48;
 
 		const self = {
 			resize( to ) {
@@ -81,7 +86,7 @@
 					};
 
 					const max = new Object();
-					max.width = $.isNumeric( cssMax.width ) ? cssMax.width : 600;
+					max.width = $.isNumeric( cssMax.width ) ? cssMax.width : setMax;
 					max.height = $.isNumeric( cssMax.height ) ? cssMax.height : size.height;
 
 					img.onload = function() {
@@ -89,14 +94,14 @@
 
 						if ( size.width >= size.height ) {
 							// landscape or square, calculate height as short side
-							output = logo_min_max( size.height, size.width, max.height, max.width, to, min );
+							output = logo_min_max( size.height, size.width, max.height, max.width, to, setMin );
 							size = {
 								height: output.a,
 								width: output.b,
 							};
 						} else if ( size.width < size.height ) {
 							// portrait, calculate height as long side
-							output = logo_min_max( size.width, size.height, max.width, max.height, to, min );
+							output = logo_min_max( size.width, size.height, max.width, max.height, to, setMin );
 							size = {
 								height: output.b,
 								width: output.a,
