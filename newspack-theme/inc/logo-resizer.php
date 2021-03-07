@@ -79,7 +79,7 @@ add_action( 'customize_register', 'newspack_logo_resizer_customize_register' );
 /**
  * Add support for logo resizing by filtering `get_custom_logo`.
  */
-function newspack_return_logo_sizes( $set_size, $set_logo_id, $min = 48 ) {
+function newspack_return_logo_sizes( $set_size, $set_logo_id, $max_width = 600, $min = 48 ) {
 	$size         = get_theme_mod( $set_size );
 	$logo_id      = get_theme_mod( $set_logo_id );
 	$custom_sizes = '';
@@ -93,7 +93,7 @@ function newspack_return_logo_sizes( $set_size, $set_logo_id, $min = 48 ) {
 
 		// get the logo support size
 		$sizes          = get_theme_support( 'custom-logo' );
-		$logo_max_width = ( $logo['width'] > 600 ) ? 600 : $logo['width'];
+		$logo_max_width = ( $logo['width'] > $max_width ) ? $max_width : $logo['width'];
 
 		// Check for max height and width, default to image sizes if none set in theme
 		$max['height'] = isset( $sizes[0]['height'] ) ? $sizes[0]['height'] : $logo['height'];
@@ -135,56 +135,62 @@ function newspack_return_logo_sizes( $set_size, $set_logo_id, $min = 48 ) {
 
 /**
  * Puts together CSS from logo sizes and max-widths.
- *
- * @param string $html original HTML for the site logo.
- *
- * @return string Returns the logo's HTML with the resizer styles.
  */
-function newspack_return_logo_css( $html ) {
+function newspack_logo_css() {
+	// Set empty CSS variable.
+	$css = '';
 	// Get sizes of the header logo.
 	$logo_sizes = newspack_return_logo_sizes( 'logo_size', 'custom_logo' );
 	// Get sizes of the footer logo.
-	$footer_sizes = newspack_return_logo_sizes( 'footer_logo_size', newspack_get_footer_logo() );
+	$footer_sizes = newspack_return_logo_sizes( 'footer_logo_size', newspack_get_footer_logo(), 400 );
 
 	// Make sure at least one is populated before proceeding.
 	if ( empty( $logo_sizes ) && empty( $footer_sizes ) ) {
-		return $html;
+		return;
 	}
 
 	// Set a mobile max-width, and subheader max-width.
-	$mobile_max_width  = 175;
-	$mobile_max_height = 65;
+	$mobile_max_width    = 175;
+	$mobile_max_height   = 65;
+	$mobile_logo_sizes   = '';
+	$mobile_footer_sizes = '';
 
 	$subhead_max_width  = 200;
 	$subhead_max_height = 60;
+	$subhead_logo_sizes = '';
 
-	$mobile  = newspack_logo_small_sizes( $logo_sizes['width'], $logo_sizes['height'], $mobile_max_width, $mobile_max_height );
-	$subhead = newspack_logo_small_sizes( $logo_sizes['width'], $logo_sizes['height'], $subhead_max_width, $subhead_max_height );
+	if ( ! empty( $logo_sizes ) ) {
+		$mobile_logo_sizes  = newspack_logo_small_sizes( $logo_sizes['width'], $logo_sizes['height'], $mobile_max_width, $mobile_max_height );
+		$subhead_logo_sizes = newspack_logo_small_sizes( $logo_sizes['width'], $logo_sizes['height'], $subhead_max_width, $subhead_max_height );
 
-	// Add the CSS.
-	$css = '
-	.site-header .custom-logo {
-		height: ' . $logo_sizes['height'] . 'px;
-		max-height: ' . $logo_sizes['maxheight'] . 'px;
-		max-width: ' . $logo_sizes['maxwidth'] . 'px;
-		width: ' . $logo_sizes['width'] . 'px;
-	}
-
-	@media (max-width: 781px) {
+		// Add the CSS.
+		$css .= '
 		.site-header .custom-logo {
-			max-width: ' . $mobile['width'] . 'px;
-			max-height: ' . $mobile['height'] . 'px;
+			height: ' . $logo_sizes['height'] . 'px;
+			max-height: ' . $logo_sizes['maxheight'] . 'px;
+			max-width: ' . $logo_sizes['maxwidth'] . 'px;
+			width: ' . $logo_sizes['width'] . 'px;
 		}
+
+		@media (max-width: 781px) {
+			.site-header .custom-logo {
+				max-width: ' . $mobile_logo_sizes['width'] . 'px;
+				max-height: ' . $mobile_logo_sizes['height'] . 'px;
+			}
+		}
+
+		@media (min-width: 782px) {
+			.h-sub .site-header .custom-logo {
+				max-width: ' . $subhead_logo_sizes['width'] . 'px;
+				max-height: ' . $subhead_logo_sizes['height'] . 'px;
+			}
+		}';
 	}
 
-	@media (min-width: 782px) {
-		.h-sub .site-header .custom-logo {
-			max-width: ' . $subhead['width'] . 'px;
-			max-height: ' . $subhead['height'] . 'px;
-		}
-	}';
+	if ( ! empty( $footer_sizes ) ) {
+		$mobile_footer_sizes = newspack_logo_small_sizes( $footer_sizes['width'], $footer_sizes['height'], $mobile_max_width, $mobile_max_height );
 
-	if ( '' !== newspack_get_footer_logo() ) {
+		// Add the CSS.
 		$css .= '
 		.site-footer .footer-logo,
 		.site-footer .custom-logo {
@@ -197,18 +203,19 @@ function newspack_return_logo_css( $html ) {
 		@media (max-width: 781px) {
 			.site-footer .footer-logo,
 			.site-footer .custom-logo {
-				max-width: ' . $mobile['width'] . 'px;
-				max-height: ' . $mobile['height'] . 'px;
+				max-width: ' . $mobile_footer_sizes['width'] . 'px;
+				max-height: ' . $mobile_footer_sizes['height'] . 'px;
 			}
 		}';
 	}
 
-	$html = '<style>' . $css . '</style>' . $html;
-
-	return $html;
+	if ( '' !== $css ) :
+		echo '<style type="text/css" id="logo-size">';
+		echo $css; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '</style>';
+	endif;
 }
-
-add_filter( 'get_custom_logo', 'newspack_return_logo_css' );
+add_action( 'wp_head', 'newspack_logo_css' );
 
 /**
  * Checks to see if the footer uses the footer logo option, or falls back to the custom logo, or none.
