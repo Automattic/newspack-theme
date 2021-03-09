@@ -144,6 +144,13 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
+	// Add a class for each category assigned to a single post.
+	if ( is_single() ) {
+		foreach ( ( get_the_category( $page_id ) ) as $category ) {
+			$classes[] = 'cat-' . $category->category_nicename;
+		}
+	}
+
 	// Adds class if singular post or page has a featured image.
 	if ( is_singular() && has_post_thumbnail() && 'hidden' !== newspack_featured_image_position() ) {
 		$classes[] = 'has-featured-image';
