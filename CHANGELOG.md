@@ -1,3 +1,15 @@
+# [1.32.0](https://github.com/Automattic/newspack-theme/compare/v1.31.0...v1.32.0) (2021-03-09)
+
+
+### Bug Fixes
+
+* add presentation role to buttons in the menu dropdowns ([#1288](https://github.com/Automattic/newspack-theme/issues/1288)) ([4dea88d](https://github.com/Automattic/newspack-theme/commit/4dea88d2b5ba93681e266d0ccb60884bbf7d84f4))
+
+
+### Features
+
+* add category class to single post body ([#1291](https://github.com/Automattic/newspack-theme/issues/1291)) ([09374d8](https://github.com/Automattic/newspack-theme/commit/09374d8395dabacb3ca5c4f42155d08101925d24))
+
 # [1.31.0](https://github.com/Automattic/newspack-theme/compare/v1.30.0...v1.31.0) (2021-03-03)
 
 
