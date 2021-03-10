@@ -220,7 +220,6 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-latest-posts li > a,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-posts time, /* legacy */
 		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-latest-posts time,
-		.block-editor-block-list__layout .wp-block-latest-posts .wp-block-latest-posts__post-author,
 
 		/* Latest Comments blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
