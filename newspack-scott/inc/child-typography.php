@@ -28,6 +28,7 @@ function newspack_scott_custom_typography_css() {
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] blockquote > .editor-rich-text p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block[data-type="core/pullquote"] .wp-block-pullquote__citation,
+			.block-editor-block-list__layout .block-editor-block-list__block.wp-block-pullquote p,
 			.block-editor-block-list__layout .block-editor-block-list__block.wp-block-pullquote blockquote p:first-of-type::before {
 				font-family: ' . wp_kses( $font_header, null ) . ';
 			}
