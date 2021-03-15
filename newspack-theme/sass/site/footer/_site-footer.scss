@@ -49,7 +49,7 @@
 	.custom-logo-link,
 	.footer-logo-link {
 		margin-bottom: $size__spacing-unit;
-		max-height: 75px;
+		max-height: 76px;
 		max-width: 200px;
 
 		img {
@@ -63,14 +63,32 @@
 		}
 		/* stylelint-enable */
 	}
-}
 
-.footer-logo-large .footer-branding {
-	@include media( tablet ) {
+	.footer-logo-xsmall & {
 		.custom-logo-link,
 		.footer-logo-link {
-			max-height: 150px;
-			max-width: 325px;
+			max-height: 48px;
+			max-width: 160px;
+		}
+	}
+
+	.footer-logo-large & {
+		@include media( tablet ) {
+			.custom-logo-link,
+			.footer-logo-link {
+				max-height: 120px;
+				max-width: 304px;
+			}
+		}
+	}
+
+	.footer-logo-xlarge & {
+		@include media( tablet ) {
+			.custom-logo-link,
+			.footer-logo-link {
+				max-height: 160px;
+				max-width: 368px;
+			}
 		}
 	}
 }
