@@ -58,7 +58,6 @@ figcaption,
 blockquote,
 cite {
 	font-family: $font__heading;
-	font-style: italic;
 	text-align: center;
 
 	em,
@@ -69,6 +68,7 @@ cite {
 
 .wp-block-pullquote {
 	border-width: 2px 0;
+	font-style: italic;
 
 	blockquote {
 		margin: #{2 * $size__spacing-unit} 0;
