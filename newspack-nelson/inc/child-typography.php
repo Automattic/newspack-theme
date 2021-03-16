@@ -24,6 +24,7 @@ function newspack_nelson_custom_typography_css() {
 
 		$editor_css_blocks .= '
 		.block-editor-block-list__layout .block-editor-block-list__block blockquote,
+		.block-editor-block-list__layout blockquote.block-editor-block-list__block,
 		.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}
