@@ -1,3 +1,12 @@
+## [1.32.1](https://github.com/Automattic/newspack-theme/compare/v1.32.0...v1.32.1) (2021-03-16)
+
+
+### Bug Fixes
+
+* correct style selectors for inline text colours ([#1299](https://github.com/Automattic/newspack-theme/issues/1299)) ([f1cc974](https://github.com/Automattic/newspack-theme/commit/f1cc974c96b3cb95928a4a1b07ed336f372b2314))
+* remove spacing from first block in campaign ([#1301](https://github.com/Automattic/newspack-theme/issues/1301)) ([ae976be](https://github.com/Automattic/newspack-theme/commit/ae976beabb0537fe3e5d7c6e3b656f5ac1d38fbf))
+* update custom font selectors in the editor styles ([#1298](https://github.com/Automattic/newspack-theme/issues/1298)) ([5197c7c](https://github.com/Automattic/newspack-theme/commit/5197c7c3faf036cd116e94b56fee91f18cdcf109))
+
 # [1.32.0](https://github.com/Automattic/newspack-theme/compare/v1.31.0...v1.32.0) (2021-03-09)
 
 
