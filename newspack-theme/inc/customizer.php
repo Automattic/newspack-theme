@@ -589,7 +589,7 @@ function newspack_customize_register( $wp_customize ) {
 				'section'     => 'title_tagline',
 				'settings'    => 'newspack_footer_logo',
 				'priority'    => 9,
-				'flex_width'  => false,
+				'flex_width'  => true,
 				'flex_height' => true,
 				'width'       => 400,
 				'height'      => 300,
