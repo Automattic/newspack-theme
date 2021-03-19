@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: One column
- * Template Post Type: post, page
+ * Template Post Type: post, page, newspack_lst_event, newspack_lst_generic, newspack_lst_mktplce, newspack_lst_place
  *
  * The template for displaying all single posts
  *
