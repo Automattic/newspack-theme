@@ -1018,3 +1018,10 @@ if ( class_exists( 'Trust_Indicators' ) ) {
 if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
 	require get_template_directory() . '/inc/newspack-sponsors.php';
 }
+
+/**
+ * Load Web Stories compatibility file.
+ */
+if ( class_exists( 'Google\Web_Stories\Customizer' ) ) {
+	require get_template_directory() . '/inc/web-stories.php';
+}
