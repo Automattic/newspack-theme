@@ -7,8 +7,6 @@
  * @package Newspack
  */
 
-use Google\Web_Stories;
-
 /**
  * Add theme support for Web Stories.
  *
