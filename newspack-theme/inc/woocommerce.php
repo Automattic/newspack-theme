@@ -70,11 +70,6 @@ function newspack_woo_payment_heading() {
 add_action( 'woocommerce_review_order_before_payment', 'newspack_woo_payment_heading' );
 
 /**
- * Disable order notes field because it's not useful for digital products.
- */
-add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
-
-/**
  * Add heading above checkout account creation form.
  */
 function newspack_woo_account_registration_heading() {
@@ -128,18 +123,6 @@ if ( ! function_exists( 'newspack_woocommerce_wrapper_after' ) ) {
 	}
 }
 add_action( 'woocommerce_after_main_content', 'newspack_woocommerce_wrapper_after' );
-
-/**
- * Replace .form-row-wide classes with classes to style fields narrower.
- */
-function newspack_checkout_fields_styling( $fields ) {
-	$fields['billing']['billing_city']['class'][0]     = 'form-row-first';
-	$fields['billing']['billing_postcode']['class'][0] = 'form-row-first';
-	$fields['billing']['billing_state']['class'][0]    = 'form-row-last';
-	$fields['billing']['billing_phone']['class'][0]    = 'form-row-last';
-	return $fields;
-}
-add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9999 );
 
 /**
  * Filters the page title for the Thank You page.
@@ -212,3 +195,66 @@ function woocommerce_before_shop_loop_wrapper_close() {
 	echo '</div><!-- .woocommerce-results-order-wrapper -->';
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_before_shop_loop_wrapper_close', 40 );
+
+/*
+ * Check if any products in the card need shipping.
+ *
+ * @return bool $needs_shipping Whether the cart requires shipping.
+ */
+function newspack_checkout_needs_shipping() {
+	// Check to see if there are only virtual items in the cart.
+	$needs_shipping = false;
+	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+		if ( $cart_item['data']->needs_shipping() ) {
+			$needs_shipping = true;
+		}
+	}
+	return $needs_shipping;
+}
+
+/**
+ * Improve appearance of WooCommerce checkout
+ *
+ * @param array $fields Array of WooCommerce billing fields.
+ */
+function newspack_checkout_fields_styling( $fields ) {
+	// Remove some unneeded fields from the checkout.
+	unset( $fields['billing']['billing_company'] );
+	unset( $fields['billing']['billing_address_2'] );
+	unset( $fields['billing']['billing_phone'] );
+	unset( $fields['shipping']['shipping_company'] );
+	unset( $fields['shipping']['shipping_address_2'] );
+	unset( $fields['shipping']['shipping_phone'] );
+
+	// If the cart only has virtual products, simplify checkout further.
+	if ( ! newspack_checkout_needs_shipping() ) {
+		unset( $fields['billing']['billing_address_1'] );
+		unset( $fields['billing']['billing_city'] );
+		unset( $fields['billing']['billing_postcode'] );
+		unset( $fields['billing']['billing_country'] );
+		unset( $fields['billing']['billing_state'] );
+		add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+	}
+
+	// If the cart has physical items, replace .form-row-wide classes with classes to style fields narrower.
+	if ( newspack_checkout_needs_shipping() ) {
+		$fields['billing']['billing_email']['class'] = array( 'form-row-last' );
+	}
+	return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'newspack_checkout_fields_styling', 9999 );
+
+
+/**
+ * Improve appearance of WooCommerce checkout.
+ *
+ * @param array $fields Array of WooCommerce address fields.
+ */
+function newspack_address_fields_styling( $fields ) {
+	$fields['city']['class']     = array( 'form-row-first' );
+	$fields['state']['class']    = array( 'form-row-last' );
+	$fields['postcode']['class'] = array( 'form-row-first' );
+
+	return $fields;
+}
+add_filter( 'woocommerce_default_address_fields', 'newspack_address_fields_styling', 9999 );
