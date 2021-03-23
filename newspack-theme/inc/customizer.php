@@ -584,16 +584,41 @@ function newspack_customize_register( $wp_customize ) {
 			$wp_customize,
 			'newspack_footer_logo',
 			array(
-				'label'       => esc_html__( 'Footer logo', 'newspack' ),
+				'label'       => esc_html__( 'Footer Logo', 'newspack' ),
 				'description' => esc_html__( 'Optional alternative logo to be displayed in the footer.', 'newspack' ),
 				'section'     => 'title_tagline',
 				'settings'    => 'newspack_footer_logo',
 				'priority'    => 9,
-				'flex_width'  => false,
+				'flex_width'  => true,
 				'flex_height' => true,
 				'width'       => 400,
 				'height'      => 300,
 			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'footer_logo_size',
+		array(
+			'default'           => 'small',
+			'sanitize_callback' => 'newspack_sanitize_footer_logo_size',
+		)
+	);
+
+	$wp_customize->add_control(
+		'footer_logo_size',
+		array(
+			'label'    => esc_html__( 'Footer Logo Size', 'newspack' ),
+			'section'  => 'title_tagline',
+			'priority' => 9,
+			'type'     => 'select',
+			'settings' => 'footer_logo_size',
+			'choices'  => array(
+				'xsmall' => esc_html__( 'Extra Small', 'newspack' ),
+				'small'  => esc_html__( 'Small', 'newspack' ),
+				'large'  => esc_html__( 'Large', 'newspack' ),
+				'xlarge' => esc_html__( 'Extra Large', 'newspack' ),
+			),
 		)
 	);
 
@@ -1331,6 +1356,28 @@ function newspack_panels_js() {
 add_action( 'customize_controls_enqueue_scripts', 'newspack_panels_js' );
 
 /**
+ * Sanitize footer logo size.
+ *
+ * @param string $choice Whether the footer logo is small or large.
+ *
+ * @return string
+ */
+function newspack_sanitize_footer_logo_size( $choice ) {
+	$valid = array(
+		'xsmall',
+		'small',
+		'large',
+		'xlarge',
+	);
+
+	if ( in_array( $choice, $valid, true ) ) {
+		return $choice;
+	}
+
+	return 'small';
+}
+
+/**
  * Sanitize custom color choice.
  *
  * @param string $choice Whether image filter is active.
@@ -1393,6 +1440,7 @@ function newspack_sanitize_post_template( $choice ) {
 
 	return 'default';
 }
+
 
 /**
  * Sanitize slide-out sidebar side

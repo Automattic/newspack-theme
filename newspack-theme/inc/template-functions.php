@@ -194,6 +194,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'feature-latest';
 	}
 
+	// Add a class for the footer logo size.
+	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'small' );
+	if ( 'small' !== $footer_logo_size ) {
+		$classes[] = 'footer-logo-' . esc_attr( $footer_logo_size );
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );

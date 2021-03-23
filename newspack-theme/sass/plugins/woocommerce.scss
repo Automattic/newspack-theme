@@ -76,6 +76,10 @@ a.button {
 
 		&.form-row-first {
 			clear: left;
+
+			&:last-child {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -1184,10 +1188,10 @@ table.variations {
 		cursor: pointer;
 
 		span {
-			position: relative;
-			display: block;
-			text-align: right;
+			font-weight: bold;
+			display: inline-block;
 			padding-right: 45px;
+			position: relative;
 
 			&::before {
 				content: '';
@@ -1200,7 +1204,7 @@ table.variations {
 				box-sizing: content-box;
 				transition: all ease-in-out 0.3s;
 				position: absolute;
-				top: 4px;
+				top: 2px;
 				right: 0;
 			}
 
@@ -1211,7 +1215,7 @@ table.variations {
 				height: 14px;
 				background: white;
 				position: absolute;
-				top: 7px;
+				top: 5px;
 				right: 17px;
 				border-radius: 13rem;
 				transition: all ease-in-out 0.3s;
@@ -1227,8 +1231,8 @@ table.variations {
 		}
 
 		input[type='checkbox']:checked + span::before {
-			border-color: #000;
-			background: #000;
+			border-color: $color__secondary-variation;
+			background: $color__secondary-variation;
 		}
 	}
 }
@@ -1306,7 +1310,8 @@ table.variations {
 
 	.woocommerce-billing-fields,
 	.woocommerce-account-fields,
-	.woocommerce-shipping-fields {
+	.woocommerce-shipping-fields,
+	.woocommerce-additional-fields {
 		label {
 			font-size: $font__size-sm;
 		}
