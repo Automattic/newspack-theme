@@ -1,3 +1,16 @@
+# [1.33.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.32.1...v1.33.0-alpha.1) (2021-03-23)
+
+
+### Bug Fixes
+
+* simplify checkout when only digital items ([#1275](https://github.com/Automattic/newspack-theme/issues/1275)) ([4ab4ef6](https://github.com/Automattic/newspack-theme/commit/4ab4ef68ba2b379af71398905d5c5812ff69de28))
+
+
+### Features
+
+* add option to set footer logo size ([#1302](https://github.com/Automattic/newspack-theme/issues/1302)) ([43ed875](https://github.com/Automattic/newspack-theme/commit/43ed8754aebf9e47da3f80f5ef1a6dd34ea34d7b))
+* add web stories embed integration ([#1307](https://github.com/Automattic/newspack-theme/issues/1307)) ([a77eb1e](https://github.com/Automattic/newspack-theme/commit/a77eb1eee2964a24b3c07a209a9bfb57be895e54))
+
 ## [1.32.1](https://github.com/Automattic/newspack-theme/compare/v1.32.0...v1.32.1) (2021-03-16)
 
 
