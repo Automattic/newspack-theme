@@ -1,3 +1,10 @@
+## [1.33.1](https://github.com/Automattic/newspack-theme/compare/v1.33.0...v1.33.1) (2021-03-24)
+
+
+### Bug Fixes
+
+* remove filtering of WC checkout fields ([#1314](https://github.com/Automattic/newspack-theme/issues/1314)) ([5fa724d](https://github.com/Automattic/newspack-theme/commit/5fa724dddf7cd0e3b3ace5ee52b509bfa3199945))
+
 # [1.33.0](https://github.com/Automattic/newspack-theme/compare/v1.32.1...v1.33.0) (2021-03-23)
 
 
