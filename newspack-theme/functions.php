@@ -67,6 +67,11 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_image_size( 'newspack-archive-image-large', 1200, 900, true );
 		add_image_size( 'newspack-footer-logo', 400, 9999 );
 
+		/**
+		 * Enable feature support for specific post types.
+		 */
+		add_post_type_support( 'page', 'excerpt' ); // Custom excerpts for pages, normally restricted to posts.
+
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
