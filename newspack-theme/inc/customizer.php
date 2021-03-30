@@ -600,7 +600,7 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'footer_logo_size',
 		array(
-			'default'           => 'small',
+			'default'           => 'medium',
 			'sanitize_callback' => 'newspack_sanitize_footer_logo_size',
 		)
 	);
@@ -614,8 +614,8 @@ function newspack_customize_register( $wp_customize ) {
 			'type'     => 'select',
 			'settings' => 'footer_logo_size',
 			'choices'  => array(
-				'xsmall' => esc_html__( 'Extra Small', 'newspack' ),
 				'small'  => esc_html__( 'Small', 'newspack' ),
+				'medium' => esc_html__( 'Medium', 'newspack' ),
 				'large'  => esc_html__( 'Large', 'newspack' ),
 				'xlarge' => esc_html__( 'Extra Large', 'newspack' ),
 			),
@@ -1364,8 +1364,8 @@ add_action( 'customize_controls_enqueue_scripts', 'newspack_panels_js' );
  */
 function newspack_sanitize_footer_logo_size( $choice ) {
 	$valid = array(
-		'xsmall',
 		'small',
+		'medium',
 		'large',
 		'xlarge',
 	);
@@ -1374,7 +1374,7 @@ function newspack_sanitize_footer_logo_size( $choice ) {
 		return $choice;
 	}
 
-	return 'small';
+	return 'medium';
 }
 
 /**
