@@ -6,8 +6,8 @@
  */
 
 
-// Check if the author bio is turned on
-if ( false === get_theme_mod( 'show_author_bio', true ) ) {
+// Check if the author bio is turned on, or if the post is set to hide the author.
+if ( false === get_theme_mod( 'show_author_bio', true ) || true === apply_filters( 'newspack_listings_hide_author', false ) ) {
 	return;
 }
 
