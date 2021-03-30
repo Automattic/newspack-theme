@@ -1,3 +1,11 @@
+# [1.34.0](https://github.com/Automattic/newspack-theme/compare/v1.33.1...v1.34.0) (2021-03-30)
+
+
+### Features
+
+* add post template support for Newspack Listings post types ([#1308](https://github.com/Automattic/newspack-theme/issues/1308)) ([340958d](https://github.com/Automattic/newspack-theme/commit/340958dd9527f229dd28442fd43f2921c31c4741))
+* add support for custom excerpts on pages ([#1313](https://github.com/Automattic/newspack-theme/issues/1313)) ([82f3b90](https://github.com/Automattic/newspack-theme/commit/82f3b907149e099bf662a1238112e8d1b55afbf0))
+
 ## [1.33.1](https://github.com/Automattic/newspack-theme/compare/v1.33.0...v1.33.1) (2021-03-24)
 
 
