@@ -621,7 +621,11 @@ function newspack_math_to_time_ago( $post_time, $format, $post, $updated ) {
  * Apply time ago format to publish dates if enabled.
  */
 function newspack_convert_to_time_ago( $post_time, $format, $post ) {
-	return newspack_math_to_time_ago( $post_time, $format, $post, false );
+	// Don't override specifically requested formats.
+	if ( empty( $format ) ) {
+		$post_time = newspack_math_to_time_ago( $post_time, $format, $post, false );
+	}
+	return $post_time;
 }
 add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
 
