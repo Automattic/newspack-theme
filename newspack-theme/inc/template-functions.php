@@ -195,8 +195,8 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Add a class for the footer logo size.
-	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'small' );
-	if ( 'small' !== $footer_logo_size ) {
+	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'medium' );
+	if ( 'medium' !== $footer_logo_size ) {
 		$classes[] = 'footer-logo-' . esc_attr( $footer_logo_size );
 	}
 
