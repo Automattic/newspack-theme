@@ -418,6 +418,32 @@ function newspack_custom_colors_css() {
 		';
 	}
 
+	// Set ads background color
+	if ( 'default' !== get_theme_mod( 'ads_color', 'default' ) ) {
+		$theme_css .= '
+			.newspack_global_ad,
+			.newspack_global_ad.global_above_header,
+			.widget_newspack-ads-widget,
+			div[class*="newspack-ads-blocks-ad-unit"] {
+				background-color: ' . esc_html( get_theme_mod( 'ads_color_hex', '' ) ) . ';
+			}
+			.single-featured-image-behind .newspack_global_ad.global_below_header,
+			.newspack_global_ad.global_above_footer {
+				margin-bottom: -2rem;
+			}
+			.newspack_global_ad.global_above_footer {
+				margin-top: 2rem;
+			}
+			.newspack_global_ad > * {
+				margin-bottom: 8px;
+				margin-top: 8px;
+			}
+			.widget_newspack-ads-widget .textwidget,
+			div[class*="newspack-ads-blocks-ad-unit"] {
+				padding: 8px;
+			}
+		';
+	}
 
 	$editor_css = '
 		/*
