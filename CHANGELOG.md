@@ -1,3 +1,10 @@
+# [1.35.0](https://github.com/Automattic/newspack-theme/compare/v1.34.0...v1.35.0) (2021-04-06)
+
+
+### Features
+
+* update footer logo sizes and rename choices ([#1320](https://github.com/Automattic/newspack-theme/issues/1320)) ([05b303a](https://github.com/Automattic/newspack-theme/commit/05b303a14e3042670b2b90bf899d1270126cd5f4))
+
 # [1.34.0](https://github.com/Automattic/newspack-theme/compare/v1.33.1...v1.34.0) (2021-03-30)
 
 
