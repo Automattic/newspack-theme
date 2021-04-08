@@ -395,5 +395,10 @@
 				}
 			} );
 		} );
+
+		// Update the default color palettes
+		$( '.wp-color-picker' ).iris( {
+			palettes: [ '#f6f7f7', '#c3c4c7', '#646970', '#3c434a', '#d63638', '#008a20', '#0675c4' ],
+		} );
 	} );
 } )( jQuery );
