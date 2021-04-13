@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/Automattic/newspack-theme/compare/v1.35.0...v1.35.1) (2021-04-13)
+
+
+### Bug Fixes
+
+* don't override specifically requested date/time formats ([d5ef2ee](https://github.com/Automattic/newspack-theme/commit/d5ef2ee0f61a6a438c18a7374b19e188747b4f74))
+
 # [1.35.0](https://github.com/Automattic/newspack-theme/compare/v1.34.0...v1.35.0) (2021-04-06)
 
 
