@@ -966,25 +966,35 @@ hr {
 
 	.newspack-pattern.subscribe__style-5 &,
 	.newspack-pattern.subscribe__style-6 & {
-		form {
-			align-items: center;
-			display: flex;
-			flex-wrap: wrap;
+		.wp-block-button__link {
+			width: 100%;
 
-			> * {
-				flex: 0 0 100%;
+			@include media( mobile ) {
+				width: auto;
 			}
+		}
 
-			> p:first-child {
-				flex: 1 1 auto;
-				margin-bottom: $size__spacing-unit / 2;
-				margin-right: $size__spacing-unit / 2;
-			}
+		@include media( tablet ) {
+			form {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
 
-			> .wp-block-jetpack-button.wp-block-button {
-				flex: 0 0 auto;
-				margin-left: auto;
-				margin-top: 0;
+				> * {
+					flex: 0 0 100%;
+				}
+
+				> p:first-child {
+					flex: 1 1 auto;
+					margin-bottom: $size__spacing-unit / 2;
+					margin-right: $size__spacing-unit / 2;
+				}
+
+				> .wp-block-jetpack-button.wp-block-button {
+					flex: 0 0 auto;
+					margin-left: auto;
+					margin-top: 0;
+				}
 			}
 		}
 	}
@@ -997,7 +1007,8 @@ hr {
 				max-width: 65%;
 			}
 
-			p {
+			p,
+			.wp-block-jetpack-button {
 				text-align: center;
 			}
 		}

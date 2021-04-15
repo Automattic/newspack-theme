@@ -862,6 +862,47 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Subscribe Patterns === */
+.wp-block-group.newspack-pattern {
+	&.subscribe__style-5,
+	&.subscribe__style-6 {
+		.wp-block-jetpack-mailchimp {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+
+			.wp-block-jetpack-mailchimp_text-input {
+				flex: 1 1 auto;
+
+				.components-base-control__field {
+					margin-bottom: 0;
+				}
+			}
+
+			.block-editor-inner-blocks {
+				flex: 1 1 100%;
+
+				@include media( mobile ) {
+					flex: 0 0 auto;
+					margin-left: $size__spacing-unit / 2;
+				}
+
+				.wp-block-button__link {
+					width: 100%;
+
+					@include media( mobile ) {
+						width: auto;
+					}
+				}
+			}
+
+			.block-editor-rich-text__editable {
+				flex: 0 0 100%;
+			}
+		}
+	}
+}
+
 /** === Donate Block === */
 .wpbnbd .freq-label,
 .wpbnbd .tier-label,
