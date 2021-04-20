@@ -1,3 +1,10 @@
+# [1.36.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.35.1...v1.36.0-alpha.1) (2021-04-20)
+
+
+### Features
+
+* add custom style to subscribe block and patterns ([#1323](https://github.com/Automattic/newspack-theme/issues/1323)) ([270a5fe](https://github.com/Automattic/newspack-theme/commit/270a5fe8767fc7a66d3f6732574d1ad9634df9af))
+
 ## [1.35.1](https://github.com/Automattic/newspack-theme/compare/v1.35.0...v1.35.1) (2021-04-13)
 
 
