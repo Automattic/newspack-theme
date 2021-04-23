@@ -210,25 +210,28 @@
 	const stickyAdClose = document.querySelector( '.newspack_sticky_ad__close' );
 	const stickyAd = document.querySelector( '.newspack_global_ad.sticky' );
 
-	if ( stickyAdClose && stickyAd && window.googletag ) {
-		const initialBodyPadding = body.style.paddingBottom;
+	if ( stickyAdClose && stickyAd ) {
+		window.googletag = window.googletag || { cmd: [] };
+		window.googletag.cmd.push( function() {
+			const initialBodyPadding = body.style.paddingBottom;
 
-		// Add padding to body to accommodate the sticky ad.
-		window.googletag.pubads().addEventListener( 'slotRenderEnded', event => {
-			const renderedSlotId = event.slot.getSlotElementId();
-			const stickyAdSlot = stickyAd.querySelector( '#' + renderedSlotId );
+			// Add padding to body to accommodate the sticky ad.
+			window.googletag.pubads().addEventListener( 'slotRenderEnded', event => {
+				const renderedSlotId = event.slot.getSlotElementId();
+				const stickyAdSlot = stickyAd.querySelector( '#' + renderedSlotId );
 
-			if ( stickyAdSlot ) {
-				stickyAd.classList.add( 'active' );
-				body.style.paddingBottom = stickyAd.clientHeight + 'px';
-			}
-		} );
+				if ( stickyAdSlot ) {
+					stickyAd.classList.add( 'active' );
+					body.style.paddingBottom = stickyAd.clientHeight + 'px';
+				}
+			} );
 
-		stickyAdClose.addEventListener( 'click', () => {
-			stickyAd.parentElement.removeChild( stickyAd );
+			stickyAdClose.addEventListener( 'click', () => {
+				stickyAd.parentElement.removeChild( stickyAd );
 
-			// Reset body padding.
-			body.style.paddingBottom = initialBodyPadding;
+				// Reset body padding.
+				body.style.paddingBottom = initialBodyPadding;
+			} );
 		} );
 	}
 } )();
