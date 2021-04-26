@@ -25,7 +25,9 @@
 		z-index: 1;
 
 		&.active {
-			display: flex;
+			@include media( mobileonly ) {
+				display: flex;
+			}
 		}
 
 		button {
