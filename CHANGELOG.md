@@ -1,3 +1,11 @@
+## [1.36.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.36.0...v1.36.1-alpha.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* do not show sticky ads at larger viewports in non-amp ([#1270](https://github.com/Automattic/newspack-theme/issues/1270)) ([b66af3b](https://github.com/Automattic/newspack-theme/commit/b66af3b2554876bdcac22ca83d294b4e9c307289))
+* sticky ad initialisation on non-amp pages ([04990b7](https://github.com/Automattic/newspack-theme/commit/04990b7cea77199c6922c59d9c41883a1f157089)), closes [#1304](https://github.com/Automattic/newspack-theme/issues/1304)
+
 # [1.36.0](https://github.com/Automattic/newspack-theme/compare/v1.35.1...v1.36.0) (2021-04-20)
 
 
