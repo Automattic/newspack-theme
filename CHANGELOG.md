@@ -1,3 +1,10 @@
+## [1.36.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.36.1...v1.36.2-alpha.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* sticky ad layer ([899d0a5](https://github.com/Automattic/newspack-theme/commit/899d0a5839d781a70ca88c634e233dc3686ee7c5))
+
 ## [1.36.1](https://github.com/Automattic/newspack-theme/compare/v1.36.0...v1.36.1) (2021-04-28)
 
 
