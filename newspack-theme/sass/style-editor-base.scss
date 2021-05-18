@@ -946,6 +946,11 @@ ul.wp-block-archives,
 
 #newspack-post-subtitle-element {
 	font-style: italic;
+
+	em,
+	i {
+		font-style: normal;
+	}
 }
 
 /** === Custom Colors === */
