@@ -51,6 +51,11 @@
 	@include media( mobile ) {
 		margin-bottom: 2.3em;
 	}
+
+	em,
+	i {
+		font-style: normal;
+	}
 }
 
 body.page {

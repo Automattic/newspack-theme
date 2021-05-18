@@ -25,7 +25,7 @@ export const appendSubtitleToTitleDOMElement = ( subtitle, isInCodeEditor ) => {
 			}
 			titleEl.appendChild( subtitleEl );
 		}
-		subtitleEl.innerText = subtitle;
+		subtitleEl.innerHTML = subtitle;
 	}
 };
 

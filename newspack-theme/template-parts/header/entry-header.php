@@ -38,7 +38,22 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 	<?php endif; ?>
 	<?php if ( $subtitle ) : ?>
 		<div class="newspack-post-subtitle">
-			<?php echo esc_html( $subtitle ); ?>
+			<?php
+			echo wp_kses(
+				$subtitle,
+				[
+					'b'      => true,
+					'strong' => true,
+					'i'      => true,
+					'em'     => true,
+					'mark'   => true,
+					'u'      => true,
+					'small'  => true,
+					'sub'    => true,
+					'sup'    => true,
+				]
+			);
+			?>
 		</div>
 	<?php endif; ?>
 <?php else : ?>
