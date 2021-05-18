@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/Automattic/newspack-theme/compare/v1.36.2...v1.37.0) (2021-05-18)
+
+
+### Features
+
+* allow limited text-formatting html elements in subtitles ([#1355](https://github.com/Automattic/newspack-theme/issues/1355)) ([c869bf4](https://github.com/Automattic/newspack-theme/commit/c869bf41643467062f46e645508b74f0ebb4195a))
+
 ## [1.36.2](https://github.com/Automattic/newspack-theme/compare/v1.36.1...v1.36.2) (2021-05-04)
 
 
