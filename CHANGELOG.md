@@ -1,3 +1,10 @@
+# [1.38.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.37.0...v1.38.0-alpha.1) (2021-05-25)
+
+
+### Features
+
+* add ads background color theme option ([#1326](https://github.com/Automattic/newspack-theme/issues/1326)) ([13071d5](https://github.com/Automattic/newspack-theme/commit/13071d5c8a42c22eddc253ad3f7fc1c47e21073c))
+
 # [1.37.0](https://github.com/Automattic/newspack-theme/compare/v1.36.2...v1.37.0) (2021-05-18)
 
 
