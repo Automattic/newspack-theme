@@ -529,6 +529,50 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Ads background_color
+	 */
+	$wp_customize->add_setting(
+		'ads_color',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_color_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'ads_color',
+		array(
+			'type'    => 'radio',
+			'label'   => __( 'Ads Background Color', 'newspack' ),
+			'choices'   => array(
+				'default' => _x( 'Default', 'primary color', 'newspack' ),
+				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
+			),
+			'section' => 'colors',
+		)
+	);
+
+	// Add ads color hexidecimal setting and control.
+	$wp_customize->add_setting(
+		'ads_color_hex',
+		array(
+			'default'           => '#ffffff',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'ads_color_hex',
+			array(
+				'description' => __( 'Apply a background color to the ads.', 'newspack' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
 	// Header - add option to hide tagline.
 	$wp_customize->add_setting(
 		'header_display_tagline',
