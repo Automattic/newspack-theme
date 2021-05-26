@@ -910,6 +910,15 @@ ul.wp-block-archives,
 	font-family: $font__heading;
 }
 
+/** === Ad Unit Block === */
+.wp-block-newspack-ads-blocks-ad-unit {
+	> div {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+}
+
 /** === Classic Editor === */
 
 /* Properly center-align captions in the classic-editor block */

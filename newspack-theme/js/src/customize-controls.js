@@ -243,6 +243,23 @@
 			} );
 		} );
 
+		// Controls to show/hide when the Ads Backround is toggled.
+		wp.customize( 'ads_color', function( setting ) {
+			wp.customize.control( 'ads_color_hex', function( control ) {
+				const visibility = function() {
+					if ( 'custom' === setting.get() ) {
+						if ( 'custom' === wp.customize.value( 'ads_color' )() ) {
+							control.container.slideDown( 180 );
+						}
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
 		// Only show the rest of the author controls when the bio is visible.
 		wp.customize( 'show_author_bio', function( setting ) {
 			wp.customize.control( 'show_author_email', function( control ) {
@@ -377,6 +394,11 @@
 					wp.customize[ type ].instance( id ).focus();
 				}
 			} );
+		} );
+
+		// Update the default color palettes
+		$( '.wp-color-picker' ).iris( {
+			palettes: [ '#f6f7f7', '#c3c4c7', '#646970', '#3c434a', '#d63638', '#008a20', '#0675c4' ],
 		} );
 	} );
 } )( jQuery );

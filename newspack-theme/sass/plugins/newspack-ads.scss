@@ -7,8 +7,8 @@
 	align-items: center;
 
 	> * {
-		margin-top: $size__spacing-unit;
-		margin-bottom: $size__spacing-unit;
+		margin-top: $size__vertical-rhythm * 2;
+		margin-bottom: $size__vertical-rhythm * 2;
 	}
 
 	&.global_above_header {
@@ -56,6 +56,11 @@
 			max-height: 100px;
 		}
 	}
+
+	/* stylelint-disable selector-type-no-unknown  */
+	amp-ad {
+		vertical-align: bottom;
+	}
 }
 
 .newspack_amp_sticky_ad {
@@ -93,6 +98,13 @@
 			background-color: inherit;
 		}
 	}
+}
+
+.widget_newspack-ads-widget .textwidget,
+div[class*='newspack-ads-blocks-ad-unit'] {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 body {
