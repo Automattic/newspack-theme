@@ -10,6 +10,10 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function newspack_posted_on() {
+		if ( true === apply_filters( 'newspack_listings_hide_publish_date', false ) ) {
+			return;
+		}
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>%3$s<time class="updated" datetime="%4$s">%5$s</time>';
