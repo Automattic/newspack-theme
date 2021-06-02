@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/Automattic/newspack-theme/compare/v1.38.0...v1.39.0) (2021-06-02)
+
+
+### Features
+
+* support Newspack Listings hide publish date option ([#1359](https://github.com/Automattic/newspack-theme/issues/1359)) ([a555a7f](https://github.com/Automattic/newspack-theme/commit/a555a7f0893ab14d5c6f0ca9bc4cdb80f2c8837f))
+
 # [1.38.0](https://github.com/Automattic/newspack-theme/compare/v1.37.0...v1.38.0) (2021-05-26)
 
 
