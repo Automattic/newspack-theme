@@ -969,7 +969,7 @@ msgstr "Archivos:"
 #: inc/template-functions.php:598
 #, php-format
 msgid "%s ago"
-msgstr ""
+msgstr "%s antes"
 
 #: inc/template-tags.php:25
 msgid "Updated"
