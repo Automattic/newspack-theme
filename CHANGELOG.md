@@ -1,3 +1,12 @@
+## [1.39.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.39.0...v1.39.1-alpha.1) (2021-06-22)
+
+
+### Bug Fixes
+
+* es_ES translation for "time ago" string ([#1367](https://github.com/Automattic/newspack-theme/issues/1367)) ([00eadb1](https://github.com/Automattic/newspack-theme/commit/00eadb121f255c5a3151f8be99de5618693dd7a1))
+* remove class_exists check as it is only available after init hook ([#1358](https://github.com/Automattic/newspack-theme/issues/1358)) ([fef8714](https://github.com/Automattic/newspack-theme/commit/fef871438d9f5b83c37cdfcb6fd49616fd985b3f))
+* style of sponsor logo in footer blurb if no link ([#1366](https://github.com/Automattic/newspack-theme/issues/1366)) ([46522de](https://github.com/Automattic/newspack-theme/commit/46522de050f121a9a10277cb0bfc9f5ed5e4243b))
+
 # [1.39.0](https://github.com/Automattic/newspack-theme/compare/v1.38.0...v1.39.0) (2021-06-02)
 
 
