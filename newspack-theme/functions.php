@@ -1027,6 +1027,4 @@ if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
 /**
  * Load Web Stories compatibility file.
  */
-if ( class_exists( 'Google\Web_Stories\Customizer' ) ) {
-	require get_template_directory() . '/inc/web-stories.php';
-}
+require get_template_directory() . '/inc/web-stories.php';
