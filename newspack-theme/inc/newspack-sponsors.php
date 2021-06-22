@@ -270,13 +270,15 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 
 					<?php
 					if ( ! empty( $sponsor['sponsor_logo'] ) ) {
+						echo '<figure class="avatar">';
 						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" class="avatar" target="_blank">';
+							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 						}
 						echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '">';
 						if ( '' !== $sponsor['sponsor_url'] ) {
 							echo '</a>';
 						}
+						echo '</figure>';
 					}
 					?>
 
