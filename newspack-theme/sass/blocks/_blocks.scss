@@ -769,14 +769,6 @@ p.has-background {
 	}
 
 	@include media( mobileonly ) {
-		.alignleft,
-		.aligncenter,
-		.alignright {
-			figcaption {
-				display: block;
-			}
-		}
-
 		.aligncenter {
 			display: block;
 			img {
