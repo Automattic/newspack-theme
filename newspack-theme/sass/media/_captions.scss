@@ -24,6 +24,10 @@ figcaption,
 	line-height: $font__line-height-pre;
 }
 
+.wp-block-image [class^='align'] > figcaption {
+	display: block;
+}
+
 .entry-content {
 	.wp-caption-text,
 	figcaption {
