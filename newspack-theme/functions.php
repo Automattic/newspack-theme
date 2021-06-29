@@ -456,6 +456,7 @@ function newspack_enqueue_scripts() {
 		wp_set_script_translations( 'newspack-post-subtitle', 'newspack', $languages_path );
 	}
 
+	// Post meta options.
 	wp_register_script(
 		'newspack-post-meta-toggles',
 		get_theme_file_uri( '/js/dist/post-meta-toggles.js' ),
