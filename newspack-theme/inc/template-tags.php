@@ -478,7 +478,9 @@ endif;
  * Check if any header menus are applied; used to show menu toggle on smaller screens.
  */
 function newspack_has_menus() {
-	if ( has_nav_menu( 'primary-menu' ) || has_nav_menu( 'secondary-menu' ) || has_nav_menu( 'tertiary-menu' ) ) {
+	// check if primary, secondary or tertiary menus are populated, or if slideout sidebar widget is populated & should show on mobile.
+	if ( ( has_nav_menu( 'primary-menu' ) || has_nav_menu( 'secondary-menu' ) || has_nav_menu( 'tertiary-menu' ) ) ||
+		( true === get_theme_mod( 'header_show_slideout', false ) && true === get_theme_mod( 'slideout_widget_mobile', false ) && is_active_sidebar( 'header-1' ) ) ) {
 		return true;
 	} else {
 		return false;
