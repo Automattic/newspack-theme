@@ -1,3 +1,12 @@
+## [1.39.2](https://github.com/Automattic/newspack-theme/compare/v1.39.1...v1.39.2) (2021-06-29)
+
+
+### Bug Fixes
+
+* correct alignment for sponsor bio in Newspack Sacha ([2ae591d](https://github.com/Automattic/newspack-theme/commit/2ae591d1a0b991d11d96e8373b6dc1d3eced0043))
+* make accent header styles more specific in Newspack Sacha ([046375c](https://github.com/Automattic/newspack-theme/commit/046375cc79d1c609710a0eb30cfa7961cd60dd36))
+* make sure mobile menu displays with only widgets assigned ([#1378](https://github.com/Automattic/newspack-theme/issues/1378)) ([9e08728](https://github.com/Automattic/newspack-theme/commit/9e087289426541ccb4f536d10cec91b327a2202d))
+
 ## [1.39.1](https://github.com/Automattic/newspack-theme/compare/v1.39.0...v1.39.1) (2021-06-22)
 
 
