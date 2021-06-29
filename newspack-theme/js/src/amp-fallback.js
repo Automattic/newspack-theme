@@ -42,12 +42,8 @@
 	const mobileToggle = document.getElementsByClassName( 'mobile-menu-toggle' ),
 		body = document.getElementsByTagName( 'body' )[ 0 ],
 		mobileSidebar = document.getElementById( 'mobile-sidebar-fallback' ),
-		mobileOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
-		mobileCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
 		desktopToggle = document.getElementsByClassName( 'desktop-menu-toggle' ),
 		desktopSidebar = document.getElementById( 'desktop-sidebar-fallback' ),
-		desktopOpenButton = headerContain.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
-		desktopCloseButton = desktopSidebar.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
 		subpageToggle = document.getElementsByClassName( 'subpage-toggle' );
 
 	/**
@@ -96,6 +92,9 @@
 
 	// Mobile menu fallback.
 	for ( let i = 0; i < mobileToggle.length; i++ ) {
+		const mobileOpenButton = headerContain.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ],
+			mobileCloseButton = mobileSidebar.getElementsByClassName( 'mobile-menu-toggle' )[ 0 ];
+
 		mobileToggle[ i ].addEventListener(
 			'click',
 			function() {
@@ -111,6 +110,9 @@
 
 	// Desktop menu (AKA slide-out sidebar) fallback.
 	for ( let i = 0; i < desktopToggle.length; i++ ) {
+		const desktopOpenButton = headerContain.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ],
+			desktopCloseButton = desktopSidebar.getElementsByClassName( 'desktop-menu-toggle' )[ 0 ];
+
 		desktopToggle[ i ].addEventListener(
 			'click',
 			function() {
