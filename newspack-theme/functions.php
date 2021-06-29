@@ -427,6 +427,7 @@ function newspack_enqueue_scripts() {
 	$languages_path = get_parent_theme_file_path( '/languages' );
 	$theme_version  = wp_get_theme()->get( 'Version' );
 	$post_type      = get_post_type();
+	$current_screen = get_current_screen();
 
 	// Featured Image options.
 	wp_register_script(
@@ -449,21 +450,24 @@ function newspack_enqueue_scripts() {
 		wp_set_script_translations( 'newspack-post-subtitle', 'newspack', $languages_path );
 	}
 
-	// Post meta options.
-	wp_register_script(
-		'newspack-post-meta-toggles',
-		get_theme_file_uri( '/js/dist/post-meta-toggles.js' ),
-		array(),
-		$theme_version,
-		true
-	);
-	wp_set_script_translations( 'newspack-post-meta-toggles', 'newspack', $languages_path );
-	wp_localize_script(
-		'newspack-post-meta-toggles',
-		'newspack_post_meta_post_types',
-		newspack_get_post_toggle_post_types()
-	);
-	wp_enqueue_script( 'newspack-post-meta-toggles' );
+	// Add check to see if currently on the widgets screen; this file should not be loaded there, but is as of WordPress 5.8.
+	// See: https://github.com/WordPress/gutenberg/issues/28538.
+	if ( 'widgets' !== $current_screen->id ) {
+		wp_register_script(
+			'newspack-post-meta-toggles',
+			get_theme_file_uri( '/js/dist/post-meta-toggles.js' ),
+			array(),
+			$theme_version,
+			true
+		);
+		wp_set_script_translations( 'newspack-post-meta-toggles', 'newspack', $languages_path );
+		wp_localize_script(
+			'newspack-post-meta-toggles',
+			'newspack_post_meta_post_types',
+			newspack_get_post_toggle_post_types()
+		);
+		wp_enqueue_script( 'newspack-post-meta-toggles' );
+	}
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
 
