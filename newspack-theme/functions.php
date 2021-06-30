@@ -427,6 +427,13 @@ function newspack_enqueue_scripts() {
 	$languages_path = get_parent_theme_file_path( '/languages' );
 	$theme_version  = wp_get_theme()->get( 'Version' );
 	$post_type      = get_post_type();
+	$current_screen = get_current_screen();
+
+	// Add check to see if currently on the widgets screen; none of these files are needed there, but are loaded as of WP 5.8.
+	// See: https://github.com/WordPress/gutenberg/issues/28538.
+	if ( 'widgets' === $current_screen->id ) {
+		return;
+	}
 
 	// Featured Image options.
 	wp_register_script(
