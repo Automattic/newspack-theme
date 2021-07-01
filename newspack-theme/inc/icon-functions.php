@@ -23,7 +23,9 @@ function newspack_get_social_icon_svg( $icon, $size = 24, $title = '' ) {
  * Detects the social network from a URL and returns the SVG code for its icon.
  */
 function newspack_get_social_link_svg( $uri, $size = 24, $title = '' ) {
-	return Newspack_SVG_Icons::get_social_link_svg( $uri, $size, $title );
+	$svg = Newspack_SVG_Icons::get_social_link_svg( $uri, $uri, $title );
+
+	return apply_filters('newspack_get_social_link_svg', $svg, $uri, $size, $title );
 }
 
 /**
