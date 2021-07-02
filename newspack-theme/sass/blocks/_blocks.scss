@@ -232,6 +232,21 @@ p.has-background {
 	}
 }
 
+//! Newspack Donate Block
+#secondary .wpbnbd,
+.desktop-sidebar .wpbnbd,
+.mobile-sidebar .wpbnbd {
+	&.tiered .tiers {
+		margin-left: #{0.5 * $size__spacing-unit};
+		margin-right: #{0.5 * $size__spacing-unit};
+	}
+	.thanks,
+	button {
+		margin-left: $size__spacing-unit;
+		margin-right: $size__spacing-unit;
+	}
+}
+
 //! Columns
 .wp-block-columns {
 	.wp-block-cover,
