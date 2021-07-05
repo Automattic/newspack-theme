@@ -160,14 +160,17 @@
 		padding: 0;
 	}
 
-	ul,
-	li {
+	nav ul,
+	nav li,
+	.widget_nav_menu ul,
+	.widget_nav_menu li {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 
-	a {
+	nav a,
+	.widget_nav_menu a {
 		display: inline-block;
 		margin: #{0.125 * $size__spacing-unit} 0;
 		padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
