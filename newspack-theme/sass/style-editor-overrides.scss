@@ -123,3 +123,19 @@ body.post-type-post {
 		}
 	}
 }
+
+/** === Post Meta Toggles === */
+
+.components-panel__row.newspack__post-meta-toggles {
+	flex-direction: column;
+
+	> div {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		+ div {
+			margin-top: 1rem;
+		}
+	}
+}

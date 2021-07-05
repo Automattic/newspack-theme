@@ -65,8 +65,9 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 <?php endif; ?>
 
 <?php
-$share_buttons = function_exists( 'sharing_display' ) ? sharing_display() : '';
-if ( ! is_page() || ! empty( $share_buttons ) ) :
+$share_buttons   = function_exists( 'sharing_display' ) ? sharing_display() : '';
+$sharing_enabled = ! is_page() || ( ! empty( $share_buttons ) && ! empty( get_post_meta( $post->ID, 'newspack_show_share_buttons', true ) ) );
+if ( $sharing_enabled ) :
 	?>
 	<div class="entry-subhead">
 		<?php if ( ! is_page() ) : ?>
