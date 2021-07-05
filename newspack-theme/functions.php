@@ -856,7 +856,7 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
 						} else {
 							$media_query['max_width'] = null;
@@ -873,14 +873,14 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
 						}
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
