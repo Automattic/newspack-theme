@@ -220,6 +220,15 @@ p.has-background {
 	}
 }
 
+.widget .wpnbha {
+	.entry-meta,
+	.entry-meta a,
+	.entry-meta a:visited,
+	.entry-meta a:hover {
+		color: inherit;
+	}
+}
+
 //! Newspack Carousel Block
 .wp-block-newspack-blocks-carousel {
 	h3 a,
