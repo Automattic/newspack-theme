@@ -161,18 +161,12 @@ function newspack_custom_typography_css() {
 		}';
 
 		$editor_css_blocks .= '
-		.edit-post-visual-editor.editor-styles-wrapper h1, /* legacy */
-		.edit-post-visual-editor.editor-styles-wrapper h2,
-		.edit-post-visual-editor.editor-styles-wrapper h3,
-		.edit-post-visual-editor.editor-styles-wrapper h4,
-		.edit-post-visual-editor.editor-styles-wrapper h5,
-		.edit-post-visual-editor.editor-styles-wrapper h6,
-		.edit-post-visual-editor .editor-styles-wrapper h1,
-		.edit-post-visual-editor .editor-styles-wrapper h2,
-		.edit-post-visual-editor .editor-styles-wrapper h3,
-		.edit-post-visual-editor .editor-styles-wrapper h4,
-		.edit-post-visual-editor .editor-styles-wrapper h5,
-		.edit-post-visual-editor .editor-styles-wrapper h6,
+		.editor-styles-wrapper .block-editor-block-list__layout h1,
+		.editor-styles-wrapper .block-editor-block-list__layout h2,
+		.editor-styles-wrapper .block-editor-block-list__layout h3,
+		.editor-styles-wrapper .block-editor-block-list__layout h4,
+		.editor-styles-wrapper .block-editor-block-list__layout h5,
+		.editor-styles-wrapper .block-editor-block-list__layout h6,
 		.block-editor-block-list__layout .block-editor-block-list__block figcaption,
 		.block-editor-block-list__layout .block-editor-block-list__block .gallery-caption,
 		.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
@@ -182,8 +176,8 @@ function newspack_custom_typography_css() {
 		.edit-post-visual-editor .editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
 
 		/* Homepage Posts Block */
-		.block-editor-block-list__layout .wpnbha .entry-title,
-		.block-editor-block-list__layout .wpnbha .entry-meta,
+		.block-editor-block-list__layout .wp-block .entry-title,
+		.block-editor-block-list__layout .wp-block .entry-meta,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th, /* legacy */

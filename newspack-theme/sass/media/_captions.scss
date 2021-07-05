@@ -24,6 +24,13 @@ figcaption,
 	line-height: $font__line-height-pre;
 }
 
+/* Hack to address a bug that affects caption positioning in Safari only. Targets Safari 9+ only. */
+@supports ( -webkit-hyphens: none ) {
+	.wp-block-image [class^='align'] > figcaption {
+		display: block;
+	}
+}
+
 .entry-content {
 	.wp-caption-text,
 	figcaption {

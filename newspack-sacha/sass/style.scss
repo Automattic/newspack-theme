@@ -78,7 +78,7 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header,
-.article-section-title span {
+.article-section-title > span {
 	align-items: center;
 	display: flex;
 	width: 100%;
@@ -546,4 +546,14 @@ cite {
 .single .show-info .sponsor-info {
 	left: 50%;
 	margin-left: -150px;
+}
+
+.sponsor-bio {
+	.avatar {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.author-bio-header h2 {
+		text-align: center;
+	}
 }
