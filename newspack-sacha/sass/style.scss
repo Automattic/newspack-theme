@@ -105,10 +105,14 @@ div.wpnbha .article-section-title,
 	.accent-header,
 	.article-section-title {
 		color: inherit;
+	}
 
+	.accent-header,
+	.article-section-title > span {
 		&::before,
 		&::after {
 			border-color: currentColor;
+			opacity: 0.2;
 		}
 	}
 }

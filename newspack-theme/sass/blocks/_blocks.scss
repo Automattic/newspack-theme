@@ -220,21 +220,24 @@ p.has-background {
 	}
 }
 
-.widget .wpnbha {
-	.entry-meta,
-	.entry-meta a,
-	.entry-meta a:visited,
-	.entry-meta a:hover {
-		color: inherit;
-	}
-}
-
 .mobile-sidebar,
 .desktop-sidebar,
 .subpage-sidebar {
 	@include media( desktop ) {
 		.wpnbha.image-alignbehind .post-has-image .entry-wrapper {
 			padding: 1.5em 1em;
+		}
+	}
+}
+
+.mobile-sidebar,
+.site-footer {
+	.wpnbha {
+		.entry-meta,
+		.entry-meta a,
+		.entry-meta a:visited,
+		.entry-meta a:hover {
+			color: inherit;
 		}
 	}
 }

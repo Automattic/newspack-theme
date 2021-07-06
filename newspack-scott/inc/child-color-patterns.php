@@ -57,7 +57,7 @@ function newspack_scott_custom_colors_css() {
 
 		.mobile-sidebar .article-section-title::before,
 		.mobile-sidebar .accent-header::before {
-			background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -20 ) ) . ';
+			background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -30 ) ) . ';
 		}
 
 		@media only screen and (min-width: 782px) {
