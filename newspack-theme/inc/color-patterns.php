@@ -55,7 +55,7 @@ function newspack_custom_colors_css() {
 			*[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
 			.is-style-outline .wp-block-button__link.has-primary-background-color:not( :hover ),
 			.wp-block-file .wp-block-file__button,
-			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
+			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.comment .comment-author .post-author-badge,
 			.woocommerce .onsale,
 			.woocommerce-store-notice {
@@ -105,7 +105,7 @@ function newspack_custom_colors_css() {
 			/* Header default background; default height */
 			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
 			.comment .comment-author .post-author-badge,
-			.site-content .wp-block-newspack-blocks-donate.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
+			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.woocommerce .onsale,
 			.woocommerce-store-notice {
 				color: ' . esc_html( $primary_color_contrast ) . ';
