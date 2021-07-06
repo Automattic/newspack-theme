@@ -227,9 +227,13 @@ p.has-background {
 	.entry-meta a:hover {
 		color: inherit;
 	}
+}
 
+.mobile-sidebar,
+.desktop-sidebar,
+.subpage-sidebar {
 	@include media( desktop ) {
-		&.image-alignbehind .post-has-image .entry-wrapper {
+		.wpnbha.image-alignbehind .post-has-image .entry-wrapper {
 			padding: 1.5em 1em;
 		}
 	}
