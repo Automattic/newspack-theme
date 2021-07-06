@@ -85,7 +85,7 @@ div.wpnbha .article-section-title,
 
 	&::before,
 	&::after {
-		background: $color__border;
+		border-top: 1px solid $color__border;
 		content: '';
 		flex: 1 0 0.5rem;
 		height: 1px;
@@ -97,6 +97,19 @@ div.wpnbha .article-section-title,
 
 	&::after {
 		margin-left: #{0.5 * $size__spacing-unit};
+	}
+}
+
+.mobile-sidebar,
+.site-footer {
+	.accent-header,
+	.article-section-title {
+		color: inherit;
+
+		&::before,
+		&::after {
+			border-color: currentColor;
+		}
 	}
 }
 
