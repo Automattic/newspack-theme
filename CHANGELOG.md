@@ -1,3 +1,14 @@
+## [1.39.3](https://github.com/Automattic/newspack-theme/compare/v1.39.2...v1.39.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* ads media queries ([239ff6e](https://github.com/Automattic/newspack-theme/commit/239ff6ebca1b109c3794b70fc3a91d9c28862407))
+* correct custom fonts in block widget preview ([#1401](https://github.com/Automattic/newspack-theme/issues/1401)) ([878b6a1](https://github.com/Automattic/newspack-theme/commit/878b6a12cc94dc2db08013370fda4ef23f5c3e1c))
+* figcaption rendering bug in Safari ([#1382](https://github.com/Automattic/newspack-theme/issues/1382)) ([e274499](https://github.com/Automattic/newspack-theme/commit/e27449929adcb40e2c08482b1eb4644923d15412))
+* improve donate block appearance for WP 5.8 ([#1398](https://github.com/Automattic/newspack-theme/issues/1398)) ([51fc4f7](https://github.com/Automattic/newspack-theme/commit/51fc4f76823038d30611bbc1ae7bc769621f0dd4))
+* prevent white screen and errors on Widget Screen ([#1390](https://github.com/Automattic/newspack-theme/issues/1390)) ([5731581](https://github.com/Automattic/newspack-theme/commit/5731581da9b4ef933b1581281f683635257acd27))
+
 ## [1.39.2](https://github.com/Automattic/newspack-theme/compare/v1.39.1...v1.39.2) (2021-06-29)
 
 
