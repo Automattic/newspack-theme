@@ -427,6 +427,13 @@ function newspack_enqueue_scripts() {
 	$languages_path = get_parent_theme_file_path( '/languages' );
 	$theme_version  = wp_get_theme()->get( 'Version' );
 	$post_type      = get_post_type();
+	$current_screen = get_current_screen();
+
+	// Add check to see if currently on the widgets screen; none of these files are needed there, but are loaded as of WP 5.8.
+	// See: https://github.com/WordPress/gutenberg/issues/28538.
+	if ( 'widgets' === $current_screen->id ) {
+		return;
+	}
 
 	// Featured Image options.
 	wp_register_script(
@@ -849,7 +856,7 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
 						} else {
 							$media_query['max_width'] = null;
@@ -866,14 +873,14 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
 						}
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
