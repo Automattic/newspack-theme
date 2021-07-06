@@ -59,6 +59,14 @@ function newspack_katharine_custom_colors_css() {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
 
+		.mobile-sidebar .accent-header:before,
+		.mobile-sidebar div.wpnbha .article-section-title:before,
+		.mobile-sidebar .cat-links:before,
+		.mobile-sidebar figcaption:after,
+		.mobile-sidebar .wp-caption-text:after {
+			background-color: ' . esc_html( $primary_color_contrast ) . ';
+		}
+
 		@media only screen and (min-width: 782px) {
 			.featured-image-beside a,
 			.featured-image-beside a:visited,
