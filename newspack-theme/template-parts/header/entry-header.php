@@ -65,7 +65,7 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 <?php endif; ?>
 
 <?php
-$sharing_enabled = ! is_page() || ( function_exists( 'sharing_display' ) && ! empty( get_post_meta( $post->ID, 'newspack_show_share_buttons', true ) ) );
+$sharing_enabled = ! is_page() || ! empty( get_post_meta( $post->ID, 'newspack_show_share_buttons', true ) );
 if ( $sharing_enabled ) :
 	?>
 	<div class="entry-subhead">
@@ -93,7 +93,9 @@ if ( $sharing_enabled ) :
 		<?php endif; ?>
 		<?php
 		// Display Jetpack Share icons, if enabled.
-		sharing_display( '', true );
+		if ( function_exists( 'sharing_display' ) ) {
+			sharing_display( '', true );
+		}
 		?>
 	</div>
 <?php endif; ?>
