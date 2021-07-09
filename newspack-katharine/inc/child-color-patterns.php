@@ -18,9 +18,6 @@ function newspack_katharine_custom_colors_css() {
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
 			$header_color_contrast = newspack_get_color_contrast( $header_color );
-		} else {
-			$header_color          = $primary_color;
-			$header_color_contrast = newspack_get_color_contrast( $header_color );
 		}
 
 		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
@@ -72,7 +69,7 @@ function newspack_katharine_custom_colors_css() {
 
 		.mobile-sidebar div.wpnbha .article-section-title::before,
 		.mobile-sidebar .accent-header::before {
-			background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -30 ) ) . ';
+			background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
 		}
 
 		@media only screen and (min-width: 782px) {
@@ -128,6 +125,11 @@ function newspack_katharine_custom_colors_css() {
 				.h-sb .top-header-contain,
 				.h-sb .middle-header-contain {
 					color: ' . esc_html( $header_color_contrast ) . ';
+				}
+
+				.mobile-sidebar div.wpnbha .article-section-title::before,
+				.mobile-sidebar .accent-header::before {
+					background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -30 ) ) . ';
 				}
 			';
 		}
