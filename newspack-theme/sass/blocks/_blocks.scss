@@ -254,6 +254,66 @@ p.has-background {
 	}
 }
 
+#secondary,
+.desktop-sidebar,
+.mobile-sidebar,
+.subpage-sidebar {
+	.wp-block-newspack-blocks-carousel {
+		article {
+			.entry-title {
+				font-size: 0.9rem;
+			}
+			.entry-meta {
+				font-size: $font__size-xs;
+			}
+			.entry-wrapper {
+				padding: 20px 36px;
+			}
+			.avatar {
+				height: 30px;
+				width: 30px;
+			}
+		}
+
+		.swiper-button,
+		.amp-carousel-button,
+		.wp-block-newspack-carousel__amp-carousel button {
+			width: 24px;
+			height: 24px;
+		}
+
+		.amp-carousel-button-next,
+		.swiper-button-next,
+		.amp-carousel-button-prev,
+		.swiper-button-prev,
+		.amp-carousel-button-pause,
+		.amp-carousel-button-play {
+			background-size: 20px 20px;
+		}
+
+		.amp-carousel-button-next,
+		.swiper-button-next,
+		.amp-carousel-button-pause,
+		.amp-carousel-button-play {
+			right: 4px;
+		}
+
+		.amp-carousel-button-pause,
+		.amp-carousel-button-play {
+			top: 4px;
+		}
+
+		.amp-carousel-button-prev,
+		.swiper-button-prev {
+			left: 4px;
+		}
+
+		.swiper-pagination-bullets {
+			height: 1em;
+		}
+	}
+}
+
 //! Newspack Donate Block
 #secondary,
 .desktop-sidebar,
