@@ -200,6 +200,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'footer-logo-' . esc_attr( $footer_logo_size );
 	}
 
+	// Add a class for the footer widget layout.
+	$footer_widget_layout = get_theme_mod( 'footer_widget_layout', 'columns' );
+	if ( 'stacked' === $footer_widget_layout ) {
+		$classes[] = 'fw-stacked';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
