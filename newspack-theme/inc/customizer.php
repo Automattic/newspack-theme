@@ -1112,7 +1112,7 @@ function newspack_customize_register( $wp_customize ) {
 		'footer_widget_layout',
 		array(
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Footer widget layout', 'newspack' ),
+			'label'       => esc_html__( 'Footer Widget Layout', 'newspack' ),
 			'description' => esc_html__( 'Stack the footer widgets, or have them automatically divide into even columns.', 'newspack' ),
 			'choices'     => array(
 				'columns' => esc_html__( 'Columns', 'newspack' ),
