@@ -667,6 +667,17 @@ function newspack_register_meta() {
 			'type'         => 'boolean',
 		)
 	);
+
+	register_post_meta(
+		'page',
+		'newspack_show_share_buttons',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'boolean',
+			'default'      => false,
+		)
+	);
 }
 add_action( 'init', 'newspack_register_meta' );
 
@@ -819,8 +830,9 @@ function newspack_get_post_toggle_post_types() {
 	}
 
 	return array(
-		'hide_date'  => $hide_date_post_types,
-		'hide_title' => [ 'page' ],
+		'hide_date'          => $hide_date_post_types,
+		'hide_title'         => [ 'page' ],
+		'show_share_buttons' => function_exists( 'sharing_display' ) ? [ 'page' ] : [],
 	);
 }
 
