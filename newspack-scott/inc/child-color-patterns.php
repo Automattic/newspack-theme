@@ -50,6 +50,16 @@ function newspack_scott_custom_colors_css() {
 			border-color: ' . esc_html( $primary_color ) . ';
 		}
 
+		.mobile-sidebar .article-section-title,
+		.mobile-sidebar .accent-header {
+			color: ' . esc_html( $primary_color_contrast ) . ';
+		}
+
+		.mobile-sidebar .article-section-title::before,
+		.mobile-sidebar .accent-header::before {
+			background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -30 ) ) . ';
+		}
+
 		@media only screen and (min-width: 782px) {
 			/* Header default background */
 			.h-db .featured-image-beside .cat-links:before {
@@ -97,6 +107,11 @@ function newspack_scott_custom_colors_css() {
 			#colophon .footer-branding .wrapper,
 			#colophon .footer-widgets:first-child {
 				border: 0;
+			}
+
+			.site-footer .accent-header::before,
+			.site-footer .article-section-title::before {
+				background-color: ' . esc_html( newspack_adjust_brightness( $footer_color, -20 ) ) . ';
 			}
 		';
 	}

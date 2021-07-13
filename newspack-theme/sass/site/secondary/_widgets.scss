@@ -1,6 +1,5 @@
 .widget {
 	font-family: $font__heading;
-	font-size: $font__size-sm;
 	margin: 0 0 $size__spacing-unit;
 	word-wrap: break-word;
 
@@ -22,6 +21,10 @@
 			color: $color__primary-variation;
 		}
 	}
+}
+
+.widget:not( .widget_block ) {
+	font-size: $font__size-sm;
 }
 
 .widget_archive,

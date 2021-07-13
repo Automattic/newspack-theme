@@ -243,7 +243,7 @@ div.wpnbha .article-section-title {
 	}
 }
 
-#secondary .accent-header {
+#secondary .widget-title {
 	color: inherit;
 	font-size: $font__size-lg;
 
@@ -486,6 +486,15 @@ blockquote {
 .taxonomy-description {
 	font-family: $font__heading;
 	font-style: normal;
+}
+
+// Widgets
+.mobile-sidebar,
+.site-footer {
+	.accent-header,
+	div.wpnbha .article-section-title {
+		color: inherit;
+	}
 }
 
 // Footer
