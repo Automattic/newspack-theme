@@ -1,3 +1,11 @@
+# [1.40.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.39.3...v1.40.0-alpha.1) (2021-07-13)
+
+
+### Features
+
+* add option to change the footer layout ([#1410](https://github.com/Automattic/newspack-theme/issues/1410)) ([cdcd394](https://github.com/Automattic/newspack-theme/commit/cdcd3943f6a0f6a046f4343e6a7988d48dfca792))
+* enable jetpack share buttons on pages, too ([#1368](https://github.com/Automattic/newspack-theme/issues/1368)) ([dce0482](https://github.com/Automattic/newspack-theme/commit/dce04829206539bf01ee119c8e03a582e3dfb9ba))
+
 ## [1.39.3](https://github.com/Automattic/newspack-theme/compare/v1.39.2...v1.39.3) (2021-07-06)
 
 
