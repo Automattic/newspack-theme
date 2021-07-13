@@ -286,9 +286,17 @@ div.wpnbha .article-section-title {
 }
 
 // Archive
-
 .archive .page-title {
 	color: $color__text-light;
+}
+
+// Widgets
+.mobile-sidebar,
+.site-footer {
+	.article-section-title,
+	.accent-header {
+		color: inherit;
+	}
 }
 
 /* Footer */
