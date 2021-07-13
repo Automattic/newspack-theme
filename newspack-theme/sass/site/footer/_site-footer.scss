@@ -41,6 +41,11 @@
 	}
 }
 
+/* When the Customizer option is enabled, override the footer columns layout */
+.fw-stacked .footer-widgets .wrapper {
+	display: block;
+}
+
 .footer-branding {
 	.wrapper {
 		padding-top: $size__spacing-unit;

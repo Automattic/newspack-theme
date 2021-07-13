@@ -1100,6 +1100,28 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to toggle off the default footer layout.
+	$wp_customize->add_setting(
+		'footer_widget_layout',
+		array(
+			'default'           => 'columns',
+			'sanitize_callback' => 'newspack_sanitize_radio',
+		)
+	);
+	$wp_customize->add_control(
+		'footer_widget_layout',
+		array(
+			'type'        => 'radio',
+			'label'       => esc_html__( 'Footer Widget Layout', 'newspack' ),
+			'description' => esc_html__( 'Stack the footer widgets, or have them automatically divide into even columns.', 'newspack' ),
+			'choices'     => array(
+				'columns' => esc_html__( 'Columns', 'newspack' ),
+				'stacked' => esc_html__( 'Stacked', 'newspack' ),
+			),
+			'section'     => 'footer_options',
+		)
+	);
+
 	// Add option to collapse the comments.
 	$wp_customize->add_setting(
 		'footer_copyright',
