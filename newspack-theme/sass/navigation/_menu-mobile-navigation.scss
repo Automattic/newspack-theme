@@ -319,7 +319,7 @@
 	z-index: 999999;
 
 	> * {
-		display: none;
+		visibility: hidden;
 	}
 }
 
@@ -352,13 +352,7 @@
 .desktop-menu-opened #desktop-sidebar-fallback,
 .subpage-menu-opened #subpage-sidebar-fallback {
 	> * {
-		display: block;
-	}
-
-	> .desktop-menu-toggle,
-	> .mobile-menu-toggle,
-	> .subpage-toggle {
-		display: flex;
+		visibility: visible;
 	}
 }
 
