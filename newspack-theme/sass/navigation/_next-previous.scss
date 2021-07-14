@@ -79,16 +79,21 @@
 
 	span,
 	a {
-		background-color: #eee;
 		margin-right: #{0.25 * $size__spacing-unit};
 		padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+		text-decoration: none;
 
 		&:last-child {
 			margin-right: 0;
 		}
 	}
 
+	.page-numbers {
+		background-color: #eee;
+	}
+
 	.dots {
+		background: transparent;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -96,12 +101,6 @@
 	.current {
 		background-color: $color__text-light;
 		color: #fff;
-	}
-
-	> .wp-block-query-pagination-next,
-	> .wp-block-query-pagination-previous,
-	.dots {
-		background: transparent;
 	}
 }
 
