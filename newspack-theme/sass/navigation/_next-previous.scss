@@ -66,6 +66,49 @@
 	}
 }
 
+// Query block navigation
+.wp-block-query-pagination {
+	margin: #{3 * $size__spacing-unit} 0;
+
+	&,
+	.wp-block-query-pagination-numbers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	span,
+	a {
+		background-color: #eee;
+		margin-right: #{0.25 * $size__spacing-unit};
+		padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.dots {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.current {
+		background-color: $color__text-light;
+		color: #fff;
+	}
+
+	> .wp-block-query-pagination-next,
+	> .wp-block-query-pagination-previous,
+	.dots {
+		background: transparent;
+	}
+}
+
+.entry-content .wp-block-query-pagination a {
+	text-decoration: none;
+}
+
 // Comments navigation
 .comment-navigation {
 	.nav-links {
