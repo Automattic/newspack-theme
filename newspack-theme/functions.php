@@ -252,6 +252,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
+		// Add block custom unit support.
+		add_theme_support( 'custom-units', 'px', 'rem', 'em' );
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
