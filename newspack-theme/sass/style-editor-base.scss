@@ -34,7 +34,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font__heading;
 	font-weight: 700;
 	line-height: $font__line-height-heading;
 	a {
@@ -784,6 +783,63 @@ ul.wp-block-archives,
 	.jp-related-posts-i2__post-context {
 		font-family: $font__heading;
 		font-size: $font__size-xs;
+	}
+}
+
+/** === Query Block === */
+
+.wp-block-post-date,
+.wp-block-post-terms,
+.wp-block-query-pagination {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+}
+
+// Pagination
+.wp-block-query-pagination {
+	font-weight: 700;
+	line-height: 1.2;
+	margin: #{3 * $size__spacing-unit} 0;
+
+	&,
+	.wp-block-query-pagination-numbers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.page-numbers {
+		background-color: #eee;
+	}
+
+	span,
+	a {
+		margin-right: #{0.5 * $size__spacing-unit};
+		padding: #{0.65 * $size__spacing-unit} #{0.85 * $size__spacing-unit};
+		text-decoration: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.dots {
+		background: transparent;
+	}
+
+	.current {
+		background-color: $color__text-light;
+		color: #fff;
+	}
+
+	.wp-block-query-pagination-previous,
+	.dots {
+		padding-right: 0;
+	}
+
+	.wp-block-query-pagination-next,
+	.dots {
+		padding-left: 0;
 	}
 }
 

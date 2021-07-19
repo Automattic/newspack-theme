@@ -44,6 +44,9 @@ ul.products .added_to_cart,
 .woocommerce-results-wrapper,
 .wpbnbd .freq-label,
 .wpbnbd .tier-label,
+.wp-block-post-date,
+.wp-block-post-terms,
+.wp-block-query-pagination,
 h1,
 h2,
 h3,
@@ -63,6 +66,7 @@ amp-script .cat-links {
 .not-found .page-title,
 .error-404 .page-title,
 .pagination .nav-links,
+.wp-block-query-pagination,
 .comments-title,
 .cat-links,
 .comment-author .fn,
@@ -148,6 +152,9 @@ h4 {
 
 .entry-meta,
 .nav-links,
+.wp-block-post-date,
+.wp-block-post-terms,
+.wp-block-query-pagination,
 .comment-content,
 h5 {
 	font-size: $font__size-sm;
