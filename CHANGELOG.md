@@ -1,3 +1,17 @@
+# [1.41.0](https://github.com/Automattic/newspack-theme/compare/v1.40.0...v1.41.0) (2021-07-19)
+
+
+### Bug Fixes
+
+* remove link from slide-out sidebar widget description ([#1415](https://github.com/Automattic/newspack-theme/issues/1415)) ([7234e1a](https://github.com/Automattic/newspack-theme/commit/7234e1ac27d58985084576dad07bef3ed29bd49c))
+* scale down carousel when placeed in narrow widget areas ([#1411](https://github.com/Automattic/newspack-theme/issues/1411)) ([255dd12](https://github.com/Automattic/newspack-theme/commit/255dd1295beb58b62df72d8a6aa2d7d0f59d68c5))
+
+
+### Features
+
+* add support for custom spacing ([#1416](https://github.com/Automattic/newspack-theme/issues/1416)) ([c2cd40f](https://github.com/Automattic/newspack-theme/commit/c2cd40f731c6c2173f8f4346281823f94d9b95cb))
+* update Query block styles to match the theme ([#1414](https://github.com/Automattic/newspack-theme/issues/1414)) ([00efaaa](https://github.com/Automattic/newspack-theme/commit/00efaaa5e87445ceb0d937ba8fcdccd848044c78))
+
 # [1.40.0](https://github.com/Automattic/newspack-theme/compare/v1.39.3...v1.40.0) (2021-07-13)
 
 
