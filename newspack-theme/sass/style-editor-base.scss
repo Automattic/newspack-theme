@@ -856,6 +856,16 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Login/out block === */
+.wp-block-loginout {
+	font-family: $font__heading;
+
+	label,
+	a {
+		font-size: $font__size-sm;
+	}
+}
+
 /** === Organic Profile Block === */
 .wp-block-organic-profile-block {
 	box-shadow: none;
