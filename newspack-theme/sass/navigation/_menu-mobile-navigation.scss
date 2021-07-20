@@ -216,6 +216,12 @@
 		&:last-child {
 			margin-bottom: #{1.5 * $size__spacing-unit};
 		}
+
+		&.widget_block {
+			border-top: 0;
+			margin-bottom: 32px;
+			padding-top: 0;
+		}
 	}
 
 	.widget-title {
@@ -253,6 +259,12 @@
 	nav + .widget,
 	.widget + .widget {
 		padding-top: $size__spacing-unit;
+	}
+
+	nav + .widget_block,
+	.widget + .widget_block {
+		border-top: 0;
+		padding-top: 0;
 	}
 
 	.submenu-expand {
