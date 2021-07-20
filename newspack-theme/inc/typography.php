@@ -48,6 +48,7 @@ function newspack_custom_typography_css() {
 		.wp-block-post-date,
 		.wp-block-post-terms,
 		.wp-block-query-pagination,
+		.wp-block-loginout,
 		h1,
 		h2,
 		h3,
