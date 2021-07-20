@@ -6,6 +6,10 @@
 
 	@include media( tablet ) {
 		margin: 0 0 #{$size__spacing-unit * 3};
+
+		&.widget_block {
+			margin: 0 0 32px;
+		}
 	}
 
 	&:last-child {
