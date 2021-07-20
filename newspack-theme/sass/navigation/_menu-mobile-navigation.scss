@@ -289,9 +289,14 @@
 	color: #fff;
 
 	a,
-	a:visited,
 	.nav1 .sub-menu > li > a {
 		color: #fff;
+	}
+
+	a:hover,
+	a:visited,
+	.widget a:hover {
+		color: inherit;
 	}
 }
 

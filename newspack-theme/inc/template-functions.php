@@ -84,6 +84,7 @@ function newspack_body_classes( $classes ) {
 	// Hide specific page title.
 	$page_id         = get_queried_object_id();
 	$page_hide_title = get_post_meta( $page_id, 'newspack_hide_page_title', true );
+
 	if ( $page_hide_title ) {
 		$classes[] = 'hide-page-title';
 	}
