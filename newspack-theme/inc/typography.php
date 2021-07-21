@@ -48,6 +48,7 @@ function newspack_custom_typography_css() {
 		.wp-block-post-date,
 		.wp-block-post-terms,
 		.wp-block-query-pagination,
+		.wp-block-loginout,
 		h1,
 		h2,
 		h3,
@@ -186,6 +187,9 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .wp-block.wp-block-post-date,
 		.block-editor-block-list__layout .wp-block.wp-block-post-terms,
 		.block-editor-block-list__layout .wp-block.wp-block-query-pagination,
+
+		/* Login/out Block */
+		.block-editor-block-list__layout .wp-block.wp-block-loginout,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th, /* legacy */

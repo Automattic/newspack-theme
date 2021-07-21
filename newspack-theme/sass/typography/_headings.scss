@@ -47,6 +47,7 @@ ul.products .added_to_cart,
 .wp-block-post-date,
 .wp-block-post-terms,
 .wp-block-query-pagination,
+.wp-block-loginout,
 h1,
 h2,
 h3,
@@ -155,6 +156,8 @@ h4 {
 .wp-block-post-date,
 .wp-block-post-terms,
 .wp-block-query-pagination,
+.wp-block-loginout label,
+.wp-block-loginout a,
 .comment-content,
 h5 {
 	font-size: $font__size-sm;

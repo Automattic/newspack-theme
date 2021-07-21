@@ -1020,6 +1020,13 @@ hr {
 	}
 }
 
+//! Login/logout block
+.wp-block-loginout {
+	label {
+		display: block;
+	}
+}
+
 //! Mailchimp block
 .wp-block-jetpack-mailchimp {
 	input[type='email'] {
