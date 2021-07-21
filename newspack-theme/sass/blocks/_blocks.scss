@@ -983,6 +983,33 @@ hr {
 	}
 }
 
+//! Search
+.wp-block-search {
+	.search-icon {
+		height: 32px;
+		width: 32px;
+	}
+
+	.has-icon {
+		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+	}
+
+	&.wp-block-search__button-inside {
+		.wp-block-search__inside-wrapper .wp-block-search__button {
+			padding: #{0.45 * $size__spacing-unit};
+
+			&.has-icon {
+				padding: #{0.15 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+			}
+		}
+
+		.has-icon {
+			background: transparent;
+			border: 0;
+		}
+	}
+}
+
 //! Code
 .wp-block-code {
 	border-radius: 0;

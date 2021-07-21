@@ -64,6 +64,7 @@ function newspack_custom_typography_css() {
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"],
+		.wp-block-search__button-outside .wp-block-search__button,
 
 		/* _blocks.scss */
 		.wp-block-button__link,
