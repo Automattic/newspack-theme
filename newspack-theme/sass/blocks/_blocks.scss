@@ -670,6 +670,7 @@ p.has-background {
 	border-style: solid;
 	color: $color__background-button;
 	border-color: currentColor;
+	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
 
 	&:not( .has-background ) {
 		background: transparent;
