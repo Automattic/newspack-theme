@@ -76,8 +76,7 @@
 	}
 
 	@include media( tablet ) {
-		&:not( .paged ):not( .post-type-archive-tribe_events ).feature-latest
-			article.has-post-thumbnail:first-of-type {
+		&:not( .paged ).feature-latest article.has-post-thumbnail:first-of-type {
 			display: block;
 
 			.post-thumbnail {
