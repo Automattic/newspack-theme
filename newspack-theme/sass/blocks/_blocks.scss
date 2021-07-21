@@ -221,16 +221,6 @@ p.has-background {
 }
 
 .mobile-sidebar,
-.desktop-sidebar,
-.subpage-sidebar {
-	@include media( desktop ) {
-		.wpnbha.image-alignbehind .post-has-image .entry-wrapper {
-			padding: 1.5em 1em;
-		}
-	}
-}
-
-.mobile-sidebar,
 .site-footer {
 	.wpnbha {
 		.entry-meta,
@@ -258,6 +248,7 @@ p.has-background {
 .desktop-sidebar,
 .mobile-sidebar,
 .subpage-sidebar {
+	//! Newspack Carousel Block
 	.wp-block-newspack-blocks-carousel {
 		article {
 			.entry-title {
@@ -308,12 +299,8 @@ p.has-background {
 			left: 4px;
 		}
 	}
-}
 
-//! Newspack Donate Block
-#secondary,
-.desktop-sidebar,
-.mobile-sidebar {
+	//! Newspack Donate Block
 	.wpbnbd.tiered .tiers {
 		margin-left: #{0.62 * $size__spacing-unit};
 		margin-right: #{0.62 * $size__spacing-unit};
@@ -328,6 +315,15 @@ p.has-background {
 .site-info .widget .wpbnbd {
 	.thanks {
 		margin: 0.5rem 1.5rem;
+	}
+}
+
+.desktop-sidebar,
+.subpage-sidebar,
+.mobile-sidebar {
+	//! Newspack Profile block
+	.wp-block-newspack-blocks-author-profile {
+		font-size: $font__size-sm;
 	}
 }
 
