@@ -179,7 +179,8 @@ function newspack_custom_colors_css() {
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
 			*[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
 			.is-style-outline .wp-block-button__link.has-secondary-color:not(:hover), /* legacy styles */
-			.wp-block-button__link.is-style-outline.has-secondary-color:not(:hover) {
+			.wp-block-button__link.is-style-outline.has-secondary-color:not(:hover),
+			.is-style-outline > .wp-block-button__link:not(.has-text-color):not(:hover) {
 				color:' . esc_html( $secondary_color ) . '; /* base: #666 */
 			}
 
