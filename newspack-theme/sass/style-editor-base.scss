@@ -604,6 +604,47 @@ figcaption,
 	padding: 0;
 }
 
+/** === Search === */
+
+.wp-block-search {
+	.wp-block-search__button {
+		border-radius: 5px;
+		line-height: 1.8;
+		font-family: $font__heading;
+		font-size: $font__size-sm;
+		font-weight: bold;
+		padding: ( 0.55 * $size__spacing-unit ) $size__spacing-unit !important; // !important to override style from Gutenberg.
+
+		svg {
+			height: 32px;
+			width: 32px;
+		}
+
+		&.has-icon {
+			padding: #{0.3 * $size__spacing-unit} #{0.5 * $size__spacing-unit} !important; // !important to override style from Gutenberg.
+		}
+	}
+
+	&.wp-block-search__button-outside .wp-block-search__button {
+		border: 0;
+	}
+
+	&.wp-block-search__button-inside {
+		.wp-block-search__inside-wrapper .wp-block-search__button {
+			padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit} !important; // !important to override style from Gutenberg.
+
+			&.has-icon {
+				padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit} !important; // !important to override style from Gutenberg.
+			}
+		}
+
+		.has-icon {
+			background: transparent;
+			border: 0;
+		}
+	}
+}
+
 /** === Code === */
 
 .wp-block-code {

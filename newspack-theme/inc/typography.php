@@ -215,6 +215,9 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-file, /* legacy */
 		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-file,
 
+		/* Search Block */
+		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-search .wp-block-search__button,
+
 		/* Widget blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block ul.wp-block-archives li,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-categories li, /* legacy */
