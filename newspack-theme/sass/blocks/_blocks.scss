@@ -664,12 +664,18 @@ p.has-background {
 	@include button-all-transition;
 	border-width: 2px;
 	border-style: solid;
-	color: $color__background-button;
 	border-color: currentColor;
+	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
 
 	&:not( .has-background ) {
 		background: transparent;
 	}
+}
+
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline,
+.is-style-outline > .wp-block-button__link:not( .has-text-color ) {
+	color: $color__background-button;
 }
 
 .wp-block-button {
