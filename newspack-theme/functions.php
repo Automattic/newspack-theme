@@ -1046,3 +1046,10 @@ if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
  * Load Web Stories compatibility file.
  */
 require get_template_directory() . '/inc/web-stories.php';
+
+/**
+ * Load The Events Calendar compatibility file.
+ */
+if ( class_exists( 'Tribe__Main' ) ) {
+	require get_template_directory() . '/inc/the-events-calendar.php';
+}
