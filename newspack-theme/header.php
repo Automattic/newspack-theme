@@ -46,6 +46,14 @@ endif;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
+	<?php if ( is_active_sidebar( 'header-2' ) ) : ?>
+		<div class="header-widget above-header-widgets">
+			<div class="wrapper">
+				<?php dynamic_sidebar( 'header-2' ); ?>
+			</div><!-- .wrapper -->
+		</div><!-- .above-header-widgets -->
+	<?php endif; ?>
+
 	<header id="masthead" class="site-header hide-header-search" [class]="searchVisible ? 'show-header-search site-header ' : 'hide-header-search site-header'">
 
 		<?php if ( true === $header_sub_simplified && ! is_front_page() ) : ?>
@@ -280,5 +288,13 @@ endif;
 	?>
 
 	<?php do_action( 'after_header' ); ?>
+
+	<?php if ( is_active_sidebar( 'header-3' ) ) : ?>
+		<div class="header-widget below-header-widgets">
+			<div class="wrapper">
+				<?php dynamic_sidebar( 'header-3' ); ?>
+			</div><!-- .wrapper -->
+		</div><!-- .above-header-widgets -->
+	<?php endif; ?>
 
 	<div id="content" class="site-content">
