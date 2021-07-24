@@ -1,28 +1,25 @@
 <?php
 /**
- * Component: After Events
+ * View: Default Template for Events
  *
  * Override this template in your own theme by creating a file at:
- * [your-theme]/tribe/events/v2/components/after.php
+ * [your-theme]/tribe/events/v2/default-template.php
  *
  * See more documentation about our views templating system.
  *
  * @link http://evnt.is/1aiy
  *
- * @version 4.9.11
- *
- * @package Newspack
- *
- * @var string $after_events HTML stored on the Advanced settings to be printed after the Events.
+ * @version 5.0.0
  */
 
-if ( ! empty( $after_events ) ) : ?>
-			<div class="tribe-events-after-html">
-				<?php echo wp_kses_post( $after_events ); ?>
-			</div>
-		<?php endif; ?>
+use Tribe\Events\Views\V2\Template_Bootstrap;
 
-	</div><!-- .tec-content -->
+get_header();
+
+?>
+<div class="tec-wrapper">
+
+	<?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 
 	<?php
 	if ( true === get_theme_mod( 'newspack_tec_show_sidebar', false ) ) :
@@ -33,6 +30,11 @@ if ( ! empty( $after_events ) ) : ?>
 </div><!-- .tec-wrapper -->
 
 <style>
+.tec-wrapper {
+	margin: auto;
+	max-width: 90%;
+	width: 1200px;
+}
 @media (min-width: 782px) {
 	.tec-wrapper {
 		display: flex;
@@ -44,8 +46,13 @@ if ( ! empty( $after_events ) ) : ?>
 		width: calc( 35% - 2rem );
 	}
 
-	.tec-wrapper .tec-content {
+	.tec-wrapper .tribe-common {
 		width: 65%;
+	}
+
+	.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -57,3 +64,5 @@ if ( ! empty( $after_events ) ) : ?>
 }
 </style>
 
+<?php
+get_footer();
