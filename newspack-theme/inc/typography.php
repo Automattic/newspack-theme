@@ -165,6 +165,77 @@ function newspack_custom_typography_css() {
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
 
+		if ( class_exists( 'Tribe__Main' ) ) {
+			$css_blocks .= '
+			/* The Events Calendar */
+			div.tribe-common .tribe-common-form-control-checkbox__label,
+			div.tribe-common .tribe-common-form-control-radio__label,
+			div.tribe-common .tribe-common-form-control-slider__label,
+			div.tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
+			div.tribe-common .tribe-common-form-control-text__input,
+			div#top .main_color .tribe-common .tribe-common-form-control-text__input,
+			div#top.tribe-theme-enfold .tribe-common .tribe-common-form-control-text__input,
+			div#top .main_color .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+			div#top.tribe-theme-enfold .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+			div.tribe-common .tribe-common-form-control-toggle__label,
+			div.tribe-common .tribe-common-b1,
+			div.tribe-common .tribe-common-b2,
+			div.tribe-common .tribe-common-b3,
+			div.tribe-common .tribe-common-cta,
+			div.tribe-common .tribe-common-h1,
+			div.tribe-common .tribe-common-h2,
+			div.tribe-common .tribe-common-h3,
+			div.tribe-common .tribe-common-h4,
+			div.tribe-common .tribe-common-h5,
+			div.tribe-common .tribe-common-h6,
+			div.tribe-common .tribe-common-h7,
+			div.tribe-common .tribe-common-h8,
+			div.tribe-common .tribe-common-c-btn-border,
+			div.tribe-common a.tribe-common-c-btn-border,
+			div.tribe-common .tribe-common-c-btn-border-small,
+			div.tribe-common a.tribe-common-c-btn-border-small,
+			div.tribe-common .tribe-common-c-btn,
+			div.tribe-common a.tribe-common-c-btn,
+			div.tribe-events .tribe-events-c-breadcrumbs__list,
+			div.tribe-events .datepicker .datepicker-switch,
+			div.tribe-events .datepicker .day,
+			div.tribe-events .datepicker .dow,
+			div.tribe-events .datepicker .month,
+			div.tribe-events .datepicker .year,
+			div.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-view-selector--labels .tribe-events-c-view-selector__button-text,
+			div.tribe-events .tribe-events-c-view-selector__list-item-text,
+			div.tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+			div.tribe-events .tribe-events-calendar-month__calendar-event-datetime,
+			div.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-datetime,
+			div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
+			div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-year,
+
+			/* TEC - single event view */
+			p.tribe-events-back a,
+			p.tribe-events-back a:visited,
+			div .tribe-events-single-event-title,
+			div.tribe-events-schedule .recurringinfo,
+			div.tribe-events-schedule h2,
+			div.tribe-related-event-info .recurringinfo,
+			div.tribe-events-schedule .tribe-events-cost,
+			div.tribe-events-content h2,
+			div.tribe-events-content h3,
+			div.tribe-events-content h4,
+			div.tribe-events-content h5,
+			div.tribe-events-content h6,
+			div.tribe-events-cal-links,
+			div.tribe-events-event-meta,
+			div.tribe-events-related-events-title,
+			div.tribe-events-single ul.tribe-related-events li,
+			div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
+			div.tribe-events-single .tribe-events-sub-nav,
+			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-single-event-title,
+			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3
+			{
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
+		}
+
 		$editor_css_blocks .= '
 		.editor-styles-wrapper .block-editor-block-list__layout h1,
 		.editor-styles-wrapper .block-editor-block-list__layout h2,
@@ -270,6 +341,16 @@ function newspack_custom_typography_css() {
 			font-family: ' . wp_kses( $font_body, null ) . ';
 		}
 		';
+
+		if ( class_exists( 'Tribe__Main' ) ) {
+			$css_blocks .= '
+			div.tribe-common p,
+			div.tribe-events-content
+			{
+				font-family: ' . wp_kses( $font_body, null ) . ';
+			}
+			';
+		}
 
 		$editor_css_blocks .= '
 			#newspack-post-subtitle-element,
