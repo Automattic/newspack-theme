@@ -22,23 +22,34 @@ function newspack_tec_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'newspack_tec_show_sidebar',
+		'newspack_tec_sidebar_single',
 		array(
 			'default'           => false,
 			'sanitize_callback' => 'newspack_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'newspack_tec_show_sidebar',
+		'newspack_tec_sidebar_single',
 		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Show Sidebar', 'newspack' ),
-			'description' => esc_html__( 'Check to show the sidebar from the Newspack theme on the Events Calendar pages.', 'newspack' ),
-			'section'     => 'newspack_tec_options',
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show sidebar on single events', 'newspack' ),
+			'section' => 'newspack_tec_options',
 		)
 	);
 }
 add_action( 'customize_register', 'newspack_tec_customize_register' );
+
+/**
+ * Show sidebar on this page
+ */
+function newspack_tec_show_sidebar() {
+	$show_sidebar = false;
+	if ( tribe_is_event() && is_single() && true === get_theme_mod( 'newspack_tec_sidebar_single', false ) ) {
+		$show_sidebar = true;
+	}
+
+	return $show_sidebar;
+}
 
 /**
  * Add CSS Class when sidebar is enabled.
@@ -47,9 +58,9 @@ add_action( 'customize_register', 'newspack_tec_customize_register' );
  * @return array
  */
 function newspack_tec_body_classes( $classes ) {
-	if ( tribe_is_event() && true === get_theme_mod( 'newspack_tec_show_sidebar', false ) ) :
+	if ( newspack_tec_show_sidebar() ) :
 		$classes[] = 'tec-sidebar';
 	endif;
 	return $classes;
 }
-add_filter( 'body_class', 'newspack_body_classes' );
+add_filter( 'body_class', 'newspack_tec_body_classes' );
