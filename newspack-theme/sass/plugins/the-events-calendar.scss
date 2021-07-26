@@ -26,6 +26,17 @@
 	}
 }
 
+//! Photo view
+.archive.post-type-archive-tribe_events {
+	.has-post-thumbnail {
+		display: block;
+	}
+
+	.tribe_events {
+		margin-top: 0;
+	}
+}
+
 //! Fonts
 
 div.tribe-common p,
