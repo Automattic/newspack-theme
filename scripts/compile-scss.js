@@ -118,6 +118,10 @@ const SASS_STYLESHEETS = [
 		outFile: 'newspack-theme/styles/newspack-sponsors-editor.css',
 		withRTL: true,
 	},
+	{
+		inFile: 'newspack-theme/tribe-events/tribe-events.scss',
+		outFile: 'newspack-theme/tribe-events/tribe-events.css',
+	},
 	{ inFile: 'newspack-theme/sass/print.scss', outFile: 'newspack-theme/styles/print.css' },
 	// Newspack Sacha Child theme
 	{
@@ -133,6 +137,10 @@ const SASS_STYLESHEETS = [
 		inFile: 'newspack-sacha/sass/child-style-editor-overrides.scss',
 		outFile: 'newspack-sacha/styles/child-style-editor-overrides.css',
 	},
+	{
+		inFile: 'newspack-sacha/tribe-events/tribe-events.scss',
+		outFile: 'newspack-sacha/tribe-events/tribe-events.css',
+	},
 	// Newspack Scott Child theme
 	{
 		inFile: 'newspack-scott/sass/style.scss',
@@ -142,6 +150,10 @@ const SASS_STYLESHEETS = [
 	{
 		inFile: 'newspack-scott/sass/style-editor.scss',
 		outFile: 'newspack-scott/styles/style-editor.css',
+	},
+	{
+		inFile: 'newspack-scott/tribe-events/tribe-events.scss',
+		outFile: 'newspack-scott/tribe-events/tribe-events.css',
 	},
 	// Newspack Nelson Child theme
 	{
@@ -153,6 +165,10 @@ const SASS_STYLESHEETS = [
 		inFile: 'newspack-nelson/sass/style-editor.scss',
 		outFile: 'newspack-nelson/styles/style-editor.css',
 	},
+	{
+		inFile: 'newspack-nelson/tribe-events/tribe-events.scss',
+		outFile: 'newspack-nelson/tribe-events/tribe-events.css',
+	},
 	// Newspack Katharine Child theme
 	{
 		inFile: 'newspack-katharine/sass/style.scss',
@@ -163,6 +179,10 @@ const SASS_STYLESHEETS = [
 		inFile: 'newspack-katharine/sass/style-editor.scss',
 		outFile: 'newspack-katharine/styles/style-editor.css',
 	},
+	{
+		inFile: 'newspack-katharine/tribe-events/tribe-events.scss',
+		outFile: 'newspack-katharine/tribe-events/tribe-events.css',
+	},
 	// Newspack Joseph Child theme
 	{
 		inFile: 'newspack-joseph/sass/style.scss',
@@ -172,6 +192,10 @@ const SASS_STYLESHEETS = [
 	{
 		inFile: 'newspack-joseph/sass/style-editor.scss',
 		outFile: 'newspack-joseph/styles/style-editor.css',
+	},
+	{
+		inFile: 'newspack-joseph/tribe-events/tribe-events.scss',
+		outFile: 'newspack-joseph/tribe-events/tribe-events.css',
 	},
 ];
 

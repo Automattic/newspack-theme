@@ -190,7 +190,7 @@ function newspack_body_classes( $classes ) {
 
 	// Add a class when using the 'featured latest' archive layout.
 	$feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
-	if ( is_archive() && true === $feature_latest_post ) {
+	if ( is_archive() && true === $feature_latest_post && ! is_post_type_archive( 'tribe_events' ) ) {
 		$classes[] = 'feature-latest';
 	}
 
