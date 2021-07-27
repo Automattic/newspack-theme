@@ -6,7 +6,6 @@
 @import '../mixins/mixins-master';
 
 //! Layout tweaks
-
 #tribe-events-pg-template,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
 	padding-top: 0;
@@ -34,6 +33,44 @@
 
 	.tribe_events {
 		margin-top: 0;
+	}
+}
+
+// Sidebar styles.
+.tec-wrapper {
+	margin: auto;
+	max-width: 90%;
+	width: 1200px;
+}
+
+@include media( tablet ) {
+	.tec-sidebar .tec-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.tec-wrapper #secondary {
+		margin-top: #{2 * $size__spacing-unit};
+		width: calc( 35% - #{2 * $size__spacing-unit} );
+	}
+
+	.tec-sidebar #tribe-events-pg-template {
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+		width: 65%;
+	}
+
+	.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@include media( desktop ) {
+	.tec-wrapper #secondary {
+		width: calc( 35% - #{3 * $size__spacing-unit} );
 	}
 }
 
