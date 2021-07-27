@@ -431,7 +431,8 @@ function newspack_custom_colors_css() {
 	if ( newspack_get_mobile_cta_color() !== $cta_color ) {
 		$theme_css .= '
 			.button.mb-cta,
-			.button.mb-cta:not(:hover):visited {
+			.button.mb-cta:not(:hover):visited,
+			.tribe_community_edit .mb-cta.button {
 				background-color: ' . esc_html( $cta_color ) . ';
 				color: ' . esc_html( $cta_color_contrast ) . ';
 			}

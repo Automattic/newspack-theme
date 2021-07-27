@@ -230,7 +230,10 @@ function newspack_custom_typography_css() {
 			div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
 			div.tribe-events-single .tribe-events-sub-nav,
 			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-single-event-title,
-			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3
+			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3,
+
+			/* Mobile CTA fix */
+			.tribe_community_edit .mb-cta.button
 			{
 				font-family: ' . wp_kses( $font_header, null ) . ';
 			}';
