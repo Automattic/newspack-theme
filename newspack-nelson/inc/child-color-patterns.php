@@ -40,7 +40,9 @@ function newspack_nelson_custom_colors_css() {
 		/* Header short height; default background */
 		.h-sh.h-db .site-header,
 		.site-content #primary,
-		#page .site-header {
+		#page .site-header,
+		body.post-type-archive-tribe_events .tribe-events .tribe-events-l-container,
+		main#tribe-events-pg-template {
 			border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 		}
 

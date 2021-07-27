@@ -11,3 +11,30 @@
 .tribe_community_edit .button.mb-cta {
 	border-radius: 0;
 }
+
+// Overlap styles
+body.post-type-archive-tribe_events .tribe-events .tribe-events-l-container,
+main#tribe-events-pg-template {
+	background-color: $color__background-body;
+	padding-top: $size__spacing-unit 0;
+
+	@include media( tablet ) {
+		border-top: 4px solid $color__primary-variation;
+		padding: #{3 * $size__spacing-unit} #{2 * $size__spacing-unit} 0;
+	}
+
+	@include media( desktop ) {
+		padding-left: #{3 * $size__spacing-unit};
+		padding-right: #{3 * $size__spacing-unit};
+	}
+}
+
+.single-tribe_events .site-content {
+	@include media( tablet ) {
+		margin-top: #{-3.5 * $size__spacing-unit};
+	}
+
+	@include media( desktop ) {
+		margin-top: #{-6 * $size__spacing-unit};
+	}
+}
