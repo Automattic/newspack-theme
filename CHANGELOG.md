@@ -1,3 +1,23 @@
+# [1.42.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.41.0...v1.42.0-alpha.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* add simple styles for the login block ([#1423](https://github.com/Automattic/newspack-theme/issues/1423)) ([6b8e698](https://github.com/Automattic/newspack-theme/commit/6b8e698802fc6ac727750539e58664ed310c74c4))
+* button block outline style padding and colour ([#1426](https://github.com/Automattic/newspack-theme/issues/1426)) ([f0cfddb](https://github.com/Automattic/newspack-theme/commit/f0cfddbbe5da68e8581833d3a9f50079c2245985))
+* improve search block appearance ([#1425](https://github.com/Automattic/newspack-theme/issues/1425)) ([43f844d](https://github.com/Automattic/newspack-theme/commit/43f844d397a7afd8bea38cda98a13dfc340825a8))
+* make sure event archives don't pick up regular archive styles ([#1427](https://github.com/Automattic/newspack-theme/issues/1427)) ([ec62d0b](https://github.com/Automattic/newspack-theme/commit/ec62d0b7740fcf9112cb7e539553ba8a69aa4e90))
+* make sure events photo layout is not inheriting the archive styles ([#1441](https://github.com/Automattic/newspack-theme/issues/1441)) ([7864cd9](https://github.com/Automattic/newspack-theme/commit/7864cd9ae6c72e99b5ec8854c02ce856daec692e))
+* make sure the Events Calendar uses the theme's fonts ([#1435](https://github.com/Automattic/newspack-theme/issues/1435)) ([d387c3a](https://github.com/Automattic/newspack-theme/commit/d387c3a52186efa5a9988fdc8d47274b741625b3))
+* re-add default header styles in editor ([#1440](https://github.com/Automattic/newspack-theme/issues/1440)) ([bc5558c](https://github.com/Automattic/newspack-theme/commit/bc5558c3fb9eb3a8f27eb1468d107982b456feb4))
+* reduce font sizing of author profile in widget area ([#1422](https://github.com/Automattic/newspack-theme/issues/1422)) ([f1c4f22](https://github.com/Automattic/newspack-theme/commit/f1c4f220bd6e0ea13421913691595b2b5f2080b5))
+* replace widget spacing for standard content spacing for blocks ([#1424](https://github.com/Automattic/newspack-theme/issues/1424)) ([07adc65](https://github.com/Automattic/newspack-theme/commit/07adc6519eb83a1343236735affa42e8ec9b2589))
+
+
+### Features
+
+* add events calendar template with optional sidebar ([#1442](https://github.com/Automattic/newspack-theme/issues/1442)) ([e67465f](https://github.com/Automattic/newspack-theme/commit/e67465fcdc9b11085faf345db5ff44474a68fbf2))
+
 # [1.41.0](https://github.com/Automattic/newspack-theme/compare/v1.40.0...v1.41.0) (2021-07-19)
 
 
