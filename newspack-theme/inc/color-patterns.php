@@ -432,7 +432,7 @@ function newspack_custom_colors_css() {
 		$theme_css .= '
 			.button.mb-cta,
 			.button.mb-cta:not(:hover):visited,
-			.tribe_community_edit .mb-cta.button {
+			.tribe_community_edit .button.mb-cta {
 				background-color: ' . esc_html( $cta_color ) . ';
 				color: ' . esc_html( $cta_color_contrast ) . ';
 			}

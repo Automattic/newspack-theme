@@ -233,7 +233,7 @@ function newspack_custom_typography_css() {
 			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3,
 
 			/* Mobile CTA fix */
-			.tribe_community_edit .mb-cta.button
+			.tribe_community_edit .button.mb-cta
 			{
 				font-family: ' . wp_kses( $font_header, null ) . ';
 			}';
