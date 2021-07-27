@@ -41,8 +41,7 @@ function newspack_nelson_custom_colors_css() {
 		.h-sh.h-db .site-header,
 		.site-content #primary,
 		#page .site-header,
-		body.post-type-archive-tribe_events .tribe-events .tribe-events-l-container,
-		main#tribe-events-pg-template {
+		.tec-wrapper {
 			border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 		}
 

@@ -13,8 +13,7 @@
 }
 
 // Overlap styles
-body.post-type-archive-tribe_events .tribe-events .tribe-events-l-container,
-main#tribe-events-pg-template {
+.tec-wrapper {
 	background-color: $color__background-body;
 	padding-top: $size__spacing-unit 0;
 
@@ -27,14 +26,21 @@ main#tribe-events-pg-template {
 		padding-left: #{3 * $size__spacing-unit};
 		padding-right: #{3 * $size__spacing-unit};
 	}
+
+	#tribe-events-pg-template,
+	.tribe-events-l-container {
+		padding: $size__spacing-unit 0 0;
+	}
 }
 
-.single-tribe_events .site-content {
-	@include media( tablet ) {
-		margin-top: #{-3.5 * $size__spacing-unit};
-	}
+.single-tribe_events {
+	.site-content {
+		@include media( tablet ) {
+			margin-top: #{-3.5 * $size__spacing-unit};
+		}
 
-	@include media( desktop ) {
-		margin-top: #{-6 * $size__spacing-unit};
+		@include media( desktop ) {
+			margin-top: #{-6 * $size__spacing-unit};
+		}
 	}
 }
