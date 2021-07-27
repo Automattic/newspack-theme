@@ -51,6 +51,7 @@
 	}
 
 	.tec-wrapper #secondary {
+		margin-top: #{2 * $size__spacing-unit};
 		width: calc( 35% - #{2 * $size__spacing-unit} );
 	}
 
