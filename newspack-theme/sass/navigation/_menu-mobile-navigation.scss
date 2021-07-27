@@ -216,6 +216,12 @@
 		&:last-child {
 			margin-bottom: #{1.5 * $size__spacing-unit};
 		}
+
+		&.widget_block {
+			border-top: 0;
+			margin-bottom: 32px;
+			padding-top: 0;
+		}
 	}
 
 	.widget-title {
@@ -255,6 +261,12 @@
 		padding-top: $size__spacing-unit;
 	}
 
+	nav + .widget_block,
+	.widget + .widget_block {
+		border-top: 0;
+		padding-top: 0;
+	}
+
 	.submenu-expand {
 		display: none;
 	}
@@ -289,9 +301,14 @@
 	color: #fff;
 
 	a,
-	a:visited,
 	.nav1 .sub-menu > li > a {
 		color: #fff;
+	}
+
+	a:hover,
+	a:visited,
+	.widget a:hover {
+		color: inherit;
 	}
 }
 

@@ -1,0 +1,8 @@
+// The Event Calendar CSS override
+// See: https://theeventscalendar.com/knowledgebase/k/basic-font-and-color-changes-with-css/
+
+// Import theme variables
+@import '../sass/variables-site/variables-site';
+
+// Import TEC baseline styles
+@import '../sass/plugins/the-events-calendar';
