@@ -31,6 +31,16 @@
 	.tribe-events-l-container {
 		padding: $size__spacing-unit 0 0;
 	}
+
+	@include media( tablet ) {
+		#tribe-events-pg-template {
+			padding: 0;
+		}
+
+		.tribe-events-back {
+			margin-top: 0;
+		}
+	}
 }
 
 .single-tribe_events {
