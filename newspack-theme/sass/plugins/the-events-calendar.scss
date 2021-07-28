@@ -36,7 +36,7 @@
 	}
 }
 
-// Sidebar styles.
+//! Sidebar styles
 .tec-wrapper {
 	margin: auto;
 	max-width: 90%;
@@ -84,6 +84,16 @@
 	letter-spacing: 0;
 	padding: 0.6rem 0.5rem;
 	text-transform: none;
+}
+
+//! Jetpack Related Posts
+.tribe-events-content .jp-relatedposts-post-title a {
+	&,
+	&:active,
+	&:focus,
+	&:hover {
+		border: 0;
+	}
 }
 
 //! Fonts
