@@ -27,7 +27,7 @@ function newspack_get_social_link_svg( $uri, $size = 24, $title = '' ) {
 
 	$svg = apply_filters( 'newspack_get_social_link_svg', $svg, $uri, $size, $title );
 
-	return wp_kses( $svg );
+	return wp_kses( $svg, newspack_sanitize_svgs() );
 }
 
 /**
