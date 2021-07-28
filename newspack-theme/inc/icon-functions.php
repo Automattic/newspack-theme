@@ -25,7 +25,9 @@ function newspack_get_social_icon_svg( $icon, $size = 24, $title = '' ) {
 function newspack_get_social_link_svg( $uri, $size = 24, $title = '' ) {
 	$svg = Newspack_SVG_Icons::get_social_link_svg( $uri, $uri, $title );
 
-	return apply_filters('newspack_get_social_link_svg', $svg, $uri, $size, $title );
+	$svg = apply_filters( 'newspack_get_social_link_svg', $svg, $uri, $size, $title );
+
+	return wp_kses( $svg );
 }
 
 /**
