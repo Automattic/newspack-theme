@@ -66,6 +66,48 @@
 	}
 }
 
+// Query block navigation
+.wp-block-query-pagination {
+	margin: #{3 * $size__spacing-unit} 0;
+
+	&,
+	.wp-block-query-pagination-numbers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	span,
+	a {
+		margin-right: #{0.25 * $size__spacing-unit};
+		padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit};
+		text-decoration: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.page-numbers {
+		background-color: #eee;
+	}
+
+	.dots {
+		background: transparent;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.current {
+		background-color: $color__text-light;
+		color: #fff;
+	}
+}
+
+.entry-content .wp-block-query-pagination a {
+	text-decoration: none;
+}
+
 // Comments navigation
 .comment-navigation {
 	.nav-links {

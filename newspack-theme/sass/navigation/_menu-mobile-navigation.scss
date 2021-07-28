@@ -142,19 +142,23 @@
 .mobile-sidebar,
 .desktop-sidebar,
 .subpage-sidebar {
-	font-size: $font__size-sm;
 	padding: $size__spacing-unit;
 	width: 90vw;
 
 	> * {
 		clear: both;
-		margin-bottom: $size__spacing-unit;
+		margin-bottom: #{0.75 * $size__spacing-unit};
+	}
+
+	nav,
+	.widget:not( .widget_block ) {
+		font-size: $font__size-sm;
 	}
 
 	.mobile-menu-toggle,
 	.desktop-menu-toggle,
 	.subpage-toggle {
-		font-size: 1em;
+		font-size: $font__size-sm;
 		float: right;
 		margin: 0 0 $size__spacing-unit;
 		padding: 0;
@@ -167,7 +171,8 @@
 		padding: 0;
 	}
 
-	a {
+	nav a,
+	.widget_nav_menu a {
 		display: inline-block;
 		margin: #{0.125 * $size__spacing-unit} 0;
 		padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
@@ -176,6 +181,10 @@
 	a:hover {
 		background: transparent;
 		text-decoration: underline;
+	}
+
+	.social-links-menu li a {
+		display: block;
 	}
 
 	.widget-title {
@@ -206,6 +215,12 @@
 
 		&:last-child {
 			margin-bottom: #{1.5 * $size__spacing-unit};
+		}
+
+		&.widget_block {
+			border-top: 0;
+			margin-bottom: 32px;
+			padding-top: 0;
 		}
 	}
 
@@ -246,6 +261,12 @@
 		padding-top: $size__spacing-unit;
 	}
 
+	nav + .widget_block,
+	.widget + .widget_block {
+		border-top: 0;
+		padding-top: 0;
+	}
+
 	.submenu-expand {
 		display: none;
 	}
@@ -280,9 +301,14 @@
 	color: #fff;
 
 	a,
-	a:visited,
 	.nav1 .sub-menu > li > a {
 		color: #fff;
+	}
+
+	a:hover,
+	a:visited,
+	.widget a:hover {
+		color: inherit;
 	}
 }
 
@@ -310,7 +336,7 @@
 	z-index: 999999;
 
 	> * {
-		display: none;
+		visibility: hidden;
 	}
 }
 
@@ -343,13 +369,7 @@
 .desktop-menu-opened #desktop-sidebar-fallback,
 .subpage-menu-opened #subpage-sidebar-fallback {
 	> * {
-		display: block;
-	}
-
-	> .desktop-menu-toggle,
-	> .mobile-menu-toggle,
-	> .subpage-toggle {
-		display: flex;
+		visibility: visible;
 	}
 }
 
