@@ -45,6 +45,10 @@ function newspack_custom_typography_css() {
 		#cancel-comment-reply-link,
 		.jp-relatedposts-i2 a,
 		.page-title,
+		.wp-block-post-date,
+		.wp-block-post-terms,
+		.wp-block-query-pagination,
+		.wp-block-loginout,
 		h1,
 		h2,
 		h3,
@@ -61,6 +65,7 @@ function newspack_custom_typography_css() {
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"],
+		.wp-block-search__button-outside .wp-block-search__button,
 
 		/* _blocks.scss */
 		.wp-block-button__link,
@@ -160,19 +165,84 @@ function newspack_custom_typography_css() {
 			font-family: ' . wp_kses( $font_header, null ) . ';
 		}';
 
+		if ( class_exists( 'Tribe__Main' ) ) {
+			$css_blocks .= '
+			/* The Events Calendar */
+			div.tribe-common .tribe-common-form-control-checkbox__label,
+			div.tribe-common .tribe-common-form-control-radio__label,
+			div.tribe-common .tribe-common-form-control-slider__label,
+			div.tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
+			div.tribe-common .tribe-common-form-control-text__input,
+			div#top .main_color .tribe-common .tribe-common-form-control-text__input,
+			div#top.tribe-theme-enfold .tribe-common .tribe-common-form-control-text__input,
+			div#top .main_color .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+			div#top.tribe-theme-enfold .tribe-common.tribe-common--breakpoint-medium .tribe-common-form-control-text__input,
+			div.tribe-common .tribe-common-form-control-toggle__label,
+			div.tribe-common .tribe-common-b1,
+			div.tribe-common .tribe-common-b2,
+			div.tribe-common .tribe-common-b3,
+			div.tribe-common .tribe-common-cta,
+			div.tribe-common .tribe-common-h1,
+			div.tribe-common .tribe-common-h2,
+			div.tribe-common .tribe-common-h3,
+			div.tribe-common .tribe-common-h4,
+			div.tribe-common .tribe-common-h5,
+			div.tribe-common .tribe-common-h6,
+			div.tribe-common .tribe-common-h7,
+			div.tribe-common .tribe-common-h8,
+			div.tribe-common .tribe-common-c-btn-border,
+			div.tribe-common a.tribe-common-c-btn-border,
+			div.tribe-common .tribe-common-c-btn-border-small,
+			div.tribe-common a.tribe-common-c-btn-border-small,
+			div.tribe-common .tribe-common-c-btn,
+			div.tribe-common a.tribe-common-c-btn,
+			div.tribe-events .tribe-events-c-breadcrumbs__list,
+			div.tribe-events .datepicker .datepicker-switch,
+			div.tribe-events .datepicker .day,
+			div.tribe-events .datepicker .dow,
+			div.tribe-events .datepicker .month,
+			div.tribe-events .datepicker .year,
+			div.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-view-selector--labels .tribe-events-c-view-selector__button-text,
+			div.tribe-events .tribe-events-c-view-selector__list-item-text,
+			div.tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+			div.tribe-events .tribe-events-calendar-month__calendar-event-datetime,
+			div.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-datetime,
+			div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
+			div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-year,
+
+			/* TEC - single event view */
+			p.tribe-events-back a,
+			p.tribe-events-back a:visited,
+			div .tribe-events-single-event-title,
+			div.tribe-events-schedule .recurringinfo,
+			div.tribe-events-schedule h2,
+			div.tribe-related-event-info .recurringinfo,
+			div.tribe-events-schedule .tribe-events-cost,
+			div.tribe-events-content h2,
+			div.tribe-events-content h3,
+			div.tribe-events-content h4,
+			div.tribe-events-content h5,
+			div.tribe-events-content h6,
+			div.tribe-events-cal-links,
+			div.tribe-events-event-meta,
+			div.tribe-events-related-events-title,
+			div.tribe-events-single ul.tribe-related-events li,
+			div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
+			div.tribe-events-single .tribe-events-sub-nav,
+			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-single-event-title,
+			div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3
+			{
+				font-family: ' . wp_kses( $font_header, null ) . ';
+			}';
+		}
+
 		$editor_css_blocks .= '
-		.edit-post-visual-editor.editor-styles-wrapper h1, /* legacy */
-		.edit-post-visual-editor.editor-styles-wrapper h2,
-		.edit-post-visual-editor.editor-styles-wrapper h3,
-		.edit-post-visual-editor.editor-styles-wrapper h4,
-		.edit-post-visual-editor.editor-styles-wrapper h5,
-		.edit-post-visual-editor.editor-styles-wrapper h6,
-		.edit-post-visual-editor .editor-styles-wrapper h1,
-		.edit-post-visual-editor .editor-styles-wrapper h2,
-		.edit-post-visual-editor .editor-styles-wrapper h3,
-		.edit-post-visual-editor .editor-styles-wrapper h4,
-		.edit-post-visual-editor .editor-styles-wrapper h5,
-		.edit-post-visual-editor .editor-styles-wrapper h6,
+		.editor-styles-wrapper .block-editor-block-list__layout h1,
+		.editor-styles-wrapper .block-editor-block-list__layout h2,
+		.editor-styles-wrapper .block-editor-block-list__layout h3,
+		.editor-styles-wrapper .block-editor-block-list__layout h4,
+		.editor-styles-wrapper .block-editor-block-list__layout h5,
+		.editor-styles-wrapper .block-editor-block-list__layout h6,
 		.block-editor-block-list__layout .block-editor-block-list__block figcaption,
 		.block-editor-block-list__layout .block-editor-block-list__block .gallery-caption,
 		.block-editor-block-list__layout .block-editor-block-list__block .cat-links,
@@ -182,8 +252,16 @@ function newspack_custom_typography_css() {
 		.edit-post-visual-editor .editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
 
 		/* Homepage Posts Block */
-		.block-editor-block-list__layout .wpnbha .entry-title,
-		.block-editor-block-list__layout .wpnbha .entry-meta,
+		.block-editor-block-list__layout .wp-block .entry-title,
+		.block-editor-block-list__layout .wp-block .entry-meta,
+
+		/* Query Block */
+		.block-editor-block-list__layout .wp-block.wp-block-post-date,
+		.block-editor-block-list__layout .wp-block.wp-block-post-terms,
+		.block-editor-block-list__layout .wp-block.wp-block-query-pagination,
+
+		/* Login/out Block */
+		.block-editor-block-list__layout .wp-block.wp-block-loginout,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th, /* legacy */
@@ -211,6 +289,9 @@ function newspack_custom_typography_css() {
 		/* File Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-file, /* legacy */
 		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-file,
+
+		/* Search Block */
+		.block-editor-block-list__layout .block-editor-block-list__block.wp-block-search .wp-block-search__button,
 
 		/* Widget blocks */
 		.block-editor-block-list__layout .block-editor-block-list__block ul.wp-block-archives li,
@@ -260,6 +341,16 @@ function newspack_custom_typography_css() {
 			font-family: ' . wp_kses( $font_body, null ) . ';
 		}
 		';
+
+		if ( class_exists( 'Tribe__Main' ) ) {
+			$css_blocks .= '
+			div.tribe-common p,
+			div.tribe-events-content
+			{
+				font-family: ' . wp_kses( $font_body, null ) . ';
+			}
+			';
+		}
 
 		$editor_css_blocks .= '
 			#newspack-post-subtitle-element,

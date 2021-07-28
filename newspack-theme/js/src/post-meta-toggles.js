@@ -15,18 +15,28 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 	if ( ! meta ) {
 		return null;
 	}
-	const { newspack_hide_page_title, newspack_hide_updated_date } = meta;
-	const { hide_date = [], hide_title = [] } = window.newspack_post_meta_post_types;
+	const {
+		newspack_hide_page_title,
+		newspack_hide_updated_date,
+		newspack_show_share_buttons,
+	} = meta;
+	const {
+		hide_date = [],
+		hide_title = [],
+		show_share_buttons = [],
+	} = window.newspack_post_meta_post_types;
 	const hideDate = 0 <= hide_date.indexOf( postType );
 	const hideTitle = 0 <= hide_title.indexOf( postType );
+	const showShareButtons = 0 <= show_share_buttons.indexOf( postType );
 
-	if ( ! hideDate && ! hideTitle ) {
+	if ( ! hideDate && ! hideTitle && ! showShareButtons ) {
 		return null;
 	}
+
 	return (
-		<PluginPostStatusInfo>
+		<PluginPostStatusInfo className="newspack__post-meta-toggles">
 			{ hideDate && 'post' === postType && (
-				<>
+				<div>
 					<label htmlFor="hide_updated_date">{ __( 'Hide updated date', 'newspack' ) }</label>
 					<FormToggle
 						checked={ newspack_hide_updated_date }
@@ -35,10 +45,10 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 						}
 						id="hide_updated_date"
 					/>
-				</>
+				</div>
 			) }
 			{ hideTitle && 'page' === postType && (
-				<>
+				<div>
 					<label htmlFor="hide_page_title">{ __( 'Hide page title', 'newspack' ) }</label>
 					<FormToggle
 						checked={ newspack_hide_page_title }
@@ -47,7 +57,21 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 						}
 						id="hide_page_title"
 					/>
-				</>
+				</div>
+			) }
+			{ showShareButtons && 'page' === postType && (
+				<div>
+					<label htmlFor="newspack_show_share_buttons">
+						{ __( 'Show Jetpack share buttons', 'newspack' ) }
+					</label>
+					<FormToggle
+						checked={ newspack_show_share_buttons }
+						onChange={ () =>
+							updateMetaValue( 'newspack_show_share_buttons', ! newspack_show_share_buttons )
+						}
+						id="hide_page_title"
+					/>
+				</div>
 			) }
 		</PluginPostStatusInfo>
 	);

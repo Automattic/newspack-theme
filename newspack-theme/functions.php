@@ -252,6 +252,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			)
 		);
 
+		// Add block custom spacing support.
+		add_theme_support( 'custom-spacing' );
+
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
@@ -295,11 +298,7 @@ function newspack_widgets_init() {
 		array(
 			'name'          => __( 'Slide-out Sidebar', 'newspack' ),
 			'id'            => 'header-1',
-			'description'   => sprintf(
-				/* translators: %s: link to Header Settings panel in Customizer. */
-				__( 'Add widgets here to appear in an off-screen sidebar when it is enabled under %s.', 'newspack' ),
-				'<a rel="goto-control" href="#header_show_slideout">' . __( 'Header Settings', 'newspack' ) . '</a>'
-			),
+			'description'   => esc_html__( 'Add widgets here to appear in an off-screen sidebar when it is enabled under the Customizer Header Settings.', 'newspack' ),
 			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -667,6 +666,17 @@ function newspack_register_meta() {
 			'type'         => 'boolean',
 		)
 	);
+
+	register_post_meta(
+		'page',
+		'newspack_show_share_buttons',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'boolean',
+			'default'      => false,
+		)
+	);
 }
 add_action( 'init', 'newspack_register_meta' );
 
@@ -819,8 +829,9 @@ function newspack_get_post_toggle_post_types() {
 	}
 
 	return array(
-		'hide_date'  => $hide_date_post_types,
-		'hide_title' => [ 'page' ],
+		'hide_date'          => $hide_date_post_types,
+		'hide_title'         => [ 'page' ],
+		'show_share_buttons' => function_exists( 'sharing_display' ) ? [ 'page' ] : [],
 	);
 }
 
@@ -856,7 +867,7 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
 						} else {
 							$media_query['max_width'] = null;
@@ -873,14 +884,14 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 						$media_query['max_width'] = null;
 					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
 						}
 					} else {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
+						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
 						} else {
 							$media_query['max_width'] = null;
@@ -1035,3 +1046,10 @@ if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
  * Load Web Stories compatibility file.
  */
 require get_template_directory() . '/inc/web-stories.php';
+
+/**
+ * Load The Events Calendar compatibility file.
+ */
+if ( class_exists( 'Tribe__Main' ) ) {
+	require get_template_directory() . '/inc/the-events-calendar.php';
+}

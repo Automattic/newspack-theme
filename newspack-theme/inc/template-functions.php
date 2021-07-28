@@ -190,7 +190,7 @@ function newspack_body_classes( $classes ) {
 
 	// Add a class when using the 'featured latest' archive layout.
 	$feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
-	if ( is_archive() && true === $feature_latest_post ) {
+	if ( is_archive() && true === $feature_latest_post && ! is_post_type_archive( 'tribe_events' ) ) {
 		$classes[] = 'feature-latest';
 	}
 
@@ -198,6 +198,12 @@ function newspack_body_classes( $classes ) {
 	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'medium' );
 	if ( 'medium' !== $footer_logo_size ) {
 		$classes[] = 'footer-logo-' . esc_attr( $footer_logo_size );
+	}
+
+	// Add a class for the footer widget layout.
+	$footer_widget_layout = get_theme_mod( 'footer_widget_layout', 'columns' );
+	if ( 'stacked' === $footer_widget_layout ) {
+		$classes[] = 'fw-stacked';
 	}
 
 	return $classes;

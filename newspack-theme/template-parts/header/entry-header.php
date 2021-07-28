@@ -64,34 +64,38 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 	</h2>
 <?php endif; ?>
 
-
-<?php if ( ! is_page() ) : ?>
+<?php
+$sharing_enabled = ! is_page() || ! empty( get_post_meta( $post->ID, 'newspack_show_share_buttons', true ) );
+if ( $sharing_enabled ) :
+	?>
 	<div class="entry-subhead">
-		<?php if ( ! empty( $native_sponsors ) ) : ?>
-			<div class="entry-meta entry-sponsor">
-				<?php newspack_sponsor_logo_list( $native_sponsors ); ?>
-				<span>
+		<?php if ( ! is_page() ) : ?>
+			<?php if ( ! empty( $native_sponsors ) ) : ?>
+				<div class="entry-meta entry-sponsor">
+					<?php newspack_sponsor_logo_list( $native_sponsors ); ?>
+					<span>
+						<?php
+							newspack_sponsor_byline( $native_sponsors );
+							newspack_posted_on();
+							do_action( 'newspack_theme_entry_meta' );
+						?>
+					</span>
+				</div>
+			<?php else : ?>
+				<div class="entry-meta">
 					<?php
-						newspack_sponsor_byline( $native_sponsors );
+						newspack_posted_by();
 						newspack_posted_on();
 						do_action( 'newspack_theme_entry_meta' );
 					?>
-				</span>
-			</div>
-		<?php else : ?>
-			<div class="entry-meta">
-				<?php
-					newspack_posted_by();
-					newspack_posted_on();
-					do_action( 'newspack_theme_entry_meta' );
-				?>
-			</div><!-- .meta-info -->
+				</div><!-- .meta-info -->
+			<?php endif; ?>
 		<?php endif; ?>
 		<?php
-			// Display Jetpack Share icons, if enabled
-			if ( function_exists( 'sharing_display' ) ) {
-				sharing_display( '', true );
-			}
+		// Display Jetpack Share icons, if enabled.
+		if ( function_exists( 'sharing_display' ) ) {
+			sharing_display( '', true );
+		}
 		?>
 	</div>
 <?php endif; ?>

@@ -42,7 +42,6 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 						<div>
 							<h2 class="accent-header">
 								<?php echo esc_html( esc_html( $author->display_name ) ); ?>
-								<span><?php // TODO: Add Job title ?></span>
 							</h2>
 							<?php if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) : ?>
 								<div class="author-meta">
@@ -103,7 +102,6 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 			<div>
 				<h2 class="accent-header">
 					<?php echo esc_html( get_the_author() ); ?>
-					<span><?php // TODO: Add Job title ?></span>
 				</h2>
 
 				<?php if ( true === get_theme_mod( 'show_author_email', false ) ) : ?>
