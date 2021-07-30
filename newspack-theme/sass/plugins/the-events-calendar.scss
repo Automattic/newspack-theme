@@ -74,6 +74,22 @@
 	}
 }
 
+//! tribe_events shortcode - photo view
+.entry .entry-content .entry {
+	&.tribe-events-pro-photo__event {
+		margin: 0 0 24px;
+
+		&.tribe-common .tribe-common-g-row--gutters > .tribe-common-g-col {
+			padding-left: 21px;
+			padding-right: 21px;
+		}
+
+		&.tribe-common.tribe-common-g-col {
+			min-width: 0;
+		}
+	}
+}
+
 //! Community Events plugin
 .tribe_community_edit .button.mb-cta {
 	background: #d33;
