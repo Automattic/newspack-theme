@@ -74,8 +74,8 @@
 	}
 }
 
-//! tribe_events shortcode - photo view
 .entry .entry-content .entry {
+	//! tribe_events shortcode - photo view
 	&.tribe-events-pro-photo__event {
 		margin: 0 0 24px;
 
@@ -87,6 +87,12 @@
 		&.tribe-common.tribe-common-g-col {
 			min-width: 0;
 		}
+	}
+
+	//! tribe_events shortcode - map view
+	&.tribe-events-pro-map__event-card,
+	&.tribe-events-pro-map__event-card-spacer {
+		padding: 16px 12px;
 	}
 }
 
