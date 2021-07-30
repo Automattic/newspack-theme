@@ -225,7 +225,7 @@ function newspack_custom_typography_css() {
 			div.tribe-events-content h6,
 			div.tribe-events-cal-links,
 			div.tribe-events-event-meta,
-			div.tribe-events-related-events-title,
+			h2.tribe-events-related-events-title,
 			div.tribe-events-single ul.tribe-related-events li,
 			div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
 			div.tribe-events-single .tribe-events-sub-nav,
