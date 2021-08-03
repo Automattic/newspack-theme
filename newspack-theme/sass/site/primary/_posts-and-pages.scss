@@ -309,14 +309,19 @@ amp-script .cat-links {
 		margin-top: #{2 * $size__spacing-unit};
 	}
 
-	@include media( mobile ) {
-		.entry-subhead {
+	.entry-subhead {
+		@include media( mobile ) {
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
+		}
 
-			.entry-meta {
+		.entry-meta {
+			align-items: center;
+			display: flex;
+
+			@include media( mobile ) {
 				flex-grow: 2;
 			}
 		}
@@ -903,7 +908,12 @@ div.sharedaddy .sd-social h3.sd-title,
 			opacity: 1;
 		}
 	}
-	.jp-reltaedposts-post-title {
+	.jp-relatedposts-post-title {
 		font-family: $font__heading;
 	}
+}
+
+//! Newspack Listings
+.newspack-listings.hide-author.hide-date .entry-subhead {
+	display: none;
 }
