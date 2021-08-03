@@ -309,19 +309,14 @@ amp-script .cat-links {
 		margin-top: #{2 * $size__spacing-unit};
 	}
 
-	.entry-subhead {
-		@include media( mobile ) {
+	@include media( mobile ) {
+		.entry-subhead {
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
-		}
 
-		.entry-meta {
-			align-items: center;
-			display: flex;
-
-			@include media( mobile ) {
+			.entry-meta {
 				flex-grow: 2;
 			}
 		}
@@ -908,7 +903,7 @@ div.sharedaddy .sd-social h3.sd-title,
 			opacity: 1;
 		}
 	}
-	.jp-relatedposts-post-title {
+	.jp-reltaedposts-post-title {
 		font-family: $font__heading;
 	}
 }
