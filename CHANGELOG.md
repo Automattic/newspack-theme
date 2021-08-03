@@ -1,3 +1,21 @@
+# [1.43.0](https://github.com/Automattic/newspack-theme/compare/v1.42.0...v1.43.0) (2021-08-03)
+
+
+### Bug Fixes
+
+* add overlap styles to events templates in Nelson ([#1444](https://github.com/Automattic/newspack-theme/issues/1444)) ([192451a](https://github.com/Automattic/newspack-theme/commit/192451ae0f87b5d2ec208e887fe98048fffee7a6))
+* correct related events header font ([#1451](https://github.com/Automattic/newspack-theme/issues/1451)) ([3822073](https://github.com/Automattic/newspack-theme/commit/3822073643b6c19d9fde9287922c48dde4bb9228))
+* correct spacing in event calendar map shortcode ([#1454](https://github.com/Automattic/newspack-theme/issues/1454)) ([a9a1cd1](https://github.com/Automattic/newspack-theme/commit/a9a1cd10230833e44500a882356cefe576586047))
+* correct spacing in the event calendar photo shortcode ([#1452](https://github.com/Automattic/newspack-theme/issues/1452)) ([2b29c8c](https://github.com/Automattic/newspack-theme/commit/2b29c8c3afd1af8268f78d4b117fbe6103f24661))
+* make sure mobile CTA doesn't pick up community events styles ([#1443](https://github.com/Automattic/newspack-theme/issues/1443)) ([163fcd7](https://github.com/Automattic/newspack-theme/commit/163fcd7301837052b6b03aad383709fd2da61266))
+* override event link styles on related posts ([#1449](https://github.com/Automattic/newspack-theme/issues/1449)) ([a710106](https://github.com/Automattic/newspack-theme/commit/a710106f1d945c081648fcaf8464c6aa15e80f93))
+* update event calendar shortcode custom fonts ([#1453](https://github.com/Automattic/newspack-theme/issues/1453)) ([d8c371c](https://github.com/Automattic/newspack-theme/commit/d8c371c661f43d2f08cc0a2e07f47c25eb0e0534))
+
+
+### Features
+
+* add ability to customize svgs for social media ([#1396](https://github.com/Automattic/newspack-theme/issues/1396)) ([1ed91cc](https://github.com/Automattic/newspack-theme/commit/1ed91cc6f7ce751122b29d9fa9ab7364fbf4dbeb))
+
 # [1.42.0](https://github.com/Automattic/newspack-theme/compare/v1.41.0...v1.42.0) (2021-07-27)
 
 
