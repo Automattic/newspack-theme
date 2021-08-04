@@ -99,6 +99,17 @@
 	&.tribe-events-calendar-month-mobile-events__mobile-event {
 		padding: 12px 0;
 	}
+
+	//! tribe_events shortcode - day view
+	&.tribe-events-calendar-day__event {
+		padding-left: 54px;
+	}
+
+	//! tribe gutters
+	&.tribe-common-g-row--gutters {
+		margin-left: -21px;
+		margin-right: -21px;
+	}
 }
 
 //! Community Events plugin
