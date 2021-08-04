@@ -45,6 +45,17 @@
 			margin-right: 0;
 		}
 	}
+
+	&.wp-block-embed {
+		&.alignleft,
+		&.alignright {
+			max-width: 100%;
+
+			@include media( desktop ) {
+				max-width: 50%;
+			}
+		}
+	}
 }
 
 .newspack-inline-popup > *:first-child {
