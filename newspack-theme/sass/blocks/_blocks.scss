@@ -46,13 +46,14 @@
 		}
 	}
 
-	&.wp-block-embed {
-		&.alignleft,
-		&.alignright {
-			max-width: 100%;
-
-			@include media( desktop ) {
-				max-width: 50%;
+	@include media( desktoponly ) {
+		&.wp-block-embed {
+			&.alignleft,
+			&.alignright {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
 			}
 		}
 	}
