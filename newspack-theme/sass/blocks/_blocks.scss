@@ -46,7 +46,7 @@
 		}
 	}
 
-	@include media( desktoponly ) {
+	@include media( notdesktop ) {
 		&.wp-block-embed {
 			&.alignleft,
 			&.alignright {
