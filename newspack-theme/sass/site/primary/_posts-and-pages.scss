@@ -864,8 +864,10 @@ div.sharedaddy .sd-social h3.sd-title,
 	color: $color__text-main;
 }
 
-.jp-related-posts-i2__row {
-	margin: 0 -10px;
+@include media( mobile ) {
+	.jp-related-posts-i2__row {
+		margin: 0 -10px;
+	}
 }
 
 .jp-relatedposts-i2,
