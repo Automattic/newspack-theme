@@ -166,7 +166,7 @@ function woocommerce_product_archive_description() {
 	if ( is_post_type_archive( 'product' ) && in_array( absint( get_query_var( 'paged' ) ), array( 0, 1 ), true ) ) {
 		$shop_page = get_post( wc_get_page_id( 'shop' ) );
 		if ( $shop_page ) {
-			echo $shop_page->post_content;
+			echo wp_kses_post( wc_format_content( $shop_page->post_content ) );
 		}
 	}
 }
