@@ -29,6 +29,12 @@
 		}
 	}
 
+	@if notdesktop == $res {
+		@media only screen and ( max-width: #{ $desktop_width - 1 } ) {
+			@content;
+		}
+	}
+
 	@if desktop == $res {
 		@media only screen and ( min-width: $desktop_width ) {
 			@content;
