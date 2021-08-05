@@ -889,18 +889,6 @@ div.sharedaddy .sd-social h3.sd-title,
 			width: 33.3%;
 		}
 
-		@include media( tabletonly ) {
-			> * {
-				margin-left: calc( 25% + 20px );
-			}
-
-			> .jp-relatedposts-post-a {
-				float: left;
-				margin-left: 0;
-				max-width: 25%;
-			}
-		}
-
 		.jp-relatedposts-post-img {
 			margin-bottom: #{0.5 * $size__spacing-unit};
 		}
