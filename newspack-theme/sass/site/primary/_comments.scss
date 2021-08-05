@@ -61,6 +61,7 @@
 
 #respond {
 	position: relative;
+
 	.comment-user-avatar {
 		margin: $size__spacing-unit 0 -#{$size__spacing-unit};
 	}
@@ -72,7 +73,7 @@
 	> small {
 		bottom: 1em;
 		display: block;
-		font-size: 1em;
+		font-size: $font__size_base;
 		position: absolute;
 		right: 0;
 		white-space: nowrap;
