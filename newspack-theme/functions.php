@@ -740,6 +740,21 @@ function newspack_typography_css_wrap() {
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
 
 /**
+ * Add preconnect to Google Fonts if used in the Typography settings.
+ */
+function newspack_google_fonts_preconnect() {
+	$font_import_code = get_theme_mod( 'custom_font_import_code', '' ) . ' ' . get_theme_mod( 'custom_font_import_code_alternate', '' );
+
+	if ( str_contains( $font_import_code, 'google' ) && ! newspack_is_amp() ) {
+		?>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<?php
+	}
+}
+add_action( 'wp_head', 'newspack_google_fonts_preconnect' );
+
+/**
  * Returns an array of 'acceptable' SVG tags to use with wp_kses().
  */
 function newspack_sanitize_svgs() {
