@@ -94,6 +94,28 @@
 	&.tribe-events-pro-map__event-card-spacer {
 		padding: 16px 12px;
 	}
+
+	//! tribe_events shortcode - month view
+	&.tribe-events-calendar-month-mobile-events__mobile-event {
+		padding: 12px 0;
+	}
+
+	//! tribe_events shortcode - day view
+	&.tribe-events-calendar-day__event {
+		padding-left: 54px;
+	}
+
+	//! tribe gutters
+	&.tribe-common-g-row--gutters {
+		margin-left: -21px;
+		margin-right: -21px;
+	}
+
+	//! tribe_events shortcode - week view
+	&.tribe-events-pro-week-mobile-events__event {
+		margin-top: 32px;
+		padding-left: 42px;
+	}
 }
 
 //! Community Events plugin

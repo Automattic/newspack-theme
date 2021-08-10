@@ -335,7 +335,8 @@ function newspack_custom_colors_css() {
 				}
 				.cat-links a,
 				.cat-links a:visited,
-				.site-header .nav3 .menu-highlight a {
+				.site-header .nav3 .menu-highlight a,
+				.subpage-sidebar .nav3 .menu-highlight a {
 					background-color: ' . esc_html( $primary_color ) . ';
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}

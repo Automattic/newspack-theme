@@ -35,7 +35,7 @@
 	}
 }
 
-.h-sb .nav3 {
+.h-sb .site-header .nav3 {
 	a {
 		background-color: darken( $color__primary, 10% );
 		color: #fff;
@@ -68,6 +68,10 @@
 	.menu-highlight a {
 		background-color: darken( $color__primary, 10% );
 	}
+}
+
+.subpage-sidebar .nav3 a {
+	padding: #{$size__spacing-unit * 0.5} #{$size__spacing-unit * 0.75};
 }
 
 /* Posts and pages */

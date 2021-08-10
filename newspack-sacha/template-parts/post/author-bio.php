@@ -41,7 +41,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 
 						<div>
 							<h2 class="accent-header">
-								<?php echo esc_html( esc_html( $author->display_name ) ); ?>
+								<?php echo esc_html( $author->display_name ); ?>
 							</h2>
 							<?php if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) : ?>
 								<div class="author-meta">
