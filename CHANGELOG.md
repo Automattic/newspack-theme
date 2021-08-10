@@ -1,3 +1,20 @@
+## [1.43.1](https://github.com/Automattic/newspack-theme/compare/v1.43.0...v1.43.1) (2021-08-10)
+
+
+### Bug Fixes
+
+* add filters to the WooCommerce shop content ([#1458](https://github.com/Automattic/newspack-theme/issues/1458)) ([b194e16](https://github.com/Automattic/newspack-theme/commit/b194e167edffcf17f1cbe315aa94e6c7c21e7329))
+* add space between above content widget and featured image ([#1460](https://github.com/Automattic/newspack-theme/issues/1460)) ([8af585c](https://github.com/Automattic/newspack-theme/commit/8af585caf37bb5f2a27460c6bc21063ea6c2c5dd))
+* add styles for zip field ([#1463](https://github.com/Automattic/newspack-theme/issues/1463)) ([ca9ac4a](https://github.com/Automattic/newspack-theme/commit/ca9ac4a90f3e496b8d8671a8df3030fc083f8cbf))
+* correct spacing in Events Calendar month shortcode ([#1464](https://github.com/Automattic/newspack-theme/issues/1464)) ([f495fda](https://github.com/Automattic/newspack-theme/commit/f495fda4c8c2c73729dd28ce92c16ca01887a9a7))
+* correct spacing on Events Calendar day shortcode ([#1465](https://github.com/Automattic/newspack-theme/issues/1465)) ([45a4f51](https://github.com/Automattic/newspack-theme/commit/45a4f51efbe5e3a2951f7dadd4f9f9c419109bfb))
+* correct spacing on Events Calendar shortcode week view ([#1467](https://github.com/Automattic/newspack-theme/issues/1467)) ([38592d3](https://github.com/Automattic/newspack-theme/commit/38592d39de26931236983cffd57487aa5a5c7bbf))
+* correct tertiary menu in slideout sidebar ([#1459](https://github.com/Automattic/newspack-theme/issues/1459)) ([cb2922e](https://github.com/Automattic/newspack-theme/commit/cb2922ecc15deaff662fb6af5187f9a8b4acb894))
+* make Related Posts display more consistently ([#1468](https://github.com/Automattic/newspack-theme/issues/1468)) ([feaa3f7](https://github.com/Automattic/newspack-theme/commit/feaa3f7b22b91285785fbc2be4169fd37929b42f))
+* remove extra escaping from author bios ([#1462](https://github.com/Automattic/newspack-theme/issues/1462)) ([784bf3b](https://github.com/Automattic/newspack-theme/commit/784bf3b886e23f7856507a736cfbc4337b7e78fa))
+* remove floated embed max-width on smaller screens ([#1461](https://github.com/Automattic/newspack-theme/issues/1461)) ([9a050dd](https://github.com/Automattic/newspack-theme/commit/9a050dd36f6a3d7adb9f1c0bc121adaa26b02e56))
+* remove smaller font size from nested legacy widgets ([#1469](https://github.com/Automattic/newspack-theme/issues/1469)) ([eaf2cf1](https://github.com/Automattic/newspack-theme/commit/eaf2cf1d2b6b7a9bac451f8a27b021849c4dab64))
+
 # [1.43.0](https://github.com/Automattic/newspack-theme/compare/v1.42.0...v1.43.0) (2021-08-03)
 
 
