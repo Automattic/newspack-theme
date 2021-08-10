@@ -12,6 +12,11 @@
 		}
 	}
 
+	.widget {
+		font-size: inherit;
+		margin-bottom: 32px;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 	}
