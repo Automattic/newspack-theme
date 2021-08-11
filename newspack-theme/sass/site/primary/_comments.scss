@@ -156,6 +156,10 @@
 			}
 		}
 	}
+
+	#respond .comment-reply-title {
+		font-size: $font__size_base;
+	}
 }
 
 .comment-reply {
