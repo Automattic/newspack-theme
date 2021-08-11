@@ -189,8 +189,18 @@
 		margin: 0 auto;
 		max-width: 1200px;
 	}
+}
 
-	&.above-header-widgets {
-		border-bottom: 1px solid $color__border;
+.h-db .above-header-widgets {
+	border-bottom: 1px solid $color__border;
+}
+
+// The Subpage header + special featured image placements also can't really support an ad in this spot.
+.h-sub {
+	&.single-featured-image-beside,
+	&.single-featured-image-behind {
+		.below-header-widgets {
+			display: none;
+		}
 	}
 }
