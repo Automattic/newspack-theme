@@ -767,6 +767,17 @@ p.has-background {
 	@include nestedSubMenuPadding();
 }
 
+.widget .wp-block-categories li {
+	font-weight: normal;
+	line-height: 1.6;
+	padding-bottom: 0;
+
+	a {
+		display: inline-block;
+		padding: #{0.125 * $size__spacing-unit} 0;
+	}
+}
+
 .wp-block-latest-posts {
 	li > a {
 		font-family: $font__heading;
