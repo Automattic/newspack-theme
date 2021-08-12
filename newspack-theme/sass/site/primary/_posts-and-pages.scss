@@ -299,13 +299,15 @@ amp-script .cat-links {
 		}
 	}
 
-	.avatar {
-		height: #{1.75 * $size__spacing-unit};
-		width: #{1.75 * $size__spacing-unit};
+	.entry-subhead {
+		.avatar {
+			height: #{1.75 * $size__spacing-unit};
+			width: #{1.75 * $size__spacing-unit};
 
-		@include media( tablet ) {
-			height: #{2.25 * $size__spacing-unit};
-			width: #{2.25 * $size__spacing-unit};
+			@include media( tablet ) {
+				height: #{2.25 * $size__spacing-unit};
+				width: #{2.25 * $size__spacing-unit};
+			}
 		}
 	}
 
