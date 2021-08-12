@@ -808,6 +808,10 @@ p.has-background {
 	padding: $size__spacing-unit;
 }
 
+.widget .wp-block-preformatted {
+	font-size: $font__size-sm;
+}
+
 //! Verse
 .wp-block-verse {
 	font-family: $font__body;
