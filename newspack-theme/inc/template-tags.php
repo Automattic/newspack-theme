@@ -399,8 +399,10 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 
 			$comment_attributes = array(
-				'logged_in_as' => null,
-				'title_reply'  => null,
+				'logged_in_as'       => null,
+				'title_reply'        => null,
+				'title_reply_before' => null,
+				'title_reply_after'  => null,
 			);
 
 			$comment_policy = get_theme_mod( 'comment_policy', '' );
