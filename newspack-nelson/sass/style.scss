@@ -106,7 +106,8 @@ body:not( .h-sb ) .site-header {
 
 // Featured templates - Short header on subpages
 .single-featured-image-beside,
-.single-featured-image-behind {
+.single-featured-image-behind,
+.single-featured-image-above {
 	@include media( tablet ) {
 		&.h-sub.h-db,
 		&.h-sub.h-sb {
@@ -178,7 +179,8 @@ body:not( .h-sb ) .site-header {
 	}
 }
 
-.single-featured-image-behind {
+.single-featured-image-behind,
+.single-featured-image-above {
 	#primary {
 		padding-top: 0;
 	}
