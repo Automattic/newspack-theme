@@ -6,11 +6,8 @@
 
 ( function() {
 	// Shared variables
-	const body = document.getElementsByTagName( 'body' )[ 0 ],
-		headerContain = document.getElementById( 'masthead' );
-
-	// Search toggle.
-	const searchToggle = document.getElementById( 'search-toggle' );
+	const headerContain = document.getElementById( 'masthead' ),
+		searchToggle = document.getElementById( 'search-toggle' );
 
 	if ( null !== searchToggle ) {
 		const headerSearch = document.getElementById( 'header-search' ),
