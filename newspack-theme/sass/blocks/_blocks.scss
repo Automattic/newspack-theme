@@ -177,6 +177,18 @@
 	}
 }
 
+//! Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.has-background {
+		padding: 20px 30px;
+	}
+}
+
 //! Paragraphs
 .has-drop-cap:not( :focus )::first-letter {
 	font-size: 4em;
