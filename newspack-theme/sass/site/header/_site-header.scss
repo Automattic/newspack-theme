@@ -533,6 +533,7 @@
 // Sticky header
 .site-header {
 	background: $color__background-body;
+	box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
 }
 
 .h-stk {
@@ -569,6 +570,7 @@
 	&.h-sub.single-featured-image-behind,
 	&.h-sub.single-featured-image-beside {
 		.site-header {
+			box-shadow: none;
 			position: sticky;
 		}
 
