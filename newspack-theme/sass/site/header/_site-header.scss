@@ -531,13 +531,10 @@
 }
 
 // Sticky header
-.site-header {
-	background: $color__background-body;
-	box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
-}
-
 .h-stk {
 	.site-header {
+		background: $color__background-body;
+		box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
 		position: sticky;
 		top: 0;
 		z-index: 999;
@@ -607,6 +604,21 @@
 		&.h-sub.single-featured-image-behind {
 			.middle-header-contain {
 				width: 100%;
+			}
+		}
+
+		&.h-sub.single-featured-image-beside {
+			.middle-header-contain {
+				background: rgba( 0, 0, 0, 0.5 );
+				background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.85 ) 0%, rgba( 0, 0, 0, 0 ) 100% );
+				max-width: 100%;
+				width: 100%;
+
+				.wrapper {
+					margin: auto;
+					max-width: 90%;
+					width: 1200px;
+				}
 			}
 		}
 	}
