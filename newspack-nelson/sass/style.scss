@@ -106,8 +106,7 @@ body:not( .h-sb ) .site-header {
 
 // Featured templates - Short header on subpages
 .single-featured-image-beside,
-.single-featured-image-behind,
-.single-featured-image-above {
+.single-featured-image-behind {
 	@include media( tablet ) {
 		&.h-sub.h-db,
 		&.h-sub.h-sb {
