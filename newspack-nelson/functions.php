@@ -26,6 +26,15 @@ endif;
 add_action( 'after_setup_theme', 'newspack_nelson_setup', 12 );
 
 /**
+ * Function to remove the 'below header' widget area.
+ */
+function newspack_nelson_remove_widget() {
+	// Unregister the 'below header' widget area.
+	unregister_sidebar( 'header-3' );
+}
+add_action( 'widgets_init', 'newspack_nelson_remove_widget', 11 );
+
+/**
  * Function to load child theme's Google Fonts.
  */
 function newspack_nelson_fonts_url() {

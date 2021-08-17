@@ -26,6 +26,10 @@ body {
 
 p {
 	font-size: $font__size_base;
+
+	&.has-background {
+		padding: 20px 30px;
+	}
 }
 
 h1,
@@ -44,6 +48,10 @@ h6 {
 		&:visited {
 			color: $color__text-main;
 		}
+	}
+
+	&.has-background {
+		padding: 20px 30px;
 	}
 }
 

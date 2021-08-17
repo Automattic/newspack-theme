@@ -574,3 +574,12 @@ cite {
 		text-align: center;
 	}
 }
+
+// Listings
+.newspack-listings {
+	&.hide-date.hide-author {
+		.entry-subhead {
+			border-top: 0;
+		}
+	}
+}
