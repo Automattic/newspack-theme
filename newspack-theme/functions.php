@@ -308,6 +308,30 @@ function newspack_widgets_init() {
 
 	register_sidebar(
 		array(
+			'name'          => __( 'Above Header', 'newspack' ),
+			'id'            => 'header-2',
+			'description'   => esc_html__( 'Add widgets here to appear above the site header.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Below Header', 'newspack' ),
+			'id'            => 'header-3',
+			'description'   => esc_html__( 'Add widgets here to appear below the site header.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="below-content widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer', 'newspack' ),
 			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'newspack' ),

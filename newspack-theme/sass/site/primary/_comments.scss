@@ -71,12 +71,17 @@
 	}
 
 	> small {
+		bottom: 1em;
 		display: block;
 		font-size: $font__size_base;
 		position: absolute;
-		left: calc( #{$size__spacing-unit} + 100% );
-		top: calc( -3.5 * #{$size__spacing-unit} );
-		width: calc( 100vw / 12 );
+		right: 0;
+		white-space: nowrap;
+
+		// hide link if AMP is enabled; it adds an 'on' attribute.
+		[on] {
+			display: none;
+		}
 	}
 }
 
@@ -150,6 +155,10 @@
 				font-weight: 500;
 			}
 		}
+	}
+
+	#respond .comment-reply-title {
+		font-size: $font__size_base;
 	}
 }
 

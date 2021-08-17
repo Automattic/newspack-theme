@@ -177,6 +177,18 @@
 	}
 }
 
+//! Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.has-background {
+		padding: 20px 30px;
+	}
+}
+
 //! Paragraphs
 .has-drop-cap:not( :focus )::first-letter {
 	font-size: 4em;
@@ -767,6 +779,17 @@ p.has-background {
 	@include nestedSubMenuPadding();
 }
 
+.widget .wp-block-categories li {
+	font-weight: normal;
+	line-height: 1.6;
+	padding-bottom: 0;
+
+	a {
+		display: inline-block;
+		padding: #{0.125 * $size__spacing-unit} 0;
+	}
+}
+
 .wp-block-latest-posts {
 	li > a {
 		font-family: $font__heading;
@@ -806,6 +829,10 @@ p.has-background {
 	font-size: $font__size-xs;
 	line-height: 1.8;
 	padding: $size__spacing-unit;
+}
+
+.widget .wp-block-preformatted {
+	font-size: $font__size-sm;
 }
 
 //! Verse
