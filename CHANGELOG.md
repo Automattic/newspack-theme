@@ -1,3 +1,21 @@
+# [1.44.0](https://github.com/Automattic/newspack-theme/compare/v1.43.1...v1.44.0) (2021-08-17)
+
+
+### Bug Fixes
+
+* correct preformatted font size in sidebar ([#1480](https://github.com/Automattic/newspack-theme/issues/1480)) ([d4adcf9](https://github.com/Automattic/newspack-theme/commit/d4adcf986286d43f2c0368e391de5d267687dc17))
+* hide Cancel Reply link when AMP is enabled ([#1471](https://github.com/Automattic/newspack-theme/issues/1471)) ([eb9c43f](https://github.com/Automattic/newspack-theme/commit/eb9c43fb388f02cdb63b79cc068d3e705d35a0dd))
+* make sure comment block doesn't inherit wrong avatar size ([#1479](https://github.com/Automattic/newspack-theme/issues/1479)) ([85556cc](https://github.com/Automattic/newspack-theme/commit/85556cccc7191c44707b0e98fe2b7bd017cfe873))
+* reduce padding on headings with backgrounds ([#1477](https://github.com/Automattic/newspack-theme/issues/1477)) ([7cf3537](https://github.com/Automattic/newspack-theme/commit/7cf3537e59f2062a1732da4744d65099f76aaa0e))
+* remove overlap when featured image is above in Newspack Nelson ([#1482](https://github.com/Automattic/newspack-theme/issues/1482)) ([d818d63](https://github.com/Automattic/newspack-theme/commit/d818d63d5e64adbbd6371e79da3d7c42045fbd62))
+* remove styles when date, author hidden in listings ([#1472](https://github.com/Automattic/newspack-theme/issues/1472)) ([1ff0027](https://github.com/Automattic/newspack-theme/commit/1ff002759b419fdd714b01429c0295010c3b313a))
+* style categories widget block to match legacy widget ([#1478](https://github.com/Automattic/newspack-theme/issues/1478)) ([8749f10](https://github.com/Automattic/newspack-theme/commit/8749f10ff5f6cede6da8047231dce2b69a065f92))
+
+
+### Features
+
+* add 'above' and 'below' header widget areas ([#1475](https://github.com/Automattic/newspack-theme/issues/1475)) ([d7066cd](https://github.com/Automattic/newspack-theme/commit/d7066cd42fe21ff83070e268c4900f238c88ef00))
+
 ## [1.43.1](https://github.com/Automattic/newspack-theme/compare/v1.43.0...v1.43.1) (2021-08-10)
 
 
