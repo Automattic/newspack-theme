@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.4
+ * @package WooCommerce\Templates
+ * @version 5.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -20,7 +20,6 @@ defined( 'ABSPATH' ) || exit;
 $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
 ?>
 <section class="woocommerce-customer-details">
-
 	<h4><?php esc_html_e( 'Your Information', 'newspack' ); ?></h4>
 
 	<?php if ( $show_shipping ) : ?>
