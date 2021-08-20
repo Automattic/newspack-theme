@@ -1039,6 +1039,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/logo-resizer.php';
 
 /**
+ * Custom Login Screen.
+ */
+require get_template_directory() . '/inc/login-screen.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
