@@ -144,6 +144,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-sidebar';
 	}
 
+	// Adds a class of has-afw when there is an above footer widget.
+	if ( is_active_sidebar( 'footer-3' ) ) {
+		$classes[] = 'af-widget';
+	}
+
 	// Add a class for each category assigned to a single post.
 	if ( is_single() ) {
 		foreach ( ( get_the_category( $page_id ) ) as $category ) {

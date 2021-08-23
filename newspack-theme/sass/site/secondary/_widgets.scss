@@ -159,7 +159,8 @@
 }
 
 // Header widgets
-.header-widget {
+.header-widget,
+.above-footer-widgets {
 	.wrapper {
 		display: block;
 	}
@@ -189,6 +190,10 @@
 		margin: 0 auto;
 		max-width: 1200px;
 	}
+}
+
+.above-footer-widgets {
+	margin-top: #{2 * $size__spacing-unit};
 }
 
 .h-db .above-header-widgets {

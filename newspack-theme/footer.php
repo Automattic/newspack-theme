@@ -11,6 +11,14 @@
 
 ?>
 
+	<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+		<div class="above-footer-widgets">
+			<div class="wrapper">
+				<?php dynamic_sidebar( 'footer-3' ); ?>
+			</div><!-- .wrapper -->
+		</div><!-- .above-footer-widgets -->
+	<?php endif; ?>
+
 	<?php do_action( 'before_footer' ); ?>
 
 	</div><!-- #content -->

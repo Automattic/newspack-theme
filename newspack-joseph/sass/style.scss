@@ -411,15 +411,26 @@ hr {
 		color: $color__text-main;
 	}
 
-	.footer-branding .wrapper,
-	.footer-widgets:first-child {
-		border-top: 3px solid currentColor;
-	}
-
 	.widget-title {
 		color: $color__text-main;
 		font-size: $font__size_base;
 	}
+}
+
+.footer-branding .wrapper,
+.footer-widgets:first-child {
+	border-top: 3px solid currentColor;
+}
+
+.af-widget {
+	.footer-branding .wrapper,
+	.footer-widgets:first-child {
+		border: 0;
+	}
+}
+
+.above-footer-widgets {
+	overflow: hidden;
 }
 
 .site-content .wpnbha {
