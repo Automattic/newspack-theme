@@ -332,6 +332,18 @@ function newspack_widgets_init() {
 
 	register_sidebar(
 		array(
+			'name'          => __( 'Above Footer', 'newspack' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here to appear above the site footer.', 'newspack' ),
+			'before_widget' => '<section id="%1$s" class="above-footer widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer', 'newspack' ),
 			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'newspack' ),
@@ -1037,6 +1049,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Logo Resizer.
  */
 require get_template_directory() . '/inc/logo-resizer.php';
+
+/**
+ * Custom Login Screen.
+ */
+require get_template_directory() . '/inc/login-screen.php';
 
 /**
  * Load Jetpack compatibility file.

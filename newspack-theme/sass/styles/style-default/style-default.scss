@@ -185,3 +185,12 @@
 		border-top: 4px solid $color__border;
 	}
 }
+
+.af-widget {
+	.site-footer .footer-branding,
+	.site-footer .footer-widgets:first-child {
+		.wrapper {
+			border: 0;
+		}
+	}
+}
