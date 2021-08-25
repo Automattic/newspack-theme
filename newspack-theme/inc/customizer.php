@@ -1583,10 +1583,11 @@ function newspack_sanitize_font_provider_url( $code ) {
 		return '';
 	}
 	$font_service_urls = array(
-		'google'     => 'fonts.googleapis.com',
-		'fonts'      => 'fast.fonts.net',
-		'typekit'    => 'use.typekit.net',
-		'typography' => 'cloud.typography.com',
+		'google'      => 'fonts.googleapis.com',
+		'fonts'       => 'fast.fonts.net',
+		'typekit'     => 'use.typekit.net',
+		'typography'  => 'cloud.typography.com',
+		'typenetwork' => 'cloud.typenetwork.com',
 	);
 
 	$regex = '/\/\/[^\("\') \n]+/i';
