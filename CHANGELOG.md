@@ -1,3 +1,12 @@
+# [1.45.0](https://github.com/Automattic/newspack-theme/compare/v1.44.0...v1.45.0) (2021-08-25)
+
+
+### Features
+
+* add above footer widget area ([#1488](https://github.com/Automattic/newspack-theme/issues/1488)) ([6399499](https://github.com/Automattic/newspack-theme/commit/63994993aa8a513bdaf752de4b27f44e9c4ec1b9))
+* add custom login screen ([#1489](https://github.com/Automattic/newspack-theme/issues/1489)) ([bfae20c](https://github.com/Automattic/newspack-theme/commit/bfae20c4230cd607b966af63cfc92cc4d6c51ca3))
+* add support for Typenetwork.com fonts ([#1494](https://github.com/Automattic/newspack-theme/issues/1494)) ([e773e1a](https://github.com/Automattic/newspack-theme/commit/e773e1a64b576e9a350f10605e98a1e59dc0b469))
+
 # [1.44.0](https://github.com/Automattic/newspack-theme/compare/v1.43.1...v1.44.0) (2021-08-17)
 
 
