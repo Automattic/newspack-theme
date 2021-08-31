@@ -289,7 +289,7 @@ function newspack_get_the_archive_title() {
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name );
+		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name ) . '<span class="page-description">' . single_term_title( '', false ) . '</span>';
 	} else {
 		$title = esc_html__( 'Archives:', 'newspack' );
 	}
