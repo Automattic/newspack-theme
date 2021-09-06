@@ -17,7 +17,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-amp-auto-lightbox-disable>
 <?php
 
 do_action( 'wp_body_open' );
