@@ -812,7 +812,7 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add option to select the default post template
+	// Add option to select the default post template.
 	$wp_customize->add_setting(
 		'post_template_default',
 		array(
@@ -953,6 +953,28 @@ function newspack_customize_register( $wp_customize ) {
 				'beside' => esc_html__( 'Beside article title', 'newspack' ),
 				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
+			),
+			'section' => 'page_default_settings',
+		)
+	);
+
+	// Add option to select the d page template.
+	$wp_customize->add_setting(
+		'page_template_default',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_post_template',
+		)
+	);
+	$wp_customize->add_control(
+		'page_template_default',
+		array(
+			'type'    => 'select',
+			'label'   => __( 'Default Page Template', 'newspack' ),
+			'choices' => array(
+				'default'            => esc_html__( 'Default Template', 'newspack' ),
+				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
+				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
 			'section' => 'page_default_settings',
 		)
