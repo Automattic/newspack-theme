@@ -1001,10 +1001,17 @@ add_filter( 'get_the_archive_title', 'newspack_update_the_archive_title', 11, 1 
  * @param boolean $update Whether this is an existing post being updated or not.
  */
 function newspack_maybe_set_default_post_template( $post_ID, $post, $update ) {
-	if ( ! $update && 'post' === $post->post_type ) {
-		$post_template_default = get_theme_mod( 'post_template_default' );
-		if ( 'default' !== $post_template_default ) {
-			update_post_meta( $post_ID, '_wp_page_template', $post_template_default );
+	if ( ! $update ) {
+		if ( 'post' === $post->post_type ) {
+			$post_template_default = get_theme_mod( 'post_template_default' );
+			if ( 'default' !== $post_template_default ) {
+				update_post_meta( $post_ID, '_wp_page_template', $post_template_default );
+			}
+		} elseif ( 'page' === $post->post_type ) {
+			$page_template_default = get_theme_mod( 'page_template_default' );
+			if ( 'default' !== $page_template_default ) {
+				update_post_meta( $post_ID, '_wp_page_template', $page_template_default );
+			}
 		}
 	}
 }
