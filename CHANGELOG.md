@@ -1,3 +1,16 @@
+# [1.46.0](https://github.com/Automattic/newspack-theme/compare/v1.45.0...v1.46.0) (2021-09-08)
+
+
+### Bug Fixes
+
+* ensure header_color is defined ([#1491](https://github.com/Automattic/newspack-theme/issues/1491)) ([a5774a6](https://github.com/Automattic/newspack-theme/commit/a5774a60296ea8d88cfec158192bf7700c4493d4))
+* turn off AMP lightbox by default for theme elements ([#1498](https://github.com/Automattic/newspack-theme/issues/1498)) ([2be2c79](https://github.com/Automattic/newspack-theme/commit/2be2c798b8c423ed5a4358ce5b652b132e1d21b9))
+
+
+### Features
+
+* option to pick page default template ([#1497](https://github.com/Automattic/newspack-theme/issues/1497)) ([48c3125](https://github.com/Automattic/newspack-theme/commit/48c3125e5dc7679464271f2ec24b9ed1a65f7a3b))
+
 # [1.45.0](https://github.com/Automattic/newspack-theme/compare/v1.44.0...v1.45.0) (2021-08-25)
 
 
