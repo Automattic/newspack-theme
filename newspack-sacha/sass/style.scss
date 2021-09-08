@@ -448,6 +448,14 @@ cite {
 	&.author .page-header {
 		display: block;
 
+		.page-title {
+			margin: 0 0 1rem;
+		}
+
+		> span {
+			display: inline;
+		}
+
 		.avatar {
 			margin: 0 auto $size__spacing-unit;
 
@@ -460,6 +468,10 @@ cite {
 				height: 80px;
 				width: 80px;
 			}
+		}
+
+		.author-social-links {
+			justify-content: center;
 		}
 	}
 }
