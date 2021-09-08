@@ -156,7 +156,35 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 	 * Prints list of social links for the current author.
 	 */
 	function newspack_author_social_links( $author_id, $size = 24 ) {
+		$links = newspack_author_get_social_links( $author_id, $size );
 
+		// Create array of allowed HTML, including SVG markup.
+		$allowed_html = array(
+			'a'  => array(
+				'href'   => array(),
+				'title'  => array(),
+				'target' => array(),
+			),
+			'li' => array(
+				'class' => array(),
+			),
+		);
+		$allowed_html = array_merge( $allowed_html, newspack_sanitize_svgs() );
+
+		if ( '' !== $links && true === get_theme_mod( 'show_author_social', false ) ) {
+			echo '<ul class="author-social-links">' . wp_kses( $links, $allowed_html ) . '</ul>';
+		}
+	}
+endif;
+
+if ( ! function_exists( 'newspack_author_get_social_links' ) ) :
+	/**
+	 * Gets a list of social links for the current author.
+	 *
+	 * @param integer $author_id The author ID.
+	 * @param integer $size The SVG icon size.
+	 */
+	function newspack_author_get_social_links( $author_id, $size = 24 ) {
 		// Get list of available social profiles.
 		$social_profiles = array(
 			'facebook',
@@ -174,19 +202,6 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 		// Create empty string for links.
 		$links = '';
 
-		// Create array of allowed HTML, including SVG markup.
-		$allowed_html = array(
-			'a'  => array(
-				'href'   => array(),
-				'title'  => array(),
-				'target' => array(),
-			),
-			'li' => array(
-				'class' => array(),
-			),
-		);
-		$allowed_html = array_merge( $allowed_html, newspack_sanitize_svgs() );
-
 		foreach ( $social_profiles as $profile ) {
 			if ( '' !== get_the_author_meta( $profile, $author_id ) ) {
 				if ( 'twitter' === $profile ) {
@@ -197,9 +212,7 @@ if ( ! function_exists( 'newspack_author_social_links' ) ) :
 			}
 		}
 
-		if ( '' !== $links && true === get_theme_mod( 'show_author_social', false ) ) {
-			echo '<ul class="author-social-links">' . wp_kses( $links, $allowed_html ) . '</ul>';
-		}
+		return $links;
 	}
 endif;
 

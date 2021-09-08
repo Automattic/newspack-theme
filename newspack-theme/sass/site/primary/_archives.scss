@@ -97,6 +97,20 @@
 			width: 30px;
 		}
 
+		.page-title {
+			margin-bottom: 0;
+		}
+
+		> span {
+			align-items: center;
+			display: inline-flex;
+			flex-wrap: wrap;
+
+			> * {
+				width: 100%;
+			}
+		}
+
 		@include media( mobile ) {
 			.avatar {
 				height: 80px;
