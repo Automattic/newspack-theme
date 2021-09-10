@@ -135,6 +135,7 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 					get_template_part( 'template-parts/content/content', 'archive' );
 				}
 
+				do_action( 'after_archive_post', $post_count );
 				// End the loop.
 			endwhile;
 
