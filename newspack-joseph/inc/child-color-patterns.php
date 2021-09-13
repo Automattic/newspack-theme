@@ -18,8 +18,6 @@ function newspack_joseph_custom_colors_css() {
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color = get_theme_mod( 'header_color_hex', '#666666' );
-		} else {
-			$header_color = '#111';
 		}
 
 		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {

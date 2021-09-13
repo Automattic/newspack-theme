@@ -17,9 +17,7 @@ function newspack_sacha_custom_colors_css() {
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
-			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
-		} else {
-			$header_color = '#333';
+			$header_color = get_theme_mod( 'header_color_hex', '#666666' );
 		}
 
 		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
