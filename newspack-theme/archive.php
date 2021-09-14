@@ -81,22 +81,32 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 					// Get info for underwriter archive sponsors.
 					newspack_sponsored_underwriters_info( $underwriter_sponsors );
 				}
-			?>
 
-				<?php if ( is_author() ) : ?>
-					<div class="author-meta">
-						<?php
-							$author_email = get_the_author_meta( 'user_email', get_query_var( 'author' ) );
-							if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author_email ) :
-							?>
-							<a class="author-email" href="<?php echo 'mailto:' . esc_attr( $author_email ); ?>">
-								<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
-								<?php echo esc_html( $author_email ); ?>
-							</a>
-						<?php endif; ?>
+				if ( is_author() ) :
+					// Get all of the author information.
+					$author_id          = get_the_author_meta( 'ID' );
+					$show_author_social = get_theme_mod( 'show_author_social', false );
+					$show_author_email  = get_theme_mod( 'show_author_email', false );
+					$author_social      = newspack_author_get_social_links( $author_id );
+					$author_email       = get_the_author_meta( 'user_email', get_query_var( 'author' ) );
 
-						<?php newspack_author_social_links( get_the_author_meta( 'ID' ), 20 ); ?>
-					</div><!-- .author-meta -->
+					// Don't output author-meta container unless it's populated.
+					if ( ( $show_author_social && '' !== $author_social ) || ( $show_author_email && '' !== $author_email ) ) :
+						?>
+						<div class="author-meta">
+							<?php
+							if ( $show_author_email && '' !== $author_email ) :
+								?>
+								<a class="author-email" href="<?php echo 'mailto:' . esc_attr( $author_email ); ?>">
+									<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 18 ), newspack_sanitize_svgs() ); ?>
+									<?php echo esc_html( $author_email ); ?>
+								</a>
+							<?php endif; ?>
+
+							<?php newspack_author_social_links( $author_id, 20 ); ?>
+						</div><!-- .author-meta -->
+
+					<?php endif; ?>
 
 					<?php do_action( 'newspack_theme_below_author_archive_meta' ); ?>
 
@@ -125,6 +135,7 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 					get_template_part( 'template-parts/content/content', 'archive' );
 				}
 
+				do_action( 'after_archive_post', $post_count );
 				// End the loop.
 			endwhile;
 
