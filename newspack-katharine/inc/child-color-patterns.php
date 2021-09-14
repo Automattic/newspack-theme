@@ -10,17 +10,14 @@
 function newspack_katharine_custom_colors_css() {
 	$primary_color   = newspack_get_primary_color();
 	$secondary_color = newspack_get_secondary_color();
-
-	$header_color          = $primary_color;
-	$header_color_contrast = newspack_get_color_contrast( $primary_color );
+	$header_color    = '#333';
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
 		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
-			$header_color          = get_theme_mod( 'header_color_hex', '#666666' );
-			$header_color_contrast = newspack_get_color_contrast( $header_color );
+			$header_color = get_theme_mod( 'header_color_hex', '#666666' );
 		}
 
 		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
@@ -32,6 +29,7 @@ function newspack_katharine_custom_colors_css() {
 	// Set colour contrasts.
 	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
 	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
+	$header_color_contrast    = newspack_get_color_contrast( $header_color );
 
 	$theme_css = '
 		.archive .page-title,

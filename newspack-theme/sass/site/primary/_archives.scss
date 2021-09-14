@@ -97,6 +97,24 @@
 			width: 30px;
 		}
 
+		.page-title:last-child {
+			margin-bottom: 0;
+		}
+
+		.taxonomy-description p:first-child {
+			margin-top: 0;
+		}
+
+		> span {
+			align-items: center;
+			display: inline-flex;
+			flex-wrap: wrap;
+
+			> * {
+				width: 100%;
+			}
+		}
+
 		@include media( mobile ) {
 			.avatar {
 				height: 80px;

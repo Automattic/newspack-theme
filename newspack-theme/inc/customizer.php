@@ -1049,6 +1049,29 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to customize archive titles.
+	$wp_customize->add_setting(
+		'archive_title_format',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'newspack_sanitize_radio',
+		)
+	);
+
+	$wp_customize->add_control(
+		'archive_title_format',
+		array(
+			'type'        => 'radio',
+			'label'       => esc_html__( 'Archive Title Format', 'newspack' ),
+			'description' => esc_html__( 'Change the format of the title used on archive pages.', 'newspack' ),
+			'choices'     => array(
+				'default' => esc_html__( 'Default (eg. "Category: Featured", "Author: Jane Doe")', 'newspack' ),
+				'short'   => esc_html__( 'Only archive name (eg. "Featured", "Jane Doe")', 'newspack' ),
+			),
+			'section'     => 'archive_options',
+		)
+	);
+
 	/**
 	 * Comments settings
 	 */

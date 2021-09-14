@@ -976,7 +976,9 @@ add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
  */
 function newspack_update_the_archive_title( $title ) {
 	// Split the title into parts so we can wrap them with spans:
-	$title_parts = explode( '<span class="page-description">', $title, 2 );
+	$title_parts  = explode( '<span class="page-description">', $title, 2 );
+	$title_format = get_theme_mod( 'archive_title_format', 'default' );
+
 	// Glue it back together again.
 	if ( ! empty( $title_parts[1] ) ) {
 		$title = wp_kses(
@@ -987,7 +989,11 @@ function newspack_update_the_archive_title( $title ) {
 				),
 			)
 		);
-		$title = '<span class="page-subtitle">' . esc_html( $title_parts[0] ) . '</span><span class="page-description">' . $title;
+		if ( 'default' === $title_format ) {
+			$title = '<span class="page-subtitle">' . esc_html( $title_parts[0] ) . '</span><span class="page-description">' . $title;
+		} else {
+			$title = '<span class="page-description">' . $title;
+		}
 	}
 	return $title;
 }
