@@ -1,3 +1,16 @@
+# [1.47.0](https://github.com/Automattic/newspack-theme/compare/v1.46.0...v1.47.0) (2021-09-14)
+
+
+### Bug Fixes
+
+* rework header colour logic ([#1506](https://github.com/Automattic/newspack-theme/issues/1506)) ([686f088](https://github.com/Automattic/newspack-theme/commit/686f088a4124e2eef5f0c91e1526358a809e604e))
+
+
+### Features
+
+* **archive template:** add after_archive_post action ([#1507](https://github.com/Automattic/newspack-theme/issues/1507)) ([178b98d](https://github.com/Automattic/newspack-theme/commit/178b98d23c4a6b69c753459b08fbd00c68ca4eec))
+* add option to change archive title format ([#1503](https://github.com/Automattic/newspack-theme/issues/1503)) ([82d5ddb](https://github.com/Automattic/newspack-theme/commit/82d5ddb642fac1170f204f5020c6affe803b924b))
+
 # [1.46.0](https://github.com/Automattic/newspack-theme/compare/v1.45.0...v1.46.0) (2021-09-08)
 
 
