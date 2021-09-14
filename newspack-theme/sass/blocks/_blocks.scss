@@ -907,16 +907,6 @@ p.has-background {
 	figcaption {
 		text-align: left;
 	}
-
-	@include media( mobileonly ) {
-		.aligncenter {
-			display: block;
-			img {
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-	}
 }
 
 //! Galleries
