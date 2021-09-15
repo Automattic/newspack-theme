@@ -51,6 +51,11 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 					'small'  => true,
 					'sub'    => true,
 					'sup'    => true,
+					'a'      => array(
+						'href'   => true,
+						'target' => true,
+						'rel'    => true,
+					),
 				]
 			);
 			?>
