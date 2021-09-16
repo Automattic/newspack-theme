@@ -1242,11 +1242,21 @@ hr {
 }
 
 .has-large-font-size {
-	font-size: $font__size-xl;
+	font-size: $font__size-lg;
 }
 
 .has-huge-font-size {
-	font-size: $font__size-xxl;
+	font-size: $font__size-xl;
+}
+
+@include media( tablet ) {
+	.has-large-font-size {
+		font-size: $font__size-xl;
+	}
+
+	.has-huge-font-size {
+		font-size: $font__size-xxl;
+	}
 }
 
 //! Custom background colors
