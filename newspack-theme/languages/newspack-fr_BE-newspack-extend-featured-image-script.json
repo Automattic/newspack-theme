@@ -1,7 +1,7 @@
 {
-	"translation-revision-date": "2021-02-24 08:30-0800",
+	"translation-revision-date": "2021-09-15 16:33-0700",
 	"generator": "WP-CLI/2.4.0",
-	"source": "js/src/extend-featured-image-editor.js",
+	"source": "js/dist/extend-featured-image-editor.js",
 	"domain": "messages",
 	"locale_data": {
 		"messages": {

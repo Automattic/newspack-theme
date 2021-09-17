@@ -1,13 +1,14 @@
 {
-	"translation-revision-date": "2021-02-24 08:32-0800",
+	"translation-revision-date": "2021-09-15 16:34-0700",
 	"generator": "WP-CLI/2.4.0",
-	"source": "js/src/post-meta-toggles.js",
+	"source": "js/dist/post-meta-toggles.js",
 	"domain": "messages",
 	"locale_data": {
 		"messages": {
 			"": { "domain": "messages", "lang": "pt_BR", "plural-forms": "nplurals=2; plural=n != 1;" },
 			"Hide updated date": [""],
-			"Hide page title": [""]
+			"Hide page title": [""],
+			"Show Jetpack share buttons": [""]
 		}
 	}
 }
