@@ -431,7 +431,7 @@ function newspack_scripts() {
 	}
 
 	if ( newspack_is_sticky_animated_header() ) {
-		wp_enqueue_script( 'amp-animation', 'hhttps://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
+		wp_enqueue_script( 'amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
 		wp_enqueue_script( 'amp-position-observer', 'https://cdn.ampproject.org/v0/amp-position-observer-0.1.js', array(), '0.1', true );
 	}
 
