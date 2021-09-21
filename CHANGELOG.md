@@ -1,3 +1,18 @@
+# [1.48.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.47.0...v1.48.0-alpha.1) (2021-09-21)
+
+
+### Bug Fixes
+
+* add responsive sizes for large, huge font sizes ([#1517](https://github.com/Automattic/newspack-theme/issues/1517)) ([a6a1c87](https://github.com/Automattic/newspack-theme/commit/a6a1c874e3da2dcbc4ab9500c6b0160c7dc63cc8))
+* correct centered image caption alignment ([#1513](https://github.com/Automattic/newspack-theme/issues/1513)) ([b3c1d66](https://github.com/Automattic/newspack-theme/commit/b3c1d66d30d5ea4391a7246018eefcfb0d8af06a))
+* update SVG sanitization to include more HTML elements ([#1516](https://github.com/Automattic/newspack-theme/issues/1516)) ([0b94af4](https://github.com/Automattic/newspack-theme/commit/0b94af4a788f69cee012923b4ff113a806397eb4))
+
+
+### Features
+
+* add tiktok, telegram icons ([#1511](https://github.com/Automattic/newspack-theme/issues/1511)) ([88e7a66](https://github.com/Automattic/newspack-theme/commit/88e7a66327ba8036aea86ee4ecda73268d88ff02))
+* allow links in the article subtitle field ([#1514](https://github.com/Automattic/newspack-theme/issues/1514)) ([f70b1d8](https://github.com/Automattic/newspack-theme/commit/f70b1d83944909baf88da7083997aa78d30eed79))
+
 # [1.47.0](https://github.com/Automattic/newspack-theme/compare/v1.46.0...v1.47.0) (2021-09-14)
 
 
