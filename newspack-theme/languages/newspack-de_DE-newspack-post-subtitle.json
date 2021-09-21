@@ -1,7 +1,7 @@
 {
-	"translation-revision-date": "2021-02-24 08:25-0800",
+	"translation-revision-date": "2021-09-15 16:31-0700",
 	"generator": "WP-CLI/2.4.0",
-	"source": "js/src/post-subtitle/index.js",
+	"source": "js/dist/post-subtitle.js",
 	"domain": "messages",
 	"locale_data": {
 		"messages": {

@@ -780,7 +780,7 @@ add_action( 'wp_head', 'newspack_typography_css_wrap' );
  */
 function newspack_sanitize_svgs() {
 	$svg_args = array(
-		'svg'   => array(
+		'svg'      => array(
 			'class'           => true,
 			'aria-hidden'     => true,
 			'aria-labelledby' => true,
@@ -790,15 +790,21 @@ function newspack_sanitize_svgs() {
 			'height'          => true,
 			'viewbox'         => true,
 		),
-		'g'     => array(
-			'fill' => true,
+		'g'        => array(
+			'fill'      => true,
+			'fill-rule' => true,
 		),
-		'title' => array(
+		'title'    => array(
 			'title' => true,
 		),
-		'path'  => array(
+		'path'     => array(
 			'd'    => true,
 			'fill' => true,
+		),
+		'defs'     => true,
+		'clipPath' => true,
+		'polygon'  => array(
+			'points' => true,
 		),
 	);
 
