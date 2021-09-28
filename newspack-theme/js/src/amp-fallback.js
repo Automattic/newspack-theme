@@ -5,7 +5,7 @@
  */
 
 ( function() {
-	// Search toggle.
+	// Shared variables
 	const headerContain = document.getElementById( 'masthead' ),
 		searchToggle = document.getElementById( 'search-toggle' );
 
@@ -157,6 +157,47 @@
 			removeOverlay( maskId );
 		}
 	} );
+
+	// Sticky header fallback animation
+	if (
+		body.classList.contains( 'h-stk' ) &&
+		body.classList.contains( 'h-sub' ) &&
+		( body.classList.contains( 'single-featured-image-behind' ) ||
+			body.classList.contains( 'single-featured-image-beside' ) )
+	) {
+		let scrollTimer,
+			lastScrollFireTime = 0;
+
+		window.onscroll = function() {
+			toggleHeaderClass();
+		};
+
+		/**
+		 * @description Limit onscroll checkes and add CSS class when scrolled least 200px down the page.
+		 */
+		function toggleHeaderClass() {
+			const scrollBarPosition = window.pageYOffset,
+				minScrollTime = 100,
+				now = new Date().getTime();
+
+			if ( ! scrollTimer ) {
+				if ( now - lastScrollFireTime > 3 * minScrollTime ) {
+					lastScrollFireTime = now;
+				}
+				scrollTimer = setTimeout( function() {
+					scrollTimer = null;
+					lastScrollFireTime = new Date().getTime();
+				}, minScrollTime );
+			}
+
+			// At specifiv position do what you want
+			if ( 200 >= scrollBarPosition ) {
+				headerContain.classList.remove( 'head-scroll' );
+			} else {
+				headerContain.classList.add( 'head-scroll' );
+			}
+		}
+	}
 
 	// Comments toggle fallback.
 	const commentsToggle = document.getElementById( 'comments-toggle' );

@@ -122,7 +122,23 @@ body {
 			display: none;
 		}
 
-		&:not( .newspack-front-page ):not( .style-pack-style-2 ) .global_below_header + .site-content {
+		// Make sure above header ads don't end up behind the header.
+		&.h-stk .global_above_header {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&.single-featured-image-behind:not( .newspack-front-page ):not( .style-pack-style-2 )
+		.global_below_header
+		+ .site-content {
+		margin-top: 0;
+	}
+
+	@include media( tablet ) {
+		&.single-featured-image-beside:not( .newspack-front-page ):not( .style-pack-style-2 )
+			.global_below_header
+			+ .site-content {
 			margin-top: 0;
 		}
 	}

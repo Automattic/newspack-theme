@@ -13,14 +13,10 @@
 	}
 }
 
-#page {
-	overflow: hidden;
-	width: 100%;
-}
-
 .site-content {
 	min-height: 30vh;
 	margin-top: #{1.5 * $size__spacing-unit};
+	overflow: hidden;
 
 	@include media( tablet ) {
 		margin-top: #{4 * $size__spacing-unit};

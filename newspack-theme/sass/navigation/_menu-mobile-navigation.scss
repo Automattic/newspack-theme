@@ -326,6 +326,12 @@
 	}
 }
 
+.h-sb.h-sh .subpage-sidebar {
+	.nav1 ul.main-menu > li > a {
+		color: $color__text-main;
+	}
+}
+
 #desktop-sidebar-fallback,
 #mobile-sidebar-fallback,
 #subpage-sidebar-fallback {

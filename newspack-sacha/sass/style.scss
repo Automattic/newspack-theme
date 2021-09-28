@@ -57,6 +57,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+// Sticky header
+.h-stk.h-sub.h-sb.single-featured-image-beside {
+	.middle-header-contain {
+		background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.85 ) 0%, rgba( 0, 0, 0, 0 ) 100% );
+		color: #fff;
+	}
+}
+
 // Mobile CTA
 .button.mb-cta {
 	border-radius: 0;
