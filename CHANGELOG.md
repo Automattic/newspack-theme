@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/Automattic/newspack-theme/compare/v1.48.0...v1.49.0) (2021-09-28)
+
+
+### Features
+
+* add sticky header option to theme ([#1254](https://github.com/Automattic/newspack-theme/issues/1254)) ([3bae085](https://github.com/Automattic/newspack-theme/commit/3bae0850f50bfa0948fd545c9860fbcfa43ef01d))
+
 # [1.48.0](https://github.com/Automattic/newspack-theme/compare/v1.47.0...v1.48.0) (2021-09-21)
 
 
