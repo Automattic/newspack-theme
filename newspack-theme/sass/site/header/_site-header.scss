@@ -234,7 +234,7 @@
 			margin-right: 0;
 		}
 
-		.site-header .custom-logo-link img {
+		.site-header .custom-logo {
 			height: auto;
 			max-width: 100%;
 			margin: auto;
@@ -282,7 +282,7 @@
 			}
 		}
 
-		.site-header .custom-logo-link img {
+		.site-header .custom-logo {
 			max-width: inherit;
 		}
 	}
@@ -479,7 +479,7 @@
 		&.h-dh {
 			.featured-image-behind,
 			.featured-image-beside {
-				min-height: 100vh;
+				min-height: 101vh;
 			}
 		}
 
@@ -527,6 +527,104 @@
 				}
 			}
 		}
+	}
+}
+
+// Sticky header
+.h-stk {
+	.site-header {
+		background: $color__background-body;
+		box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
+		position: sticky;
+		top: 0;
+		z-index: 999;
+	}
+
+	&.admin-bar .site-header {
+		@include media( mobile ) {
+			top: 46px;
+		}
+		@include media( tablet ) {
+			top: 32px;
+		}
+	}
+
+	@include media( tablet ) {
+		// Tighten up the padding a bit
+		&.h-dh:not( .h-sub ) .middle-header-contain .wrapper {
+			padding: #{0.75 * $size__spacing-unit} 0;
+		}
+
+		&.h-db .bottom-header-contain {
+			border-bottom: 1px solid $color__border;
+			border-top: 1px solid $color__border;
+			.wrapper {
+				border: 0;
+			}
+		}
+	}
+
+	&.h-sub.single-featured-image-behind,
+	&.h-sub.single-featured-image-beside {
+		.site-header {
+			box-shadow: none;
+			position: sticky;
+		}
+
+		@include media( tablet ) {
+			.site-header {
+				display: flex;
+				align-items: center;
+				height: 80px;
+				margin-bottom: -80px;
+				background: transparent;
+
+				.sticky-bg {
+					bottom: 0;
+					content: '';
+					background: #000;
+					display: block;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: -1;
+					transition: opacity 0.5s ease-in;
+				}
+
+				&.head-scroll .sticky-bg {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+
+	@include media( tablet ) {
+		&.h-sub.single-featured-image-behind {
+			.middle-header-contain {
+				width: 100%;
+			}
+		}
+
+		&.h-sub.single-featured-image-beside {
+			div.middle-header-contain {
+				background: rgba( 0, 0, 0, 0.5 );
+				background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.85 ) 0%, rgba( 0, 0, 0, 0 ) 100% );
+				max-width: 100%;
+				width: 100%;
+
+				.wrapper {
+					margin: auto;
+					max-width: 90%;
+					width: 1200px;
+				}
+			}
+		}
+	}
+
+	.highlight-menu-contain.desktop-only {
+		display: none;
 	}
 }
 

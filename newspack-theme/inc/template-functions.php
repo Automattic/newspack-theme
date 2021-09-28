@@ -124,6 +124,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'h-dh'; // Header default height.
 	}
 
+	$header_sticky = get_theme_mod( 'header_sticky', false );
+	if ( true === $header_sticky ) {
+		$classes[] = 'h-stk'; // Header sticky.
+	}
+
 	$cta_show = get_theme_mod( 'show_header_cta', false );
 	$cta_url  = get_theme_mod( 'header_cta_url', '' );
 	if ( true === $cta_show && '' !== $cta_url ) {

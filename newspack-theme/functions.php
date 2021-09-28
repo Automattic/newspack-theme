@@ -441,6 +441,12 @@ function newspack_scripts() {
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
+
+	if ( newspack_is_sticky_animated_header() ) {
+		wp_enqueue_script( 'amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
+		wp_enqueue_script( 'amp-position-observer', 'https://cdn.ampproject.org/v0/amp-position-observer-0.1.js', array(), '0.1', true );
+	}
+
 	// Load custom fonts, if any.
 	if ( get_theme_mod( 'custom_font_import_code', '' ) ) {
 		wp_enqueue_style( 'newspack-font-import', newspack_custom_typography_link( 'custom_font_import_code' ), array(), null );
@@ -452,6 +458,69 @@ function newspack_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
+
+/**
+ * Add AMP-related attributes to the script tags.
+ *
+ * @param string $tag Enqueued script tag.
+ * @param string $handle Handle of enqueued of script.
+ *
+ * @return string Modified $tag.
+ */
+function newspack_add_amp_attributes( $tag, $handle ) {
+
+	if ( newspack_is_sticky_animated_header() ) {
+		$scripts_to_defer = array( 'amp-animation', 'amp-position-observer' );
+		foreach ( $scripts_to_defer as $defer_script ) {
+			if ( $defer_script === $handle ) {
+				return str_replace( ' src', ' async custom-element="true" src', $tag );
+			}
+		}
+	}
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'newspack_add_amp_attributes', 10, 3 );
+
+/**
+ * Add AMP animation for when:
+ * - A site has a sticky header, and a simplified subpage header
+ * - When viewing a page or post with a featured image behind or beside.
+ */
+function newspack_sticky_header_amp_animation() {
+	if ( newspack_is_sticky_animated_header() ) {
+		$sticky_header_fade_out = array(
+			'duration'   => '500ms',
+			'fill'       => 'both',
+			'iterations' => '1',
+			'animations' => array(
+				array(
+					'selector'  => '#masthead .sticky-bg',
+					'keyframes' => array(
+						'opacity' => 0,
+					),
+				),
+			),
+		);
+
+		$sticky_header_fade_in = array(
+			'duration'   => '500ms',
+			'fill'       => 'both',
+			'iterations' => '1',
+			'animations' => array(
+				array(
+					'selector'  => '#masthead .sticky-bg',
+					'keyframes' => array(
+						'opacity' => 0.7,
+					),
+				),
+			),
+		);
+
+		echo '<amp-animation id="headerFadeOut" layout="nodisplay"><script type="application/json">' . wp_json_encode( $sticky_header_fade_out ) . '</script></amp-animation>';
+		echo '<amp-animation id="headerFadeIn" layout="nodisplay"><script type="application/json">' . wp_json_encode( $sticky_header_fade_in ) . '</script></amp-animation>';
+	}
+}
+add_action( 'wp_body_open', 'newspack_sticky_header_amp_animation' );
 
 /**
  * Enqueue scripts for:
@@ -531,6 +600,21 @@ function newspack_skip_link_focus_fix() {
 	<?php
 }
 add_action( 'wp_print_footer_scripts', 'newspack_skip_link_focus_fix' );
+
+/**
+ * Checks whether the amp animation files need to be loaded for the sticky header.
+ */
+function newspack_is_sticky_animated_header() {
+	$header_sticky          = get_theme_mod( 'header_sticky', false );
+	$header_sub_simplified  = get_theme_mod( 'header_sub_simplified', false );
+	$feat_img_behind_beside = in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) );
+
+	if ( $header_sticky && $header_sub_simplified && $feat_img_behind_beside && newspack_is_amp() ) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /**
  * Enqueue supplemental block editor styles.
