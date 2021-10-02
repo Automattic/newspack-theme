@@ -24,6 +24,22 @@ Newspack Katharine Editor Styles
 	}
 }
 
+.has-text-align-center .article-section-title::before {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.has-text-align-right .article-section-title {
+	padding-top: calc( 1rem + 5px );
+	position: relative;
+
+	&::before {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
 .wp-block-newspack-blocks-homepage-articles article .entry-meta,
 .entry-meta {
 	font-size: $font__size-xs;
