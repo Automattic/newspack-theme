@@ -260,6 +260,65 @@
 			} );
 		} );
 
+		// Controls to show/hide mobile CTA options
+		wp.customize( 'show_header_cta', function( setting ) {
+			wp.customize.control( 'header_cta_text', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'header_cta_url', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'header_cta_target', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'header_cta_hex', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+			wp.customize.control( 'cta_in_simplified_header', function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			} );
+		} );
+
 		// Only show the rest of the author controls when the bio is visible.
 		wp.customize( 'show_author_bio', function( setting ) {
 			wp.customize.control( 'show_author_email', function( control ) {
