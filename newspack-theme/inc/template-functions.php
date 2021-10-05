@@ -134,7 +134,7 @@ function newspack_body_classes( $classes ) {
 	$cta_in_sh = get_theme_mod( 'cta_in_simplified_header', false );
 	if ( true === $cta_show && '' !== $cta_url ) {
 		$classes[] = 'h-cta'; // Mobile CTA is showing.
-		if ( true === $cta_in_sh ) {
+		if ( true === $cta_in_sh && true === $header_sub_simplified && ! is_front_page() ) {
 			$classes[] = 'h-sub-cta'; // Mobile CTA is showing always in simplified subheader.
 		}
 	}

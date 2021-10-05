@@ -606,7 +606,16 @@
 				width: 100%;
 			}
 		}
+	}
 
+	.highlight-menu-contain.desktop-only {
+		display: none;
+	}
+}
+
+.h-stk,
+.h-sub-cta {
+	@include media( tablet ) {
 		&.h-sub.single-featured-image-beside {
 			div.middle-header-contain {
 				background: rgba( 0, 0, 0, 0.5 );
@@ -622,10 +631,6 @@
 				}
 			}
 		}
-	}
-
-	.highlight-menu-contain.desktop-only {
-		display: none;
 	}
 }
 
