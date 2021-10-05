@@ -24,7 +24,7 @@ Newspack Katharine Editor Styles
 	}
 }
 
-.wp-block-newspack-blocks-homepage-articles article .entry-meta,
+.wpnbha article .entry-meta,
 .entry-meta {
 	font-size: $font__size-xs;
 }
@@ -57,6 +57,34 @@ Newspack Katharine Editor Styles
 .wp-block-newspack-blocks-homepage-articles.is-style-borders article {
 	border-bottom-style: dotted;
 	border-bottom-color: $color__text-main;
+}
+
+.wpnbha.has-text-align-center {
+	.article-section-title::before,
+	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+		.post-has-image
+		.entry-title {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.wpnbha.has-text-align-right {
+	.article-section-title {
+		padding-top: calc( 1rem + 5px );
+		position: relative;
+
+		&::before {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+		.post-has-image
+		.entry-title {
+		margin-left: 15%;
+	}
 }
 
 .wp-block-cover,

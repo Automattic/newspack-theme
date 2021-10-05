@@ -146,6 +146,23 @@ div.wpnbha .article-section-title,
 	}
 }
 
+.wpnbha.has-text-align-right,
+.wpnbha.has-text-align-center {
+	.article-section-title span {
+		&::before {
+			background-color: currentColor;
+			content: '';
+			flex: 1 0 0.25rem;
+			height: 1px;
+			margin: 0 0.25rem 0 0;
+		}
+	}
+}
+
+.wpnbha.has-text-align-right .article-section-title span::after {
+	display: none;
+}
+
 .cat-links {
 	a {
 		color: inherit;
