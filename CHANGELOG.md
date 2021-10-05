@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/Automattic/newspack-theme/compare/v1.49.0...v1.50.0) (2021-10-05)
+
+
+### Features
+
+* update theme styles to go with new block alignments ([#1533](https://github.com/Automattic/newspack-theme/issues/1533)) ([7cf08b5](https://github.com/Automattic/newspack-theme/commit/7cf08b547e01b0fba4f1d370b01178849c053bd6))
+
 # [1.49.0](https://github.com/Automattic/newspack-theme/compare/v1.48.0...v1.49.0) (2021-09-28)
 
 
