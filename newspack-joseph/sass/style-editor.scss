@@ -91,25 +91,7 @@ Newspack Joseph Editor Styles
 }
 
 /* Newspack Homepage Articles */
-.article-section-title {
-	font-family: $font__body;
-	font-size: $font__size-base;
-	margin-bottom: $size__spacing-unit;
-	overflow: hidden;
-	position: relative;
-
-	&::after {
-		background-color: currentColor;
-		content: '';
-		display: inline-block;
-		height: 1px;
-		margin: 0 0 0 0.25rem;
-		position: absolute;
-		width: 100%;
-		top: 50%;
-	}
-}
-
+.article-section-title,
 .accent-header {
 	align-items: center;
 	display: flex;
@@ -127,6 +109,21 @@ Newspack Joseph Editor Styles
 		margin: 0 0 0 0.25rem;
 		position: relative !important;
 	}
+}
+
+.wpnbha.has-text-align-right,
+.wpnbha.has-text-align-center {
+	.article-section-title::before {
+		background-color: currentColor;
+		content: '';
+		flex: 1 0 0.25rem;
+		height: 1px;
+		margin: 0 0.25rem 0 0;
+	}
+}
+
+.wpnbha.has-text-align-right .article-section-title::after {
+	display: none;
 }
 
 .wp-block-newspack-blocks-homepage-articles {
