@@ -140,10 +140,18 @@ blockquote {
 .wp-block-separator {
 	&:not( .is-style-dots ) {
 		border-top: 2px solid $color__text-main;
+
+		&.has-background {
+			border-top-color: currentColor;
+		}
 	}
 
 	&:not( .is-style-dots ):not( .is-style-wide ) {
 		border-top: 5px solid $color__text-main;
+
+		&.has-background {
+			border-top-color: currentColor;
+		}
 	}
 
 	&.is-style-dots::before {

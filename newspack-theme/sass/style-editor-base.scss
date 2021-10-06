@@ -682,6 +682,14 @@ figcaption,
 		letter-spacing: calc( 2 * #{$size__spacing-unit} );
 		padding-left: calc( 2 * #{$size__spacing-unit} );
 	}
+
+	&.has-background {
+		border: 0;
+
+		&.is-style-dots::before {
+			color: inherit;
+		}
+	}
 }
 
 /** === Latest Posts, Archives, Categories === */
