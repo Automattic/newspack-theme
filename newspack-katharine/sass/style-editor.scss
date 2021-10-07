@@ -214,7 +214,6 @@ figcaption,
 hr {
 	background: transparent !important;
 	border-top: 1px dotted $color__text-main;
-	height: 0;
 
 	&.has-background {
 		border-top: 1px dotted currentColor;

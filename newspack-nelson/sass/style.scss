@@ -461,7 +461,6 @@ blockquote {
 
 	&.has-background {
 		border-top: 2px solid currentColor;
-		height: 0;
 	}
 
 	&:not( .is-style-dots ):not( .is-style-wide ) {
