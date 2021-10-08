@@ -400,6 +400,12 @@ hr {
 	&.is-style-dots::before {
 		color: currentColor;
 	}
+
+	&:not( .is-style-dots ).has-background {
+		border-color: currentColor;
+		border-top-style: double;
+		border-top-width: 3px;
+	}
 }
 
 //! Newspack

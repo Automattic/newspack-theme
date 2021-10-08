@@ -212,7 +212,12 @@ figcaption,
 
 .wp-block-separator:not( .is-style-dots ),
 hr {
+	background: transparent !important;
 	border-top: 1px dotted $color__text-main;
+
+	&.has-background {
+		border-top: 1px dotted currentColor;
+	}
 }
 
 .wp-block .wp-block-columns.is-style-borders {
