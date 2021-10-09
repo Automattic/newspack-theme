@@ -403,8 +403,8 @@ figcaption,
 }
 
 /** === Group === */
-.wp-block[data-align='left'] .wp-block-group,
-.wp-block[data-align='right'] .wp-block-group {
+.wp-block[data-align='left'] > .wp-block-group,
+.wp-block[data-align='right'] > .wp-block-group {
 	max-width: 50%;
 }
 
