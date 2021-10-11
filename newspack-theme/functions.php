@@ -1124,7 +1124,6 @@ function newspack_dequeue_mediaelement() {
 }
 add_action( 'wp_enqueue_scripts', 'newspack_dequeue_mediaelement', 20 );
 
-
 /**
  * SVG Icons class.
  */
