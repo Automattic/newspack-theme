@@ -1,3 +1,17 @@
+# [1.51.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.50.0...v1.51.0-alpha.1) (2021-10-12)
+
+
+### Bug Fixes
+
+* correct nested floated block previews in editor ([#1540](https://github.com/Automattic/newspack-theme/issues/1540)) ([5f661f8](https://github.com/Automattic/newspack-theme/commit/5f661f8057157b16c53b828662e190c2e37594f9))
+* make separator block pick up custom colors ([#1539](https://github.com/Automattic/newspack-theme/issues/1539)) ([422b328](https://github.com/Automattic/newspack-theme/commit/422b328fd1a4392d059e977da93e77ef2550080a))
+
+
+### Features
+
+* add option to show mobile CTA in simplified header ([#1534](https://github.com/Automattic/newspack-theme/issues/1534)) ([2aa2860](https://github.com/Automattic/newspack-theme/commit/2aa2860b557893dc6611c07d96faa8a8c5a82586))
+* **image-credits:** handle image credits from newspack-plugin ([ee492dc](https://github.com/Automattic/newspack-theme/commit/ee492dc4724ce468c17e9d8f6f5480cb9d99dc44))
+
 # [1.50.0](https://github.com/Automattic/newspack-theme/compare/v1.49.0...v1.50.0) (2021-10-05)
 
 
