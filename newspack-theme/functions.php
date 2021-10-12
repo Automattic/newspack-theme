@@ -1114,17 +1114,6 @@ function newspack_maybe_set_default_post_template( $post_ID, $post, $update ) {
 add_action( 'wp_insert_post', 'newspack_maybe_set_default_post_template', 10, 3 );
 
 /**
- * Dequeue Media Element styles if AMP is enabled.
- */
-function newspack_dequeue_mediaelement() {
-	if ( newspack_is_amp() ) {
-		wp_deregister_script( 'wp-mediaelement' );
-		wp_deregister_style( 'wp-mediaelement' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'newspack_dequeue_mediaelement', 20 );
-
-/**
  * SVG Icons class.
  */
 require get_template_directory() . '/classes/class-newspack-svg-icons.php';
