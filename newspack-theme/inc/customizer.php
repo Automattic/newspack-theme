@@ -349,6 +349,23 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Mobile CTA - toggle on and off.
+	$wp_customize->add_setting(
+		'cta_in_simplified_header',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'cta_in_simplified_header',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show Mobile CTA in Simplfied Subpage Header', 'newspack' ),
+			'section' => 'header_section_cta',
+		)
+	);
+
 	// Add option to upload logo specifically for the footer.
 	$wp_customize->add_setting(
 		'newspack_alternative_logo',
