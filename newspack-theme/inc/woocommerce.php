@@ -26,6 +26,19 @@ function newspack_woocommerce_setup() {
 }
 add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
 
+/**
+ * Check if WooCommerce styles should be loaded.
+ */
+function newspack_load_wc_styles() {
+	$load_styles = true;
+	// First, check if this option is turned on in the Customizer.
+	if ( true === get_theme_mod( 'woocommerce_main_dequeue', false ) ) {
+		if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() && ! is_account_page() ) {
+			$load_styles = false;
+		}
+	}
+	return $load_styles;
+}
 
 /**
  * Add theme's WooCommerce styles.
@@ -33,8 +46,10 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  * @return void
  */
 function newspack_woocommerce_scripts() {
-	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
-	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
+	if ( true === newspack_load_wc_styles() ) {
+		wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
+		wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
 
@@ -225,3 +240,28 @@ function newspack_address_fields_styling( $fields ) {
 	return $fields;
 }
 add_filter( 'woocommerce_default_address_fields', 'newspack_address_fields_styling', 9999 );
+
+/**
+ * Remove Woo Styles and Scripts from non-Woo Pages
+ *
+ * @link https://gist.github.com/DevinWalker/7621777#gistcomment-1980453
+ */
+function newspack_remove_woocommerce_styles_scripts() {
+	if ( false === newspack_load_wc_styles() ) {
+		remove_action( 'wp_enqueue_scripts', [ WC_Frontend_Scripts::class, 'load_scripts' ] );
+		remove_action( 'wp_print_scripts', [ WC_Frontend_Scripts::class, 'localize_printed_scripts' ], 5 );
+		remove_action( 'wp_print_footer_scripts', [ WC_Frontend_Scripts::class, 'localize_printed_scripts' ], 5 );
+	}
+}
+add_action( 'template_redirect', 'newspack_remove_woocommerce_styles_scripts', 999 );
+
+/**
+ * Disable WooCommerce block styles (front-end).
+ */
+function newspack_remove_woocommerce_block_styles() {
+	if ( false === newspack_load_wc_styles() ) {
+		wp_dequeue_style( 'wc-blocks-style' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'newspack_remove_woocommerce_block_styles' );
+
