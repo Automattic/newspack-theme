@@ -374,8 +374,8 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 					$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
 
 					// Account for featured images that have a credit but no caption.
-					if ( ! $caption_exists && class_exists( 'Newspack_Image_Credits' ) ) {
-						$maybe_newspack_image_credit = Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
+					if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
+						$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
 						if ( strlen( wp_strip_all_tags( $maybe_newspack_image_credit ) ) ) {
 							$caption_exists = true;
 						}
