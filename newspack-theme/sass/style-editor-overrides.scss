@@ -81,7 +81,7 @@ body.newspack-single-column-template {
 		}
 	}
 
-	.block-editor-inner-blocks .wp-block[data-align='left'] {
+	.wp-block .wp-block[data-align='left'] {
 		left: auto;
 	}
 
@@ -96,7 +96,7 @@ body.newspack-single-column-template {
 		}
 	}
 
-	.block-editor-inner-blocks .wp-block[data-align='right'] {
+	.wp-block .wp-block[data-align='right'] {
 		right: auto;
 	}
 }

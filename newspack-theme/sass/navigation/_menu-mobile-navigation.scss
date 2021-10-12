@@ -139,6 +139,44 @@
 	}
 }
 
+// Simplified subpage header with mobile CTA visible.
+.h-sub-cta.h-sub {
+	.site-header .mb-cta {
+		display: inline-block;
+	}
+	&.h-ll {
+		.site-branding {
+			margin-right: 0;
+		}
+
+		.mb-cta {
+			margin-left: auto;
+		}
+
+		.middle-header-contain .header-search-contain {
+			margin-left: 1.25rem;
+		}
+	}
+
+	&.h-cl {
+		@include media( tablet ) {
+			.wrapper {
+				position: relative;
+			}
+			.mb-cta {
+				right: 2.25rem;
+				position: absolute;
+			}
+
+			&:not( .h-stk ).single-featured-image-beside {
+				.mb-cta {
+					right: 2.75rem;
+				}
+			}
+		}
+	}
+}
+
 .mobile-sidebar,
 .desktop-sidebar,
 .subpage-sidebar {

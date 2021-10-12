@@ -403,8 +403,8 @@ figcaption,
 }
 
 /** === Group === */
-.wp-block[data-align='left'] .wp-block-group,
-.wp-block[data-align='right'] .wp-block-group {
+.wp-block[data-align='left'] > .wp-block-group,
+.wp-block[data-align='right'] > .wp-block-group {
 	max-width: 50%;
 }
 
@@ -681,6 +681,14 @@ figcaption,
 		font-size: $font__size-lg;
 		letter-spacing: calc( 2 * #{$size__spacing-unit} );
 		padding-left: calc( 2 * #{$size__spacing-unit} );
+	}
+
+	&.has-background {
+		border: 0;
+
+		&.is-style-dots::before {
+			color: inherit;
+		}
 	}
 }
 
