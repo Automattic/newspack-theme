@@ -129,10 +129,14 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'h-stk'; // Header sticky.
 	}
 
-	$cta_show = get_theme_mod( 'show_header_cta', false );
-	$cta_url  = get_theme_mod( 'header_cta_url', '' );
+	$cta_show  = get_theme_mod( 'show_header_cta', false );
+	$cta_url   = get_theme_mod( 'header_cta_url', '' );
+	$cta_in_sh = get_theme_mod( 'cta_in_simplified_header', false );
 	if ( true === $cta_show && '' !== $cta_url ) {
 		$classes[] = 'h-cta'; // Mobile CTA is showing.
+		if ( true === $cta_in_sh && true === $header_sub_simplified && ! is_front_page() ) {
+			$classes[] = 'h-sub-cta'; // Mobile CTA is showing always in simplified subheader.
+		}
 	}
 
 	// Adds classes if menus are assigned

@@ -954,6 +954,14 @@ hr {
 			padding-left: $font__size-sm;
 		}
 	}
+
+	&.has-background {
+		border: 0;
+
+		&.is-style-dots::before {
+			color: inherit;
+		}
+	}
 }
 
 .entry .entry-content > .wp-block-separator,

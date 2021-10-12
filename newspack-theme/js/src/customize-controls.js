@@ -260,6 +260,27 @@
 			} );
 		} );
 
+		// Controls to show/hide mobile CTA options
+		wp.customize( 'show_header_cta', function( setting ) {
+			const toggleVisibility = function( control ) {
+				const visibility = function() {
+					if ( true === setting.get() ) {
+						control.container.slideDown( 180 );
+					} else {
+						control.container.slideUp( 180 );
+					}
+				};
+				visibility();
+				setting.bind( visibility );
+			};
+
+			wp.customize.control( 'header_cta_text', toggleVisibility );
+			wp.customize.control( 'header_cta_url', toggleVisibility );
+			wp.customize.control( 'header_cta_target', toggleVisibility );
+			wp.customize.control( 'header_cta_hex', toggleVisibility );
+			wp.customize.control( 'cta_in_simplified_header', toggleVisibility );
+		} );
+
 		// Only show the rest of the author controls when the bio is visible.
 		wp.customize( 'show_author_bio', function( setting ) {
 			wp.customize.control( 'show_author_email', function( control ) {
