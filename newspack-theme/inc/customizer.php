@@ -1329,7 +1329,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Dequeue WooCommerce main CSS.
+	// Dequeue WooCommerce block CSS.
+	$wp_customize->add_setting(
+		'woocommerce_block_home_dequeue',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'woocommerce_block_home_dequeue',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Dequeue WooCommerce Block CSS on the homepage.', 'newspack' ),
+			'section' => 'woocommerce_advanced',
+		)
+	);
+
+	// Dequeue WooCommerce CSS on all but WC pages.
 	$wp_customize->add_setting(
 		'woocommerce_main_dequeue',
 		array(
@@ -1341,7 +1358,7 @@ function newspack_customize_register( $wp_customize ) {
 		'woocommerce_main_dequeue',
 		array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Dequeue WooCommerce CSS on regular posts and pages.', 'newspack' ),
+			'label'   => esc_html__( 'Dequeue WooCommerce CSS on all but WooCommerce pages.', 'newspack' ),
 			'section' => 'woocommerce_advanced',
 		)
 	);
