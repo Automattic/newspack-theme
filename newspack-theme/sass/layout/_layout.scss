@@ -23,6 +23,16 @@
 	}
 }
 
+.post-template-default,
+.page-template-default:not( .newspack-front-page ),
+.archive,
+.search,
+.blog {
+	.site-content {
+		overflow: unset;
+	}
+}
+
 #primary {
 	margin: auto;
 	max-width: 90%;

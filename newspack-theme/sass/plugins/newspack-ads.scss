@@ -143,3 +143,8 @@ body {
 		}
 	}
 }
+
+// Move the sidebar sticky ad down a bit further when the header is sticky.
+.h-stk #secondary .stick-to-top:last-child {
+	top: calc( 80px + 1rem );
+}
