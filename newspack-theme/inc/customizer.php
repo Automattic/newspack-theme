@@ -1317,6 +1317,51 @@ function newspack_customize_register( $wp_customize ) {
 			'section'     => 'woocommerce_thank_you',
 		)
 	);
+
+	/**
+	 * WooCommerce Advanced Settings
+	 */
+	$wp_customize->add_section(
+		'woocommerce_advanced',
+		array(
+			'title' => esc_html__( 'Advanced Settings', 'newspack' ),
+			'panel' => 'woocommerce',
+		)
+	);
+
+	// Dequeue WooCommerce block CSS on the homepage.
+	$wp_customize->add_setting(
+		'woocommerce_block_home_dequeue',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'woocommerce_block_home_dequeue',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Dequeue WooCommerce Block CSS on the homepage.', 'newspack' ),
+			'section' => 'woocommerce_advanced',
+		)
+	);
+
+	// Dequeue WooCommerce CSS on the homepage.
+	$wp_customize->add_setting(
+		'woocommerce_styles_home_dequeue',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'woocommerce_styles_home_dequeue',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Dequeue WooCommerce CSS on the homepage.', 'newspack' ),
+			'section' => 'woocommerce_advanced',
+		)
+	);
 }
 add_action( 'customize_register', 'newspack_customize_register' );
 
