@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php else : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
-				<?php echo esc_html( apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'newspack' ), $order ) ); ?>
+				<?php echo wp_kses_post( apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'newspack' ), $order ) ); ?>
 			</p>
 
 			<h4><?php esc_html_e( 'Summary', 'newspack' ); ?></h4>
@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php else : ?>
 
 		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
-			<?php echo esc_html( apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'newspack' ), null ) ); ?>
+			<?php echo wp_kses_post( apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'newspack' ), null ) ); ?>
 		</p>
 
 	<?php endif; ?>
