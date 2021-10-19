@@ -16,10 +16,19 @@
 .site-content {
 	min-height: 30vh;
 	margin-top: #{1.5 * $size__spacing-unit};
-	overflow: hidden;
 
 	@include media( tablet ) {
 		margin-top: #{4 * $size__spacing-unit};
+	}
+}
+
+.post-template-single-feature,
+.page-template-single-feature,
+.post-template-single-wide,
+.page-template-single-wide,
+.newspack-front-page {
+	.site-content {
+		overflow: hidden;
 	}
 }
 

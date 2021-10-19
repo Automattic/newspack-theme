@@ -442,6 +442,21 @@ function newspack_scripts() {
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
 
+	if ( class_exists( '\Newspack\AMP_Enhancements' ) && \Newspack\AMP_Enhancements::is_amp_plus_configured() ) {
+		wp_enqueue_script( 'newspack-amp-plus', get_theme_file_uri( '/js/dist/amp-plus.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+		add_filter(
+			'script_loader_tag',
+			function( $tag, $handle, $src ) {
+				if ( 'newspack-amp-plus' == $handle ) {
+					return '<script data-amp-plus-allowed src="' . $src . '"></script>';
+				}
+				return $tag;
+			},
+			10,
+			3 
+		);
+	}
+
 	if ( newspack_is_sticky_animated_header() ) {
 		wp_enqueue_script( 'amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
 		wp_enqueue_script( 'amp-position-observer', 'https://cdn.ampproject.org/v0/amp-position-observer-0.1.js', array(), '0.1', true );
