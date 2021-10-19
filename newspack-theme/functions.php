@@ -442,6 +442,21 @@ function newspack_scripts() {
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
 
+	if ( class_exists( '\Newspack\AMP_Enhancements' ) && \Newspack\AMP_Enhancements::is_amp_plus_configured() ) {
+		wp_enqueue_script( 'newspack-amp-plus', get_theme_file_uri( '/js/dist/amp-plus.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+		add_filter(
+			'script_loader_tag',
+			function( $tag, $handle, $src ) {
+				if ( 'newspack-amp-plus' == $handle ) {
+					return '<script data-amp-plus-allowed src="' . $src . '"></script>';
+				}
+				return $tag;
+			},
+			10,
+			3 
+		);
+	}
+
 	if ( newspack_is_sticky_animated_header() ) {
 		wp_enqueue_script( 'amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
 		wp_enqueue_script( 'amp-position-observer', 'https://cdn.ampproject.org/v0/amp-position-observer-0.1.js', array(), '0.1', true );
@@ -1112,6 +1127,18 @@ function newspack_maybe_set_default_post_template( $post_ID, $post, $update ) {
 	}
 }
 add_action( 'wp_insert_post', 'newspack_maybe_set_default_post_template', 10, 3 );
+
+/**
+ * Dequeue Media Element styles if AMP is enabled.
+ */
+function newspack_dequeue_mediaelement() {
+	if ( newspack_is_amp() ) {
+		wp_deregister_script( 'wp-mediaelement' );
+		wp_deregister_style( 'wp-mediaelement' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'newspack_dequeue_mediaelement', 20 );
+
 
 /**
  * SVG Icons class.
