@@ -196,6 +196,11 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'show-updated';
 	}
 
+	// Add a class if the post has a summary.
+	if ( '' !== newspack_has_post_summary() ) {
+		$classes[] = 'has-summary';
+	}
+
 	// Adds a class for the archive page layout.
 	$archive_layout = get_theme_mod( 'archive_layout', 'default' );
 	if ( is_archive() && 'default' !== $archive_layout ) {
@@ -656,7 +661,6 @@ function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
 	return newspack_math_to_time_ago( $post_time, $format, $post, true );
 }
 
-
 /**
  * Check whether updated date should be displayed.
  */
@@ -678,3 +682,51 @@ function newspack_should_display_updated_date() {
 	}
 	return false;
 }
+
+/**
+ * Check whether there's a Post Summary, and return it.
+ */
+function newspack_has_post_summary() {
+	if ( 'post' !== get_post_type() ) {
+		return;
+	}
+
+	$post    = get_post();
+	$summary = get_post_meta( $post->ID, 'newspack_article_summary', true );
+
+	return trim( $summary );
+}
+
+/**
+ * Give the post summary some markup, and run it through wpautop().
+ *
+ * @param string $summary The post summary.
+ */
+function newspack_post_summary_markup( $summary ) {
+	ob_start();
+	?>
+	<div class="article-summary">
+		<h2 class="article-summary-title"><?php esc_html_e( 'Overview:', 'newspack-article-summary' ); ?></h2>
+		<?php echo wp_kses_post( wpautop( $summary ) ); ?>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+
+/**
+ * Inject the post summary at the top of a post.
+ *
+ * @param string $content The post content.
+ */
+function newspack_inject_post_summary( $content ) {
+	if ( 'post' !== get_post_type() ) {
+		return $content;
+	}
+	$summary = newspack_has_post_summary();
+	if ( ! $summary ) {
+		return $content;
+	}
+
+	return newspack_post_summary_markup( $summary ) . $content;
+}
+add_filter( 'the_content', 'newspack_inject_post_summary', 5 );
