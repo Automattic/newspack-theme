@@ -1,3 +1,17 @@
+# [1.52.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.51.0...v1.52.0-alpha.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* dequeue media element CSS when AMP is enabled ([#1548](https://github.com/Automattic/newspack-theme/issues/1548)) ([0c93763](https://github.com/Automattic/newspack-theme/commit/0c937630a6fdd86c86928f71e1d7ac35d81f5617))
+* simplify [@font-face](https://github.com/font-face) list in WooCommerce styles ([#1550](https://github.com/Automattic/newspack-theme/issues/1550)) ([9195f70](https://github.com/Automattic/newspack-theme/commit/9195f7005a491585b04a74a60b8e63129662c464))
+* sticky ad when sticky header is enabled ([#1553](https://github.com/Automattic/newspack-theme/issues/1553)) ([c70ded8](https://github.com/Automattic/newspack-theme/commit/c70ded813f1b06e7021c5a82f59147d64964502c))
+
+
+### Features
+
+* allow safe HTML in WooCommerce thank you message ([#1541](https://github.com/Automattic/newspack-theme/issues/1541)) ([b762ee7](https://github.com/Automattic/newspack-theme/commit/b762ee736fe2488fc58a7e46b54b015ad7f86235))
+
 # [1.51.0](https://github.com/Automattic/newspack-theme/compare/v1.50.0...v1.51.0) (2021-10-12)
 
 
