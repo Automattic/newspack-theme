@@ -729,4 +729,4 @@ function newspack_inject_post_summary( $content ) {
 
 	return newspack_post_summary_markup( $summary ) . $content;
 }
-add_filter( 'the_content', 'newspack_inject_post_summary', 5 );
+add_filter( 'the_content', 'newspack_inject_post_summary', 11 );
