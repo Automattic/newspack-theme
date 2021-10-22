@@ -439,7 +439,6 @@ function newspack_get_font_stacks() {
 			'name'  => __( 'Serif', 'newspack' ),
 			'fonts' => array(
 				'Georgia',
-				'Garamond',
 				'Times New Roman',
 				'serif',
 			),
@@ -447,15 +446,6 @@ function newspack_get_font_stacks() {
 		'sans_serif' => array(
 			'name'  => __( 'Sans Serif', 'newspack' ),
 			'fonts' => array(
-				'-apple-system',
-				'BlinkMacSystemFont',
-				'Segoe UI',
-				'Roboto',
-				'Oxygen',
-				'Ubuntu',
-				'Cantarell',
-				'Fira Sans',
-				'Droid Sans',
 				'Helvetica Neue',
 				'sans-serif',
 			),
