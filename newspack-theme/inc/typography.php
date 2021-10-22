@@ -439,7 +439,6 @@ function newspack_get_font_stacks() {
 			'name'  => __( 'Serif', 'newspack' ),
 			'fonts' => array(
 				'Georgia',
-				'Times New Roman',
 				'serif',
 			),
 		),
@@ -454,11 +453,6 @@ function newspack_get_font_stacks() {
 			'name'  => __( 'Display', 'newspack' ),
 			'fonts' => array(
 				'Impact',
-				'Haettenschweiler',
-				'Franklin Gothic Bold',
-				'Charcoal',
-				'Helvetica Inserat',
-				'Bitstream Vera Sans Bold',
 				'Arial Black',
 				'sans-serif',
 			),
@@ -467,15 +461,6 @@ function newspack_get_font_stacks() {
 			'name'  => __( 'Monospace', 'newspack' ),
 			'fonts' => array(
 				'Consolas',
-				'Andale Mono WT',
-				'Andale Mono',
-				'Lucida Console',
-				'Lucida Sans Typewriter',
-				'DejaVu Sans Mono',
-				'Bitstream Vera Sans Mono',
-				'Liberation Mono',
-				'Nimbus Mono L',
-				'Monaco',
 				'Courier New',
 				'Courier',
 				'monospace'
