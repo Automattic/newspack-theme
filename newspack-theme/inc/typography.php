@@ -445,7 +445,7 @@ function newspack_get_font_stacks() {
 		'sans_serif' => array(
 			'name'  => __( 'Sans Serif', 'newspack' ),
 			'fonts' => array(
-				'Helvetica Neue',
+				'Helvetica',
 				'sans-serif',
 			),
 		),
