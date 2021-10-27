@@ -4,37 +4,37 @@
 import { compose } from '@wordpress/compose';
 import { withDispatch } from '@wordpress/data';
 import { useState, useEffect } from '@wordpress/element';
-import { TextareaControl } from '@wordpress/components';
+import { TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
  * Internal dependencies
  */
-import { connectWithSelect, META_FIELD_SUMMARY } from './utils';
+import { connectWithSelect, META_FIELD_TITLE } from './utils';
 
-const decorateSummary = compose(
+const decorateTitle = compose(
 	connectWithSelect,
 	withDispatch( dispatch => ( {
-		saveSummary: summary => {
+		saveSummaryTitle: summaryTitle => {
 			dispatch( 'core/editor' ).editPost( {
 				meta: {
-					[ META_FIELD_SUMMARY ]: summary,
+					[ META_FIELD_TITLE ]: summaryTitle,
 				},
 			} );
 		},
 	} ) )
 );
 
-const SummaryEditor = ( { summary, saveSummary } ) => {
-	const [ value, setValue ] = useState( summary );
+const SummaryTitleEditor = ( { summaryTitle, saveSummaryTitle } ) => {
+	const [ value, setValue ] = useState( summaryTitle );
 
 	useEffect( () => {
-		saveSummary( value );
+		saveSummaryTitle( value );
 	}, [ value ] );
 
 	return (
-		<TextareaControl
-			label={ __( 'Body:', 'newspack' ) }
+		<TextControl
+			label={ __( 'Title:', 'newspack' ) }
 			value={ value }
 			onChange={ setValue }
 			style={ { width: '100%' } }
@@ -42,4 +42,4 @@ const SummaryEditor = ( { summary, saveSummary } ) => {
 	);
 };
 
-export default decorateSummary( SummaryEditor );
+export default decorateTitle( SummaryTitleEditor );

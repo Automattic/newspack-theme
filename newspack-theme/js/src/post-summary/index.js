@@ -11,6 +11,7 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import SummaryEditor from './SummaryEditor';
+import SummaryTitleEditor from './SummaryTitleEditor';
 import { connectWithSelect } from './utils';
 
 /**
@@ -25,10 +26,13 @@ const NewspackSummaryPanel = () => {
 			title={ __( 'Article Summary', 'newspack' ) }
 			className="newspack-summary"
 		>
-			{ __(
-				'Write a summary that will be appended to the top of the article content.',
-				'newspack'
-			) }
+			<p>
+				{ __(
+					'Write a summary that will be appended to the top of the article content.',
+					'newspack'
+				) }
+			</p>
+			<SummaryTitleEditor />
 			<SummaryEditor />
 		</PluginDocumentSettingPanel>
 	);

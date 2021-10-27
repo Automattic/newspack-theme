@@ -703,10 +703,14 @@ function newspack_has_post_summary() {
  * @param string $summary The post summary.
  */
 function newspack_post_summary_markup( $summary ) {
+	$post          = get_post();
+	$summary_title = get_post_meta( $post->ID, 'newspack_article_summary_title', true );
 	ob_start();
 	?>
 	<div class="article-summary">
-		<h2 class="article-summary-title"><?php esc_html_e( 'Overview:', 'newspack-article-summary' ); ?></h2>
+		<?php if ( '' !== $summary_title ) { ?>
+			<h2 class="article-summary-title"><?php echo esc_html( $summary_title ); ?></h2>
+		<?php } ?>
 		<?php echo wp_kses_post( wpautop( $summary ) ); ?>
 	</div>
 	<?php

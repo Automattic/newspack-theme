@@ -65,10 +65,13 @@
 
 	.article-summary-title {
 		font-size: 1rem;
+	}
+
+	> *:first-child {
 		margin-top: 0;
 	}
 
-	*:last-child {
+	> *:last-child {
 		margin-bottom: 0;
 	}
 }
