@@ -58,6 +58,24 @@
 	}
 }
 
+.article-summary {
+	background: $color__background-pre;
+	font-size: 0.9rem;
+	padding: 1.5rem;
+
+	.article-summary-title {
+		font-size: 1rem;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
 body.page {
 	.entry-title {
 		font-size: $font__size-xl;
