@@ -33,6 +33,9 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  */
 function newspack_woocommerce_scripts() {
 	// Load WooCommerce styles from theme.
+	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
+		return;
+	}
 	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
 	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
 }
