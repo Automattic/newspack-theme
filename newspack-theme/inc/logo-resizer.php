@@ -126,8 +126,10 @@ function newspack_customize_logo_resize( $html ) {
 
 		@media (min-width: 782px) {
 			.h-stk .site-header .custom-logo {
-				max-width: ' . $sticky['width'] . 'px;
+				height: auto;
 				max-height: ' . $sticky['height'] . 'px;
+				max-width: 100%;
+				width: ' . $sticky['width'] . 'px;
 			}
 
 			.h-sub .site-header .custom-logo {
