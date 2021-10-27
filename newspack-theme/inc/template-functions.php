@@ -687,7 +687,7 @@ function newspack_should_display_updated_date() {
  * Check whether there's a Post Summary, and return it.
  */
 function newspack_has_post_summary() {
-	if ( 'post' !== get_post_type() ) {
+	if ( ! is_singular( 'post' ) ) {
 		return;
 	}
 
@@ -719,7 +719,7 @@ function newspack_post_summary_markup( $summary ) {
  * @param string $content The post content.
  */
 function newspack_inject_post_summary( $content ) {
-	if ( 'post' !== get_post_type() ) {
+	if ( ! is_singular( 'post' ) ) {
 		return $content;
 	}
 	$summary = newspack_has_post_summary();
