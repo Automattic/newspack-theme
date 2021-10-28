@@ -166,6 +166,7 @@
 			.mb-cta {
 				right: 2.25rem;
 				position: absolute;
+				z-index: 1;
 			}
 
 			&:not( .h-stk ).single-featured-image-beside {
