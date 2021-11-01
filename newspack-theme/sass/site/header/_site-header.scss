@@ -563,8 +563,12 @@
 			}
 		}
 
-		&.h-cl .site-header .middle-header-contain .wrapper > div.site-branding {
-			width: 35%;
+		&.h-cl .site-header .middle-header-contain .wrapper > div {
+			width: 31%;
+
+			&.site-branding {
+				width: 38%;
+			}
 		}
 	}
 
