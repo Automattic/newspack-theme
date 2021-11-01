@@ -131,18 +131,21 @@ function newspack_customize_logo_resize( $html ) {
 				width: ' . $sticky['width'] . 'px;
 			}
 
+			.newspack-customizer.h-stk .site-header .custom-logo {
+				max-width: ' . $sticky['width'] . 'px;
+			}
+
+			.newspack-customizer.h-stk.h-cl .site-header .middle-header-contain .wrapper > div.site-branding {
+				width: 400px;
+			}
+
 			.h-sub .site-header .custom-logo {
 				max-width: ' . $subhead['width'] . 'px;
 				max-height: ' . $subhead['height'] . 'px;
 			}
 		}
 
-		@media (min-width: 1200px) {
-			.h-stk:not(.h-sub) .site-header .custom-logo {
-				max-height: ' . $sticky['height'] . 'px;
-				max-width: ' . $sticky['width'] . 'px;
-			}
-		}
+
 		</style>';
 
 		$html = $css . $html;
