@@ -562,6 +562,10 @@
 				border: 0;
 			}
 		}
+
+		&.h-cl .site-header .middle-header-contain .wrapper > div.site-branding {
+			width: 35%;
+		}
 	}
 
 	&.h-sub.single-featured-image-behind,

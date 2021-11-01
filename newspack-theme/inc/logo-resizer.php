@@ -126,22 +126,20 @@ function newspack_customize_logo_resize( $html ) {
 
 		@media (min-width: 782px) {
 			.h-stk .site-header .custom-logo {
-				height: auto;
-				max-width: 100%;
+				height: ' . $sticky['height'] . 'px;
+				max-width: 245px;
 				width: ' . $sticky['width'] . 'px;
-			}
-
-			.newspack-customizer.h-stk .site-header .custom-logo {
-				max-width: ' . $sticky['width'] . 'px;
-			}
-
-			.newspack-customizer.h-stk.h-cl .site-header .middle-header-contain .wrapper > div.site-branding {
-				width: 400px;
 			}
 
 			.h-sub .site-header .custom-logo {
 				max-width: ' . $subhead['width'] . 'px;
 				max-height: ' . $subhead['height'] . 'px;
+			}
+		}
+
+		@media (min-width: 1100px) {
+			.h-stk .site-header .custom-logo {
+				max-width: ' . $sticky['width'] . 'px;
 			}
 		}
 
