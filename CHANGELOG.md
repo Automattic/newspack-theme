@@ -1,3 +1,18 @@
+# [1.53.0](https://github.com/Automattic/newspack-theme/compare/v1.52.0...v1.53.0) (2021-11-03)
+
+
+### Bug Fixes
+
+* add theme's WC styles to those dequeued from the homepage ([#1559](https://github.com/Automattic/newspack-theme/issues/1559)) ([0c43684](https://github.com/Automattic/newspack-theme/commit/0c43684b136455d20b678c2619550564dced608a))
+* make sure mobile CTA is always clickable ([#1566](https://github.com/Automattic/newspack-theme/issues/1566)) ([154393a](https://github.com/Automattic/newspack-theme/commit/154393a4985d7b31c0fce32d8ba77404eca8990e))
+* simplify theme fallback font stack ([#1560](https://github.com/Automattic/newspack-theme/issues/1560)) ([36c5239](https://github.com/Automattic/newspack-theme/commit/36c52397613c1b266b2646d24cb319989b4b35da))
+
+
+### Features
+
+* add field for Article Summary ([#1558](https://github.com/Automattic/newspack-theme/issues/1558)) ([34a846e](https://github.com/Automattic/newspack-theme/commit/34a846ecd75acd6783a352bdc4fd82d8d02667ac))
+* add option to dequeue some WooCommerce styles on home ([#1555](https://github.com/Automattic/newspack-theme/issues/1555)) ([a22c155](https://github.com/Automattic/newspack-theme/commit/a22c155683c8431bfc6c27a3fa13831b14ceff46))
+
 # [1.52.0](https://github.com/Automattic/newspack-theme/compare/v1.51.0...v1.52.0) (2021-10-19)
 
 
