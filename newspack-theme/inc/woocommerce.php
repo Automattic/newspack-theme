@@ -26,24 +26,40 @@ function newspack_woocommerce_setup() {
 }
 add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
 
-
 /**
  * Add theme's WooCommerce styles.
  *
  * @return void
  */
 function newspack_woocommerce_scripts() {
+	// Load WooCommerce styles from theme.
+	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
+		return;
+	}
 	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
 	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
 
+/**
+ * Optionally dequeue WooCommerce's block styles.
+ */
+function newspack_disable_woocommerce_block_styles() {
+	if ( true === get_theme_mod( 'woocommerce_block_home_dequeue', false ) && is_front_page() ) {
+		wp_deregister_style( 'wc-blocks-style' );
+	}
+}
+add_action( 'enqueue_block_assets', 'newspack_disable_woocommerce_block_styles', 999 );
 
 /**
  * Remove WooCommerce general styles.
  */
 function newspack_dequeue_styles( $enqueue_styles ) {
 	unset( $enqueue_styles['woocommerce-general'] );
+	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
+		unset( $enqueue_styles['woocommerce-layout'] );
+		unset( $enqueue_styles['woocommerce-smallscreen'] );
+	}
 	return $enqueue_styles;
 }
 add_filter( 'woocommerce_enqueue_styles', 'newspack_dequeue_styles' );
