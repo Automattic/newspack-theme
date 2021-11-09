@@ -1,3 +1,11 @@
+## [1.53.1](https://github.com/Automattic/newspack-theme/compare/v1.53.0...v1.53.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* make sure the featured image description is not output ([#1571](https://github.com/Automattic/newspack-theme/issues/1571)) ([6965ce4](https://github.com/Automattic/newspack-theme/commit/6965ce4c7491f370d11ddd87fe776197b5f7d850))
+* prevent centered logo from getting cut off with sticky header ([#1563](https://github.com/Automattic/newspack-theme/issues/1563)) ([cf7a801](https://github.com/Automattic/newspack-theme/commit/cf7a8013b8256fdbe4c9327a5531fc9673a6f097))
+
 # [1.53.0](https://github.com/Automattic/newspack-theme/compare/v1.52.0...v1.53.0) (2021-11-03)
 
 
