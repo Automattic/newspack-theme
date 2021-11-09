@@ -377,6 +377,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 					if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
 						$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
 						if ( strlen( wp_strip_all_tags( $maybe_newspack_image_credit ) ) ) {
+							$caption        = $maybe_newspack_image_credit;
 							$caption_exists = true;
 						}
 					}
