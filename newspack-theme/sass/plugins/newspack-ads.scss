@@ -24,12 +24,6 @@
 		width: 100%;
 		z-index: 11;
 
-		&.active {
-			@include media( mobileonly ) {
-				display: flex;
-			}
-		}
-
 		button {
 			align-items: center;
 			background-color: $color__background-body;
