@@ -1060,6 +1060,10 @@ msgstr "Última actualización"
 msgid "by"
 msgstr "por"
 
+#: inc/template-tags.php:121
+msgid " and "
+msgstr " y "
+
 #. translators: %s: Name of current post. Only visible to screen readers.
 #: inc/template-tags.php:229
 msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
