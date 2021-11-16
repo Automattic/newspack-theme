@@ -87,6 +87,14 @@ body:not( .h-stk ) .site-breadcrumb {
 	}
 }
 
+body:not( .h-stk ).single-featured-image-beside,
+body:not( .h-stk ).single-featured-image-behind,
+body:not( .h-stk ).single-featured-image-above {
+	.site-content {
+		margin-top: 0;
+	}
+}
+
 // Header
 .site-header {
 	border-bottom: 2px solid $color__primary-variation;
@@ -231,6 +239,7 @@ body:not( .h-sb ) .site-header {
 	.single-featured-image-beside {
 		.site-header {
 			padding: 0;
+			z-index: 2;
 		}
 
 		#primary {
