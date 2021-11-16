@@ -858,14 +858,15 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'post_template_default',
 		array(
-			'type'    => 'select',
-			'label'   => __( 'Default Post Template', 'newspack' ),
-			'choices' => array(
+			'type'        => 'select',
+			'label'       => __( 'Default Post Template', 'newspack' ),
+			'description' => esc_html__( 'This option chnages the selected template used for newly created posts going forward. The template can still be changed on a per-post basis.', 'newspack' ),
+			'choices'     => array(
 				'default'            => esc_html__( 'Default Template', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
 				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
-			'section' => 'post_default_settings',
+			'section'     => 'post_default_settings',
 		)
 	);
 
@@ -1004,14 +1005,15 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'page_template_default',
 		array(
-			'type'    => 'select',
-			'label'   => __( 'Default Page Template', 'newspack' ),
-			'choices' => array(
+			'type'        => 'select',
+			'label'       => __( 'Default Page Template', 'newspack' ),
+			'description' => esc_html__( 'This option chnages the selected template used for newly created pages going forward. The template can still be changed on a per-page basis.', 'newspack' ),
+			'choices'     => array(
 				'default'            => esc_html__( 'Default Template', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
 				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
-			'section' => 'page_default_settings',
+			'section'     => 'page_default_settings',
 		)
 	);
 
