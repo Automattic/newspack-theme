@@ -833,9 +833,10 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'featured_image_default',
 		array(
-			'type'    => 'radio',
-			'label'   => __( 'Featured Image Default Position', 'newspack' ),
-			'choices' => array(
+			'type'        => 'radio',
+			'label'       => __( 'Featured Image Default Position', 'newspack' ),
+			'description' => esc_html__( 'Affects all posts where the Featured Image Position is set to \'Default\'.', 'newspack' ),
+			'choices'     => array(
 				'large'  => esc_html__( 'Large', 'newspack' ),
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
@@ -843,7 +844,7 @@ function newspack_customize_register( $wp_customize ) {
 				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
-			'section' => 'post_default_settings',
+			'section'     => 'post_default_settings',
 		)
 	);
 
@@ -860,7 +861,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'select',
 			'label'       => __( 'Default Post Template', 'newspack' ),
-			'description' => esc_html__( 'This option chnages the selected template used for newly created posts going forward. The template can still be changed on a per-post basis.', 'newspack' ),
+			'description' => esc_html__( 'This option changes the selected template used for newly created posts going forward. The template can still be changed on a per-post basis.', 'newspack' ),
 			'choices'     => array(
 				'default'            => esc_html__( 'Default Template', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
@@ -980,9 +981,10 @@ function newspack_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'page_featured_image_default',
 		array(
-			'type'    => 'radio',
-			'label'   => __( 'Featured Image Default Position', 'newspack' ),
-			'choices' => array(
+			'type'        => 'radio',
+			'label'       => __( 'Featured Image Default Position', 'newspack' ),
+			'description' => esc_html__( 'Affects all pages where the Featured Image Position is set to \'Default\'.', 'newspack' ),
+			'choices'     => array(
 				'large'  => esc_html__( 'Large', 'newspack' ),
 				'small'  => esc_html__( 'Small', 'newspack' ),
 				'behind' => esc_html__( 'Behind article title', 'newspack' ),
@@ -990,7 +992,7 @@ function newspack_customize_register( $wp_customize ) {
 				'above'  => esc_html__( 'Above article title', 'newspack' ),
 				'hidden' => esc_html__( 'Hidden', 'newspack' ),
 			),
-			'section' => 'page_default_settings',
+			'section'     => 'page_default_settings',
 		)
 	);
 
@@ -1007,7 +1009,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'        => 'select',
 			'label'       => __( 'Default Page Template', 'newspack' ),
-			'description' => esc_html__( 'This option chnages the selected template used for newly created pages going forward. The template can still be changed on a per-page basis.', 'newspack' ),
+			'description' => esc_html__( 'This option changes the selected template used for newly created pages going forward. The template can still be changed on a per-page basis.', 'newspack' ),
 			'choices'     => array(
 				'default'            => esc_html__( 'Default Template', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
