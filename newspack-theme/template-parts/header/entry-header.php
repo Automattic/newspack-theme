@@ -39,25 +39,24 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 	<?php if ( $subtitle ) : ?>
 		<div class="newspack-post-subtitle">
 			<?php
-			echo wp_kses(
-				$subtitle,
-				[
-					'b'      => true,
-					'strong' => true,
-					'i'      => true,
-					'em'     => true,
-					'mark'   => true,
-					'u'      => true,
-					'small'  => true,
-					'sub'    => true,
-					'sup'    => true,
-					'a'      => array(
-						'href'   => true,
-						'target' => true,
-						'rel'    => true,
-					),
-				]
+			$allowed_tags = array(
+				'b'      => true,
+				'strong' => true,
+				'i'      => true,
+				'em'     => true,
+				'mark'   => true,
+				'u'      => true,
+				'small'  => true,
+				'sub'    => true,
+				'sup'    => true,
+				'a'      => array(
+					'href'   => true,
+					'target' => true,
+					'rel'    => true,
+				),
 			);
+
+			echo wptexturize( wp_kses( $subtitle, $allowed_tags ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
 		</div>
 	<?php endif; ?>
