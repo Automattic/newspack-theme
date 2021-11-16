@@ -974,7 +974,7 @@ msgstr "Cerrar"
 #. translators: separates last two names; needs a space on either side.
 #: inc/newspack-sponsors.php:137 inc/template-tags.php:121
 msgid " and "
-msgstr ""
+msgstr " y "
 
 #. translators: separates all but the last two names; needs a space at the end.
 #: inc/newspack-sponsors.php:140 inc/template-tags.php:124
@@ -1059,10 +1059,6 @@ msgstr "Última actualización"
 #: inc/template-tags.php:114 inc/template-tags.php:145
 msgid "by"
 msgstr "por"
-
-#: inc/template-tags.php:121
-msgid " and "
-msgstr " y "
 
 #. translators: %s: Name of current post. Only visible to screen readers.
 #: inc/template-tags.php:229
