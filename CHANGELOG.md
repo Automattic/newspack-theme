@@ -1,3 +1,18 @@
+# [1.54.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.53.2...v1.54.0-alpha.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* add a description for default template, feature image options ([#1584](https://github.com/Automattic/newspack-theme/issues/1584)) ([e2ac468](https://github.com/Automattic/newspack-theme/commit/e2ac468069a7d5389c07137358bd6d229844e173))
+* add Spanish translation for byline ([#1579](https://github.com/Automattic/newspack-theme/issues/1579)) ([86afa83](https://github.com/Automattic/newspack-theme/commit/86afa833e6beff523798afa516bfc1d2d7de16d8))
+* add wptexturize to the article subtitle ([#1583](https://github.com/Automattic/newspack-theme/issues/1583)) ([71c0828](https://github.com/Automattic/newspack-theme/commit/71c08283afa81fe10013a60e551c720f87b758b2))
+* make the imprint open in a new tab ([#1585](https://github.com/Automattic/newspack-theme/issues/1585)) ([379953a](https://github.com/Automattic/newspack-theme/commit/379953a5f8336126894859326a970439df824dfd))
+
+
+### Features
+
+* add social icon for Patreon ([#1582](https://github.com/Automattic/newspack-theme/issues/1582)) ([06da821](https://github.com/Automattic/newspack-theme/commit/06da821b50430d8bbd1670d4d2e838e8c443e634))
+
 ## [1.53.2](https://github.com/Automattic/newspack-theme/compare/v1.53.1...v1.53.2) (2021-11-18)
 
 
