@@ -1,3 +1,10 @@
+## [1.53.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.53.1...v1.53.2-alpha.1) (2021-11-16)
+
+
+### Bug Fixes
+
+* sticky ad on amp plus ([#1575](https://github.com/Automattic/newspack-theme/issues/1575)) ([9f809a5](https://github.com/Automattic/newspack-theme/commit/9f809a5e6d2d4cf4d38af21a5ae3c8e687c7e489))
+
 ## [1.53.1](https://github.com/Automattic/newspack-theme/compare/v1.53.0...v1.53.1) (2021-11-09)
 
 
