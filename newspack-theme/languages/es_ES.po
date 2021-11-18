@@ -974,7 +974,7 @@ msgstr "Cerrar"
 #. translators: separates last two names; needs a space on either side.
 #: inc/newspack-sponsors.php:137 inc/template-tags.php:121
 msgid " and "
-msgstr ""
+msgstr " y "
 
 #. translators: separates all but the last two names; needs a space at the end.
 #: inc/newspack-sponsors.php:140 inc/template-tags.php:124
