@@ -150,10 +150,6 @@
 	margin-left: #{0.75 * $size__spacing-unit};
 	position: relative;
 
-	@include media( tablet ) {
-		display: block;
-	}
-
 	#header-search {
 		position: absolute;
 		top: calc( 100% + 4px );
@@ -163,6 +159,18 @@
 		@include media( tablet ) {
 			right: 0;
 		}
+	}
+}
+
+@include media( tablet ) {
+	.h-dh .header-search-contain {
+		display: block;
+	}
+}
+
+@include media( narrowdesktop ) {
+	.h-sh .header-search-contain {
+		display: block;
 	}
 }
 
