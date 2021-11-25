@@ -416,7 +416,7 @@
 
 // h-sub
 .h-sub {
-	.site-title,
+	&.wp-custom-logo .site-title,
 	.site-description,
 	.alternative-logo {
 		display: none;
