@@ -35,6 +35,7 @@ function newspack_joseph_custom_typography_css() {
 			.widget,
 			.widget-title.accent-header,
 			.accent-header,
+			.widgettitle,
 			.wp-block-button .wp-block-button__link,
 			.entry .article-section-title,
 			button,
@@ -54,6 +55,7 @@ function newspack_joseph_custom_typography_css() {
 			}
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 			.block-editor-block-list__layout div.block-editor-block-list__block.wp-block-file {
 				font-family: inherit;
 			}';
@@ -74,12 +76,14 @@ function newspack_joseph_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header,
+			.widgettitle,
 			.article-section-title {
 				text-transform: uppercase;
 			}
 		';
 		$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 				text-transform: uppercase;
 			}

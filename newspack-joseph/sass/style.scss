@@ -102,6 +102,7 @@ figcaption,
 .widget,
 .widget-title.accent-header,
 .accent-header,
+.widgettitle,
 .wp-block-button__link,
 div.wp-block-file,
 div.wp-block-file .wp-block-file__button,
@@ -116,7 +117,9 @@ input[type='submit'] {
 
 /* Accent headers */
 .accent-header,
+.widgettitle ,
 .wp-block-columns .wp-block-column > .accent-header,
+.wp-block-columns .wp-block-column > .widgettitle,
 div.wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-base;
@@ -125,7 +128,8 @@ div.wpnbha .article-section-title,
 
 .accent-header,
 .article-section-title,
-.widget-title.accent-header {
+.widget-title.accent-header,
+.widgettitle {
 	&::before {
 		display: none;
 	}
@@ -170,6 +174,7 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header:not( .widget-title ),
+.widgettitle:not( .widget-title ),
 .single .cat-links {
 	align-items: center;
 	display: flex;
@@ -289,12 +294,14 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header:not( .widget-title )::before,
+.widgettitle:not( .widget-title )::before,
 .cat-links::before {
 	background: $color__text-main;
 }
 
 /* Author Bio */
-.author-bio .accent-header {
+.author-bio .accent-header,
+.author-bio .widgettitle {
 	color: $color__text-main;
 	font-size: $font__size_base;
 	margin: 0 0 #{0.25 * $size__spacing-unit};
@@ -432,7 +439,8 @@ hr {
 		color: $color__text-main;
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: $color__text-main;
 		font-size: $font__size_base;
 	}
