@@ -262,6 +262,7 @@ h4,
 // Accent headers
 
 .accent-header,
+.widgettitle,
 div.wpnbha .article-section-title,
 .cat-links {
 	color: $color__text-light;
@@ -270,7 +271,9 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header,
+.widgettitle,
 .wp-block-columns .wp-block-column > .accent-header,
+.wp-block-columns .wp-block-column > .widgettitle,
 div.wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
@@ -285,7 +288,8 @@ div.wpnbha .article-section-title {
 	}
 }
 
-#secondary .widget-title {
+#secondary .widget-title,
+#secondary .widgettitle {
 	color: inherit;
 	font-size: $font__size-lg;
 
@@ -548,6 +552,7 @@ blockquote {
 .mobile-sidebar,
 .site-footer {
 	.accent-header,
+	.widgettitle,
 	div.wpnbha .article-section-title {
 		color: inherit;
 	}
@@ -565,7 +570,8 @@ blockquote {
 	.widget a,
 	.widget a:hover,
 	.widget a:visited,
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: inherit;
 	}
 }
