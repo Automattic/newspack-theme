@@ -1,0 +1,17 @@
+{
+	"translation-revision-date": "2021-11-28 10:04+0100",
+	"generator": "WP-CLI\/2.5.0",
+	"source": "js\/dist\/post-subtitle.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "pl_PL",
+				"plural-forms": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);"
+			},
+			"Article Subtitle": ["Podtytu\u0142 artyku\u0142u"],
+			"Set a Subtitle for the Article": ["Ustaw podtytu\u0142u artyku\u0142u"]
+		}
+	}
+}
