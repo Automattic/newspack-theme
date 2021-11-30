@@ -1,6 +1,7 @@
 /* Headers */
 
 .accent-header,
+.widgettitle,
 .article-section-title {
 	border-bottom: 4px solid $color__border;
 	color: $color__primary;
@@ -9,7 +10,9 @@
 }
 
 .accent-header,
-.wp-block-columns .wp-block-column > .accent-header,
+.widgettitle,
+.wp-block-columns .wp-block-column > .accent-header,,
+.wp-block-columns .wp-block-column > .widgettitle,
 .entry-content .wpnbha .article-section-title {
 	margin-bottom: #{$size__spacing-unit * 0.75};
 }

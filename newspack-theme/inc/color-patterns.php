@@ -303,7 +303,8 @@ function newspack_custom_colors_css() {
 				.site-footer,
 				.site-footer a,
 				.site-footer a:hover,
-				.site-footer .widget-title,
+				.site-footer .widget-title,,
+				.site-footer .widgettitle,
 				.site-info {
 					color: ' . esc_html( $footer_color_contrast ) . ';
 				}
@@ -329,6 +330,7 @@ function newspack_custom_colors_css() {
 					background: ' . esc_html( newspack_adjust_brightness( $primary_color, -20 ) ) . ';
 				}
 				.mobile-sidebar .accent-header,
+				.mobile-sidebar .widgettitle,
 				.mobile-sidebar .article-section-title {
 					border-color: ' . newspack_adjust_brightness( $header_color, -20 ) . ';
 					color: ' . esc_html( $header_color_contrast ) . ';
@@ -344,7 +346,7 @@ function newspack_custom_colors_css() {
 					background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
-				.accent-header, .article-section-title,
+				.accent-header, .widgettitle, .article-section-title,
 				.entry .entry-footer a:hover {
 					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 				}
@@ -374,11 +376,13 @@ function newspack_custom_colors_css() {
 					}
 
 					.site-footer .accent-header,
+					.site-footer .widgettitle,
 					.site-footer .article-section-title {
 						border-color: ' . newspack_adjust_brightness( $footer_color, -20 ) . ';
 					}
 
 					.site-footer .accent-header,
+					.site-footer .widgettitle,
 					.site-footer .article-section-title {
 						color: ' . esc_html( $footer_color_contrast ) . ';
 					}
@@ -602,7 +606,8 @@ function newspack_custom_colors_css() {
 		$editor_css .= '
 			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
 			.block-editor-block-list__layout .block-editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title,
-			.block-editor-block-list__layout .block-editor-block-list__block.accent-header {
+			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle {
 				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 			}
 		';

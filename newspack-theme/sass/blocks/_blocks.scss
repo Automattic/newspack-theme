@@ -366,7 +366,8 @@ p.has-background {
 
 		&:first-child,
 		&:first-child .article-section-title, // when Load More is enabled.
-		&.accent-header + div.wpnbha {
+		&.accent-header + div.wpnbha,
+		&.widgettitle + div.wpnbha {
 			margin-top: 0;
 		}
 

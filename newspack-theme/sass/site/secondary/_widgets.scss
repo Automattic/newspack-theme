@@ -141,17 +141,9 @@
 		}
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		font-size: $font__size-md;
-	}
-}
-
-.widgettitle {
-	@extend .widget-title;
-	@extend .accent-header;
-
-	#secondary & {
-		text-transform: uppercase;
 	}
 }
 

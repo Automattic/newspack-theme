@@ -387,12 +387,14 @@ function newspack_custom_typography_css() {
 		if ( ! is_child_theme() ) {
 			$css_blocks        .= '
 				.accent-header,
+				.widgettitle,
 				.article-section-title {
 					text-transform: uppercase;
 				}
 			';
 			$editor_css_blocks .= '
 				.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+				.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 				.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 					text-transform: uppercase;
 				}
