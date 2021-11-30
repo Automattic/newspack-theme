@@ -26,6 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Child theme-specific overrides */
 
 .accent-header:not( .widget-title ),
+.widgettitle:not( .widget-title ),
 .article-section-title,
 .cat-links,
 .page-title {
@@ -48,7 +49,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .accent-header,
+.widgettitle,
 .wp-block-columns .wp-block-column > .accent-header,
+.wp-block-columns .wp-block-column > .widgettitle,
 div.wpnbha .article-section-title {
 	margin-bottom: 1em;
 }
@@ -118,7 +121,8 @@ div.wpnbha .article-section-title {
 
 /* Author Bio */
 
-.author-bio .accent-header {
+.author-bio .accent-header,
+.author-bio .widgettitle {
 	color: $color__text-main;
 	font-size: $font__size-md;
 	margin: 0 0 #{0.25 * $size__spacing-unit};
@@ -294,7 +298,8 @@ div.wpnbha .article-section-title {
 .mobile-sidebar,
 .site-footer {
 	.article-section-title,
-	.accent-header {
+	.accent-header,
+	.widgettitle {
 		color: inherit;
 	}
 }

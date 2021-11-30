@@ -37,6 +37,7 @@ function newspack_scott_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header:not(.widget-title),
+			.widgettitle:not(.widget-title),
 			.article-section-title,
 			.page-title,
 			#secondary .widget-title,
@@ -47,6 +48,7 @@ function newspack_scott_custom_typography_css() {
 		';
 		$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 				text-transform: uppercase;
 			}
