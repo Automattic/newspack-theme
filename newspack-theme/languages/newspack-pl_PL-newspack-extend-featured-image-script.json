@@ -1,0 +1,22 @@
+{
+	"translation-revision-date": "2021-11-28 10:28+0100",
+	"generator": "WP-CLI\/2.5.0",
+	"source": "js/dist/extend-featured-image-editor.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "pl_PL",
+				"plural-forms": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);"
+			},
+			"Small": ["Ma\u0142y"],
+			"Large": ["Du\u017cy"],
+			"Behind article title": ["Za tytu\u0142em artyku\u0142u"],
+			"Beside article title": ["Obok tytu\u0142u artyku\u0142u"],
+			"Above article title": ["Powy\u017cej tytu\u0142 artyku\u0142u"],
+			"Hidden": ["Ukryty"],
+			"Default (set in Customizer)": ["Domyślny (z ustawień Konfiguratora)"]
+		}
+	}
+}
