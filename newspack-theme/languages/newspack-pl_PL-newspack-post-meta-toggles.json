@@ -1,0 +1,18 @@
+{
+	"translation-revision-date": "2021-11-28 10:04+0100",
+	"generator": "WP-CLI\/2.5.0",
+	"source": "js\/dist\/post-meta-toggles.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "pl_PL",
+				"plural-forms": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);"
+			},
+			"Hide updated date": ["Ukryj zaktualizowan\u0105 dat\u0119"],
+			"Hide page title": ["Ukryj tytu\u0142 strony"],
+			"Show Jetpack share buttons": ["Poka\u017c przyciski udost\u0119pniania Jetpack"]
+		}
+	}
+}
