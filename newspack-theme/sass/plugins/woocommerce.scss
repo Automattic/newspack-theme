@@ -1427,7 +1427,7 @@ table.woocommerce-table--order-details.shop_table,
 		th,
 		td {
 			// stylelint-disable-next-line function-calc-no-invalid
-			font-size: calc( $font__size-sm * 1rem );
+			font-size: calc( $font__size-sm );
 			font-weight: normal;
 			vertical-align: middle;
 		}
