@@ -5,7 +5,7 @@
  * be offset by the header height in order to stack the sticky
  * elements on top of each other.
  */
-( function() {
+( function () {
 	const stickyAd = document.querySelector( '.h-stk .stick-to-top:last-child' );
 	const siteHeader = document.querySelector( '.h-stk .site-header' );
 	if ( stickyAd && siteHeader ) {
@@ -14,14 +14,14 @@
 } )();
 
 // AMP sticky ad polyfills.
-( function() {
+( function () {
 	const body = document.body;
 	const stickyAdClose = document.querySelector( '.newspack_sticky_ad__close' );
 	const stickyAd = document.querySelector( '.newspack_global_ad.sticky' );
 
 	if ( stickyAdClose && stickyAd ) {
 		window.googletag = window.googletag || { cmd: [] };
-		window.googletag.cmd.push( function() {
+		window.googletag.cmd.push( function () {
 			const initialBodyPadding = body.style.paddingBottom;
 
 			// Add padding to body to accommodate the sticky ad.

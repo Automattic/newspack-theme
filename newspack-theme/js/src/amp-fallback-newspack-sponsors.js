@@ -4,7 +4,7 @@
  * AMP fallback JavaScript.
  */
 
-( function() {
+( function () {
 	// Support info toggle.
 	const supportToggle = document.getElementById( 'sponsor-info-toggle' );
 
@@ -16,7 +16,7 @@
 
 		supportToggle.addEventListener(
 			'click',
-			function() {
+			function () {
 				supportLabel.classList.toggle( 'show-info' );
 				// Toggle screen reader text label and aria settings.
 				if ( supportToggleTextDefault === supportToggleTextContain.innerText ) {

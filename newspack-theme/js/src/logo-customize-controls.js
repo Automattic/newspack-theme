@@ -5,13 +5,13 @@
  *
  * Contains handlers to change Customizer controls.
  */
-( function( $ ) {
+( function ( $ ) {
 	'use strict';
 
 	const api = wp.customize;
 
-	api.bind( 'ready', function() {
-		$( window ).load( function() {
+	api.bind( 'ready', function () {
+		$( window ).load( function () {
 			if ( false === api.control( 'custom_logo' ).setting() ) {
 				$( '#customize-control-logo_size' ).hide();
 			}
@@ -19,8 +19,8 @@
 	} );
 
 	// Check logo changes
-	api( 'custom_logo', function( value ) {
-		value.bind( function( to ) {
+	api( 'custom_logo', function ( value ) {
+		value.bind( function ( to ) {
 			if ( '' === to ) {
 				api.control( 'logo_size' ).deactivate();
 			} else {
