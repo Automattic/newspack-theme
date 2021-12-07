@@ -1,3 +1,18 @@
+# [1.55.0](https://github.com/Automattic/newspack-theme/compare/v1.54.0...v1.55.0) (2021-12-07)
+
+
+### Bug Fixes
+
+* correct issue with sticky header styles in Nelson ([#1586](https://github.com/Automattic/newspack-theme/issues/1586)) ([e3d66b0](https://github.com/Automattic/newspack-theme/commit/e3d66b0280c719775de442976a405470b671831f))
+* if no logo, show site title with simplified header ([#1593](https://github.com/Automattic/newspack-theme/issues/1593)) ([98b23d7](https://github.com/Automattic/newspack-theme/commit/98b23d7198f16dfc519f66b17c4b8f242514c850))
+* improve logo sizing behavior with sticky header ([#1578](https://github.com/Automattic/newspack-theme/issues/1578)) ([5d59d7f](https://github.com/Automattic/newspack-theme/commit/5d59d7fa70ced53cef43ad7cf3013f0bb2c701c4))
+* update Spanish .mo file for updated translations ([#1588](https://github.com/Automattic/newspack-theme/issues/1588)) ([35174c5](https://github.com/Automattic/newspack-theme/commit/35174c541b7bdf66108ce13735bd544df28507c8))
+
+
+### Features
+
+* **i18n:** add polish translations ([#1596](https://github.com/Automattic/newspack-theme/issues/1596)) ([b9f34c0](https://github.com/Automattic/newspack-theme/commit/b9f34c0c925434461d7f48f12379f39a205ced0e))
+
 # [1.55.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.54.0...v1.55.0-alpha.1) (2021-12-02)
 
 
