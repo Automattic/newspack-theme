@@ -148,9 +148,14 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-highlight-menu';
 	}
 
-	// Adds a class of has-sidebar when there is a sidebar present.
-	if ( is_active_sidebar( 'sidebar-1' ) && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) ) {
+	// Adds a class of has-sidebar when there is a sidebar present and populated.
+	if ( is_active_sidebar( 'sidebar-1' )
+		&& ( ( ! is_archive() && ! is_page_template() && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) )
+		|| ( is_archive() && 'default' === get_theme_mod( 'archive_layout', 'default' ) ) )
+	) {
 		$classes[] = 'has-sidebar';
+	} else {
+		$classes[] = 'no-sidebar';
 	}
 
 	// Adds a class of has-afw when there is an above footer widget.
@@ -184,11 +189,6 @@ function newspack_body_classes( $classes ) {
 	// Adds a class if singular post has a large featured image
 	if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside' ) ) ) {
 		$classes[] = 'has-large-featured-image';
-	}
-
-	// Add a class to determine whether it has a sidebar.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
 	}
 
 	// Add a class if updated date should display
