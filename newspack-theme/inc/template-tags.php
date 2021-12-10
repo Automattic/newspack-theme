@@ -335,11 +335,18 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
+	 *
+	 * @param string $size Optional custom image size name to use.
 	 */
 	function newspack_post_thumbnail( $size = 'newspack-featured-image' ) {
 		if ( ! newspack_can_show_post_thumbnail() ) {
 			return;
 		}
+
+		$default_image_attributes = array(
+			'loading'             => false, // Disable lazy loading.
+			'data-hero-candidate' => true, // Make this image a hero candidate for AMP prerendering.
+		);
 
 		if ( is_singular() ) : ?>
 
@@ -352,8 +359,11 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 					the_post_thumbnail(
 						$size,
-						array(
-							'object-fit' => 'cover',
+						wp_parse_args(
+							array(
+								'object-fit' => 'cover',
+							),
+							$default_image_attributes
 						)
 					);
 				else :
@@ -361,8 +371,11 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 					if ( 'above' === newspack_featured_image_position() ) :
 						the_post_thumbnail(
 							$size,
-							array(
-								'layout' => 'responsive',
+							wp_parse_args(
+								array(
+									'layout' => 'responsive',
+								),
+								$default_image_attributes
 							)
 						);
 					else :
@@ -396,7 +409,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 			<figure class="post-thumbnail">
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail( $size ); ?>
+					<?php the_post_thumbnail( $size, $default_image_attributes ); ?>
 				</a>
 			</figure>
 
