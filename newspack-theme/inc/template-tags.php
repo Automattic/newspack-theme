@@ -344,9 +344,13 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 		}
 
 		$default_image_attributes = array(
-			'loading'             => false, // Disable lazy loading.
-			'data-hero-candidate' => true, // Make this image a hero candidate for AMP prerendering.
+			'loading'             => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? 'lazy' : false, // Disable lazy loading for first featured image on the page.
+			'data-hero-candidate' => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? false : true, // Make this image a hero candidate for AMP prerendering.
 		);
+
+		if ( ! isset( $GLOBALS['newspack_after_first_featured_image'] ) ) {
+			$GLOBALS['newspack_after_first_featured_image'] = true;
+		}
 
 		if ( is_singular() ) : ?>
 
