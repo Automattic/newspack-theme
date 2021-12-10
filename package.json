@@ -48,7 +48,7 @@
     "stylelint": "^13.3.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-prettier": "^1.2.0",
-    "webpack": "^5.64.2",
+    "webpack": "^5.65.0",
     "webpack-cli": "^4.7.2"
   },
   "rtlcssConfig": {
