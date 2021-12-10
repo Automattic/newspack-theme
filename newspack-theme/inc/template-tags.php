@@ -348,10 +348,6 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			'data-hero-candidate' => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? false : true, // Make this image a hero candidate for AMP prerendering.
 		);
 
-		if ( ! isset( $GLOBALS['newspack_after_first_featured_image'] ) ) {
-			$GLOBALS['newspack_after_first_featured_image'] = true;
-		}
-
 		if ( is_singular() ) : ?>
 
 			<figure class="post-thumbnail">
@@ -419,6 +415,11 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 			<?php
 		endif; // End is_singular().
+
+		// Set a global variable to identify that the first featured image has been displayed.
+		if ( ! isset( $GLOBALS['newspack_after_first_featured_image'] ) ) {
+			$GLOBALS['newspack_after_first_featured_image'] = true;
+		}
 	}
 endif;
 
