@@ -8,7 +8,7 @@
     "issues": "https://github.com/Automattic/newspack-theme/issues"
   },
   "require-dev": {
-    "composer/installers": "~1.7",
+    "composer/installers": "~2.0",
     "automattic/vipwpcs": "^2.0",
     "wp-coding-standards/wpcs": "^2.1",
     "phpcompatibility/phpcompatibility-wp": "^2.1",
