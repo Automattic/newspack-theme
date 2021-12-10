@@ -1,7 +1,7 @@
 const fs = require( 'fs' );
 const chokidar = require( 'chokidar' );
 const postcss = require( 'postcss' );
-const sass = require( 'node-sass' );
+const sass = require( 'sass' );
 const rtlcss = require( 'rtlcss' );
 const postcssFocusWithin = require( 'postcss-focus-within' );
 
@@ -33,7 +33,7 @@ if ( ! fs.existsSync( './newspack-joseph/styles' ) ) {
  * Save a file do disk.
  */
 const saveFile = ( fileName, content ) => {
-	fs.writeFile( fileName, content, function( err ) {
+	fs.writeFile( fileName, content, function ( err ) {
 		if ( err ) {
 			console.log( 'ERROR while saving file', fileName, '->', err );
 		}
@@ -42,6 +42,7 @@ const saveFile = ( fileName, content ) => {
 
 /**
  * Compile a Sass file to CSS.
+ *
  * @param  {string} inFile  Sass file path
  * @param  {string} outFile out file path
  * @param  {bool} withRTL Whether to save RTL version additionally
@@ -54,7 +55,7 @@ const compileSassFile = ( { inFile, outFile, withRTL } ) =>
 				outputStyle: 'expanded',
 				outFile,
 			},
-			function( error, result ) {
+			function ( error, result ) {
 				if ( error ) {
 					console.log( 'ERROR in sass compilation', error );
 					reject( error );
