@@ -110,7 +110,6 @@ function newspack_scott_custom_colors_css() {
 			}
 
 			.site-footer .accent-header::before,
-			.site-footer .widgettitle::before,
 			.site-footer .article-section-title::before {
 				background-color: ' . esc_html( newspack_adjust_brightness( $footer_color, -20 ) ) . ';
 			}
