@@ -375,7 +375,6 @@ function newspack_custom_colors_css() {
 					}
 
 					.site-footer .accent-header,
-					.site-footer .widgettitle,
 					.site-footer .article-section-title {
 						border-color: ' . newspack_adjust_brightness( $footer_color, -20 ) . ';
 					}
