@@ -271,9 +271,7 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header,
-.widgettitle,
 .wp-block-columns .wp-block-column > .accent-header,
-.wp-block-columns .wp-block-column > .widgettitle,
 div.wpnbha .article-section-title {
 	margin-bottom: $size__spacing-unit;
 	@include media( tablet ) {
