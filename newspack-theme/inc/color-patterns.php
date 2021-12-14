@@ -380,7 +380,6 @@ function newspack_custom_colors_css() {
 					}
 
 					.site-footer .accent-header,
-					.site-footer .widgettitle,
 					.site-footer .article-section-title {
 						color: ' . esc_html( $footer_color_contrast ) . ';
 					}
