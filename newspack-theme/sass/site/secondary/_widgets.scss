@@ -147,15 +147,6 @@
 	}
 }
 
-.widgettitle {
-	@extend .widget-title;
-	@extend .accent-header;
-
-	#secondary & {
-		text-transform: uppercase;
-	}
-}
-
 .single #secondary {
 	padding-top: calc( #{$size__spacing-unit} * 1.5 );
 }
