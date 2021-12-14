@@ -35,7 +35,6 @@ function newspack_scott_custom_colors_css() {
 
 	$theme_css = '
 		.accent-header:not(.widget-title):before,
-		.widgettitle:not(.widget-title):before,
 		.article-section-title:before,
 		.cat-links:before,
 		.page-title:before,
