@@ -76,7 +76,7 @@ function newspack_joseph_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header,
-			.widgettitle,
+			#secondary .widgettitle,
 			.article-section-title {
 				text-transform: uppercase;
 			}
