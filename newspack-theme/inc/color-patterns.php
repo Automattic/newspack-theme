@@ -330,7 +330,6 @@ function newspack_custom_colors_css() {
 					background: ' . esc_html( newspack_adjust_brightness( $primary_color, -20 ) ) . ';
 				}
 				.mobile-sidebar .accent-header,
-				.mobile-sidebar .widgettitle,
 				.mobile-sidebar .article-section-title {
 					border-color: ' . newspack_adjust_brightness( $header_color, -20 ) . ';
 					color: ' . esc_html( $header_color_contrast ) . ';
