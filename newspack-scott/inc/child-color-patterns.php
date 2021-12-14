@@ -120,7 +120,6 @@ function newspack_scott_custom_colors_css() {
 
 	$editor_css = '
 		.block-editor-block-list__layout .block-editor-block-list__block.accent-header:before,
-		.block-editor-block-list__layout .block-editor-block-list__block.widgettitle:before,
 		.block-editor-block-list__layout .block-editor-block-list__block .article-section-title:before {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
