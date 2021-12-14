@@ -37,7 +37,6 @@ function newspack_scott_custom_typography_css() {
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header:not(.widget-title),
-			.widgettitle:not(.widget-title),
 			.article-section-title,
 			.page-title,
 			#secondary .widget-title,
