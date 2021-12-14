@@ -129,7 +129,7 @@ div.wpnbha .article-section-title,
 .accent-header,
 .article-section-title,
 .widget-title.accent-header,
-.widgettitle {
+#secondary .widgettitle {
 	&::before {
 		display: none;
 	}
@@ -174,7 +174,6 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header:not( .widget-title ),
-.widgettitle:not( .widget-title ),
 .single .cat-links {
 	align-items: center;
 	display: flex;
@@ -294,14 +293,12 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header:not( .widget-title )::before,
-.widgettitle:not( .widget-title )::before,
 .cat-links::before {
 	background: $color__text-main;
 }
 
 /* Author Bio */
-.author-bio .accent-header,
-.author-bio .widgettitle {
+.author-bio .accent-header {
 	color: $color__text-main;
 	font-size: $font__size_base;
 	margin: 0 0 #{0.25 * $size__spacing-unit};
