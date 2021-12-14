@@ -1,3 +1,10 @@
+## [1.55.1](https://github.com/Automattic/newspack-theme/compare/v1.55.0...v1.55.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* correct has-sidebar class behavior ([#1598](https://github.com/Automattic/newspack-theme/issues/1598)) ([6da43a2](https://github.com/Automattic/newspack-theme/commit/6da43a2fef3bcb51b81ad277a4bc44fc554aba79))
+
 ## [1.55.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.0...v1.55.1-alpha.1) (2021-12-09)
 
 
