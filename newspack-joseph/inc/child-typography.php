@@ -55,7 +55,6 @@ function newspack_joseph_custom_typography_css() {
 			}
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
-			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 			.block-editor-block-list__layout div.block-editor-block-list__block.wp-block-file {
 				font-family: inherit;
 			}';
@@ -83,7 +82,6 @@ function newspack_joseph_custom_typography_css() {
 		';
 		$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
-			.block-editor-block-list__layout .block-editor-block-list__block.widgettitle,
 			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title {
 				text-transform: uppercase;
 			}
