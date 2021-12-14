@@ -303,7 +303,7 @@ function newspack_custom_colors_css() {
 				.site-footer,
 				.site-footer a,
 				.site-footer a:hover,
-				.site-footer .widget-title,,
+				.site-footer .widget-title,
 				.site-footer .widgettitle,
 				.site-info {
 					color: ' . esc_html( $footer_color_contrast ) . ';
