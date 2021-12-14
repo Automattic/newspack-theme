@@ -51,8 +51,7 @@ function newspack_scott_custom_colors_css() {
 		}
 
 		.mobile-sidebar .article-section-title,
-		.mobile-sidebar .accent-header,
-		.mobile-sidebar .widgettitle {
+		.mobile-sidebar .accent-header {
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 
