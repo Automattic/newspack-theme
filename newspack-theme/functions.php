@@ -448,7 +448,7 @@ function newspack_scripts() {
 			'script_loader_tag',
 			function( $tag, $handle, $src ) {
 				if ( 'newspack-amp-plus' == $handle ) {
-					return '<script data-amp-plus-allowed src="' . $src . '"></script>';
+					return '<script data-amp-plus-allowed async src="' . $src . '"></script>';
 				}
 				return $tag;
 			},

@@ -16,14 +16,12 @@ module.exports = {
 		jQuery: 'readonly',
 		_: 'readonly',
 	},
-  ignorePatterns: [
-    'newspack-*/js/dist'
-  ],
+	ignorePatterns: [ 'newspack-*/js/dist', 'scripts' ],
 	rules: {
-		'camelcase': 'off',
+		camelcase: 'off',
 		// Disallow importing or requiring packages that are not listed in package.json
 		// This prevents us from depending on transitive dependencies, which could break in unexpected ways.
-		'import/no-extraneous-dependencies': ['error'],
+		'import/no-extraneous-dependencies': [ 'error' ],
 		// There's a conflict with prettier here:
 		'react/jsx-curly-spacing': 'off',
 		// Skip prop types validation for now
