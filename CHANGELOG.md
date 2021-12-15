@@ -1,3 +1,16 @@
+## [1.55.2](https://github.com/Automattic/newspack-theme/compare/v1.55.1...v1.55.2) (2021-12-15)
+
+
+### Bug Fixes
+
+* correct issue with Mobile CTA gap ([#1594](https://github.com/Automattic/newspack-theme/issues/1594)) ([0e1bb70](https://github.com/Automattic/newspack-theme/commit/0e1bb703a47cfe8787c79c38bc6cb3b5e58be2c4))
+
+
+### Performance Improvements
+
+* disable lazy load for featured images ([#1616](https://github.com/Automattic/newspack-theme/issues/1616)) ([d1af327](https://github.com/Automattic/newspack-theme/commit/d1af3271d899a5a7183c65c7bd54a3b4060b74eb))
+* load amp-plus.js async ([#1620](https://github.com/Automattic/newspack-theme/issues/1620)) ([0ae63ef](https://github.com/Automattic/newspack-theme/commit/0ae63ef0cf7f8f1c91e10ed0f2aba2c23f5ad9e6))
+
 ## [1.55.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.1...v1.55.2-alpha.1) (2021-12-15)
 
 
