@@ -11,9 +11,9 @@ project.properties
 *.sublime-workspace
 .sublimelinterrc
 
-# Grunt
+# NPM
 /node_modules/
-none
+.cache
 
 # Sass
 .sass-cache/

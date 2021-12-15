@@ -4,7 +4,7 @@
  * AMP fallback JavaScript.
  */
 
-( function() {
+( function () {
 	// Shared variables
 	const headerContain = document.getElementById( 'masthead' ),
 		searchToggle = document.getElementById( 'search-toggle' );
@@ -17,7 +17,7 @@
 
 		searchToggle.addEventListener(
 			'click',
-			function() {
+			function () {
 				// Toggle the search visibility.
 				headerContain.classList.toggle( 'hide-header-search' );
 
@@ -97,7 +97,7 @@
 
 		mobileToggle[ i ].addEventListener(
 			'click',
-			function() {
+			function () {
 				if ( body.classList.contains( 'mobile-menu-opened' ) ) {
 					closeMenu( 'mobile-menu-opened', mobileOpenButton, 'mask-mobile' );
 				} else {
@@ -115,7 +115,7 @@
 
 		desktopToggle[ i ].addEventListener(
 			'click',
-			function() {
+			function () {
 				if ( body.classList.contains( 'desktop-menu-opened' ) ) {
 					closeMenu( 'desktop-menu-opened', desktopOpenButton, 'mask-desktop' );
 				} else {
@@ -135,7 +135,7 @@
 		for ( let i = 0; i < subpageToggle.length; i++ ) {
 			subpageToggle[ i ].addEventListener(
 				'click',
-				function() {
+				function () {
 					if ( body.classList.contains( 'subpage-menu-opened' ) ) {
 						closeMenu( 'subpage-menu-opened', subpageOpenButton, 'mask-subpage' );
 					} else {
@@ -148,7 +148,7 @@
 	}
 
 	// Add listener to the menu overlays, so they can be closed on click.
-	document.addEventListener( 'click', function( e ) {
+	document.addEventListener( 'click', function ( e ) {
 		if ( e.target && e.target.className === 'overlay-mask' ) {
 			const maskId = e.target.id;
 			const menu = maskId.split( '-' );
@@ -168,7 +168,7 @@
 		let scrollTimer,
 			lastScrollFireTime = 0;
 
-		window.onscroll = function() {
+		window.onscroll = function () {
 			toggleHeaderClass();
 		};
 
@@ -184,7 +184,7 @@
 				if ( now - lastScrollFireTime > 3 * minScrollTime ) {
 					lastScrollFireTime = now;
 				}
-				scrollTimer = setTimeout( function() {
+				scrollTimer = setTimeout( function () {
 					scrollTimer = null;
 					lastScrollFireTime = new Date().getTime();
 				}, minScrollTime );
@@ -209,7 +209,7 @@
 
 		commentsToggle.addEventListener(
 			'click',
-			function() {
+			function () {
 				if ( commentsWrapper.classList.contains( 'comments-hide' ) ) {
 					commentsWrapper.classList.remove( 'comments-hide' );
 					commentsToggleTextContain.innerText = newspackScreenReaderText.collapse_comments;
@@ -234,7 +234,7 @@
 
 		orderDetailToggle.addEventListener(
 			'click',
-			function() {
+			function () {
 				if ( orderDetailWrapper.classList.contains( 'order-details-hidden' ) ) {
 					orderDetailWrapper.classList.remove( 'order-details-hidden' );
 					orderDetailToggle.classList.remove( 'order-details-hidden' );

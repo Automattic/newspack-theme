@@ -1112,12 +1112,12 @@ hr {
 	}
 
 	.wp-block-jetpack-button.wp-block-button {
-		margin: $size__spacing-unit / 2 0;
+		margin: calc( $size__spacing-unit / 2 ) 0;
 	}
 
 	.wp-block-jetpack-mailchimp_notification {
 		font-size: $font__size-sm;
-		margin-top: $size__spacing-unit / 2;
+		margin-top: calc( $size__spacing-unit / 2 );
 
 		&.is-visible {
 			margin-bottom: 0;
@@ -1150,8 +1150,8 @@ hr {
 
 				> p:first-child {
 					flex: 1 1 auto;
-					margin-bottom: $size__spacing-unit / 2;
-					margin-right: $size__spacing-unit / 2;
+					margin-bottom: calc( $size__spacing-unit / 2 );
+					margin-right: calc( $size__spacing-unit / 2 );
 				}
 
 				> .wp-block-jetpack-button.wp-block-button {

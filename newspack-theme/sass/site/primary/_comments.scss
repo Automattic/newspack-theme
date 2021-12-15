@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -381,7 +383,7 @@
 	.comment-form-author,
 	.comment-form-email {
 		@include media( tablet ) {
-			width: calc( 50% - #{$size__spacing-unit / 2} );
+			width: calc( 50% - #{math.div( $size--spacing-unit, 2 )} );
 			float: left;
 		}
 	}

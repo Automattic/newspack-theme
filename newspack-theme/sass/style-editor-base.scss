@@ -1008,7 +1008,7 @@ ul.wp-block-archives,
 
 				@include media( mobile ) {
 					flex: 0 0 auto;
-					margin-left: $size__spacing-unit / 2;
+					margin-left: calc( $size__spacing-unit / 2 );
 				}
 
 				.wp-block-button__link {
