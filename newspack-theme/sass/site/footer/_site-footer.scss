@@ -35,7 +35,8 @@
 		}
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: $color__text-light;
 		font-size: inherit;
 	}
@@ -164,7 +165,8 @@
 			}
 		}
 
-		.widget-title {
+		.widget-title,
+		.widgettitle {
 			display: inline-block;
 			margin: 0 $size__spacing-unit 0 0;
 		}
@@ -207,7 +209,8 @@
 	}
 }
 
-#colophon .site-info .widget-title {
+#colophon .site-info .widget-title,
+#colophon .site-info .widgettitle {
 	color: inherit;
 	font-size: 1em;
 }

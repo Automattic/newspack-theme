@@ -304,6 +304,7 @@ function newspack_custom_colors_css() {
 				.site-footer a,
 				.site-footer a:hover,
 				.site-footer .widget-title,
+				.site-footer .widgettitle,
 				.site-info {
 					color: ' . esc_html( $footer_color_contrast ) . ';
 				}
@@ -344,7 +345,7 @@ function newspack_custom_colors_css() {
 					background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
-				.accent-header, .article-section-title,
+				.accent-header, .widgettitle, .article-section-title,
 				.entry .entry-footer a:hover {
 					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 				}

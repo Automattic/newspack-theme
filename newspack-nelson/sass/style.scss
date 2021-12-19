@@ -262,6 +262,7 @@ h4,
 // Accent headers
 
 .accent-header,
+.widgettitle,
 div.wpnbha .article-section-title,
 .cat-links {
 	color: $color__text-light;
@@ -285,7 +286,8 @@ div.wpnbha .article-section-title {
 	}
 }
 
-#secondary .widget-title {
+#secondary .widget-title,
+#secondary .widgettitle {
 	color: inherit;
 	font-size: $font__size-lg;
 
@@ -548,6 +550,7 @@ blockquote {
 .mobile-sidebar,
 .site-footer {
 	.accent-header,
+	.widgettitle,
 	div.wpnbha .article-section-title {
 		color: inherit;
 	}
@@ -565,7 +568,8 @@ blockquote {
 	.widget a,
 	.widget a:hover,
 	.widget a:visited,
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: inherit;
 	}
 }
