@@ -29,11 +29,28 @@
 }
 
 .site-header .custom-logo-link .custom-logo {
+	object-fit: contain;
+
 	@include media( tabletonly ) {
 		height: auto;
 		min-height: 45px;
-		object-fit: contain;
 		width: auto;
+	}
+}
+
+@include media( tablet ) {
+	.h-dh {
+		.custom-logo {
+			object-position: left center;
+		}
+	}
+}
+
+@include media( narrowdesktop ) {
+	.h-sh {
+		.custom-logo {
+			object-position: left center;
+		}
 	}
 }
 
@@ -571,10 +588,6 @@
 
 			&.site-branding {
 				width: 38%;
-			}
-
-			.custom-logo {
-				object-fit: contain;
 			}
 		}
 	}

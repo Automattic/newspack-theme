@@ -136,7 +136,7 @@ function newspack_customize_logo_resize( $html ) {
 			}
 		}
 
-		@media (max-width: 1199px) and (min-width: 600px) {
+		@media (max-width: 1199px) and (min-width: 782px) {
 			.h-stk.h-cl:not(.h-sub) .site-header .custom-logo {
 				max-width: 100%;
 			}
