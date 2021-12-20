@@ -38,22 +38,6 @@
 	}
 }
 
-@include media( tablet ) {
-	.h-dh {
-		.custom-logo {
-			object-position: left center;
-		}
-	}
-}
-
-@include media( narrowdesktop ) {
-	.h-sh {
-		.custom-logo {
-			object-position: left center;
-		}
-	}
-}
-
 // Site identity
 .site-identity {
 	align-items: baseline;
