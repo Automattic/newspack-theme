@@ -16,7 +16,7 @@
     "brainmaestro/composer-git-hooks": "^2.8",
     "wptrt/wpthemereview": "*",
     "phpstan/phpstan-shim": "^0.12.0",
-    "szepeviktor/phpstan-wordpress": "^0.2.0",
+    "szepeviktor/phpstan-wordpress": "^0.6.0",
     "xwp/wp-dev-lib": "^1.5"
   },
   "scripts": {
