@@ -1425,9 +1425,10 @@ hr {
 	background-image: linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% );
 }
 
-.entry-content .has-text-color a,
+.has-text-color a,
+.has-text-color a:hover,
 .entry-content .has-text-color a:hover,
-.entry-content .has-text-color a:visited {
+.has-text-color a:visited {
 	color: inherit;
 }
 

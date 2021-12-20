@@ -104,6 +104,13 @@ a {
 	}
 }
 
+.has-text-color {
+	a,
+	a:hover {
+		color: inherit;
+	}
+}
+
 .more-link {
 	color: inherit;
 	font-size: 0.8em;
