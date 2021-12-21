@@ -32,13 +32,26 @@
 	}
 }
 
-.site-header .custom-logo-link .custom-logo {
+.site-header .custom-logo {
 	object-fit: contain;
+	object-position: left center;
 
 	@include media( tabletonly ) {
 		height: auto;
 		min-height: 45px;
 		width: auto;
+	}
+}
+
+@include media( tablet ) {
+	.h-dh.h-cl .site-header .custom-logo {
+		object-position: center center;
+	}
+}
+
+@include media( narrowdesktop ) {
+	.h-sh.h-cl .site-header .custom-logo {
+		object-position: center center;
 	}
 }
 
