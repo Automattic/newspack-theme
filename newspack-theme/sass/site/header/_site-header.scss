@@ -32,26 +32,12 @@
 	}
 }
 
-.site-header .custom-logo {
-	object-fit: contain;
-	object-position: left center;
-
+.site-header .custom-logo-link .custom-logo {
 	@include media( tabletonly ) {
 		height: auto;
 		min-height: 45px;
+		object-fit: contain;
 		width: auto;
-	}
-}
-
-@include media( tablet ) {
-	.h-dh.h-cl .site-header .custom-logo {
-		object-position: center center;
-	}
-}
-
-@include media( narrowdesktop ) {
-	.h-sh.h-cl .site-header .custom-logo {
-		object-position: center center;
 	}
 }
 
@@ -589,6 +575,24 @@
 
 			&.site-branding {
 				width: 38%;
+			}
+		}
+	}
+
+	&.h-cl .site-header .custom-logo {
+		object-position: left center;
+	}
+
+	&.h-cl {
+		&.h-dh .site-header .custom-logo {
+			@include media( tablet ) {
+				object-position: center center;
+			}
+		}
+
+		&.h-sh .site-header .custom-logo {
+			@include media( narrowdesktop ) {
+				object-position: center center;
 			}
 		}
 	}
