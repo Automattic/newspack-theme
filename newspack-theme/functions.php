@@ -259,12 +259,15 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 
 		// Make our theme AMP/PWA Native
-		add_theme_support( 'amp' , [
-			'service_worker' => [
-				'cdn_script_caching'   => true,
-				'google_fonts_caching' => true,
-			],
-		] );
+		add_theme_support(
+			'amp',
+			[
+				'service_worker' => [
+					'cdn_script_caching'   => true,
+					'google_fonts_caching' => true,
+				],
+			]
+		);
 
 		// Add custom theme support - post subtitle
 		add_theme_support( 'post-subtitle' );
@@ -882,6 +885,28 @@ function newspack_colors_css_wrap() {
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
 
 /**
+ * Inject AMP access provider configuration
+ */
+function newspack_amp_access_provider_config() {
+	if ( newspack_is_amp() ) {
+		$amp_access_providers = apply_filters( 'newspack_campaigns_amp_access_providers', [] );
+		if ( ! empty( $amp_access_providers ) ) :
+			?>
+	<script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+	<script id="amp-access" type="application/json">
+			<?php echo wp_json_encode( $amp_access_providers ); ?>
+	</script>
+
+			<?php
+		endif;
+	};
+}
+add_action( 'wp_head', 'newspack_amp_access_provider_config' );
+
+/**
  * Display custom font CSS in customizer and on frontend.
  */
 function newspack_typography_css_wrap() {
@@ -895,7 +920,7 @@ function newspack_typography_css_wrap() {
 		<?php echo newspack_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
-<?php
+	<?php
 }
 add_action( 'wp_head', 'newspack_typography_css_wrap' );
 
@@ -954,12 +979,12 @@ function newspack_truncate_text( $content, $length, $after = '...' ) {
 	return $content;
 }
 
- /**
+/**
  * Returns an array of 'acceptable' avatar tags, to use with wp_kses().
  */
 function newspack_sanitize_avatars() {
 	$avatar_args = array(
-		'img' => array(
+		'img'      => array(
 			'class'  => true,
 			'src'    => true,
 			'alt'    => true,
@@ -1048,7 +1073,7 @@ function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, 
 					if ( intval( $media_query['width'] ) > 780 ) {
 						$media_query['min_width'] = null;
 						$media_query['max_width'] = null;
-					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
+					} elseif ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
 						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
 						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
 							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
