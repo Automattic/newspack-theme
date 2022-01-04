@@ -52,12 +52,10 @@ jobs:
     steps:
       - checkout_code
       - run:
-          name: Set tip of alpha branch on top of release and force-push it to remote
+          name: Perform post-release chores
           command: |
-            git pull origin release
-            git checkout alpha
-            git reset --hard release --
-            git push "https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" --force
+            wget -O post-release.sh https://raw.githubusercontent.com/Automattic/newspack-scripts/master/post-release.sh
+            chmod 755 ./post-release.sh && ./post-release.sh
       - run:
           name: Publish child themes' releases
           command: node scripts/create-child-releases.js --run
