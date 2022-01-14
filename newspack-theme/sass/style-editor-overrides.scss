@@ -105,8 +105,14 @@ body.newspack-single-column-template {
 
 body.post-type-post {
 	.editor-post-title__block,
-	.edit-post-visual-editor__post-title-wrapper {
+	.edit-post-visual-editor__post-title-wrapper,
+	.editor-styles-wrapper h1.wp-block-post-title {
 		max-width: 1200px;
+	}
+
+	.edit-post-visual-editor__post-title-wrapper {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.editor-post-title__block .editor-post-title__input,
