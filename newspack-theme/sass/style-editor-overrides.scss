@@ -104,22 +104,25 @@ body.newspack-single-column-template {
 /** === Single Posts === */
 
 body.post-type-post {
-	.editor-post-title__block {
+	.editor-post-title__block,
+	.editor-styles-wrapper h1.wp-block-post-title {
 		max-width: 1200px;
-		.editor-post-title__input {
-			font-size: $font__size-xl;
+	}
 
-			@include media( mobile ) {
-				font-size: $font__size-xxl;
-			}
+	.editor-post-title__block .editor-post-title__input,
+	.editor-styles-wrapper h1.wp-block-post-title {
+		font-size: $font__size-xl;
 
-			@include media( tablet ) {
-				font-size: $font__size-xxxl;
-			}
+		@include media( mobile ) {
+			font-size: $font__size-xxl;
+		}
 
-			@include media( desktop ) {
-				font-size: $font__size-xxxxl;
-			}
+		@include media( tablet ) {
+			font-size: $font__size-xxxl;
+		}
+
+		@include media( desktop ) {
+			font-size: $font__size-xxxxl;
 		}
 	}
 }
