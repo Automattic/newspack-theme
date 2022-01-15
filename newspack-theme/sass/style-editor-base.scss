@@ -130,18 +130,20 @@ figcaption,
 
 /** === Post Title === */
 
-.editor-post-title__block {
+.editor-post-title__block,
+h1.wp-block-post-title {
 	font-size: $font__size_base; // Set on the title so the font size variables math as expected.
+}
 
-	.editor-post-title__input {
-		font-family: $font__heading;
-		font-size: $font__size-xxl;
-		font-weight: 700;
-		line-height: 1.2;
+.editor-post-title__block .editor-post-title__input,
+h1.wp-block-post-title {
+	font-family: $font__heading;
+	font-size: $font__size-xxl;
+	font-weight: 700;
+	line-height: 1.2;
 
-		@include media( desktop ) {
-			font-size: $font__size-xxxl;
-		}
+	@include media( desktop ) {
+		font-size: $font__size-xxxl;
 	}
 }
 
