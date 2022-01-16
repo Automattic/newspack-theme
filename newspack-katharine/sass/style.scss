@@ -360,6 +360,10 @@ figcaption,
 			top: 0;
 			width: 40px;
 		}
+
+		&[style*='border-width']::before {
+			display: none;
+		}
 	}
 
 	&.has-background blockquote {

@@ -499,10 +499,6 @@ p.has-background {
 		}
 	}
 
-	&.has-text-align-center {
-		text-align: center;
-	}
-
 	cite {
 		display: inline-block;
 		color: inherit;
@@ -521,6 +517,7 @@ p.has-background {
 	&.alignleft,
 	&.alignright {
 		padding: 0;
+		text-align: left;
 		width: 100%;
 
 		@include media( mobile ) {
@@ -535,7 +532,6 @@ p.has-background {
 
 		blockquote {
 			padding: 0;
-			text-align: left;
 			max-width: 100%;
 
 			p {
@@ -596,7 +592,8 @@ p.has-background {
 	}
 
 	&.is-style-solid-color,
-	&.has-background {
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
 		@include media( tablet ) {
 			padding-left: #{1.5 * $size__spacing-unit};
 			padding-right: #{1.5 * $size__spacing-unit};
@@ -614,6 +611,10 @@ p.has-background {
 			padding-bottom: 1rem;
 			padding-top: 1rem;
 		}
+	}
+
+	&.has-text-align-center {
+		text-align: center;
 	}
 }
 

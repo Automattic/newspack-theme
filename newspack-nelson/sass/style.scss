@@ -464,7 +464,8 @@ blockquote {
 			width: 75%;
 		}
 
-		&.is-style-solid-color::before {
+		&.is-style-solid-color::before,
+		&[style*='border-width']::before {
 			display: none;
 		}
 	}

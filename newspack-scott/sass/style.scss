@@ -147,6 +147,7 @@ div.wpnbha .article-section-title {
 	font-weight: bold;
 	padding-top: #{4 * $size__spacing-unit};
 	position: relative;
+	text-align: center;
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
@@ -166,7 +167,6 @@ div.wpnbha .article-section-title {
 
 	blockquote {
 		border-color: inherit;
-		text-align: center;
 
 		&::before,
 		&::after {
@@ -212,8 +212,6 @@ div.wpnbha .article-section-title {
 	&.is-style-solid-color,
 	&.has-background {
 		blockquote {
-			text-align: center;
-
 			&::before {
 				color: inherit;
 			}
@@ -315,8 +313,9 @@ div.wpnbha .article-section-title {
 
 	&.alignleft,
 	&.alignright {
+		text-align: left;
+
 		blockquote {
-			text-align: left;
 			&::before {
 				left: 3em;
 				right: 15%;
@@ -354,6 +353,16 @@ div.wpnbha .article-section-title {
 			blockquote::before {
 				left: 4.5em;
 			}
+		}
+	}
+
+	&[style*='border-width'] {
+		padding-top: $size__spacing-unit;
+
+		p:first-of-type::before,
+		blockquote::before,
+		blockquote::after {
+			display: none;
 		}
 	}
 }

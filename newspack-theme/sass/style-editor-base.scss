@@ -521,7 +521,8 @@ h1.wp-block-post-title {
 	}
 
 	&.is-style-solid-color,
-	&.has-background {
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
 		padding: $size__spacing-unit #{3 * $size__spacing-unit} #{1.25 * $size__spacing-unit};
 	}
 
@@ -561,7 +562,8 @@ h1.wp-block-post-title {
 	}
 
 	&.is-style-solid-color,
-	&.has-background {
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
 		padding: $size__spacing-unit #{2 * $size__spacing-unit};
 	}
 

@@ -134,6 +134,11 @@ blockquote {
 		display: block;
 		width: 75%;
 	}
+
+	&.is-style-solid-color::before,
+	&[style*='border-width']::before {
+		display: none;
+	}
 }
 
 .wp-block-separator {

@@ -216,15 +216,27 @@ Newspack Scott Editor Styles
 			}
 		}
 	}
+
+	&[style*='border-width'] {
+		blockquote {
+			margin-top: 0;
+		}
+
+		p:first-of-type::before,
+		blockquote::before,
+		blockquote::after {
+			display: none;
+		}
+	}
 }
 
 [data-align='left'] .wp-block-pullquote,
 [data-align='right'] .wp-block-pullquote {
 	border-width: 0;
+	text-align: left;
 
 	blockquote {
 		padding-top: #{1.5 * $size__spacing-unit};
-		text-align: left;
 
 		&::before {
 			left: 3em;
