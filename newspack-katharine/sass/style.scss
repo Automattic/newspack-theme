@@ -304,6 +304,7 @@ figcaption,
 //! Pullquote
 .wp-block-pullquote {
 	border-width: 0;
+	font-weight: bold;
 	position: relative;
 
 	blockquote p,
@@ -313,8 +314,16 @@ figcaption,
 		}
 	}
 
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-xl;
+			}
+		}
+	}
+
 	blockquote {
-		font-weight: bold;
 		p {
 			font-style: normal;
 			font-size: $font__size-lg;
@@ -334,7 +343,7 @@ figcaption,
 		text-transform: uppercase;
 	}
 
-	&:not( .is-style-solid-color ) {
+	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
 			padding-left: #{2 * $size__spacing-unit};
 		}
@@ -353,6 +362,11 @@ figcaption,
 		}
 	}
 
+	&.has-background blockquote {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	&.alignleft,
 	&.alignright {
 		@include media( tablet ) {
@@ -361,7 +375,7 @@ figcaption,
 			}
 		}
 
-		&:not( .is-style-solid-color ) {
+		&:not( .is-style-solid-color ):not( .has-background ) {
 			padding-top: $size__spacing-unit;
 
 			blockquote {
@@ -374,7 +388,7 @@ figcaption,
 		}
 	}
 
-	&.alignfull:not( .is-style-solid-color )::before {
+	&.alignfull:not( .is-style-solid-color ):not( .has-background )::before {
 		left: 8px;
 	}
 }

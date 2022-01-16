@@ -520,9 +520,12 @@ h1.wp-block-post-title {
 		font-style: normal;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		padding: $size__spacing-unit #{3 * $size__spacing-unit} #{1.25 * $size__spacing-unit};
+	}
 
+	&.is-style-solid-color {
 		blockquote {
 			max-width: 100%;
 			width: 100%;
@@ -537,6 +540,10 @@ h1.wp-block-post-title {
 		&:not( .has-background-color ) {
 			background-color: $color__link;
 		}
+	}
+
+	&.has-text-align-center {
+		text-align: center;
 	}
 }
 
@@ -553,7 +560,8 @@ h1.wp-block-post-title {
 		padding: 0;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		padding: $size__spacing-unit #{2 * $size__spacing-unit};
 	}
 
@@ -565,9 +573,14 @@ h1.wp-block-post-title {
 			font-size: $font__size-md;
 		}
 	}
+
+	&.has-text-align-center {
+		text-align: center;
+	}
 }
 
-.wp-block[data-type='core/pullquote'][data-align='full'] {
+.wp-block[data-type='core/pullquote'][data-align='full'],
+[data-align='full'] {
 	.wp-block-pullquote {
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;

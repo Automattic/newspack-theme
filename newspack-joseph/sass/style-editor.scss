@@ -61,7 +61,8 @@ Newspack Joseph Editor Styles
 		}
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		border: 0;
 	}
 

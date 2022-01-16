@@ -178,6 +178,7 @@ cite {
 
 .wp-block-pullquote {
 	border-width: 2px 0;
+	text-align: center;
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
@@ -186,22 +187,25 @@ cite {
 		}
 	}
 
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-xl;
+			}
+		}
+	}
+
 	&.is-style-solid-color blockquote cite,
 	cite {
 		font-style: italic;
-	}
-
-	&.is-style-solid-color blockquote {
-		text-align: center;
 	}
 
 	&.alignleft,
 	&.alignright {
 		margin-top: #{1.5 * $size__spacing-unit};
 		margin-bottom: #{1.5 * $size__spacing-unit};
-		blockquote {
-			text-align: left;
-		}
+		text-align: left;
 
 		@include media( tablet ) {
 			blockquote p,

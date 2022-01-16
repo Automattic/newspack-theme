@@ -373,7 +373,8 @@ textarea {
 		text-align: center;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		border: 0;
 
 		&:not( .alignleft ):not( .alignright ) blockquote {

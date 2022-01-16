@@ -106,7 +106,7 @@ figure.wp-block-pullquote {
 .wp-block-pullquote {
 	position: relative;
 
-	&:not( .is-style-solid-color ) {
+	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
 			padding-left: #{2 * $size__spacing-unit};
 		}
