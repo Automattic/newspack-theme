@@ -7,10 +7,14 @@
 /** === Single Posts === */
 
 body.post-type-post {
-	.editor-post-title__block {
+	.editor-post-title__block,
+	.edit-post-visual-editor__post-title-wrapper,
+	.editor-styles-wrapper h1.wp-block-post-title {
 		max-width: 1020px; // 85% of 1200px.
-		.editor-post-title__input {
-			text-align: center;
-		}
+	}
+
+	.editor-post-title__block .editor-post-title__input,
+	.editor-styles-wrapper h1.wp-block-post-title {
+		text-align: center;
 	}
 }
