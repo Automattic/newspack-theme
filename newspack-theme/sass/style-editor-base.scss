@@ -126,6 +126,8 @@ figcaption,
 	line-height: $font__line-height-pre;
 	margin: 0 auto #{0.5 * $size__spacing-unit};
 	max-width: 780px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /** === Post Title === */
@@ -357,10 +359,20 @@ h1.wp-block-post-title {
 
 /** === Image === */
 
-.wp-block-image {
-	figcaption {
-		margin-top: 0;
-		text-align: left;
+.wp-block-image figcaption {
+	margin-top: 0;
+	text-align: left;
+}
+
+:not( [data-align] ) > .wp-block-image figcaption {
+	width: 100%;
+}
+
+div:not( [data-align] ),
+div[data-align='wide'],
+div[data-align='full'] {
+	> .wp-block-image figcaption {
+		margin-top: 10px;
 	}
 }
 
