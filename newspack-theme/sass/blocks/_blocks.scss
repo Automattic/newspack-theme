@@ -388,6 +388,20 @@ p.has-background {
 		margin-left: -16px;
 		max-width: calc( 100% + 32px );
 	}
+
+	@include media( tablet ) {
+		&.is-style-borders {
+			margin-left: -24px;
+			max-width: calc( 100% + 48px );
+		}
+	}
+
+	@include media( desktop ) {
+		&.is-style-borders {
+			margin-left: -32px;
+			max-width: calc( 100% + 64px );
+		}
+	}
 }
 
 //! Cover Image
