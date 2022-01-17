@@ -104,6 +104,6 @@
     "@wordpress/element": "^4.0.4",
     "@wordpress/hooks": "^3.2.1",
     "@wordpress/i18n": "^4.2.4",
-    "@wordpress/plugins": "^4.0.6"
+    "@wordpress/plugins": "^4.0.7"
   }
 }
