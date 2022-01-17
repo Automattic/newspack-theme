@@ -378,23 +378,15 @@ p.has-background {
 
 // Temporarily make some column styles more specific
 .entry .entry-content > .wp-block-columns {
-	@include media( mobile ) {
+	&.is-not-stacked-on-mobile {
 		margin-left: -16px;
+		margin-right: -16px;
 		max-width: calc( 100% + 32px );
 	}
 
-	@include media( tablet ) {
-		&.is-style-borders {
-			margin-left: -24px;
-			max-width: calc( 100% + 48px );
-		}
-	}
-
-	@include media( desktop ) {
-		&.is-style-borders {
-			margin-left: -32px;
-			max-width: calc( 100% + 64px );
-		}
+	@include media( mobile ) {
+		margin-left: -16px;
+		max-width: calc( 100% + 32px );
 	}
 }
 
