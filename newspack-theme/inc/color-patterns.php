@@ -128,7 +128,9 @@ function newspack_custom_colors_css() {
 			blockquote,
 			.wp-block-quote:not(.is-large),
 			.wp-block-quote:not(.is-style-large),
-			.woocommerce-tabs ul li.active a {
+			.woocommerce-tabs ul li.active a,
+			.has-primary-border-color,
+			.wp-block-pullquote .has-primary-border-color {
 				border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
 
@@ -195,6 +197,12 @@ function newspack_custom_colors_css() {
 				color:' . esc_html( newspack_color_with_contrast( $secondary_color ) ) . ';
 			}
 
+			/* Set secondary border color */
+			.has-secondary-border-color,
+			.wp-block-pullquote.has-secondary-border-color {
+				border-color:' . esc_html( $secondary_color ) . ';
+			}
+
 			/* Set primary variation background color */
 			.has-primary-variation-background-color,
 			*[class^="wp-block-"].has-primary-variation-background-color,
@@ -221,6 +229,12 @@ function newspack_custom_colors_css() {
 			.is-style-outline .wp-block-button__link.has-primary-variation-color:not(:hover), /* legacy styles */
 			.wp-block-button__link.is-style-outline.has-primary-variation-color:not(:hover) {
 				color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . '; /* base: #0073a8; */
+			}
+
+			/* Set primary variation border color */
+			.has-primary-variation-border-color,
+			.wp-block-pullquote.has-primary-variation-border-color {
+				border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
 			}
 
 			/* Set secondary variation background color */
@@ -250,7 +264,9 @@ function newspack_custom_colors_css() {
 			}
 
 			/* Set secondary border */
-			#ship-to-different-address label input[type="checkbox"]:checked + span::before {
+			#ship-to-different-address label input[type="checkbox"]:checked + span::before,
+			.has-secondary-variation-border-color,
+			.wp-block-pullquote.has-secondary-variation-border-color {
 				border-color:' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . ';
 			}
 
@@ -481,7 +497,8 @@ function newspack_custom_colors_css() {
 		}
 
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-quote:not(.is-large):not(.is-style-large),
-		.editor-styles-wrapper .block-editor-block-list__layout .wp-block-freeform blockquote {
+		.editor-styles-wrapper .block-editor-block-list__layout .wp-block-freeform blockquote,
+		.edit-post-visual-editor.editor-styles-wrapper .has-primary-border-color {
 			border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 		}
 
@@ -523,6 +540,10 @@ function newspack_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-variation-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-variation-background-color {
 			background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
+		}
+
+		.edit-post-visual-editor.editor-styles-wrapper .has-primary-variation-border-color {
+			border-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
 		}
 
 		/* Secondary color */
@@ -570,6 +591,10 @@ function newspack_custom_colors_css() {
 			color: ' . esc_html( $secondary_color ) . ';
 		}
 
+		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-border-color {
+			border-color: ' . esc_html( $secondary_color ) . ';
+		}
+
 		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-variation-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-variation-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-color, /* legacy selector */
@@ -587,6 +612,10 @@ function newspack_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-variation-background-color {
 			background-color: ' . esc_html( newspack_adjust_brightness( $secondary_color, -30 ) ) . ';
+		}
+
+		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-variation-border-color {
+			border-color: ' . esc_html( newspack_adjust_brightness( $secondary_color, -30 ) ) . ';
 		}
 
 		/* Set gradients */

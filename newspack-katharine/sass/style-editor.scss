@@ -104,9 +104,10 @@ figure.wp-block-pullquote {
 }
 
 .wp-block-pullquote {
+	font-weight: bold;
 	position: relative;
 
-	&:not( .is-style-solid-color ) {
+	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
 			padding-left: #{2 * $size__spacing-unit};
 		}
@@ -123,6 +124,10 @@ figure.wp-block-pullquote {
 			top: 0;
 			width: 40px;
 		}
+
+		&[style*='border-width']::before {
+			display: none;
+		}
 	}
 
 	blockquote p,
@@ -136,7 +141,6 @@ figure.wp-block-pullquote {
 
 	p {
 		font-style: normal;
-		font-weight: bold;
 	}
 
 	em {

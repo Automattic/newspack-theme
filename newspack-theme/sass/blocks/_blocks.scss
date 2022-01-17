@@ -489,6 +489,16 @@ p.has-background {
 		}
 	}
 
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+		p {
+			font-size: $font__size-lg;
+			@include media( tablet ) {
+				font-size: $font__size-lg;
+			}
+		}
+	}
+
 	cite {
 		display: inline-block;
 		color: inherit;
@@ -507,6 +517,7 @@ p.has-background {
 	&.alignleft,
 	&.alignright {
 		padding: 0;
+		text-align: left;
 		width: 100%;
 
 		@include media( mobile ) {
@@ -514,10 +525,13 @@ p.has-background {
 			width: 50%;
 		}
 
+		&.has-background blockquote,
 		blockquote {
 			margin: $size__spacing-unit 0;
+		}
+
+		blockquote {
 			padding: 0;
-			text-align: left;
 			max-width: 100%;
 
 			p {
@@ -538,11 +552,6 @@ p.has-background {
 		background-color: $color__primary;
 		padding-left: 0;
 		padding-right: 0;
-
-		@include media( tablet ) {
-			padding-left: #{1.5 * $size__spacing-unit};
-			padding-right: #{1.5 * $size__spacing-unit};
-		}
 
 		a {
 			color: $color__background-body;
@@ -580,6 +589,32 @@ p.has-background {
 				padding: $size__spacing-unit calc( 2 * #{$size__spacing-unit} );
 			}
 		}
+	}
+
+	&.is-style-solid-color,
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
+		@include media( tablet ) {
+			padding-left: #{1.5 * $size__spacing-unit};
+			padding-right: #{1.5 * $size__spacing-unit};
+		}
+	}
+
+	&.has-background {
+		blockquote {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+
+		&.alignleft,
+		&.alignright {
+			padding-bottom: 1rem;
+			padding-top: 1rem;
+		}
+	}
+
+	&.has-text-align-center {
+		text-align: center;
 	}
 }
 
@@ -1399,6 +1434,47 @@ hr {
 .is-style-outline .wp-block-button__link.has-white-color:not( :hover ), // legacy selector
 .wp-block-button__link.is-style-outline.has-white-color:not( :hover ) {
 	color: #fff;
+}
+
+//! Custom border colors
+.has-primary-border-color,
+.wp-block-pullquote.has-primary-border-color {
+	border-color: $color__primary;
+}
+
+.has-primary-variation-border-color,
+.wp-block-pullquote.has-primary-variation-border-color {
+	border-color: $color__primary-variation;
+}
+
+.has-secondary-border-color,
+.wp-block-pullquote.has-secondary-border-color {
+	border-color: $color__secondary;
+}
+
+.has-secondary-variation-border-color,
+.wp-block-pullquote.has-secondary-variation-border-color {
+	border-color: $color__secondary-variation;
+}
+
+.has-dark-gray-border-color,
+.wp-block-pullquote.has-dark-gray-border-color {
+	border-color: #111;
+}
+
+.has-medium-gray-border-color,
+.wp-block-pullquote.has-medium-gray-border-color {
+	border-color: #767676;
+}
+
+.has-light-gray-border-color,
+.wp-block-pullquote.has-light-gray-border-color {
+	border-color: #eee;
+}
+
+.has-white-border-color,
+.wp-block-pullquote.has-white-border-color {
+	border-color: #fff;
 }
 
 // Gradients

@@ -364,10 +364,6 @@ div.wpnbha .article-section-title {
 
 blockquote {
 	font-family: $font__heading;
-
-	p {
-		font-weight: 800;
-	}
 }
 
 //! Paragraph
@@ -401,11 +397,21 @@ blockquote {
 //! Pullquote
 .wp-block-pullquote {
 	border-width: 16px 0 4px;
+	font-weight: bold;
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
 		@include media( tablet ) {
 			font-size: $font__size-xl;
+		}
+	}
+
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+		@include media( tablet ) {
+			p {
+				font-size: $font__size-xl;
+			}
 		}
 	}
 
@@ -426,7 +432,6 @@ blockquote {
 	}
 
 	cite {
-		font-weight: bold;
 		letter-spacing: 0.05em;
 		opacity: 0.9;
 	}
@@ -459,7 +464,8 @@ blockquote {
 			width: 75%;
 		}
 
-		&.is-style-solid-color::before {
+		&.is-style-solid-color::before,
+		&[style*='border-width']::before {
 			display: none;
 		}
 	}
