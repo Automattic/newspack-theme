@@ -359,6 +359,7 @@ textarea {
 	font-family: $font__heading;
 	font-style: normal;
 	font-weight: bold;
+	text-align: center;
 
 	p {
 		font-style: inherit;
@@ -370,15 +371,11 @@ textarea {
 
 	blockquote {
 		border-color: inherit;
-		text-align: center;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		border: 0;
-
-		&:not( .alignleft ):not( .alignright ) blockquote {
-			text-align: center;
-		}
 	}
 
 	cite {
@@ -386,6 +383,15 @@ textarea {
 		font-family: $font__body;
 		font-size: $font__size-base;
 		font-weight: normal;
+	}
+
+	&.alignleft,
+	&.alignright {
+		text-align: left;
+	}
+
+	&.has-text-align-center {
+		text-align: center;
 	}
 }
 

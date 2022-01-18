@@ -52,6 +52,7 @@ Newspack Joseph Editor Styles
 	font-family: $font__heading;
 	font-style: normal;
 	font-weight: bold;
+	text-align: center;
 
 	p {
 		font-style: inherit;
@@ -61,13 +62,13 @@ Newspack Joseph Editor Styles
 		}
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background {
 		border: 0;
 	}
 
 	blockquote {
 		border-color: inherit;
-		text-align: center;
 	}
 
 	.wp-block-pullquote__citation {
@@ -79,9 +80,7 @@ Newspack Joseph Editor Styles
 
 [data-align='left'] .wp-block-pullquote,
 [data-align='right'] .wp-block-pullquote {
-	blockquote {
-		text-align: left;
-	}
+	text-align: left;
 
 	@include media( tablet ) {
 		p {
