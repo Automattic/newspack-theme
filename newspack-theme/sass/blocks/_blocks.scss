@@ -112,10 +112,6 @@
 			}
 
 			&.wp-block-columns {
-				margin-left: 0;
-				margin-right: 0;
-				max-width: 100%;
-
 				@include media( mobile ) {
 					margin-left: calc( 50% - 50vw - 16px );
 					margin-right: calc( 50% - 50vw - 16px );
@@ -378,8 +374,15 @@ p.has-background {
 
 // Temporarily make some column styles more specific
 .entry .entry-content > .wp-block-columns {
+	&.is-not-stacked-on-mobile {
+		margin-left: -16px;
+		margin-right: -16px;
+		max-width: calc( 100% + 32px );
+	}
+
 	@include media( mobile ) {
 		margin-left: -16px;
+		margin-right: -16px;
 		max-width: calc( 100% + 32px );
 	}
 
@@ -1661,10 +1664,17 @@ hr {
 .page-template-single-feature {
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
 	.wp-block-pullquote,
-	.wp-block-columns,
 	.wp-block-table,
+	.wp-block-columns:not( .is-not-stacked-on-mobile ),
 	.wpnbha {
 		&.alignfull {
+			padding-left: $size__spacing-unit;
+			padding-right: $size__spacing-unit;
+		}
+	}
+
+	@include media( mobile ) {
+		.wp-block-columns.is-not-stacked-on-mobile.alignfull {
 			padding-left: $size__spacing-unit;
 			padding-right: $size__spacing-unit;
 		}
