@@ -1,3 +1,15 @@
+## [1.55.3](https://github.com/Automattic/newspack-theme/compare/v1.55.2...v1.55.3) (2022-01-19)
+
+
+### Bug Fixes
+
+* correct Sacha post title styles for WordPress 5.9 ([#1664](https://github.com/Automattic/newspack-theme/issues/1664)) ([825d6b3](https://github.com/Automattic/newspack-theme/commit/825d6b3e018765c1d2d2ed8b85ee52c3de4e8569))
+* update article subtitle preview selector ([#1660](https://github.com/Automattic/newspack-theme/issues/1660)) ([422f988](https://github.com/Automattic/newspack-theme/commit/422f988a827390fdbc5b2091ce23e4dc82f7b3dd))
+* update columns block styles for WordPress 5.9 ([#1670](https://github.com/Automattic/newspack-theme/issues/1670)) ([10d1c1e](https://github.com/Automattic/newspack-theme/commit/10d1c1eeda5ba298bda52daa95d079435f3e37a0))
+* update figcaption styles for WordPress 5.9 ([#1661](https://github.com/Automattic/newspack-theme/issues/1661)) ([c41a3da](https://github.com/Automattic/newspack-theme/commit/c41a3dae65efb7d3e2f30eed98ea930bbb7e8544))
+* update post title styles for WP 5.9 ([#1659](https://github.com/Automattic/newspack-theme/issues/1659)) ([8c3641b](https://github.com/Automattic/newspack-theme/commit/8c3641bd04c24f8a5d454289958cbd386d7d6e98))
+* update pullquote block styles for WordPress 5.9 ([#1663](https://github.com/Automattic/newspack-theme/issues/1663)) ([ae9fa10](https://github.com/Automattic/newspack-theme/commit/ae9fa10f6d1d6693b188293740bc6cc12ad86552))
+
 ## [1.55.3-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.2...v1.55.3-alpha.1) (2022-01-18)
 
 
