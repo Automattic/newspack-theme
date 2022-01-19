@@ -254,7 +254,8 @@ function newspack_custom_typography_css() {
 
 		/* Post Title */
 		.edit-post-visual-editor.editor-styles-wrapper .editor-post-title__block .editor-post-title__input, /* legacy */
-		.edit-post-visual-editor .editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
+		.edit-post-visual-editor .editor-styles-wrapper .editor-post-title__block .editor-post-title__input, /* legacy */
+		.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper h1.wp-block-post-title,
 
 		/* Homepage Posts Block */
 		.block-editor-block-list__layout .wp-block .entry-title,

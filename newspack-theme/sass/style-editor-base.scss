@@ -126,22 +126,26 @@ figcaption,
 	line-height: $font__line-height-pre;
 	margin: 0 auto #{0.5 * $size__spacing-unit};
 	max-width: 780px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /** === Post Title === */
 
-.editor-post-title__block {
+.editor-post-title__block,
+h1.wp-block-post-title {
 	font-size: $font__size_base; // Set on the title so the font size variables math as expected.
+}
 
-	.editor-post-title__input {
-		font-family: $font__heading;
-		font-size: $font__size-xxl;
-		font-weight: 700;
-		line-height: 1.2;
+.editor-post-title__block .editor-post-title__input,
+h1.wp-block-post-title {
+	font-family: $font__heading;
+	font-size: $font__size-xxl;
+	font-weight: 700;
+	line-height: 1.2;
 
-		@include media( desktop ) {
-			font-size: $font__size-xxxl;
-		}
+	@include media( desktop ) {
+		font-size: $font__size-xxxl;
 	}
 }
 
@@ -355,10 +359,20 @@ figcaption,
 
 /** === Image === */
 
-.wp-block-image {
-	figcaption {
-		margin-top: 0;
-		text-align: left;
+.wp-block-image figcaption {
+	margin-top: 0;
+	text-align: left;
+}
+
+:not( [data-align] ) > .wp-block-image figcaption {
+	width: 100%;
+}
+
+div:not( [data-align] ),
+div[data-align='wide'],
+div[data-align='full'] {
+	> .wp-block-image figcaption {
+		margin-top: 10px;
 	}
 }
 
@@ -518,9 +532,13 @@ figcaption,
 		font-style: normal;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
 		padding: $size__spacing-unit #{3 * $size__spacing-unit} #{1.25 * $size__spacing-unit};
+	}
 
+	&.is-style-solid-color {
 		blockquote {
 			max-width: 100%;
 			width: 100%;
@@ -535,6 +553,10 @@ figcaption,
 		&:not( .has-background-color ) {
 			background-color: $color__link;
 		}
+	}
+
+	&.has-text-align-center {
+		text-align: center;
 	}
 }
 
@@ -551,7 +573,9 @@ figcaption,
 		padding: 0;
 	}
 
-	&.is-style-solid-color {
+	&.is-style-solid-color,
+	&.has-background,
+	&[style*='border-style'][style*='border-width'] {
 		padding: $size__spacing-unit #{2 * $size__spacing-unit};
 	}
 
@@ -563,9 +587,14 @@ figcaption,
 			font-size: $font__size-md;
 		}
 	}
+
+	&.has-text-align-center {
+		text-align: center;
+	}
 }
 
-.wp-block[data-type='core/pullquote'][data-align='full'] {
+.wp-block[data-type='core/pullquote'][data-align='full'],
+[data-align='full'] {
 	.wp-block-pullquote {
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;

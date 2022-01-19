@@ -8,6 +8,7 @@ Newspack Sacha Editor Styles
 @import '../../newspack-theme/sass/style-editor-base';
 
 .editor-post-title__block .editor-post-title__input,
+h1.wp-block-post-title,
 .entry-title {
 	font-weight: normal;
 }
@@ -58,7 +59,6 @@ figcaption,
 blockquote,
 cite {
 	font-family: $font__heading;
-	text-align: center;
 
 	em,
 	i {
@@ -69,6 +69,7 @@ cite {
 .wp-block-pullquote {
 	border-width: 2px 0;
 	font-style: italic;
+	text-align: center;
 
 	blockquote {
 		margin: #{2 * $size__spacing-unit} 0;
@@ -85,13 +86,11 @@ cite {
 
 	p {
 		font-family: $font__heading;
-		text-align: center;
 	}
 
 	.wp-block-pullquote__citation {
 		font-family: $font__heading;
 		font-style: italic;
-		text-align: center;
 
 		em,
 		i {
@@ -104,17 +103,13 @@ cite {
 [data-align='right'] .wp-block-pullquote {
 	margin-top: #{1.5 * $size__spacing-unit};
 	margin-bottom: #{1.5 * $size__spacing-unit};
+	text-align: left;
 
 	@include media( tablet ) {
 		&.is-style-solid-color blockquote p,
 		blockquote p {
 			font-size: $font__size-lg;
 		}
-	}
-
-	p,
-	.wp-block-pullquote__citation {
-		text-align: left;
 	}
 }
 

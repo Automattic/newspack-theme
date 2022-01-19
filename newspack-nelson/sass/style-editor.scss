@@ -13,7 +13,6 @@ h1,
 h2,
 h3,
 h4,
-blockquote p,
 .editor-post-title__block .editor-post-title__input {
 	font-weight: 800;
 }
@@ -79,6 +78,7 @@ blockquote {
 
 .wp-block-pullquote {
 	border-width: 16px 0 4px;
+	font-weight: bold;
 
 	blockquote {
 		margin: #{2 * $size__spacing-unit} 0;
@@ -95,7 +95,6 @@ blockquote {
 
 	p {
 		font-style: normal;
-		font-weight: bold;
 	}
 
 	em {
@@ -134,6 +133,11 @@ blockquote {
 		content: '';
 		display: block;
 		width: 75%;
+	}
+
+	&.is-style-solid-color::before,
+	&[style*='border-width']::before {
+		display: none;
 	}
 }
 

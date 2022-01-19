@@ -1,0 +1,18 @@
+on:
+  pull_request_target:
+    types: [labeled]
+
+name: Dependabot auto-merge
+jobs:
+  auto-merge:
+    name: Auto-merge dependabot PRs for minor and patch updates
+    runs-on: ubuntu-latest
+    if: |
+      contains( github.event.pull_request.labels.*.name, 'dependencies' )
+      && ! contains( github.event.pull_request.labels.*.name, '[Status] Approved' )
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor # includes patch updates.
+          github-token: ${{ secrets.DEPENDABOT_TOKEN }}
