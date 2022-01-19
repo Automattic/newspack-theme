@@ -1,6 +1,6 @@
 {
   "name": "newspack",
-  "version": "0.0.0",
+  "version": "1.55.3",
   "description": "A theme for Newspack. https://newspack.blog",
   "bugs": {
     "url": "https://github.com/Automattic/newspack-theme/issues"
@@ -8,10 +8,10 @@
   "homepage": "https://github.com/WordPress/newspack#readme",
   "devDependencies": {
     "@automattic/calypso-build": "^10.0.0",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
     "@babel/runtime": "^7.16.0",
-    "@commitlint/cli": "^15.0.0",
+    "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^15.0.0",
     "@octokit/rest": "^18.12.0",
     "@semantic-release/changelog": "^6.0.1",
@@ -36,7 +36,7 @@
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^12.1.2",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.4",
+    "postcss": "^8.4.5",
     "postcss-cli": "^9.0.1",
     "postcss-focus-within": "^5.0.3",
     "prettier": "npm:wp-prettier@2.2.1-beta-1",
@@ -104,6 +104,6 @@
     "@wordpress/element": "^4.0.4",
     "@wordpress/hooks": "^3.2.1",
     "@wordpress/i18n": "^4.2.4",
-    "@wordpress/plugins": "^4.0.6"
+    "@wordpress/plugins": "^4.0.7"
   }
 }
