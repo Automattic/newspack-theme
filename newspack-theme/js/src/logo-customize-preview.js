@@ -1,3 +1,5 @@
+/* globals jQuery */
+
 /**
  * File customize-preview.js.
  *
@@ -21,7 +23,6 @@
 	} );
 
 	/**
-	 *
 	 */
 	function handleLogoDetection( to, initial ) {
 		if ( '' === to ) {
@@ -35,7 +36,6 @@
 	}
 
 	/**
-	 *
 	 */
 	function NewspackLogo() {
 		let hasLogo = null;
@@ -128,12 +128,12 @@
 	/**
 	 * Get logo size
 	 *
-	 * @param {number} a short side,
-	 * @param {number} b long side
+	 * @param {number} a    short side,
+	 * @param {number} b    long side
 	 * @param {number} amax short css max
 	 * @param {number} bmax long css max
-	 * @param {number} p percent
-	 * @param {number} m minimum short side
+	 * @param {number} p    percent
+	 * @param {number} m    minimum short side
 	 */
 	function logo_min_max( a, b, amax, bmax, p, m ) {
 		const max = new Object();

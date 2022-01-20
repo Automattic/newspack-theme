@@ -1,7 +1,6 @@
-const config = {
-  presets: [
-    '@automattic/calypso-build/babel/default',
-    '@automattic/calypso-build/babel/wordpress-element',
-  ]
+module.exports = api => {
+	api.cache( true );
+	return {
+		extends: 'newspack-scripts/config/babel.config.js',
+	};
 };
-module.exports = config;

@@ -1,3 +1,5 @@
+/* globals jQuery */
+
 /**
  * File customize-controls.js.
  *
