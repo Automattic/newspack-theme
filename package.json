@@ -11,7 +11,7 @@
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
     "@babel/runtime": "^7.16.0",
-    "@commitlint/cli": "^15.0.0",
+    "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@octokit/rest": "^18.12.0",
     "@semantic-release/changelog": "^6.0.1",
