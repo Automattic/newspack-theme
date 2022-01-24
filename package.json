@@ -6,19 +6,6 @@
     "url": "https://github.com/Automattic/newspack-theme/issues"
   },
   "homepage": "https://github.com/WordPress/newspack#readme",
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
   "browserslist": [
     "extends @wordpress/browserslist-config"
   ],
@@ -28,7 +15,7 @@
   },
   "scripts": {
     "cm": "newspack-scripts commit",
-    "semantic-release": "newspack-scripts release --files=newspack-new-plugin-boilerplate.php",
+    "semantic-release": "semantic-release",
     "start": "npm ci && newspack-scripts watch",
     "build:js": "webpack",
     "build:scss": "node scripts/compile-scss.js",
@@ -49,6 +36,8 @@
   "devDependencies": {
     "@octokit/rest": "^18.12.0",
     "@rushstack/eslint-patch": "^1.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@wordpress/browserslist-config": "^4.1.0",
     "chokidar-cli": "^3.0.0",
     "classnames": "^2.3.1",
@@ -60,6 +49,8 @@
     "prettier": "npm:wp-prettier@^2.2.1-beta-1",
     "rtlcss": "^3.5.0",
     "sass": "^1.47.0",
+    "semantic-release": "^19.0.2",
+    "semantic-release-version-bump": "^1.4.1",
     "stylelint": "^13.3.1"
   }
 }
