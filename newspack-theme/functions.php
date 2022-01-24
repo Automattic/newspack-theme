@@ -1246,6 +1246,6 @@ require get_template_directory() . '/inc/web-stories.php';
 /**
  * Load The Events Calendar compatibility file.
  */
-if ( class_exists( 'Tribe__Main' ) ) {
+if ( class_exists( 'Tribe__Events__Main' ) ) {
 	require get_template_directory() . '/inc/the-events-calendar.php';
 }
