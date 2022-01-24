@@ -56,9 +56,7 @@ jobs:
           command: node scripts/create-child-releases.js --run
       - run:
           name: Perform post-release chores
-          command: |
-            wget -O post-release.sh https://raw.githubusercontent.com/Automattic/newspack-scripts/master/post-release.sh
-            chmod 755 ./post-release.sh && ./post-release.sh
+          command: ./node_modules/newspack-scripts/post-release.sh
 
 workflows:
   version: 2
@@ -76,6 +74,7 @@ workflows:
               only:
                 - release
                 - alpha
+                - /^hotfix\/.*/
       - post_release:
           requires:
             - release

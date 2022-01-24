@@ -1,3 +1,5 @@
+/* globals newspackScreenReaderText */
+
 /**
  * File amp-fallback.js.
  *
