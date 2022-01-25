@@ -1,3 +1,10 @@
+## [1.55.4](https://github.com/Automattic/newspack-theme/compare/v1.55.3...v1.55.4) (2022-01-25)
+
+
+### Bug Fixes
+
+* prevent errors with Events Calendar compatibility check ([#1629](https://github.com/Automattic/newspack-theme/issues/1629)) ([3eb2f39](https://github.com/Automattic/newspack-theme/commit/3eb2f3901a77888b93f7f32f73d5e4d72fcd5350))
+
 ## [1.55.4-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.3...v1.55.4-alpha.1) (2022-01-24)
 
 
