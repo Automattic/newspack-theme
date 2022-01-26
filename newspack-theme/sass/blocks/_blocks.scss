@@ -1694,6 +1694,16 @@ hr {
 			}
 		}
 	}
+
+	// Make SCAIP placements full-width.
+	.entry .entry-content .scaip {
+		position: relative;
+		background: #eee;
+		max-width: none;
+		width: 100vw;
+		margin-left: -50vw;
+		left: 50%;
+	}
 }
 
 //! Social Links block
