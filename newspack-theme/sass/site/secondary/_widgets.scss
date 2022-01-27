@@ -47,6 +47,11 @@
 
 		li {
 			font-family: $font__heading;
+			margin: #{0.125 * $size__spacing-unit} 0;
+
+			@include media( mobile ) {
+				margin: 0;
+			}
 
 			ul {
 				margin-left: 1.5em;
@@ -55,7 +60,11 @@
 
 		a {
 			display: inline-block;
-			padding: #{0.125 * $size__spacing-unit} 0;
+			padding: #{0.25 * $size__spacing-unit} 0;
+
+			@include media( mobile ) {
+				padding: #{0.125 * $size__spacing-unit} 0;
+			}
 		}
 	}
 }
