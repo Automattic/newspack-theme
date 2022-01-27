@@ -36,7 +36,7 @@
     "hooks": {
       "pre-commit": "DEV_LIB_SKIP=eslint ./vendor/xwp/wp-dev-lib/scripts/pre-commit && ./node_modules/.bin/lint-staged",
       "commit-msg": [
-        "cat $1 | ./node_modules/.bin/commitlint"
+        "cat $1 | ./node_modules/.bin/newspack-scripts commitlint"
       ]
     }
   }
