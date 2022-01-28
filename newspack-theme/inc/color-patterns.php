@@ -619,10 +619,10 @@ function newspack_custom_colors_css() {
 		}
 
 		/* Set gradients */
-		.edit-post-visual-editor.editor-styles-wrapper .has-grad-1-gradient-background {
+		.editor-styles-wrapper .wp-block.has-grad-1-gradient-background {
 			background-image: linear-gradient( 135deg, ' . esc_html( $primary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ' 100% );
 		}
-		.edit-post-visual-editor.editor-styles-wrapper .has-grad-2-gradient-background {
+		.editor-styles-wrapper .wp-block.has-grad-2-gradient-background {
 			background-image: linear-gradient( 135deg, ' . esc_html( $secondary_color ) . ' 0%, ' . esc_html( newspack_adjust_brightness( $secondary_color, -40 ) ) . ' 100% );
 		}
 		';
