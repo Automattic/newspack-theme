@@ -183,7 +183,7 @@
 
 		ul {
 			li {
-				margin: #{0.125 * $size__spacing-unit} 0;
+				margin: #{0.3 * $size__spacing-unit} 0;
 
 				@include media( mobile ) {
 					display: inline-block;
