@@ -579,6 +579,24 @@
 		}
 	}
 
+	&.h-cl .site-header .custom-logo {
+		object-position: left center;
+	}
+
+	&.h-cl {
+		&.h-dh .site-header .custom-logo {
+			@include media( tablet ) {
+				object-position: center center;
+			}
+		}
+
+		&.h-sh .site-header .custom-logo {
+			@include media( narrowdesktop ) {
+				object-position: center center;
+			}
+		}
+	}
+
 	&.h-sub.single-featured-image-behind,
 	&.h-sub.single-featured-image-beside {
 		.site-header {
