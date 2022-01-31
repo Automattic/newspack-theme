@@ -1698,7 +1698,7 @@ hr {
 	// Make SCAIP placements full-width.
 	.entry .entry-content .scaip {
 		position: relative;
-		background: #eee;
+		background: rgba( 0, 0, 0, 0.05 );
 		max-width: none;
 		width: 100vw;
 		margin-left: -50vw;
