@@ -1697,12 +1697,13 @@ hr {
 
 	// Make SCAIP placements full-width.
 	.entry .entry-content .scaip {
-		position: relative;
-		background: rgba( 0, 0, 0, 0.05 );
-		max-width: none;
-		width: 100vw;
-		margin-left: -50vw;
-		left: 50%;
+		.newspack_global_ad,
+		.widget_newspack-ads-widget {
+			background-color: $color__background-pre;
+			margin-left: calc( 50% - 50vw );
+			margin-right: calc( 50% - 50vw );
+			max-width: 100vw;
+		}
 	}
 }
 
