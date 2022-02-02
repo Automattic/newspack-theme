@@ -1703,6 +1703,13 @@ hr {
 			margin-left: calc( 50% - 50vw );
 			margin-right: calc( 50% - 50vw );
 			max-width: 100vw;
+			> * {
+				margin-top: $size__vertical-rhythm * 2;
+				margin-bottom: $size__vertical-rhythm * 2;
+			}
+			amp-ad {
+				display: block;
+			}
 		}
 	}
 }
