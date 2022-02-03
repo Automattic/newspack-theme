@@ -68,6 +68,11 @@ body.newspack-single-column-template {
 		figcaption {
 			padding: 0 $size__spacing-unit;
 		}
+
+		.wp-block-group:not( .has-background ):not( .is-style-border ) {
+			padding-left: #{0.5 * $size__spacing-unit};
+			padding-right: #{0.5 * $size__spacing-unit};
+		}
 	}
 
 	.wp-block[data-align='left'] {

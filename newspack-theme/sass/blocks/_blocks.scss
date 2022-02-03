@@ -1688,6 +1688,14 @@ hr {
 		}
 	}
 
+	// Make sure content in a full-width group block doesn't touch edges
+	.entry .entry-content > .wp-block-group {
+		&.alignfull:not( .has-background ):not( .is-style-border ) {
+			padding-left: 5.5%;
+			padding-right: 5.5%;
+		}
+	}
+
 	// keep nested align-full elements from overflowing the container.
 	.entry .entry-content {
 		.wp-block-column,
