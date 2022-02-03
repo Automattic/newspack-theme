@@ -717,6 +717,14 @@ p.has-background {
 	}
 }
 
+.wp-block-jetpack-button button.wp-block-button__link {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	font-weight: bold;
+	line-height: $font__line-height-heading;
+	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
+}
+
 .entry-content .wp-block-button__link {
 	text-decoration: none;
 }
