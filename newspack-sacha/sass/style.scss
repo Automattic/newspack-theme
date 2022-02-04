@@ -72,7 +72,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Accent headers
 .accent-header,
-.widgettitle,
+#secondary .widgettitle,
 .article-section-title,
 .cat-links {
 	color: $color__primary;
@@ -88,7 +88,7 @@ div.wpnbha .article-section-title,
 }
 
 .accent-header,
-.widgettitle,
+#secondary .widgettitle,
 .article-section-title > span {
 	align-items: center;
 	display: flex;

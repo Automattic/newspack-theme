@@ -345,7 +345,9 @@ function newspack_custom_colors_css() {
 					background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
-				.accent-header, .widgettitle, .article-section-title,
+				.accent-header,
+				#secondary .widgettitle, 
+				.article-section-title,
 				.entry .entry-footer a:hover {
 					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 				}
