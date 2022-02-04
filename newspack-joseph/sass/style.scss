@@ -132,20 +132,23 @@ div.wpnbha .article-section-title,
 	&::before {
 		display: none;
 	}
+}
 
-	span {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
+.accent-header span,
+.article-section-title span,
+.widget-title.accent-header span,
+#secondary .widgettitle {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 
-		&::after {
-			background-color: currentColor;
-			content: '';
-			flex: 1 0 0.25rem;
-			height: 1px;
-			margin: 0 0 0 0.25rem;
-		}
+	&::after {
+		background-color: currentColor;
+		content: '';
+		flex: 1 0 0.25rem;
+		height: 1px;
+		margin: 0 0 0 0.25rem;
 	}
 }
 
