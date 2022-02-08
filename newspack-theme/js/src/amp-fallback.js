@@ -1,3 +1,5 @@
+/* globals newspackScreenReaderText */
+
 /**
  * File amp-fallback.js.
  *
@@ -82,7 +84,7 @@
 	 * @description Closes specifed slide-out menu.
 	 * @param {string} menuClass  The class to remove from the body to toggle menu visibility.
 	 * @param {string} openButton The button used to open the menu.
-	 * @param {string} maskId The ID to use for the overlay.
+	 * @param {string} maskId     The ID to use for the overlay.
 	 */
 	function closeMenu( menuClass, openButton, maskId ) {
 		body.classList.remove( menuClass );

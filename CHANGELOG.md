@@ -1,3 +1,10 @@
+## [1.55.5-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.4...v1.55.5-alpha.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* prevent odd wrapping with multiple categories ([#1689](https://github.com/Automattic/newspack-theme/issues/1689)) ([0afc107](https://github.com/Automattic/newspack-theme/commit/0afc1077564580b10487182c2fa4ac8cdc5ec2f6))
+
 ## [1.55.4](https://github.com/Automattic/newspack-theme/compare/v1.55.3...v1.55.4) (2022-01-25)
 
 

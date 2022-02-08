@@ -1,3 +1,5 @@
+/* globals jQuery */
+
 /**
  * File customizer.js.
  *

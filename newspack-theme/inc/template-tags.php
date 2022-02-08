@@ -255,7 +255,7 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 
 		if ( ! $categories_list ) {
 			/* translators: used between list items; followed by a space. */
-			$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
+			$categories_list = get_the_category_list( '<span class="sep">' . esc_html__( ',', 'newspack' ) . ' </span>' );
 		}
 
 		if ( $categories_list ) {
