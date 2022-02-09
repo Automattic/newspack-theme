@@ -1,7 +1,8 @@
 /* !Block styles */
 
 .entry .entry-content > *,
-.newspack-inline-popup > * {
+.newspack-inline-popup > *,
+#pico > * {
 	margin: 32px 0;
 	max-width: 100%;
 
@@ -373,7 +374,8 @@ p.has-background {
 }
 
 // Temporarily make some column styles more specific
-.entry .entry-content > .wp-block-columns {
+.entry .entry-content > .wp-block-columns,
+#pico > .wp-block-columns {
 	&.is-not-stacked-on-mobile {
 		margin-left: -16px;
 		margin-right: -16px;
@@ -1010,9 +1012,12 @@ hr {
 	}
 }
 
-.entry .entry-content > .wp-block-separator,
-.entry .entry-content > hr {
-	margin: ( 2 * $size__spacing-unit ) auto;
+.entry .entry-content,
+#pico {
+	> .wp-block-separator,
+	> hr {
+		margin: ( 2 * $size__spacing-unit ) auto;
+	}
 }
 
 //! Twitter Embed
@@ -1127,7 +1132,8 @@ hr {
 }
 
 // Remove space between full-width group block and header on homepage.
-.newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child {
+.newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child,
+.newspack-front-page.hide-homepage-title #pico > .wp-block-group.alignfull:first-child {
 	margin-top: 0;
 	@include media( tablet ) {
 		margin-top: calc(
@@ -1521,7 +1527,8 @@ hr {
 //! 'Feature' alignments
 .post-template-single-feature,
 .page-template-single-feature {
-	.entry .entry-content > * {
+	.entry .entry-content > *,
+	#pico > * {
 		&.alignwide {
 			@include media( tablet ) {
 				margin-left: calc( 25% - 25vw );
@@ -1636,19 +1643,22 @@ hr {
 	}
 
 	//! Group & Cover Block
-	.entry .entry-content > .wp-block-cover,
-	.entry .entry-content > .wp-block-group {
-		&.alignfull,
-		&.alignwide {
-			> div > .alignwide {
-				margin-left: auto;
-				margin-right: auto;
-				max-width: 1200px;
-			}
-			> div > *:not( .alignfull ):not( .alignwide ) {
-				margin-left: auto;
-				margin-right: auto;
-				max-width: 780px;
+	.entry .entry-content,
+	#pico {
+		> .wp-block-cover,
+		> .wp-block-group {
+			&.alignfull,
+			&.alignwide {
+				> div > .alignwide {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 1200px;
+				}
+				> div > *:not( .alignfull ):not( .alignwide ) {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 780px;
+				}
 			}
 		}
 	}
@@ -1689,7 +1699,8 @@ hr {
 	}
 
 	// Make sure content in a full-width group block doesn't touch edges
-	.entry .entry-content > .wp-block-group {
+	.entry .entry-content > .wp-block-group,
+	#pico > .wp-block-group {
 		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
