@@ -125,8 +125,9 @@ function newspack_customize_logo_resize( $html ) {
 		}
 
 		@media (min-width: 782px) {
-			.h-stk.h-cl:not(.h-sub) .site-header .custom-logo {
-				max-width: 30vw;
+			.h-stk:not(.h-sub) .site-header .custom-logo {
+				max-height: ' . $sticky['height'] . 'px;
+				max-width: ' . $sticky['width'] . 'px;
 			}
 
 			.h-sub .site-header .custom-logo {
@@ -135,10 +136,10 @@ function newspack_customize_logo_resize( $html ) {
 			}
 		}
 
-		@media (min-width: 1200px) {
-			.h-stk:not(.h-sub) .site-header .custom-logo {
-				max-width: ' . $sticky['width'] . 'px;
-				max-height: ' . $sticky['height'] . 'px;
+		@media (max-width: 1199px) and (min-width: 782px) {
+			.h-stk.h-cl:not(.h-sub) .site-header .custom-logo {
+				max-width: 100%;
+				width: auto;
 			}
 		}
 

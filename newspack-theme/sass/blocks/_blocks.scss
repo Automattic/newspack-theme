@@ -717,6 +717,14 @@ p.has-background {
 	}
 }
 
+.wp-block-jetpack-button button.wp-block-button__link {
+	font-family: $font__heading;
+	font-size: $font__size-sm;
+	font-weight: bold;
+	line-height: $font__line-height-heading;
+	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
+}
+
 .entry-content .wp-block-button__link {
 	text-decoration: none;
 }
@@ -1680,6 +1688,14 @@ hr {
 		}
 	}
 
+	// Make sure content in a full-width group block doesn't touch edges
+	.entry .entry-content > .wp-block-group {
+		&.alignfull:not( .has-background ):not( .is-style-border ) {
+			padding-left: 5.5%;
+			padding-right: 5.5%;
+		}
+	}
+
 	// keep nested align-full elements from overflowing the container.
 	.entry .entry-content {
 		.wp-block-column,
@@ -1691,6 +1707,24 @@ hr {
 				margin-right: 0;
 				padding-left: 0;
 				padding-right: 0;
+			}
+		}
+	}
+
+	// Make SCAIP placements full-width.
+	.entry .entry-content .scaip {
+		.newspack_global_ad,
+		.widget_newspack-ads-widget {
+			background-color: $color__background-pre;
+			margin-left: calc( 50% - 50vw );
+			margin-right: calc( 50% - 50vw );
+			max-width: 100vw;
+			> * {
+				margin-top: $size__vertical-rhythm * 2;
+				margin-bottom: $size__vertical-rhythm * 2;
+			}
+			amp-ad {
+				display: block;
 			}
 		}
 	}
