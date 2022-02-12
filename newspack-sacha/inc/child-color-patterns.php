@@ -38,7 +38,7 @@ function newspack_sacha_custom_colors_css() {
 		.entry-meta .byline a:visited,
 		.entry .entry-meta a:hover,
 		.accent-header,
-		.widgettitle,
+		#secondary .widgettitle,
 		.article-section-title,
 		.cat-links,
 		.entry .entry-footer,

@@ -40,7 +40,8 @@ function newspack_katharine_custom_colors_css() {
 		.cat-links a:visited,
 		.article-section-title,
 		.entry .entry-footer,
-		.accent-header {
+		.accent-header,
+		#secondary .widgettitle {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
@@ -56,7 +57,8 @@ function newspack_katharine_custom_colors_css() {
 		.archive .page-title:before,
 		figcaption:after,
 		.wp-caption-text:after,
-		.has-highlight-menu .site-breadcrumb .wrapper > span::before {
+		.has-highlight-menu .site-breadcrumb .wrapper > span::before,
+		#secondary .widgettitle::before {
 			background-color: ' . esc_html( $primary_color ) . ';
 		}
 

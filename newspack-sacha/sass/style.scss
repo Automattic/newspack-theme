@@ -76,15 +76,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .article-section-title,
 .cat-links {
 	color: $color__primary;
+	margin-bottom: $size__spacing-unit;
+	text-align: center;
 }
 
 .accent-header,
-#secondary .widgettitle,
 div.wpnbha .article-section-title,
 .cat-links {
 	font-size: $font__size-xs;
-	margin-bottom: $size__spacing-unit;
-	text-align: center;
 }
 
 .accent-header,

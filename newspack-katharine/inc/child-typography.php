@@ -39,7 +39,8 @@ function newspack_katharine_custom_typography_css() {
 			.entry-meta .updated,
 			.site-footer .widget-title,
 			.site-footer .widgettitle,
-			.site-info {
+			.site-info,
+			#secondary .widgettitle {
 				text-transform: uppercase;
 			}
 		';
