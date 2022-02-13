@@ -1125,10 +1125,11 @@ hr {
 			margin-bottom: 0;
 		}
 	}
+}
 
-	&.has-background + .wp-block-group.has-background {
-		margin-top: -32px;
-	}
+.wp-block-group.has-background + .wp-block-group.has-background,
+#pico > .wp-block-group.has-background + .wp-block-group.has-background {
+	margin-top: -32px;
 }
 
 // Remove space between full-width group block and header on homepage.
