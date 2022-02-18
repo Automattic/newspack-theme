@@ -210,7 +210,7 @@ body:not( .h-sb ) .site-header {
 
 .newspack-front-page.hide-homepage-title {
 	.entry-content,
-	#pico {
+	[id='pico'] {
 		> .wp-block-group.alignfull:first-child {
 			margin-top: #{-1 * $size__spacing-unit};
 

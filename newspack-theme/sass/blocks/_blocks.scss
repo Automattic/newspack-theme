@@ -2,7 +2,7 @@
 
 .entry .entry-content > *,
 .newspack-inline-popup > *,
-#pico > * {
+[id='pico'] > * {
 	margin: 32px 0;
 	max-width: 100%;
 
@@ -375,7 +375,7 @@ p.has-background {
 
 // Temporarily make some column styles more specific
 .entry .entry-content > .wp-block-columns,
-#pico > .wp-block-columns {
+[id='pico'] > .wp-block-columns {
 	&.is-not-stacked-on-mobile {
 		margin-left: -16px;
 		margin-right: -16px;
@@ -1013,7 +1013,7 @@ hr {
 }
 
 .entry .entry-content,
-#pico {
+[id='pico'] {
 	> .wp-block-separator,
 	> hr {
 		margin: ( 2 * $size__spacing-unit ) auto;
@@ -1128,13 +1128,13 @@ hr {
 }
 
 .wp-block-group.has-background + .wp-block-group.has-background,
-#pico > .wp-block-group.has-background + .wp-block-group.has-background {
+[id='pico'] > .wp-block-group.has-background + .wp-block-group.has-background {
 	margin-top: -32px;
 }
 
 // Remove space between full-width group block and header on homepage.
 .newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child,
-.newspack-front-page.hide-homepage-title #pico > .wp-block-group.alignfull:first-child {
+.newspack-front-page.hide-homepage-title [id='pico'] > .wp-block-group.alignfull:first-child {
 	margin-top: 0;
 	@include media( tablet ) {
 		margin-top: calc(
@@ -1529,7 +1529,7 @@ hr {
 .post-template-single-feature,
 .page-template-single-feature {
 	.entry .entry-content > *,
-	#pico > * {
+	[id='pico'] > * {
 		&.alignwide {
 			@include media( tablet ) {
 				margin-left: calc( 25% - 25vw );
@@ -1645,7 +1645,7 @@ hr {
 
 	//! Group & Cover Block
 	.entry .entry-content,
-	#pico {
+	[id='pico'] {
 		> .wp-block-cover,
 		> .wp-block-group {
 			&.alignfull,
@@ -1701,7 +1701,7 @@ hr {
 
 	// Make sure content in a full-width group block doesn't touch edges
 	.entry .entry-content > .wp-block-group,
-	#pico > .wp-block-group {
+	[id='pico'] > .wp-block-group {
 		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
