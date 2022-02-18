@@ -52,6 +52,7 @@ function newspack_nelson_custom_typography_css() {
 		';
 		$editor_css_blocks .= '
 			.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
+			.block-editor-block-list__layout .block-editor-block-list__block .article-section-title,
 			.block-editor-block-list__layout .block-editor-block-list__block .entry-meta .byline a,
 			.block-editor-block-list__layout .block-editor-block-list__block .cat-links {
 				letter-spacing: 0.05em;
