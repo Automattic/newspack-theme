@@ -119,12 +119,14 @@ function newspack_nelson_custom_colors_css() {
 			}
 
 			.h-sb .site-footer,
-			.site-footer .widget-title {
+			.site-footer .widget-title,
+			.site-footer .widgettitle {
 				color: ' . esc_html( $footer_color_contrast ) . ';
 			}
 
 			#colophon .site-info,
 			#colophon .site-info .widget-title,
+			#colophon .site-info .widgettitle,
 			#colophon .site-info a {
 				color: #fff;
 			}

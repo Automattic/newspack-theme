@@ -71,6 +71,7 @@ function newspack_joseph_custom_colors_css() {
 		$theme_css .= '
 			#colophon,
 			#colophon .widget-title,
+			#colophon .widgettitle,
 			#colophon .social-navigation a {
 				color: ' . esc_html( $footer_color_contrast ) . ';
 			}
