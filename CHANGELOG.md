@@ -1,3 +1,37 @@
+# [1.56.0](https://github.com/Automattic/newspack-theme/compare/v1.55.5...v1.56.0) (2022-02-22)
+
+
+### Bug Fixes
+
+* add left and right spacing to full-width group block ([#1696](https://github.com/Automattic/newspack-theme/issues/1696)) ([9433779](https://github.com/Automattic/newspack-theme/commit/94337797b69416fb20f8969e5d2f7f0c0ab42096))
+* add more specific styles for the MailChimp button ([#1695](https://github.com/Automattic/newspack-theme/issues/1695)) ([d8dd2a7](https://github.com/Automattic/newspack-theme/commit/d8dd2a793d1195731da0faab9acd0585eed3d03c))
+* correct tag contrast issue in Newspack Default ([#1693](https://github.com/Automattic/newspack-theme/issues/1693)) ([d1eafed](https://github.com/Automattic/newspack-theme/commit/d1eafed4e2fac29159c9cdb8990af89d98e4d1cd))
+* increase spacing around footer links on mobile ([#1692](https://github.com/Automattic/newspack-theme/issues/1692)) ([bb7e7f9](https://github.com/Automattic/newspack-theme/commit/bb7e7f9033f1583414953552058bd55a65d6185e))
+* sticky header logo distortion ([#1636](https://github.com/Automattic/newspack-theme/issues/1636)) ([0455d29](https://github.com/Automattic/newspack-theme/commit/0455d291b2d75de8f6c87d69f151806f4f998cda))
+* update styles for the Event Calendar download links ([#1691](https://github.com/Automattic/newspack-theme/issues/1691)) ([dde6bc6](https://github.com/Automattic/newspack-theme/commit/dde6bc6a383bebd26a25f693979f7953e99b76b0))
+
+
+### Features
+
+* full-width scaip ad ([#1699](https://github.com/Automattic/newspack-theme/issues/1699)) ([18bde84](https://github.com/Automattic/newspack-theme/commit/18bde84fb12f842e14d6b0df7009d4f5c0f1978d))
+
+# [1.56.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.55.5...v1.56.0-alpha.1) (2022-02-10)
+
+
+### Bug Fixes
+
+* add left and right spacing to full-width group block ([#1696](https://github.com/Automattic/newspack-theme/issues/1696)) ([9433779](https://github.com/Automattic/newspack-theme/commit/94337797b69416fb20f8969e5d2f7f0c0ab42096))
+* add more specific styles for the MailChimp button ([#1695](https://github.com/Automattic/newspack-theme/issues/1695)) ([d8dd2a7](https://github.com/Automattic/newspack-theme/commit/d8dd2a793d1195731da0faab9acd0585eed3d03c))
+* correct tag contrast issue in Newspack Default ([#1693](https://github.com/Automattic/newspack-theme/issues/1693)) ([d1eafed](https://github.com/Automattic/newspack-theme/commit/d1eafed4e2fac29159c9cdb8990af89d98e4d1cd))
+* increase spacing around footer links on mobile ([#1692](https://github.com/Automattic/newspack-theme/issues/1692)) ([bb7e7f9](https://github.com/Automattic/newspack-theme/commit/bb7e7f9033f1583414953552058bd55a65d6185e))
+* sticky header logo distortion ([#1636](https://github.com/Automattic/newspack-theme/issues/1636)) ([0455d29](https://github.com/Automattic/newspack-theme/commit/0455d291b2d75de8f6c87d69f151806f4f998cda))
+* update styles for the Event Calendar download links ([#1691](https://github.com/Automattic/newspack-theme/issues/1691)) ([dde6bc6](https://github.com/Automattic/newspack-theme/commit/dde6bc6a383bebd26a25f693979f7953e99b76b0))
+
+
+### Features
+
+* full-width scaip ad ([#1699](https://github.com/Automattic/newspack-theme/issues/1699)) ([18bde84](https://github.com/Automattic/newspack-theme/commit/18bde84fb12f842e14d6b0df7009d4f5c0f1978d))
+
 ## [1.55.5](https://github.com/Automattic/newspack-theme/compare/v1.55.4...v1.55.5) (2022-02-08)
 
 
