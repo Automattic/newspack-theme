@@ -411,7 +411,8 @@ function newspack_custom_colors_css() {
 				}
 
 				.entry-meta .byline a:hover,
-				.entry-meta .byline a:visited:hover {
+				.entry-meta .byline a:visited:hover,
+				footer.entry-footer a {
 					color: ' . esc_html( newspack_color_with_contrast( newspack_adjust_brightness( $primary_color, -40 ) ) ) . ';
 				}
 			';
@@ -459,6 +460,8 @@ function newspack_custom_colors_css() {
 	// Set ads background color
 	if ( 'default' !== get_theme_mod( 'ads_color', 'default' ) ) {
 		$theme_css .= '
+			.site .entry .entry-content .scaip .newspack_global_ad,
+			.site .entry .entry-content .scaip .widget_newspack-ads-widget,
 			.newspack_global_ad,
 			.newspack_global_ad.global_above_header,
 			.widget_newspack-ads-widget,

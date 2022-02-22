@@ -69,6 +69,7 @@ function newspack_custom_typography_css() {
 
 		/* _blocks.scss */
 		.wp-block-button__link,
+		.wp-block-jetpack-button button.wp-block-button__link,
 
 		/* _captions.scss */
 		figcaption,
