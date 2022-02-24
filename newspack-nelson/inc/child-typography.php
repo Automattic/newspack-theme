@@ -37,13 +37,15 @@ function newspack_nelson_custom_typography_css() {
 			.nav3,
 			.mobile-menu-toggle,
 			.accent-header,
+			#secondary .widgettitle,
 			.cat-links,
 			div.wpnbha .article-section-title,
 			.entry-meta .byline .author,
 			.tags-links a,
 			.post-edit-link,
 			.author-bio h2 span,
-			.site-footer .widget-title {
+			.site-footer .widget-title ,
+			.site-footer .widgettitle {
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
 			}

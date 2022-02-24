@@ -205,7 +205,8 @@ h6 {
 	text-transform: none;
 }
 
-.accent-header {
+.accent-header,
+#secondary .widgettitle {
 	margin-bottom: 0.5em;
 
 	+ * {

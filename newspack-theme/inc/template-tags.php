@@ -382,24 +382,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 						the_post_thumbnail( $size );
 					endif;
 
-					$caption = get_the_excerpt( get_post_thumbnail_id() );
-					// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
-					$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
-
-					// Account for featured images that have a credit but no caption.
-					if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
-						$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
-						if ( strlen( wp_strip_all_tags( $maybe_newspack_image_credit ) ) ) {
-							$caption        = $maybe_newspack_image_credit;
-							$caption_exists = true;
-						}
-					}
-
-					if ( $caption_exists ) :
-					?>
-						<figcaption><?php echo wp_kses_post( $caption ); ?></figcaption>
-					<?php
-					endif;
+					newspack_post_thumbnail_caption();
 				endif;
 				?>
 
@@ -422,6 +405,38 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'newspack_post_thumbnail_caption' ) ) {
+	/**
+	 * Displays a post thumbnail caption and/or credit.
+	 *
+	 * Wraps the caption and credit in a figcaption and span.
+	 */
+	function newspack_post_thumbnail_caption() {
+		if ( ! newspack_can_show_post_thumbnail() ) {
+			return;
+		}
+
+		$caption = get_the_excerpt( get_post_thumbnail_id() );
+		// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
+		$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
+
+		// Account for featured images that have a credit but no caption.
+		if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
+			$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
+			if ( strlen( wp_strip_all_tags( $maybe_newspack_image_credit ) ) ) {
+				$caption        = $maybe_newspack_image_credit;
+				$caption_exists = true;
+			}
+		}
+
+		if ( $caption_exists ) :
+			?>
+			<figcaption><span><?php echo wp_kses_post( $caption ); ?></span></figcaption>
+			<?php
+		endif;
+	}
+}
 
 if ( ! function_exists( 'newspack_comment_form' ) ) :
 	/**

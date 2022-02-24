@@ -41,7 +41,9 @@ function newspack_scott_custom_typography_css() {
 			.page-title,
 			#secondary .widget-title,
 			.author-bio .accent-header span,
-			#colophon .widget-title {
+			#colophon .widget-title,
+			#colophon .widgettitle,
+			#secondary .widgettitle {
 				text-transform: uppercase;
 			}
 		';

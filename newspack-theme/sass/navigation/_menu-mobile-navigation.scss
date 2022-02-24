@@ -228,7 +228,8 @@
 		display: block;
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		margin: 0 0 #{0.5 * $size__spacing-unit};
 	}
 }
@@ -265,7 +266,8 @@
 		}
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		font-size: $font__size-md;
 	}
 }
@@ -331,7 +333,8 @@
 		}
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		font-size: 1.1em;
 	}
 }

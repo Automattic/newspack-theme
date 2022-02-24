@@ -208,13 +208,18 @@ body:not( .h-sb ) .site-header {
 	}
 }
 
-.newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child {
-	margin-top: #{-1 * $size__spacing-unit};
+.newspack-front-page.hide-homepage-title {
+	.entry-content,
+	[id='pico'] {
+		> .wp-block-group.alignfull:first-child {
+			margin-top: #{-1 * $size__spacing-unit};
 
-	@include media( tablet ) {
-		margin-top: calc(
-			#{-1 * $size__spacing-unit} - 4px
-		); // minus 4px to offset bottom border on header
+			@include media( tablet ) {
+				margin-top: calc(
+					#{-1 * $size__spacing-unit} - 4px
+				); // minus 4px to offset bottom border on header
+			}
+		}
 	}
 }
 
@@ -262,6 +267,7 @@ h4,
 // Accent headers
 
 .accent-header,
+#secondary .widgettitle,
 div.wpnbha .article-section-title,
 .cat-links {
 	color: $color__text-light;
@@ -285,7 +291,8 @@ div.wpnbha .article-section-title {
 	}
 }
 
-#secondary .widget-title {
+#secondary .widget-title,
+#secondary .widgettitle {
 	color: inherit;
 	font-size: $font__size-lg;
 
@@ -554,6 +561,7 @@ blockquote {
 .mobile-sidebar,
 .site-footer {
 	.accent-header,
+	.widgettitle,
 	div.wpnbha .article-section-title {
 		color: inherit;
 	}
@@ -571,7 +579,8 @@ blockquote {
 	.widget a,
 	.widget a:hover,
 	.widget a:visited,
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: inherit;
 	}
 }

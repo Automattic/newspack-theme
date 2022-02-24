@@ -51,7 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .accent-header,
 .article-section-title,
 .cat-links,
-.archive .page-title {
+.archive .page-title,
+#secondary .widgettitle {
 	color: $color__primary;
 
 	&::before {
@@ -463,7 +464,8 @@ hr {
 	.widget a,
 	.widget a:hover,
 	.widget a:visited,
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: inherit;
 	}
 }

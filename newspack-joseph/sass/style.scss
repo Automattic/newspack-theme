@@ -102,6 +102,7 @@ figcaption,
 .widget,
 .widget-title.accent-header,
 .accent-header,
+.widgettitle,
 .wp-block-button__link,
 div.wp-block-file,
 div.wp-block-file .wp-block-file__button,
@@ -116,6 +117,7 @@ input[type='submit'] {
 
 /* Accent headers */
 .accent-header,
+.widgettitle,
 .wp-block-columns .wp-block-column > .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
@@ -125,24 +127,28 @@ div.wpnbha .article-section-title,
 
 .accent-header,
 .article-section-title,
-.widget-title.accent-header {
+.widget-title.accent-header,
+#secondary .widgettitle {
 	&::before {
 		display: none;
 	}
+}
 
-	span {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
+.accent-header span,
+.article-section-title span,
+.widget-title.accent-header span,
+#secondary .widgettitle {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 
-		&::after {
-			background-color: currentColor;
-			content: '';
-			flex: 1 0 0.25rem;
-			height: 1px;
-			margin: 0 0 0 0.25rem;
-		}
+	&::after {
+		background-color: currentColor;
+		content: '';
+		flex: 1 0 0.25rem;
+		height: 1px;
+		margin: 0 0 0 0.25rem;
 	}
 }
 
@@ -438,7 +444,8 @@ hr {
 		color: $color__text-main;
 	}
 
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: $color__text-main;
 		font-size: $font__size_base;
 	}
