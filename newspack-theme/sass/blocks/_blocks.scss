@@ -757,7 +757,7 @@ p.has-background {
 		&:active,
 		&:focus {
 			color: #fff;
-			background: $color__background-button-hover;
+			background: $color__background-button-hover !important;
 		}
 
 		&:focus {
