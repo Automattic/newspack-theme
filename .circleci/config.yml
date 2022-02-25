@@ -1,56 +1,16 @@
 version: 2.1
 
-commands:
-  checkout_code:
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
+orbs:
+  newspack: adekbadek/newspack@1.1.1
 
 jobs:
-  build:
-    docker:
-      - image: cimg/node:16.11.1
-    steps:
-      - checkout_code
-      - run:
-          name: Install dependencies
-          command: npm ci
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project
-
-  # Linting
-  lint:
-    docker:
-      - image: cimg/node:16.11.1
-    steps:
-      - checkout_code
-      - run:
-          name: Run Linter
-          command: npm run lint
-
-  # Release job
-  release:
-    docker:
-      - image: cimg/node:16.11.1
-    steps:
-      - checkout_code
-      - run:
-          name: Release new version
-          command: npm run release
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project
-
-  # Reset alpha branch after a release and publish child themes' releases
   post_release:
     docker:
       - image: cimg/node:16.11.1
     steps:
-      - checkout_code
+      - checkout
+      - attach_workspace:
+          at: ~/
       - run:
           name: Publish child themes' releases
           command: node scripts/create-child-releases.js --run
@@ -60,15 +20,26 @@ jobs:
 
 workflows:
   version: 2
-  main:
+  all:
     jobs:
-      - build
-      - lint:
+      - newspack/build
+      - newspack/lint-js-scss:
           requires:
-            - build
-      - release:
+            - newspack/build
+      - newspack/test-js:
           requires:
-            - build
+            - newspack/build
+      - newspack/build-distributable:
+          requires:
+            - newspack/build
+          archive-name: 'newspack-theme'
+          filters:
+            branches:
+              only:
+                - master
+      - newspack/release:
+          requires:
+            - newspack/build
           filters:
             branches:
               only:
@@ -77,8 +48,12 @@ workflows:
                 - /^hotfix\/.*/
       - post_release:
           requires:
-            - release
+            - newspack/release
           filters:
             branches:
               only:
                 - release
+  php:
+    jobs:
+      - newspack/lint-php
+      - newspack/test-php
