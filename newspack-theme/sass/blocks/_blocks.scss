@@ -1294,7 +1294,9 @@ hr {
 }
 
 //! Font Sizes
+
 .has-small-font-size {
+	--wp--preset--font-size--small: 16px;
 	font-size: $font__size-sm;
 }
 
@@ -1303,19 +1305,25 @@ hr {
 }
 
 .has-large-font-size {
+	--wp--preset--font-size--large: 28px;
 	font-size: $font__size-lg;
 }
 
-.has-huge-font-size {
+.has-huge-font-size,
+.has-x-large-font-size {
+	--wp--preset--font-size--huge: 36px;
 	font-size: $font__size-xl;
 }
 
 @include media( tablet ) {
 	.has-large-font-size {
+		--wp--preset--font-size--huge: 36px;
 		font-size: $font__size-xl;
 	}
 
-	.has-huge-font-size {
+	.has-huge-font-size,
+	.has-x-large-font-size {
+		--wp--preset--font-size--huge: 44px;
 		font-size: $font__size-xxl;
 	}
 }

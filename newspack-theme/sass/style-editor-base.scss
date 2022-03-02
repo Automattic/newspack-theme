@@ -1115,6 +1115,72 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Custom Font Sizes === */
+
+.has-small-font-size {
+	--wp--preset--font-size--small: 16px;
+	font-size: $font__size-sm;
+}
+
+.has-normal-font-size {
+	--wp--preset--font-size--normal: 20px !important;
+	font-size: $font__size_base;
+}
+
+.has-large-font-size {
+	--wp--preset--font-size--large: 28px;
+	font-size: $font__size-lg;
+}
+
+.has-huge-font-size,
+.has-x-large-font-size {
+	--wp--preset--font-size--huge: 36px;
+	font-size: $font__size-xl;
+}
+
+@include media( tablet ) {
+	.has-large-font-size {
+		--wp--preset--font-size--large: 36px;
+		font-size: $font__size-xl;
+	}
+
+	.has-huge-font-size,
+	.has-x-large-font-size {
+		--wp--preset--font-size--huge: 44px;
+		font-size: $font__size-xxl;
+	}
+}
+
+/*
+.has-small-font-size {
+	font-size: 16px !important; // !important to override inline styles.
+}
+
+.has-normal-font-size {
+	font-size: 20px !important; // !important to override inline styles.
+}
+
+.has-large-font-size {
+	font-size: 28px !important; // !important to override inline styles.
+}
+
+.has-huge-font-size,
+.has-x-large-font-size {
+	font-size: 36px !important; // !important to override inline styles.
+}
+
+@include media( tablet ) {
+	.has-large-font-size {
+		font-size: 36px !important; // !important to override inline styles.
+	}
+
+	.has-huge-font-size,
+	.has-x-large-font-size {
+		font-size: 44px !important; // !important to override inline styles.
+	}
+}
+*/
+
 /** === Custom Colors === */
 
 .has-primary-background-color,

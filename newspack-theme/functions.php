@@ -1164,6 +1164,18 @@ function newspack_dequeue_mediaelement() {
 }
 add_action( 'wp_enqueue_scripts', 'newspack_dequeue_mediaelement', 20 );
 
+/* Dequeue Gutenberg global styles from WP 5.9 */
+function newspack_dequeue_global_styles() {
+	wp_dequeue_style( 'global-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'newspack_dequeue_global_styles', 999 );
+
+
+function newspack_dequeue_global_editor_styles() {
+	wp_dequeue_style( 'global-styles-css-custom-properties' );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles', 999 );
+
 
 /**
  * SVG Icons class.
