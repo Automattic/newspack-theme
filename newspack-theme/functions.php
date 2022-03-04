@@ -619,7 +619,7 @@ add_action( 'wp_enqueue_scripts', 'newspack_dequeue_global_styles' );
 function newspack_dequeue_global_editor_styles() {
 	wp_dequeue_style( 'global-styles-css-custom-properties' );
 }
-add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles', 99 );
+add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles' );
 
 
 /**
