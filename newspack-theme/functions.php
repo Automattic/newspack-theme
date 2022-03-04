@@ -275,7 +275,6 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
 
-
 /**
  * Register widget area.
  *
@@ -597,7 +596,6 @@ function newspack_enqueue_scripts() {
 	wp_enqueue_script( 'newspack-post-meta-toggles' );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
-
 
 /**
  * Dequeue Gutenberg global styles.
