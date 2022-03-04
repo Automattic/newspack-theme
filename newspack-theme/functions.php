@@ -275,6 +275,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
 
+
 /**
  * Register widget area.
  *
@@ -596,6 +597,28 @@ function newspack_enqueue_scripts() {
 	wp_enqueue_script( 'newspack-post-meta-toggles' );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
+
+
+/**
+ * Dequeue Gutenberg global styles.
+ * 
+ * These styles aren't currently used because Newspack is not a Full-Site editing theme.
+ */
+function newspack_dequeue_global_styles() {
+	wp_dequeue_style( 'global-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'newspack_dequeue_global_styles' );
+
+/**
+ * Dequeue Gutenberg global editor styles.
+ * 
+ * These styles aren't currently used because Newspack is not a Full-Site editing theme.
+ */
+function newspack_dequeue_global_editor_styles() {
+	wp_dequeue_style( 'global-styles-css-custom-properties' );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles', 99 );
+
 
 /**
  * Fix skip link focus in IE11.

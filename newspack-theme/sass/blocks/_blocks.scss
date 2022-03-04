@@ -1306,7 +1306,8 @@ hr {
 	font-size: $font__size-lg;
 }
 
-.has-huge-font-size {
+.has-huge-font-size,
+.has-x-large-font-size {
 	font-size: $font__size-xl;
 }
 
@@ -1315,7 +1316,8 @@ hr {
 		font-size: $font__size-xl;
 	}
 
-	.has-huge-font-size {
+	.has-huge-font-size,
+	.has-x-large-font-size {
 		font-size: $font__size-xxl;
 	}
 }
