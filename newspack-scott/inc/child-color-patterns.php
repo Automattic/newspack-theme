@@ -100,7 +100,8 @@ function newspack_scott_custom_colors_css() {
 		$theme_css .= '
 			#colophon,
 			#colophon .widget-title,
-			#colophon .social-navigation a {
+			#colophon .social-navigation a,
+			#colophon .widgettitle {
 				color: ' . esc_html( $footer_color_contrast ) . ';
 			}
 

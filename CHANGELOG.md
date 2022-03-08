@@ -1,3 +1,13 @@
+## [1.56.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.56.0...v1.56.1-alpha.1) (2022-02-24)
+
+
+### Bug Fixes
+
+* make sure block styles are inherited when using Pico ([#1707](https://github.com/Automattic/newspack-theme/issues/1707)) ([082d843](https://github.com/Automattic/newspack-theme/commit/082d843df26eff52e18fe6be5f8a77cbc1b2e23c))
+* make sure featured image credits show up for all placements ([#1712](https://github.com/Automattic/newspack-theme/issues/1712)) ([e8cdf61](https://github.com/Automattic/newspack-theme/commit/e8cdf61ed6b03262dfe69552c9495c4ecb236d72))
+* update editor gradient styles ([#1694](https://github.com/Automattic/newspack-theme/issues/1694)) ([0ba3fb0](https://github.com/Automattic/newspack-theme/commit/0ba3fb05804d32c97c14311b7eeff7034c104ee2))
+* update legacy widget title styles to work with block widgets ([#1470](https://github.com/Automattic/newspack-theme/issues/1470)) ([6e956aa](https://github.com/Automattic/newspack-theme/commit/6e956aa8928d51add9a72ca407a6fe87517db291))
+
 # [1.56.0](https://github.com/Automattic/newspack-theme/compare/v1.55.5...v1.56.0) (2022-02-22)
 
 

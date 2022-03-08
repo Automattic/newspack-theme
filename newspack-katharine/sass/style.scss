@@ -5,7 +5,7 @@ Author: Automattic
 Author URI: https://newspack.blog
 Description:
 Requires at least: WordPress 4.9.6
-Version: 1.56.0
+Version: 1.56.1-alpha.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: newspack-theme
@@ -51,7 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .accent-header,
 .article-section-title,
 .cat-links,
-.archive .page-title {
+.archive .page-title,
+#secondary .widgettitle {
 	color: $color__primary;
 
 	&::before {
@@ -463,7 +464,8 @@ hr {
 	.widget a,
 	.widget a:hover,
 	.widget a:visited,
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		color: inherit;
 	}
 }
