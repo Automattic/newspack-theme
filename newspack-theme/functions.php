@@ -598,6 +598,31 @@ function newspack_enqueue_scripts() {
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
 
 /**
+ * Dequeue Gutenberg global styles.
+ * 
+ * These styles aren't currently used because Newspack is not a Full-Site editing theme.
+ * 
+ * @link: https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles/
+ */
+function newspack_dequeue_global_styles() {
+	wp_dequeue_style( 'global-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'newspack_dequeue_global_styles' );
+
+/**
+ * Dequeue Gutenberg global editor styles.
+ * 
+ * These styles aren't currently used because Newspack is not a Full-Site editing theme.
+ * 
+ * @link: https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles_css_custom_properties/
+ */
+function newspack_dequeue_global_editor_styles() {
+	wp_dequeue_style( 'global-styles-css-custom-properties' );
+}
+add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles' );
+
+
+/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
@@ -1013,63 +1038,6 @@ function newspack_coauthors_in_rss( $the_author ) {
 	}
 }
 add_filter( 'the_author', 'newspack_coauthors_in_rss' );
-
-/**
- * Determine minimum theme breakpoint, below which responsive Ads media queries should not have a min-width.
- *
- * @param array  $media_queries An array of objects, one for each size, with width|height|min_width|min_height.
- * @param string $placement ID of the ad placement.
- * @param string $context Optional second string describing the ad placement. For Widget placements, the ID of the Widget.
- * @return array The correct array of media query data.
- */
-function newspack_theme_newspack_ads_media_queries( $media_queries, $placement, $context ) {
-	if ( 'newspack_ads_widget' === $placement && strpos( $context, 'scaip' ) === 0 ) {
-		switch ( get_page_template_slug() ) {
-			case 'single-wide.php':
-				foreach ( $media_queries as $index => &$media_query ) {
-					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
-					if ( intval( $media_query['width'] ) > 1200 ) {
-						$media_query['min_width'] = null;
-						$media_query['max_width'] = null;
-					} else {
-						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 1200 ) {
-							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.9 - 1 );
-						} else {
-							$media_query['max_width'] = null;
-						}
-					}
-				}
-				break;
-			case 'single-feature.php':
-			default:
-				foreach ( $media_queries as $index => &$media_query ) {
-					$next_media_query = ( count( $media_queries ) > $index + 1 ) ? $media_queries[ $index + 1 ] : null;
-					if ( intval( $media_query['width'] ) > 780 ) {
-						$media_query['min_width'] = null;
-						$media_query['max_width'] = null;
-					} else if ( intval( $media_query['width'] ) > ceil( 782 * 0.585 ) ) {
-						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.585 );
-						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
-							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
-						} else {
-							$media_query['max_width'] = null;
-						}
-					} else {
-						$media_query['min_width'] = ceil( intval( $media_query['width'] ) / 0.9 );
-						if ( $next_media_query && $next_media_query['width'] && $next_media_query['width'] <= 780 ) {
-							$media_query['max_width'] = ceil( $next_media_query['width'] / 0.585 - 1 );
-						} else {
-							$media_query['max_width'] = null;
-						}
-					}
-				}
-				break;
-		}
-	}
-	return $media_queries;
-}
-add_filter( 'newspack_ads_media_queries', 'newspack_theme_newspack_ads_media_queries', 10, 3 );
 
 /**
  * Should a particular Ad deployment use responsive placement.

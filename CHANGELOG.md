@@ -1,3 +1,11 @@
+## [1.56.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.56.1...v1.56.2-alpha.1) (2022-03-15)
+
+
+### Bug Fixes
+
+* dequeue Gutenberg's global styles ([#1724](https://github.com/Automattic/newspack-theme/issues/1724)) ([d96734d](https://github.com/Automattic/newspack-theme/commit/d96734d7a876bd5578c208c74d10d7ab217c139b))
+* remove ads custom media queries ([#1717](https://github.com/Automattic/newspack-theme/issues/1717)) ([6850700](https://github.com/Automattic/newspack-theme/commit/68507001c413226ce39a7c31bacb4793bf4c6dc7))
+
 ## [1.56.1](https://github.com/Automattic/newspack-theme/compare/v1.56.0...v1.56.1) (2022-03-08)
 
 
