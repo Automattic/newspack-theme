@@ -698,6 +698,10 @@ p.has-background {
 }
 
 //! Button
+.wp-block-buttons {
+	--wp--style--block-gap: 0.5rem;
+}
+
 .wp-block-button__link {
 	background-color: $color__background-button;
 	color: #fff;
