@@ -142,12 +142,9 @@ body {
 	margin-bottom: -1.5rem;
 }
 
-body:not( .af-widget ) .newspack_global_ad.global_above_footer {
-	margin-bottom: -2rem;
-}
-
 .ads-bg {
 	.newspack_global_ad.global_above_footer {
+		margin-bottom: -2rem;
 		margin-top: 2rem;
 	}
 
