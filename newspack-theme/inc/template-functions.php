@@ -213,6 +213,12 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'feature-latest';
 	}
 
+	// Add a class when there's an ad background color.
+	$ads_background_color = get_theme_mod( 'ads_color', 'default' );
+	if ( 'custom' === $ads_background_color ) {
+		$classes[] = 'ads-bg';
+	}
+
 	// Add a class for the footer logo size.
 	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'medium' );
 	if ( 'medium' !== $footer_logo_size ) {
