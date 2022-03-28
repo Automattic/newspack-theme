@@ -213,10 +213,15 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'feature-latest';
 	}
 
-	// Add a class when there's an ad background color.
+	// Add a class when there's an ad background color, and another when there's an ad above the footer to remove the space.
 	$ads_background_color = get_theme_mod( 'ads_color', 'default' );
+	$above_footer_ad = get_option( '_newspack_ads_placement_global_above_footer' );
 	if ( 'custom' === $ads_background_color ) {
 		$classes[] = 'ads-bg';
+
+		if ( '' !== $above_footer_ad ) {
+			$classes[] = 'ad-above-footer';
+		}
 	}
 
 	// Add a class for the footer logo size.
