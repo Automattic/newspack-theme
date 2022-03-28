@@ -219,7 +219,7 @@ function newspack_body_classes( $classes ) {
 	if ( 'custom' === $ads_background_color ) {
 		$classes[] = 'ads-bg';
 
-		if ( '' !== $above_footer_ad ) {
+		if ( str_contains( '"enabled":true', $above_footer_ad ) ) {
 			$classes[] = 'ad-above-footer';
 		}
 	}
