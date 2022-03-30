@@ -1140,11 +1140,17 @@ hr {
 	}
 }
 
-@include media( mobileonly ) {
-	.entry .entry-content > .wp-block-group.alignleft,
-	[id='pico'] > .wp-block-group.alignleft,
-	.entry .entry-content > .wp-block-group.alignright,
-	[id='pico'] > .wp-block-group.alignright {
+.entry .entry-content > .wp-block-group.alignleft,
+[id='pico'] > .wp-block-group.alignleft,
+.entry .entry-content > .wp-block-group.alignright,
+[id='pico'] > .wp-block-group.alignright {
+	@include media( mobile ) {
+		&:not( :first-child ) {
+			margin-top: 0;
+		}
+	}
+
+	@include media( mobileonly ) {
 		float: none;
 		margin-left: 0;
 		margin-right: 0;
