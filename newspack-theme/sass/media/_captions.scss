@@ -36,6 +36,10 @@ figcaption,
 	figcaption {
 		max-width: 780px;
 	}
+
+	.alignfull > figcaption {
+		width: min( 90%, 780px );
+	}
 }
 
 .newspack-front-page,
@@ -46,5 +50,9 @@ figcaption,
 		figcaption {
 			max-width: 1200px;
 		}
+	}
+
+	.alignfull > figcaption {
+		width: min( 90%, 1200px );
 	}
 }
