@@ -439,15 +439,15 @@ p.has-background {
 		.wp-block-pullquote:not( .is-style-solid-color ) blockquote {
 			padding-left: 0;
 		}
+	}
 
-		.wp-block-cover__inner-container {
-			[class*='wp-block-']:first-child {
-				margin-top: 0;
-			}
+	.wp-block-cover__inner-container > {
+		*:first-child {
+			margin-top: 0;
+		}
 
-			[class*='wp-block-']:last-child {
-				margin-bottom: 0;
-			}
+		*:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
