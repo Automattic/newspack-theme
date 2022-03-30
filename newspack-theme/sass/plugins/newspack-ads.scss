@@ -143,9 +143,13 @@ body {
 }
 
 .ads-bg {
-	.newspack_global_ad.global_above_footer {
-		margin-bottom: -2rem;
+	// Add a top margin to the above-footer ad, if a above footer widget doesn't exist.
+	&:not( .af-widget ) .newspack_global_ad.global_above_footer {
 		margin-top: 2rem;
+	}
+
+	&.ad-above-footer .site-footer {
+		margin-top: 0;
 	}
 
 	.newspack_global_ad > * {
