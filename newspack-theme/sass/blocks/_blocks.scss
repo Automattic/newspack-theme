@@ -453,9 +453,9 @@ p.has-background {
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
-	a,
-	a:hover,
-	a:visited {
+	a:not( .wp-block-button__link ),
+	a:not( .wp-block-button__link ):hover,
+	a:not( .wp-block-button__link ):visited {
 		color: inherit;
 	}
 }
