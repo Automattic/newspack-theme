@@ -215,11 +215,11 @@ function newspack_body_classes( $classes ) {
 
 	// Add a class when there's an ad background color, and another when there's an ad above the footer to remove the space.
 	$ads_background_color = get_theme_mod( 'ads_color', 'default' );
-	$above_footer_ad = get_option( '_newspack_ads_placement_global_above_footer' );
+	$above_footer_ad      = method_exists( 'Newspack_Ads\Placements', 'can_display_ad_unit' ) && \Newspack_Ads\Placements::can_display_ad_unit( 'global_above_footer' );
 	if ( 'custom' === $ads_background_color ) {
 		$classes[] = 'ads-bg';
 
-		if ( str_contains( $above_footer_ad, '"enabled":true' ) ) {
+		if ( true === $above_footer_ad ) {
 			$classes[] = 'ad-above-footer';
 		}
 	}
