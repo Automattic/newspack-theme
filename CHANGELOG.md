@@ -1,3 +1,20 @@
+# [1.57.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.56.2...v1.57.0-alpha.1) (2022-03-31)
+
+
+### Bug Fixes
+
+* add a --wp--style--block-gap default for the button block ([#1738](https://github.com/Automattic/newspack-theme/issues/1738)) ([1cca280](https://github.com/Automattic/newspack-theme/commit/1cca28059efa3abb98bbf15b1a2094cfdbe7400d))
+* align square logos to the left on smaller screens ([#1747](https://github.com/Automattic/newspack-theme/issues/1747)) ([1aec323](https://github.com/Automattic/newspack-theme/commit/1aec323acc7cdc2f23979f9609e93d9618e02aae))
+* make cover block link styles more specific ([#1745](https://github.com/Automattic/newspack-theme/issues/1745)) ([e5a1d68](https://github.com/Automattic/newspack-theme/commit/e5a1d685e72671e83253843fe8ee069b435c56f6))
+* remove bottom space from last block in cover block ([#1744](https://github.com/Automattic/newspack-theme/issues/1744)) ([180600c](https://github.com/Automattic/newspack-theme/commit/180600c0c6d37b0583ed7906bd3965c3e4d23f40))
+* update ad spacing and move ad background styles([#1742](https://github.com/Automattic/newspack-theme/issues/1742)) ([199df51](https://github.com/Automattic/newspack-theme/commit/199df51e544f044a0ac752eb160307a818b607bd))
+* update approach to remove space with above footer ad ([#1746](https://github.com/Automattic/newspack-theme/issues/1746)) ([fe36561](https://github.com/Automattic/newspack-theme/commit/fe365618a1cb6dbcfed5ed46b76f843c7f9e80ec))
+
+
+### Features
+
+* **newsletters:** custom newsletter styles ([#1730](https://github.com/Automattic/newspack-theme/issues/1730)) ([0a47ee1](https://github.com/Automattic/newspack-theme/commit/0a47ee1db2ab6ac59702978e96fc4e61bb12183b))
+
 ## [1.56.2](https://github.com/Automattic/newspack-theme/compare/v1.56.1...v1.56.2) (2022-03-22)
 
 
