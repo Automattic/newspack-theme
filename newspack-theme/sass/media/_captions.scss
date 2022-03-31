@@ -37,8 +37,11 @@ figcaption,
 		max-width: 780px;
 	}
 
-	.alignfull > figcaption {
-		width: min( 90%, 780px );
+	.alignfull,
+	.alignwide {
+		> figcaption {
+			width: min( 90vw, 780px );
+		}
 	}
 }
 
@@ -52,7 +55,10 @@ figcaption,
 		}
 	}
 
-	.alignfull > figcaption {
-		width: min( 90%, 1200px );
+	.alignfull,
+	.alignwide {
+		> figcaption {
+			width: min( 90vw, 1200px );
+		}
 	}
 }
