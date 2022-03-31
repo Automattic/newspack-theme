@@ -423,6 +423,9 @@ div[data-align='full'] {
 }
 
 /** === Button === */
+.wp-block-buttons {
+	--wp--style--block-gap: 10px;
+}
 
 .wp-block-button__link {
 	border-radius: 5px;

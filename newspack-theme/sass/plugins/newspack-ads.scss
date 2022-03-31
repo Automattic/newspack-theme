@@ -137,3 +137,28 @@ body {
 		}
 	}
 }
+
+.single-featured-image-behind .newspack_global_ad.global_below_header {
+	margin-bottom: -1.5rem;
+}
+
+.ads-bg {
+	// Add a top margin to the above-footer ad, if a above footer widget doesn't exist.
+	&:not( .af-widget ) .newspack_global_ad.global_above_footer {
+		margin-top: 2rem;
+	}
+
+	&.ad-above-footer .site-footer {
+		margin-top: 0;
+	}
+
+	.newspack_global_ad > * {
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+
+	.widget_newspack-ads-widget .textwidget,
+	div[class*='newspack-ads-blocks-ad-unit'] {
+		padding: 8px;
+	}
+}

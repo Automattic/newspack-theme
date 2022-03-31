@@ -471,21 +471,6 @@ function newspack_custom_colors_css() {
 			div[class*="newspack-ads-blocks-ad-unit"] {
 				background-color: ' . esc_html( get_theme_mod( 'ads_color_hex', '#ffffff' ) ) . ';
 			}
-			.single-featured-image-behind .newspack_global_ad.global_below_header,
-			.newspack_global_ad.global_above_footer {
-				margin-bottom: -2rem;
-			}
-			.newspack_global_ad.global_above_footer {
-				margin-top: 2rem;
-			}
-			.newspack_global_ad > * {
-				margin-bottom: 8px;
-				margin-top: 8px;
-			}
-			.widget_newspack-ads-widget .textwidget,
-			div[class*="newspack-ads-blocks-ad-unit"] {
-				padding: 8px;
-			}
 		';
 	}
 
