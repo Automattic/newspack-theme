@@ -5,7 +5,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: auto;
-	max-width: 90%;
+	max-width: 90vw;
 	width: $size__site-main;
 
 	@include media( tablet ) {
@@ -34,7 +34,7 @@
 
 #primary {
 	margin: auto;
-	max-width: 90%;
+	max-width: 90vw;
 	width: $size__site-main;
 }
 
