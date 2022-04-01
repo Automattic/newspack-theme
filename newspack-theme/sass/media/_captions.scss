@@ -36,6 +36,13 @@ figcaption,
 	figcaption {
 		max-width: 780px;
 	}
+
+	.alignfull,
+	.alignwide {
+		> figcaption {
+			width: min( 90vw, 780px );
+		}
+	}
 }
 
 .newspack-front-page,
@@ -45,6 +52,13 @@ figcaption,
 		.wp-caption-text,
 		figcaption {
 			max-width: 1200px;
+		}
+	}
+
+	.alignfull,
+	.alignwide {
+		> figcaption {
+			width: min( 90vw, 1200px );
 		}
 	}
 }
