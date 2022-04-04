@@ -1620,7 +1620,7 @@ hr {
 
 			@include media( tablet ) {
 				/*rtl:ignore*/
-				margin-left: #{-4 * $size__spacing-unit};
+				margin-left: #{-2 * $size__spacing-unit};
 			}
 
 			@include media( desktop ) {
@@ -1638,7 +1638,7 @@ hr {
 
 			@include media( tablet ) {
 				/*rtl:ignore*/
-				margin-right: #{-4 * $size__spacing-unit};
+				margin-right: #{-2 * $size__spacing-unit};
 			}
 
 			@include media( desktop ) {
