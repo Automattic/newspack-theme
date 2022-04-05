@@ -1353,6 +1353,7 @@ $colors: (
 	.has-#{$name}-background-color,
 	.has-#{$name}-background-color.has-background-dim,
 	.wp-block-pullquote.is-style-solid-color.has-#{$name}-background-color,
+	.wp-block-pullquote.has-#{$name}-background-color,
 	.is-style-outline .wp-block-button__link.has-#{$name}-background-color:not( :hover ) {
 		background-color: $hex;
 	}
