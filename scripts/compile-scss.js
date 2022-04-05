@@ -110,6 +110,11 @@ const SASS_STYLESHEETS = [
 		withRTL: true,
 	},
 	{
+		inFile: 'newspack-theme/sass/plugins/newspack-newsletters-editor.scss',
+		outFile: 'newspack-theme/styles/newspack-newsletters-editor.css',
+		withRTL: true,
+	},
+	{
 		inFile: 'newspack-theme/sass/plugins/newspack-sponsors.scss',
 		outFile: 'newspack-theme/styles/newspack-sponsors.css',
 		withRTL: true,

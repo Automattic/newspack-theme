@@ -1207,6 +1207,13 @@ if ( function_exists( '\Newspack_Sponsors\get_sponsors_for_post' ) ) {
 }
 
 /**
+ * Load Newsletters compatibility file.
+ */
+if ( class_exists( '\Newspack_Newsletters' ) ) {
+	require get_template_directory() . '/inc/newspack-newsletters.php';
+}
+
+/**
  * Load Web Stories compatibility file.
  */
 require get_template_directory() . '/inc/web-stories.php';
