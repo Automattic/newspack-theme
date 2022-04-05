@@ -381,6 +381,11 @@ div[data-align='full'] {
 	&.wp-block .wp-block-image {
 		table-layout: fixed;
 		max-width: 50%;
+
+		.components-resizable-box__container {
+			height: auto !important;
+			max-width: 400px !important;
+		}
 	}
 
 	.wp-block-image > div > div {
