@@ -380,6 +380,7 @@ div[data-align='full'] {
 [data-align='right'] {
 	&.wp-block .wp-block-image {
 		table-layout: fixed;
+		margin: 0;
 		max-width: 50%;
 
 		.components-resizable-box__container {
