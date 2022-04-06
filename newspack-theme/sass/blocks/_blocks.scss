@@ -1129,6 +1129,33 @@ hr {
 			margin-bottom: 0;
 		}
 	}
+
+	@include media( mobile ) {
+		&.alignleft,
+		&.alignright {
+			iframe[style*='width: 100%'] {
+				width: 400px !important; // !important to override inline style.
+			}
+		}
+	}
+}
+
+.entry .entry-content > .wp-block-group.alignleft,
+[id='pico'] > .wp-block-group.alignleft,
+.entry .entry-content > .wp-block-group.alignright,
+[id='pico'] > .wp-block-group.alignright {
+	@include media( mobile ) {
+		&:not( :first-child ) {
+			margin-top: 0;
+		}
+	}
+
+	@include media( mobileonly ) {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+	}
 }
 
 .wp-block-group.has-background + .wp-block-group.has-background,
@@ -1144,6 +1171,13 @@ hr {
 		margin-top: calc(
 			#{-0.5 * $size__spacing-unit} - 1px
 		); // minus 1px to offset bottom border on header
+	}
+}
+
+//! iFrame Block
+.wp-block-newspack-blocks-iframe {
+	.wp-block-embed__wrapper {
+		max-width: 100%;
 	}
 }
 
@@ -1586,7 +1620,7 @@ hr {
 
 			@include media( tablet ) {
 				/*rtl:ignore*/
-				margin-left: #{-4 * $size__spacing-unit};
+				margin-left: #{-2 * $size__spacing-unit};
 			}
 
 			@include media( desktop ) {
@@ -1604,7 +1638,7 @@ hr {
 
 			@include media( tablet ) {
 				/*rtl:ignore*/
-				margin-right: #{-4 * $size__spacing-unit};
+				margin-right: #{-2 * $size__spacing-unit};
 			}
 
 			@include media( desktop ) {
