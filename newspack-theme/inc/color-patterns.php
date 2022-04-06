@@ -130,7 +130,7 @@ function newspack_custom_colors_css() {
 			.wp-block-quote:not(.is-style-large),
 			.woocommerce-tabs ul li.active a,
 			.has-primary-border-color,
-			.wp-block-pullquote .has-primary-border-color {
+			.wp-block-pullquote.has-primary-border-color {
 				border-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
 
