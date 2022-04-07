@@ -637,7 +637,7 @@ div.sharedaddy .sd-social h3.sd-title,
 		align-self: flex-end;
 		color: #fff;
 		margin: #{4 * $size__spacing-unit} auto #{2 * $size__spacing-unit};
-		max-width: 90%;
+		max-width: 90vw;
 		position: relative;
 		z-index: 2;
 
@@ -852,7 +852,7 @@ div.sharedaddy .sd-social h3.sd-title,
 
 	figcaption {
 		margin: #{0.25 * $size__spacing-unit} auto 0;
-		max-width: 90%;
+		max-width: 90vw;
 		width: 1200px;
 	}
 }
