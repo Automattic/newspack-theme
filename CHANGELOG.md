@@ -1,3 +1,10 @@
+## [1.57.1](https://github.com/Automattic/newspack-theme/compare/v1.57.0...v1.57.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* change custom ads bg classname ([#1759](https://github.com/Automattic/newspack-theme/issues/1759)) ([34bf5da](https://github.com/Automattic/newspack-theme/commit/34bf5da3dccf38176fcb73fd5212578853d50a16))
+
 # [1.57.0](https://github.com/Automattic/newspack-theme/compare/v1.56.2...v1.57.0) (2022-04-05)
 
 
