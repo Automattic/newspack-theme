@@ -217,7 +217,7 @@ function newspack_body_classes( $classes ) {
 	$ads_background_color = get_theme_mod( 'ads_color', 'default' );
 	$above_footer_ad      = method_exists( 'Newspack_Ads\Placements', 'can_display_ad_unit' ) && \Newspack_Ads\Placements::can_display_ad_unit( 'global_above_footer' );
 	if ( 'custom' === $ads_background_color ) {
-		$classes[] = 'ads-bg';
+		$classes[] = 'custom-ad-bg';
 
 		if ( true === $above_footer_ad ) {
 			$classes[] = 'ad-above-footer';
