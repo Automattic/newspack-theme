@@ -67,7 +67,10 @@
 		margin: -32px;
 	}
 
+	.newspack-inline-popup &,
 	.newspack-lightbox & {
+		margin: 0;
+
 		~ .popup-not-interested-form {
 			bottom: 0;
 			left: 0;
@@ -79,10 +82,6 @@
 				font-weight: bold;
 				padding: 8px;
 			}
-		}
-
-		+ p:empty {
-			display: none;
 		}
 	}
 }
@@ -191,7 +190,10 @@
 		margin: -32px;
 	}
 
+	.newspack-inline-popup &,
 	.newspack-lightbox & {
+		margin: 0;
+
 		~ .popup-not-interested-form {
 			margin: 12px 0 0;
 			padding: 0 4px 4px;
@@ -205,9 +207,17 @@
 				font-family: inherit;
 			}
 		}
+	}
 
-		+ p:empty {
-			display: none;
+	.newspack-inline-popup & {
+		~ .popup-not-interested-form {
+			margin-top: -20px;
+			padding: 0 36px 36px;
+
+			@include media( tablet ) {
+				margin-top: -48px;
+				padding: 0 64px 64px;
+			}
 		}
 	}
 }
@@ -311,7 +321,10 @@
 		padding: 32px;
 	}
 
+	.newspack-inline-popup &,
 	.newspack-lightbox & {
+		margin: 0;
+
 		~ .popup-dismiss-form {
 			.newspack-lightbox__close {
 				height: 32px;
@@ -326,10 +339,6 @@
 			button {
 				font-family: inherit;
 			}
-		}
-
-		+ p:empty {
-			display: none;
 		}
 	}
 }
