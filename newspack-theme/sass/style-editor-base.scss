@@ -130,6 +130,13 @@ figcaption,
 	padding-right: 0;
 }
 
+.has-text-color {
+	figcaption,
+	.wp-caption-text {
+		color: inherit;
+	}
+}
+
 /** === Post Title === */
 
 .editor-post-title__block,
