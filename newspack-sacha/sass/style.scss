@@ -258,27 +258,29 @@ cite {
 		}
 	}
 
-	@include media( mobileonly ) {
-		&.date-hidden .entry-header .entry-meta {
-			display: block;
+	&.date-hidden {
+		@include media( mobileonly ) {
+			.entry-header .entry-meta {
+				display: block;
+			}
 		}
-	}
 
-	@include media( tablet ) {
-		&.date-hidden .featured-image-beside .entry-meta {
+		@include media( tablet ) {
+			.featured-image-beside .entry-meta {
+				display: block;
+
+				.byline {
+					margin: 0;
+				}
+			}
+		}
+
+		.featured-image-behind .entry-meta {
 			display: block;
 
 			.byline {
 				margin: 0;
 			}
-		}
-	}
-
-	&.date-hidden .featured-image-behind .entry-meta {
-		display: block;
-
-		.byline {
-			margin: 0;
 		}
 	}
 
