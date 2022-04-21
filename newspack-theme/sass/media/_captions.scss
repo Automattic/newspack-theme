@@ -16,6 +16,13 @@ figcaption,
 	text-align: left;
 }
 
+.has-text-color {
+	figcaption,
+	.wp-caption-text {
+		color: inherit;
+	}
+}
+
 figcaption,
 .wp-caption-text,
 .amp-image-lightbox-caption {
