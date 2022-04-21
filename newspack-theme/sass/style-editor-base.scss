@@ -236,9 +236,12 @@ h1.wp-block-post-title {
 }
 
 /** === Newspack Carousel === */
-.wp-block-newspack-blocks-carousel h3 a,
-.wp-block-newspack-blocks-carousel h3 a:visited {
-	color: #fff;
+.wp-block-newspack-blocks-carousel {
+	a,
+	a:visited,
+	.entry-meta .byline a {
+		color: #fff;
+	}
 }
 
 /** === Table === */
