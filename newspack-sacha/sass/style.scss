@@ -258,6 +258,12 @@ cite {
 		}
 	}
 
+	@include media( mobileonly ) {
+		&.date-hidden .entry-header .entry-meta {
+			display: block;
+		}
+	}
+
 	.entry-subhead {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;

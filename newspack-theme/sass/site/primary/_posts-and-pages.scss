@@ -317,6 +317,11 @@ amp-script .cat-links {
 		}
 	}
 
+	&.date-hidden .entry-header .entry-meta {
+		align-items: center;
+		display: flex;
+	}
+
 	.main-content > .post-thumbnail:first-child {
 		margin-top: #{2 * $size__spacing-unit};
 	}
