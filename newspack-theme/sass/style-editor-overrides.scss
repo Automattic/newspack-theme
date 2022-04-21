@@ -79,10 +79,16 @@ body.newspack-single-column-template {
 		position: relative;
 
 		@include media( desktop ) {
-			left: #{-2 * $size__spacing-unit};
+			left: #{-1 * $size__spacing-unit};
 		}
 		@include media( wide ) {
-			left: #{-4 * $size__spacing-unit};
+			left: #{-2 * $size__spacing-unit};
+		}
+
+		@include media( tablet ) {
+			> .wp-block-image {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -98,6 +104,12 @@ body.newspack-single-column-template {
 		}
 		@include media( wide ) {
 			right: #{-4 * $size__spacing-unit};
+		}
+
+		@include media( tablet ) {
+			> .wp-block-image {
+				margin-left: 0;
+			}
 		}
 	}
 
