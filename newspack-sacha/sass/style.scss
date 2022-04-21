@@ -264,6 +264,24 @@ cite {
 		}
 	}
 
+	@include media( tablet ) {
+		&.date-hidden .featured-image-beside .entry-meta {
+			display: block;
+
+			.byline {
+				margin: 0;
+			}
+		}
+	}
+
+	&.date-hidden .featured-image-behind .entry-meta {
+		display: block;
+
+		.byline {
+			margin: 0;
+		}
+	}
+
 	.entry-subhead {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;
