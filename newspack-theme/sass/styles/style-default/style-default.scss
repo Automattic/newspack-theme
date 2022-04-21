@@ -100,8 +100,9 @@
 	}
 }
 
-.wpnbha .cat-links {
-	a {
+.wpnbha,
+.wpnbpc {
+	.cat-links a {
 		margin: 0;
 		padding: 0;
 		&,
