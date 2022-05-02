@@ -258,6 +258,32 @@ cite {
 		}
 	}
 
+	&.date-hidden {
+		@include media( mobileonly ) {
+			.entry-header .entry-meta {
+				display: block;
+			}
+		}
+
+		@include media( tablet ) {
+			.featured-image-beside .entry-meta {
+				display: block;
+
+				.byline {
+					margin: 0;
+				}
+			}
+		}
+
+		.featured-image-behind .entry-meta {
+			display: block;
+
+			.byline {
+				margin: 0;
+			}
+		}
+	}
+
 	.entry-subhead {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;
