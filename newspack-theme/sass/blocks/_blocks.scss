@@ -254,11 +254,13 @@ p.has-background {
 }
 
 //! Newspack Carousel Block
-.wp-block-newspack-blocks-carousel {
+.wpnbpc {
 	h3 a,
 	h3 a:visited,
 	.entry-meta .byline a,
 	.entry-meta .byline a:visited,
+	.entry-meta .byline a:hover,
+	.entry-meta .byline a:visited:hover,
 	.cat-links a,
 	.cat-links a:visited {
 		color: inherit;
@@ -1666,3 +1668,8 @@ $colors: (
 		color: currentColor;
 	}
 }
+
+/*--------------------------------------------------------------
+## Patterns
+--------------------------------------------------------------*/
+@import 'patterns';
