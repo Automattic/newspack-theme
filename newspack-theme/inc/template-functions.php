@@ -454,8 +454,10 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
 
+		$toggle_id = "toggle" . $item->ID ;
+
 		$output .= sprintf(
-			'<button class="submenu-expand" tabindex="-1" role="presentation">%s</button>',
+			'<button class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )">%s</button>',
 			$icon
 		);
 	}
