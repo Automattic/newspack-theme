@@ -130,6 +130,13 @@ figcaption,
 	padding-right: 0;
 }
 
+.has-text-color {
+	figcaption,
+	.wp-caption-text {
+		color: inherit;
+	}
+}
+
 /** === Post Title === */
 
 .editor-post-title__block,
@@ -236,9 +243,12 @@ h1.wp-block-post-title {
 }
 
 /** === Newspack Carousel === */
-.wp-block-newspack-blocks-carousel h3 a,
-.wp-block-newspack-blocks-carousel h3 a:visited {
-	color: #fff;
+.wp-block-newspack-blocks-carousel {
+	a,
+	a:visited,
+	.entry-meta .byline a {
+		color: #fff;
+	}
 }
 
 /** === Table === */
@@ -380,7 +390,6 @@ div[data-align='full'] {
 [data-align='right'] {
 	&.wp-block .wp-block-image {
 		table-layout: fixed;
-		margin: 0;
 		max-width: 50%;
 
 		.components-resizable-box__container {
@@ -1064,6 +1073,280 @@ ul.wp-block-archives,
 			.block-editor-rich-text__editable {
 				flex: 0 0 100%;
 			}
+		}
+	}
+
+	&.subscribe__style-7 {
+		.block-editor-block-list__layout[class*='is-size-'] & {
+			margin-left: -32px;
+			margin-right: -32px;
+			max-width: calc( 100% + 64px );
+			width: calc( 100% + 64px );
+
+			&:first-child {
+				margin-top: -32px;
+			}
+		}
+
+		.wp-block-media-text {
+			display: block;
+
+			@include media( tablet ) {
+				display: grid;
+			}
+
+			&__media {
+				display: none;
+
+				@include media( tablet ) {
+					display: block;
+				}
+			}
+
+			&__content {
+				display: grid;
+				gap: 16px;
+				padding: 36px;
+
+				@include media( tablet ) {
+					padding: 64px;
+				}
+
+				> * {
+					margin: 0;
+				}
+			}
+		}
+
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
+
+		.wp-block-jetpack-mailchimp {
+			display: grid;
+			gap: 8px;
+
+			* {
+				margin: 0;
+			}
+
+			> .block-editor-inner-blocks {
+				.wp-block-button {
+					margin: 0;
+				}
+			}
+
+			p {
+				font-size: 0.7em;
+			}
+		}
+
+		&.has-background {
+			padding: 0;
+		}
+	}
+
+	&.subscribe__style-8 {
+		.block-editor-block-list__layout[class*='is-size-'] & {
+			margin-left: -32px;
+			margin-right: -32px;
+			max-width: calc( 100% + 64px );
+			width: calc( 100% + 64px );
+
+			&:first-child {
+				margin-top: -32px;
+			}
+		}
+
+		.wp-block-image {
+			display: none;
+			margin-bottom: 0;
+
+			@include media( tablet ) {
+				display: block;
+			}
+
+			figcaption {
+				display: none;
+			}
+
+			.components-resizable-box__container {
+				display: block;
+			}
+		}
+
+		.wp-block-group {
+			margin-top: 0;
+			padding: 0;
+
+			.wp-block-group__inner-container {
+				display: grid;
+				gap: 16px;
+
+				> * {
+					margin: 0;
+				}
+			}
+		}
+
+		.newspack-pattern__inner {
+			.wp-block-group__inner-container {
+				padding: 36px;
+
+				@include media( tablet ) {
+					padding: 64px;
+				}
+			}
+		}
+
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
+
+		.wp-block-jetpack-mailchimp {
+			display: grid;
+			gap: 8px;
+
+			@include media( mobile ) {
+				gap: 16px 8px;
+				grid-template-areas:
+					'input button'
+					'content content';
+				grid-template-columns: 1fr auto;
+			}
+
+			* {
+				margin: 0;
+			}
+
+			.wp-block-jetpack-mailchimp_text-input {
+				.components-base-control__field,
+				.components-text-control__input {
+					height: 100%;
+				}
+
+				@include media( mobile ) {
+					grid-area: input;
+				}
+			}
+
+			> .block-editor-inner-blocks {
+				.wp-block-button {
+					margin: 0;
+				}
+
+				.wp-block-button__link {
+					width: 100%;
+				}
+
+				@include media( mobile ) {
+					grid-area: button;
+				}
+			}
+
+			p {
+				font-size: 0.7em;
+
+				@include media( mobile ) {
+					grid-area: content;
+				}
+			}
+		}
+
+		&.has-background {
+			padding: 0;
+		}
+	}
+
+	&.subscribe__style-9 {
+		.wp-block-columns {
+			margin: 0;
+			padding: 0;
+
+			&:not( .is-not-stacked-on-mobile ) > .wp-block-column {
+				margin-bottom: 16px;
+
+				@include media( mobile ) {
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.wp-block-column {
+				> * {
+					margin-bottom: 16px;
+					margin-top: 16px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
+
+		.wp-block-jetpack-mailchimp {
+			display: grid;
+			gap: 8px;
+
+			@include media( mobile ) {
+				gap: 16px 8px;
+				grid-template-areas:
+					'input button'
+					'content content';
+				grid-template-columns: 1fr auto;
+			}
+
+			* {
+				margin: 0;
+			}
+
+			.wp-block-jetpack-mailchimp_text-input {
+				.components-base-control__field,
+				.components-text-control__input {
+					height: 100%;
+				}
+
+				@include media( mobile ) {
+					grid-area: input;
+				}
+			}
+
+			> .block-editor-inner-blocks {
+				.wp-block-button {
+					margin: 0;
+				}
+
+				.wp-block-button__link {
+					width: 100%;
+				}
+
+				@include media( mobile ) {
+					grid-area: button;
+				}
+			}
+
+			p {
+				font-size: 0.7em;
+
+				@include media( mobile ) {
+					grid-area: content;
+				}
+			}
+		}
+
+		&.has-background {
+			padding: 32px;
 		}
 	}
 }
