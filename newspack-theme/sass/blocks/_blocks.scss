@@ -952,7 +952,7 @@ p.has-background {
 	}
 
 	&.has-background {
-		padding: 1rem;
+		padding: #{1.5 * $size__spacing-unit};
 	}
 }
 
