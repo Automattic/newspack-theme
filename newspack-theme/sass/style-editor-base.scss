@@ -502,6 +502,23 @@ div[data-align='full'] {
 		line-height: 1.6;
 		color: $color__text-light;
 	}
+
+	p {
+		font-size: 1em;
+		font-style: normal;
+		margin-bottom: 0.5em;
+	}
+
+	&.has-background {
+		padding: 1rem;
+	}
+
+	&.has-text-color {
+		cite,
+		footer {
+			color: inherit;
+		}
+	}
 }
 
 /** === Pullquote === */
