@@ -502,6 +502,23 @@ div[data-align='full'] {
 		line-height: 1.6;
 		color: $color__text-light;
 	}
+
+	p {
+		font-size: 1em;
+		font-style: normal;
+		margin-bottom: 0.5em;
+	}
+
+	&.has-background {
+		padding: 30px;
+	}
+
+	&.has-text-color {
+		cite,
+		footer {
+			color: inherit;
+		}
+	}
 }
 
 /** === Pullquote === */
@@ -714,10 +731,10 @@ div[data-align='full'] {
 
 .wp-block-separator {
 	opacity: 1;
+
 	&:not( .is-style-dots ) {
 		border: 0;
 		border-top: 1px solid $color__border;
-		background-color: transparent;
 	}
 
 	&:not( .is-style-wide ):not( .is-style-dots ) {
@@ -733,8 +750,9 @@ div[data-align='full'] {
 		padding-left: calc( 2 * #{$size__spacing-unit} );
 	}
 
-	&.has-background {
-		border: 0;
+	&.has-background,
+	&.has-text-color {
+		border-color: currentColor;
 
 		&.is-style-dots::before {
 			color: inherit;
