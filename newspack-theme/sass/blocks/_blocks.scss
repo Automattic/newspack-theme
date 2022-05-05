@@ -909,7 +909,7 @@ p.has-background {
 	p {
 		font-size: 1em;
 		font-style: normal;
-		line-height: 1.8;
+		margin-bottom: 0.5em;
 	}
 
 	cite {
@@ -928,8 +928,8 @@ p.has-background {
 
 		p {
 			font-size: $font__size-lg;
-			line-height: 1.4;
 			font-style: italic;
+			line-height: 1.4;
 		}
 
 		cite,
@@ -949,6 +949,10 @@ p.has-background {
 				font-size: $font__size-lg;
 			}
 		}
+	}
+
+	&.has-background {
+		padding: #{1.5 * $size__spacing-unit};
 	}
 }
 
