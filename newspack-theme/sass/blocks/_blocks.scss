@@ -301,7 +301,6 @@ p.has-background {
 }
 
 //! Columns
-
 .wp-block-columns {
 	.wp-block-cover,
 	.wp-block-cover-image {
@@ -1482,7 +1481,6 @@ $colors: (
 	}
 
 	//! Columns Block
-	/*
 	.wp-block-columns {
 		@include media( tablet ) {
 			&.alignfull,
@@ -1492,7 +1490,6 @@ $colors: (
 			}
 		}
 	}
-	*/
 }
 
 .newspack-front-page,
