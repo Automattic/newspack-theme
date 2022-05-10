@@ -419,6 +419,7 @@ function newspack_get_discussion_data() {
  *
  * @ref https://www.w3.org/WAI/tutorials/menus/flyout/
  */
+/*
 function newspack_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
@@ -431,6 +432,7 @@ function newspack_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'newspack_nav_menu_link_attributes', 10, 4 );
+*/
 
 /**
  * Add a dropdown icon to top-level menu items.
@@ -454,10 +456,10 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
 
-		$toggle_id = "toggle" . $item->ID ;
+		$toggle_id = "toggle-" . $item->ID ;
 
 		$output .= sprintf(
-			'<button class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )">%s</button>',
+			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )">%s</button>',
 			$icon
 		);
 	}
