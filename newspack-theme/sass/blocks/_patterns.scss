@@ -220,7 +220,7 @@
 		padding: 0;
 
 		&:not( .is-not-stacked-on-mobile ) {
-			@include media( mobileonly ) {
+			@include media( tabletonly ) {
 				gap: 16px;
 			}
 		}
