@@ -1479,17 +1479,6 @@ $colors: (
 			}
 		}
 	}
-
-	//! Columns Block
-	.wp-block-columns {
-		@include media( tablet ) {
-			&.alignfull,
-			&.alignfull .wp-block-column {
-				padding-left: calc( 2 * #{$size__spacing-unit} );
-				padding-right: calc( 2 * #{$size__spacing-unit} );
-			}
-		}
-	}
 }
 
 .newspack-front-page,
