@@ -102,6 +102,10 @@
 					position: relative;
 					top: -0.2em;
 				}
+
+				&.open-dropdown svg {
+					transform: rotate( 180deg );
+				}
 			}
 		}
 	}
@@ -157,9 +161,13 @@
 		}
 
 		.submenu-expand {
-			right: #{0.25 * $size__spacing-unit};
+			right: -5px;
 			top: #{0.65 * $size__spacing-unit};
 			transform: rotate( -90deg );
+
+			svg {
+				margin-top: -10px;
+			}
 		}
 	}
 
