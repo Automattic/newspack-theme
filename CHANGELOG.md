@@ -1,3 +1,13 @@
+## [1.58.1](https://github.com/Automattic/newspack-theme/compare/v1.58.0...v1.58.1) (2022-05-18)
+
+
+### Bug Fixes
+
+* correct author alignment when date is hidden ([#1777](https://github.com/Automattic/newspack-theme/issues/1777)) ([1591f3d](https://github.com/Automattic/newspack-theme/commit/1591f3d1692c514620b8fb66ca1f7a98c2582385))
+* **sponsors:** ensure sponsor bios appear above Related Posts module ([#1792](https://github.com/Automattic/newspack-theme/issues/1792)) ([53db042](https://github.com/Automattic/newspack-theme/commit/53db042277a839b9c81892330bc8752992801c18))
+* update quote block styles for WordPress 6.0 ([#1797](https://github.com/Automattic/newspack-theme/issues/1797)) ([46af05a](https://github.com/Automattic/newspack-theme/commit/46af05a6dcdb43716b0d03e00efa37110bd8c890))
+* update separator editor styles for WordPress 6.0 ([#1798](https://github.com/Automattic/newspack-theme/issues/1798)) ([beff7f9](https://github.com/Automattic/newspack-theme/commit/beff7f91f892646bb8eeac7fbf98d4a902b274eb))
+
 ## [1.58.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.58.0...v1.58.1-alpha.1) (2022-05-05)
 
 
