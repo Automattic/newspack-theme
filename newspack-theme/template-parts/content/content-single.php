@@ -35,6 +35,10 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		if ( ! empty( $underwriter_sponsors ) ) :
 			newspack_sponsored_underwriters_info( $underwriter_sponsors );
 		endif;
+
+		if ( ! empty( $native_sponsors ) ) :
+			newspack_sponsor_footer_bio( $native_sponsors );
+		endif;
 		?>
 
 		<?php
@@ -71,9 +75,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	</footer><!-- .entry-footer -->
 
 	<?php
-	if ( ! empty( $native_sponsors ) ) :
-		newspack_sponsor_footer_bio( $native_sponsors );
-	elseif ( ! is_singular( 'attachment' ) ) :
+	if ( empty( $native_sponsors ) && ! is_singular( 'attachment' ) ) :
 		get_template_part( 'template-parts/post/author', 'bio' );
 	endif;
 	?>

@@ -251,6 +251,8 @@ endif;
 if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 	/**
 	 * Outputs the 'bio' for the sponsor.
+	 * Appends it to post content to ensure that it appears before other injected modules,
+	 * such as Jetpack's Related Posts module.
 	 */
 	function newspack_sponsor_footer_bio( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
 		$sponsors = newspack_get_all_sponsors(
@@ -262,61 +264,71 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 				'maxheight' => 100,
 			)
 		);
-		if ( ! empty( $sponsors ) ) {
-			foreach ( $sponsors as $sponsor ) {
-			?>
-
-				<div class="author-bio sponsor-bio">
-
-					<?php
-					if ( ! empty( $sponsor['sponsor_logo'] ) ) {
-						echo '<figure class="avatar">';
-						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
-						}
-						echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '">';
-						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '</a>';
-						}
-						echo '</figure>';
-					}
+		add_filter(
+			'the_content',
+			function( $content ) use ( $sponsors ) {
+				ob_start();
+				if ( ! empty( $sponsors ) ) {
+					foreach ( $sponsors as $sponsor ) {
 					?>
 
-					<div class="author-bio-text">
-						<div class="author-bio-header">
-							<h2 class="accent-header">
-								<?php
-								echo esc_html( $sponsor['sponsor_byline'] ) . ' ';
+						<div class="author-bio sponsor-bio">
+
+							<?php
+							if ( ! empty( $sponsor['sponsor_logo'] ) ) {
+								echo '<figure class="avatar">';
 								if ( '' !== $sponsor['sponsor_url'] ) {
-									echo '<a target="_blank" href="' . esc_url( $sponsor['sponsor_url'] ) . '">';
+									echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
 								}
-								echo esc_html( $sponsor['sponsor_name'] );
+								echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '">';
 								if ( '' !== $sponsor['sponsor_url'] ) {
 									echo '</a>';
 								}
-								?>
-							</h2>
-						</div><!-- .author-bio-header -->
+								echo '</figure>';
+							}
+							?>
 
-						<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
+							<div class="author-bio-text">
+								<div class="author-bio-header">
+									<h2 class="accent-header">
+										<?php
+										echo esc_html( $sponsor['sponsor_byline'] ) . ' ';
+										if ( '' !== $sponsor['sponsor_url'] ) {
+											echo '<a target="_blank" href="' . esc_url( $sponsor['sponsor_url'] ) . '">';
+										}
+										echo esc_html( $sponsor['sponsor_name'] );
+										if ( '' !== $sponsor['sponsor_url'] ) {
+											echo '</a>';
+										}
+										?>
+									</h2>
+								</div><!-- .author-bio-header -->
 
-						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
-							<a class="author-link" target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
-								<?php
-									printf(
-										/* translators: %s is the post's sponsor's name. */
-										esc_html__( 'Learn more about %s', 'newspack' ),
-										esc_html( $sponsor['sponsor_name'] )
-									);
-								?>
-							</a>
-						<?php endif; ?>
+								<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
 
-					</div><!-- .author-bio-text -->
-				</div><!-- .author-bio -->
-			<?php
+								<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
+									<a class="author-link" target="_blank" href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>">
+										<?php
+											printf(
+												/* translators: %s is the post's sponsor's name. */
+												esc_html__( 'Learn more about %s', 'newspack' ),
+												esc_html( $sponsor['sponsor_name'] )
+											);
+										?>
+									</a>
+								<?php endif; ?>
+
+							</div><!-- .author-bio-text -->
+						</div><!-- .author-bio -->
+					<?php
+					}
+				}
+
+				$content .= "\n" . ob_get_clean();
+
+				return $content;
 			}
-		}
+		);
 	}
 endif;
 
