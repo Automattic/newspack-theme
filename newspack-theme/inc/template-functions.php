@@ -456,17 +456,39 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
 
-		$toggle_id = "toggle-" . $item->ID ;
+		$toggle_id = "toggle_" . $item->ID ;
 
 		$output .= sprintf(
 			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )">%s</button>',
 			$icon
 		);
+
+		// Get the current menu items ID and store it in a global variable so it can be added to the submenu.
+		global $menu_parent_id;
+		$menu_parent_id = $item->ID;
 	}
 
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
+
+/**
+ * Add an ID with parent menu item's ID to each submenu.
+ *
+ * @param string $output Nav menu item start element.
+ * @param int    $depth  Depth.
+ * @param object $args   Nav menu args.
+ * @return string Nav menu level start element.
+ */
+class Newspack_Custom_Submenu_Walker extends Walker_Nav_Menu {
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		global $menu_parent_id;
+
+		$submenu_ID = "submenu-" . esc_attr( $menu_parent_id );
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"sub-menu\" id=\"$submenu_ID\">\n";
+	}
+}
 
 /**
  * The default color used for the primary color throughout this theme
