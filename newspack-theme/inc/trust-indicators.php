@@ -119,17 +119,17 @@ add_action( 'newspack_theme_below_archive_title', 'newspack_trust_indicators_out
  */
 function newspack_trust_indicators_output_author_job_title( $title ) {
 	if ( is_author() ) {
-		$author    = get_queried_object();
-		$author_id = $author->ID;
+		$author = get_queried_object();
+		$role   = get_user_meta( $author->ID, 'title', true );
+		if ( $role ) {
+			$title .= '<span class="author-job-title">' . $role . '</span>';
+		}
 	} else if ( is_single() ) {
-		$author_id = get_the_author_meta( 'ID' ) ;
+		$role = get_user_meta( get_the_author_meta( 'ID' ), 'title', true );
+		if ( $role ) {
+			$title .= '<span class="author-job-title">' . $role . '</span>';
+		}
 	}
-
-	$role = get_user_meta( $author_id, 'title', true );
-	if ( $role ) {
-		$title .= '<span class="author-job-title">' . $role . '</span>';
-	}
-
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_job_title' );
