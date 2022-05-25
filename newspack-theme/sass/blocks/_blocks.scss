@@ -78,29 +78,6 @@
 				&.wp-block-cover {
 					width: auto;
 				}
-
-				&.wp-block-columns {
-					margin-left: calc( 25% - 25vw - 16px );
-					margin-right: calc( 25% - 25vw - 16px );
-					max-width: calc( 100vw + 32px );
-					width: auto;
-
-					&.is-style-borders {
-						margin-left: calc( 25% - 25vw - 24px );
-						margin-right: calc( 25% - 25vw - 24px );
-						max-width: calc( 100vw + 48px );
-					}
-				}
-			}
-
-			@include media( desktop ) {
-				&.wp-block-columns {
-					&.is-style-borders {
-						margin-left: calc( 25% - 25vw - 32px );
-						margin-right: calc( 25% - 25vw - 32px );
-						max-width: calc( 100vw + 64px );
-					}
-				}
 			}
 		}
 		.alignfull {
@@ -110,33 +87,6 @@
 
 			&.wp-block-cover {
 				width: 100vw;
-			}
-
-			&.wp-block-columns {
-				@include media( mobile ) {
-					margin-left: calc( 50% - 50vw - 16px );
-					margin-right: calc( 50% - 50vw - 16px );
-					max-width: calc( 100vw + 32px );
-					width: calc( 100vw + 32px );
-				}
-
-				@include media( tablet ) {
-					&.is-style-borders {
-						margin-left: calc( 50% - 50vw - 24px );
-						margin-right: calc( 50% - 50vw - 24px );
-						max-width: calc( 100vw + 48px );
-						width: calc( 100vw + 48px );
-					}
-				}
-
-				@include media( desktop ) {
-					&.is-style-borders {
-						margin-left: calc( 50% - 50vw - 32px );
-						margin-right: calc( 50% - 50vw - 32px );
-						max-width: calc( 100vw + 64px );
-						width: calc( 100vw + 64px );
-					}
-				}
 			}
 		}
 
@@ -371,36 +321,6 @@ p.has-background {
 
 		&:last-child {
 			margin-bottom: 0;
-		}
-	}
-}
-
-// Temporarily make some column styles more specific
-.entry .entry-content > .wp-block-columns,
-[id='pico'] > .wp-block-columns {
-	&.is-not-stacked-on-mobile {
-		margin-left: -16px;
-		margin-right: -16px;
-		max-width: calc( 100% + 32px );
-	}
-
-	@include media( mobile ) {
-		margin-left: -16px;
-		margin-right: -16px;
-		max-width: calc( 100% + 32px );
-	}
-
-	@include media( tablet ) {
-		&.is-style-borders {
-			margin-left: -24px;
-			max-width: calc( 100% + 48px );
-		}
-	}
-
-	@include media( desktop ) {
-		&.is-style-borders {
-			margin-left: -32px;
-			max-width: calc( 100% + 64px );
 		}
 	}
 }
@@ -1457,31 +1377,6 @@ $colors: (
 				margin-right: calc( 25% - 25vw );
 				max-width: 100vw;
 			}
-
-			@include media( tablet ) {
-				&.wp-block-columns {
-					margin-left: calc( 25% - 25vw - 16px );
-					margin-right: calc( 25% - 25vw - 16px );
-					max-width: calc( 100vw + 32px );
-					width: auto;
-
-					&.is-style-borders {
-						margin-left: calc( 25% - 25vw - 24px );
-						margin-right: calc( 25% - 25vw - 24px );
-						max-width: calc( 100vw + 48px );
-					}
-				}
-			}
-
-			@include media( desktop ) {
-				&.wp-block-columns {
-					&.is-style-borders {
-						margin-left: calc( 25% - 25vw - 32px );
-						margin-right: calc( 25% - 25vw - 32px );
-						max-width: calc( 100vw + 64px );
-					}
-				}
-			}
 		}
 
 		&.alignfull {
@@ -1581,17 +1476,6 @@ $colors: (
 					margin-right: auto;
 					max-width: 780px;
 				}
-			}
-		}
-	}
-
-	//! Columns Block
-	.wp-block-columns {
-		@include media( tablet ) {
-			&.alignfull,
-			&.alignfull .wp-block-column {
-				padding-left: calc( 2 * #{$size__spacing-unit} );
-				padding-right: calc( 2 * #{$size__spacing-unit} );
 			}
 		}
 	}
