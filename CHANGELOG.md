@@ -1,10 +1,9 @@
-## [1.58.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.58.1...v1.58.2-alpha.1) (2022-05-19)
+## [1.58.2](https://github.com/Automattic/newspack-theme/compare/v1.58.1...v1.58.2) (2022-05-25)
 
 
 ### Bug Fixes
 
-* update single post footer print styles ([#1786](https://github.com/Automattic/newspack-theme/issues/1786)) ([1449a66](https://github.com/Automattic/newspack-theme/commit/1449a664b0f30d0de8a36661eda3d008df266906))
-* update skip to content target ([#1787](https://github.com/Automattic/newspack-theme/issues/1787)) ([86ff610](https://github.com/Automattic/newspack-theme/commit/86ff6100a086ae80ee94b24ad46a80c7ae9336c8))
+* remove custom column block styles ([#1817](https://github.com/Automattic/newspack-theme/issues/1817)) ([9d2632c](https://github.com/Automattic/newspack-theme/commit/9d2632cda5b8de0d441d8928e07e6d8e451825c6))
 
 ## [1.58.1](https://github.com/Automattic/newspack-theme/compare/v1.58.0...v1.58.1) (2022-05-18)
 
