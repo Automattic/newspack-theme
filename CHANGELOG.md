@@ -1,3 +1,10 @@
+## [1.58.2](https://github.com/Automattic/newspack-theme/compare/v1.58.1...v1.58.2) (2022-05-25)
+
+
+### Bug Fixes
+
+* remove custom column block styles ([#1817](https://github.com/Automattic/newspack-theme/issues/1817)) ([9d2632c](https://github.com/Automattic/newspack-theme/commit/9d2632cda5b8de0d441d8928e07e6d8e451825c6))
+
 ## [1.58.1](https://github.com/Automattic/newspack-theme/compare/v1.58.0...v1.58.1) (2022-05-18)
 
 
