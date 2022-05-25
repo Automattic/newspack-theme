@@ -219,20 +219,9 @@
 		margin: 0;
 		padding: 0;
 
-		@include media( mobile ) {
-			margin-left: -16px;
-			margin-right: -16px;
-		}
-
-		&:not( .is-not-stacked-on-mobile ) > .wp-block-column {
-			margin-bottom: 16px;
-
-			@include media( mobile ) {
-				margin-bottom: 0;
-			}
-
-			&:last-child {
-				margin-bottom: 0;
+		&:not( .is-not-stacked-on-mobile ) {
+			@include media( tabletonly ) {
+				gap: 16px;
 			}
 		}
 
