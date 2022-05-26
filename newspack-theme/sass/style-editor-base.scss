@@ -1162,6 +1162,8 @@ ul.wp-block-archives,
 	}
 
 	&.subscribe__style-8 {
+		@include jetpack-mailchimp-editor;
+
 		.block-editor-block-list__layout[class*='is-size-'] & {
 			margin-left: -32px;
 			margin-right: -32px;
@@ -1218,62 +1220,14 @@ ul.wp-block-archives,
 			font-size: 0.8em;
 		}
 
-		.wp-block-jetpack-mailchimp {
-			display: grid;
-			gap: 8px;
-
-			@include media( mobile ) {
-				gap: 16px 8px;
-				grid-template-areas:
-					'input button'
-					'content content';
-				grid-template-columns: 1fr auto;
-			}
-
-			* {
-				margin: 0;
-			}
-
-			.wp-block-jetpack-mailchimp_text-input {
-				.components-base-control__field,
-				.components-text-control__input {
-					height: 100%;
-				}
-
-				@include media( mobile ) {
-					grid-area: input;
-				}
-			}
-
-			> .block-editor-inner-blocks {
-				.wp-block-button {
-					margin: 0;
-				}
-
-				.wp-block-button__link {
-					width: 100%;
-				}
-
-				@include media( mobile ) {
-					grid-area: button;
-				}
-			}
-
-			p {
-				font-size: 0.7em;
-
-				@include media( mobile ) {
-					grid-area: content;
-				}
-			}
-		}
-
 		&.has-background {
 			padding: 0;
 		}
 	}
 
 	&.subscribe__style-9 {
+		@include jetpack-mailchimp-editor;
+
 		.wp-block-columns {
 			margin: 0;
 			padding: 0;
@@ -1310,58 +1264,16 @@ ul.wp-block-archives,
 			font-size: 0.8em;
 		}
 
-		.wp-block-jetpack-mailchimp {
-			display: grid;
-			gap: 8px;
-
-			@include media( mobile ) {
-				gap: 16px 8px;
-				grid-template-areas:
-					'input button'
-					'content content';
-				grid-template-columns: 1fr auto;
-			}
-
-			* {
-				margin: 0;
-			}
-
-			.wp-block-jetpack-mailchimp_text-input {
-				.components-base-control__field,
-				.components-text-control__input {
-					height: 100%;
-				}
-
-				@include media( mobile ) {
-					grid-area: input;
-				}
-			}
-
-			> .block-editor-inner-blocks {
-				.wp-block-button {
-					margin: 0;
-				}
-
-				.wp-block-button__link {
-					width: 100%;
-				}
-
-				@include media( mobile ) {
-					grid-area: button;
-				}
-			}
-
-			p {
-				font-size: 0.7em;
-
-				@include media( mobile ) {
-					grid-area: content;
-				}
-			}
-		}
-
 		&.has-background {
 			padding: 32px;
+		}
+	}
+
+	&.subscribe__style-10 {
+		@include jetpack-mailchimp-editor( $gap: 0 );
+
+		.wp-block-jetpack-mailchimp > p {
+			display: none;
 		}
 	}
 }
