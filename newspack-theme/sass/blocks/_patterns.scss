@@ -236,7 +236,7 @@
 
 	@include jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
 
-	#wp-block-jetpack-mailchimp_consent-text {
+	#wp-block-jetpack-mailchimp_consent-text { /* stylelint-disable-line */
 		display: none;
 	}
 
