@@ -1,3 +1,19 @@
+## [1.58.3](https://github.com/Automattic/newspack-theme/compare/v1.58.2...v1.58.3) (2022-05-30)
+
+
+### Bug Fixes
+
+* update single post footer print styles ([#1786](https://github.com/Automattic/newspack-theme/issues/1786)) ([1449a66](https://github.com/Automattic/newspack-theme/commit/1449a664b0f30d0de8a36661eda3d008df266906))
+* update skip to content target ([#1787](https://github.com/Automattic/newspack-theme/issues/1787)) ([86ff610](https://github.com/Automattic/newspack-theme/commit/86ff6100a086ae80ee94b24ad46a80c7ae9336c8))
+
+## [1.58.3-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.58.2...v1.58.3-alpha.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* update single post footer print styles ([#1786](https://github.com/Automattic/newspack-theme/issues/1786)) ([1449a66](https://github.com/Automattic/newspack-theme/commit/1449a664b0f30d0de8a36661eda3d008df266906))
+* update skip to content target ([#1787](https://github.com/Automattic/newspack-theme/issues/1787)) ([86ff610](https://github.com/Automattic/newspack-theme/commit/86ff6100a086ae80ee94b24ad46a80c7ae9336c8))
+
 ## [1.58.2](https://github.com/Automattic/newspack-theme/compare/v1.58.1...v1.58.2) (2022-05-25)
 
 
