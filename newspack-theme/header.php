@@ -45,7 +45,7 @@ endif;
 ?>
 
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'newspack' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'newspack' ); ?></a>
 
 	<?php if ( is_active_sidebar( 'header-2' ) ) : ?>
 		<div class="header-widget above-header-widgets">
