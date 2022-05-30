@@ -268,9 +268,6 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 
 		// Add custom theme support - post subtitle
 		add_theme_support( 'post-subtitle' );
-
-		// Add post format support.
-		add_theme_support( 'post-formats', array( 'aside' ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_setup' );
