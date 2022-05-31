@@ -585,6 +585,10 @@ p.has-background {
 	figcaption {
 		text-align: left;
 	}
+
+	amp-video button:hover {
+		background: transparent;
+	}
 }
 
 //! Button
