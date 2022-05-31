@@ -296,7 +296,7 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 	function newspack_entry_footer() {
 
 		// Hide author, post date, category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
+		if ( 'post' === get_post_type() || true ) {
 			/* translators: used between list items; followed by a space. */
 			$tags_list = get_the_tag_list( '', '<span class="sep">' . esc_html__( ',', 'newspack' ) . '&nbsp;</span>' );
 			if ( $tags_list ) {

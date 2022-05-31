@@ -65,6 +65,18 @@ function newspack_get_native_sponsors( $sponsors = [] ) {
 		return false;
 	}
 
+	$scope_override = get_post_meta( get_the_ID(), 'newspack_sponsor_sponsorship_scope', true );
+
+	// Scope override: if post is set to display as native-sponsored, return all sponsors.
+	if ( 'native' === $scope_override ) {
+		return $sponsors;
+	}
+
+	// Scope override: if post is set to display as underwritten, return nothing.
+	if ( 'underwritten'  === $scope_override ) {
+		return [];
+	}
+
 	return array_values(
 		array_filter(
 			$sponsors,
@@ -86,6 +98,18 @@ function newspack_get_underwriter_sponsors( $sponsors = [] ) {
 		return false;
 	}
 
+	$scope_override = get_post_meta( get_the_ID(), 'newspack_sponsor_sponsorship_scope', true );
+
+	// Scope override: if post is set to display as native-sponsored, return nothing.
+	if ( 'native' === $scope_override ) {
+		return [];
+	}
+
+	// Scope override: if post is set to display as underwritten, return all sponsors.
+	if ( 'underwritten'  === $scope_override ) {
+		return $sponsors;
+	}
+
 	return array_values(
 		array_filter(
 			$sponsors,
@@ -93,6 +117,66 @@ function newspack_get_underwriter_sponsors( $sponsors = [] ) {
 				return isset( $sponsor['sponsor_scope'] ) && 'underwritten' === $sponsor['sponsor_scope'];
 			}
 		)
+	);
+}
+
+/**
+ * If at least one native sponsor is set to display both sponsors and authors, show the authors.
+ *
+ * @param array $sponsors Array of sponsors.
+ *
+ * @return boolean True if we should display both sponsors and categories, false if we should display only sponsors.
+ */
+function newspack_display_sponsors_and_authors( $sponsors ) {
+	if ( ! is_array( $sponsors ) ) {
+		return false;
+	}
+
+	// If the post is set to display author, show it.
+	$override = get_post_meta( get_the_ID(), 'newspack_sponsor_native_byline_display', true );
+	if ( 'author' === $override ) {
+		return true;
+	}
+
+	return array_reduce(
+		$sponsors,
+		function( $acc, $sponsor ) {
+			if ( isset( $sponsor['sponsor_byline_display'] ) && 'author' === $sponsor['sponsor_byline_display'] ) {
+				$acc = true;
+			}
+			return $acc;
+		},
+		false
+	);
+}
+
+/**
+ * If at least one native sponsor is set to display both sponsors and categories, show the categories.
+ *
+ * @param array $sponsors Array of sponsors.
+ *
+ * @return boolean True if we should display both sponsors and categories, false if we should display only sponsors.
+ */
+function newspack_display_sponsors_and_categories( $sponsors ) {
+	if ( ! is_array( $sponsors ) ) {
+		return false;
+	}
+
+	// If the post is set to display categories, show them.
+	$override = get_post_meta( get_the_ID(), 'newspack_sponsor_native_category_display', true );
+	if ( 'category' === $override ) {
+		return true;
+	}
+
+	return array_reduce(
+		$sponsors,
+		function( $acc, $sponsor ) {
+			if ( isset( $sponsor['sponsor_category_display'] ) && 'category' === $sponsor['sponsor_category_display'] ) {
+				$acc = true;
+			}
+			return $acc;
+		},
+		false
 	);
 }
 
@@ -388,7 +472,7 @@ function newspack_sponsor_archive_description( $sponsors = null, $id = null, $sc
 /**
  * Outputs the 'underwriters' information for the top of single posts.
  */
-function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $scope = 'native', $type = 'post' ) {
+function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $scope = 'underwritten', $type = 'post' ) {
 	if ( null === $sponsors ) {
 		if ( empty( $id ) ) {
 			return;
@@ -397,29 +481,92 @@ function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $sc
 	}
 
 	if ( ! empty( $sponsors ) ) {
-		foreach ( $sponsors as $sponsor ) {
-			?>
-			<div class="sponsor-uw-info">
-				<span class="logo">
-					<?php if ( ! empty( $sponsor['sponsor_logo'] ) ) : ?>
-						<?php
-						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+		// If the post has overrides set, all underwriters will be shown with those settings.
+		$override_style     = get_post_meta( get_the_ID(), 'newspack_sponsor_underwriter_style', true );
+		$override_placement = get_post_meta( get_the_ID(), 'newspack_sponsor_underwriter_placement', true );
+
+		add_filter(
+			'the_content',
+			function( $content ) use ( $sponsors, $override_style, $override_placement ) {
+				$underwriters_top = array_filter(
+					$sponsors,
+					function( $sponsor ) use ( $override_placement ) {
+						if ( 'top' === $override_placement ) {
+							return true;
 						}
-						echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '" alt="' . esc_attr( $sponsor['sponsor_name'] ) . '">';
-						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '</a>';
+						if ( 'bottom' === $override_placement ) {
+							return false;
 						}
-						?>
-					<?php endif; ?>
-				</span>
-				<div class="info">
-					<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
-				</div>
-			</div>
-		<?php
-		}
+
+						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'top' === $sponsor['sponsor_underwriter_placement'] : true;
+					}
+				);
+				$underwriters_bottom = array_filter(
+					$sponsors,
+					function( $sponsor ) use ( $override_placement ) {
+						if ( 'bottom' === $override_placement ) {
+							return true;
+						}
+						if ( 'top' === $override_placement ) {
+							return false;
+						}
+
+						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'bottom' === $sponsor['sponsor_underwriter_placement'] : false;
+					}
+				);
+
+				$prepend = '';
+				foreach ( $underwriters_top as $underwriter_top ) {
+					$prepend .= newspack_sponsors_get_underwriter_content( $underwriter_top, $override_style );
+				}
+				$append = '';
+				foreach ( $underwriters_bottom as $underwriter_bottom ) {
+					$append .= newspack_sponsors_get_underwriter_content( $underwriter_bottom, $override_style );
+				}
+
+				return $prepend . $content . $append;
+			}
+		);
 	}
+}
+
+function newspack_sponsors_get_underwriter_content( $sponsor, $style = 'standard' ) {
+	ob_start();
+	if (
+		( 'simple' === $style ) ||
+		( 'standard' !== $style && isset( $sponsor['sponsor_underwriter_style'] ) && 'simple' === $sponsor['sponsor_underwriter_style'] )
+	) : ?>
+		<div class="sponsor-uw-info__simple">
+			<?php if ( ! empty( $sponsor['sponsor_url'] ) ) : ?>
+				<a href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>" target="_blank">
+			<?php endif; ?>
+				<em><?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?></em>
+			<?php if ( ! empty( $sponsor['sponsor_url'] ) ) : ?>
+				</a>
+			<?php endif; ?>
+		</div>
+	<?php else : ?>
+		<div class="sponsor-uw-info">
+			<span class="logo">
+				<?php if ( ! empty( $sponsor['sponsor_logo'] ) ) : ?>
+					<?php
+					if ( '' !== $sponsor['sponsor_url'] ) {
+						echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+					}
+					echo '<img src="' . esc_url( $sponsor['sponsor_logo']['src'] ) . '" width="' . esc_attr( $sponsor['sponsor_logo']['img_width'] ) . '" height="' . esc_attr( $sponsor['sponsor_logo']['img_height'] ) . '" alt="' . esc_attr( $sponsor['sponsor_name'] ) . '">';
+					if ( '' !== $sponsor['sponsor_url'] ) {
+						echo '</a>';
+					}
+					?>
+				<?php endif; ?>
+			</span>
+			<div class="info">
+				<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
+			</div>
+		</div>
+	<?php endif;
+
+	return ob_get_clean();
 }
 
 /**
