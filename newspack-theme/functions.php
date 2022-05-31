@@ -728,7 +728,10 @@ function newspack_filter_admin_body_class( $classes ) {
 		$classes .= ' no-sidebar';
 	}
 
-	if ( 'single-feature.php' === newspack_check_current_template() ) {
+	if ( 
+		'single-feature.php' === newspack_check_current_template() 
+		|| 'no-header-footer.php'  === newspack_check_current_template() 
+	) {
 		$classes .= ' newspack-single-column-template';
 	} elseif ( 'single-wide.php' === newspack_check_current_template() ) {
 		$classes .= ' newspack-single-wide-template';

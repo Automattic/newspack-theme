@@ -24,6 +24,7 @@
 
 .post-template-single-feature,
 .page-template-single-feature,
+.page-template-no-header-footer,
 .post-template-single-wide,
 .page-template-single-wide,
 .newspack-front-page {
@@ -95,6 +96,7 @@
 // Single-column layouts
 .post-template-single-feature .main-content,
 .page-template-single-feature .main-content,
+.page-template-no-header-footer .main-content,
 .archive-one-column #main,
 .newspack-front-page.page-template-single-feature .site-main {
 	margin-left: auto;
@@ -132,4 +134,9 @@
 			width: 65%;
 		}
 	}
+}
+
+/* No header footer template */
+.page-template-no-header-footer .site-content {
+	margin-top:  0;
 }
