@@ -591,6 +591,9 @@ function newspack_enqueue_scripts() {
 		newspack_get_post_toggle_post_types()
 	);
 	wp_enqueue_script( 'newspack-post-meta-toggles' );
+
+	// Remove FSE-related Gutenberg blocks.
+	wp_enqueue_script( 'newspack-hide-fse-blocks', get_theme_file_uri( '/js/dist/editor-remove-blocks.js' ), array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), $theme_version, true );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
 
@@ -1128,7 +1131,6 @@ function newspack_dequeue_mediaelement() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_dequeue_mediaelement', 20 );
-
 
 /**
  * SVG Icons class.
