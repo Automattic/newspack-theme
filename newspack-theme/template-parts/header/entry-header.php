@@ -13,6 +13,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	$native_sponsors                 = newspack_get_native_sponsors( $all_sponsors );
 	$underwriter_sponsors            = newspack_get_underwriter_sponsors( $all_sponsors );
 	$display_sponsors_and_categories = newspack_display_sponsors_and_categories( $native_sponsors );
+	$display_sponsors_and_authors    = newspack_display_sponsors_and_authors( $native_sponsors );
 }
 
 // Get page title visibility.
@@ -81,8 +82,7 @@ if ( $sharing_enabled ) :
 			<?php if ( ! empty( $native_sponsors ) ) : ?>
 				<?php
 				// If showing both authors and sponsors, show the byline and date first.
-				$show_author = newspack_display_sponsors_and_authors( $native_sponsors );
-				if ( $show_author ) :
+				if ( $display_sponsors_and_authors ) :
 				?>
 					<div class="entry-meta">
 						<?php
@@ -98,7 +98,7 @@ if ( $sharing_enabled ) :
 							newspack_sponsor_byline( $native_sponsors );
 
 							// If not showing the author, we still need to show the date.
-							if ( ! $show_author ) {
+							if ( ! $display_sponsors_and_authors ) {
 								newspack_posted_on();
 							}
 							do_action( 'newspack_theme_entry_meta' );
