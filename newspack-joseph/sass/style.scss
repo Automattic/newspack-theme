@@ -307,6 +307,11 @@ div.wpnbha .article-section-title,
 
 	span {
 		font-size: $font__size-xs;
+
+		&.author-job-title {
+			margin-left: 0.5em;
+			width: auto;
+		}
 	}
 
 	&::before {

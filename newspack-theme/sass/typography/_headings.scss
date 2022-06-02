@@ -126,9 +126,16 @@ h2 {
 .comments-title,
 .archive .entry-title,
 .search .entry-title,
-.blog .entry-title,
-h3 {
+.blog .entry-title {
 	font-size: $font__size-lg;
+}
+
+h3 {
+	font-size: calc( 1em * 1.3 );
+
+	@include media( tablet ) {
+		font-size: $font__size-lg;
+	}
 }
 
 .site-title,

@@ -46,7 +46,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<div class="author-bio-header">
 						<div>
 							<h2 class="accent-header">
-								<?php echo esc_html( $author->display_name ); ?>
+								<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name ), array( 'span' => array( 'class' => array() ) ) ); ?>
 							</h2>
 
 							<?php if ( ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
@@ -110,8 +110,9 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 
 			<div>
 				<h2 class="accent-header">
-					<?php echo esc_html( get_the_author() ); ?>
+					<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author() ), array( 'span' => array( 'class' => array() ) ) ); ?>
 				</h2>
+
 				<?php if ( true === get_theme_mod( 'show_author_email', false ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
 					<div class="author-meta">
 						<?php if ( true === get_theme_mod( 'show_author_email', false ) ) : ?>
