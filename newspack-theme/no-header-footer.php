@@ -17,10 +17,7 @@
 </head>
 
 <body <?php body_class(); ?> data-amp-auto-lightbox-disable>
-<?php
-
-do_action( 'wp_body_open' );
-?>
+<?php do_action( 'wp_body_open' ); ?>
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'newspack' ); ?></a>
