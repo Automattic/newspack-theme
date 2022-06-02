@@ -107,6 +107,7 @@
 
 @include media( tablet ) {
 	.page-template-single-feature .entry-header,
+	.page-template-blank .entry-header,
 	.archive.archive-one-column .page-header {
 		margin-left: auto;
 		margin-right: auto;
@@ -137,6 +138,17 @@
 }
 
 /* 'Blank' page template */
-.page-template-blank .site-content {
-	margin-top: 0;
+.page-template-blank {
+	&,
+	&.hide-page-title {
+		.site-content {
+			margin-top: 0;
+		}
+	}
+
+	&:not( .hide-page-title ):not( [class*='single-featured-image-'] ) {
+		.entry-header {
+			margin-top: $size__spacing-unit;
+		}
+	}
 }
