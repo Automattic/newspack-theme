@@ -104,7 +104,7 @@
 	}
 }
 
-.page-template-no-header-footer {
+.page-template-blank {
 	.entry .entry-content,
 	[id='pico'] {
 		> *.alignfull:first-child {
@@ -1382,7 +1382,7 @@ $colors: (
 //! 'Feature' alignments
 .post-template-single-feature,
 .page-template-single-feature,
-.page-template-no-header-footer {
+.page-template-blank {
 	.entry .entry-content > *,
 	[id='pico'] > * {
 		&.alignwide {
