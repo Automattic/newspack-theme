@@ -509,27 +509,25 @@ function newspack_custom_colors_css() {
 			color: ' . esc_attr( $colors['primary_contrast'] ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-primary-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-primary-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-color {
 			color: ' . esc_attr( $colors['primary'] ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-primary-variation-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-primary-variation-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-variation-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-variation-color {
 			color: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -30 ) ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-primary-background-color,
+		.edit-post-visual-editor .editor-styles-wrapper .has-primary-background-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-background-color {
 			background-color: ' . esc_attr( $colors['primary'] ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-primary-variation-background-color,
+		.edit-post-visual-editor .editor-styles-wrapper .has-primary-variation-background-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-variation-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-variation-background-color {
 			background-color: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -30 ) ) . ';
@@ -577,7 +575,6 @@ function newspack_custom_colors_css() {
 			color: inherit;
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-color {
@@ -588,20 +585,19 @@ function newspack_custom_colors_css() {
 			border-color: ' . esc_attr( $colors['secondary'] ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-variation-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-variation-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-variation-color {
 			color: ' . esc_attr( newspack_adjust_brightness( $colors['secondary'], -30 ) ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-background-color,
+		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-background-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-background-color {
 			background-color: ' . esc_attr( $colors['secondary'] ) . ';
 		}
 
-		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-variation-background-color,
+		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-variation-background-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-background-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-variation-background-color {
 			background-color: ' . esc_attr( newspack_adjust_brightness( $colors['secondary'], -30 ) ) . ';
