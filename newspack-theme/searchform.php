@@ -5,7 +5,7 @@
  * @package Newspack
  */
 
-$unique_id = wp_unique_id( 'search-form-' );
+$unique_id = newspack_search_id( 'search-form-' );
 ?>
 
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">

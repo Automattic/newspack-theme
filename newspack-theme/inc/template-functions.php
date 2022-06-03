@@ -695,6 +695,16 @@ function newspack_should_display_updated_date() {
 }
 
 /**
+ * Create a predictable unique ID for the search forms.
+ *
+ * @param string $prefix Text to prepend the ID with.
+ */
+function newspack_search_id( $prefix = '' ) {
+	static $id_counter = 0;
+	return $prefix . ( string ) ++$id_counter;
+}
+
+/**
  * Check whether there's a Post Summary, and return it.
  */
 function newspack_has_post_summary() {
