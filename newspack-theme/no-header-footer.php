@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank template
+ * Template Name: No header or footer
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
