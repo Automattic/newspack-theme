@@ -128,26 +128,10 @@ function newspack_get_underwriter_sponsors( $sponsors = [] ) {
  * @return boolean True if we should display both sponsors and categories, false if we should display only sponsors.
  */
 function newspack_display_sponsors_and_authors( $sponsors ) {
-	if ( ! is_array( $sponsors ) ) {
-		return false;
+	if ( function_exists( '\Newspack_Sponsors\newspack_display_sponsors_and_authors' ) ) {
+		return \Newspack_Sponsors\newspack_display_sponsors_and_authors( $sponsors );
 	}
-
-	// If the post is set to display author, show it.
-	$override = get_post_meta( get_the_ID(), 'newspack_sponsor_native_byline_display', true );
-	if ( 'author' === $override ) {
-		return true;
-	}
-
-	return array_reduce(
-		$sponsors,
-		function( $acc, $sponsor ) {
-			if ( isset( $sponsor['sponsor_byline_display'] ) && 'author' === $sponsor['sponsor_byline_display'] ) {
-				$acc = true;
-			}
-			return $acc;
-		},
-		false
-	);
+	return false;
 }
 
 /**
@@ -158,26 +142,10 @@ function newspack_display_sponsors_and_authors( $sponsors ) {
  * @return boolean True if we should display both sponsors and categories, false if we should display only sponsors.
  */
 function newspack_display_sponsors_and_categories( $sponsors ) {
-	if ( ! is_array( $sponsors ) ) {
-		return false;
+	if ( function_exists( '\Newspack_Sponsors\newspack_display_sponsors_and_categories' ) ) {
+		return \Newspack_Sponsors\newspack_display_sponsors_and_categories( $sponsors );
 	}
-
-	// If the post is set to display categories, show them.
-	$override = get_post_meta( get_the_ID(), 'newspack_sponsor_native_category_display', true );
-	if ( 'category' === $override ) {
-		return true;
-	}
-
-	return array_reduce(
-		$sponsors,
-		function( $acc, $sponsor ) {
-			if ( isset( $sponsor['sponsor_category_display'] ) && 'category' === $sponsor['sponsor_category_display'] ) {
-				$acc = true;
-			}
-			return $acc;
-		},
-		false
-	);
+	return false;
 }
 
 /**
