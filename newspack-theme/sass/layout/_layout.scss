@@ -24,7 +24,7 @@
 
 .post-template-single-feature,
 .page-template-single-feature,
-.page-template-blank,
+.page-template-no-header-footer,
 .post-template-single-wide,
 .page-template-single-wide,
 .newspack-front-page {
@@ -96,7 +96,7 @@
 // Single-column layouts
 .post-template-single-feature .main-content,
 .page-template-single-feature .main-content,
-.page-template-blank .main-content,
+.page-template-no-header-footer .main-content,
 .archive-one-column #main,
 .newspack-front-page.page-template-single-feature .site-main {
 	margin-left: auto;
@@ -107,7 +107,7 @@
 
 @include media( tablet ) {
 	.page-template-single-feature .entry-header,
-	.page-template-blank .entry-header,
+	.page-template-no-header-footer .entry-header,
 	.archive.archive-one-column .page-header {
 		margin-left: auto;
 		margin-right: auto;
@@ -137,8 +137,8 @@
 	}
 }
 
-/* 'Blank' page template */
-.page-template-blank {
+/* 'No Header or Fotoer' page template */
+.page-template-no-header-footer {
 	&,
 	&.hide-page-title {
 		.site-content {
