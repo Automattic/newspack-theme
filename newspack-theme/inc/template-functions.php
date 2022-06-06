@@ -412,6 +412,25 @@ function newspack_get_discussion_data() {
 }
 
 /**
+ * Get and store current menu's ID so it can be shared across functions.
+ *
+ * @return string Current menu item ID.
+ */
+class Newspack_Current_Menu_ID {
+	private static $currentMenuId = '';
+
+	// Sets the current Menu ID value in newspack_add_dropdown_icons().
+	public static function set_current_ID( $value ) {
+		self::$currentMenuId = $value;
+	}
+
+	// Gets the current Menu ID for Newspack_Custom_Submenu_Walker().
+	public static function get_current_ID() {
+		return self::$currentMenuId;
+	}
+}
+
+/**
  * Add a dropdown icon to top-level menu items.
  *
  * @param string $output Nav menu item start element.
@@ -419,7 +438,6 @@ function newspack_get_discussion_data() {
  * @param int    $depth  Depth.
  * @param object $args   Nav menu args.
  * @return string Nav menu item start element.
- * Add a dropdown icon to top-level menu items
  */
 function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 
@@ -440,9 +458,8 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 			$icon
 		);
 
-		// Get the current menu items ID and store it in a global variable so it can be added to the submenu.
-		global $menu_parent_id;
-		$menu_parent_id = $item->ID;
+		// Set the current menu ID so it can be accessed by other functions.
+		Newspack_Current_Menu_ID::set_current_ID( $item->ID );
 	}
 
 	return $output;
@@ -459,7 +476,9 @@ add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
  */
 class Newspack_Custom_Submenu_Walker extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		global $menu_parent_id;
+
+		// Get the current stored menu ID.
+		$menu_parent_id = Newspack_Current_Menu_ID::get_current_ID();
 
 		$submenu_ID = "submenu-" . esc_attr( $menu_parent_id );
 		$indent = str_repeat("\t", $depth);
