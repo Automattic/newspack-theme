@@ -156,6 +156,7 @@ function newspack_custom_colors_css() {
 			input[type="button"],
 			input[type="reset"],
 			input[type="submit"],
+			input[type="checkbox"]:checked,
 			.has-secondary-background-color,
 			*[class^="wp-block-"].has-secondary-background-color,
 			*[class^="wp-block-"] .has-secondary-background-color,
@@ -173,6 +174,10 @@ function newspack_custom_colors_css() {
 			input[type="reset"],
 			input[type="submit"] {
 				color: ' . esc_html( $secondary_color_contrast ) . ';
+			}
+
+			input[type="checkbox"]::before {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' width=\'24\' height=\'24\'%3E%3Cpath d=\'M16.7 7.1l-6.3 8.5-3.3-2.5-.9 1.2 4.5 3.4L17.9 8z\' fill=\'' . esc_html( $secondary_color_contrast ) . '\'%3E%3C/path%3E%3C/svg%3E");
 			}
 
 			/* Set secondary color */
@@ -362,7 +367,7 @@ function newspack_custom_colors_css() {
 					color: ' . esc_html( $primary_color_contrast ) . ';
 				}
 				.accent-header,
-				#secondary .widgettitle, 
+				#secondary .widgettitle,
 				.article-section-title,
 				.entry .entry-footer a:hover {
 					color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
