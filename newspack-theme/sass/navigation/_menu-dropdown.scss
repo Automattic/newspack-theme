@@ -23,7 +23,7 @@
 		}
 
 		&:focus {
-			outline: 1px solid transparent;
+			outline: 1px dotted currentColor;
 			outline-offset: -4px;
 		}
 
@@ -45,6 +45,7 @@
 
 	.submenu-expand {
 		display: inline-block;
+		pointer-events: none;
 	}
 
 	.sub-menu {
@@ -102,6 +103,10 @@
 					position: relative;
 					top: -0.2em;
 				}
+
+				&.open-dropdown svg {
+					transform: rotate( 180deg );
+				}
 			}
 		}
 	}
@@ -135,6 +140,7 @@
 
 	.sub-menu {
 		color: $color__background-body;
+		display: none;
 		position: absolute;
 		opacity: 0;
 		transition: opacity 0.2s;
@@ -156,40 +162,21 @@
 		}
 
 		.submenu-expand {
-			right: #{0.25 * $size__spacing-unit};
+			right: -5px;
 			top: #{0.65 * $size__spacing-unit};
 			transform: rotate( -90deg );
+
+			svg {
+				margin-top: -10px;
+			}
 		}
 	}
 
 	/*
 	 * Sub-menu styles
-	 *
-	 * :focus-within needs its own selector so other similar
-	 * selectors don’t get ignored if a browser doesn’t recognize it
 	 */
-	.menu-item-has-children:not( .off-canvas ):focus-within > .sub-menu {
-		display: block;
-		margin-top: 0;
-		opacity: 1;
-		position: absolute;
-		left: 0;
-		right: auto;
-		top: 100%;
-		bottom: auto;
-		height: auto;
-		transform: none;
-		width: #{12.5 * $size__spacing-unit};
-	}
-
-	.sub-menu .menu-item-has-children:not( .off-canvas ):focus-within > .sub-menu {
-		left: 100%;
-		top: 0;
-	}
-
-	.menu-item-has-children:not( .off-canvas ):hover > .sub-menu,
-	.menu-item-has-children:not( .off-canvas ):focus > .sub-menu,
-	.menu-item-has-children.is-focused:not( .off-canvas ) > .sub-menu {
+	.menu-item-has-children:hover > .sub-menu,
+	.menu-item-has-children > .submenu-expand.open-dropdown + .sub-menu {
 		display: block;
 		float: none;
 		margin-top: 0;
@@ -204,9 +191,9 @@
 		width: #{12.5 * $size__spacing-unit};
 	}
 
-	.sub-menu .menu-item-has-children:not( .off-canvas ):hover > .sub-menu,
-	.sub-menu .menu-item-has-children:not( .off-canvas ):focus > .sub-menu,
-	.sub-menu .menu-item-has-children.is-focused:not( .off-canvas ) > .sub-menu {
+	.sub-menu .menu-item-has-children:hover > .sub-menu,
+	.sub-menu .menu-item-has-children > .submenu-expand.open-dropdown + .sub-menu {
+		display: block;
 		left: 100%;
 		top: 0;
 	}
