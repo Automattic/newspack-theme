@@ -59,20 +59,21 @@ input[type='checkbox'] {
 	border: solid 1px $color__border;
 	border-radius: 2px;
 	color: white;
-	display: grid;
+	cursor: pointer;
+	display: inline-grid;
 	font: inherit;
-	height: 24px !important;
+	height: 20px !important;
 	margin: 0;
 	place-content: center;
-	width: 24px !important;
+	width: 20px !important;
 
 	&::before {
 		background: transparent
 			url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath d='M16.7 7.1l-6.3 8.5-3.3-2.5-.9 1.2 4.5 3.4L17.9 8z' fill='white'%3E%3C/path%3E%3C/svg%3E" )
 			0 0 no-repeat;
 		content: '';
+		display: none;
 		height: 24px;
-		opacity: 0;
 		width: 24px;
 	}
 
@@ -81,7 +82,7 @@ input[type='checkbox'] {
 		border-color: transparent;
 
 		&::before {
-			opacity: 1;
+			display: block;
 		}
 	}
 
