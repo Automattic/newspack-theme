@@ -565,8 +565,8 @@ function newspack_get_color_contrast( $hex ) {
  */
 function newspack_color_with_contrast( $color ) {
 	$contrast = newspack_get_color_contrast( $color );
-	if ( '#000' === $contrast ) {
-		return '#5a5a5a';
+	if ( 'black' === $contrast ) {
+		return 'dimgray';
 	}
 	return $color;
 }
