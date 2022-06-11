@@ -51,3 +51,49 @@ form {
 		margin: $size__spacing-unit 0;
 	}
 }
+
+input[type='checkbox'] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: white;
+	border: solid 1px $color__border;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	display: inline-grid;
+	font: inherit;
+	height: 20px !important;
+	margin: 0;
+	place-content: center;
+	width: 20px !important;
+
+	&::before {
+		background: transparent
+			url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath d='M16.7 7.1l-6.3 8.5-3.3-2.5-.9 1.2 4.5 3.4L17.9 8z' fill='white'%3E%3C/path%3E%3C/svg%3E" )
+			0 0 no-repeat;
+		content: '';
+		display: block;
+		height: 24px;
+		opacity: 0;
+		width: 24px;
+	}
+
+	&:checked {
+		background: $color__background-button;
+		border-color: transparent;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&:focus {
+		outline: 1.5px solid $color__background-button;
+		outline-offset: 1px;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.75;
+	}
+}

@@ -223,7 +223,7 @@ function newspack_body_classes( $classes ) {
 			$classes[] = 'ad-above-footer';
 		}
 	}
-	
+
 	// Add a class for the footer logo size.
 	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'medium' );
 	if ( 'medium' !== $footer_logo_size ) {
@@ -575,10 +575,10 @@ function newspack_get_color_contrast( $hex ) {
 	}
 	if ( $contrast_ratio > 5 ) {
 		// If contrast is more than 5, return black color
-		return '#000';
+		return 'black';
 	} else {
 		// if not, return white color.
-		return '#fff';
+		return 'white';
 	}
 }
 
@@ -587,8 +587,8 @@ function newspack_get_color_contrast( $hex ) {
  */
 function newspack_color_with_contrast( $color ) {
 	$contrast = newspack_get_color_contrast( $color );
-	if ( '#000' === $contrast ) {
-		return '#5a5a5a';
+	if ( 'black' === $contrast ) {
+		return 'dimgray';
 	}
 	return $color;
 }
