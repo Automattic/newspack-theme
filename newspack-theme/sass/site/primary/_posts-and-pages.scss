@@ -488,6 +488,7 @@ div.sharedaddy .sd-social h3.sd-title,
 			color: $color__text-light;
 			display: block;
 			font-size: $font__size-sm;
+			margin: 0.25em 0 0 0;
 			text-transform: none;
 
 			@include media( mobile ) {
@@ -859,15 +860,6 @@ div.sharedaddy .sd-social h3.sd-title,
 		margin: #{0.25 * $size__spacing-unit} auto 0;
 		max-width: 90vw;
 		width: 1200px;
-	}
-}
-
-/* Aside */
-.single-format-aside {
-	.author-avatar,
-	.byline,
-	.author-bio {
-		display: none;
 	}
 }
 

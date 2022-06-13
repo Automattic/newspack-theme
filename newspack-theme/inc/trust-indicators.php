@@ -114,7 +114,6 @@ function newspack_trust_indicators_output_author_info() {
 }
 add_action( 'newspack_theme_below_archive_title', 'newspack_trust_indicators_output_author_info' );
 
-
 /**
  * Adds author title to the_archive_title().
  */
@@ -125,10 +124,16 @@ function newspack_trust_indicators_output_author_job_title( $title ) {
 		if ( $role ) {
 			$title .= '<span class="author-job-title">' . $role . '</span>';
 		}
+	} else if ( is_single() ) {
+		$role = get_user_meta( get_the_author_meta( 'ID' ), 'title', true );
+		if ( $role ) {
+			$title .= '<span class="author-job-title">' . $role . '</span>';
+		}
 	}
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_job_title' );
+add_filter( 'newspack_author_bio_name', 'newspack_trust_indicators_output_author_job_title' );
 
 /**
  * Output location and expertise info on author archive pages.

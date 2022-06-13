@@ -1,3 +1,5 @@
+@import '../mixins/mixins-master';
+
 /* Subscribe Style 7 */
 
 .newspack-pattern.subscribe__style-7 {
@@ -132,56 +134,7 @@
 		font-size: 0.8em;
 	}
 
-	.wp-block-jetpack-mailchimp {
-		form {
-			display: grid;
-			gap: 8px;
-
-			@include media( mobile ) {
-				gap: 16px 8px;
-				grid-template-areas:
-					'input button'
-					'content content';
-				grid-template-columns: 1fr auto;
-			}
-
-			> * {
-				margin: 0;
-
-				@include media( mobile ) {
-					grid-area: content;
-				}
-			}
-
-			> p:first-of-type {
-				@include media( mobile ) {
-					grid-area: input;
-				}
-			}
-
-			> .wp-block-button {
-				@include media( mobile ) {
-					grid-area: button;
-				}
-
-				.wp-block-button__link {
-					width: 100%;
-				}
-
-				+ p {
-					font-size: 0.7em;
-				}
-			}
-		}
-
-		.wp-block-jetpack-mailchimp_notification {
-			margin: 16px 0 0;
-
-			&.wp-block-jetpack-mailchimp__is-amp {
-				margin: 0;
-			}
-		}
-	}
+	@include jetpack-mailchimp;
 
 	&.has-background {
 		padding: 0;
@@ -245,56 +198,7 @@
 		font-size: 0.8em;
 	}
 
-	.wp-block-jetpack-mailchimp {
-		form {
-			display: grid;
-			gap: 8px;
-
-			@include media( mobile ) {
-				gap: 16px 8px;
-				grid-template-areas:
-					'input button'
-					'content content';
-				grid-template-columns: 1fr auto;
-			}
-
-			> * {
-				margin: 0;
-
-				@include media( mobile ) {
-					grid-area: content;
-				}
-			}
-
-			> p:first-of-type {
-				@include media( mobile ) {
-					grid-area: input;
-				}
-			}
-
-			> .wp-block-button {
-				@include media( mobile ) {
-					grid-area: button;
-				}
-
-				.wp-block-button__link {
-					width: 100%;
-				}
-
-				+ p {
-					font-size: 0.7em;
-				}
-			}
-		}
-
-		.wp-block-jetpack-mailchimp_notification {
-			margin: 16px 0 0;
-
-			&.wp-block-jetpack-mailchimp__is-amp {
-				margin: 0;
-			}
-		}
-	}
+	@include jetpack-mailchimp;
 
 	&.has-background {
 		padding: 32px;
@@ -319,6 +223,36 @@
 
 		+ p:empty {
 			display: none;
+		}
+	}
+}
+
+/* Subscribe Style 10 */
+
+.newspack-pattern.subscribe__style-10 {
+	margin: 0 auto;
+	max-width: 90vw;
+	width: 1200px;
+
+	@include jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
+
+	#wp-block-jetpack-mailchimp_consent-text { /* stylelint-disable-line */
+		display: none;
+	}
+
+	.wp-block-column:first-of-type {
+		p {
+			padding-bottom: calc( 1px + 0.36rem );
+			padding-top: calc( 1px + 0.36rem );
+		}
+	}
+
+	.wp-block-jetpack-button {
+		align-self: stretch;
+
+		button.wp-block-button__link {
+			line-height: 1;
+			height: 100%;
 		}
 	}
 }
