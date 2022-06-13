@@ -1,3 +1,4 @@
+@use 'sass:meta';
 html {
 	box-sizing: border-box;
 }
@@ -27,7 +28,7 @@ hr {
 	height: 2px;
 }
 
-@import 'lists';
+@include meta.load-css( 'lists' );
 
 img {
 	height: auto;
@@ -49,4 +50,4 @@ blockquote {
 	}
 }
 
-@import 'tables';
+@include meta.load-css( 'tables' );

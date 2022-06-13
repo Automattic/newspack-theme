@@ -10,6 +10,7 @@
 		> * {
 			background-color: #eee;
 			margin-right: #{0.5 * $size__spacing-unit};
+			/* stylelint-disable-next-line */
 			padding: #{0.5 * $size__spacing-unit} #{0.75 * $size__spacing-unit} #{0.25 *
 				$size__spacing-unit};
 
