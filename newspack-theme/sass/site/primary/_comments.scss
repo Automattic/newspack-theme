@@ -235,7 +235,7 @@
 
 			svg {
 				display: inline-block;
-				fill: currentColor;
+				fill: currentcolor;
 				height: inherit;
 				transform: scale( 0.875 );
 				width: inherit;
@@ -365,7 +365,7 @@
 
 		.svg-icon {
 			vertical-align: middle;
-			fill: currentColor;
+			fill: currentcolor;
 			transform: scale( 0.6 ) scaleX( -1 ) translateY( -0.1em );
 			margin-left: -#{0.25 * $size__spacing-unit}; // Align icon with avatars above.
 		}

@@ -1,4 +1,5 @@
-@import '../mixins/mixins-master';
+@use '../mixins/mixins-master';
+@use '../mixins/utilities';
 
 /* Subscribe Style 7 */
 
@@ -6,14 +7,14 @@
 	.wp-block-media-text {
 		display: block;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			display: grid;
 		}
 
 		&__media {
 			display: none;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				display: block;
 			}
 		}
@@ -23,7 +24,7 @@
 			gap: 16px;
 			padding: 36px;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				padding: 64px;
 			}
 
@@ -96,7 +97,7 @@
 		display: none;
 		margin-bottom: 0;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			display: block;
 		}
 
@@ -124,7 +125,7 @@
 		.wp-block-group__inner-container {
 			padding: 36px;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				padding: 64px;
 			}
 		}
@@ -134,7 +135,7 @@
 		font-size: 0.8em;
 	}
 
-	@include jetpack-mailchimp;
+	@include mixins-master.jetpack-mailchimp;
 
 	&.has-background {
 		padding: 0;
@@ -149,7 +150,7 @@
 			margin: 12px 0 0;
 			padding: 0 4px 4px;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				margin: -48px 0 0;
 				padding: 0 32px 32px;
 			}
@@ -173,7 +174,7 @@
 		padding: 0;
 
 		&:not( .is-not-stacked-on-mobile ) {
-			@include media( tabletonly ) {
+			@include utilities.media( tabletonly ) {
 				gap: 16px;
 			}
 		}
@@ -198,7 +199,7 @@
 		font-size: 0.8em;
 	}
 
-	@include jetpack-mailchimp;
+	@include mixins-master.jetpack-mailchimp;
 
 	&.has-background {
 		padding: 32px;
@@ -234,9 +235,10 @@
 	max-width: 90vw;
 	width: 1200px;
 
-	@include jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
+	@include mixins-master.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
 
-	#wp-block-jetpack-mailchimp_consent-text { /* stylelint-disable-line */
+	/* stylelint-disable-next-line */
+	#wp-block-jetpack-mailchimp_consent-text {
 		display: none;
 	}
 

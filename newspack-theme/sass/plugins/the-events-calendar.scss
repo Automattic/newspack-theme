@@ -3,7 +3,8 @@
 // CSS file is generated in /tribe-events/tribe-events.css
 // See: https://theeventscalendar.com/knowledgebase/k/customizing-css/
 
-@import '../mixins/mixins-master';
+@use '../mixins/mixins-master';
+@use '../mixins/utilities';
 
 //! Layout tweaks
 main#tribe-events-pg-template,
@@ -20,7 +21,7 @@ main#tribe-events-pg-template {
 	.site-content {
 		margin-top: 0;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			margin-top: $size__spacing-unit;
 		}
 	}
@@ -78,7 +79,7 @@ main#tribe-events-pg-template {
 	width: 1200px;
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.tec-sidebar .tec-wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -103,7 +104,7 @@ main#tribe-events-pg-template {
 	}
 }
 
-@include media( desktop ) {
+@include utilities.media( desktop ) {
 	.tec-wrapper #secondary {
 		width: calc( 35% - #{3 * $size__spacing-unit} );
 	}
