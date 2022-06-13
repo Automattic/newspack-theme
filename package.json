@@ -49,8 +49,8 @@
     "postcss-scss": "^4.0.4",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^3.5.0",
-    "sass": "^1.52.1",
-    "semantic-release": "^19.0.2",
+    "sass": "^1.52.3",
+    "semantic-release": "^19.0.3",
     "semantic-release-version-bump": "^1.4.1",
     "stylelint": "^14.9.1"
   }
