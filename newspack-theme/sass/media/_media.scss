@@ -1,3 +1,4 @@
+@use 'sass:meta';
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -31,15 +32,15 @@ iframe {
 
 svg {
 	transition: fill $icon_transition ease-in-out;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-@import 'captions';
+@include meta.load-css( 'captions' );
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-@import 'galleries';
+@include meta.load-css( 'galleries' );

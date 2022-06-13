@@ -1,5 +1,9 @@
-@import '../variables-site/variables-site';
-@import '../mixins/mixins-master';
+@use '../variables-site/variables-site';
+@use '../mixins/mixins-master';
+@use '../mixins/utilities';
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
 
 // Category replacement - tag
 .sponsor-label {
@@ -10,9 +14,9 @@
 	button {
 		align-items: center;
 		background: transparent;
-		color: $color__text-light;
+		color: colors.$color__text-light;
 		display: inline-flex;
-		margin-left: #{0.25 * $size__spacing-unit};
+		margin-left: #{0.25 * structure.$size__spacing-unit};
 		padding: 0;
 		position: relative;
 
@@ -40,8 +44,8 @@
 .sponsor-label,
 amp-script .sponsor-label {
 	.flag {
-		background: $color__highlight;
-		color: $color__text-main;
+		background: colors.$color__highlight;
+		color: colors.$color__text-main;
 		line-height: 1;
 		padding: 0.3em 0.5em;
 		text-transform: uppercase;
@@ -57,9 +61,9 @@ amp-script .sponsor-label {
 	font-weight: normal;
 	left: -9999em;
 	letter-spacing: 0;
-	line-height: $font__line-height-body;
+	line-height: fonts.$font__line-height-body;
 	opacity: 0;
-	padding: #{0.75 * $size__spacing-unit} $size__spacing-unit;
+	padding: #{0.75 * structure.$size__spacing-unit} structure.$size__spacing-unit;
 	position: absolute;
 	transition: opacity 0.2s;
 	text-transform: none;
@@ -92,13 +96,13 @@ amp-script .sponsor-label {
 	align-items: center;
 	display: inline-flex;
 	line-height: 1;
-	@include media( mobile ) {
-		border-right: 1px solid $color__border;
-		margin: 0 #{0.75 * $size__spacing-unit} 0 0;
+	@include utilities.media( mobile ) {
+		border-right: 1px solid colors.$color__border;
+		margin: 0 #{0.75 * structure.$size__spacing-unit} 0 0;
 	}
 
 	> * {
-		margin-right: #{0.75 * $size__spacing-unit};
+		margin-right: #{0.75 * structure.$size__spacing-unit};
 	}
 }
 
@@ -125,7 +129,7 @@ amp-script .sponsor-label {
 	.sponsor-logos {
 		margin-right: 0;
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			border: 0;
 			padding-right: 0;
 		}
@@ -191,7 +195,7 @@ amp-script .sponsor-label {
 }
 
 .sponsor-archive {
-	@include media( mobile ) {
+	@include utilities.media( mobile ) {
 		display: flex;
 		.entry-meta,
 		.author {
@@ -199,23 +203,23 @@ amp-script .sponsor-label {
 		}
 	}
 
-	@include media( desktop ) {
+	@include utilities.media( desktop ) {
 		align-items: center;
 	}
 
 	.details {
 		align-items: center;
 		display: flex;
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			display: block;
 			flex-shrink: 0;
-			margin-right: #{1.5 * $size__spacing-unit};
+			margin-right: #{1.5 * structure.$size__spacing-unit};
 		}
 
 		img {
-			margin: 0 $size__spacing-unit $size__spacing-unit 0;
+			margin: 0 structure.$size__spacing-unit structure.$size__spacing-unit 0;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				margin: 0;
 			}
 		}
@@ -233,7 +237,7 @@ amp-script .sponsor-label {
 	}
 
 	+ .sponsor-archive {
-		margin-top: #{1.5 * $size__spacing-unit};
+		margin-top: #{1.5 * structure.$size__spacing-unit};
 	}
 }
 
@@ -247,16 +251,16 @@ amp-script .sponsor-label {
 // Underwritten content
 .sponsor-uw-info {
 	align-items: center;
-	background: $color__background-pre;
-	border: 1px solid $color__border;
-	border-left: 4px solid $color__primary;
+	background: colors.$color__background-pre;
+	border: 1px solid colors.$color__border;
+	border-left: 4px solid colors.$color__primary;
 	display: flex;
 	font-size: 80%;
-	padding: $size__spacing-unit;
+	padding: structure.$size__spacing-unit;
 
 	.logo {
 		flex-shrink: 0;
-		margin-right: #{1.5 * $size__spacing-unit};
+		margin-right: #{1.5 * structure.$size__spacing-unit};
 	}
 
 	.info {
@@ -289,7 +293,7 @@ amp-script .wp-block-newspack-blocks-carousel {
 .wpnbha,
 amp-script .wpnbha {
 	.sponsor-logos {
-		margin: #{0.125 * $size__spacing-unit} 0 #{0.25 * $size__spacing-unit};
+		margin: #{0.125 * structure.$size__spacing-unit} 0 #{0.25 * structure.$size__spacing-unit};
 		width: 100%;
 	}
 }

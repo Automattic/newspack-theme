@@ -1,25 +1,25 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-@import 'links';
+@use 'links';
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-@import 'menu-dropdown';
-@import 'menu-main-navigation';
-@import 'menu-secondary-navigation';
-@import 'menu-tertiary-navigation';
-@import 'menu-highlight-navigation';
-@import 'menu-social-navigation';
-@import 'menu-mobile-navigation';
+@use 'menu-dropdown';
+@use 'menu-main-navigation';
+@use 'menu-secondary-navigation';
+@use 'menu-tertiary-navigation';
+@use 'menu-highlight-navigation';
+@use 'menu-social-navigation';
+@use 'menu-mobile-navigation';
 
 /*--------------------------------------------------------------
 ## Next / Previous
 --------------------------------------------------------------*/
-@import 'next-previous';
+@use 'next-previous';
 
 /*--------------------------------------------------------------
 ## Infinite Scroll
 --------------------------------------------------------------*/
-@import 'infinite-scroll';
+@use 'infinite-scroll';

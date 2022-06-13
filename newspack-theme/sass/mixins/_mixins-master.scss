@@ -1,3 +1,7 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'utilities';
+
 // Rem output with px fallback
 @mixin font-size( $sizeValue: 1 ) {
 	font-size: ( $sizeValue * 16 ) * 1px;
@@ -25,7 +29,8 @@
 
 // Column width with margin
 @mixin column-width( $numberColumns: 3 ) {
-	width: map-get( $columns, $numberColumns ) -
+	/* stylelint-disable-next-line */
+	width: map.get( $columns, $numberColumns ) -
 		( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
@@ -88,11 +93,11 @@
 
 /* Calculates maximum width for post content */
 @mixin postContentMaxWidth() {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		max-width: $size__site-tablet-content;
 	}
 
-	@include media( desktop ) {
+	@include utilities.media( desktop ) {
 		max-width: $size__site-desktop-content;
 	}
 }
@@ -118,7 +123,7 @@
 			display: grid;
 			gap: 8px;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				align-items: center;
 				gap: $gap;
 				grid-template-areas:
@@ -130,19 +135,19 @@
 			> * {
 				margin: 0;
 
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: content;
 				}
 			}
 
 			> p:first-of-type {
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: input;
 				}
 			}
 
 			> .wp-block-button {
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: button;
 				}
 
@@ -171,7 +176,7 @@
 		display: grid;
 		gap: 8px;
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			gap: $gap;
 			grid-template-areas:
 				'input button'
@@ -194,7 +199,7 @@
 				border-radius: 0;
 			}
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: input;
 			}
 		}
@@ -208,7 +213,7 @@
 				width: 100%;
 			}
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: button;
 			}
 		}
@@ -216,11 +221,11 @@
 		p {
 			font-size: 0.7em;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: content;
 			}
 		}
 	}
 }
 
-@import 'utilities';
+@include meta.load-css( 'utilities' );
