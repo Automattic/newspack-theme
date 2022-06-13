@@ -26,8 +26,8 @@
     "lint": "npm run lint:scss && npm run lint:js",
     "lint:js": "eslint ./newspack-*/**/*.js",
     "lint:js:staged": "eslint --ext .js,.jsx",
-    "lint:scss": "stylelint '**/*.scss' --syntax scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
-    "lint:scss:staged": "stylelint --syntax scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
+    "lint:scss": "stylelint '**/*.scss' --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
+    "lint:scss:staged": "stylelint --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
     "format:js": "prettier './newspack-*/**/*.{js,jsx}' --write",
     "format:scss": "prettier --write \"**/*.scss\"",
     "release:archive": "mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store",
@@ -44,13 +44,14 @@
     "eslint": "^7.32.0",
     "fs-extra": "^10.1.0",
     "lint-staged": "^12.4.2",
-    "newspack-scripts": "^3.3.2",
+    "newspack-scripts": "^3.4.0-alpha.1",
     "npm-run-all": "^4.1.5",
+    "postcss-scss": "^4.0.4",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^3.5.0",
     "sass": "^1.53.0",
     "semantic-release": "^19.0.3",
     "semantic-release-version-bump": "^1.4.1",
-    "stylelint": "^13.3.1"
+    "stylelint": "^14.9.1"
   }
 }
