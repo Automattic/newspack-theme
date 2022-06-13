@@ -15,7 +15,7 @@ jobs:
       - checkout_code
       - run:
           name: Install dependencies
-          command: npm ci
+          command: npm ci && cat node_modules/prettier/package.json | grep version
       - persist_to_workspace:
           root: ~/
           paths:
