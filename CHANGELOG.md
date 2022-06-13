@@ -1,3 +1,19 @@
+# [1.59.0](https://github.com/Automattic/newspack-theme/compare/v1.58.3...v1.59.0) (2022-06-13)
+
+
+### Bug Fixes
+
+* make third level headings a unique size on mobile ([#1816](https://github.com/Automattic/newspack-theme/issues/1816)) ([265a8a7](https://github.com/Automattic/newspack-theme/commit/265a8a7044a313b9ab8f945b34c332c830b85bc8))
+* remove custom column block styles ([#1801](https://github.com/Automattic/newspack-theme/issues/1801)) ([56b9e84](https://github.com/Automattic/newspack-theme/commit/56b9e84bdd729ebfeec9336da6add243680a6c9a))
+* remove incorrect hover effect from video block ([#1815](https://github.com/Automattic/newspack-theme/issues/1815)) ([dfa36c9](https://github.com/Automattic/newspack-theme/commit/dfa36c95587936b7673be59d1a191174c4d51825))
+
+
+### Features
+
+* add custom style to subscribe pattern 10 ([#1818](https://github.com/Automattic/newspack-theme/issues/1818)) ([da861bb](https://github.com/Automattic/newspack-theme/commit/da861bbffb58ebb451fdd12f0057038d0c848ded))
+* add Trust Indicators job title to author bio ([#1806](https://github.com/Automattic/newspack-theme/issues/1806)) ([8af5709](https://github.com/Automattic/newspack-theme/commit/8af5709e907c26fc0260439c249aa97496c61271))
+* remove Aside post format support ([#1810](https://github.com/Automattic/newspack-theme/issues/1810)) ([7a9b213](https://github.com/Automattic/newspack-theme/commit/7a9b213d5f799c1672b62a3d8b2c0e82c7b54dda))
+
 # [1.59.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.58.3...v1.59.0-alpha.1) (2022-06-02)
 
 
