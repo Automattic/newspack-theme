@@ -1,3 +1,4 @@
+@use 'sass:color';
 /* Headers */
 
 .accent-header,
@@ -23,7 +24,7 @@
 
 .nav3 {
 	a {
-		background-color: lighten( $color__text-light, 45% );
+		background-color: color.adjust( $color__text-light, $lightness: 45% );
 		color: $color__text-main;
 		@include button-transition;
 		border-radius: 5px;
@@ -42,7 +43,7 @@
 
 .h-sb .site-header .nav3 {
 	a {
-		background-color: darken( $color__primary, 10% );
+		background-color: color.adjust( $color__primary, $lightness: -10% );
 		color: #fff;
 	}
 
@@ -71,7 +72,7 @@
 	}
 
 	.menu-highlight a {
-		background-color: darken( $color__primary, 10% );
+		background-color: color.adjust( $color__primary, $lightness: -10% );
 	}
 }
 

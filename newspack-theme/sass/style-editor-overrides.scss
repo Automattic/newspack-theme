@@ -6,12 +6,15 @@
 
 /** === Includes === */
 
-@import 'variables-site/variables-site';
-@import 'mixins/mixins-master';
+@use 'variables-site/variables-site';
+@use 'mixins/mixins-master';
+@use 'mixins/utilities';
+@use 'variables-site/fonts';
+@use 'variables-site/structure';
 
 /** === Default Template === */
 
-@include media( mobile ) {
+@include utilities.media( mobile ) {
 	body.newspack-default-template
 		.block-editor-block-list__layout.is-root-container
 		> .wp-block[data-align='full'] {
@@ -22,7 +25,7 @@
 
 /** === One Column Templates === */
 
-@include media( desktop ) {
+@include utilities.media( desktop ) {
 	body.newspack-single-column-template .wp-block[data-align='wide'] {
 		max-width: 1230px;
 	}
@@ -66,26 +69,26 @@ body.newspack-single-column-template {
 		width: auto;
 
 		figcaption {
-			padding: 0 $size__spacing-unit;
+			padding: 0 structure.$size__spacing-unit;
 		}
 
 		.wp-block-group:not( .has-background ):not( .is-style-border ) {
-			padding-left: #{0.5 * $size__spacing-unit};
-			padding-right: #{0.5 * $size__spacing-unit};
+			padding-left: #{0.5 * structure.$size__spacing-unit};
+			padding-right: #{0.5 * structure.$size__spacing-unit};
 		}
 	}
 
 	.wp-block[data-align='left'] {
 		position: relative;
 
-		@include media( desktop ) {
-			left: #{-1 * $size__spacing-unit};
+		@include utilities.media( desktop ) {
+			left: #{-1 * structure.$size__spacing-unit};
 		}
-		@include media( wide ) {
-			left: #{-2 * $size__spacing-unit};
+		@include utilities.media( wide ) {
+			left: #{-2 * structure.$size__spacing-unit};
 		}
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			> .wp-block-image {
 				margin-right: 0;
 			}
@@ -99,14 +102,14 @@ body.newspack-single-column-template {
 	.wp-block[data-align='right'] {
 		position: relative;
 
-		@include media( desktop ) {
-			right: #{-2 * $size__spacing-unit};
+		@include utilities.media( desktop ) {
+			right: #{-2 * structure.$size__spacing-unit};
 		}
-		@include media( wide ) {
-			right: #{-4 * $size__spacing-unit};
+		@include utilities.media( wide ) {
+			right: #{-4 * structure.$size__spacing-unit};
 		}
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			> .wp-block-image {
 				margin-left: 0;
 			}
@@ -134,18 +137,18 @@ body.post-type-post {
 
 	.editor-post-title__block .editor-post-title__input,
 	.editor-styles-wrapper h1.wp-block-post-title {
-		font-size: $font__size-xl;
+		font-size: fonts.$font__size-xl;
 
-		@include media( mobile ) {
-			font-size: $font__size-xxl;
+		@include utilities.media( mobile ) {
+			font-size: fonts.$font__size-xxl;
 		}
 
-		@include media( tablet ) {
-			font-size: $font__size-xxxl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xxxl;
 		}
 
-		@include media( desktop ) {
-			font-size: $font__size-xxxxl;
+		@include utilities.media( desktop ) {
+			font-size: fonts.$font__size-xxxxl;
 		}
 	}
 }

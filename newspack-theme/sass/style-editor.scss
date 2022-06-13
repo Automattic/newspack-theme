@@ -4,6 +4,6 @@ Newspack Theme Editor Styles
 
 /** === Includes === */
 
-@import 'variables-site/variables-site';
-@import 'style-editor-base';
-@import 'styles/style-default/style-default-editor';
+@use 'variables-site/variables-site';
+@use 'style-editor-base';
+@use 'styles/style-default/style-default-editor';

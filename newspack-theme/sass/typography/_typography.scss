@@ -1,3 +1,4 @@
+@use 'sass:meta';
 html {
 	font-size: $font__size_base_sm;
 
@@ -15,7 +16,7 @@ body {
 	font-size: 1em;
 	line-height: $font__line-height-body;
 	margin: 0;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizelegibility;
 }
 
 button,
@@ -27,13 +28,13 @@ textarea {
 	font-family: $font__body;
 	font-weight: 400;
 	line-height: $font__line-height-body;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizelegibility;
 }
 
 .use-body-font {
 	font-family: $font__body;
 }
 
-@import 'headings';
+@include meta.load-css( 'headings' );
 
-@import 'copy';
+@include meta.load-css( 'copy' );
