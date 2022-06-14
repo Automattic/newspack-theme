@@ -1,25 +1,4 @@
-/*
-Theme Name: Newspack Joseph
-Theme URI:
-Author: Automattic
-Author URI: https://newspack.blog
-Description:
-Requires at least: WordPress 4.9.6
-Version: 1.60.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Template: newspack-theme
-Text Domain: newspack-joseph
-Tags:
-AMP: true
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
+@use 'theme-description';
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';

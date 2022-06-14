@@ -10,7 +10,6 @@ Newspack Katharine Editor Styles
 @use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
-@use 'variables-style/fonts' as fonts2;
 
 .accent-header,
 .article-section-title {
@@ -35,7 +34,7 @@ Newspack Katharine Editor Styles
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts2.$font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 

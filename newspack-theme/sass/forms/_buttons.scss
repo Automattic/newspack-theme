@@ -1,29 +1,34 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+@use '../mixins/utilities';
+
 .button,
 button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .wp-block-search__button-outside .wp-block-search__button {
-	@include button-transition;
-	background: $color__background-button;
+	@include utilities.button-transition;
+	background: colors.$color__background-button;
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;
 	display: inline-block;
-	color: $color__background-body;
-	font-family: $font__heading;
-	font-size: $font__size-sm;
+	color: colors.$color__background-body;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-sm;
 	font-weight: 700;
-	line-height: $font__line-height-heading;
+	line-height: fonts.$font__line-height-heading;
 	outline: none;
-	padding: ( $size__spacing-unit * 0.76 ) $size__spacing-unit;
+	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 	text-decoration: none;
 	vertical-align: bottom;
 
 	&:hover,
 	&:hover:visited {
-		background: $color__background-button-hover;
-		color: $color__background-body;
+		background: colors.$color__background-button-hover;
+		color: colors.$color__background-body;
 		cursor: pointer;
 	}
 
@@ -33,8 +38,8 @@ input[type='submit'],
 	}
 
 	&:focus {
-		background: $color__background-button-hover;
-		color: $color__background-body;
+		background: colors.$color__background-button-hover;
+		color: colors.$color__background-body;
 		outline: thin dotted;
 		outline-offset: -4px;
 	}

@@ -1,6 +1,9 @@
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 ul,
 ol {
-	padding-left: ( 1 * $size__spacing-unit );
+	padding-left: structure.$size__spacing-unit;
 }
 
 ul {
@@ -16,12 +19,12 @@ ol {
 }
 
 li {
-	line-height: $font__line-height-body;
+	line-height: fonts.$font__line-height-body;
 }
 
 li > ul,
 li > ol {
-	padding-left: ( 2 * $size__spacing-unit );
+	padding-left: ( 2 * structure.$size__spacing-unit );
 }
 
 dt {
@@ -29,5 +32,5 @@ dt {
 }
 
 dd {
-	margin: 0 $size__spacing-unit $size__spacing-unit;
+	margin: 0 structure.$size__spacing-unit structure.$size__spacing-unit;
 }

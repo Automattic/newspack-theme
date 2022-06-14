@@ -1,7 +1,0 @@
-@use 'sass:color';
-$color__text-light: color.adjust( $color__text-main, $lightness: 20% );
-$color__background-hr: color.adjust( $color__text-main, $lightness: 20% );
-$color__border: $color__text-main;
-$color__background-button: $color__text-main;
-$color__secondary-variation: color.adjust( $color__text-main, $lightness: 20% );
-$color__background-button-hover: color.adjust( $color__text-main, $lightness: 20% );

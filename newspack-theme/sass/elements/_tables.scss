@@ -1,13 +1,17 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 table {
-	margin: 0 0 $size__spacing-unit;
+	margin: 0 0 structure.$size__spacing-unit;
 	border-collapse: collapse;
 	width: 100%;
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 
 	td,
 	th {
 		padding: 0.5em;
-		border: 1px solid $color__text-light;
+		border: 1px solid colors.$color__text-light;
 		word-break: break-all;
 	}
 }

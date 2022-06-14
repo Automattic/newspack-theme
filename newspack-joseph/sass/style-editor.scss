@@ -7,9 +7,8 @@ Newspack Joseph Editor Styles
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/fonts' as fonts2;
+@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
-@use 'variables-style/fonts';
 
 /* Paragraph */
 .has-drop-cap:not( :focus )::first-letter {
@@ -77,7 +76,7 @@ Newspack Joseph Editor Styles
 
 	.wp-block-pullquote__citation {
 		font-family: fonts.$font__body;
-		font-size: fonts2.$font__size-base;
+		font-size: fonts.$font__size-base;
 		font-weight: normal;
 	}
 }
@@ -88,7 +87,7 @@ Newspack Joseph Editor Styles
 
 	@include utilities.media( tablet ) {
 		p {
-			font-size: fonts2.$font__size-md;
+			font-size: fonts.$font__size-md;
 		}
 	}
 }
@@ -100,7 +99,7 @@ Newspack Joseph Editor Styles
 	display: flex;
 	flex-wrap: wrap;
 	font-family: fonts.$font__body;
-	font-size: fonts2.$font__size_base;
+	font-size: fonts.$font__size_base;
 	margin-bottom: structure.$size__spacing-unit;
 	position: relative;
 

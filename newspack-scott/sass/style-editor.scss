@@ -8,15 +8,14 @@ Newspack Scott Editor Styles
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts' as fonts2;
+@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
-@use 'variables-style/fonts';
 
 .accent-header,
 .article-section-title {
 	color: #666;
 	font-family: fonts.$font__heading;
-	font-size: fonts2.$font__size-sm;
+	font-size: fonts.$font__size-sm;
 
 	&::before {
 		background-color: colors.$color__primary;
@@ -142,10 +141,10 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: fonts2.$font__size-lg;
+		font-size: fonts.$font__size-lg;
 
 		@include utilities.media( tablet ) {
-			font-size: fonts2.$font__size-xl;
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
@@ -154,7 +153,7 @@ Newspack Scott Editor Styles
 	}
 
 	.wp-block-pullquote__citation {
-		font-size: fonts2.$font__size-sm;
+		font-size: fonts.$font__size-sm;
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -285,6 +284,6 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: fonts2.$font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }
