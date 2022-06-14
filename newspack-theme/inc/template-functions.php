@@ -170,6 +170,18 @@ function newspack_body_classes( $classes ) {
 		}
 	}
 
+	// Add a special class for the single post's primary category.
+	if ( is_single() && class_exists( 'WPSEO_Primary_Term' ) ) {
+		$primary_term = new WPSEO_Primary_Term( 'category', $page_id );
+		$category_id = $primary_term->get_primary_term();
+		if ( $category_id ) {
+			$category = get_term( $category_id );
+			if ( $category ) {
+				$classes[] = 'primary-cat-' . $category->slug;
+			}
+		}
+	}
+
 	// Adds class if singular post or page has a featured image.
 	if ( is_singular() && has_post_thumbnail() && 'hidden' !== newspack_featured_image_position() ) {
 		$classes[] = 'has-featured-image';
