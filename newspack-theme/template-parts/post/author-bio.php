@@ -5,7 +5,6 @@
  * @package Newspack
  */
 
-
 // Check if the author bio is turned on, or if the post is set to hide the author.
 if ( false === get_theme_mod( 'show_author_bio', true ) || true === apply_filters( 'newspack_listings_hide_author', false ) ) {
 	return;
@@ -46,7 +45,15 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<div class="author-bio-header">
 						<div>
 							<h2 class="accent-header">
-								<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name ), array( 'span' => array( 'class' => array() ) ) ); ?>
+								<?php
+								echo esc_html( $author->display_name );
+								if ( class_exists( 'Trust_Indicators' ) ) {
+									$author_role = newspack_trust_indicators_job_title_single( $author->ID );
+									if ( '' !== $author_role ) {
+										echo '<span class="author-job-title">' . esc_html( $author_role ) . '</span>';
+									}
+								}
+								?>
 							</h2>
 
 							<?php if ( ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
@@ -110,7 +117,15 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 
 			<div>
 				<h2 class="accent-header">
-					<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author() ), array( 'span' => array( 'class' => array() ) ) ); ?>
+					<?php
+					echo esc_html( get_the_author() );
+					if ( class_exists( 'Trust_Indicators' ) ) {
+						$author_role = newspack_trust_indicators_job_title_single( get_the_author_meta( 'ID' ) );
+						if ( '' !== $author_role ) {
+							echo '<span class="author-job-title">' . esc_html( $author_role ) . '</span>';
+						}
+					}
+					?>
 				</h2>
 
 				<?php if ( true === get_theme_mod( 'show_author_email', false ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
