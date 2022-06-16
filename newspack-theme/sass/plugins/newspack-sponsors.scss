@@ -99,9 +99,10 @@ amp-script .sponsor-label {
 	align-items: center;
 	display: inline-flex;
 	line-height: 1;
+	margin-right: #{0.25 * structure.$size__spacing-unit};
 
-	> * {
-		margin-right: #{0.25 * structure.$size__spacing-unit};
+	a:not( :first-child ) {
+		margin-left: #{0.5 * structure.$size__spacing-unit};
 	}
 }
 
@@ -118,6 +119,7 @@ amp-script .sponsor-label {
 /* Single Posts */
 
 .single {
+	/* Categories */
 	&.sponsors-show-cats .sponsor-label {
 		display: inline-flex;
 	}
@@ -126,11 +128,21 @@ amp-script .sponsor-label {
 		display: inline-block;
 	}
 
+	.sponsor-byline > span:first-child {
+		display: inline;
+	}
+
 	&.sponsors-show-authors .entry-subhead {
 		flex-wrap: wrap;
 
 		.sponsor-byline {
 			font-size: fonts.$font__size-sm;
+
+			@include media( desktop ) {
+				> span:first-child {
+					display: block;
+				}
+			}
 
 			.author {
 				color: inherit;
@@ -331,6 +343,7 @@ amp-script .wp-block-newspack-blocks-carousel {
 .wpnbha,
 amp-script .wpnbha {
 	.sponsor-logos {
+		flex-wrap: wrap;
 		margin: #{0.125 * structure.$size__spacing-unit} 0 #{0.25 * structure.$size__spacing-unit};
 	}
 }

@@ -195,7 +195,7 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 			?>
 			<span class="byline sponsor-byline">
 				<?php
-				echo esc_html( $sponsors[0]['sponsor_byline'] ) . ' ';
+				echo '<span>' . esc_html( $sponsors[0]['sponsor_byline'] ) . '</span> ';
 
 				foreach ( $sponsors as $sponsor ) {
 					$i++;
