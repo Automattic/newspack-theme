@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const { THEMES } = require( './scripts/create-child-releases.js' );
 
 module.exports = {
