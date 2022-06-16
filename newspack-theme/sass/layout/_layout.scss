@@ -151,7 +151,7 @@
 
 	&:not( .hide-page-title ):not( [class*='single-featured-image-'] ) {
 		.entry-header {
-			margin-top: $size__spacing-unit;
+			margin-top: structure.$size__spacing-unit;
 		}
 	}
 }

@@ -59,7 +59,7 @@ input[type='checkbox'] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: white;
-	border: solid 1px $color__border;
+	border: solid 1px colors.$color__border;
 	border-radius: 2px;
 	color: white;
 	cursor: pointer;
@@ -82,7 +82,7 @@ input[type='checkbox'] {
 	}
 
 	&:checked {
-		background: $color__background-button;
+		background: colors.$color__background-button;
 		border-color: transparent;
 
 		&::before {
@@ -91,7 +91,7 @@ input[type='checkbox'] {
 	}
 
 	&:focus {
-		outline: 1.5px solid $color__background-button;
+		outline: 1.5px solid colors.$color__background-button;
 		outline-offset: 1px;
 	}
 
