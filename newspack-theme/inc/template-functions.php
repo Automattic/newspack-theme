@@ -170,6 +170,18 @@ function newspack_body_classes( $classes ) {
 		}
 	}
 
+	// Add a special class for the single post's primary category.
+	if ( is_single() && class_exists( 'WPSEO_Primary_Term' ) ) {
+		$primary_term = new WPSEO_Primary_Term( 'category', $page_id );
+		$category_id = $primary_term->get_primary_term();
+		if ( $category_id ) {
+			$category = get_term( $category_id );
+			if ( $category ) {
+				$classes[] = 'primary-cat-' . $category->slug;
+			}
+		}
+	}
+
 	// Adds class if singular post or page has a featured image.
 	if ( is_singular() && has_post_thumbnail() && 'hidden' !== newspack_featured_image_position() ) {
 		$classes[] = 'has-featured-image';
@@ -223,7 +235,7 @@ function newspack_body_classes( $classes ) {
 			$classes[] = 'ad-above-footer';
 		}
 	}
-	
+
 	// Add a class for the footer logo size.
 	$footer_logo_size = get_theme_mod( 'footer_logo_size', 'medium' );
 	if ( 'medium' !== $footer_logo_size ) {
@@ -412,25 +424,23 @@ function newspack_get_discussion_data() {
 }
 
 /**
- * WCAG 2.0 Attributes for Dropdown Menus
+ * Get and store current menu's ID so it can be shared across functions.
  *
- * Adjustments to menu attributes tot support WCAG 2.0 recommendations
- * for flyout and dropdown menus.
- *
- * @ref https://www.w3.org/WAI/tutorials/menus/flyout/
+ * @return string Current menu item ID.
  */
-function newspack_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+class Newspack_Current_Menu_ID {
+	private static $currentMenuId = '';
 
-	// Add [aria-haspopup] and [aria-expanded] to menu items that have children
-	$item_has_children = in_array( 'menu-item-has-children', $item->classes );
-	if ( $item_has_children ) {
-		$atts['aria-haspopup'] = 'true';
-		$atts['aria-expanded'] = 'false';
+	// Sets the current Menu ID value in newspack_add_dropdown_icons().
+	public static function set_current_ID( $value ) {
+		self::$currentMenuId = $value;
 	}
 
-	return $atts;
+	// Gets the current Menu ID for Newspack_Custom_Submenu_Walker().
+	public static function get_current_ID() {
+		return self::$currentMenuId;
+	}
 }
-add_filter( 'nav_menu_link_attributes', 'newspack_nav_menu_link_attributes', 10, 4 );
 
 /**
  * Add a dropdown icon to top-level menu items.
@@ -440,7 +450,6 @@ add_filter( 'nav_menu_link_attributes', 'newspack_nav_menu_link_attributes', 10,
  * @param int    $depth  Depth.
  * @param object $args   Nav menu args.
  * @return string Nav menu item start element.
- * Add a dropdown icon to top-level menu items
  */
 function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 
@@ -454,15 +463,40 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
 
+		$toggle_id = "toggle_" . $item->ID ;
+
 		$output .= sprintf(
-			'<button class="submenu-expand" tabindex="-1" role="presentation">%s</button>',
+			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )" aria-haspopup="true">%s</button>',
 			$icon
 		);
+
+		// Set the current menu ID so it can be accessed by other functions.
+		Newspack_Current_Menu_ID::set_current_ID( $item->ID );
 	}
 
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
+
+/**
+ * Add an ID with parent menu item's ID to each submenu.
+ *
+ * @param string $output Nav menu item start element.
+ * @param int    $depth  Depth.
+ * @param object $args   Nav menu args.
+ * @return string Nav menu level start element.
+ */
+class Newspack_Custom_Submenu_Walker extends Walker_Nav_Menu {
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+
+		// Get the current stored menu ID.
+		$menu_parent_id = Newspack_Current_Menu_ID::get_current_ID();
+
+		$submenu_ID = "submenu-" . esc_attr( $menu_parent_id );
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"sub-menu\" id=\"$submenu_ID\">\n";
+	}
+}
 
 /**
  * The default color used for the primary color throughout this theme
@@ -553,10 +587,10 @@ function newspack_get_color_contrast( $hex ) {
 	}
 	if ( $contrast_ratio > 5 ) {
 		// If contrast is more than 5, return black color
-		return '#000';
+		return 'black';
 	} else {
 		// if not, return white color.
-		return '#fff';
+		return 'white';
 	}
 }
 
@@ -565,8 +599,8 @@ function newspack_get_color_contrast( $hex ) {
  */
 function newspack_color_with_contrast( $color ) {
 	$contrast = newspack_get_color_contrast( $color );
-	if ( '#000' === $contrast ) {
-		return '#5a5a5a';
+	if ( 'black' === $contrast ) {
+		return 'dimgray';
 	}
 	return $color;
 }
@@ -692,6 +726,16 @@ function newspack_should_display_updated_date() {
 		}
 	}
 	return false;
+}
+
+/**
+ * Create a predictable unique ID for the search forms.
+ *
+ * @param string $prefix Text to prepend the ID with.
+ */
+function newspack_search_id( $prefix = '' ) {
+	static $id_counter = 0;
+	return $prefix . ( string ) ++$id_counter;
 }
 
 /**

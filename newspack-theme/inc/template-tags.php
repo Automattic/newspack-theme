@@ -558,6 +558,7 @@ function newspack_primary_menu() {
 				'menu_class'     => 'main-menu',
 				'container'      => false,
 				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'walker'         => new Newspack_Custom_Submenu_Walker(),
 			)
 		);
 		?>
@@ -588,6 +589,7 @@ function newspack_secondary_menu() {
 				'menu_class'     => 'secondary-menu',
 				'container'      => false,
 				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'walker'         => new Newspack_Custom_Submenu_Walker(),
 			)
 		);
 		?>

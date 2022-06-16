@@ -160,6 +160,24 @@
 		}
 	} );
 
+	// Menu toggle variables.
+	const dropdownToggle = document.getElementsByClassName( 'submenu-expand' );
+	if ( 0 < dropdownToggle.length ) {
+		for ( let i = 0; i < dropdownToggle.length; i++ ) {
+			dropdownToggle[ i ].addEventListener(
+				'click',
+				function () {
+					if ( dropdownToggle[ i ].classList.contains( 'open-dropdown' ) ) {
+						dropdownToggle[ i ].classList.remove( 'open-dropdown' );
+					} else {
+						dropdownToggle[ i ].classList.add( 'open-dropdown' );
+					}
+				},
+				false
+			);
+		}
+	}
+
 	// Sticky header fallback animation
 	if (
 		body.classList.contains( 'h-stk' ) &&
