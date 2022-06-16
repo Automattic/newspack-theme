@@ -179,6 +179,10 @@ div.wpnbha .article-section-title,
 	}
 }
 
+.single .sponsor-label .cat-links {
+	font-size: $font__size-sm;
+}
+
 /* Navigation */
 .mobile-sidebar {
 	background: colors.$color__text-main;
@@ -201,8 +205,12 @@ div.wpnbha .article-section-title,
 .search,
 .blog,
 .archive {
-	.cat-links::before {
-		display: none;
+	.cat-links {
+		font-size: $font__size-sm;
+
+		&::before {
+			display: none;
+		}
 	}
 }
 

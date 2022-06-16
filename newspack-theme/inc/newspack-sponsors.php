@@ -155,6 +155,21 @@ function newspack_sponsor_body_classes( $classes ) {
 	if ( ( is_category() || is_tag() ) && newspack_get_all_sponsors( get_queried_object_id(), 'native', 'archive' ) ) {
 		$classes[] = 'sponsored-archive';
 	}
+
+	if ( is_single() && newspack_get_all_sponsors( get_queried_object_id(), 'native' ) ) {
+		$native_sponsors                 = newspack_get_all_sponsors( get_queried_object_id(), 'native' );
+		$display_sponsors_and_categories = newspack_display_sponsors_and_categories( $native_sponsors );
+		$display_sponsors_and_authors    = newspack_display_sponsors_and_authors( $native_sponsors );
+
+		if ( $display_sponsors_and_authors ) {
+			$classes[] = 'sponsors-show-authors';
+		}
+
+		if ( $display_sponsors_and_categories ) {
+			$classes[] = 'sponsors-show-cats';
+		}
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_sponsor_body_classes' );

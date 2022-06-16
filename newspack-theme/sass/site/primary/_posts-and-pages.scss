@@ -364,8 +364,13 @@ div.sharedaddy .sd-social h3.sd-title,
 	display: none;
 }
 
+div.sharedaddy {
+	min-height: 32px;
+}
+
 .sd-content {
 	margin-bottom: -0.7em; // offsets Jetpack's default styles w/out using !important
+
 	ul li {
 		margin-bottom: 0;
 	}
