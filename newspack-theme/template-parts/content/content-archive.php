@@ -38,35 +38,27 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</header><!-- .entry-header -->
 
-		<?php if ( ! is_page() ) : ?>
-			<?php
-			if ( ! empty( $native_sponsors ) ) :
-				// If showing both authors and sponsors, show the byline and date first.
-				if ( $display_sponsors_and_authors ) :
-				?>
-					<div class="entry-meta">
-						<?php
-						newspack_posted_by();
-						newspack_posted_on();
-						?>
-					</div>
-				<?php endif; ?>
+		<?php if ( 'page' !== get_post_type() ) : ?>
+			<?php if ( ! empty( $native_sponsors ) ) : ?>
 				<div class="entry-meta entry-sponsor">
+					<?php
+					if ( $display_sponsors_and_authors ) :
+						newspack_posted_by();
+					endif;
+					?>
 					<?php newspack_sponsor_logo_list( $native_sponsors ); ?>
 					<span>
-						<?php
-						newspack_sponsor_byline( $native_sponsors );
-						if ( ! $display_sponsors_and_authors ) {
-							newspack_posted_on();
-						}
-						?>
+						<?php newspack_sponsor_byline( $native_sponsors ); ?>
 					</span>
+					<?php newspack_posted_on(); ?>
+					<?php do_action( 'newspack_theme_entry_meta' ); ?>
 				</div>
 			<?php else : ?>
 				<div class="entry-meta">
 					<?php
 						newspack_posted_by();
 						newspack_posted_on();
+						do_action( 'newspack_theme_entry_meta' );
 					?>
 				</div><!-- .meta-info -->
 			<?php endif; ?>

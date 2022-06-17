@@ -238,7 +238,7 @@ amp-script .sponsor-label {
 .sponsors-show-authors {
 	.sponsor-bio {
 		border: solid $color__border;
-		border-width: 3px 0 1px;
+		border-width: 2px 0 1px;
 		display: block;
 		padding: $size__spacing-unit 0;
 
@@ -249,30 +249,21 @@ amp-script .sponsor-label {
 
 		h2 {
 			color: inherit;
+			display: block;
 			font-size: $font__size-sm;
 			border: 0;
 			margin: 0;
-			padding: $size__spacing-unit 0 0;
+			padding: 0;
 
-			&::before {
-				display: none;
-			}
-
+			&::before,
 			&::after {
-				content: '';
-				clear: both;
-				display: block;
+				display: none;
 			}
 		}
 
 		.avatar {
-			margin-right: #{0.75 * $size__spacing-unit};
 			max-width: 150px;
 			width: auto;
-
-			@include media( tablet ) {
-				float: left;
-			}
 		}
 
 		.author-bio-text {
