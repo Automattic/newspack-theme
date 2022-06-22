@@ -124,16 +124,20 @@ function newspack_trust_indicators_output_author_job_title( $title ) {
 		if ( $role ) {
 			$title .= '<span class="author-job-title">' . $role . '</span>';
 		}
-	} else if ( is_single() ) {
-		$role = get_user_meta( get_the_author_meta( 'ID' ), 'title', true );
-		if ( $role ) {
-			$title .= '<span class="author-job-title">' . $role . '</span>';
-		}
 	}
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_job_title' );
-add_filter( 'newspack_author_bio_name', 'newspack_trust_indicators_output_author_job_title' );
+
+/**
+ * Gets author role to add to single post author bios.
+ */
+function newspack_trust_indicators_job_title_single( $author_ID ) {
+	if ( '' !== $author_ID ) {
+		$role = get_user_meta( $author_ID, 'title', true );
+		return $role;
+	}
+}
 
 /**
  * Output location and expertise info on author archive pages.
