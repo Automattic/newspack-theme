@@ -49,6 +49,22 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'newspack_featured_image_position' ) ) :
+	/**
+	 * Returns whether or not the current post/page is using hte default template.
+	 *
+	 * @return bool
+	 */
+	function newspack_is_default_template() {
+		$default_template = true;
+		// Check against templates assigned in the Newspack theme, to rule out any other non-default _wp_page_template values.
+		if ( is_page_template( array( 'no-header-footer.php', 'single-feature.php', 'single-wide.php' ) ) ) {
+			$default_template = false;
+		}
+		return $default_template;
+	}
+endif;
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -150,7 +166,7 @@ function newspack_body_classes( $classes ) {
 
 	// Adds a class of has-sidebar when there is a sidebar present and populated.
 	if ( is_active_sidebar( 'sidebar-1' )
-		&& ( ( ! is_archive() && ! is_page_template() && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) )
+		&& ( ( ! is_archive() && newspack_is_default_template() && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) )
 		|| ( is_archive() && 'default' === get_theme_mod( 'archive_layout', 'default' ) ) )
 	) {
 		$classes[] = 'has-sidebar';
