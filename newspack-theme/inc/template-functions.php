@@ -49,7 +49,7 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'newspack_featured_image_position' ) ) :
+if ( ! function_exists( 'newspack_is_default_template' ) ) :
 	/**
 	 * Returns whether or not the current post/page is using hte default template.
 	 *
