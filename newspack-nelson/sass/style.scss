@@ -650,7 +650,7 @@ blockquote {
 	}
 }
 
-/* Trust Indicators */
+// Trust Indicators
 
 @include utilities.media( tablet ) {
 	.featured-image-beside {
@@ -671,6 +671,16 @@ blockquote {
 }
 
 // Ads
+
 .newspack_global_ad.global_below_header {
 	display: none;
+}
+
+// Sponsors
+
+.sponsors-show-authors {
+	div.sponsor-bio,
+	div.sponsor-bio + .sponsor-bio {
+		border-color: colors.$color__text-main;
+	}
 }

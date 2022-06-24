@@ -142,7 +142,7 @@ amp-script .sponsor-label {
 		flex-wrap: wrap;
 
 		.sponsor-logos {
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				border-right: 0;
 				margin-right: 0;
 			}
@@ -151,7 +151,7 @@ amp-script .sponsor-label {
 		.sponsor-byline {
 			font-size: fonts.$font__size-sm;
 
-			@include media( desktop ) {
+			@include utilities.media( desktop ) {
 				> span:first-child {
 					display: block;
 				}
@@ -174,13 +174,12 @@ amp-script .sponsor-label {
 			width: 100%;
 		}
 
-<<<<<<< HEAD
-		@include utilities.media( tablet ) {
-=======
-		@include media( desktop ) {
->>>>>>> 3f184e3e (fix: change appearance of sponsor 'bios' when authors visible)
-			+ .sharedaddy {
+		+ .sharedaddy {
+			margin-top: structure.$size__spacing-unit;
+
+			@include utilities.media( desktop ) {
 				border-left: 1px solid colors.$color__border;
+				margin-top: 0;
 				padding-left: 1rem;
 			}
 		}
@@ -198,10 +197,6 @@ amp-script .sponsor-label {
 		align-items: center;
 	}
 
-	.sponsor-label button {
-		color: inherit;
-	}
-
 	.sponsor-byline {
 		color: inherit;
 	}
@@ -212,8 +207,29 @@ amp-script .sponsor-label {
 		background: rgba( 0, 0, 0, 0.95 );
 	}
 
-	.sponsor-label button::after {
-		border-bottom-color: rgba( 0, 0, 0, 0.95 );
+	.sponsor-label button {
+		color: inherit;
+
+		::after {
+			border-bottom-color: rgba( 0, 0, 0, 0.95 );
+		}
+	}
+
+	.entry-meta + .entry-sponsor .byline {
+		margin-right: 0;
+	}
+}
+
+.featured-image-beside {
+	.entry-meta + .entry-sponsor + .sharedaddy {
+		border: 0;
+		padding: 0;
+	}
+
+	@include utilities.media( tablet ) {
+		.sponsor-label button {
+			color: inherit;
+		}
 	}
 }
 
@@ -237,10 +253,10 @@ amp-script .sponsor-label {
 // Sponsor bio when author bio is visible
 .sponsors-show-authors {
 	.sponsor-bio {
-		border: solid $color__border;
+		border: solid colors.$color__border;
 		border-width: 2px 0 1px;
 		display: block;
-		padding: $size__spacing-unit 0;
+		padding: structure.$size__spacing-unit 0;
 
 		+ .sponsor-bio {
 			border-top: 0;
@@ -250,7 +266,7 @@ amp-script .sponsor-label {
 		h2 {
 			color: inherit;
 			display: block;
-			font-size: $font__size-sm;
+			font-size: fonts.$font__size-sm;
 			border: 0;
 			margin: 0;
 			padding: 0;
