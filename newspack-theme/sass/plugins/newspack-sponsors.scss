@@ -400,32 +400,38 @@ amp-script .sponsor-label {
 /* stylelint-disable selector-type-no-unknown  */
 .wpnbha,
 amp-script .wpnbha,
-.wp-block-newspack-blocks-carousel,
-amp-script .wp-block-newspack-blocks-carousel {
+.wpnbpc,
+amp-script .wpnbpc {
 	.sponsor-label {
 		display: flex;
+	}
+
+	.sponsor-logos {
+		border: 0;
+		margin: 0;
+
+		> * {
+			margin-right: #{0.25 * $size__spacing-unit};
+		}
 	}
 
 	.entry-sponsors {
 		align-items: center;
 		display: inline-flex;
-	}
-}
-
-.wpnbha,
-amp-script .wpnbha {
-	.sponsor-logos {
-		border: 0;
 		flex-wrap: wrap;
-		margin: #{0.125 * structure.$size__spacing-unit} 0 #{0.25 * structure.$size__spacing-unit};
+		width: 100%;
+
+		&.plus-author {
+			font-size: 0.9em;
+
+			&:not( :last-child ) {
+				margin-bottom: 0.5rem;
+			}
+		}
 	}
 }
 /* stylelint-enable  */
 
-.wpnbha .entry-sponsors {
-	width: 100%;
-}
-
-.wp-block-newspack-blocks-carousel .sponsor-byline {
+.wpnbpc .sponsor-byline {
 	color: #fff;
 }

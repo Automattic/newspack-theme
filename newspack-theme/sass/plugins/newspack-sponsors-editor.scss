@@ -27,9 +27,29 @@
 	}
 }
 
-.wpnbha {
+.wpnbha,
+.wpnbpc {
 	.sponsor-logos {
-		margin: #{0.125 * structure.$size__spacing-unit} 0 #{0.25 * structure.$size__spacing-unit};
+		border-right: 0;
+		margin: 0;
+
+		> * {
+			margin-right: #{0.25 * structure.$size__spacing-unit};
+		}
+	}
+
+	.entry-sponsors {
+		align-items: center;
+		display: inline-flex;
+		flex-wrap: wrap;
 		width: 100%;
+
+		&.plus-author {
+			font-size: 0.9em;
+
+			&:not( :last-child ) {
+				margin-bottom: 0.5rem;
+			}
+		}
 	}
 }
