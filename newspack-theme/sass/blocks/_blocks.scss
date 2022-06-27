@@ -104,6 +104,19 @@
 	}
 }
 
+.page-template-no-header-footer {
+	.entry .entry-content,
+	[id='pico'] {
+		> *.alignfull:first-child {
+			margin-top: 0;
+		}
+
+		> *:not( .alignfull ):last-child {
+			margin-bottom: 32px;
+		}
+	}
+}
+
 .entry .entry-content {
 	/*
 	 * Unset nested content selector styles
@@ -1340,7 +1353,8 @@ $colors: (
 
 //! 'Feature' alignments
 .post-template-single-feature,
-.page-template-single-feature {
+.page-template-single-feature,
+.page-template-no-header-footer {
 	.entry .entry-content > *,
 	[id='pico'] > * {
 		&.alignwide {
