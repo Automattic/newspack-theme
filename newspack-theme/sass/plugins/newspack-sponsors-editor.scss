@@ -34,22 +34,7 @@
 		margin: 0;
 
 		> * {
-			margin-right: #{0.25 * structure.$size__spacing-unit};
-		}
-	}
-
-	.entry-sponsors {
-		align-items: center;
-		display: inline-flex;
-		flex-wrap: wrap;
-		width: 100%;
-
-		&.plus-author {
-			font-size: 0.9em;
-
-			&:not( :last-child ) {
-				margin-bottom: 0.5rem;
-			}
+			margin-right: #{0.5 * structure.$size__spacing-unit};
 		}
 	}
 }
