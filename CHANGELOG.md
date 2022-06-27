@@ -1,3 +1,19 @@
+# [1.60.0](https://github.com/Automattic/newspack-theme/compare/v1.59.0...v1.60.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* improve dropdown menu accessibility ([#1808](https://github.com/Automattic/newspack-theme/issues/1808)) ([9846444](https://github.com/Automattic/newspack-theme/commit/984644407faa7b30acc38752f2cfbac971cb4f3b))
+* make sure the search forms have a predictable unique ID ([#1834](https://github.com/Automattic/newspack-theme/issues/1834)) ([dcc2642](https://github.com/Automattic/newspack-theme/commit/dcc264213e7baa1adeed8ffb8ee62eae40b43109))
+
+
+### Features
+
+* add checkbox style ([#1840](https://github.com/Automattic/newspack-theme/issues/1840)) ([6cb095e](https://github.com/Automattic/newspack-theme/commit/6cb095e5bb454090ef39802c51d1bf8882092549))
+* add single post body class for Yoast's primary category ([370cfe6](https://github.com/Automattic/newspack-theme/commit/370cfe6a5a1e4f4f3ef1c14685920a4b1dbdb856))
+* add template without header or footer ([#1826](https://github.com/Automattic/newspack-theme/issues/1826)) ([623480a](https://github.com/Automattic/newspack-theme/commit/623480a162fe29abc70f0c6755da61e11849f34c))
+* remove unneeded FSE blocks ([#1827](https://github.com/Automattic/newspack-theme/issues/1827)) ([87bfee7](https://github.com/Automattic/newspack-theme/commit/87bfee777dc8a75d6443d429939a274801e7c86c))
+
 # [1.60.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.59.0...v1.60.0-alpha.1) (2022-06-16)
 
 
