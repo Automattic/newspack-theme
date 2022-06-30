@@ -209,3 +209,9 @@ footer.entry-footer a {
 		}
 	}
 }
+
+// Sponsored Content
+.single.sponsors-show-cats .sponsor-label,
+.single.sponsors-show-cats .sponsor-label + button {
+	margin-bottom: #{0.25 * $size__spacing-unit};
+}

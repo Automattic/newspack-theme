@@ -599,25 +599,55 @@ body.single {
 	}
 
 	.entry-meta {
-		+ .entry-sponsor + .sharedaddy {
-			border: 0;
-			padding: 0;
-		}
-
 		+ .entry-sponsor {
 			text-align: left;
 			justify-content: center;
 		}
+	}
 
-		@include media( mobileonly ) {
-			+ .entry-sponsor {
-				justify-content: center;
+	@include media( mobileonly ) {
+		.entry-sponsor {
+			gap: 0.5em;
+			justify-content: center;
 
-				.sponsor-logos,
-				.sponsor-logos > *:last-child {
-					margin: 0;
-				}
+			.sponsor-logos,
+			.sponsor-logos > *:last-child {
+				margin: 0;
 			}
+
+			.sponsor-logos {
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.featured-image-behind .entry-sponsor {
+		justify-content: center;
+	}
+
+	@include media( tablet ) {
+		.featured-image-beside {
+			.sponsor-byline {
+				margin-right: 0;
+			}
+
+			.sponsor-logos {
+				border-right: 0;
+				padding-right: 0;
+			}
+
+			.entry-sponsor {
+				justify-content: center;
+			}
+		}
+
+		&.sponsors-show-authors .featured-image-beside .sponsor-byline > span:first-child {
+			display: inline;
+		}
+
+		&:not( .sponsors-show-authors ) .featured-image-beside .posted-on {
+			display: block;
 		}
 	}
 }
