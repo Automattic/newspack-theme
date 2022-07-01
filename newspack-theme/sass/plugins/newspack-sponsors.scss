@@ -230,6 +230,16 @@ amp-script .sponsor-label {
 		.sponsor-label button {
 			color: inherit;
 		}
+
+		.sponsor-logos {
+			border: 0;
+		}
+	}
+}
+
+.single:not( .sponsors-show-authors ) .featured-image-beside {
+	.posted-on {
+		display: block;
 	}
 }
 
@@ -255,7 +265,6 @@ amp-script .sponsor-label {
 	.sponsor-bio {
 		border: solid colors.$color__border;
 		border-width: 2px 0 1px;
-		display: block;
 		padding: structure.$size__spacing-unit 0;
 
 		+ .sponsor-bio {
@@ -265,7 +274,6 @@ amp-script .sponsor-label {
 
 		h2 {
 			color: inherit;
-			display: block;
 			font-size: fonts.$font__size-sm;
 			border: 0;
 			margin: 0;
@@ -275,15 +283,6 @@ amp-script .sponsor-label {
 			&::after {
 				display: none;
 			}
-		}
-
-		.avatar {
-			max-width: 150px;
-			width: auto;
-		}
-
-		.author-bio-text {
-			width: 100%;
 		}
 	}
 }

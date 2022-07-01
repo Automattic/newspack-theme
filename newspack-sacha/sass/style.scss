@@ -645,10 +645,6 @@ body.single {
 		&.sponsors-show-authors .featured-image-beside .sponsor-byline > span:first-child {
 			display: inline;
 		}
-
-		&:not( .sponsors-show-authors ) .featured-image-beside .posted-on {
-			display: block;
-		}
 	}
 }
 
