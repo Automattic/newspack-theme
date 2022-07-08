@@ -13,25 +13,3 @@
 		text-transform: uppercase;
 	}
 }
-
-.sponsor-logos {
-	align-items: center;
-	display: inline-flex;
-	line-height: 1;
-
-	img {
-		margin-right: #{0.75 * structure.$size__spacing-unit};
-	}
-}
-
-.wpnbha,
-.wpnbpc {
-	.sponsor-logos {
-		border-right: 0;
-		margin: 0;
-
-		> * {
-			margin-right: #{0.5 * structure.$size__spacing-unit};
-		}
-	}
-}
