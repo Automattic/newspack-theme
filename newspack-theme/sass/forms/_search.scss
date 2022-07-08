@@ -1,18 +1,21 @@
+@use '../variables-site/colors';
+@use '../variables-site/structure';
+
 .search-form {
 	position: relative;
 
 	input {
-		padding-right: #{2.5 * $size__spacing-unit};
+		padding-right: #{2.5 * structure.$size__spacing-unit};
 		width: 100%;
 	}
 
 	button {
 		background-color: transparent;
 		bottom: 2px;
-		color: $color__text-main;
+		color: colors.$color__text-main;
 		position: absolute;
 		margin: 0;
-		padding: 0 #{0.5 * $size__spacing-unit};
+		padding: 0 #{0.5 * structure.$size__spacing-unit};
 		right: 2px;
 		top: 2px;
 
@@ -24,7 +27,7 @@
 		&:active,
 		&:hover,
 		&:focus {
-			color: $color__primary;
+			color: colors.$color__primary;
 		}
 	}
 }

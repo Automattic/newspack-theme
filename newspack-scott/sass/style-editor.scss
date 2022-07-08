@@ -4,17 +4,21 @@ Newspack Scott Editor Styles
 
 /** === Includes === */
 
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-editor-base';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-editor-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 .accent-header,
 .article-section-title {
 	color: #666;
-	font-family: $font__heading;
-	font-size: $font__size-sm;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-sm;
 
 	&::before {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: inline-block;
 		height: 0.75em;
@@ -26,7 +30,7 @@ Newspack Scott Editor Styles
 }
 
 .entry-meta .byline a {
-	color: $color__text-light;
+	color: colors.$color__text-light;
 }
 
 /* Avatar */
@@ -38,7 +42,7 @@ Newspack Scott Editor Styles
 /** === Paragraph === */
 
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 
@@ -52,7 +56,7 @@ Newspack Scott Editor Styles
 .wp-block-pullquote {
 	border-width: 0;
 	font-weight: bold;
-	padding-top: #{3 * $size__spacing-unit};
+	padding-top: #{3 * structure.$size__spacing-unit};
 	position: relative;
 	text-align: center;
 
@@ -63,17 +67,17 @@ Newspack Scott Editor Styles
 
 	blockquote {
 		border-color: inherit;
-		margin: #{2 * $size__spacing-unit} 0;
+		margin: #{2 * structure.$size__spacing-unit} 0;
 
 		&::before,
 		&::after {
 			border-top: 2px solid;
-			border-top-color: $color__primary;
+			border-top-color: colors.$color__primary;
 			content: '';
 			display: block;
 			position: absolute;
 			opacity: 0.8;
-			top: #{2 * $size__spacing-unit};
+			top: #{2 * structure.$size__spacing-unit};
 		}
 
 		&::before {
@@ -95,10 +99,10 @@ Newspack Scott Editor Styles
 	}
 
 	blockquote p:first-of-type::before {
-		color: $color__primary;
+		color: colors.$color__primary;
 		content: '\201C';
 		display: inline-block;
-		font-family: $font__heading;
+		font-family: fonts.$font__heading;
 		font-size: calc( 1rem * 6 );
 		font-style: italic;
 		font-weight: normal;
@@ -110,7 +114,7 @@ Newspack Scott Editor Styles
 		width: 0.5em;
 		z-index: 1;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			font-size: calc( 1rem * 8 );
 		}
 	}
@@ -119,7 +123,7 @@ Newspack Scott Editor Styles
 	&.has-background {
 		blockquote::before,
 		blockquote::after {
-			border-top-color: currentColor;
+			border-top-color: currentcolor;
 		}
 
 		p:first-of-type::before {
@@ -128,28 +132,28 @@ Newspack Scott Editor Styles
 	}
 
 	&.is-style-solid-color blockquote {
-		padding-top: #{2 * $size__spacing-unit};
+		padding-top: #{2 * structure.$size__spacing-unit};
 	}
 
 	&.has-background blockquote {
-		padding-top: $size__spacing-unit;
+		padding-top: structure.$size__spacing-unit;
 	}
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: $font__size-lg;
+		font-size: fonts.$font__size-lg;
 
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
 	p {
-		font-family: $font__heading;
+		font-family: fonts.$font__heading;
 	}
 
 	.wp-block-pullquote__citation {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -166,7 +170,7 @@ Newspack Scott Editor Styles
 
 		&.is-style-solid-color blockquote,
 		&.has-background blockquote {
-			padding-top: #{1.5 * $size__spacing-unit};
+			padding-top: #{1.5 * structure.$size__spacing-unit};
 		}
 	}
 
@@ -183,12 +187,12 @@ Newspack Scott Editor Styles
 
 		&.is-style-solid-color blockquote {
 			&::before {
-				left: #{5 * $size__spacing-unit};
-				right: #{2 * $size__spacing-unit};
+				left: #{5 * structure.$size__spacing-unit};
+				right: #{2 * structure.$size__spacing-unit};
 			}
 
 			p:first-of-type::before {
-				left: #{1.5 * $size__spacing-unit};
+				left: #{1.5 * structure.$size__spacing-unit};
 			}
 		}
 	}
@@ -207,12 +211,12 @@ Newspack Scott Editor Styles
 
 		&.is-style-solid-color blockquote {
 			&::before {
-				right: #{5 * $size__spacing-unit};
-				left: #{2 * $size__spacing-unit};
+				right: #{5 * structure.$size__spacing-unit};
+				left: #{2 * structure.$size__spacing-unit};
 			}
 
 			p:first-of-type::before {
-				right: #{1.5 * $size__spacing-unit};
+				right: #{1.5 * structure.$size__spacing-unit};
 			}
 		}
 	}
@@ -236,7 +240,7 @@ Newspack Scott Editor Styles
 	text-align: left;
 
 	blockquote {
-		padding-top: #{1.5 * $size__spacing-unit};
+		padding-top: #{1.5 * structure.$size__spacing-unit};
 
 		&::before {
 			left: 3em;
@@ -260,26 +264,26 @@ Newspack Scott Editor Styles
 	&.has-background {
 		blockquote {
 			&::before {
-				left: #{5 * $size__spacing-unit};
-				right: #{2 * $size__spacing-unit};
+				left: #{5 * structure.$size__spacing-unit};
+				right: #{2 * structure.$size__spacing-unit};
 			}
 
 			p:first-of-type::before {
-				left: #{1.5 * $size__spacing-unit};
+				left: #{1.5 * structure.$size__spacing-unit};
 			}
 		}
 	}
 
 	&.is-style-solid-color blockquote {
-		padding-top: #{1.5 * $size__spacing-unit};
+		padding-top: #{1.5 * structure.$size__spacing-unit};
 	}
 
 	&.has-background blockquote {
-		padding-top: #{0.5 * $size__spacing-unit};
+		padding-top: #{0.5 * structure.$size__spacing-unit};
 	}
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: $font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }

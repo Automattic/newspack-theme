@@ -4,8 +4,12 @@ Newspack Nelson Editor Styles
 
 /** === Includes === */
 
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-editor-base';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-editor-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 // Elements
 
@@ -18,35 +22,35 @@ h4,
 }
 
 blockquote {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 }
 
 // Accent Headers
 
 .accent-header,
 .article-section-title {
-	color: $color__text-light;
-	font-family: $font__heading;
-	font-size: $font__size-xs;
+	color: colors.$color__text-light;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-xs;
 	font-weight: bold;
 }
 
 .article-section-title {
-	margin-bottom: $size__spacing-unit;
-	@include media( tablet ) {
-		margin-bottom: #{1.5 * $size__spacing-unit};
+	margin-bottom: structure.$size__spacing-unit;
+	@include utilities.media( tablet ) {
+		margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	}
 }
 
 .entry-meta .byline a {
-	color: $color__text-light;
+	color: colors.$color__text-light;
 }
 
 // Blocks
 
 .wp-block-newspack-blocks-homepage-articles {
 	article .entry-meta {
-		font-size: #{0.7 * $font__size_base};
+		font-size: #{0.7 * fonts.$font__size_base};
 	}
 
 	&.type-scale1,
@@ -54,7 +58,7 @@ blockquote {
 	&.type-scale3,
 	&.type-scale4 {
 		article .entry-meta {
-			font-size: #{0.6 * $font__size_base};
+			font-size: #{0.6 * fonts.$font__size_base};
 		}
 	}
 }
@@ -67,13 +71,13 @@ blockquote {
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	color: $color__secondary;
-	font-family: $font__heading;
+	color: colors.$color__secondary;
+	font-family: fonts.$font__heading;
 	font-weight: 800;
 }
 
 .wp-block-group.is-style-border {
-	border-color: currentColor;
+	border-color: currentcolor;
 }
 
 .wp-block-pullquote {
@@ -81,15 +85,15 @@ blockquote {
 	font-weight: bold;
 
 	blockquote {
-		margin: #{2 * $size__spacing-unit} 0;
+		margin: #{2 * structure.$size__spacing-unit} 0;
 	}
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: $font__size-lg;
+		font-size: fonts.$font__size-lg;
 
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
@@ -115,14 +119,14 @@ blockquote {
 	position: relative;
 
 	blockquote {
-		margin-top: #{1.5 * $size__spacing-unit};
-		margin-bottom: #{1.5 * $size__spacing-unit};
+		margin-top: #{1.5 * structure.$size__spacing-unit};
+		margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	}
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		&.is-style-solid-color blockquote p,
 		blockquote p {
-			font-size: $font__size-lg;
+			font-size: fonts.$font__size-lg;
 		}
 	}
 
@@ -143,22 +147,22 @@ blockquote {
 
 .wp-block-separator {
 	&:not( .is-style-dots ) {
-		border-top: 2px solid $color__text-main;
+		border-top: 2px solid colors.$color__text-main;
 
 		&.has-background {
-			border-top-color: currentColor;
+			border-top-color: currentcolor;
 		}
 	}
 
 	&:not( .is-style-dots ):not( .is-style-wide ) {
-		border-top: 5px solid $color__text-main;
+		border-top: 5px solid colors.$color__text-main;
 
 		&.has-background {
-			border-top-color: currentColor;
+			border-top-color: currentcolor;
 		}
 	}
 
 	&.is-style-dots::before {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 }

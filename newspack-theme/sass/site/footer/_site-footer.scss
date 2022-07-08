@@ -1,15 +1,20 @@
+@use '../../mixins/utilities';
+@use '../../variables-site/colors';
+@use '../../variables-site/structure';
+@use '../../variables-site/transitions';
+
 /* Site footer */
 
 .site-footer {
-	margin: #{2 * $size__spacing-unit} 0 0;
+	margin: #{2 * structure.$size__spacing-unit} 0 0;
 
 	a {
-		color: $color__text-light;
-		transition: opacity $link_transition ease-in-out;
+		color: colors.$color__text-light;
+		transition: opacity transitions.$link_transition ease-in-out;
 	}
 
 	.footer-widgets {
-		padding: $size__spacing-unit 0 #{2 * $size__spacing-unit};
+		padding: structure.$size__spacing-unit 0 #{2 * structure.$size__spacing-unit};
 
 		.wrapper {
 			flex-wrap: wrap;
@@ -20,14 +25,14 @@
 	.footer-widgets .widget {
 		width: 100%;
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			flex: 1 0 0;
-			margin-right: #{2 * $size__spacing-unit};
-			min-width: calc( 50% - #{2 * $size__spacing-unit} );
+			margin-right: #{2 * structure.$size__spacing-unit};
+			min-width: calc( 50% - #{2 * structure.$size__spacing-unit} );
 		}
 
-		@include media( tablet ) {
-			min-width: calc( 25% - #{2 * $size__spacing-unit} );
+		@include utilities.media( tablet ) {
+			min-width: calc( 25% - #{2 * structure.$size__spacing-unit} );
 		}
 
 		&:last-child {
@@ -37,7 +42,7 @@
 
 	.widget-title,
 	.widgettitle {
-		color: $color__text-light;
+		color: colors.$color__text-light;
 		font-size: inherit;
 	}
 }
@@ -53,12 +58,12 @@
 
 .footer-branding {
 	.wrapper {
-		padding-top: $size__spacing-unit;
+		padding-top: structure.$size__spacing-unit;
 	}
 
 	.custom-logo-link,
 	.footer-logo-link {
-		margin-bottom: $size__spacing-unit;
+		margin-bottom: structure.$size__spacing-unit;
 		max-height: 76px;
 		max-width: 200px;
 
@@ -83,7 +88,7 @@
 	}
 
 	.footer-logo-large & {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			.custom-logo-link,
 			.footer-logo-link {
 				max-height: 120px;
@@ -93,7 +98,7 @@
 	}
 
 	.footer-logo-xlarge & {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			.custom-logo-link,
 			.footer-logo-link {
 				max-height: 160px;
@@ -104,20 +109,20 @@
 }
 
 .site-info {
-	color: $color__text-light;
-	padding-bottom: $size__spacing-unit;
+	color: colors.$color__text-light;
+	padding-bottom: structure.$size__spacing-unit;
 
 	.wrapper {
 		display: block;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			display: flex;
 
 			&.site-info-contain {
 				justify-content: flex-start;
 
 				> *:not( :first-child ) {
-					margin-left: $size__spacing-unit;
+					margin-left: structure.$size__spacing-unit;
 				}
 
 				> *:last-child {
@@ -138,26 +143,26 @@
 
 	a,
 	.copyright {
-		margin: #{0.25 * $size__spacing-unit} 0;
+		margin: #{0.25 * structure.$size__spacing-unit} 0;
 	}
 
 	.site-info-contain:first-child {
-		border-top: 1px solid $color__border;
-		padding-top: $size__spacing-unit;
+		border-top: 1px solid colors.$color__border;
+		padding-top: structure.$size__spacing-unit;
 	}
 
 	.widget-area {
 		.wrapper {
-			border-top: 1px solid $color__border;
+			border-top: 1px solid colors.$color__border;
 			justify-content: space-between;
-			padding: $size__spacing-unit 0 #{0.5 * $size__spacing-unit};
+			padding: structure.$size__spacing-unit 0 #{0.5 * structure.$size__spacing-unit};
 		}
 
 		.widget {
 			font-size: inherit;
 
-			@include media( mobile ) {
-				margin: 0 $size__spacing-unit 0 0;
+			@include utilities.media( mobile ) {
+				margin: 0 structure.$size__spacing-unit 0 0;
 
 				&:last-child {
 					margin-right: 0;
@@ -168,7 +173,7 @@
 		.widget-title,
 		.widgettitle {
 			display: inline-block;
-			margin: 0 $size__spacing-unit 0 0;
+			margin: 0 structure.$size__spacing-unit 0 0;
 		}
 
 		a {
@@ -184,20 +189,20 @@
 		}
 
 		ul {
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				display: inline;
 			}
 
 			li {
-				margin: #{0.3 * $size__spacing-unit} 0;
+				margin: #{0.3 * structure.$size__spacing-unit} 0;
 
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					display: inline-block;
-					margin: 0 $size__spacing-unit 0 0;
+					margin: 0 structure.$size__spacing-unit 0 0;
 
 					ul {
 						display: inline-block;
-						margin-left: $size__spacing-unit;
+						margin-left: structure.$size__spacing-unit;
 					}
 
 					&:last-child {
@@ -208,10 +213,10 @@
 
 			a {
 				display: inline-block;
-				padding: #{0.25 * $size__spacing-unit} 0;
+				padding: #{0.25 * structure.$size__spacing-unit} 0;
 
-				@include media( mobile ) {
-					padding: #{0.125 * $size__spacing-unit} 0;
+				@include utilities.media( mobile ) {
+					padding: #{0.125 * structure.$size__spacing-unit} 0;
 				}
 			}
 		}

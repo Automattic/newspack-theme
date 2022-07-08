@@ -1,3 +1,10 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'utilities';
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 // Rem output with px fallback
 @mixin font-size( $sizeValue: 1 ) {
 	font-size: ( $sizeValue * 16 ) * 1px;
@@ -23,22 +30,16 @@
 	clear: both;
 }
 
-// Column width with margin
-@mixin column-width( $numberColumns: 3 ) {
-	width: map-get( $columns, $numberColumns ) -
-		( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
-}
-
 @mixin filter-duotone {
 	&::before {
-		background: $color__primary;
+		background: colors.$color__primary;
 		mix-blend-mode: screen;
 		opacity: 0.1;
 		z-index: 2;
 	}
 
 	&::after {
-		background: $color__primary;
+		background: colors.$color__primary;
 		mix-blend-mode: multiply;
 		opacity: 0.8;
 		z-index: 3;
@@ -65,7 +66,7 @@
 
 @mixin post-section-dash {
 	&::before {
-		background: $color__text-light;
+		background: colors.$color__text-light;
 		content: '\020';
 		display: block;
 		height: 2px;
@@ -79,20 +80,20 @@
  * layers of box-shadow to add the border visually, which will render the border smoother. */
 
 @mixin box-shadow( $size ) {
-	box-shadow: 0 0 0 $size $color__text-light inset,
+	box-shadow: 0 0 0 $size colors.$color__text-light inset,
 		// Original border.
-		0 0 0 ( $size + 1px ) $color__text-light inset,
+		0 0 0 ( $size + 1px ) colors.$color__text-light inset,
 		// Antialiasing, inner edge.
-		0 0 1px 0 rgba( $color__text-light, 0.7 ); // Antialiasing, outer edge.
+		0 0 1px 0 rgba( colors.$color__text-light, 0.7 ); // Antialiasing, outer edge.
 }
 
 /* Calculates maximum width for post content */
 @mixin postContentMaxWidth() {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		max-width: $size__site-tablet-content;
 	}
 
-	@include media( desktop ) {
+	@include utilities.media( desktop ) {
 		max-width: $size__site-desktop-content;
 	}
 }
@@ -104,7 +105,7 @@
 	}
 
 	ul > li > a::before {
-		font-family: $font__body;
+		font-family: fonts.$font__body;
 		font-weight: normal;
 		content: '\2013\00a0'counters( submenu, '\2013\00a0', none );
 		counter-increment: submenu;
@@ -118,7 +119,7 @@
 			display: grid;
 			gap: 8px;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				align-items: center;
 				gap: $gap;
 				grid-template-areas:
@@ -130,19 +131,19 @@
 			> * {
 				margin: 0;
 
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: content;
 				}
 			}
 
 			> p:first-of-type {
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: input;
 				}
 			}
 
 			> .wp-block-button {
-				@include media( mobile ) {
+				@include utilities.media( mobile ) {
 					grid-area: button;
 				}
 
@@ -171,7 +172,7 @@
 		display: grid;
 		gap: 8px;
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			gap: $gap;
 			grid-template-areas:
 				'input button'
@@ -190,11 +191,11 @@
 			}
 
 			.components-text-control__input {
-				border-color: $color__border;
+				border-color: colors.$color__border;
 				border-radius: 0;
 			}
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: input;
 			}
 		}
@@ -208,7 +209,7 @@
 				width: 100%;
 			}
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: button;
 			}
 		}
@@ -216,11 +217,11 @@
 		p {
 			font-size: 0.7em;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				grid-area: content;
 			}
 		}
 	}
 }
 
-@import 'utilities';
+@include meta.load-css( 'utilities' );

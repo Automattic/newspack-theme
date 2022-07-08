@@ -1,8 +1,12 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 .gallery {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin-bottom: calc( 1.5 * #{$size__spacing-unit} );
+	margin-bottom: calc( 1.5 * #{structure.$size__spacing-unit} );
 }
 
 .gallery-item {
@@ -31,11 +35,11 @@
 
 .gallery-caption {
 	display: block;
-	font-family: $font__heading;
-	font-size: $font__size-xs;
-	line-height: $font__line-height-pre;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-xs;
+	line-height: fonts.$font__line-height-pre;
 	margin: 0;
-	padding: ( $size__spacing-unit * 0.5 );
+	padding: ( structure.$size__spacing-unit * 0.5 );
 }
 
 .gallery-item > div > a {
@@ -46,6 +50,6 @@
 	box-shadow: 0 0 0 0 transparent;
 
 	&:focus {
-		box-shadow: 0 0 0 2px rgba( $color__primary, 1 );
+		box-shadow: 0 0 0 2px rgba( colors.$color__primary, 1 );
 	}
 }

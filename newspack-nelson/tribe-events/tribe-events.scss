@@ -2,10 +2,13 @@
 // See: https://theeventscalendar.com/knowledgebase/k/basic-font-and-color-changes-with-css/
 
 // Import theme variables
-@import '../sass/variables-style/variables-style';
+@use '../sass/variables-style/variables-style';
 
 // Import TEC baseline styles
-@import '../../newspack-theme/sass/plugins/the-events-calendar';
+@use '../../newspack-theme/sass/plugins/the-events-calendar';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 // Theme-specific styles
 .tribe_community_edit .button.mb-cta {
@@ -14,25 +17,25 @@
 
 // Overlap styles
 .tec-wrapper {
-	background-color: $color__background-body;
-	padding-top: $size__spacing-unit 0;
+	background-color: colors.$color__background-body;
+	padding-top: structure.$size__spacing-unit 0;
 
-	@include media( tablet ) {
-		border-top: 4px solid $color__primary-variation;
-		padding: #{3 * $size__spacing-unit} #{2 * $size__spacing-unit} 0;
+	@include utilities.media( tablet ) {
+		border-top: 4px solid colors.$color__primary-variation;
+		padding: #{3 * structure.$size__spacing-unit} #{2 * structure.$size__spacing-unit} 0;
 	}
 
-	@include media( desktop ) {
-		padding-left: #{3 * $size__spacing-unit};
-		padding-right: #{3 * $size__spacing-unit};
+	@include utilities.media( desktop ) {
+		padding-left: #{3 * structure.$size__spacing-unit};
+		padding-right: #{3 * structure.$size__spacing-unit};
 	}
 
 	#tribe-events-pg-template,
 	.tribe-events-l-container {
-		padding: $size__spacing-unit 0 0;
+		padding: structure.$size__spacing-unit 0 0;
 	}
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		#tribe-events-pg-template {
 			padding: 0;
 		}
@@ -45,12 +48,12 @@
 
 .single-tribe_events {
 	.site-content {
-		@include media( tablet ) {
-			margin-top: #{-3.5 * $size__spacing-unit};
+		@include utilities.media( tablet ) {
+			margin-top: #{-3.5 * structure.$size__spacing-unit};
 		}
 
-		@include media( desktop ) {
-			margin-top: #{-6 * $size__spacing-unit};
+		@include utilities.media( desktop ) {
+			margin-top: #{-6 * structure.$size__spacing-unit};
 		}
 	}
 }

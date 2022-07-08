@@ -1,8 +1,12 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 .highlight-menu-contain {
-	margin-top: #{0.25 * $size__spacing-unit};
+	margin-top: #{0.25 * structure.$size__spacing-unit};
 	.wrapper {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
+		font-family: fonts.$font__heading;
+		font-size: fonts.$font__size-xs;
 		height: 1.5em;
 		overflow: hidden;
 		word-wrap: break-word;
@@ -25,17 +29,17 @@
 	li {
 		display: inline-block;
 		height: 1.5em;
-		margin-right: #{0.5 * $size__spacing-unit};
+		margin-right: #{0.5 * structure.$size__spacing-unit};
 	}
 
 	.menu-label {
-		color: $color__primary;
+		color: colors.$color__primary;
 		font-weight: bold;
 	}
 
 	a,
 	a:visited {
-		color: $color__link;
+		color: colors.$color__link;
 	}
 }
 

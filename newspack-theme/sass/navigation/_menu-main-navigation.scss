@@ -1,3 +1,6 @@
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 /** === Main menu === */
 
 .nav1 {
@@ -5,7 +8,7 @@
 		> li {
 			> a {
 				color: inherit;
-				padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+				padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 				font-weight: 700;
 
 				&:hover {
@@ -19,7 +22,7 @@
 /* Desktop-specific styles */
 .site-header {
 	.nav1 {
-		font-size: $font__size-xs;
+		font-size: fonts.$font__size-xs;
 
 		.main-menu {
 			display: inline-block;
@@ -28,7 +31,7 @@
 				color: #555;
 				display: inline-block;
 				line-height: 1.25;
-				margin-right: #{0.25 * $size__spacing-unit};
+				margin-right: #{0.25 * structure.$size__spacing-unit};
 
 				> a {
 					color: inherit;
@@ -70,13 +73,13 @@
 
 // Header - default height
 .h-dh .site-header .nav1 .main-menu > li {
-	padding: calc( #{$size__spacing-unit} * 0.5 ) 0;
+	padding: calc( #{structure.$size__spacing-unit} * 0.5 ) 0;
 }
 
 // Header - short height
 .h-sh {
 	.site-header .nav1 .main-menu > li {
-		padding: #{0.25 * $size__spacing-unit} 0;
+		padding: #{0.25 * structure.$size__spacing-unit} 0;
 
 		> .sub-menu {
 			padding-top: 20px;

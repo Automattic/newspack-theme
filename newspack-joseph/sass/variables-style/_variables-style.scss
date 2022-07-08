@@ -1,6 +1,15 @@
 // Import the default variable values.
-@import '../../../newspack-theme/sass/variables-site/variables-site';
+@use 'sass:color';
+@use '../../../newspack-theme/sass/variables-site/colors';
+@use '../../../newspack-theme/sass/variables-site/fonts';
 
 // Now overlay our style-specific ones, so we're only overriding specific variables.
-@import 'colors';
-@import 'fonts';
+colors.$color__text-light: color.adjust( colors.$color__text-main, $lightness: 20% );
+colors.$color__background-hr: color.adjust( colors.$color__text-main, $lightness: 20% );
+colors.$color__border: colors.$color__text-main;
+colors.$color__background-button: colors.$color__text-main;
+colors.$color__secondary-variation: color.adjust( colors.$color__text-main, $lightness: 20% );
+colors.$color__background-button-hover: color.adjust( colors.$color__text-main, $lightness: 20% );
+
+fonts.$font__heading: 'Old Standard TT', georgia, serif;
+fonts.$font__body: 'EB Garamond', georgia, serif;

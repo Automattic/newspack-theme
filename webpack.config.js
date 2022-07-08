@@ -1,7 +1,7 @@
 /**
  **** WARNING: No ES6 modules here. Not transpiled! ****
  */
-/* eslint-disable import/no-nodejs-modules */
+/* eslint-disable import/no-nodejs-modules, @typescript-eslint/no-var-requires */
 
 /**
  * External dependencies
@@ -9,7 +9,6 @@
 const fs = require( 'fs' );
 const getBaseWebpackConfig = require( 'newspack-scripts/config/getWebpackConfig' );
 const path = require( 'path' );
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 // Add all js/src/*.js scripts
 const entry = fs
@@ -29,7 +28,7 @@ fs.readdirSync( path.join( __dirname, 'newspack-theme/js', 'src' ) )
 	.filter( script =>
 		fs.existsSync( path.join( __dirname, 'newspack-theme/js', 'src', script, 'index.js' ) )
 	)
-	.forEach( function( script ) {
+	.forEach( function ( script ) {
 		entry[ script ] = path.join( __dirname, 'newspack-theme/js', 'src', script, 'index.js' );
 	} );
 
