@@ -498,7 +498,7 @@ hr {
 .sponsors-show-authors {
 	div.sponsor-bio,
 	div.sponsor-bio + .sponsor-bio {
-		border-color: $color__text-main;
+		border-color: colors.$color__text-main;
 		border-style: dotted;
 	}
 }

@@ -605,7 +605,7 @@ body.single {
 		}
 	}
 
-	@include media( mobileonly ) {
+	@include utilities.media( mobileonly ) {
 		.entry-sponsor {
 			gap: 0.5em;
 			justify-content: center;
@@ -626,7 +626,7 @@ body.single {
 		justify-content: center;
 	}
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		.featured-image-beside {
 			.sponsor-byline {
 				margin-right: 0;
