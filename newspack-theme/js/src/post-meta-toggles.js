@@ -15,11 +15,8 @@ const PostStatusExtensions = ( { meta, postType, updateMetaValue } ) => {
 	if ( ! meta ) {
 		return null;
 	}
-	const {
-		newspack_hide_page_title,
-		newspack_hide_updated_date,
-		newspack_show_share_buttons,
-	} = meta;
+	const { newspack_hide_page_title, newspack_hide_updated_date, newspack_show_share_buttons } =
+		meta;
 	const {
 		hide_date = [],
 		hide_title = [],
