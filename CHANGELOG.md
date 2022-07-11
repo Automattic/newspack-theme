@@ -1,3 +1,31 @@
+# [1.61.0](https://github.com/Automattic/newspack-theme/compare/v1.60.0...v1.61.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* correct issue with duplicated Trust Indicator role in author bio ([#1848](https://github.com/Automattic/newspack-theme/issues/1848)) ([0034432](https://github.com/Automattic/newspack-theme/commit/003443253746d3cdb7101422e3eb4bbf19c5d64f))
+* eslint error ([#1863](https://github.com/Automattic/newspack-theme/issues/1863)) ([a07f2de](https://github.com/Automattic/newspack-theme/commit/a07f2defd508080b8817fcbbb80096419da272eb))
+* update check for theme's default template ([#1858](https://github.com/Automattic/newspack-theme/issues/1858)) ([f46b79b](https://github.com/Automattic/newspack-theme/commit/f46b79b5838286c2eef9758dfb5c7035eefbe607))
+
+
+### Features
+
+* deprecate support for Hoefler & Co. fonts ([#1857](https://github.com/Automattic/newspack-theme/issues/1857)) ([db7af77](https://github.com/Automattic/newspack-theme/commit/db7af77f03ee7c6a54614a596840684eee2646b3))
+
+# [1.61.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.60.0...v1.61.0-alpha.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* correct issue with duplicated Trust Indicator role in author bio ([#1848](https://github.com/Automattic/newspack-theme/issues/1848)) ([0034432](https://github.com/Automattic/newspack-theme/commit/003443253746d3cdb7101422e3eb4bbf19c5d64f))
+* eslint error ([#1863](https://github.com/Automattic/newspack-theme/issues/1863)) ([a07f2de](https://github.com/Automattic/newspack-theme/commit/a07f2defd508080b8817fcbbb80096419da272eb))
+* update check for theme's default template ([#1858](https://github.com/Automattic/newspack-theme/issues/1858)) ([f46b79b](https://github.com/Automattic/newspack-theme/commit/f46b79b5838286c2eef9758dfb5c7035eefbe607))
+
+
+### Features
+
+* deprecate support for Hoefler & Co. fonts ([#1857](https://github.com/Automattic/newspack-theme/issues/1857)) ([db7af77](https://github.com/Automattic/newspack-theme/commit/db7af77f03ee7c6a54614a596840684eee2646b3))
+
 # [1.60.0](https://github.com/Automattic/newspack-theme/compare/v1.59.0...v1.60.0) (2022-06-27)
 
 
