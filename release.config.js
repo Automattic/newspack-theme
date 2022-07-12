@@ -18,14 +18,14 @@ module.exports = {
 			{
 				// build script is run before semantic-release, so the version in *.css files
 				// have to be updated explicitly
-				files: [ 'newspack-*/sass/style.scss', 'newspack-*/style.css' ],
+				files: [ 'newspack-*/sass/theme-description.scss', 'newspack-*/style.css' ],
 				callback: 'npm run release:archive',
 			},
 		],
 		{
 			path: '@semantic-release/git',
 			assets: [
-				...THEMES.map( name => `${ name }/sass/style.scss` ),
+				...THEMES.map( name => `${ name }/sass/theme-description.scss` ),
 				'package.json',
 				'package-lock.json',
 				'CHANGELOG.md',
