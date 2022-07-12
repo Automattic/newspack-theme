@@ -1,8 +1,30 @@
+@use '../variables-site/colors';
+
 // Listings
 .newspack-listings {
 	&.hide-date.hide-author {
 		.entry-subhead {
 			padding: 0;
 		}
+	}
+}
+
+.wpnbha .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.wpnbpc .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.archive .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.search .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.blog .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.newspack-listings__curated-list .featured-listing .newspack-listings__listing-title {
+	&::before {
+		border: 0.25em solid colors.$color__primary; // half the width
+		border-top: 0;
+		border-bottom: 6px solid transparent; // the 'cut in'
+		content: '';
+		display: inline-block;
+		height: 0.8em;
+		margin-right: 0.3em;
+		position: relative;
+		top: 0.05em;
+		width: 0.5em;
 	}
 }
