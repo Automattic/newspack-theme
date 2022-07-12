@@ -603,6 +603,9 @@ add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
 
 /**
  * Check for additional allowed blocks
+ * 
+ * Add this flag to the wp-config.php to allow more blocks, formatted in a array --
+ * for example: `define( 'NEWSPACK_FSE_BLOCKS_ALLOWED', ['core/avatar', 'core/loginout'] );`
  *
  * @return array List of allowed FSE blocks.
  */
