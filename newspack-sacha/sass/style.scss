@@ -588,13 +588,64 @@ cite {
 }
 
 // Sponsored Content
-.single .sponsor-label {
-	justify-content: center;
-}
+body.single {
+	.sponsor-label {
+		justify-content: center;
+	}
 
-.single .show-info .sponsor-info {
-	left: 50%;
-	margin-left: -150px;
+	.show-info .sponsor-info {
+		left: 50%;
+		margin-left: -150px;
+	}
+
+	.entry-meta {
+		+ .entry-sponsor {
+			text-align: left;
+			justify-content: center;
+		}
+	}
+
+	@include utilities.media( mobileonly ) {
+		.entry-sponsor {
+			gap: 0.5em;
+			justify-content: center;
+
+			.sponsor-logos,
+			.sponsor-logos > *:last-child {
+				margin: 0;
+			}
+
+			.sponsor-logos {
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.featured-image-behind .entry-sponsor {
+		justify-content: center;
+	}
+
+	@include utilities.media( tablet ) {
+		.featured-image-beside {
+			.sponsor-byline {
+				margin-right: 0;
+			}
+
+			.sponsor-logos {
+				border-right: 0;
+				padding-right: 0;
+			}
+
+			.entry-sponsor {
+				justify-content: center;
+			}
+		}
+
+		&.sponsors-show-authors .featured-image-beside .sponsor-byline > span:first-child {
+			display: inline;
+		}
+	}
 }
 
 .sponsor-bio {

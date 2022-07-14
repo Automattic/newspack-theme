@@ -56,10 +56,6 @@ div.wpnbha .article-section-title {
 	}
 }
 
-.single .cat-links {
-	font-size: fonts.$font__size_base;
-}
-
 .search,
 .blog,
 .archive {
@@ -80,6 +76,10 @@ div.wpnbha .article-section-title {
 }
 
 .single {
+	.cat-links {
+		font-size: fonts.$font__size_base;
+	}
+
 	@include utilities.media( tablet ) {
 		.entry-meta {
 			align-items: center;
@@ -434,4 +434,8 @@ div.wpnbha .article-section-title {
 // Sponsored Content
 .single .sponsor-label {
 	font-size: fonts.$font__size-sm;
+
+	+ .cat-links {
+		font-size: 0.9rem;
+	}
 }
