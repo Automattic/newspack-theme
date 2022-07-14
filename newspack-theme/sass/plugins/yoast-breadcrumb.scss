@@ -1,18 +1,21 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+
 .site-breadcrumb {
-	color: $color__text-light;
+	color: colors.$color__text-light;
 
 	.wrapper {
 		padding: 0.5em 0;
 
 		> span {
-			font-family: $font__heading;
-			font-size: $font__size-xxs;
-			line-height: $font__line-height-heading;
+			font-family: fonts.$font__heading;
+			font-size: fonts.$font__size-xxs;
+			line-height: fonts.$font__line-height-heading;
 		}
 	}
 
 	.breadcrumb_last {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 
 	// Hide on homepage and if the Featured Image is Behind or Beside
@@ -27,7 +30,7 @@
 		padding-top: 0.25rem;
 
 		.wrapper {
-			border-top: 1px solid $color__border;
+			border-top: 1px solid colors.$color__border;
 		}
 	}
 }

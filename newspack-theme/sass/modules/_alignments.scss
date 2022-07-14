@@ -1,12 +1,16 @@
+@use '../mixins/mixins-master';
+@use '../mixins/utilities';
+@use '../variables-site/structure';
+
 .alignleft {
 	/*rtl:ignore*/
 	float: left;
 	/*rtl:ignore*/
-	margin-right: $size__spacing-unit;
+	margin-right: structure.$size__spacing-unit;
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		/*rtl:ignore*/
-		margin-right: calc( 2 * #{$size__spacing-unit} );
+		margin-right: calc( 2 * #{structure.$size__spacing-unit} );
 	}
 }
 
@@ -14,15 +18,15 @@
 	/*rtl:ignore*/
 	float: right;
 	/*rtl:ignore*/
-	margin-left: $size__spacing-unit;
+	margin-left: structure.$size__spacing-unit;
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		/*rtl:ignore*/
-		margin-left: calc( 2 * #{$size__spacing-unit} );
+		margin-left: calc( 2 * #{structure.$size__spacing-unit} );
 	}
 }
 
 .aligncenter {
 	clear: both;
-	@include center-block;
+	@include mixins-master.center-block;
 }

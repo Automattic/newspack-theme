@@ -1,11 +1,16 @@
+@use '../../mixins/utilities';
+@use '../../variables-site/colors';
+@use '../../variables-site/fonts';
+@use '../../variables-site/structure';
+
 .widget {
-	font-family: $font__heading;
-	font-size: $font__size-sm;
-	margin: 0 0 $size__spacing-unit;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-sm;
+	margin: 0 0 structure.$size__spacing-unit;
 	word-wrap: break-word;
 
-	@include media( tablet ) {
-		margin: 0 0 #{$size__spacing-unit * 3};
+	@include utilities.media( tablet ) {
+		margin: 0 0 #{structure.$size__spacing-unit * 3};
 
 		&.widget_block {
 			margin: 0 0 32px;
@@ -28,7 +33,7 @@
 
 	a {
 		&:hover {
-			color: $color__primary-variation;
+			color: colors.$color__primary-variation;
 		}
 	}
 }
@@ -46,10 +51,10 @@
 		list-style: none;
 
 		li {
-			font-family: $font__heading;
-			margin: #{0.125 * $size__spacing-unit} 0;
+			font-family: fonts.$font__heading;
+			margin: #{0.125 * structure.$size__spacing-unit} 0;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				margin: 0;
 			}
 
@@ -60,10 +65,10 @@
 
 		a {
 			display: inline-block;
-			padding: #{0.25 * $size__spacing-unit} 0;
+			padding: #{0.25 * structure.$size__spacing-unit} 0;
 
-			@include media( mobile ) {
-				padding: #{0.125 * $size__spacing-unit} 0;
+			@include utilities.media( mobile ) {
+				padding: #{0.125 * structure.$size__spacing-unit} 0;
 			}
 		}
 	}
@@ -72,21 +77,21 @@
 .widget_recent_comments,
 .widget_recent_entries {
 	ul li {
-		margin-bottom: #{0.75 * $size__spacing-unit};
+		margin-bottom: #{0.75 * structure.$size__spacing-unit};
 	}
 }
 
 .widget_recent_entries {
 	a {
 		color: inherit;
-		font-size: $font__size-lg;
+		font-size: fonts.$font__size-lg;
 		font-weight: 700;
-		line-height: $font__line-height-heading;
+		line-height: fonts.$font__line-height-heading;
 	}
 
 	.post-date {
 		color: inherit;
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 		display: block;
 		opacity: 0.8;
 	}
@@ -118,8 +123,8 @@
 .jetpack_subscription_widget {
 	.error,
 	div {
-		background-color: $color__background-pre;
-		padding: $size__spacing-unit;
+		background-color: colors.$color__background-pre;
+		padding: structure.$size__spacing-unit;
 
 		p {
 			margin: 0;
@@ -134,11 +139,11 @@
 	}
 
 	img {
-		margin-right: #{0.5 * $size__spacing-unit};
+		margin-right: #{0.5 * structure.$size__spacing-unit};
 	}
 
 	ul ul {
-		margin: 0 0 #{1.5 * $size__spacing-unit} #{1.5 * $size__spacing-unit};
+		margin: 0 0 #{1.5 * structure.$size__spacing-unit} #{1.5 * structure.$size__spacing-unit};
 	}
 }
 
@@ -152,20 +157,20 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: $font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }
 
 .single #secondary {
-	padding-top: calc( #{$size__spacing-unit} * 1.5 );
+	padding-top: calc( #{structure.$size__spacing-unit} * 1.5 );
 }
 
 .page #secondary {
-	padding-top: $size__spacing-unit;
+	padding-top: structure.$size__spacing-unit;
 }
 
 .above-content {
-	margin: $size__spacing-unit 0 0;
+	margin: structure.$size__spacing-unit 0 0;
 }
 
 // Header widgets
@@ -203,11 +208,11 @@
 }
 
 .above-footer-widgets {
-	margin-top: #{2 * $size__spacing-unit};
+	margin-top: #{2 * structure.$size__spacing-unit};
 }
 
 .h-db .above-header-widgets {
-	border-bottom: 1px solid $color__border;
+	border-bottom: 1px solid colors.$color__border;
 }
 
 // The Subpage header + special featured image placements also can't really support an ad in this spot.

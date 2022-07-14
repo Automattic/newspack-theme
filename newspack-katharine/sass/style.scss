@@ -1,27 +1,11 @@
-/*
-Theme Name: Newspack Katharine
-Theme URI:
-Author: Automattic
-Author URI: https://newspack.blog
-Description:
-Requires at least: WordPress 4.9.6
-Version: 1.61.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Template: newspack-theme
-Text Domain: newspack-katharine
-Tags:
-AMP: true
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-base';
+@use 'theme-description';
+@use 'sass:color';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 // Header
 
@@ -29,15 +13,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .h-sb {
 	.top-header-contain,
 	.middle-header-contain {
-		background-color: $color__background-dark;
+		background-color: colors.$color__background-dark;
 	}
 
 	.top-header-contain {
-		border-color: lighten( $color__background-dark, 5% );
+		border-color: color.adjust( colors.$color__background-dark, $lightness: 5% );
 	}
 
 	.bottom-header-contain {
-		background-color: darken( $color__background-dark, 5% );
+		background-color: color.adjust( colors.$color__background-dark, $lightness: -5% );
 	}
 }
 
@@ -53,14 +37,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .cat-links,
 .archive .page-title,
 #secondary .widgettitle {
-	color: $color__primary;
+	color: colors.$color__primary;
 
 	&::before {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: block;
 		height: 5px;
-		margin: 0 0 $size__spacing-unit;
+		margin: 0 0 structure.$size__spacing-unit;
 		width: 32px;
 	}
 }
@@ -106,20 +90,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 div.wpnbha .article-section-title,
 .cat-links,
 .archive .page-title {
-	margin: 0 0 #{1.5 * $size__spacing-unit};
+	margin: 0 0 #{1.5 * structure.$size__spacing-unit};
 }
 
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: $font__size-xs;
+	font-size: fonts.$font__size-xs;
 }
 
 .blog,
 .search,
 .archive {
 	.cat-links {
-		margin-bottom: #{0.5 * $size__spacing-unit};
+		margin-bottom: #{0.5 * structure.$size__spacing-unit};
 
 		&::before {
 			display: none;
@@ -130,41 +114,41 @@ div.wpnbha .article-section-title,
 .cat-links a,
 .cat-links a:hover,
 .cat-links a:visited {
-	color: $color__primary;
+	color: colors.$color__primary;
 }
 
 .author-bio {
 	h2 {
 		color: inherit;
-		font-size: $font__size-md;
-		margin: 0 0 #{0.5 * $size__spacing-unit};
+		font-size: fonts.$font__size-md;
+		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
 
 		&::before {
 			display: none;
 		}
 
 		span {
-			color: $color__text-light;
-			font-size: $font__size-xs;
+			color: colors.$color__text-light;
+			font-size: fonts.$font__size-xs;
 		}
 	}
 }
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 
 //! Newspack Article Block
 .entry .wpnbha.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: $color__text-main;
+	border-bottom-color: colors.$color__text-main;
 }
 
 .wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category ) .post-has-image {
 	.entry-title {
-		background-color: $color__background-body;
+		background-color: colors.$color__background-body;
 		margin-top: -1.5em;
 		padding: 0.5em 0.25em 0 0;
 		position: relative;
@@ -213,14 +197,14 @@ div.wpnbha .article-section-title,
 
 // Posts & Pages
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links a {
-			color: $color__background-body;
+			color: colors.$color__background-body;
 		}
 
 		.cat-links::before {
-			background-color: $color__background-body;
+			background-color: colors.$color__background-body;
 		}
 	}
 }
@@ -233,31 +217,31 @@ div.wpnbha .article-section-title,
 
 .entry-meta,
 .wpnbha article .entry-meta {
-	font-size: $font__size-xs;
+	font-size: fonts.$font__size-xs;
 }
 
 .single:not( .has-featured-image ) .entry-header,
 .single:not( .has-large-featured-image ) .entry-header {
-	border-bottom: 1px dotted $color__text-main;
+	border-bottom: 1px dotted colors.$color__text-main;
 }
 
 .entry .entry-footer {
-	color: $color__primary;
+	color: colors.$color__primary;
 }
 
 .entry .entry-footer a,
 .entry .entry-footer a:hover {
-	color: $color__text-main;
+	color: colors.$color__text-main;
 }
 
 .tags-links {
 	a {
-		background: $color__background-pre;
-		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
-		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+		background: colors.$color__background-pre;
+		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
+		padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 		&:hover {
-			background: lighten( $color__background-pre, 5% );
+			background: color.adjust( colors.$color__background-pre, $lightness: 5% );
 		}
 	}
 
@@ -266,10 +250,10 @@ div.wpnbha .article-section-title,
 	}
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	// Header - Solid background
 	.h-sb .featured-image-beside {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 	}
 }
 
@@ -281,11 +265,11 @@ figcaption,
 	text-align: left;
 
 	&::after {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: block;
 		height: 5px;
-		margin-top: #{0.75 * $size__spacing-unit};
+		margin-top: #{0.75 * structure.$size__spacing-unit};
 		width: 32px;
 	}
 }
@@ -299,7 +283,7 @@ figcaption,
 .wp-block-group.is-style-border,
 .post-navigation {
 	border-style: dotted;
-	border-color: $color__text-main;
+	border-color: colors.$color__text-main;
 }
 
 //! Pullquote
@@ -310,16 +294,16 @@ figcaption,
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
 	&.has-text-align-right:not( .alignleft ):not( .alignright ),
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			p {
-				font-size: $font__size-xl;
+				font-size: fonts.$font__size-xl;
 			}
 		}
 	}
@@ -327,14 +311,14 @@ figcaption,
 	blockquote {
 		p {
 			font-style: normal;
-			font-size: $font__size-lg;
+			font-size: fonts.$font__size-lg;
 
 			em {
 				font-style: italic;
 			}
 
-			@include media( tablet ) {
-				font-size: $font__size-xl;
+			@include utilities.media( tablet ) {
+				font-size: fonts.$font__size-xl;
 			}
 		}
 	}
@@ -346,7 +330,7 @@ figcaption,
 
 	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
-			padding-left: #{2 * $size__spacing-unit};
+			padding-left: #{2 * structure.$size__spacing-unit};
 		}
 
 		&::before {
@@ -374,14 +358,14 @@ figcaption,
 
 	&.alignleft,
 	&.alignright {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			blockquote p {
-				font-size: $font__size-lg;
+				font-size: fonts.$font__size-lg;
 			}
 		}
 
 		&:not( .is-style-solid-color ):not( .has-background ) {
-			padding-top: $size__spacing-unit;
+			padding-top: structure.$size__spacing-unit;
 
 			blockquote {
 				padding-left: 0;
@@ -401,7 +385,7 @@ figcaption,
 //! Newspack Article Block
 .wpnbha.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: $color__text-main;
+	border-bottom-color: colors.$color__text-main;
 }
 
 .wpnbha .cat-links {
@@ -412,7 +396,7 @@ figcaption,
 	a,
 	a:visited,
 	a:hover {
-		color: $color__text-light;
+		color: colors.$color__text-light;
 	}
 }
 
@@ -428,11 +412,11 @@ figcaption,
 
 .wp-block-separator,
 hr {
-	border-top: 1px dotted $color__text-main;
+	border-top: 1px dotted colors.$color__text-main;
 	background: transparent !important;
 
 	&.has-background {
-		border-top: 1px dotted currentColor;
+		border-top: 1px dotted currentcolor;
 
 		&.is-style-dots {
 			border: 0;
@@ -443,20 +427,20 @@ hr {
 // Archives
 
 .archive .page-title {
-	font-size: $font__size-sm;
-	margin-bottom: $size__spacing-unit;
+	font-size: fonts.$font__size-sm;
+	margin-bottom: structure.$size__spacing-unit;
 
 	.page-description {
-		font-size: $font__size-xxxxl;
-		margin-top: $size__spacing-unit;
+		font-size: fonts.$font__size-xxxxl;
+		margin-top: structure.$size__spacing-unit;
 	}
 }
 
 // Site Footer
 
 .site-footer {
-	background-color: $color__background-dark;
-	color: $color__background-body;
+	background-color: colors.$color__background-dark;
+	color: colors.$color__background-body;
 
 	a,
 	a:hover,
@@ -471,10 +455,10 @@ hr {
 }
 
 .footer-branding {
-	margin-bottom: #{2 * $size__spacing-unit};
+	margin-bottom: #{2 * structure.$size__spacing-unit};
 
-	@include media( tablet ) {
-		padding-top: #{2 * $size__spacing-unit};
+	@include utilities.media( tablet ) {
+		padding-top: #{2 * structure.$size__spacing-unit};
 	}
 
 	.wrapper {
@@ -483,7 +467,7 @@ hr {
 }
 
 .site-info {
-	color: $color__background-body;
+	color: colors.$color__background-body;
 
 	.site-info-contain:first-child,
 	.widget-area .wrapper {
@@ -500,7 +484,7 @@ hr {
 .site-breadcrumb {
 	.has-highlight-menu & {
 		.wrapper {
-			border-top-color: currentColor;
+			border-top-color: currentcolor;
 			border-top-style: dotted;
 		}
 	}
@@ -509,4 +493,12 @@ hr {
 // Sponsored Content
 .featured-image-beside .sponsor-label .sponsor-info a {
 	color: #fff;
+}
+
+.sponsors-show-authors {
+	div.sponsor-bio,
+	div.sponsor-bio + .sponsor-bio {
+		border-color: colors.$color__text-main;
+		border-style: dotted;
+	}
 }

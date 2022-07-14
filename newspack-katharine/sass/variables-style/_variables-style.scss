@@ -1,5 +1,6 @@
 // Import the default variable values.
-@import '../../../newspack-theme/sass/variables-site/variables-site';
+@use '../../../newspack-theme/sass/variables-site/fonts';
 
 // Now overlay our style-specific ones, so we're only overriding specific variables.
-@import 'fonts';
+fonts.$font__heading: 'Barlow', 'Helvetica', sans-serif;
+fonts.$font__body: 'Barlow', 'Helvetica', sans-serif;

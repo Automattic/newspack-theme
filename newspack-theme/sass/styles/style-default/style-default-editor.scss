@@ -1,9 +1,13 @@
+@use '../../variables-site/colors';
+@use '../../variables-site/fonts';
+@use '../../variables-site/structure';
+
 .accent-header,
 .article-section-title {
-	border-bottom: 4px solid $color__border;
-	color: $color__primary;
-	font-size: $font__size-sm;
+	border-bottom: 4px solid colors.$color__border;
+	color: colors.$color__primary;
+	font-size: fonts.$font__size-sm;
 	margin-top: 0;
-	margin-bottom: #{$size__spacing-unit * 0.75};
-	padding: 0 0 #{$size__spacing-unit * 0.33};
+	margin-bottom: #{structure.$size__spacing-unit * 0.75};
+	padding: 0 0 #{structure.$size__spacing-unit * 0.33};
 }

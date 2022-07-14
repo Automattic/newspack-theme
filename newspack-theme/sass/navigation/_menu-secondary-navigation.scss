@@ -1,3 +1,6 @@
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 .nav2 {
 	ul,
 	li {
@@ -8,7 +11,7 @@
 
 	a {
 		color: inherit;
-		padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+		padding: #{0.125 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit};
 	}
 
 	> ul > li > a:hover {
@@ -27,7 +30,7 @@
 		}
 
 		li {
-			margin-right: #{$size__spacing-unit};
+			margin-right: #{structure.$size__spacing-unit};
 		}
 
 		> li:first-child a {
@@ -35,7 +38,7 @@
 		}
 
 		a {
-			font-size: $font__size-xs;
+			font-size: fonts.$font__size-xs;
 		}
 	}
 }

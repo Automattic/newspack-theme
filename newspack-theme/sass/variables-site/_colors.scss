@@ -1,8 +1,9 @@
+@use 'sass:color';
 // Custom Colors - defaults
 $color__primary: #36f;
 $color__primary-variation: #2240d5;
 $color__secondary: #555;
-$color__secondary-variation: darken( $color__secondary, 10% );
+$color__secondary-variation: color.adjust( $color__secondary, $lightness: -10% );
 $color__highlight: #fed850;
 
 // Backgrounds
@@ -14,7 +15,7 @@ $color__background-button: $color__secondary;
 $color__background-button-hover: #111;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-$color__background_selection: mix(
+$color__background_selection: color.mix(
 	$color__background-body,
 	$color__primary,
 	75%
@@ -24,7 +25,7 @@ $color__background-dark: #333;
 // Text
 $color__text-main: #111;
 $color__text-light: #515151;
-$color__text-hover: lighten( #111, 22.5% );
+$color__text-hover: color.adjust( #111, $lightness: 22.5% );
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;

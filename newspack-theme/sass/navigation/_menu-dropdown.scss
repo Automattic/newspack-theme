@@ -1,3 +1,8 @@
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+@use '../mixins/utilities';
+
 /** === Dropdown menus === */
 
 .dd-menu {
@@ -7,7 +12,7 @@
 		border: none;
 		padding: 0;
 		margin: 0;
-		font-family: $font__heading;
+		font-family: fonts.$font__heading;
 		line-height: 1.2;
 		text-decoration: none;
 		background: transparent;
@@ -23,7 +28,7 @@
 		}
 
 		&:focus {
-			outline: 1px dotted currentColor;
+			outline: 1px dotted currentcolor;
 			outline-offset: -4px;
 		}
 
@@ -54,11 +59,11 @@
 			&.menu-item-has-children {
 				.submenu-expand {
 					position: absolute;
-					width: calc( 24px + #{$size__spacing-unit} );
+					width: calc( 24px + #{structure.$size__spacing-unit} );
 					bottom: 0;
 					color: white;
 					line-height: 1;
-					padding: calc( 0.5 * #{$size__spacing-unit} );
+					padding: calc( 0.5 * #{structure.$size__spacing-unit} );
 					margin-right: 0;
 
 					svg {
@@ -86,7 +91,7 @@
 		&.menu-item-has-children {
 			position: inherit;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				position: relative;
 			}
 
@@ -114,7 +119,7 @@
 
 .site-header .dd-menu {
 	> ul > li {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			&.menu-item-has-children > a {
 				padding-right: 0;
 			}
@@ -126,7 +131,7 @@
 			&::before {
 				border-style: solid;
 				border-width: 0 8px 8px 8px;
-				border-color: transparent transparent $color__background-dark transparent;
+				border-color: transparent transparent colors.$color__background-dark transparent;
 				content: '';
 				display: inline-block;
 				height: 0;
@@ -139,7 +144,7 @@
 	}
 
 	.sub-menu {
-		color: $color__background-body;
+		color: colors.$color__background-body;
 		display: none;
 		position: absolute;
 		opacity: 0;
@@ -148,12 +153,13 @@
 		z-index: 99999;
 
 		a {
-			background-color: $color__background-dark;
-			color: $color__background-body;
+			background-color: colors.$color__background-dark;
+			color: colors.$color__background-body;
 			display: block;
-			line-height: $font__line-height-heading;
-			padding: calc( 0.75 * #{$size__spacing-unit} ) calc( 24px + #{$size__spacing-unit} )
-				calc( 0.75 * #{$size__spacing-unit} ) $size__spacing-unit;
+			line-height: fonts.$font__line-height-heading;
+			padding: calc( 0.75 * #{structure.$size__spacing-unit} )
+				calc( 24px + #{structure.$size__spacing-unit} )
+				calc( 0.75 * #{structure.$size__spacing-unit} ) structure.$size__spacing-unit;
 
 			&:hover,
 			&:focus {
@@ -163,7 +169,7 @@
 
 		.submenu-expand {
 			right: -5px;
-			top: #{0.65 * $size__spacing-unit};
+			top: #{0.65 * structure.$size__spacing-unit};
 			transform: rotate( -90deg );
 
 			svg {
@@ -188,7 +194,7 @@
 		bottom: auto;
 		height: auto;
 		transform: none;
-		width: #{12.5 * $size__spacing-unit};
+		width: #{12.5 * structure.$size__spacing-unit};
 	}
 
 	.sub-menu .menu-item-has-children:hover > .sub-menu,

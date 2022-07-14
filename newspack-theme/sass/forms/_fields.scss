@@ -1,3 +1,6 @@
+@use '../variables-site/colors';
+@use '../variables-site/structure';
+
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -16,18 +19,18 @@ input[type='zip'],
 input[type='color'],
 textarea {
 	-webkit-backface-visibility: hidden;
-	background: $color__background-input;
-	border: solid 1px $color__border;
+	background: colors.$color__background-input;
+	border: solid 1px colors.$color__border;
 	box-sizing: border-box;
 	outline: none;
-	padding: #{0.36 * $size__spacing-unit} #{0.66 * $size__spacing-unit};
+	padding: #{0.36 * structure.$size__spacing-unit} #{0.66 * structure.$size__spacing-unit};
 	-webkit-appearance: none;
 	outline-offset: 0;
 	border-radius: 0;
 
 	&:focus {
-		border-color: $color__text-main;
-		outline: thin solid rgba( $color__text-main, 0.25 );
+		border-color: colors.$color__text-main;
+		outline: thin solid rgba( colors.$color__text-main, 0.25 );
 		outline-offset: -4px;
 	}
 }
@@ -48,7 +51,7 @@ textarea {
 
 form {
 	p {
-		margin: $size__spacing-unit 0;
+		margin: structure.$size__spacing-unit 0;
 	}
 }
 
@@ -56,7 +59,7 @@ input[type='checkbox'] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: white;
-	border: solid 1px $color__border;
+	border: solid 1px colors.$color__border;
 	border-radius: 2px;
 	color: white;
 	cursor: pointer;
@@ -79,7 +82,7 @@ input[type='checkbox'] {
 	}
 
 	&:checked {
-		background: $color__background-button;
+		background: colors.$color__background-button;
 		border-color: transparent;
 
 		&::before {
@@ -88,7 +91,7 @@ input[type='checkbox'] {
 	}
 
 	&:focus {
-		outline: 1.5px solid $color__background-button;
+		outline: 1.5px solid colors.$color__background-button;
 		outline-offset: 1px;
 	}
 

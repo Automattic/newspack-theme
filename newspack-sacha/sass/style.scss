@@ -1,50 +1,34 @@
-/*
-Theme Name: Newspack Sacha
-Theme URI:
-Author: Automattic
-Author URI: https://newspack.blog
-Description:
-Requires at least: WordPress 4.9.6
-Version: 1.61.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Template: newspack-theme
-Text Domain: newspack-sacha
-Tags:
-AMP: true
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-base';
+@use 'theme-description';
+@use 'sass:color';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 // Header
 // Solid Background
 .h-sb {
 	.top-header-contain,
 	.middle-header-contain {
-		background-color: $color__background-dark;
+		background-color: colors.$color__background-dark;
 	}
 
 	.top-header-contain {
-		border-color: lighten( $color__background-dark, 5% );
+		border-color: color.adjust( colors.$color__background-dark, $lightness: 5% );
 	}
 
 	.bottom-header-contain {
-		background-color: darken( $color__background-dark, 5% );
+		background-color: color.adjust( colors.$color__background-dark, $lightness: -5% );
 	}
 }
 
 // Subpage header with a solid background
 .h-sub.h-sb.single-featured-image-beside {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		.middle-header-contain {
-			color: $color__text-main;
+			color: colors.$color__text-main;
 		}
 
 		.alternative-logo {
@@ -75,15 +59,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #secondary .widgettitle,
 .article-section-title,
 .cat-links {
-	color: $color__primary;
-	margin-bottom: $size__spacing-unit;
+	color: colors.$color__primary;
+	margin-bottom: structure.$size__spacing-unit;
 	text-align: center;
 }
 
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: $font__size-xs;
+	font-size: fonts.$font__size-xs;
 }
 
 .accent-header,
@@ -95,18 +79,18 @@ div.wpnbha .article-section-title,
 
 	&::before,
 	&::after {
-		border-top: 1px solid $color__border;
+		border-top: 1px solid colors.$color__border;
 		content: '';
 		flex: 1 0 0.5rem;
 		height: 1px;
 	}
 
 	&::before {
-		margin-right: #{0.5 * $size__spacing-unit};
+		margin-right: #{0.5 * structure.$size__spacing-unit};
 	}
 
 	&::after {
-		margin-left: #{0.5 * $size__spacing-unit};
+		margin-left: #{0.5 * structure.$size__spacing-unit};
 	}
 }
 
@@ -121,14 +105,14 @@ div.wpnbha .article-section-title,
 	.article-section-title > span {
 		&::before,
 		&::after {
-			border-color: currentColor;
+			border-color: currentcolor;
 			opacity: 0.2;
 		}
 	}
 }
 
 .cat-links {
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 
 	a {
 		color: inherit;
@@ -156,7 +140,7 @@ figcaption,
 
 blockquote,
 cite {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-style: italic;
 
 	em,
@@ -167,11 +151,11 @@ cite {
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	background-color: $color__primary;
+	background-color: colors.$color__primary;
 	color: #fff;
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
-	font-size: $font__size-xxl;
+	font-size: fonts.$font__size-xxl;
 	padding: 0.4em;
 }
 
@@ -183,16 +167,16 @@ cite {
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
 	&.has-text-align-right:not( .alignleft ):not( .alignright ),
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			p {
-				font-size: $font__size-xl;
+				font-size: fonts.$font__size-xl;
 			}
 		}
 	}
@@ -204,14 +188,14 @@ cite {
 
 	&.alignleft,
 	&.alignright {
-		margin-top: #{1.5 * $size__spacing-unit};
-		margin-bottom: #{1.5 * $size__spacing-unit};
+		margin-top: #{1.5 * structure.$size__spacing-unit};
+		margin-bottom: #{1.5 * structure.$size__spacing-unit};
 		text-align: left;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			blockquote p,
 			&.is-style-solid-color blockquote p {
-				font-size: $font__size-lg;
+				font-size: fonts.$font__size-lg;
 			}
 		}
 	}
@@ -231,7 +215,7 @@ cite {
 		}
 
 		.entry-meta {
-			margin-bottom: $size__spacing-unit;
+			margin-bottom: structure.$size__spacing-unit;
 		}
 	}
 
@@ -239,33 +223,33 @@ cite {
 		text-align: center;
 
 		.entry-title {
-			margin-bottom: #{1.5 * $size__spacing-unit};
-			margin-top: $size__spacing-unit;
+			margin-bottom: #{1.5 * structure.$size__spacing-unit};
+			margin-top: structure.$size__spacing-unit;
 
-			@include media( tablet ) {
-				margin-bottom: #{3 * $size__spacing-unit};
+			@include utilities.media( tablet ) {
+				margin-bottom: #{3 * structure.$size__spacing-unit};
 				margin-left: auto;
 				margin-right: auto;
 				width: 85%;
 			}
 
 			&--with-subtitle {
-				margin-bottom: #{0.7 * $size__spacing-unit};
+				margin-bottom: #{0.7 * structure.$size__spacing-unit};
 			}
 		}
 		.newspack-post-subtitle {
-			margin-bottom: #{3.3 * $size__spacing-unit};
+			margin-bottom: #{3.3 * structure.$size__spacing-unit};
 		}
 	}
 
 	&.date-hidden {
-		@include media( mobileonly ) {
+		@include utilities.media( mobileonly ) {
 			.entry-header .entry-meta {
 				display: block;
 			}
 		}
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			.featured-image-beside .entry-meta {
 				display: block;
 
@@ -285,16 +269,16 @@ cite {
 	}
 
 	.entry-subhead {
-		border-bottom: 1px solid $color__border;
-		border-top: 1px solid $color__border;
+		border-bottom: 1px solid colors.$color__border;
+		border-top: 1px solid colors.$color__border;
 		display: block;
-		margin-bottom: $size__spacing-unit;
-		padding: #{0.75 * $size__spacing-unit} 0;
+		margin-bottom: structure.$size__spacing-unit;
+		padding: #{0.75 * structure.$size__spacing-unit} 0;
 		text-align: center;
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			display: flex;
-			margin-bottom: #{2 * $size__spacing-unit};
+			margin-bottom: #{2 * structure.$size__spacing-unit};
 			text-align: left;
 		}
 
@@ -305,7 +289,7 @@ cite {
 		.author-avatar {
 			display: none;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				display: block;
 			}
 		}
@@ -324,16 +308,16 @@ cite {
 	}
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.h-sb .featured-image-beside {
-		background-color: $color__background-pre;
+		background-color: colors.$color__background-pre;
 
 		.entry-header {
-			color: $color__text-main;
+			color: colors.$color__text-main;
 		}
 
 		.cat-links {
-			color: $color__primary;
+			color: colors.$color__primary;
 		}
 	}
 
@@ -350,12 +334,12 @@ cite {
 }
 
 .entry .entry-footer {
-	color: $color__primary;
+	color: colors.$color__primary;
 	text-align: center;
 
 	a,
 	a:hover {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 }
 
@@ -365,13 +349,13 @@ cite {
 	}
 
 	a {
-		background: $color__background-pre;
-		color: $color__text-main;
-		margin: 0 #{0.25 * $size__spacing-unit} #{0.25 * $size__spacing-unit} 0;
-		padding: #{0.25 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+		background: colors.$color__background-pre;
+		color: colors.$color__text-main;
+		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
+		padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 		&:hover {
-			background: lighten( $color__background-pre, 5% );
+			background: color.adjust( colors.$color__background-pre, $lightness: 5% );
 		}
 	}
 
@@ -395,10 +379,10 @@ cite {
 	}
 
 	h2 {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 		margin: 0;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			text-align: left;
 		}
 	}
@@ -409,16 +393,16 @@ cite {
 		margin-right: auto;
 		width: 60px;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			margin-left: 0;
-			margin-right: $size__spacing-unit;
+			margin-right: structure.$size__spacing-unit;
 		}
 	}
 
 	.author-bio-text {
 		width: 100%;
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			margin-left: auto;
 			margin-right: auto;
 			width: 80%;
@@ -426,7 +410,7 @@ cite {
 	}
 
 	.author-bio-header {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			align-items: center;
 			display: flex;
 			justify-content: center;
@@ -445,7 +429,7 @@ cite {
 
 .single .author-social-links {
 	justify-content: center;
-	margin-top: #{0.75 * $size__spacing-unit};
+	margin-top: #{0.75 * structure.$size__spacing-unit};
 }
 
 // Archives
@@ -454,27 +438,27 @@ cite {
 	letter-spacing: 0;
 	text-transform: none;
 
-	@include media( tablet ) {
-		font-size: $font__size_base;
+	@include utilities.media( tablet ) {
+		font-size: fonts.$font__size_base;
 	}
 
 	.page-description {
-		margin-top: $size__spacing-unit;
+		margin-top: structure.$size__spacing-unit;
 	}
 }
 
 .taxonomy-description {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-style: normal;
 
-	@include media( tablet ) {
-		margin-bottom: #{3 * $size__spacing-unit};
+	@include utilities.media( tablet ) {
+		margin-bottom: #{3 * structure.$size__spacing-unit};
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 85%;
 
 		+ .author-meta {
-			margin: #{-2 * $size__spacing-unit} auto #{3 * $size__spacing-unit};
+			margin: #{-2 * structure.$size__spacing-unit} auto #{3 * structure.$size__spacing-unit};
 		}
 	}
 }
@@ -492,14 +476,14 @@ cite {
 		}
 
 		.avatar {
-			margin: 0 auto $size__spacing-unit;
+			margin: 0 auto structure.$size__spacing-unit;
 
-			@include media( mobile ) {
+			@include utilities.media( mobile ) {
 				height: 60px;
 				width: 60px;
 			}
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				height: 80px;
 				width: 80px;
 			}
@@ -513,11 +497,11 @@ cite {
 
 .site-footer {
 	background-color: #f1f1f1;
-	color: $color__text-main;
+	color: colors.$color__text-main;
 
 	.widget .widget-title,
 	.widget .widgettitle {
-		color: $color__primary;
+		color: colors.$color__primary;
 		font-weight: bold;
 	}
 
@@ -530,15 +514,15 @@ cite {
 }
 
 .footer-branding {
-	padding-top: $size__spacing-unit;
+	padding-top: structure.$size__spacing-unit;
 
-	@include media( tablet ) {
-		padding-top: #{2 * $size__spacing-unit};
+	@include utilities.media( tablet ) {
+		padding-top: #{2 * structure.$size__spacing-unit};
 	}
 }
 
 .site-info {
-	background-color: $color__background-dark;
+	background-color: colors.$color__background-dark;
 
 	.site-info-contain:first-child,
 	.widget-area .wrapper {
@@ -549,7 +533,7 @@ cite {
 	a,
 	a:hover,
 	a:visited {
-		color: $color__background-body;
+		color: colors.$color__background-body;
 	}
 }
 
@@ -577,7 +561,7 @@ cite {
 	max-width: 100%;
 	justify-content: center;
 
-	@include media( mobile ) {
+	@include utilities.media( mobile ) {
 		justify-content: left;
 	}
 }
@@ -586,12 +570,12 @@ cite {
 	.entry-meta .trust-label {
 		color: #fff;
 		justify-content: center;
-		margin-top: #{0.5 * $size__spacing-unit};
+		margin-top: #{0.5 * structure.$size__spacing-unit};
 		max-width: 100%;
 	}
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.featured-image-beside {
 		.entry-meta .trust-label {
 			justify-content: center;
@@ -604,13 +588,64 @@ cite {
 }
 
 // Sponsored Content
-.single .sponsor-label {
-	justify-content: center;
-}
+body.single {
+	.sponsor-label {
+		justify-content: center;
+	}
 
-.single .show-info .sponsor-info {
-	left: 50%;
-	margin-left: -150px;
+	.show-info .sponsor-info {
+		left: 50%;
+		margin-left: -150px;
+	}
+
+	.entry-meta {
+		+ .entry-sponsor {
+			text-align: left;
+			justify-content: center;
+		}
+	}
+
+	@include utilities.media( mobileonly ) {
+		.entry-sponsor {
+			gap: 0.5em;
+			justify-content: center;
+
+			.sponsor-logos,
+			.sponsor-logos > *:last-child {
+				margin: 0;
+			}
+
+			.sponsor-logos {
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.featured-image-behind .entry-sponsor {
+		justify-content: center;
+	}
+
+	@include utilities.media( tablet ) {
+		.featured-image-beside {
+			.sponsor-byline {
+				margin-right: 0;
+			}
+
+			.sponsor-logos {
+				border-right: 0;
+				padding-right: 0;
+			}
+
+			.entry-sponsor {
+				justify-content: center;
+			}
+		}
+
+		&.sponsors-show-authors .featured-image-beside .sponsor-byline > span:first-child {
+			display: inline;
+		}
+	}
 }
 
 .sponsor-bio {

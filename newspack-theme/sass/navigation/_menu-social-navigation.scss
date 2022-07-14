@@ -1,3 +1,5 @@
+@use '../variables-site/transitions';
+
 /* Social menu */
 
 .social-navigation,
@@ -22,7 +24,7 @@
 			display: block;
 			color: inherit;
 			margin-bottom: -1px;
-			transition: opacity $link_transition ease-in-out;
+			transition: opacity transitions.$link_transition ease-in-out;
 
 			&:hover,
 			&:active {
@@ -31,7 +33,7 @@
 
 			&:focus {
 				opacity: 1;
-				border-bottom: 1px solid currentColor;
+				border-bottom: 1px solid currentcolor;
 			}
 
 			svg {
