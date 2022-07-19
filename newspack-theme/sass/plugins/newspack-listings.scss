@@ -19,6 +19,7 @@
 		border: 0.25em solid colors.$color__primary; // half the width
 		border-top: 0;
 		border-bottom: 6px solid transparent; // the 'cut in'
+		box-sizing: border-box;
 		content: '';
 		display: inline-block;
 		height: 0.8em;
