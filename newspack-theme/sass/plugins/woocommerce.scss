@@ -1726,36 +1726,41 @@ table.woocommerce-table--order-details.shop_table,
  * My Account Page.
  */
 
-.page-template-single-wide.woocommerce-account,
-.page-template-single-feature.woocommerce-account {
-	.entry-header {
-		display: none;
-	}
-	.entry-content > .woocommerce {
-		display: flex;
-		align-items: flex-start;
-	}
-	.woocommerce-MyAccount-navigation {
-		border: 1px solid #f0f0f0;
-		padding: 0.6rem 0.5rem;
-		max-width: 220px;
-		margin-right: 4rem;
-		font-size: 0.8em;
-		border-radius: 2px;
-		ul {
-			li {
-				margin: 0;
-				display: block;
-				a {
-					padding: 0.4rem 1rem;
+.logged-in.page-template-single-wide.woocommerce-account,
+.logged-in.page-template-single-feature.woocommerce-account {
+	@media only screen and ( min-width: 768px ) {
+		.entry-header {
+			display: none;
+		}
+		.entry-content > .woocommerce {
+			display: flex;
+			align-items: flex-start;
+		}
+		.woocommerce-MyAccount-navigation {
+			border: 1px solid #f0f0f0;
+			padding: 0.6rem 0.5rem;
+			max-width: 220px;
+			margin-right: 4rem;
+			font-size: 0.8em;
+			border-radius: 2px;
+			ul {
+				li {
+					margin: 0;
 					display: block;
-					border-radius: 2px;
-				}
-				&.is-active {
 					a {
-						background: #36f;
-						color: #fff;
-						text-decoration: none;
+						padding: 0.4rem 1rem;
+						display: block;
+						border-radius: 2px;
+					}
+					&.is-active {
+						/**
+					 * TODO: Use primary color as background.
+					 */
+						a {
+							background: #36f;
+							color: #fff;
+							text-decoration: none;
+						}
 					}
 				}
 			}
