@@ -41,19 +41,6 @@ function newspack_custom_colors_css() {
 
 	$theme_css = '';
 
-	/** Add color global variables */
-	$colors     = [
-		'primary'   => $primary_color,
-		'secondary' => $secondary_color,
-		'cta'       => $cta_color,
-		'header'    => $header_color,
-	];
-	$theme_css .= ':root {';
-	foreach ( $colors as $color_key => $color_value ) {
-		$theme_css .= "\t--newspack-{$color_key}-color: {$color_value};\n";
-	}
-	$theme_css .= '}';
-
 	// Front-end colors that require the theme_colors to be set to 'custom':
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$theme_css .= '
