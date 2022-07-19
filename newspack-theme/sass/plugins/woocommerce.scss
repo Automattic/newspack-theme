@@ -1726,9 +1726,9 @@ table.woocommerce-table--order-details.shop_table,
  * My Account Page.
  */
 
-.logged-in.page-template-single-wide.woocommerce-account,
-.logged-in.page-template-single-feature.woocommerce-account {
-	@media only screen and ( min-width: 768px ) {
+@media only screen and ( min-width: 768px ) {
+	.logged-in.page-template-single-wide.woocommerce-account,
+	.logged-in.page-template-single-feature.woocommerce-account {
 		.entry-header {
 			display: none;
 		}
