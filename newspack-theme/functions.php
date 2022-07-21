@@ -910,26 +910,54 @@ function newspack_colors_css_wrap() {
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
 
 /**
+ * Get theme colors' values.
+ *
+ * @return string[] Array of colors.
+ */
+function newspack_get_colors() {
+	$colors              = [];
+	$colors['primary']   = newspack_get_primary_color();
+	$colors['secondary'] = newspack_get_secondary_color();
+	$colors['cta']       = get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() );
+
+	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+		$colors['header'] = $colors['primary'];
+	}
+
+	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
+		$colors['primary']   = get_theme_mod( 'primary_color_hex', $colors['primary'] );
+		$colors['secondary'] = get_theme_mod( 'secondary_color_hex', $colors['secondary'] );
+
+		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
+			$colors['header']       = get_theme_mod( 'header_color_hex', '#666666' );
+			$colors['primary_menu'] = get_theme_mod( 'header_primary_menu_color_hex', '' );
+		} else {
+			$colors['header'] = $colors['primary'];
+		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$colors['footer'] = get_theme_mod( 'footer_color_hex', '' );
+		}
+	}
+
+	// Set color contrasts.
+	foreach ( $colors as $color_key => $color_value ) {
+		$colors[ $color_key . '_contrast' ] = newspack_get_color_contrast( $color_value );
+	}
+
+	return $colors;
+}
+
+/**
  * Add CSS variables to theme's colors.
  */
 function newspack_colors_css_variables() {
-	$primary_color   = newspack_get_primary_color();
-	$secondary_color = newspack_get_secondary_color();
-	$cta_color       = get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() );
-	$header_color    = $primary_color;
-
-	$colors = [
-		'primary'   => $primary_color,
-		'secondary' => $secondary_color,
-		'cta'       => $cta_color,
-		'header'    => $header_color,
-	];
-
+	$colors = newspack_get_colors();
 	?>
 	<style type="text/css" id="newspack-theme-colors-variables">
 		:root {
 			<?php foreach ( $colors as $color_key => $color_value ) : ?>
-				--newspack-<?php echo esc_attr( $color_key ); ?>-color: <?php echo esc_attr( $color_value ); ?>;
+				--newspack-<?php echo esc_attr( str_replace( '_', '-', $color_key ) ); ?>-color: <?php echo esc_attr( $color_value ); ?>;
 			<?php endforeach; ?>
 		}
 	</style>
