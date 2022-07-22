@@ -59,7 +59,9 @@ function newspack_custom_colors_css() {
 			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.comment .comment-author .post-author-badge,
 			.woocommerce .onsale,
-			.woocommerce-store-notice {
+			.woocommerce-store-notice,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
 				background-color: ' . esc_html( $primary_color ) . '; /* base: #0073a8; */
 			}
 
@@ -80,7 +82,11 @@ function newspack_custom_colors_css() {
 			.comment .comment-metadata > a:hover,
 			.comment .comment-metadata .comment-edit-link:hover,
 			.site-info a:hover,
-			.comments-toggle:hover, .comments-toggle:focus {
+			.comments-toggle:hover, .comments-toggle:focus,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited {
 				color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 			}
 
@@ -111,7 +117,9 @@ function newspack_custom_colors_css() {
 			.comment .comment-author .post-author-badge,
 			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.woocommerce .onsale,
-			.woocommerce-store-notice {
+			.woocommerce-store-notice,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
 				color: ' . esc_html( $primary_color_contrast ) . ';
 			}
 
