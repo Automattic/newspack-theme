@@ -1,3 +1,19 @@
+# [1.62.0](https://github.com/Automattic/newspack-theme/compare/v1.61.0...v1.62.0) (2022-07-26)
+
+
+### Features
+
+* add option to re-allow FSE blocks ([#1876](https://github.com/Automattic/newspack-theme/issues/1876)) ([5f66510](https://github.com/Automattic/newspack-theme/commit/5f66510d80343aba24f6535fa8c396ff9f10f4e6))
+* support new sponsor options to show authors and categories ([#1833](https://github.com/Automattic/newspack-theme/issues/1833)) ([66c2045](https://github.com/Automattic/newspack-theme/commit/66c204530c71b8eadc15f316c91a8d8ec930b550))
+
+# [1.62.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.61.0...v1.62.0-alpha.1) (2022-07-14)
+
+
+### Features
+
+* add option to re-allow FSE blocks ([#1876](https://github.com/Automattic/newspack-theme/issues/1876)) ([5f66510](https://github.com/Automattic/newspack-theme/commit/5f66510d80343aba24f6535fa8c396ff9f10f4e6))
+* support new sponsor options to show authors and categories ([#1833](https://github.com/Automattic/newspack-theme/issues/1833)) ([66c2045](https://github.com/Automattic/newspack-theme/commit/66c204530c71b8eadc15f316c91a8d8ec930b550))
+
 # [1.61.0](https://github.com/Automattic/newspack-theme/compare/v1.60.0...v1.61.0) (2022-07-11)
 
 
