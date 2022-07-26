@@ -1,3 +1,8 @@
+@use '../mixins/utilities';
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
+
 // Menu Toggles
 .mobile-menu-toggle,
 .desktop-menu-toggle,
@@ -22,7 +27,7 @@
 .mobile-menu-toggle,
 .desktop-menu-toggle {
 	svg {
-		margin-right: #{0.25 * $size__spacing-unit};
+		margin-right: #{0.25 * structure.$size__spacing-unit};
 	}
 }
 
@@ -49,15 +54,15 @@
 	color: #fff;
 	font-size: 0.7em;
 	margin-left: auto;
-	padding: #{0.6 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+	padding: #{0.6 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 	&:hover {
-		background: $color__text-main;
+		background: colors.$color__text-main;
 		color: #fff;
 	}
 
 	+ .mobile-menu-toggle {
-		margin-left: #{0.5 * $size__spacing-unit};
+		margin-left: #{0.5 * structure.$size__spacing-unit};
 
 		span {
 			display: inline-block;
@@ -76,19 +81,19 @@
 .site-header .desktop-menu-toggle,
 .subpage-toggle-contain {
 	display: none;
-	font-size: $font__size-xs;
+	font-size: fonts.$font__size-xs;
 	font-weight: normal;
 	line-height: 2;
-	padding: #{0.125 * $size__spacing-unit} 0;
+	padding: #{0.125 * structure.$size__spacing-unit} 0;
 }
 
 .site-header .desktop-menu-toggle,
 .h-ll .subpage-toggle-contain {
-	margin: 0 #{1.25 * $size__spacing-unit} 0 0;
+	margin: 0 #{1.25 * structure.$size__spacing-unit} 0 0;
 }
 
 .site-header .desktop-menu-toggle.dir-right {
-	margin: 0 0 0 #{1.25 * $size__spacing-unit};
+	margin: 0 0 0 #{1.25 * structure.$size__spacing-unit};
 }
 
 .site-header #secondary-nav-contain + .desktop-menu-toggle.dir-right {
@@ -96,18 +101,18 @@
 }
 
 .middle-header-contain .desktop-menu-toggle {
-	margin: 0 $size__spacing-unit 0 0;
+	margin: 0 structure.$size__spacing-unit 0 0;
 	span {
 		left: -99999em;
 		position: absolute;
 	}
 
 	&.dir-right {
-		margin: 0 0 0 #{0.75 * $size__spacing-unit};
+		margin: 0 0 0 #{0.75 * structure.$size__spacing-unit};
 	}
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	// Header default height
 
 	// Mobile Menu toggle
@@ -124,7 +129,7 @@
 	}
 }
 
-@include media( narrowdesktop ) {
+@include utilities.media( narrowdesktop ) {
 	// Header - short height
 
 	// Mobile Menu toggle
@@ -161,7 +166,7 @@
 	}
 
 	&.h-cl {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			.wrapper {
 				position: relative;
 			}
@@ -183,25 +188,25 @@
 .mobile-sidebar,
 .desktop-sidebar,
 .subpage-sidebar {
-	padding: $size__spacing-unit;
+	padding: structure.$size__spacing-unit;
 	width: 90vw;
 
 	> * {
 		clear: both;
-		margin-bottom: #{0.75 * $size__spacing-unit};
+		margin-bottom: #{0.75 * structure.$size__spacing-unit};
 	}
 
 	nav,
 	.widget:not( .widget_block ) {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 	}
 
 	.mobile-menu-toggle,
 	.desktop-menu-toggle,
 	.subpage-toggle {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 		float: right;
-		margin: 0 0 $size__spacing-unit;
+		margin: 0 0 structure.$size__spacing-unit;
 		padding: 0;
 	}
 
@@ -215,8 +220,8 @@
 	nav a,
 	.widget_nav_menu a {
 		display: inline-block;
-		margin: #{0.125 * $size__spacing-unit} 0;
-		padding: #{0.125 * $size__spacing-unit} #{0.25 * $size__spacing-unit};
+		margin: #{0.125 * structure.$size__spacing-unit} 0;
+		padding: #{0.125 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit};
 	}
 
 	a:hover {
@@ -230,7 +235,7 @@
 
 	.widget-title,
 	.widgettitle {
-		margin: 0 0 #{0.5 * $size__spacing-unit};
+		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
 	}
 }
 
@@ -240,23 +245,23 @@
 	background-color: #fff;
 	max-width: 400px;
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		width: 50vw;
 	}
 
 	a,
 	a:visited {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 
 	.widget {
-		border-top: 1px solid $color__border;
+		border-top: 1px solid colors.$color__border;
 		font-size: 0.9em;
-		margin-bottom: #{1.5 * $size__spacing-unit};
-		padding-top: #{1.5 * $size__spacing-unit};
+		margin-bottom: #{1.5 * structure.$size__spacing-unit};
+		padding-top: #{1.5 * structure.$size__spacing-unit};
 
 		&:last-child {
-			margin-bottom: #{1.5 * $size__spacing-unit};
+			margin-bottom: #{1.5 * structure.$size__spacing-unit};
 		}
 
 		&.widget_block {
@@ -268,18 +273,18 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: $font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }
 
 .mobile-sidebar,
 .subpage-sidebar {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		width: 33vw;
 	}
 
 	ul ul {
-		margin-left: $size__spacing-unit;
+		margin-left: structure.$size__spacing-unit;
 	}
 
 	// Styles specific to menus moved from the header
@@ -296,12 +301,12 @@
 	}
 
 	nav + nav {
-		padding-top: #{0.75 * $size__spacing-unit};
+		padding-top: #{0.75 * structure.$size__spacing-unit};
 	}
 
 	nav + .widget,
 	.widget + .widget {
-		padding-top: $size__spacing-unit;
+		padding-top: structure.$size__spacing-unit;
 	}
 
 	nav + .widget_block,
@@ -317,11 +322,11 @@
 	.nav3 {
 		li {
 			display: inline-block;
-			margin-right: #{0.5 * $size__spacing-unit};
+			margin-right: #{0.5 * structure.$size__spacing-unit};
 		}
 
 		a {
-			padding: #{0.125 * $size__spacing-unit} #{0.5 * $size__spacing-unit};
+			padding: #{0.125 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 		}
 	}
 
@@ -329,7 +334,7 @@
 		font-size: 1em;
 
 		&:last-child {
-			margin-bottom: #{1.5 * $size__spacing-unit};
+			margin-bottom: #{1.5 * structure.$size__spacing-unit};
 		}
 	}
 
@@ -341,7 +346,7 @@
 
 // Mobile Sidebar and Menu styles
 .mobile-sidebar {
-	background-color: $color__primary;
+	background-color: colors.$color__primary;
 	color: #fff;
 
 	a,
@@ -360,19 +365,19 @@
 .subpage-sidebar {
 	.nav1 .sub-menu > li > a,
 	.nav1 .sub-menu > li > a:visited {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 
 	nav + nav,
 	nav + .widget,
 	.widget + .widget {
-		border-color: $color__border;
+		border-color: colors.$color__border;
 	}
 }
 
 .h-sb.h-sh .subpage-sidebar {
 	.nav1 ul.main-menu > li > a {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 }
 

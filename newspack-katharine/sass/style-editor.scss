@@ -4,40 +4,44 @@ Newspack Katharine Editor Styles
 
 /** === Includes === */
 
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-editor-base';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-editor-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 .accent-header,
 .article-section-title {
-	color: $color__primary;
-	font-size: $font__size-xs;
-	margin-bottom: #{1.5 * $size__spacing-unit};
+	color: colors.$color__primary;
+	font-size: fonts.$font__size-xs;
+	margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	margin-top: 0;
 
 	&::before {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: block;
 		height: 5px;
-		margin: 0 0 $size__spacing-unit;
+		margin: 0 0 structure.$size__spacing-unit;
 		width: 32px;
 	}
 }
 
 .wpnbha article .entry-meta,
 .entry-meta {
-	font-size: $font__size-xs;
+	font-size: fonts.$font__size-xs;
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 
 .wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
 	.post-has-image {
 	.entry-title {
-		background-color: $color__background-body;
+		background-color: colors.$color__background-body;
 		margin-top: -1.75em;
 		padding: 0.5em 0.25em 0 0;
 		position: relative;
@@ -56,7 +60,7 @@ Newspack Katharine Editor Styles
 
 .wp-block-newspack-blocks-homepage-articles.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: $color__text-main;
+	border-bottom-color: colors.$color__text-main;
 }
 
 .wpnbha.has-text-align-center {
@@ -109,7 +113,7 @@ figure.wp-block-pullquote {
 
 	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
-			padding-left: #{2 * $size__spacing-unit};
+			padding-left: #{2 * structure.$size__spacing-unit};
 		}
 
 		&::before {
@@ -132,10 +136,10 @@ figure.wp-block-pullquote {
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		font-size: $font__size-lg;
+		font-size: fonts.$font__size-lg;
 
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
@@ -156,15 +160,15 @@ figure.wp-block-pullquote {
 
 [data-align='left'] .wp-block-pullquote,
 [data-align='right'] .wp-block-pullquote {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		blockquote p,
 		&.is-style-solid-color blockquote p {
-			font-size: $font__size-lg;
+			font-size: fonts.$font__size-lg;
 		}
 	}
 
 	&:not( .is-style-solid-color ) {
-		padding-top: $size__spacing-unit;
+		padding-top: structure.$size__spacing-unit;
 
 		blockquote {
 			padding-left: 0;
@@ -194,11 +198,11 @@ figcaption,
 	text-align: left;
 
 	&::after {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: block;
 		height: 5px;
-		margin-top: #{1.25 * $size__spacing-unit};
+		margin-top: #{1.25 * structure.$size__spacing-unit};
 		width: 32px;
 	}
 }
@@ -217,22 +221,22 @@ figcaption,
 .wp-block-separator:not( .is-style-dots ),
 hr {
 	background: transparent !important;
-	border-top: 1px dotted $color__text-main;
+	border-top: 1px dotted colors.$color__text-main;
 
 	&.has-background {
-		border-top: 1px dotted currentColor;
+		border-top: 1px dotted currentcolor;
 	}
 }
 
 .wp-block .wp-block-columns.is-style-borders {
 	[data-type='core/column'] {
-		border-bottom: 1px dotted $color__text-main;
+		border-bottom: 1px dotted colors.$color__text-main;
 
 		&:last-child {
 			border-bottom: 0;
 		}
 
-		@include media( mobile ) {
+		@include utilities.media( mobile ) {
 			border-bottom: 0;
 
 			&::after {
@@ -240,13 +244,13 @@ hr {
 			}
 
 			&:nth-child( odd )::after {
-				border-color: $color__text-main;
+				border-color: colors.$color__text-main;
 			}
 		}
 
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			&::after {
-				border-color: $color__text-main;
+				border-color: colors.$color__text-main;
 			}
 		}
 	}
@@ -254,5 +258,5 @@ hr {
 
 .wp-block-group.is-style-border {
 	border-style: dotted;
-	border-color: $color__text-main;
+	border-color: colors.$color__text-main;
 }

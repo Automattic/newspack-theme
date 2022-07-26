@@ -9,9 +9,11 @@ $discussion = ! is_page() && newspack_can_show_post_thumbnail() ? newspack_get_d
 
 // Get sponsors for this post.
 if ( function_exists( 'newspack_get_all_sponsors' ) ) {
-	$all_sponsors         = newspack_get_all_sponsors( get_the_id() );
-	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
-	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
+	$all_sponsors                    = newspack_get_all_sponsors( get_the_id() );
+	$native_sponsors                 = newspack_get_native_sponsors( $all_sponsors );
+	$underwriter_sponsors            = newspack_get_underwriter_sponsors( $all_sponsors );
+	$display_sponsors_and_categories = newspack_display_sponsors_and_categories( $native_sponsors );
+	$display_sponsors_and_authors    = newspack_display_sponsors_and_authors( $native_sponsors );
 }
 
 // Get page title visibility.
@@ -26,6 +28,9 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 	if ( ! is_page() ) :
 		if ( ! empty( $native_sponsors ) ) {
 			newspack_sponsor_label( $native_sponsors, null, true );
+			if ( $display_sponsors_and_categories ) {
+				newspack_categories();
+			}
 		} else {
 			newspack_categories();
 		}
@@ -75,12 +80,27 @@ if ( $sharing_enabled ) :
 	<div class="entry-subhead">
 		<?php if ( ! is_page() ) : ?>
 			<?php if ( ! empty( $native_sponsors ) ) : ?>
+				<?php
+				// If showing both authors and sponsors, show the byline and date first.
+				if ( $display_sponsors_and_authors ) :
+				?>
+					<div class="entry-meta">
+						<?php
+						newspack_posted_by();
+						newspack_posted_on();
+						?>
+					</div>
+				<?php endif; ?>
 				<div class="entry-meta entry-sponsor">
 					<?php newspack_sponsor_logo_list( $native_sponsors ); ?>
 					<span>
 						<?php
 							newspack_sponsor_byline( $native_sponsors );
-							newspack_posted_on();
+
+							// If not showing the author, we still need to show the date.
+							if ( ! $display_sponsors_and_authors ) {
+								newspack_posted_on();
+							}
 							do_action( 'newspack_theme_entry_meta' );
 						?>
 					</span>

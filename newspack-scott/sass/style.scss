@@ -1,27 +1,10 @@
-/*
-Theme Name: Newspack Scott
-Theme URI:
-Author: Automattic
-Author URI: https://newspack.blog
-Description:
-Requires at least: WordPress 4.9.6
-Version: 1.61.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Template: newspack-theme
-Text Domain: newspack-scott
-Tags:
-AMP: true
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-base';
+@use 'theme-description';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/structure';
+@use '../../newspack-theme/sass/variables-site/fonts';
 
 /* Child theme-specific overrides */
 
@@ -30,10 +13,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .cat-links,
 .page-title {
 	color: #666;
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 
 	&::before {
-		background-color: $color__primary;
+		background-color: colors.$color__primary;
 		content: '';
 		display: inline-block;
 		height: 0.75em;
@@ -54,27 +37,23 @@ div.wpnbha .article-section-title {
 }
 
 .cat-links {
-	font-family: $font__heading;
-	font-size: $font__size-sm;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-sm;
 }
 
 #secondary .widget-title,
 #secondary .widgettitle {
-	font-size: $font__size-lg;
+	font-size: fonts.$font__size-lg;
 }
 
 /* Posts & Pages */
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links::before {
-			background-color: $color__background-body;
+			background-color: colors.$color__background-body;
 		}
 	}
-}
-
-.single .cat-links {
-	font-size: $font__size_base;
 }
 
 .search,
@@ -88,16 +67,20 @@ div.wpnbha .article-section-title {
 .entry-meta .byline {
 	a,
 	a:visited {
-		color: $color__text-light;
+		color: colors.$color__text-light;
 	}
 
 	a:hover {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 }
 
 .single {
-	@include media( tablet ) {
+	.cat-links {
+		font-size: fonts.$font__size_base;
+	}
+
+	@include utilities.media( tablet ) {
 		.entry-meta {
 			align-items: center;
 			display: flex;
@@ -106,7 +89,7 @@ div.wpnbha .article-section-title {
 
 		&.single-featured-image-default .byline,
 		&.single-featured-image-above .byline {
-			margin-right: #{1.5 * $size__spacing-unit};
+			margin-right: #{1.5 * structure.$size__spacing-unit};
 		}
 	}
 }
@@ -120,12 +103,12 @@ div.wpnbha .article-section-title {
 /* Author Bio */
 
 .author-bio .accent-header {
-	color: $color__text-main;
-	font-size: $font__size-md;
-	margin: 0 0 #{0.25 * $size__spacing-unit};
+	color: colors.$color__text-main;
+	font-size: fonts.$font__size-md;
+	margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 
 	span {
-		font-size: $font__size-xs;
+		font-size: fonts.$font__size-xs;
 	}
 
 	&::before {
@@ -137,31 +120,31 @@ div.wpnbha .article-section-title {
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 
 //! Pullquote
 .wp-block-pullquote {
 	border-width: 0;
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
-	padding-top: #{4 * $size__spacing-unit};
+	padding-top: #{4 * structure.$size__spacing-unit};
 	position: relative;
 	text-align: center;
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		@include media( tablet ) {
-			font-size: $font__size-xl;
+		@include utilities.media( tablet ) {
+			font-size: fonts.$font__size-xl;
 		}
 	}
 
 	&.has-text-align-right:not( .alignleft ):not( .alignright ),
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			p {
-				font-size: $font__size-xl;
+				font-size: fonts.$font__size-xl;
 			}
 		}
 	}
@@ -177,7 +160,7 @@ div.wpnbha .article-section-title {
 			display: block;
 			position: absolute;
 			opacity: 0.8;
-			top: #{2 * $size__spacing-unit};
+			top: #{2 * structure.$size__spacing-unit};
 		}
 
 		&::before {
@@ -191,7 +174,7 @@ div.wpnbha .article-section-title {
 		}
 
 		p:first-of-type::before {
-			color: $color__primary;
+			color: colors.$color__primary;
 			content: '\201C';
 			display: inline-block;
 			font-size: calc( 1rem * 5 );
@@ -200,11 +183,11 @@ div.wpnbha .article-section-title {
 			line-height: 0.75;
 			position: absolute;
 			text-align: center;
-			top: #{1.5 * $size__spacing-unit};
+			top: #{1.5 * structure.$size__spacing-unit};
 			width: 0.5em;
 			z-index: 1;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				font-size: calc( 1rem * 7 );
 			}
 		}
@@ -218,12 +201,12 @@ div.wpnbha .article-section-title {
 			}
 
 			&::after {
-				border-top-color: currentColor;
+				border-top-color: currentcolor;
 			}
 
 			&::before,
 			&::after {
-				border-top-color: currentColor;
+				border-top-color: currentcolor;
 			}
 
 			cite {
@@ -237,7 +220,7 @@ div.wpnbha .article-section-title {
 	}
 
 	cite {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -251,7 +234,7 @@ div.wpnbha .article-section-title {
 		&,
 		&.is-style-solid-color,
 		&.has-background {
-			padding-top: #{3 * $size__spacing-unit};
+			padding-top: #{3 * structure.$size__spacing-unit};
 		}
 	}
 
@@ -261,7 +244,7 @@ div.wpnbha .article-section-title {
 				left: 3em;
 				right: 0;
 
-				@include media( tablet ) {
+				@include utilities.media( tablet ) {
 					left: 4em;
 				}
 			}
@@ -274,7 +257,7 @@ div.wpnbha .article-section-title {
 		&.is-style-solid-color,
 		&.has-background {
 			p:first-of-type::before {
-				left: #{1.5 * $size__spacing-unit};
+				left: #{1.5 * structure.$size__spacing-unit};
 			}
 
 			blockquote::before {
@@ -289,7 +272,7 @@ div.wpnbha .article-section-title {
 				right: 3em;
 				left: 0;
 
-				@include media( tablet ) {
+				@include utilities.media( tablet ) {
 					right: 4em;
 				}
 			}
@@ -303,7 +286,7 @@ div.wpnbha .article-section-title {
 		&.is-style-solid-color,
 		&.has-background {
 			p:first-of-type::before {
-				right: #{1.5 * $size__spacing-unit};
+				right: #{1.5 * structure.$size__spacing-unit};
 			}
 
 			blockquote::before {
@@ -329,13 +312,13 @@ div.wpnbha .article-section-title {
 
 		&.is-style-solid-color blockquote p,
 		blockquote p {
-			font-size: $font__size-md;
+			font-size: fonts.$font__size-md;
 		}
 
 		&,
 		&.is-style-solid-color,
 		&.has-background {
-			padding-top: #{3 * $size__spacing-unit};
+			padding-top: #{3 * structure.$size__spacing-unit};
 		}
 
 		p:first-of-type::before {
@@ -348,7 +331,7 @@ div.wpnbha .article-section-title {
 		&.is-style-solid-color,
 		&.has-background {
 			p:first-of-type::before {
-				left: #{1.5 * $size__spacing-unit};
+				left: #{1.5 * structure.$size__spacing-unit};
 			}
 
 			blockquote::before {
@@ -358,7 +341,7 @@ div.wpnbha .article-section-title {
 	}
 
 	&[style*='border-width'] {
-		padding-top: $size__spacing-unit;
+		padding-top: structure.$size__spacing-unit;
 
 		p:first-of-type::before,
 		blockquote::before,
@@ -382,7 +365,7 @@ div.wpnbha .article-section-title {
 
 // Archive
 .archive .page-title {
-	color: $color__text-light;
+	color: colors.$color__text-light;
 }
 
 // Widgets
@@ -399,18 +382,18 @@ div.wpnbha .article-section-title {
 #colophon {
 	&,
 	.social-navigation a {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 
 	.widget-title {
-		color: $color__text-main;
-		font-size: $font__size_base;
+		color: colors.$color__text-main;
+		font-size: fonts.$font__size_base;
 	}
 }
 
 .footer-branding .wrapper,
 .footer-widgets:first-child {
-	border-top: 3px solid currentColor;
+	border-top: 3px solid currentcolor;
 }
 
 .af-widget {
@@ -423,7 +406,7 @@ div.wpnbha .article-section-title {
 // If custom font is set, `#colophon .site-info` selector would override it
 // (See issue #663)
 .site-info {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 }
 
 /* Yoast Breadcrumbs */
@@ -431,7 +414,7 @@ div.wpnbha .article-section-title {
 .site-breadcrumb {
 	.wrapper {
 		> span::before {
-			background-color: $color__primary;
+			background-color: colors.$color__primary;
 			content: '';
 			display: inline-block;
 			height: 0.75em;
@@ -450,5 +433,9 @@ div.wpnbha .article-section-title {
 
 // Sponsored Content
 .single .sponsor-label {
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
+
+	+ .cat-links {
+		font-size: 0.9rem;
+	}
 }

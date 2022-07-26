@@ -1,8 +1,12 @@
 /**
  * Sass variables
  */
-@import '../variables-site/variables-site';
-@import '../mixins/mixins-master';
+@use '../variables-site/variables-site';
+@use '../mixins/mixins-master';
+@use '../mixins/utilities';
+@use '../variables-site/colors';
+@use '../variables-site/fonts';
+@use '../variables-site/structure';
 
 /**
  * Fonts
@@ -104,7 +108,7 @@ a.button {
 	top: 0;
 	left: 0;
 	display: inline-block;
-	background: $color__primary;
+	background: colors.$color__primary;
 	color: #fff;
 	font-size: 0.71111em;
 	font-weight: 700;
@@ -126,11 +130,11 @@ a.button {
 }
 
 .woocommerce-product-rating {
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 }
 
 .woocommerce-notices-wrapper {
-	margin-bottom: $size__spacing-unit;
+	margin-bottom: structure.$size__spacing-unit;
 	width: 100%;
 }
 
@@ -138,13 +142,13 @@ a.button {
 .woocommerce-error,
 .woocommerce-info {
 	align-items: center;
-	background: $color__background-pre;
+	background: colors.$color__background-pre;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 	list-style: none;
 	margin-bottom: 1.5rem;
-	padding: #{0.5 * $size__spacing-unit} $size__spacing-unit;
+	padding: #{0.5 * structure.$size__spacing-unit} structure.$size__spacing-unit;
 	overflow: hidden;
 
 	.button {
@@ -159,7 +163,7 @@ a.button {
 }
 
 .woocommerce-message {
-	background: $color__background-pre;
+	background: colors.$color__background-pre;
 }
 
 .woocommerce-error {
@@ -180,7 +184,7 @@ a.button {
 }
 
 .woocommerce-store-notice {
-	background: $color__primary;
+	background: colors.$color__primary;
 	color: #fff;
 	padding: 1rem;
 	position: absolute;
@@ -237,7 +241,7 @@ a.button {
  * Shop page
  */
 .archive .woocommerce-products-header__title.page-title {
-	color: $color__text-main;
+	color: colors.$color__text-main;
 }
 
 .woocommerce-products-header__title.page-title {
@@ -254,10 +258,10 @@ a.button {
 }
 
 .woocommerce-results-wrapper {
-	font-size: $font__size-sm;
-	margin-bottom: #{0.5 * $size__spacing-unit};
+	font-size: fonts.$font__size-sm;
+	margin-bottom: #{0.5 * structure.$size__spacing-unit};
 
-	@include media( mobile ) {
+	@include utilities.media( mobile ) {
 		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
@@ -289,7 +293,7 @@ ul.products {
 		}
 
 		.woocommerce-loop-product__title {
-			font-size: $font__size-md;
+			font-size: fonts.$font__size-md;
 			margin: 0 0 0.5em;
 
 			&::before {
@@ -443,7 +447,7 @@ dl.variation,
 	}
 
 	.posted_in {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 	}
 
 	.woocommerce-product-rating {
@@ -479,7 +483,7 @@ dl.variation,
 	}
 }
 
-@include media( tablet ) {
+@include utilities.media( tablet ) {
 	.woocommerce #content div.product div.images,
 	.woocommerce div.product div.images,
 	.woocommerce-page #content div.product div.images,
@@ -503,14 +507,14 @@ dl.variation,
 
 	.suggested-text,
 	.suggested-text + .subscription-details {
-		font-size: $font__size-sm;
+		font-size: fonts.$font__size-sm;
 	}
 
 	td .nyp {
 		margin-bottom: 0;
 	}
 
-	@include media( mobileonly ) {
+	@include utilities.media( mobileonly ) {
 		&,
 		tbody,
 		tr,
@@ -523,7 +527,7 @@ dl.variation,
 			border: 0;
 		}
 		tr {
-			border-bottom: 1px solid $color__border;
+			border-bottom: 1px solid colors.$color__border;
 		}
 	}
 }
@@ -639,17 +643,17 @@ table.variations {
 	clear: both;
 	margin: 2rem 0;
 
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		margin-top: 0;
 	}
 
 	ul {
-		border-bottom: 1px solid $color__border;
+		border-bottom: 1px solid colors.$color__border;
 		margin: 0 0 1.5rem;
 		padding: 0;
 
 		li {
-			font-size: $font__size-sm;
+			font-size: fonts.$font__size-sm;
 			margin-right: 1rem;
 
 			a {
@@ -661,7 +665,7 @@ table.variations {
 
 			&.active {
 				a {
-					border-bottom: 4px solid $color__primary;
+					border-bottom: 4px solid colors.$color__primary;
 					opacity: 1;
 				}
 			}
@@ -788,7 +792,7 @@ table.variations {
 	clear: both;
 
 	h2 {
-		font-size: $font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }
 
@@ -975,7 +979,7 @@ table.variations {
 		li {
 			list-style: none;
 			padding: 0.5rem 0;
-			border-bottom: 1px solid $color__border;
+			border-bottom: 1px solid colors.$color__border;
 
 			&:first-child {
 				padding-top: 0;
@@ -1011,7 +1015,7 @@ table.variations {
  * Cart
  */
 .page-template-single-wide.woocommerce-cart .woocommerce {
-	@include media( desktop ) {
+	@include utilities.media( desktop ) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -1025,8 +1029,8 @@ table.variations {
 		}
 
 		.cart-collaterals {
-			background: $color__background-pre;
-			padding: 0 $size__spacing-unit $size__spacing-unit;
+			background: colors.$color__background-pre;
+			padding: 0 structure.$size__spacing-unit structure.$size__spacing-unit;
 			width: 35%;
 
 			.cart_totals {
@@ -1071,7 +1075,7 @@ table.variations {
 			display: flex;
 			align-items: center;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				width: 50%;
 			}
 		}
@@ -1104,7 +1108,7 @@ table.variations {
 	}
 
 	h2 {
-		font-size: $font__size-md;
+		font-size: fonts.$font__size-md;
 	}
 }
 
@@ -1118,11 +1122,11 @@ table.variations {
 }
 
 .woocommerce-cart .woocommerce-shipping-calculator {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		display: block;
 		width: 200px;
 	}
-	@include media( desktop ) {
+	@include utilities.media( desktop ) {
 		width: 320px;
 	}
 }
@@ -1224,8 +1228,8 @@ table.variations {
 		}
 
 		input[type='checkbox']:checked + span::before {
-			border-color: $color__secondary-variation;
-			background: $color__secondary-variation;
+			border-color: colors.$color__secondary-variation;
+			background: colors.$color__secondary-variation;
 		}
 	}
 }
@@ -1243,15 +1247,15 @@ table.variations {
 
 	.product-remove {
 		float: none;
-		margin-right: #{0.25 * $size__spacing-unit};
+		margin-right: #{0.25 * structure.$size__spacing-unit};
 		order: -1;
 	}
 
 	.product-quantity {
-		margin: 0 $size__spacing-unit 0 auto;
+		margin: 0 structure.$size__spacing-unit 0 auto;
 
-		@include media( tablet ) {
-			margin-right: #{3 * $size__spacing-unit};
+		@include utilities.media( tablet ) {
+			margin-right: #{3 * structure.$size__spacing-unit};
 		}
 	}
 }
@@ -1286,19 +1290,19 @@ table.variations {
 		margin-bottom: 2px;
 		margin-left: 0.25rem;
 		border-width: 6px 6px 0 6px;
-		border-color: currentColor transparent transparent transparent;
+		border-color: currentcolor transparent transparent transparent;
 	}
 	&.woocommerce-terms-and-conditions-link--open::after {
 		border-width: 0 6px 6px 6px;
-		border-color: transparent transparent currentColor transparent;
+		border-color: transparent transparent currentcolor transparent;
 	}
 }
 
 .woocommerce-checkout {
 	h3 {
-		font-size: $font__size-md;
-		margin-bottom: $size__spacing-unit;
-		margin-top: 2 * $size__spacing-unit;
+		font-size: fonts.$font__size-md;
+		margin-bottom: structure.$size__spacing-unit;
+		margin-top: 2 * structure.$size__spacing-unit;
 	}
 
 	.woocommerce-billing-fields,
@@ -1306,7 +1310,7 @@ table.variations {
 	.woocommerce-shipping-fields,
 	.woocommerce-additional-fields {
 		label {
-			font-size: $font__size-sm;
+			font-size: fonts.$font__size-sm;
 		}
 	}
 
@@ -1378,12 +1382,12 @@ table.woocommerce-table--order-details.shop_table,
 .woocommerce-grouped-product-list.group_table,
 .woocommerce-cart-form .woocommerce-cart-form__contents,
 .cart-collaterals .shop_table_responsive {
-	border-top: 1px solid $color__border;
+	border-top: 1px solid colors.$color__border;
 
 	thead {
 		th,
 		td {
-			background-color: $color__background-pre;
+			background-color: colors.$color__background-pre;
 			font-weight: bold;
 		}
 	}
@@ -1394,7 +1398,7 @@ table.woocommerce-table--order-details.shop_table,
 
 	td,
 	th {
-		border-color: $color__border;
+		border-color: colors.$color__border;
 		border-width: 0 0 1px;
 		padding: 0.5rem;
 	}
@@ -1418,7 +1422,7 @@ table.woocommerce-table--order-details.shop_table,
 	.recurring-totals {
 		th,
 		td {
-			background-color: $color__background-pre;
+			background-color: colors.$color__background-pre;
 			font-weight: bold;
 		}
 	}
@@ -1429,7 +1433,7 @@ table.woocommerce-table--order-details.shop_table,
 		th,
 		td {
 			// stylelint-disable-next-line function-calc-no-invalid
-			font-size: calc( $font__size-sm );
+			font-size: calc( fonts.$font__size-sm );
 			font-weight: normal;
 			vertical-align: middle;
 		}
@@ -1456,8 +1460,8 @@ table.woocommerce-table--order-details.shop_table,
 
 	.payment_box {
 		padding: 1rem;
-		background: $color__background-pre;
-		font-size: $font__size-sm;
+		background: colors.$color__background-pre;
+		font-size: fonts.$font__size-sm;
 
 		ul,
 		ol {
@@ -1537,11 +1541,11 @@ table.woocommerce-table--order-details.shop_table,
 }
 
 .woocommerce-terms-and-conditions-wrapper {
-	font-size: $font__size-sm;
-	margin-bottom: 2 * $size__spacing-unit;
+	font-size: fonts.$font__size-sm;
+	margin-bottom: 2 * structure.$size__spacing-unit;
 
 	input[type='checkbox'] {
-		margin-right: 0.5 * $size__spacing-unit;
+		margin-right: 0.5 * structure.$size__spacing-unit;
 	}
 }
 
@@ -1581,7 +1585,7 @@ table.woocommerce-table--order-details.shop_table,
 	.wc_payment_method {
 		> label:first-of-type img {
 			float: none;
-			margin-left: 0.5 * $size__spacing-unit;
+			margin-left: 0.5 * structure.$size__spacing-unit;
 		}
 	}
 }
@@ -1669,13 +1673,13 @@ table.woocommerce-table--order-details.shop_table,
 #toggle-order-details {
 	align-items: center;
 	background: transparent;
-	color: $color__text-main;
+	color: colors.$color__text-main;
 	display: flex;
 	padding: 0;
 
 	&:hover {
 		background: transparent;
-		color: $color__text-light;
+		color: colors.$color__text-light;
 	}
 
 	svg {
@@ -1703,15 +1707,15 @@ table.woocommerce-table--order-details.shop_table,
 		font-weight: normal;
 
 		> span {
-			color: $color__text-light;
+			color: colors.$color__text-light;
 			display: block;
 		}
 	}
 }
 
 .woocommerce-customer-details {
-	border-top: 1px solid $color__border;
-	padding-top: $size__spacing-unit;
+	border-top: 1px solid colors.$color__border;
+	padding-top: structure.$size__spacing-unit;
 	address {
 		font-size: 90%;
 		font-style: normal;

@@ -1,50 +1,33 @@
-/*
-Theme Name: Newspack Joseph
-Theme URI:
-Author: Automattic
-Author URI: https://newspack.blog
-Description:
-Requires at least: WordPress 4.9.6
-Version: 1.61.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Template: newspack-theme
-Text Domain: newspack-joseph
-Tags:
-AMP: true
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Newspack Theme is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-@import 'variables-style/variables-style';
-@import '../../newspack-theme/sass/style-base';
+@use 'theme-description';
+@use 'variables-style/variables-style';
+@use '../../newspack-theme/sass/style-base';
+@use '../../newspack-theme/sass/mixins/utilities';
+@use '../../newspack-theme/sass/variables-site/colors';
+@use '../../newspack-theme/sass/variables-site/fonts';
+@use '../../newspack-theme/sass/variables-site/structure';
 
 /* Body */
 body {
 	outline: 1px solid;
-	outline-offset: -#{0.5 * $size__spacing-unit};
-	padding: #{0.5 * $size__spacing-unit};
+	outline-offset: -#{0.5 * structure.$size__spacing-unit};
+	padding: #{0.5 * structure.$size__spacing-unit};
 }
 
 /* Header */
 .top-header-contain {
-	background-color: $color__text-main;
+	background-color: colors.$color__text-main;
 }
 
 .bottom-header-contain {
 	.wrapper {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			border-bottom-width: 2px;
 		}
 	}
 }
 
 .header-search-contain {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		display: flex;
 		align-items: center;
 	}
@@ -59,11 +42,11 @@ body {
 	.bottom-header-contain,
 	.middle-header-contain,
 	.top-header-contain {
-		background-color: $color__text-main;
+		background-color: colors.$color__text-main;
 	}
 
 	.top-header-contain {
-		border-bottom-color: $color__background-body;
+		border-bottom-color: colors.$color__background-body;
 	}
 }
 
@@ -121,8 +104,8 @@ input[type='submit'] {
 .wp-block-columns .wp-block-column > .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: $font__size-base;
-	margin-bottom: $size__spacing-unit;
+	font-size: fonts.$font__size-base;
+	margin-bottom: structure.$size__spacing-unit;
 }
 
 .accent-header,
@@ -144,7 +127,7 @@ div.wpnbha .article-section-title,
 	width: 100%;
 
 	&::after {
-		background-color: currentColor;
+		background-color: currentcolor;
 		content: '';
 		flex: 1 0 0.25rem;
 		height: 1px;
@@ -156,7 +139,7 @@ div.wpnbha .article-section-title,
 .wpnbha.has-text-align-center {
 	.article-section-title span {
 		&::before {
-			background-color: currentColor;
+			background-color: currentcolor;
 			content: '';
 			flex: 1 0 0.25rem;
 			height: 1px;
@@ -180,7 +163,7 @@ div.wpnbha .article-section-title,
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: $font__size_base;
+	font-size: fonts.$font__size_base;
 	position: relative;
 
 	&::before {
@@ -188,7 +171,7 @@ div.wpnbha .article-section-title,
 	}
 
 	&::after {
-		background-color: currentColor;
+		background-color: currentcolor;
 		content: '';
 		flex: 1 0 0.25rem;
 		height: 1px;
@@ -198,7 +181,7 @@ div.wpnbha .article-section-title,
 
 /* Navigation */
 .mobile-sidebar {
-	background: $color__text-main;
+	background: colors.$color__text-main;
 }
 
 .site-header {
@@ -207,7 +190,7 @@ div.wpnbha .article-section-title,
 			.sub-menu {
 				a:hover,
 				a:focus {
-					background: $color__text-main;
+					background: colors.$color__text-main;
 				}
 			}
 		}
@@ -218,8 +201,12 @@ div.wpnbha .article-section-title,
 .search,
 .blog,
 .archive {
-	.cat-links::before {
-		display: none;
+	.cat-links {
+		font-size: fonts.$font__size-sm;
+
+		&::before {
+			display: none;
+		}
 	}
 }
 
@@ -232,7 +219,7 @@ div.wpnbha .article-section-title,
 
 .single:not( .has-large-featured-image ) {
 	.entry-header {
-		border-bottom-color: currentColor;
+		border-bottom-color: currentcolor;
 		border-bottom-width: 2px;
 
 		.entry-subhead {
@@ -255,58 +242,68 @@ div.wpnbha .article-section-title,
 .h-db.single-featured-image-beside,
 .h-sb.single-featured-image-beside {
 	.featured-image-beside {
-		@include media( tablet ) {
-			background-color: $color__text-main;
+		@include utilities.media( tablet ) {
+			background-color: colors.$color__text-main;
 
 			.entry-header {
-				color: $color__background-body;
+				color: colors.$color__background-body;
 			}
 		}
 	}
+}
+
+.featured-image-behind {
+	margin: 0 calc( 50% - 50vw + 0.5rem );
+	width: calc( 100vw - structure.$size__spacing-unit );
 }
 
 .featured-image-beside {
 	.entry-header .entry-meta .byline::after {
 		display: none;
 	}
+
+	@include utilities.media( tablet ) {
+		margin: 0 calc( 50% - 50vw + 0.5rem );
+		width: calc( 100vw - structure.$size__spacing-unit );
+	}
 }
 
 .entry-meta .byline {
 	a,
 	a:visited {
-		color: $color__text-light;
+		color: colors.$color__text-light;
 	}
 
 	a:hover {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 }
 
 .single .entry-meta {
-	@include media( tablet ) {
+	@include utilities.media( tablet ) {
 		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
 
 		.byline {
-			margin-right: #{1.5 * $size__spacing-unit};
+			margin-right: #{1.5 * structure.$size__spacing-unit};
 		}
 	}
 }
 
 .accent-header:not( .widget-title )::before,
 .cat-links::before {
-	background: $color__text-main;
+	background: colors.$color__text-main;
 }
 
 /* Author Bio */
 .author-bio .accent-header {
-	color: $color__text-main;
-	font-size: $font__size_base;
-	margin: 0 0 #{0.25 * $size__spacing-unit};
+	color: colors.$color__text-main;
+	font-size: fonts.$font__size_base;
+	margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 
 	span {
-		font-size: $font__size-xs;
+		font-size: fonts.$font__size-xs;
 
 		&.author-job-title {
 			margin-left: 0.5em;
@@ -337,29 +334,29 @@ input[type='datetime-local'],
 input[type='color'],
 textarea {
 	&:focus {
-		outline-color: $color__text-main;
+		outline-color: colors.$color__text-main;
 	}
 }
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-weight: bold;
 }
 
 //! Columns Block
 .wp-block-columns.is-style-borders {
 	> .wp-block-column {
-		border-color: currentColor;
+		border-color: currentcolor;
 
 		&::after {
-			border-color: currentColor;
+			border-color: currentcolor;
 		}
 	}
 }
 
 .wp-block-group.is-style-border {
-	border: 3px double currentColor;
+	border: 3px double currentcolor;
 }
 
 //! Pullquote
@@ -367,7 +364,7 @@ textarea {
 	border: 0;
 	border-bottom: 2px solid;
 	border-top: 1px solid;
-	font-family: $font__heading;
+	font-family: fonts.$font__heading;
 	font-style: normal;
 	font-weight: bold;
 	text-align: center;
@@ -391,8 +388,8 @@ textarea {
 
 	cite {
 		color: inherit;
-		font-family: $font__body;
-		font-size: $font__size-base;
+		font-family: fonts.$font__body;
+		font-size: fonts.$font__size-base;
 		font-weight: normal;
 	}
 
@@ -410,16 +407,16 @@ textarea {
 .wp-block-separator,
 hr {
 	background: transparent !important;
-	border-color: currentColor;
+	border-color: currentcolor;
 	border-top-style: double;
 	border-top-width: 3px;
 
 	&.is-style-dots::before {
-		color: currentColor;
+		color: currentcolor;
 	}
 
 	&:not( .is-style-dots ).has-background {
-		border-color: currentColor;
+		border-color: currentcolor;
 		border-top-style: double;
 		border-top-width: 3px;
 	}
@@ -432,7 +429,7 @@ hr {
 
 /* Archive */
 .archive .page-title {
-	color: $color__text-light;
+	color: colors.$color__text-light;
 }
 
 /* Sidebar */
@@ -446,19 +443,19 @@ hr {
 #colophon {
 	&,
 	.social-navigation a {
-		color: $color__text-main;
+		color: colors.$color__text-main;
 	}
 
 	.widget-title,
 	.widgettitle {
-		color: $color__text-main;
-		font-size: $font__size_base;
+		color: colors.$color__text-main;
+		font-size: fonts.$font__size_base;
 	}
 }
 
 .footer-branding .wrapper,
 .footer-widgets:first-child {
-	border-top: 3px solid currentColor;
+	border-top: 3px solid currentcolor;
 }
 
 .af-widget {
@@ -475,7 +472,7 @@ hr {
 .site-content .wpnbha {
 	&.is-style-borders {
 		article {
-			border-color: $color__text-main;
+			border-color: colors.$color__text-main;
 		}
 	}
 }
@@ -485,7 +482,7 @@ hr {
 .entry-content {
 	.newspack-lightbox {
 		.newspack-popup-wrapper {
-			box-shadow: 0 0 0 1px $color__text-main;
+			box-shadow: 0 0 0 1px colors.$color__text-main;
 			margin: 0.5rem;
 		}
 
@@ -508,12 +505,24 @@ hr {
 }
 
 // Sponsored Content
-
-.sponsor-label {
-	font-size: $font__size-sm;
-}
-
 .single .sponsor-label {
 	align-items: stretch;
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
+
+	.cat-links {
+		font-size: fonts.$font__size-sm;
+	}
+
+	@include utilities.media( tabletonly ) {
+		+ .cat-links {
+			font-size: fonts.$font__size-sm;
+		}
+	}
+}
+
+.sponsors-show-authors {
+	div.sponsor-bio,
+	div.sponsor-bio + .sponsor-bio {
+		border-color: colors.$color__text-main;
+	}
 }

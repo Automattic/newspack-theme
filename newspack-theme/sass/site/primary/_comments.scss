@@ -1,4 +1,9 @@
 @use 'sass:math';
+@use '../../mixins/mixins-master';
+@use '../../mixins/utilities';
+@use '../../variables-site/colors';
+@use '../../variables-site/fonts';
+@use '../../variables-site/structure';
 
 .comment-content a {
 	word-wrap: break-word;
@@ -9,26 +14,26 @@
 }
 
 .comments-area {
-	margin: calc( 2 * #{$size__spacing-unit} ) 0;
+	margin: calc( 2 * #{structure.$size__spacing-unit} ) 0;
 
-	@include media( tablet ) {
-		margin: calc( 3 * #{$size__spacing-unit} ) 0;
+	@include utilities.media( tablet ) {
+		margin: calc( 3 * #{structure.$size__spacing-unit} ) 0;
 	}
 
 	> * {
-		margin-top: calc( 2 * #{$size__spacing-unit} );
-		margin-bottom: calc( 2 * #{$size__spacing-unit} );
+		margin-top: calc( 2 * #{structure.$size__spacing-unit} );
+		margin-bottom: calc( 2 * #{structure.$size__spacing-unit} );
 	}
 
 	/* Add extra margin when the comments section is located immediately after the
 	 * post itself (this happens on pages).
 	 */
 	.entry + & {
-		margin-top: calc( 3 * #{$size__spacing-unit} );
+		margin-top: calc( 3 * #{structure.$size__spacing-unit} );
 	}
 
 	.comments-title-wrap {
-		@include media( tablet ) {
+		@include utilities.media( tablet ) {
 			align-items: baseline;
 			display: flex;
 			justify-content: space-between;
@@ -37,14 +42,14 @@
 		.comments-title {
 			margin: 0;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				flex: 1 0 calc( 3 * ( 100vw / 12 ) );
 			}
 		}
 
 		.discussion-meta {
-			@include media( tablet ) {
-				margin-left: #{$size__spacing-unit};
+			@include utilities.media( tablet ) {
+				margin-left: #{structure.$size__spacing-unit};
 				text-align: right;
 			}
 		}
@@ -65,7 +70,7 @@
 	position: relative;
 
 	.comment-user-avatar {
-		margin: $size__spacing-unit 0 -#{$size__spacing-unit};
+		margin: structure.$size__spacing-unit 0 -#{structure.$size__spacing-unit};
 	}
 
 	.comment .comment-form {
@@ -75,7 +80,7 @@
 	> small {
 		bottom: 1em;
 		display: block;
-		font-size: $font__size_base;
+		font-size: fonts.$font__size_base;
 		position: absolute;
 		right: 0;
 		white-space: nowrap;
@@ -113,8 +118,8 @@
 }
 
 .comment-policy {
-	font-size: $font__size-sm;
-	margin: #{0.5 * $size__spacing-unit} 0 $size__spacing-unit;
+	font-size: fonts.$font__size-sm;
+	margin: #{0.5 * structure.$size__spacing-unit} 0 structure.$size__spacing-unit;
 
 	a {
 		text-decoration: underline;
@@ -127,7 +132,7 @@
 
 	.children {
 		margin: 0;
-		padding: 0 0 0 $size__spacing-unit;
+		padding: 0 0 0 structure.$size__spacing-unit;
 	}
 
 	> .comment:first-child {
@@ -137,30 +142,30 @@
 	.pingback,
 	.trackback {
 		.comment-body {
-			color: $color__text-light;
-			font-family: $font__heading;
-			font-size: $font__size-xs;
+			color: colors.$color__text-light;
+			font-family: fonts.$font__heading;
+			font-size: fonts.$font__size-xs;
 			font-weight: 500;
-			margin-top: $size__spacing-unit;
-			margin-bottom: $size__spacing-unit;
+			margin-top: structure.$size__spacing-unit;
+			margin-bottom: structure.$size__spacing-unit;
 
 			a:not( .comment-edit-link ) {
 				font-weight: bold;
 				line-height: 1.5;
-				padding-right: #{0.5 * $size__spacing-unit};
+				padding-right: #{0.5 * structure.$size__spacing-unit};
 				display: block;
 			}
 
 			.comment-edit-link {
-				color: $color__text-light;
-				font-family: $font__heading;
+				color: colors.$color__text-light;
+				font-family: fonts.$font__heading;
 				font-weight: 500;
 			}
 		}
 	}
 
 	#respond .comment-reply-title {
-		font-size: $font__size_base;
+		font-size: fonts.$font__size_base;
 	}
 }
 
@@ -179,8 +184,8 @@
 	list-style: none;
 	position: relative;
 
-	@include media( tablet ) {
-		padding-left: calc( 0.5 * ( #{$size__spacing-unit} + calc( 100vw / 12 ) ) );
+	@include utilities.media( tablet ) {
+		padding-left: calc( 0.5 * ( #{structure.$size__spacing-unit} + calc( 100vw / 12 ) ) );
 
 		&.depth-1,
 		.children {
@@ -189,7 +194,7 @@
 	}
 
 	.comment-body {
-		margin: calc( 2 * #{$size__spacing-unit} ) 0 0;
+		margin: calc( 2 * #{structure.$size__spacing-unit} ) 0 0;
 	}
 
 	.comment-meta {
@@ -199,7 +204,7 @@
 	.comment-author {
 		.avatar {
 			float: left;
-			margin-right: $size__spacing-unit;
+			margin-right: structure.$size__spacing-unit;
 			position: relative;
 		}
 
@@ -211,23 +216,23 @@
 				color: inherit;
 
 				&:hover {
-					color: $color__primary-variation;
+					color: colors.$color__primary-variation;
 				}
 			}
 		}
 
 		.post-author-badge {
-			background: $color__primary;
+			background: colors.$color__primary;
 			border-radius: 100%;
 			color: #fff;
 			display: inline-block;
 			height: 16px;
 			line-height: 16px;
-			margin-left: #{0.25 * $size__spacing-unit};
+			margin-left: #{0.25 * structure.$size__spacing-unit};
 			text-align: center;
 			width: 16px;
 
-			@include media( tablet ) {
+			@include utilities.media( tablet ) {
 				height: 18px;
 				line-height: 18px;
 				width: 18px;
@@ -235,7 +240,7 @@
 
 			svg {
 				display: inline-block;
-				fill: currentColor;
+				fill: currentcolor;
 				height: inherit;
 				transform: scale( 0.875 );
 				width: inherit;
@@ -248,7 +253,7 @@
 		.comment-edit-link {
 			display: inline;
 			font-weight: 500;
-			color: $color__text-light;
+			color: colors.$color__text-light;
 			vertical-align: baseline;
 
 			time {
@@ -256,7 +261,7 @@
 			}
 
 			&:hover {
-				color: $color__primary-variation;
+				color: colors.$color__primary-variation;
 				text-decoration: none;
 			}
 		}
@@ -266,13 +271,13 @@
 		}
 
 		.edit-link-sep {
-			color: $color__text-light;
+			color: colors.$color__text-light;
 			margin: 0 0.2em;
 			vertical-align: baseline;
 		}
 
 		.edit-link {
-			color: $color__text-light;
+			color: colors.$color__text-light;
 
 			svg {
 				transform: scale( 0.8 );
@@ -283,21 +288,21 @@
 
 		.comment-edit-link {
 			position: relative;
-			padding-left: $size__spacing-unit;
-			margin-left: -#{$size__spacing-unit};
+			padding-left: structure.$size__spacing-unit;
+			margin-left: -#{structure.$size__spacing-unit};
 			z-index: 1;
 
 			&:hover {
-				color: $color__primary;
+				color: colors.$color__primary;
 			}
 		}
 	}
 
 	.comment-content {
-		margin: $size__spacing-unit 0;
+		margin: structure.$size__spacing-unit 0;
 
-		@include media( desktop ) {
-			padding-right: $size__spacing-unit;
+		@include utilities.media( desktop ) {
+			padding-right: structure.$size__spacing-unit;
 		}
 
 		> *:first-child {
@@ -323,7 +328,7 @@
 }
 
 .must-log-in {
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 	font-style: italic;
 }
 
@@ -333,12 +338,12 @@
 	font-weight: 500;
 
 	&:hover {
-		color: $color__primary-variation;
+		color: colors.$color__primary-variation;
 	}
 }
 
 .discussion-avatar-list {
-	@include clearfix;
+	@include mixins-master.clearfix;
 
 	margin: 0;
 	padding: 0;
@@ -353,8 +358,8 @@
 
 	.comment-user-avatar {
 		img {
-			height: calc( 1.5 * #{$size__spacing-unit} );
-			width: calc( 1.5 * #{$size__spacing-unit} );
+			height: calc( 1.5 * #{structure.$size__spacing-unit} );
+			width: calc( 1.5 * #{structure.$size__spacing-unit} );
 		}
 	}
 }
@@ -365,9 +370,9 @@
 
 		.svg-icon {
 			vertical-align: middle;
-			fill: currentColor;
+			fill: currentcolor;
 			transform: scale( 0.6 ) scaleX( -1 ) translateY( -0.1em );
-			margin-left: -#{0.25 * $size__spacing-unit}; // Align icon with avatars above.
+			margin-left: -#{0.25 * structure.$size__spacing-unit}; // Align icon with avatars above.
 		}
 	}
 }
@@ -375,22 +380,22 @@
 .comment-form {
 	.comment-notes,
 	label {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
-		color: $color__text-light;
+		font-family: fonts.$font__heading;
+		font-size: fonts.$font__size-xs;
+		color: colors.$color__text-light;
 	}
 
 	.comment-form-author,
 	.comment-form-email {
-		@include media( tablet ) {
-			width: calc( 50% - #{math.div( $size--spacing-unit, 2 )} );
+		@include utilities.media( tablet ) {
+			width: calc( 50% - #{math.div( structure.$size--spacing-unit, 2 )} );
 			float: left;
 		}
 	}
 
 	.comment-form-email {
-		@include media( tablet ) {
-			margin-left: $size__spacing-unit;
+		@include utilities.media( tablet ) {
+			margin-left: structure.$size__spacing-unit;
 		}
 	}
 
@@ -421,10 +426,10 @@
 	align-items: center;
 	background: transparent;
 	border-radius: 0;
-	border-top: 1px solid $color__border;
-	color: $color__text-main;
+	border-top: 1px solid colors.$color__border;
+	color: colors.$color__text-main;
 	display: flex;
-	font-size: $font__size-sm;
+	font-size: fonts.$font__size-sm;
 	justify-content: center;
 	margin-top: 0;
 	position: relative;
@@ -437,7 +442,7 @@
 	&:hover,
 	&:focus {
 		background: transparent;
-		color: $color__primary;
+		color: colors.$color__primary;
 	}
 }
 

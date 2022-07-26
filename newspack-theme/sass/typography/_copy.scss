@@ -1,3 +1,5 @@
+@use '../variables-site/fonts';
+
 p {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -12,16 +14,16 @@ i {
 
 blockquote {
 	cite {
-		font-family: $font__heading;
-		font-size: $font__size-xs;
+		font-family: fonts.$font__heading;
+		font-size: fonts.$font__size-xs;
 		font-style: normal;
 	}
 }
 
 pre {
-	font-size: $font__size-sm;
-	font-family: $font__pre;
-	line-height: $font__line-height-body;
+	font-size: fonts.$font__size-sm;
+	font-family: fonts.$font__pre;
+	line-height: fonts.$font__line-height-body;
 	overflow: auto;
 }
 
@@ -29,8 +31,8 @@ code,
 kbd,
 tt,
 var {
-	font-size: $font__size-sm;
-	font-family: $font__code;
+	font-size: fonts.$font__size-sm;
+	font-family: fonts.$font__code;
 }
 
 abbr,

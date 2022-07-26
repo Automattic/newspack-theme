@@ -1,3 +1,7 @@
+@use 'sass:meta';
+@use '../variables-site/structure';
+@use '../variables-site/transitions';
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -24,22 +28,22 @@ iframe {
 .avatar {
 	border-radius: 100%;
 	display: block;
-	height: calc( 2.25 * #{$size__spacing-unit} );
+	height: calc( 2.25 * #{structure.$size__spacing-unit} );
 	min-height: inherit;
-	width: calc( 2.25 * #{$size__spacing-unit} );
+	width: calc( 2.25 * #{structure.$size__spacing-unit} );
 }
 
 svg {
-	transition: fill $icon_transition ease-in-out;
-	fill: currentColor;
+	transition: fill transitions.$icon_transition ease-in-out;
+	fill: currentcolor;
 }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-@import 'captions';
+@include meta.load-css( 'captions' );
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-@import 'galleries';
+@include meta.load-css( 'galleries' );
