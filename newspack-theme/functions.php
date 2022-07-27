@@ -593,9 +593,77 @@ function newspack_enqueue_scripts() {
 	wp_enqueue_script( 'newspack-post-meta-toggles' );
 
 	// Remove FSE-related Gutenberg blocks.
-	wp_enqueue_script( 'newspack-hide-fse-blocks', get_theme_file_uri( '/js/dist/editor-remove-blocks.js' ), array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), $theme_version, true );
+	$allowed_fse_blocks = newspack_fse_blocks_to_remove();
+	wp_register_script( 'newspack-hide-fse-blocks', get_theme_file_uri( '/js/dist/editor-remove-blocks.js' ), array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), $theme_version, true );
+	wp_localize_script( 'newspack-hide-fse-blocks', 'updateAllowedBlocks', $allowed_fse_blocks );
+	wp_enqueue_script( 'newspack-hide-fse-blocks' );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_enqueue_scripts' );
+
+
+/**
+ * Check for additional allowed blocks
+ * 
+ * Add this flag to the wp-config.php to allow more blocks, formatted in a array --
+ * for example: `define( 'NEWSPACK_FSE_BLOCKS_ALLOWED', ['core/avatar', 'core/loginout'] );`
+ *
+ * @return array List of allowed FSE blocks.
+ */
+function newspack_is_fse_blocks_allowed() {
+	if ( defined( 'NEWSPACK_FSE_BLOCKS_ALLOWED' ) ) {
+		return NEWSPACK_FSE_BLOCKS_ALLOWED;
+	}
+}
+
+/**
+ * Put together list of FSE blocks to remove
+ *
+ * @return array FSE blocks to remove from editor.
+ */
+function newspack_fse_blocks_to_remove() {
+
+	// List of all FSE blocks to remove from the editor.
+	$fse_blocks = array(
+		'core/loginout',
+		'core/post-comments-form',
+		'core/comments-query-loop',
+		'core/query',
+		'core/post-title',
+		'core/post-featured-image',
+		'core/post-excerpt',
+		'core/post-content',
+		'core/post-terms',
+		'core/post-date',
+		'core/post-author',
+		'core/post-navigation-link',
+		'core/read-more',
+		'core/avatar',
+		'core/post-author-biography',
+		'core/query-title',
+		'core/term-description',
+	);
+
+	// Get site-specific allowed FSE blocks.
+	if ( is_array( newspack_is_fse_blocks_allowed() ) ) {
+		$get_allowed_blocks = array_map( 'esc_html', newspack_is_fse_blocks_allowed() );
+
+		// Remove the allowed FSE blocks from the list of blocks to remove.
+		if ( $get_allowed_blocks ) {
+			$fse_blocks = array_diff( $fse_blocks, $get_allowed_blocks );
+		}
+	}
+
+	// Turn FSE blocks array into a string.
+	$fse_blocks = implode( ',', $fse_blocks );
+
+	// Format FSE block list so it can be passed to the JavaScript file as a translation.
+	$blocks_to_remove = array(
+		'removeblocks' => $fse_blocks,
+	);
+
+	// Return the list of blocks to remove.
+	return $blocks_to_remove;
+}
 
 /**
  * Dequeue Gutenberg global styles.
@@ -908,6 +976,62 @@ function newspack_colors_css_wrap() {
 	<?php
 }
 add_action( 'wp_head', 'newspack_colors_css_wrap' );
+
+/**
+ * Get theme colors' values.
+ *
+ * @return string[] Array of colors.
+ */
+function newspack_get_colors() {
+	$colors              = [];
+	$colors['primary']   = newspack_get_primary_color();
+	$colors['secondary'] = newspack_get_secondary_color();
+	$colors['cta']       = get_theme_mod( 'header_cta_hex', newspack_get_mobile_cta_color() );
+
+	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
+		$colors['header'] = $colors['primary'];
+	}
+
+	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
+		$colors['primary']   = get_theme_mod( 'primary_color_hex', $colors['primary'] );
+		$colors['secondary'] = get_theme_mod( 'secondary_color_hex', $colors['secondary'] );
+
+		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
+			$colors['header']       = get_theme_mod( 'header_color_hex', '#666666' );
+			$colors['primary_menu'] = get_theme_mod( 'header_primary_menu_color_hex', '' );
+		} else {
+			$colors['header'] = $colors['primary'];
+		}
+
+		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
+			$colors['footer'] = get_theme_mod( 'footer_color_hex', '' );
+		}
+	}
+
+	// Set color contrasts.
+	foreach ( $colors as $color_key => $color_value ) {
+		$colors[ $color_key . '_contrast' ] = newspack_get_color_contrast( $color_value );
+	}
+
+	return $colors;
+}
+
+/**
+ * Add CSS variables to theme's colors.
+ */
+function newspack_colors_css_variables() {
+	$colors = newspack_get_colors();
+	?>
+	<style type="text/css" id="newspack-theme-colors-variables">
+		:root {
+			<?php foreach ( $colors as $color_key => $color_value ) : ?>
+				--newspack-<?php echo esc_attr( str_replace( '_', '-', $color_key ) ); ?>-color: <?php echo esc_attr( $color_value ); ?>;
+			<?php endforeach; ?>
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'newspack_colors_css_variables' );
 
 /**
  * Display custom font CSS in customizer and on frontend.

@@ -9,6 +9,7 @@
 .sponsor-label {
 	align-items: stretch;
 	display: inline-flex;
+	margin-right: 0.5rem;
 	position: relative;
 
 	button {
@@ -16,7 +17,7 @@
 		background: transparent;
 		color: colors.$color__text-light;
 		display: inline-flex;
-		margin-left: #{0.25 * structure.$size__spacing-unit};
+		margin-left: #{0.15 * structure.$size__spacing-unit};
 		padding: 0;
 		position: relative;
 
@@ -35,7 +36,9 @@
 	}
 
 	&::before,
-	&::after {
+	&::after,
+	+ .cat-links::before,
+	+ .cat-links::after {
 		display: none;
 	}
 }
@@ -96,6 +99,8 @@ amp-script .sponsor-label {
 	align-items: center;
 	display: inline-flex;
 	line-height: 1;
+	margin-right: #{0.25 * structure.$size__spacing-unit};
+
 	@include utilities.media( mobile ) {
 		border-right: 1px solid colors.$color__border;
 		margin: 0 #{0.75 * structure.$size__spacing-unit} 0 0;
@@ -107,12 +112,82 @@ amp-script .sponsor-label {
 }
 
 .entry-sponsor {
-	align-items: stretch;
-	display: inline-flex;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .sponsor-byline .author {
 	font-weight: bold;
+}
+
+/* Single Posts */
+
+.single {
+	.sponsor-byline > span:first-child {
+		display: inline;
+	}
+
+	// When categories are visible
+	&.sponsors-show-cats .sponsor-label {
+		display: inline-flex;
+	}
+
+	.sponsor-label + .cat-links {
+		display: inline-block;
+	}
+
+	// When authors are visible
+	&.sponsors-show-authors .entry-subhead {
+		flex-wrap: wrap;
+
+		.sponsor-logos {
+			@include utilities.media( mobile ) {
+				border-right: 0;
+				margin-right: 0;
+			}
+		}
+
+		.sponsor-byline {
+			font-size: fonts.$font__size-sm;
+
+			@include utilities.media( desktop ) {
+				> span:first-child {
+					display: block;
+				}
+			}
+
+			.author {
+				color: inherit;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.entry-meta + .entry-sponsor {
+		flex-grow: 0;
+		margin-right: structure.$size__spacing-unit;
+
+		@include utilities.media( notdesktop ) {
+			order: 10;
+			margin-top: 1rem;
+			width: 100%;
+		}
+
+		+ .sharedaddy {
+			margin-top: structure.$size__spacing-unit;
+
+			@include utilities.media( desktop ) {
+				border-left: 1px solid colors.$color__border;
+				margin-top: 0;
+				padding-left: 1rem;
+			}
+		}
+	}
+
+	&.single-featured-image-default .sponsor-byline {
+		margin-right: 0;
+	}
 }
 
 // Featured image beside/behind adjustments
@@ -122,18 +197,6 @@ amp-script .sponsor-label {
 		align-items: center;
 	}
 
-	.sponsor-label button {
-		color: inherit;
-	}
-
-	.sponsor-logos {
-		margin-right: 0;
-
-		@include utilities.media( mobile ) {
-			border: 0;
-			padding-right: 0;
-		}
-	}
 	.sponsor-byline {
 		color: inherit;
 	}
@@ -144,12 +207,39 @@ amp-script .sponsor-label {
 		background: rgba( 0, 0, 0, 0.95 );
 	}
 
-	.sponsor-label button::after {
-		border-bottom-color: rgba( 0, 0, 0, 0.95 );
+	.sponsor-label button {
+		color: inherit;
+
+		::after {
+			border-bottom-color: rgba( 0, 0, 0, 0.95 );
+		}
 	}
 
-	.sponsor-logos {
-		margin: 0;
+	.entry-meta + .entry-sponsor .byline {
+		margin-right: 0;
+	}
+}
+
+.featured-image-beside {
+	.entry-meta + .entry-sponsor + .sharedaddy {
+		border: 0;
+		padding: 0;
+	}
+
+	@include utilities.media( tablet ) {
+		.sponsor-label button {
+			color: inherit;
+		}
+
+		.sponsor-logos {
+			border: 0;
+		}
+	}
+}
+
+.single:not( .sponsors-show-authors ) .featured-image-beside {
+	.posted-on {
+		display: block;
 	}
 }
 
@@ -170,6 +260,33 @@ amp-script .sponsor-label {
 	}
 }
 
+// Sponsor bio when author bio is visible
+.sponsors-show-authors {
+	.sponsor-bio {
+		border: solid colors.$color__border;
+		border-width: 2px 0 1px;
+		padding: structure.$size__spacing-unit 0;
+
+		+ .sponsor-bio {
+			border-top: 0;
+			margin-top: -32px;
+		}
+
+		h2 {
+			color: inherit;
+			font-size: fonts.$font__size-sm;
+			border: 0;
+			margin: 0;
+			padding: 0;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
 // Archives
 .search,
 .archive,
@@ -180,10 +297,14 @@ amp-script .sponsor-label {
 		}
 
 		.sponsor-label {
-			display: flex;
+			display: inline-flex;
 			font-size: 65%;
 		}
 	}
+}
+
+.search article .sponsor-label + .cat-links {
+	display: inline-block;
 }
 
 .sponsor-label + .page-title {
@@ -275,36 +396,22 @@ amp-script .sponsor-label {
 }
 
 // Newspack Blocks
-/* stylelint-disable selector-type-no-unknown  */
+/* stylelint-disable selector-type-no-unknown */
 .wpnbha,
 amp-script .wpnbha,
-.wp-block-newspack-blocks-carousel,
-amp-script .wp-block-newspack-blocks-carousel {
-	.sponsor-label {
-		display: flex;
-	}
-
+.wpnbpc,
+amp-script .wpnbpc {
 	.sponsor-logos {
 		border: 0;
-		padding: 0;
-	}
-}
-
-.wpnbha,
-amp-script .wpnbha {
-	.sponsor-logos {
-		margin: #{0.125 * structure.$size__spacing-unit} 0 #{0.25 * structure.$size__spacing-unit};
-		width: 100%;
-	}
-}
-/* stylelint-enable  */
-
-.wp-block-newspack-blocks-carousel {
-	.sponsor-byline {
-		color: #fff;
-	}
-
-	.sponsor-logos {
 		margin: 0;
+
+		> * {
+			margin: 0;
+		}
 	}
+}
+/* stylelint-enable */
+
+.wpnbpc .sponsor-byline {
+	color: #fff;
 }

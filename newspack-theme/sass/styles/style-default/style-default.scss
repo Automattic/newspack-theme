@@ -92,8 +92,9 @@
 		background-color: colors.$color__primary;
 		color: #fff;
 		display: inline-block;
+		line-height: 1;
 		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
-		padding: 0.35em 0.5em;
+		padding: 0.3em 0.5em;
 
 		&:visited {
 			color: #fff;
@@ -207,4 +208,10 @@ footer.entry-footer a {
 			border: 0;
 		}
 	}
+}
+
+// Sponsored Content
+.single.sponsors-show-cats .sponsor-label,
+.single.sponsors-show-cats .sponsor-label + button {
+	margin-bottom: #{0.25 * structure.$size__spacing-unit};
 }

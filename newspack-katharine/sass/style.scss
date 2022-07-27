@@ -494,3 +494,11 @@ hr {
 .featured-image-beside .sponsor-label .sponsor-info a {
 	color: #fff;
 }
+
+.sponsors-show-authors {
+	div.sponsor-bio,
+	div.sponsor-bio + .sponsor-bio {
+		border-color: colors.$color__text-main;
+		border-style: dotted;
+	}
+}

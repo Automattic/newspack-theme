@@ -220,12 +220,16 @@ endif;
 
 					<?php newspack_mobile_cta(); ?>
 
+					<?php do_action( 'newspack_header_before_mobile_toggle' ); ?>
+
 					<?php if ( newspack_has_menus() ) : ?>
 						<button class="mobile-menu-toggle" on="tap:mobile-sidebar.toggle">
 							<?php echo wp_kses( newspack_get_icon_svg( 'menu', 20 ), newspack_sanitize_svgs() ); ?>
 							<span><?php esc_html_e( 'Menu', 'newspack' ); ?></span>
 						</button>
 					<?php endif; ?>
+
+					<?php do_action( 'newspack_header_after_mobile_toggle' ); ?>
 
 				</div><!-- .wrapper -->
 			</div><!-- .middle-header-contain -->
