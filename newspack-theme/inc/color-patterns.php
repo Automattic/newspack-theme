@@ -31,8 +31,10 @@ function newspack_custom_colors_css() {
 			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.comment .comment-author .post-author-badge,
 			.woocommerce .onsale,
-			.woocommerce-store-notice {
-				background-color: ' . esc_attr( $colors['primary'] ) . '; /* base: #0073a8; */
+			.woocommerce-store-notice,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
+				background-color: ' . esc_html( $colors['primary'] ) . '; /* base: #0073a8; */
 			}
 
 			@media only screen and (min-width: 782px) {
@@ -52,8 +54,12 @@ function newspack_custom_colors_css() {
 			.comment .comment-metadata > a:hover,
 			.comment .comment-metadata .comment-edit-link:hover,
 			.site-info a:hover,
-			.comments-toggle:hover, .comments-toggle:focus {
-				color: ' . esc_attr( newspack_color_with_contrast( $colors['primary'] ) ) . ';
+			.comments-toggle:hover, .comments-toggle:focus,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited {
+				color: ' . esc_html( newspack_color_with_contrast( $colors['primary'] ) ) . ';
 			}
 
 			/* Set primary color */
@@ -83,8 +89,10 @@ function newspack_custom_colors_css() {
 			.comment .comment-author .post-author-badge,
 			div.wpbnbd.tiered .wp-block-newspack-blocks-donate__tiers input[type="radio"]:checked + .tier-select-label,
 			.woocommerce .onsale,
-			.woocommerce-store-notice {
-				color: ' . esc_attr( $colors['primary_contrast'] ) . ';
+			.woocommerce-store-notice,
+			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
+				color: ' . esc_html( $colors['primary_contrast'] ) . ';
 			}
 
 			@media only screen and (min-width: 782px) {
