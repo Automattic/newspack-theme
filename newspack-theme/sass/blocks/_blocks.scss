@@ -8,7 +8,6 @@
 /* !Block styles */
 
 .entry .entry-content > *,
-.newspack-inline-popup > *,
 [id='pico'] > * {
 	margin: 32px 0;
 	max-width: 100%;
@@ -65,10 +64,6 @@
 			}
 		}
 	}
-}
-
-.newspack-inline-popup > *:first-child {
-	margin-top: 0;
 }
 
 // Wide and full widths need adjustment for the wider templates
