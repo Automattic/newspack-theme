@@ -1,260 +1,274 @@
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
 
-/* Subscribe Style 7 */
+.newspack-pattern {
+	/* Subscribe Style 7 */
 
-.newspack-pattern.subscribe__style-7 {
-	.wp-block-media-text {
-		display: block;
-
-		@include utilities.media( tablet ) {
-			display: grid;
-		}
-
-		&__media {
-			display: none;
-
-			@include utilities.media( tablet ) {
-				display: block;
-			}
-		}
-
-		&__content {
-			display: grid;
-			gap: 16px;
-			padding: 36px;
-
-			@include utilities.media( tablet ) {
-				padding: 64px;
-			}
-
-			> * {
-				margin-bottom: 0;
-				margin-top: 0;
-			}
-		}
-	}
-
-	.newspack-pattern__heading + p {
-		font-size: 0.8em;
-	}
-
-	.wp-block-jetpack-mailchimp {
-		form {
-			display: grid;
-			gap: 8px;
-
-			> * {
-				margin: 0;
-			}
-		}
-
-		.wp-block-jetpack-mailchimp_notification {
-			margin: 8px 0 0;
-
-			&.wp-block-jetpack-mailchimp__is-amp {
-				margin: 0;
-			}
-		}
-
-		.wp-block-button + p {
-			font-size: 0.7em;
-		}
-	}
-
-	&.has-background {
-		padding: 0;
-	}
-
-	.newspack-lightbox .newspack-popup > & {
-		margin: -32px;
-	}
-
-	.newspack-lightbox & {
-		~ .popup-not-interested-form {
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			right: 0;
-
-			button {
-				display: block;
-				font-weight: bold;
-				padding: 8px;
-			}
-		}
-
-		+ p:empty {
-			display: none;
-		}
-	}
-}
-
-/* Subscribe Style 8 */
-
-.newspack-pattern.subscribe__style-8 {
-	.wp-block-image {
-		display: none;
-		margin-bottom: 0;
-
-		@include utilities.media( tablet ) {
+	&.subscribe__style-7 {
+		.wp-block-media-text {
 			display: block;
-		}
-
-		figcaption {
-			display: none;
-		}
-	}
-
-	.wp-block-group {
-		margin-top: 0;
-		padding: 0;
-
-		.wp-block-group__inner-container {
-			display: grid;
-			gap: 16px;
-
-			> * {
-				margin-bottom: 0;
-				margin-top: 0;
-			}
-		}
-	}
-
-	.newspack-pattern__inner {
-		.wp-block-group__inner-container {
-			padding: 36px;
 
 			@include utilities.media( tablet ) {
-				padding: 64px;
-			}
-		}
-	}
-
-	.newspack-pattern__heading + p {
-		font-size: 0.8em;
-	}
-
-	@include mixins-master.jetpack-mailchimp;
-
-	&.has-background {
-		padding: 0;
-	}
-
-	.newspack-lightbox .newspack-popup > & {
-		margin: -32px;
-	}
-
-	.newspack-lightbox & {
-		~ .popup-not-interested-form {
-			margin: 12px 0 0;
-			padding: 0 4px 4px;
-
-			@include utilities.media( tablet ) {
-				margin: -48px 0 0;
-				padding: 0 32px 32px;
+				display: grid;
 			}
 
-			button {
-				font-family: inherit;
+			&__media {
+				display: none;
+
+				@include utilities.media( tablet ) {
+					display: block;
+				}
 			}
-		}
 
-		+ p:empty {
-			display: none;
-		}
-	}
-}
-
-/* Subscribe Style 9 */
-
-.newspack-pattern.subscribe__style-9 {
-	.wp-block-columns {
-		margin: 0;
-		padding: 0;
-
-		&:not( .is-not-stacked-on-mobile ) {
-			@include utilities.media( tabletonly ) {
+			&__content {
+				display: grid;
 				gap: 16px;
-			}
-		}
+				padding: 36px;
 
-		.wp-block-column {
-			> * {
-				margin-bottom: 16px;
-				margin-top: 16px;
+				@include utilities.media( tablet ) {
+					padding: 64px;
+				}
 
-				&:first-child {
+				> * {
+					margin-bottom: 0;
 					margin-top: 0;
 				}
+			}
+		}
 
-				&:last-child {
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
+
+		.wp-block-jetpack-mailchimp {
+			form {
+				display: grid;
+				gap: 8px;
+
+				> * {
+					margin: 0;
+				}
+			}
+
+			.wp-block-jetpack-mailchimp_notification {
+				margin: 8px 0 0;
+
+				&.wp-block-jetpack-mailchimp__is-amp {
+					margin: 0;
+				}
+			}
+
+			.wp-block-button + p {
+				font-size: 0.7em;
+			}
+		}
+
+		&.has-background {
+			padding: 0;
+		}
+
+		.newspack-lightbox .newspack-popup > & {
+			margin: -32px;
+		}
+
+		.newspack-lightbox & {
+			~ .popup-not-interested-form {
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+
+				button {
+					display: block;
+					font-weight: bold;
+					padding: 8px;
+				}
+			}
+
+			+ p:empty {
+				display: none;
+			}
+		}
+	}
+
+	/* Subscribe Style 8 */
+
+	&.subscribe__style-8 {
+		.wp-block-image {
+			display: none;
+			margin-bottom: 0;
+
+			@include utilities.media( tablet ) {
+				display: block;
+			}
+
+			figcaption {
+				display: none;
+			}
+		}
+
+		.wp-block-group {
+			margin-top: 0;
+			padding: 0;
+
+			.wp-block-group__inner-container {
+				display: grid;
+				gap: 16px;
+
+				> * {
 					margin-bottom: 0;
+					margin-top: 0;
 				}
 			}
 		}
-	}
 
-	.newspack-pattern__heading + p {
-		font-size: 0.8em;
-	}
+		.newspack-pattern__inner {
+			.wp-block-group__inner-container {
+				padding: 36px;
 
-	@include mixins-master.jetpack-mailchimp;
-
-	&.has-background {
-		padding: 32px;
-	}
-
-	.newspack-lightbox & {
-		~ .popup-dismiss-form {
-			.newspack-lightbox__close {
-				height: 32px;
-				padding: 0;
-				width: 32px;
+				@include utilities.media( tablet ) {
+					padding: 64px;
+				}
 			}
 		}
 
-		~ .popup-not-interested-form {
-			margin-top: 16px;
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
 
-			button {
-				font-family: inherit;
+		@include mixins-master.jetpack-mailchimp;
+
+		&.has-background {
+			padding: 0;
+		}
+
+		.newspack-lightbox .newspack-popup > & {
+			margin: -32px;
+		}
+
+		.newspack-lightbox & {
+			~ .popup-not-interested-form {
+				margin: 12px 0 0;
+				padding: 0 4px 4px;
+
+				@include utilities.media( tablet ) {
+					margin: -48px 0 0;
+					padding: 0 32px 32px;
+				}
+
+				button {
+					font-family: inherit;
+				}
+			}
+
+			+ p:empty {
+				display: none;
+			}
+		}
+	}
+
+	/* Subscribe Style 9 */
+
+	&.subscribe__style-9 {
+		.wp-block-columns {
+			margin: 0;
+			padding: 0;
+
+			&:not( .is-not-stacked-on-mobile ) {
+				@include utilities.media( tabletonly ) {
+					gap: 16px;
+				}
+			}
+
+			.wp-block-column {
+				> * {
+					margin-bottom: 16px;
+					margin-top: 16px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 
-		+ p:empty {
+		.newspack-pattern__heading + p {
+			font-size: 0.8em;
+		}
+
+		@include mixins-master.jetpack-mailchimp;
+
+		&.has-background {
+			padding: 32px;
+		}
+
+		.newspack-lightbox & {
+			~ .popup-dismiss-form {
+				.newspack-lightbox__close {
+					height: 32px;
+					padding: 0;
+					width: 32px;
+				}
+			}
+
+			~ .popup-not-interested-form {
+				margin-top: 16px;
+
+				button {
+					font-family: inherit;
+				}
+			}
+
+			+ p:empty {
+				display: none;
+			}
+		}
+	}
+
+	/* Subscribe Style 10 */
+
+	&.subscribe__style-10 {
+		margin: 0 auto;
+		max-width: 90vw;
+		width: 1200px;
+
+		@include mixins-master.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
+
+		/* stylelint-disable-next-line */
+		#wp-block-jetpack-mailchimp_consent-text {
 			display: none;
 		}
-	}
-}
 
-/* Subscribe Style 10 */
+		.wp-block-column:first-of-type {
+			p {
+				padding-bottom: calc( 1px + 0.36rem );
+				padding-top: calc( 1px + 0.36rem );
+			}
+		}
 
-.newspack-pattern.subscribe__style-10 {
-	margin: 0 auto;
-	max-width: 90vw;
-	width: 1200px;
+		.wp-block-jetpack-button {
+			align-self: stretch;
 
-	@include mixins-master.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
-
-	/* stylelint-disable-next-line */
-	#wp-block-jetpack-mailchimp_consent-text {
-		display: none;
-	}
-
-	.wp-block-column:first-of-type {
-		p {
-			padding-bottom: calc( 1px + 0.36rem );
-			padding-top: calc( 1px + 0.36rem );
+			button.wp-block-button__link {
+				line-height: 1;
+				height: 100%;
+			}
 		}
 	}
 
-	.wp-block-jetpack-button {
-		align-self: stretch;
+	/* Registration Style 1 */
 
-		button.wp-block-button__link {
-			line-height: 1;
-			height: 100%;
+	&.registration__style-1 {
+		@include utilities.media( tablet ) {
+			padding: 32px;
+		}
+
+		.newspack-registration {
+			margin-bottom: 0;
 		}
 	}
 }
