@@ -323,6 +323,9 @@ function newspack_custom_typography_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block .wpbnbd .tier-label,
 		.block-editor-block-list__layout .block-editor-block-list__block .wpbnbd button,
 
+		/* Reader Registration Block */
+		.block-editor-block-list__layout .block-editor-block-list__block .newspack-registration button,
+
 		/* Classic Editor */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption dd,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-freeform blockquote cite
