@@ -34,7 +34,7 @@ function newspack_custom_colors_css() {
 			.woocommerce-store-notice,
 			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
 			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
-				background-color: ' . esc_html( $colors['primary'] ) . '; /* base: #0073a8; */
+				background-color: ' . esc_attr( $colors['primary'] ) . '; /* base: #0073a8; */
 			}
 
 			@media only screen and (min-width: 782px) {
@@ -59,7 +59,7 @@ function newspack_custom_colors_css() {
 			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited,
 			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
 			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover:visited {
-				color: ' . esc_html( newspack_color_with_contrast( $colors['primary'] ) ) . ';
+				color: ' . esc_attr( newspack_color_with_contrast( $colors['primary'] ) ) . ';
 			}
 
 			/* Set primary color */
@@ -92,7 +92,7 @@ function newspack_custom_colors_css() {
 			.woocommerce-store-notice,
 			.logged-in.page-template-single-wide.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
 			.logged-in.page-template-single-feature.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
-				color: ' . esc_html( $colors['primary_contrast'] ) . ';
+				color: ' . esc_attr( $colors['primary_contrast'] ) . ';
 			}
 
 			@media only screen and (min-width: 782px) {
@@ -134,8 +134,8 @@ function newspack_custom_colors_css() {
 			.search .featured-listing[class*="type-newspack_lst_"] .entry-title a::before,
 			.blog .featured-listing[class*="type-newspack_lst_"] .entry-title a::before,
 			.newspack-listings__curated-list .featured-listing .newspack-listings__listing-title::before {
-				border-left-color: ' . esc_html( $primary_color ) . ';
-				border-right-color: ' . esc_html( $primary_color ) . ';
+				border-left-color: ' . esc_attr( $colors['primary'] ) . ';
+				border-right-color: ' . esc_attr( $colors['primary'] ) . ';
 			}
 
 			/* Set secondary background color */
@@ -491,8 +491,8 @@ function newspack_custom_colors_css() {
 		.editor-styles-wrapper .block-editor-block-list__block .wpnbha .featured-listing[class*="type-newspack_lst_"] .entry-title a::before,
 		.editor-styles-wrapper .block-editor-block-list__block .wpnbpc .featured-listing[class*="type-newspack_lst_"] .entry-title a::before,
 		.editor-styles-wrapper .block-editor-block-list__block .newspack-listings__curated-list .featured-listing .newspack-listings__listing-title::before {
-			border-left-color: ' . esc_html( $primary_color ) . ';
-			border-right-color: ' . esc_html( $primary_color ) . ';
+			border-left-color: ' . esc_attr( $colors['primary'] ) . ';
+			border-right-color: ' . esc_attr( $colors['primary'] ) . ';
 		}
 
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-file .wp-block-file__button, /* legacy */
