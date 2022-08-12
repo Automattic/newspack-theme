@@ -1,3 +1,10 @@
+# [1.63.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.63.0-alpha.1...v1.63.0-alpha.2) (2022-08-12)
+
+
+### Bug Fixes
+
+* use proper variable and escape function for primary color ([#1898](https://github.com/Automattic/newspack-theme/issues/1898)) ([1062b1a](https://github.com/Automattic/newspack-theme/commit/1062b1a44861d3a9e6503afd6215b6ae9cc7dbbc))
+
 # [1.63.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.62.0...v1.63.0-alpha.1) (2022-08-05)
 
 
