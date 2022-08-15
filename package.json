@@ -52,6 +52,6 @@
     "sass": "^1.54.3",
     "semantic-release": "^19.0.3",
     "semantic-release-version-bump": "^1.4.1",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.10.0"
   }
 }
