@@ -1,3 +1,19 @@
+# [1.63.0](https://github.com/Automattic/newspack-theme/compare/v1.62.0...v1.63.0) (2022-08-16)
+
+
+### Bug Fixes
+
+* **registration-block:** make sure font-family in the editor matches front-end ([#1889](https://github.com/Automattic/newspack-theme/issues/1889)) ([e0c4309](https://github.com/Automattic/newspack-theme/commit/e0c4309f4f8bd640a8e0c5a8804ff3b1c72b8659))
+* use proper variable and escape function for primary color ([#1898](https://github.com/Automattic/newspack-theme/issues/1898)) ([1062b1a](https://github.com/Automattic/newspack-theme/commit/1062b1a44861d3a9e6503afd6215b6ae9cc7dbbc))
+
+
+### Features
+
+* add custom style for upcoming registration pattern (style 1) ([#1888](https://github.com/Automattic/newspack-theme/issues/1888)) ([58f303d](https://github.com/Automattic/newspack-theme/commit/58f303d55b5e3c2509bc88ddfdec37af34b00621))
+* Add featured listing styles ([#1877](https://github.com/Automattic/newspack-theme/issues/1877)) ([efc4936](https://github.com/Automattic/newspack-theme/commit/efc49368925af508b07926097c4862c24f1aa243))
+* colors' css variables and action hook for mobile toggle ([#1875](https://github.com/Automattic/newspack-theme/issues/1875)) ([0830ca7](https://github.com/Automattic/newspack-theme/commit/0830ca784639ac40ad05adbf85938e6dda8e77ec))
+* redesign "My Account" page ([#1879](https://github.com/Automattic/newspack-theme/issues/1879)) ([9258f21](https://github.com/Automattic/newspack-theme/commit/9258f2137b22293f9c8df1ff938557dc416d86e9))
+
 # [1.63.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.63.0-alpha.1...v1.63.0-alpha.2) (2022-08-12)
 
 
