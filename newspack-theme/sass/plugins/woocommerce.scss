@@ -133,7 +133,7 @@ a.button {
 	font-size: fonts.$font__size-sm;
 }
 
-.woocommerce-notices-wrapper {
+.woocommerce-notices-wrapper:not( :empty ) {
 	margin-bottom: structure.$size__spacing-unit;
 	width: 100%;
 }
@@ -988,7 +988,7 @@ table.variations {
 			a {
 				box-shadow: none;
 				text-decoration: none;
-				font-weight: 600;
+				font-weight: 700;
 
 				&:hover {
 					color: #005177;
@@ -1719,5 +1719,105 @@ table.woocommerce-table--order-details.shop_table,
 	address {
 		font-size: 90%;
 		font-style: normal;
+	}
+}
+
+/**
+ * My Account Page.
+ */
+
+.logged-in.page-template-single-wide.woocommerce-account,
+.logged-in.page-template-single-feature.woocommerce-account {
+	.entry-header {
+		display: none;
+	}
+
+	.woocommerce-MyAccount-navigation {
+		border: 1px solid colors.$color__border-light;
+		padding: 0.8em;
+		border-radius: 6px;
+		ul {
+			li {
+				border: 0;
+				display: block;
+				margin: 0;
+				padding: 0;
+				a {
+					@include utilities.button-transition;
+					background: colors.$color__background-body;
+					border: none;
+					border-radius: 5px;
+					box-sizing: border-box;
+					display: block;
+					color: inherit;
+					font-size: fonts.$font__size-sm;
+					font-weight: 700;
+					line-height: fonts.$font__line-height-heading;
+					outline: none;
+					padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
+					text-decoration: none;
+					vertical-align: bottom;
+
+					&:hover,
+					&:hover:visited {
+						background: colors.$color__background-body;
+						color: colors.$color__primary;
+						cursor: pointer;
+					}
+
+					&:visited {
+						color: inherit;
+						text-decoration: none;
+					}
+
+					&:focus-visible {
+						background: colors.$color__background-body;
+						color: inherit;
+						outline: colors.$color__border thin solid;
+						outline-offset: -1px;
+					}
+				}
+				&.is-active {
+					a {
+						background: colors.$color__primary;
+						color: colors.$color__background-body;
+						pointer-events: none;
+
+						&:focus-visible {
+							outline-color: colors.$color__background-body;
+							outline-offset: -4px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.woocommerce-EditAccountForm {
+		.form-row-first,
+		.form-row-last {
+			width: 100%;
+		}
+
+		.form-row-first {
+			margin-top: 0;
+		}
+	}
+
+	@include utilities.media( tablet ) {
+		.entry-content > .woocommerce {
+			align-items: start;
+			display: grid;
+			gap: 3.2rem;
+			grid-template-columns: 1fr 2fr;
+		}
+
+		.woocommerce-MyAccount-content {
+			.woocommerce-notices-wrapper + *,
+			.woocommerce-account-my-memberships :first-child,
+			.woocommerce_account_subscriptions :first-child {
+				margin-top: 0;
+			}
+		}
 	}
 }
