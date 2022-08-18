@@ -93,6 +93,10 @@ div.wpnbha .article-section-title,
 	margin: 0 0 #{1.5 * structure.$size__spacing-unit};
 }
 
+div.wpnbha.is-grid .article-section-title {
+	margin-bottom: calc( #{1.5 * structure.$size__spacing-unit} - var( --wpnbha-col-gap, 32px ) );
+}
+
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
