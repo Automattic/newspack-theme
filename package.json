@@ -49,7 +49,7 @@
     "postcss-scss": "^4.0.4",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^3.5.0",
-    "sass": "^1.54.4",
+    "sass": "^1.54.5",
     "semantic-release": "^19.0.3",
     "semantic-release-version-bump": "^1.4.1",
     "stylelint": "^14.10.0"
