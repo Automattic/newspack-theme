@@ -124,8 +124,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 		color: #000;
 	}
 
-	/* Hide */
-
+	/* stylelint-disable selector-id-pattern */
 	.nav1,
 	.nav2,
 	.nav3,
@@ -143,28 +142,41 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.entry-footer,
 	.author-bio,
 	.post-navigation,
-	.widget-area,
 	.comments-area .comments-title-wrap,
 	.comment-form-flex,
 	.comment-reply,
 	#respond,
 	.comment .comment-metadata .edit-link,
+	.site-info a.privacy-policy-link,
+	.wc-memberships-frontend-banner,
+	#atomic-proxy-bar,
+	// Ads
 	.newspack_global_ad,
+	.newspack_amp_sticky_ad,
+	.custom-ad-bg,
+	.newspack-ads-blocks-ad-unit,
 	.widget_newspack-ads-widget,
+	broadstreet-zone-container,
+	.bs_zones,
+	.scaip,
+	//Widgets
+	.widget-area,
 	.above-content.widget,
 	.below-content.widget,
 	.above-footer-widgets,
 	.footer-branding,
-	.site-info a.privacy-policy-link,
-	.wc-memberships-frontend-banner,
-	#atomic-proxy-bar,
+	// Campaigns
 	.newspack-lightbox,
-	.newspack-inline-popup {
+	.newspack-popup,
+	.newspack-inline-popup,
+	#pico_header, 
+	#pico_prompt, 
+	#pico_launcher {
 		display: none;
 	}
+	/* stylelint-enable */
 
 	/* AMP */
-
 	/* stylelint-disable selector-type-no-unknown  */
 	amp-ads,
 	amp-next-page {
