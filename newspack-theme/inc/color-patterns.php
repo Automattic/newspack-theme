@@ -509,12 +509,14 @@ function newspack_custom_colors_css() {
 			color: ' . esc_attr( $colors['primary_contrast'] ) . ';
 		}
 
+		.edit-post-visual-editor.editor-styles-wrapper .has-primary-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-primary-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-color {
 			color: ' . esc_attr( $colors['primary'] ) . ';
 		}
 
+		.edit-post-visual-editor.editor-styles-wrapper .has-primary-variation-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-primary-variation-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-primary-variation-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-primary-variation-color {
@@ -575,6 +577,7 @@ function newspack_custom_colors_css() {
 			color: inherit;
 		}
 
+		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-color {
@@ -585,6 +588,7 @@ function newspack_custom_colors_css() {
 			border-color: ' . esc_attr( $colors['secondary'] ) . ';
 		}
 
+		.edit-post-visual-editor.editor-styles-wrapper .has-secondary-variation-color, /* legacy */
 		.edit-post-visual-editor .editor-styles-wrapper .has-secondary-variation-color,
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline .wp-block-button__link.has-secondary-variation-color, /* legacy selector */
 		.block-editor-block-list__layout .block-editor-block-list__block .is-style-outline.wp-block-button__link.has-secondary-variation-color {
