@@ -1106,6 +1106,11 @@ hr {
 	}
 }
 
+//! Navigtation block
+.wp-block-navigation a {
+	text-decoration: none;
+}
+
 //! Mailchimp block
 .wp-block-jetpack-mailchimp {
 	input[type='email'] {
@@ -1306,7 +1311,8 @@ $colors: (
 	.has-#{$name}-background-color.has-background-dim,
 	.wp-block-pullquote.is-style-solid-color.has-#{$name}-background-color,
 	.wp-block-pullquote.has-#{$name}-background-color,
-	.is-style-outline .wp-block-button__link.has-#{$name}-background-color:not( :hover ) {
+	.is-style-outline .wp-block-button__link.has-#{$name}-background-color:not( :hover ),
+	.wp-block-navigation-item.has-#{$name}-background-color {
 		background-color: $hex;
 	}
 
