@@ -125,7 +125,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'styles/style-editor.css' );
+		add_editor_style( 'style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
