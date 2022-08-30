@@ -268,6 +268,13 @@ div.wpnbha .article-section-title {
 	}
 }
 
+div.wpnbha.is-grid .article-section-title {
+	margin-bottom: calc( structure.$size__spacing-unit - var( --wpnbha-col-gap, 32px ) );
+	@include utilities.media( tablet ) {
+		margin-bottom: calc( #{1.5 * structure.$size__spacing-unit} - var( --wpnbha-col-gap, 32px ) );
+	}
+}
+
 .single .cat-links {
 	margin-bottom: structure.$size__spacing-unit;
 	@include utilities.media( tablet ) {

@@ -28,6 +28,10 @@ Newspack Katharine Editor Styles
 	}
 }
 
+.is-grid .article-section-title {
+	margin-bottom: calc( 30px - var( --wpnbha-col-gap, 32px ) );
+}
+
 .wpnbha article .entry-meta,
 .entry-meta {
 	font-size: fonts.$font__size-xs;
