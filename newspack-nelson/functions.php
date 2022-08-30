@@ -20,7 +20,7 @@ if ( ! function_exists( 'newspack_nelson_setup' ) ) :
 		// Remove the default editor styles
 		remove_editor_styles();
 		// Add child theme editor styles, compiled from `style-child-theme-editor.scss`.
-		add_editor_style( 'styles/style-editor.css' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_nelson_setup', 12 );
@@ -33,33 +33,6 @@ function newspack_nelson_remove_widget() {
 	unregister_sidebar( 'header-3' );
 }
 add_action( 'widgets_init', 'newspack_nelson_remove_widget', 11 );
-
-/**
- * Function to load child theme's Google Fonts.
- */
-function newspack_nelson_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	* Translators: If there are characters in your language that are not
-	* supported by Montserrat, translate this to 'off'. Do not translate
-	* into your own language.
-	*/
-	$montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'newspack-nelson' );
-	if ( 'off' !== $montserrat ) {
-		$font_families   = array();
-		$font_families[] = 'Montserrat:500,500i,700,800';
-
-		$query_args = array(
-			'family'  => urlencode( implode( '|', $font_families ) ),
-			'subset'  => urlencode( 'latin,latin-ext' ),
-			'display' => urlencode( 'swap' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-	return esc_url_raw( $fonts_url );
-}
 
 /**
  * Display custom color CSS in customizer and on frontend.
@@ -96,24 +69,10 @@ function newspack_nelson_typography_css_wrap() {
 }
 add_action( 'wp_head', 'newspack_nelson_typography_css_wrap' );
 
-
-/**
- * Enqueue scripts and styles.
- */
-function newspack_nelson_scripts() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-nelson-fonts', newspack_nelson_fonts_url(), array(), null );
-}
-add_action( 'wp_enqueue_scripts', 'newspack_nelson_scripts' );
-
-
 /**
  * Enqueue supplemental block editor styles.
  */
 function newspack_nelson_editor_customizer_styles() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-nelson-fonts', newspack_nelson_fonts_url(), array(), null );
-
 	// Check for color or font customizations.
 	$theme_customizations = '';
 	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';

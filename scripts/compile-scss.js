@@ -89,7 +89,7 @@ const SASS_STYLESHEETS = [
 	{ inFile: 'newspack-theme/sass/style.scss', outFile: 'newspack-theme/style.css', withRTL: true },
 	{
 		inFile: 'newspack-theme/sass/style-editor.scss',
-		outFile: 'newspack-theme/styles/style-editor.css',
+		outFile: 'newspack-theme/style-editor.css',
 	},
 	{
 		inFile: 'newspack-theme/sass/style-editor-overrides.scss',
@@ -137,7 +137,7 @@ const SASS_STYLESHEETS = [
 	},
 	{
 		inFile: 'newspack-sacha/sass/style-editor.scss',
-		outFile: 'newspack-sacha/styles/style-editor.css',
+		outFile: 'newspack-sacha/style-editor.css',
 	},
 	{
 		inFile: 'newspack-sacha/sass/child-style-editor-overrides.scss',
@@ -155,7 +155,7 @@ const SASS_STYLESHEETS = [
 	},
 	{
 		inFile: 'newspack-scott/sass/style-editor.scss',
-		outFile: 'newspack-scott/styles/style-editor.css',
+		outFile: 'newspack-scott/style-editor.css',
 	},
 	{
 		inFile: 'newspack-scott/tribe-events/tribe-events.scss',
@@ -169,7 +169,7 @@ const SASS_STYLESHEETS = [
 	},
 	{
 		inFile: 'newspack-nelson/sass/style-editor.scss',
-		outFile: 'newspack-nelson/styles/style-editor.css',
+		outFile: 'newspack-nelson/style-editor.css',
 	},
 	{
 		inFile: 'newspack-nelson/tribe-events/tribe-events.scss',
@@ -183,7 +183,7 @@ const SASS_STYLESHEETS = [
 	},
 	{
 		inFile: 'newspack-katharine/sass/style-editor.scss',
-		outFile: 'newspack-katharine/styles/style-editor.css',
+		outFile: 'newspack-katharine/style-editor.css',
 	},
 	{
 		inFile: 'newspack-katharine/tribe-events/tribe-events.scss',
@@ -197,7 +197,7 @@ const SASS_STYLESHEETS = [
 	},
 	{
 		inFile: 'newspack-joseph/sass/style-editor.scss',
-		outFile: 'newspack-joseph/styles/style-editor.css',
+		outFile: 'newspack-joseph/style-editor.css',
 	},
 	{
 		inFile: 'newspack-joseph/tribe-events/tribe-events.scss',
