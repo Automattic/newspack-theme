@@ -666,31 +666,6 @@ function newspack_fse_blocks_to_remove() {
 }
 
 /**
- * Dequeue Gutenberg global styles.
- * 
- * These styles aren't currently used because Newspack is not a Full-Site editing theme.
- * 
- * @link: https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles/
- */
-function newspack_dequeue_global_styles() {
-	wp_dequeue_style( 'global-styles' );
-}
-add_action( 'wp_enqueue_scripts', 'newspack_dequeue_global_styles' );
-
-/**
- * Dequeue Gutenberg global editor styles.
- * 
- * These styles aren't currently used because Newspack is not a Full-Site editing theme.
- * 
- * @link: https://developer.wordpress.org/reference/functions/wp_enqueue_global_styles_css_custom_properties/
- */
-function newspack_dequeue_global_editor_styles() {
-	wp_dequeue_style( 'global-styles-css-custom-properties' );
-}
-add_action( 'enqueue_block_editor_assets', 'newspack_dequeue_global_editor_styles' );
-
-
-/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
