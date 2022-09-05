@@ -10,15 +10,15 @@
 }
 
 .admin-bar #page {
-  min-height: calc( 100vh - 46px );
+	min-height: calc( 100vh - 46px );
 
-  @include utilities.media( tablet ) {
-    min-height: calc( 100vh - 32px );
-  }
+	@include utilities.media( tablet ) {
+		min-height: calc( 100vh - 32px );
+	}
 }
 
 #content {
-	flex: 1;
+	flex: 99999; // Make it take as much space as possible, relative to other flex-grow elements.
 }
 
 .wrapper {
