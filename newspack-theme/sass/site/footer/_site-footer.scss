@@ -14,7 +14,7 @@
 	}
 
 	.footer-widgets {
-		padding: structure.$size__spacing-unit 0 #{2 * structure.$size__spacing-unit};
+		padding: structure.$size__spacing-unit 0 #{1.5 * structure.$size__spacing-unit};
 
 		.wrapper {
 			flex-wrap: wrap;
@@ -63,7 +63,6 @@
 
 	.custom-logo-link,
 	.footer-logo-link {
-		margin-bottom: structure.$size__spacing-unit;
 		max-height: 76px;
 		max-width: 200px;
 

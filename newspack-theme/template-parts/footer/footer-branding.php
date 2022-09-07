@@ -12,7 +12,7 @@ if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 
 	$has_footer_logo = true;
 }
 
-if ( is_active_sidebar( 'footer-1' ) && $show_footer_branding && ( has_custom_logo() || $has_footer_logo ) ) : ?>
+if ( is_active_sidebar( 'footer-1' ) && ( has_custom_logo() || $has_footer_logo ) && $show_footer_branding ) : ?>
 	<div class="footer-branding">
 		<div class="wrapper">
 			<?php if ( $has_footer_logo ) : ?>

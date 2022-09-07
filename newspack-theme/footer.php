@@ -60,7 +60,7 @@ if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 
 					the_privacy_policy_link( '', '' );
 				}
 
-				if ( ! is_active_sidebar( 'footer-1' ) || ! $show_footer_branding || ! ( has_custom_logo() && $has_footer_logo ) ) {
+				if ( ( ! is_active_sidebar( 'footer-1' ) || ! has_custom_logo() ) || ! $show_footer_branding ) {
 					newspack_social_menu_footer();
 				}
 				?>
