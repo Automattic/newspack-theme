@@ -1184,6 +1184,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to toggle off the footer branding.
+	$wp_customize->add_setting(
+		'footer_show_branding',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'footer_show_branding',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Show footer branding', 'newspack' ),
+			'description' => esc_html__( 'Display the site logo in the footer when the footer widget area is populated.', 'newspack' ),
+			'section'     => 'footer_options',
+		)
+	);
+
 	// Add option to toggle off the default footer layout.
 	$wp_customize->add_setting(
 		'footer_widget_layout',

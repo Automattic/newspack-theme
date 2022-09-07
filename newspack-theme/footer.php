@@ -9,6 +9,12 @@
  * @package Newspack
  */
 
+
+$show_footer_branding = get_theme_mod( 'footer_show_branding', true );
+$has_footer_logo = false;
+if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 'newspack_footer_logo', '' ) ) {
+	$has_footer_logo = true;
+}
 ?>
 
 	<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
@@ -54,7 +60,7 @@
 					the_privacy_policy_link( '', '' );
 				}
 
-				if ( ! is_active_sidebar( 'footer-1' ) || ( ! has_custom_logo() ) ) {
+				if ( ! is_active_sidebar( 'footer-1' ) || ! $show_footer_branding || ! ( has_custom_logo() && $has_footer_logo ) ) {
 					newspack_social_menu_footer();
 				}
 				?>
