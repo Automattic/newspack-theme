@@ -7,6 +7,12 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	> *:not( #content ) {
+		flex: 0;
+	}
+}
+#content {
+	flex: 1;
 }
 
 .admin-bar #page {
@@ -15,10 +21,6 @@
 	@include utilities.media( tablet ) {
 		min-height: calc( 100vh - 32px );
 	}
-}
-
-#content {
-	flex: 99999; // Make it take as much space as possible, relative to other flex-grow elements.
 }
 
 .wrapper {
