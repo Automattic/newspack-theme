@@ -3,6 +3,26 @@
 
 /** === Layout === */
 
+#page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	> *:not( #content ) {
+		flex: 0;
+	}
+}
+#content {
+	flex: 1;
+}
+
+.admin-bar #page {
+	min-height: calc( 100vh - 46px );
+
+	@include utilities.media( tablet ) {
+		min-height: calc( 100vh - 32px );
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
