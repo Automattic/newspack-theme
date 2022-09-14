@@ -1,3 +1,17 @@
+## [1.63.1](https://github.com/Automattic/newspack-theme/compare/v1.63.0...v1.63.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* update print styles to add SCAIP, Broadstreet, and Pico ([#1913](https://github.com/Automattic/newspack-theme/issues/1913)) ([738ceac](https://github.com/Automattic/newspack-theme/commit/738ceacf71825d7a4d58eb52f73d59d059ea2556))
+
+## [1.63.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.63.0...v1.63.1-alpha.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* update print styles to add SCAIP, Broadstreet, and Pico ([#1913](https://github.com/Automattic/newspack-theme/issues/1913)) ([738ceac](https://github.com/Automattic/newspack-theme/commit/738ceacf71825d7a4d58eb52f73d59d059ea2556))
+
 # [1.63.0](https://github.com/Automattic/newspack-theme/compare/v1.62.0...v1.63.0) (2022-08-16)
 
 
