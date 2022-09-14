@@ -5,12 +5,14 @@
  * @package Newspack
  */
 
+
+$show_footer_branding = get_theme_mod( 'footer_show_branding', true );
 $has_footer_logo = false;
 if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 'newspack_footer_logo', '' ) ) {
 	$has_footer_logo = true;
 }
 
-if ( is_active_sidebar( 'footer-1' ) && ( has_custom_logo() || $has_footer_logo ) ) : ?>
+if ( is_active_sidebar( 'footer-1' ) && ( has_custom_logo() || $has_footer_logo ) && $show_footer_branding ) : ?>
 	<div class="footer-branding">
 		<div class="wrapper">
 			<?php if ( $has_footer_logo ) : ?>
