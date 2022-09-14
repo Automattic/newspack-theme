@@ -978,15 +978,15 @@ ul.wp-block-archives,
 			max-width: 100%;
 		}
 
+		img {
+			display: block;
+			margin: 0;
+			opacity: 1;
+		}
+
 		button.image-button {
 			border-radius: 0;
 			height: auto;
-
-			img {
-				display: block;
-				margin: 0;
-				opacity: 1;
-			}
 		}
 	}
 
