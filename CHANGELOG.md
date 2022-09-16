@@ -1,3 +1,21 @@
+# [1.64.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.63.1...v1.64.0-alpha.1) (2022-09-16)
+
+
+### Bug Fixes
+
+* bundle font files in each theme ([#1918](https://github.com/Automattic/newspack-theme/issues/1918)) ([018b007](https://github.com/Automattic/newspack-theme/commit/018b00744d59baadc5b6203fa18790eacbce7439))
+* donate block colors ([9c4632f](https://github.com/Automattic/newspack-theme/commit/9c4632fdc5b88781b17de3c43a4c9f20af812b9d))
+* organic-profile-block editor handling ([064b26f](https://github.com/Automattic/newspack-theme/commit/064b26f89c8524e125ef8491d762fcb1c8ed65e9))
+* re-add support for Global Styles ([#1920](https://github.com/Automattic/newspack-theme/issues/1920)) ([194c16e](https://github.com/Automattic/newspack-theme/commit/194c16e641155e9ccfc892104f67cf89c1cff8cc))
+* update color and font code to support navigation block ([#1828](https://github.com/Automattic/newspack-theme/issues/1828)) ([c98c8af](https://github.com/Automattic/newspack-theme/commit/c98c8afbf31f07bb67a22c3f7046a1ca9f0946d2))
+* update Homepage Posts section header spacing ([#1904](https://github.com/Automattic/newspack-theme/issues/1904)) ([94aa69a](https://github.com/Automattic/newspack-theme/commit/94aa69a303197d7dd3522235c7ab76f3240978f7))
+
+
+### Features
+
+* add option to toggle off footer branding ([#1924](https://github.com/Automattic/newspack-theme/issues/1924)) ([a109a9d](https://github.com/Automattic/newspack-theme/commit/a109a9de8e4c977ff5672bbf684ebc33d5b2c947))
+* ensure footer stays at the bottom of the screen ([#1922](https://github.com/Automattic/newspack-theme/issues/1922)) ([3f2d3d8](https://github.com/Automattic/newspack-theme/commit/3f2d3d87f081cbe017ec72a92769d826f3495878))
+
 ## [1.63.1](https://github.com/Automattic/newspack-theme/compare/v1.63.0...v1.63.1) (2022-09-14)
 
 
