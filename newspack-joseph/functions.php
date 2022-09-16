@@ -20,53 +20,10 @@ if ( ! function_exists( 'newspack_joseph_setup' ) ) :
 		// Remove the default editor styles
 		remove_editor_styles();
 		// Add child theme editor styles, compiled from `style-child-theme-editor.scss`.
-		add_editor_style( 'styles/style-editor.css' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_joseph_setup', 12 );
-
-/**
- * Function to load child theme's Google Fonts.
- */
-function newspack_joseph_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by Old Standard TT, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$old_standard_tt = esc_html_x( 'on', 'Old Standard TT font: on or off', 'newspack-joseph' );
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by EB Garamond, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$eb_garamond = esc_html_x( 'on', 'EB Garamond: on or off', 'newspack-joseph' );
-
-	if ( 'off' !== $old_standard_tt || 'off' !== $eb_garamond ) {
-
-		$font_families = array();
-
-		if ( 'off' !== $old_standard_tt ) {
-			$font_families[] = 'Old Standard TT:400,400i,700';
-		}
-
-		if ( 'off' !== $eb_garamond ) {
-			$font_families[] = 'EB Garamond:400,400i,700,700i';
-		}
-
-		$query_args = array(
-			'family'  => urlencode( implode( '|', $font_families ) ),
-			'subset'  => urlencode( 'latin,latin-ext' ),
-			'display' => urlencode( 'swap' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-	return esc_url_raw( $fonts_url );
-}
 
 /**
  * Display custom color CSS in customizer and on frontend.
@@ -105,22 +62,9 @@ add_action( 'wp_head', 'newspack_joseph_typography_css_wrap' );
 
 
 /**
- * Enqueue scripts and styles.
- */
-function newspack_joseph_scripts() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-joseph-fonts', newspack_joseph_fonts_url(), array(), null );
-}
-add_action( 'wp_enqueue_scripts', 'newspack_joseph_scripts' );
-
-
-/**
  * Enqueue supplemental block editor styles.
  */
 function newspack_joseph_editor_customizer_styles() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-joseph-fonts', newspack_joseph_fonts_url(), array(), null );
-
 	// Check for color or font customizations.
 	$theme_customizations = '';
 	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';

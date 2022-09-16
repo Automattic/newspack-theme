@@ -20,37 +20,10 @@ if ( ! function_exists( 'newspack_katharine_setup' ) ) :
 		// Remove the default editor styles
 		remove_editor_styles();
 		// Add child theme editor styles, compiled from `style-child-theme-editor.scss`.
-		add_editor_style( 'styles/style-editor.css' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'newspack_katharine_setup', 12 );
-
-/**
- * Function to load child theme's Google Fonts.
- */
-function newspack_katharine_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	* Translators: If there are characters in your language that are not
-	* supported by Barlow, translate this to 'off'. Do not translate
-	* into your own language.
-	*/
-	$barlow = esc_html_x( 'on', 'Barlow font: on or off', 'newspack-katharine' );
-	if ( 'off' !== $barlow ) {
-		$font_families   = array();
-		$font_families[] = 'Barlow:400,400i,700,700i';
-
-		$query_args = array(
-			'family'  => urlencode( implode( '|', $font_families ) ),
-			'subset'  => urlencode( 'latin,latin-ext' ),
-			'display' => urlencode( 'swap' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-	return esc_url_raw( $fonts_url );
-}
 
 /**
  * Display custom color CSS in customizer and on frontend.
@@ -87,24 +60,10 @@ function newspack_katharine_typography_css_wrap() {
 }
 add_action( 'wp_head', 'newspack_katharine_typography_css_wrap' );
 
-
-/**
- * Enqueue scripts and styles.
- */
-function newspack_katharine_scripts() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-katharine-fonts', newspack_katharine_fonts_url(), array(), null );
-}
-add_action( 'wp_enqueue_scripts', 'newspack_katharine_scripts' );
-
-
 /**
  * Enqueue supplemental block editor styles.
  */
 function newspack_katharine_editor_customizer_styles() {
-	// Enqueue Google fonts.
-	wp_enqueue_style( 'newspack-katharine-fonts', newspack_katharine_fonts_url(), array(), null );
-
 	// Check for color or font customizations.
 	$theme_customizations = '';
 	require_once get_stylesheet_directory() . '/inc/child-color-patterns.php';
