@@ -153,7 +153,6 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	// Ads
 	.newspack_global_ad,
 	.newspack_amp_sticky_ad,
-	.custom-ad-bg,
 	.newspack-ads-blocks-ad-unit,
 	.widget_newspack-ads-widget,
 	broadstreet-zone-container,
@@ -172,7 +171,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	#pico_header, 
 	#pico_prompt, 
 	#pico_launcher {
-		display: none;
+		display: none !important;
 	}
 	/* stylelint-enable */
 
