@@ -151,12 +151,7 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.wc-memberships-frontend-banner,
 	#atomic-proxy-bar,
 	// Ads
-	.newspack_global_ad,
-	.newspack_amp_sticky_ad,
-	.newspack-ads-blocks-ad-unit,
 	.widget_newspack-ads-widget,
-	broadstreet-zone-container,
-	.bs_zones,
 	.scaip,
 	//Widgets
 	.widget-area,
@@ -167,11 +162,20 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	// Campaigns
 	.newspack-lightbox,
 	.newspack-popup,
-	.newspack-inline-popup,
-	#pico_header, 
-	#pico_prompt, 
+	.newspack-inline-popup {
+		display: none;
+	}
+
+	// Third-party elements to hide
+	broadstreet-zone-container,
+	.bs_zones,
+	.newspack_global_ad,
+	.newspack_amp_sticky_ad,
+	.newspack-ads-blocks-ad-unit,
+	#pico_header,
+	#pico_prompt,
 	#pico_launcher {
-		display: none !important;
+		display: none !important; // !important to override styles loaded after the theme's styles, or inline styles.
 	}
 	/* stylelint-enable */
 
