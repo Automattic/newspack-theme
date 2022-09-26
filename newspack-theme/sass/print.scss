@@ -17,9 +17,22 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 
 @media print {
 	/* Margins */
+	#page {
+		max-width: 96%;
+		margin: auto;
+		width: 96%;
+	}
 
-	@page {
-		margin: 2cm;
+	#primary,
+	.post-template-single-feature .main-content,
+	.wrapper {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	#page,
+	.admin-bar #page {
+		min-height: 0;
 	}
 
 	#primary {
@@ -116,6 +129,12 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	.entry .entry-content .button {
 		color: #000;
 		background: transparent;
+	}
+
+	/* Header */
+	.h-stk .site-header {
+		box-shadow: none;
+		position: static;
 	}
 
 	/* Footer */
