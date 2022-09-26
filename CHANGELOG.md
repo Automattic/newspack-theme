@@ -1,3 +1,10 @@
+# [1.64.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.64.0-alpha.1...v1.64.0-alpha.2) (2022-09-26)
+
+
+### Bug Fixes
+
+* correct issues with ad print styles ([#1935](https://github.com/Automattic/newspack-theme/issues/1935)) ([6d09a48](https://github.com/Automattic/newspack-theme/commit/6d09a489315efb1d41c7a950b291d16e380039dc))
+
 # [1.64.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.63.1...v1.64.0-alpha.1) (2022-09-16)
 
 
