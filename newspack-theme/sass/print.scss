@@ -17,9 +17,14 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 
 @media print {
 	/* Margins */
+	@page {
+		margin: 1cm 0;
+	}
+
 	#page {
-		max-width: 94%;
+		display: block;
 		margin: auto;
+		max-width: 94%;
 		width: 94%;
 	}
 
