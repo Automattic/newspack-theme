@@ -3,7 +3,60 @@
 @use '../../../newspack-theme/sass/variables-site/colors';
 @use '../../../newspack-theme/sass/variables-site/fonts';
 
-// Now overlay our style-specific ones, so we're only overriding specific variables.
+// Use @font-face to make the theme's font files available.
+@font-face {
+	font-family: 'EB Garamond';
+	src: url( 'fonts/eb-garamond/EBGaramond-Regular.ttf' );
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond';
+	src: url( 'fonts/eb-garamond/EBGaramond-Italic.ttf' );
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond';
+	src: url( 'fonts/eb-garamond/EBGaramond-Bold.ttf' );
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond';
+	src: url( 'fonts/eb-garamond/EBGaramond-BoldItalic.ttf' );
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Old Standard TT';
+	src: url( 'fonts/old-standard-tt/OldStandardTT-Regular.ttf' );
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Old Standard TT';
+	src: url( 'fonts/old-standard-tt/OldStandardTT-Italic.ttf' );
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Old Standard TT';
+	src: url( 'fonts/old-standard-tt/OldStandardTT-Bold.ttf' );
+	font-weight: 700;
+	font-display: swap;
+}
+
+// Now overlay our style-specific variables, so we're only overriding specific variables.
 colors.$color__text-light: color.adjust( colors.$color__text-main, $lightness: 20% );
 colors.$color__background-hr: color.adjust( colors.$color__text-main, $lightness: 20% );
 colors.$color__border: colors.$color__text-main;

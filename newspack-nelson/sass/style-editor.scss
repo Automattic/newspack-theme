@@ -42,6 +42,13 @@ blockquote {
 	}
 }
 
+.is-grid .article-section-title {
+	margin-bottom: calc( 20px - var( --wpnbha-col-gap, 32px ) );
+	@include utilities.media( tablet ) {
+		margin-bottom: calc( 30px - var( --wpnbha-col-gap, 32px ) );
+	}
+}
+
 .entry-meta .byline a {
 	color: colors.$color__text-light;
 }

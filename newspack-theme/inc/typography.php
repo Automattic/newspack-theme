@@ -49,6 +49,7 @@ function newspack_custom_typography_css() {
 		.wp-block-post-terms,
 		.wp-block-query-pagination,
 		.wp-block-loginout,
+		.wp-block-navigation,
 		h1,
 		h2,
 		h3,
@@ -269,6 +270,9 @@ function newspack_custom_typography_css() {
 
 		/* Login/out Block */
 		.block-editor-block-list__layout .wp-block.wp-block-loginout,
+
+		/* Navigtation Block */
+		.block-editor-block-list__layout .wp-block.wp-block-navigation,
 
 		/* Table Block */
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-table th, /* legacy */
