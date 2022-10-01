@@ -17,17 +17,10 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
-				// Template part for large featured images.
-				if ( in_array( newspack_featured_image_position(), array( 'large', 'behind', 'beside', 'above' ) ) ) :
-					get_template_part( 'template-parts/post/large-featured-image' );
-				else :
 				?>
-					<header class="entry-header">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</header>
-
-				<?php endif; ?>
+				<header class="entry-header">
+					<?php block_template_part( 'post-header' ); ?>
+				</header>
 
 				<div class="main-content">
 
@@ -43,12 +36,7 @@ get_header();
 
 					get_template_part( 'template-parts/content/content-single', 'single' );
 
-					newspack_previous_next();
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						newspack_comments_template();
-					}
+					block_template_part( 'post-footer' );
 
 					?>
 				</div><!-- .main-content -->

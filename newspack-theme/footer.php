@@ -10,20 +10,7 @@
  */
 
 
-$show_footer_branding = get_theme_mod( 'footer_show_branding', true );
-$has_footer_logo = false;
-if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 'newspack_footer_logo', '' ) ) {
-	$has_footer_logo = true;
-}
 ?>
-
-	<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
-		<div class="above-footer-widgets">
-			<div class="wrapper">
-				<?php dynamic_sidebar( 'footer-3' ); ?>
-			</div><!-- .wrapper -->
-		</div><!-- .above-footer-widgets -->
-	<?php endif; ?>
 
 	<?php do_action( 'before_footer' ); ?>
 
@@ -32,8 +19,7 @@ if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 
 	<footer id="colophon" class="site-footer">
 
 		<?php remove_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 ); ?>
-		<?php get_template_part( 'template-parts/footer/footer', 'branding' ); ?>
-		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
+		<?php block_template_part( 'footer' ); ?>
 
 		<div class="site-info">
 

@@ -266,6 +266,9 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			],
 		] );
 
+		// Add template part support.
+		add_theme_support( 'block-template-parts' );
+
 		// Add custom theme support - post subtitle
 		add_theme_support( 'post-subtitle' );
 	}
