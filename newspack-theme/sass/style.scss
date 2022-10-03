@@ -3,10 +3,33 @@
 @use 'style-base';
 @use 'styles/style-default/style-default';
 
+/* Misc overrides */
+
+// Potentially missing block styles
+.is-content-justification-space-between {
+	justify-content: space-between;
+}
+
+/* Header */
 .site-header .wrapper {
 	display: block;
 }
 
-.is-content-justification-space-between {
-	justify-content: space-between;
+.site-header .wp-block-separator {
+	margin: 0.5rem 0;
+}
+
+.wp-block-navigation .wp-block-page-list {
+	gap: 1.5em;
+}
+
+/* Blocks */
+.wp-block-avatar .avatar {
+	height: auto;
+	width: auto;
+}
+
+.wp-block-post-author__content {
+	font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }

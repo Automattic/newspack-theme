@@ -15,6 +15,21 @@
             "name": "footer",
             "title": "Footer",
             "area": "footer"
+        },
+        {
+            "name": "post-footer",
+            "title": "Post Footer",
+            "area": "uncategorized"
+        },
+        {
+            "name": "post-header",
+            "title": "Post Header",
+            "area": "uncategorized"
+        },
+        {
+            "name": "archive-content",
+            "title": "Archive Content",
+            "area": "uncategorized"
         }
     ]
 }
