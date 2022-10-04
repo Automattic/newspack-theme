@@ -96,6 +96,19 @@ function newspack_remove_jetpack_share() {
 }
 add_action( 'loop_start', 'newspack_remove_jetpack_share' );
 
+
+/**
+ * Remove Related Posts from their standard location so they can be added via block.
+ */
+function newspack_jetpackme_remove_rp() {
+	if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+		$jprp     = Jetpack_RelatedPosts::init();
+		$callback = array( $jprp, 'filter_add_target_to_dom' );
+		remove_filter( 'the_content', $callback, 40 );
+	}
+}
+add_action( 'wp', 'newspack_jetpackme_remove_rp', 20 );
+
 /**
  * Alter gallery widget default width.
  */
