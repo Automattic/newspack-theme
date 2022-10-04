@@ -5,6 +5,9 @@
             "contentSize": "1200px"
         }
     },
+    "spacing": {
+        "blockGap": true
+    },
     "templateParts": [
         {
             "name": "header",
