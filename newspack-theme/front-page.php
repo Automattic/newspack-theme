@@ -30,7 +30,6 @@ get_header();
 				if ( comments_open() || get_comments_number() ) {
 					newspack_comments_template();
 				}
-
 			endwhile; // End of the loop.
 			?>
 

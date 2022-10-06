@@ -11,12 +11,14 @@
 		"composer/installers": "~2.0",
 		"automattic/vipwpcs": "^2.0",
 		"wp-coding-standards/wpcs": "^2.1",
-		"phpcompatibility/phpcompatibility-wp": "^2.1",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"brainmaestro/composer-git-hooks": "^2.8",
 		"wptrt/wpthemereview": "*",
 		"szepeviktor/phpstan-wordpress": "^1.1",
-		"xwp/wp-dev-lib": "^1.5"
+		"xwp/wp-dev-lib": "^1.5",
+		"wp-coding-standards/wpcs": "*",
+		"phpunit/phpunit": "^7.0 || ^9.5"
 	},
 	"scripts": {
 		"phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
@@ -29,7 +31,8 @@
 		"post-update-cmd": [
 			"vendor/bin/cghooks update",
 			"PHPStan\\WordPress\\Composer\\FixWpStubs::php73Polyfill"
-		]
+		],
+		"lint": "phpcs ./"
 	},
 	"extra": {
 		"hooks": {

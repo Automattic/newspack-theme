@@ -18,7 +18,7 @@
  */
 function newspack_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] );
+	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	add_action( 'admin_notices', 'newspack_upgrade_notice' );
 }
 add_action( 'after_switch_theme', 'newspack_switch_theme' );
@@ -36,7 +36,7 @@ add_action( 'after_switch_theme', 'newspack_switch_theme' );
 function newspack_upgrade_notice() {
 	/* translators: %s: WordPress version used by current site. */
 	$message = sprintf( __( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ), $GLOBALS['wp_version'] );
-	printf( '<div class="error"><p>%s</p></div>', $message );
+	printf( '<div class="error"><p>%s</p></div>', esc_html( $message ) );
 }
 
 /**
@@ -49,8 +49,9 @@ function newspack_upgrade_notice() {
 function newspack_customize() {
 	wp_die(
 		sprintf(
-			__( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ),
-			$GLOBALS['wp_version']
+			/* translators: %s: WordPress version used by current site. */
+			esc_html__( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ),
+			esc_html( $GLOBALS['wp_version'] )
 		),
 		'',
 		array(
@@ -68,8 +69,9 @@ add_action( 'load-customize.php', 'newspack_customize' );
  * @global string $wp_version WordPress version.
  */
 function newspack_preview() {
-	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ), $GLOBALS['wp_version'] ) );
+	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		/* translators: %s: WordPress version used by current site. */
+		wp_die( sprintf( esc_html__( 'Newspack Theme requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'newspack' ), esc_html( $GLOBALS['wp_version'] ) ) );
 	}
 }
 add_action( 'template_redirect', 'newspack_preview' );

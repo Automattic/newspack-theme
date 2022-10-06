@@ -9,7 +9,7 @@
  * Replace the URL returned by the logo.
  */
 function newspack_login_headerurl() {
-    return home_url();
+	return home_url();
 }
 add_filter( 'login_headerurl', 'newspack_login_headerurl' );
 
@@ -17,7 +17,7 @@ add_filter( 'login_headerurl', 'newspack_login_headerurl' );
  * Replace the title with the site name.
  */
 function newspack_login_headertext() {
-    return get_bloginfo( 'name' );
+	return get_bloginfo( 'name' );
 }
 add_filter( 'login_headertext', 'newspack_login_headertext' );
 
@@ -41,7 +41,7 @@ function newspack_login_enqueue_scripts() {
 			}
 		}
 	} ?>
-  <style type="text/css">
+	<style type="text/css">
 		.login {
 			background: <?php echo esc_html( $background_color ); ?>;
 		}
@@ -117,6 +117,7 @@ function newspack_login_enqueue_scripts() {
 			box-shadow: 0 0 0 1px #ddd;
 			margin: 0;
 		}
-  </style>
-<?php }
+	</style>
+<?php
+}
 add_action( 'login_enqueue_scripts', 'newspack_login_enqueue_scripts' );

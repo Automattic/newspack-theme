@@ -9,7 +9,6 @@
  * Generate the CSS for custom typography.
  */
 function newspack_custom_typography_css() {
-
 	$font_body   = newspack_font_stack( get_theme_mod( 'font_body', '' ), get_theme_mod( 'font_body_stack', 'serif' ) );
 	$font_header = newspack_font_stack( get_theme_mod( 'font_header', '' ), get_theme_mod( 'font_header_stack', 'serif' ) );
 
@@ -473,7 +472,7 @@ function newspack_get_font_stacks() {
 				'Consolas',
 				'Courier New',
 				'Courier',
-				'monospace'
+				'monospace',
 			),
 		),
 	);

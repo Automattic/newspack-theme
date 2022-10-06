@@ -53,19 +53,21 @@ if ( $collapse_comments && 1 < (int) $discussion->responses && $on_first_page ) 
 		} else {
 			if ( '1' == $discussion->responses ) {
 				/* translators: %s: post title */
-				printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'newspack' ), get_the_title() );
+				printf( esc_html_x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'newspack' ), wp_kses_post( get_the_title() ) );
 			} else {
 				printf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s reply on &ldquo;%2$s&rdquo;',
-						'%1$s replies on &ldquo;%2$s&rdquo;',
-						$discussion->responses,
-						'comments title',
-						'newspack'
+					esc_html(
+						/* translators: 1: number of comments, 2: post title */
+						_nx(
+							'%1$s reply on &ldquo;%2$s&rdquo;',
+							'%1$s replies on &ldquo;%2$s&rdquo;',
+							$discussion->responses,
+							'comments title',
+							'newspack'
+						)
 					),
-					number_format_i18n( $discussion->responses ),
-					get_the_title()
+					esc_html( number_format_i18n( $discussion->responses ) ),
+					wp_kses_post( get_the_title() )
 				);
 			}
 		}
@@ -150,12 +152,9 @@ if ( $collapse_comments && 1 < (int) $discussion->responses && $on_first_page ) 
 			</p>
 			<?php
 		endif;
-
 	else :
-
 		// Show comment form.
 		newspack_comment_form( true );
-
-	endif; // if have_comments();
+	endif; // if have_comments.
 	?>
 </div><!-- #comments -->

@@ -408,7 +408,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'    => 'radio',
 			'label'   => __( 'Colors', 'newspack' ),
-			'choices'  => array(
+			'choices' => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
@@ -580,7 +580,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'    => 'radio',
 			'label'   => __( 'Ads Background Color', 'newspack' ),
-			'choices'   => array(
+			'choices' => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
@@ -1393,8 +1393,7 @@ add_action( 'customize_register', 'newspack_customize_register' );
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function newspack_customize_typography_register( $wp_customize ) {
-
-	require_once get_parent_theme_file_path( '/inc/typography.php' );
+	require_once get_parent_theme_file_path( '/inc/typography.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 	$wp_customize->add_section(
 		'newspack_typography',

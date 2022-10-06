@@ -25,7 +25,6 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 		<header class="page-header">
 			<?php
 				if ( is_author() ) {
-
 					$queried       = get_queried_object();
 					$author_avatar = '';
 
@@ -145,7 +144,6 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 			// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'template-parts/content/content', 'none' );
-
 		endif;
 		?>
 		</main><!-- #main -->

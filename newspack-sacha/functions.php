@@ -80,15 +80,14 @@ function newspack_sacha_editor_customizer_styles() {
 	// If there are any, add those styles inline.
 	if ( $theme_customizations ) {
 		// Enqueue a non-existant file to hook our inline styles to:
-		wp_register_style( 'newspack-sacha-editor-inline-styles', false );
+		wp_register_style( 'newspack-sacha-editor-inline-styles', false, array(), wp_get_theme()->get( 'Version' ) );
 		wp_enqueue_style( 'newspack-sacha-editor-inline-styles' );
 		// Add inline styles:
 		wp_add_inline_style( 'newspack-sacha-editor-inline-styles', $theme_customizations );
 	}
 
 	// Enqueue CSS styles for the editor that use the <body> tag.
-	wp_enqueue_style( 'newspack-sacha-editor-overrides', get_theme_file_uri( '/styles/child-style-editor-overrides.css' ), array(), null, 'all' );
-
+	wp_enqueue_style( 'newspack-sacha-editor-overrides', get_theme_file_uri( '/styles/child-style-editor-overrides.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'newspack_sacha_editor_customizer_styles' );
 

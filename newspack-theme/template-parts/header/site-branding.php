@@ -24,7 +24,7 @@
 		if ( $description || is_customize_preview() ) :
 			?>
 				<p class="site-description">
-					<?php echo $description; /* WPCS: xss ok. */ ?>
+					<?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</p>
 		<?php endif; ?>
 	</div><!-- .site-identity -->

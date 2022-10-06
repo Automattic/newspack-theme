@@ -81,7 +81,7 @@ function newspack_joseph_editor_customizer_styles() {
 	// If there are any, add those styles inline.
 	if ( $theme_customizations ) {
 		// Enqueue a non-existant file to hook our inline styles to:
-		wp_register_style( 'newspack-joseph-editor-inline-styles', false );
+		wp_register_style( 'newspack-joseph-editor-inline-styles', false, array(), wp_get_theme()->get( 'Version' ) );
 		wp_enqueue_style( 'newspack-joseph-editor-inline-styles' );
 		// Add inline styles:
 		wp_add_inline_style( 'newspack-joseph-editor-inline-styles', $theme_customizations );

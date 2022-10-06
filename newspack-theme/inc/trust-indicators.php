@@ -83,27 +83,27 @@ function newspack_trust_indicators_output_author_info() {
 		}
 	}
 
-	$author_phone = get_user_meta( $author->ID, 'public_contact_info_tel', true );
+	$author_phone   = get_user_meta( $author->ID, 'public_contact_info_tel', true );
 	$author_twitter = get_user_meta( $author->ID, 'twitter', true );
 	?>
 	<div class="trust-indicators author-meta">
 		<?php if ( $author_email ) : ?>
 			<a class="author-expanded-social-link" href="mailto:<?php echo esc_attr( $author_email ); ?>">
-				<?php echo newspack_get_social_icon_svg( 'mail', 20 ); ?>
+				<?php echo wp_kses( newspack_get_social_icon_svg( 'mail', 20 ), newspack_sanitize_svgs() ); ?>
 				<?php echo esc_html( $author_email ); ?>
 			</a>
 		<?php endif; ?>
 
 		<?php if ( $author_twitter ) : ?>
-			<a class="author-expanded-social-link" href="<?php echo esc_attr( 'https://twitter.com/' . $author_twitter ); ?>" target="_blank">
-				<?php echo newspack_get_social_icon_svg( 'twitter', 20 ); ?>
+			<a class="author-expanded-social-link" href="<?php echo esc_url( 'https://twitter.com/' . $author_twitter ); ?>" target="_blank">
+				<?php echo wp_kses( newspack_get_social_icon_svg( 'twitter', 20 ), newspack_sanitize_svgs() ); ?>
 				<?php echo esc_html( $author_twitter ); ?>
 			</a>
 		<?php endif; ?>
 
 		<?php if ( $author_phone ) : ?>
 			<span class="author-expanded-social-link">
-				<?php echo newspack_get_social_icon_svg( 'phone', 20 ); ?>
+				<?php echo wp_kses( newspack_get_social_icon_svg( 'phone', 20 ), newspack_sanitize_svgs() ); ?>
 				<?php echo esc_html( $author_phone ); ?>
 			</span>
 		<?php endif; ?>
@@ -132,9 +132,9 @@ add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_jo
 /**
  * Gets author role to add to single post author bios.
  */
-function newspack_trust_indicators_job_title_single( $author_ID ) {
-	if ( '' !== $author_ID ) {
-		$role = get_user_meta( $author_ID, 'title', true );
+function newspack_trust_indicators_job_title_single( $author_id ) {
+	if ( '' !== $author_id ) {
+		$role = get_user_meta( $author_id, 'title', true );
 		return $role;
 	}
 }
@@ -147,15 +147,14 @@ function newspack_trust_indicators_output_author_details() {
 		return;
 	}
 
-	$author = get_queried_object();
-
+	$author              = get_queried_object();
 	$all_settings_fields = Trust_Indicators_User_Settings::get_fields();
-	$fields = [
+	$fields              = array(
 		'location',
 		'languages_spoken',
 		'areas_of_expertise',
 		'location_expertise',
-	];
+	);
 
 	?>
 	<div class="author-additional-infos">
@@ -163,7 +162,7 @@ function newspack_trust_indicators_output_author_details() {
 			<?php $value = get_user_meta( $author->ID, $field, true ); ?>
 			<?php if ( empty( $value ) ) : ?>
 				<?php continue; ?>
-			<?php endif; ?>
+			<?php endif; // phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable -- code does function as expected. ?>
 
 			<div class="author-additional-info">
 				<h4><?php echo esc_html( $all_settings_fields[ $field ]['label'] ); ?></h4>

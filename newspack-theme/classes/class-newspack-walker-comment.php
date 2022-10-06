@@ -22,11 +22,10 @@ class Newspack_Walker_Comment extends Walker_Comment {
 	 * @param array      $args    An array of arguments.
 	 */
 	protected function html5_comment( $comment, $depth, $args ) {
-
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 
 		?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+		<<?php echo esc_attr( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
@@ -37,10 +36,10 @@ class Newspack_Walker_Comment extends Walker_Comment {
 						$avatar              = get_avatar( $comment, $args['avatar_size'] );
 						if ( 0 != $args['avatar_size'] ) {
 							if ( empty( $comment_author_url ) ) {
-								echo $avatar;
+								echo $avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							} else {
-								printf( '<a href="%s" rel="external nofollow" class="url">', $comment_author_url );
-								echo $avatar;
+								printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
+								echo $avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							}
 						}
 
@@ -74,8 +73,8 @@ class Newspack_Walker_Comment extends Walker_Comment {
 								/* translators: 1: comment date, 2: comment time */
 								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'newspack' ), get_comment_date( '', $comment ), get_comment_time() );
 							?>
-							<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo $comment_timestamp; ?>">
-								<?php echo $comment_timestamp; ?>
+							<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo esc_attr( $comment_timestamp ); ?>">
+								<?php echo esc_html( $comment_timestamp ); ?>
 							</time>
 						</a>
 						<?php

@@ -29,12 +29,9 @@ get_header();
 
 			// Previous/next page navigation.
 			newspack_the_posts_navigation();
-
 		} else {
-
 			// If no content, include the "No posts found" template.
 			get_template_part( 'template-parts/content/content', 'none' );
-
 		}
 		?>
 
