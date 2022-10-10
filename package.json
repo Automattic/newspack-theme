@@ -38,7 +38,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@wordpress/browserslist-config": "^5.1.0",
+    "@wordpress/browserslist-config": "^5.2.0",
     "chokidar-cli": "^3.0.0",
     "classnames": "^2.3.2",
     "eslint": "^7.32.0",
