@@ -1723,6 +1723,80 @@ table.woocommerce-table--order-details.shop_table,
 }
 
 /**
+* Card.
+*/
+
+.woocommerce-buttons-card {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8em;
+	justify-content: flex-end;
+}
+
+.woocommerce-card {
+	a {
+		align-items: center;
+		border: 1px solid colors.$color__border-light;
+		border-radius: 5px;
+		display: flex;
+		gap: 0.8em;
+		padding: 0.8em;
+		text-decoration: none;
+
+		&::after {
+			background-image: url( 'data:image/svg+xml,%3Csvg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" fill="%23111" /%3E%3C/svg%3E' );
+			content: '';
+			display: block;
+			flex: 0 0 24px;
+			height: 24px;
+			transition: all 125ms ease-in-out;
+			width: 24px;
+		}
+
+		&:hover {
+			border-color: colors.$color__text-main;
+
+			&::after {
+				transform: translateX( 0.4em );
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex: 1 1 auto;
+		flex-wrap: wrap;
+		gap: 0.4em;
+
+		span {
+			display: block;
+			flex: 1 1 100%;
+		}
+	}
+
+	&__title {
+		color: colors.$color__text-main;
+		font-size: 1em;
+		line-height: 1.6;
+		margin: 0;
+
+		.is-destructive & {
+			color: colors.$color__alert-red;
+		}
+	}
+
+	&__description {
+		color: colors.$color__text-light;
+		font-size: 0.8em;
+		line-height: 1.2;
+	}
+
+	& + & {
+		margin-top: 1rem;
+	}
+}
+
+/**
  * My Account Page.
  */
 
@@ -1793,14 +1867,16 @@ table.woocommerce-table--order-details.shop_table,
 		}
 	}
 
-	.woocommerce-EditAccountForm {
-		.form-row-first,
-		.form-row-last {
-			width: 100%;
-		}
-
-		.form-row-first {
+	.woocommerce-form-row,
+	p {
+		&.mt0 {
 			margin-top: 0;
+		}
+	}
+
+	.woocommerce-Button {
+		&.ma0 {
+			margin: 0;
 		}
 	}
 

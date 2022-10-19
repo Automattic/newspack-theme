@@ -1,6 +1,6 @@
 {
   "name": "newspack",
-  "version": "1.64.0",
+  "version": "1.65.0-alpha.1",
   "description": "A theme for Newspack. https://newspack.blog",
   "bugs": {
     "url": "https://github.com/Automattic/newspack-theme/issues"
@@ -52,6 +52,6 @@
     "sass": "^1.55.0",
     "semantic-release": "^19.0.5",
     "semantic-release-version-bump": "^1.4.1",
-    "stylelint": "^14.12.1"
+    "stylelint": "^14.13.0"
   }
 }
