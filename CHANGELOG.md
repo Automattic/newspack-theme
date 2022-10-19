@@ -1,3 +1,29 @@
+# [1.65.0](https://github.com/Automattic/newspack-theme/compare/v1.64.0...v1.65.0) (2022-10-19)
+
+
+### Bug Fixes
+
+* correct print issues with sticky header, width in Safari ([#1942](https://github.com/Automattic/newspack-theme/issues/1942)) ([06c4156](https://github.com/Automattic/newspack-theme/commit/06c41567c65291f3906b7021bce0b9dbd8a5af89))
+* update tagline display check to work with Newspack wizard ([#1946](https://github.com/Automattic/newspack-theme/issues/1946)) ([d05dcdf](https://github.com/Automattic/newspack-theme/commit/d05dcdf1c1ce370571f12276b63c51dadb91959d))
+
+
+### Features
+
+* add style for woocommerce cards ([#1945](https://github.com/Automattic/newspack-theme/issues/1945)) ([10b05af](https://github.com/Automattic/newspack-theme/commit/10b05af85184225bf0d8876247cf26d0a0efdb2a))
+
+# [1.65.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.64.0...v1.65.0-alpha.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* correct print issues with sticky header, width in Safari ([#1942](https://github.com/Automattic/newspack-theme/issues/1942)) ([06c4156](https://github.com/Automattic/newspack-theme/commit/06c41567c65291f3906b7021bce0b9dbd8a5af89))
+* update tagline display check to work with Newspack wizard ([#1946](https://github.com/Automattic/newspack-theme/issues/1946)) ([d05dcdf](https://github.com/Automattic/newspack-theme/commit/d05dcdf1c1ce370571f12276b63c51dadb91959d))
+
+
+### Features
+
+* add style for woocommerce cards ([#1945](https://github.com/Automattic/newspack-theme/issues/1945)) ([10b05af](https://github.com/Automattic/newspack-theme/commit/10b05af85184225bf0d8876247cf26d0a0efdb2a))
+
 # [1.64.0](https://github.com/Automattic/newspack-theme/compare/v1.63.1...v1.64.0) (2022-09-27)
 
 
