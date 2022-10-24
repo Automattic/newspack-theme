@@ -8,7 +8,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'],
-.wp-block-search__button-outside .wp-block-search__button {
+.wp-block-search__button {
 	@include utilities.button-transition;
 	background: colors.$color__background-button;
 	border: none;

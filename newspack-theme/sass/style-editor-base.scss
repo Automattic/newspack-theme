@@ -650,41 +650,62 @@ div[data-align='full'] {
 
 /** === Search === */
 
-.wp-block-search {
-	.wp-block-search__button {
-		border-radius: 5px;
-		line-height: 1.8;
-		font-family: fonts.$font__heading;
-		font-size: fonts.$font__size-sm;
-		font-weight: bold;
-		padding: ( 0.55 * structure.$size__spacing-unit ) structure.$size__spacing-unit !important; // !important to override style from Gutenberg.
+.wp-block-search__button {
+	background: colors.$color__background-button;
+	border: 0;
+	border-radius: 5px;
+	color: #fff;
+	line-height: 1.8;
+	font-family: fonts.$font__heading;
+	font-size: fonts.$font__size-sm;
+	font-weight: bold;
+	padding: ( 0.55 * structure.$size__spacing-unit ) structure.$size__spacing-unit !important; // !important to override style from Gutenberg.
 
-		svg {
-			height: 32px;
-			width: 32px;
-		}
-
-		&.has-icon {
-			padding: #{0.3 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit} !important; // !important to override style from Gutenberg.
-		}
+	svg {
+		height: 32px;
+		width: 32px;
 	}
 
-	&.wp-block-search__button-outside .wp-block-search__button {
-		border: 0;
+	&.has-icon {
+		padding: #{0.3 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit} !important; // !important to override style from Gutenberg.
+	}
+}
+
+.wp-block-search {
+	input {
+		border-color: colors.$color__border;
+		border-radius: 0;
+		padding: 0.36rem 0.66rem;
 	}
 
 	&.wp-block-search__button-inside {
-		.wp-block-search__inside-wrapper .wp-block-search__button {
-			padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit} !important; // !important to override style from Gutenberg.
+		.wp-block-search__inside-wrapper {
+			border-color: colors.$color__border;
+			padding: 0;
 
-			&.has-icon {
-				padding: #{0.125 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} !important; // !important to override style from Gutenberg.
+			input {
+				border: 0;
+			}
+
+			.wp-block-search__button {
+				margin: 2px;
+				padding: calc( 0.76rem - 4px ) 1rem;
+
+				&.has-icon {
+					padding: #{0.125 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} !important; // !important to override style from Gutenberg.
+				}
 			}
 		}
 
 		.has-icon {
-			background: transparent;
 			border: 0;
+			&:not( .has-background ) {
+				background: transparent;
+			}
+
+			&:not( .has-text-color ) {
+				color: colors.$color__text-main;
+			}
 		}
 	}
 }
