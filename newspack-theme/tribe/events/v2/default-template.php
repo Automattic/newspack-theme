@@ -9,10 +9,11 @@
  *
  * @link http://evnt.is/1aiy
  *
+ * @package The_Events_Calendar
  * @version 5.0.0
  */
 
-use Tribe\Events\Views\V2\Template_Bootstrap;
+use Tribe\Events\Views\V2\Template_Bootstrap; // phpcs:ignore
 
 get_header();
 
@@ -20,7 +21,7 @@ get_header();
 <div class="tec-wrapper">
 
 	<?php
-	echo tribe( Template_Bootstrap::class )->get_view_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo tribe( Template_Bootstrap::class )->get_view_html(); // phpcs:ignore
 
 	if ( newspack_tec_show_sidebar() ) :
 		get_sidebar();

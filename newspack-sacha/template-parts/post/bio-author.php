@@ -19,9 +19,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 	$i            = 1;
 
 	foreach ( $authors as $author ) {
-
 		if ( '' !== $author->description ) {
-
 			if ( 'guest-author' === get_post_type( $author->ID ) ) {
 				if ( get_post_thumbnail_id( $author->ID ) ) {
 					$author_avatar = coauthors_get_avatar( $author, 80 );
@@ -84,7 +82,6 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 		<?php
 		}
 	}
-
 elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 ?>
 

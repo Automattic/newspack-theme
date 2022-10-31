@@ -96,7 +96,6 @@ function newspack_woo_account_registration_heading() {
 		<h3><?php esc_html_e( 'Create an account', 'newspack' ); ?></h3>
 		<?php
 	endif;
-
 }
 add_action( 'woocommerce_before_checkout_registration_form', 'newspack_woo_account_registration_heading' );
 
@@ -115,7 +114,8 @@ if ( ! function_exists( 'newspack_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function newspack_woocommerce_wrapper_before() { ?>
+	function newspack_woocommerce_wrapper_before() {
+		?>
 		<section id="primary" class="content-area">
 			<main id="main" class="site-main">
 		<?php
@@ -212,7 +212,7 @@ function woocommerce_before_shop_loop_wrapper_close() {
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_before_shop_loop_wrapper_close', 40 );
 
-/*
+/**
  * Check if any products in the card need shipping.
  *
  * @return bool $needs_shipping Whether the cart requires shipping.

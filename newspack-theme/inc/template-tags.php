@@ -33,7 +33,6 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 
 			remove_filter( 'get_the_modified_date', 'newspack_convert_modified_to_time_ago', 10, 3 );
 		} else {
-
 			$time_string = sprintf(
 				$time_string,
 				esc_attr( get_the_date( DATE_W3C ) ),
@@ -114,7 +113,6 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 				<span><?php echo esc_html__( 'by', 'newspack' ); ?></span>
 				<?php
 				foreach ( $authors as $author ) {
-
 					$i++;
 					if ( $author_count === $i ) :
 						/* translators: separates last two names; needs a space on either side. */
@@ -146,7 +144,6 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			);
-
 		endif;
 	}
 endif;
@@ -223,7 +220,7 @@ if ( ! function_exists( 'newspack_comment_count' ) ) :
 	function newspack_comment_count() {
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			echo newspack_get_icon_svg( 'comment', 16 );
+			echo wp_kses( newspack_get_icon_svg( 'comment', 16 ), newspack_sanitize_svgs() );
 
 			/* translators: %s: Name of current post. Only visible to screen readers. */
 			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'newspack' ), get_the_title() ) );
@@ -238,13 +235,13 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	 * Prints HTML with the current post's categories.
 	 */
 	function newspack_categories() {
-		$categories_list = '';
+		$categories_list     = '';
 		$primary_cat_enabled = get_theme_mod( 'post_primary_category', true );
 
 		// Only display Yoast primary category if set.
 		if ( class_exists( 'WPSEO_Primary_Term' ) && $primary_cat_enabled ) {
 			$primary_term = new WPSEO_Primary_Term( 'category', get_the_ID() );
-			$category_id = $primary_term->get_primary_term();
+			$category_id  = $primary_term->get_primary_term();
 			if ( $category_id ) {
 				$category = get_term( $category_id );
 				if ( $category ) {
@@ -263,8 +260,8 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
 				'<span class="cat-links"><span class="screen-reader-text">%1$s</span>%2$s</span>',
 				esc_html__( 'Posted in', 'newspack' ),
-				apply_filters( 'newspack_theme_categories', $categories_list )
-			); // WPCS: XSS OK.
+				wp_kses_post( apply_filters( 'newspack_theme_categories', $categories_list ) )
+			);
 		}
 	}
 endif;
@@ -304,8 +301,8 @@ if ( ! function_exists( 'newspack_entry_footer' ) ) :
 					/* translators: 1: posted in label, only visible to screen readers. 2: list of tags. */
 					'<span class="tags-links"><span>%1$s </span>%2$s</span>',
 					esc_html__( 'Tagged:', 'newspack' ),
-					$tags_list
-				); // WPCS: XSS OK.
+					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
 			}
 		}
 
@@ -348,7 +345,8 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 			'data-hero-candidate' => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? false : true, // Make this image a hero candidate for AMP prerendering.
 		);
 
-		if ( is_singular() ) : ?>
+		if ( is_singular() ) :
+			?>
 
 			<figure class="post-thumbnail">
 
@@ -356,7 +354,6 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 
 				// If using the behind or beside image styles, add the object-fit argument for AMP.
 				if ( in_array( newspack_featured_image_position(), array( 'behind', 'beside' ) ) ) :
-
 					the_post_thumbnail(
 						$size,
 						wp_parse_args(
@@ -367,7 +364,6 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 						)
 					);
 				else :
-
 					if ( 'above' === newspack_featured_image_position() ) :
 						the_post_thumbnail(
 							$size,
@@ -423,7 +419,7 @@ if ( ! function_exists( 'newspack_post_thumbnail_caption' ) ) {
 
 		// Account for featured images that have a credit but no caption.
 		if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
-			$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() );
+			$maybe_newspack_image_credit = \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
 			if ( strlen( wp_strip_all_tags( $maybe_newspack_image_credit ) ) ) {
 				$caption        = $maybe_newspack_image_credit;
 				$caption_exists = true;
@@ -444,7 +440,6 @@ if ( ! function_exists( 'newspack_comment_form' ) ) :
 	 */
 	function newspack_comment_form( $order ) {
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
-
 			$comment_attributes = array(
 				'logged_in_as'       => null,
 				'title_reply'        => null,

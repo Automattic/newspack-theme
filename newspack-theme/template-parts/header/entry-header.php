@@ -74,7 +74,8 @@ $subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
 <?php endif; ?>
 
 <?php
-$sharing_enabled = ! is_page() || ! empty( get_post_meta( $post->ID, 'newspack_show_share_buttons', true ) );
+$show_share_buttons = get_post_meta( $post->ID, 'newspack_show_share_buttons', true );
+$sharing_enabled    = ! is_page() || ! empty( $show_share_buttons );
 if ( $sharing_enabled ) :
 	?>
 	<div class="entry-subhead">

@@ -11,7 +11,7 @@
 
 
 $show_footer_branding = get_theme_mod( 'footer_show_branding', true );
-$has_footer_logo = false;
+$has_footer_logo      = false;
 if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 'newspack_footer_logo', '' ) ) {
 	$has_footer_logo = true;
 }

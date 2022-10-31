@@ -22,7 +22,7 @@ add_action( 'after_setup_theme', 'newspack_web_stories_setup' );
  */
 function newspack_web_stories_embed() {
 	if ( function_exists( '\Google\Web_Stories\render_theme_stories' ) ) {
-		\Google\Web_Stories\render_theme_stories();
+		\Google\Web_Stories\render_theme_stories(); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
 	}
 }
 add_action( 'wp_body_open', 'newspack_web_stories_embed' );

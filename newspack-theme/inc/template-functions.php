@@ -72,7 +72,6 @@ endif;
  * @return array
  */
 function newspack_body_classes( $classes ) {
-
 	if ( is_singular() ) {
 		// Adds `singular` to singular pages.
 		$classes[] = 'singular';
@@ -189,7 +188,7 @@ function newspack_body_classes( $classes ) {
 	// Add a special class for the single post's primary category.
 	if ( is_single() && class_exists( 'WPSEO_Primary_Term' ) ) {
 		$primary_term = new WPSEO_Primary_Term( 'category', $page_id );
-		$category_id = $primary_term->get_primary_term();
+		$category_id  = $primary_term->get_primary_term();
 		if ( $category_id ) {
 			$category = get_term( $category_id );
 			if ( $category ) {
@@ -243,7 +242,7 @@ function newspack_body_classes( $classes ) {
 
 	// Add a class when there's an ad background color, and another when there's an ad above the footer to remove the space.
 	$ads_background_color = get_theme_mod( 'ads_color', 'default' );
-	$above_footer_ad      = method_exists( 'Newspack_Ads\Placements', 'can_display_ad_unit' ) && \Newspack_Ads\Placements::can_display_ad_unit( 'global_above_footer' );
+	$above_footer_ad      = method_exists( 'Newspack_Ads\Placements', 'can_display_ad_unit' ) && \Newspack_Ads\Placements::can_display_ad_unit( 'global_above_footer' ); // phpcs:ignore PHPCompatibility.LanguageConstructs.NewLanguageConstructs.t_ns_separatorFound
 	if ( 'custom' === $ads_background_color ) {
 		$classes[] = 'custom-ad-bg';
 
@@ -366,7 +365,6 @@ function newspack_can_show_post_thumbnail() {
  * @return array Value for use in post thumbnail 'sizes' attribute.
  */
 function newspack_post_thumbnail_sizes_attr( $attr ) {
-
 	if ( is_admin() ) {
 		return $attr;
 	}
@@ -440,25 +438,6 @@ function newspack_get_discussion_data() {
 }
 
 /**
- * Get and store current menu's ID so it can be shared across functions.
- *
- * @return string Current menu item ID.
- */
-class Newspack_Current_Menu_ID {
-	private static $currentMenuId = '';
-
-	// Sets the current Menu ID value in newspack_add_dropdown_icons().
-	public static function set_current_ID( $value ) {
-		self::$currentMenuId = $value;
-	}
-
-	// Gets the current Menu ID for Newspack_Custom_Submenu_Walker().
-	public static function get_current_ID() {
-		return self::$currentMenuId;
-	}
-}
-
-/**
  * Add a dropdown icon to top-level menu items.
  *
  * @param string $output Nav menu item start element.
@@ -477,12 +456,10 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
-
-		$toggle_id = "toggle_" . $item->ID ;
-
-		$output .= sprintf(
-			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )" aria-haspopup="true">%s</button>',
+		$icon      = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
+		$toggle_id = 'toggle_' . $item->ID;
+		$output   .= sprintf(
+			'<button aria-controls="submenu-' . $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )" aria-haspopup="true">%s</button>',
 			$icon
 		);
 
@@ -493,26 +470,6 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
-
-/**
- * Add an ID with parent menu item's ID to each submenu.
- *
- * @param string $output Nav menu item start element.
- * @param int    $depth  Depth.
- * @param object $args   Nav menu args.
- * @return string Nav menu level start element.
- */
-class Newspack_Custom_Submenu_Walker extends Walker_Nav_Menu {
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-
-		// Get the current stored menu ID.
-		$menu_parent_id = Newspack_Current_Menu_ID::get_current_ID();
-
-		$submenu_ID = "submenu-" . esc_attr( $menu_parent_id );
-		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"sub-menu\" id=\"$submenu_ID\">\n";
-	}
-}
 
 /**
  * The default color used for the primary color throughout this theme
@@ -549,7 +506,6 @@ function newspack_get_mobile_cta_color() {
  * @return string Updated hexidecimal value.
  */
 function newspack_adjust_brightness( $hex, $steps ) {
-
 	$steps = max( -255, min( 255, $steps ) );
 
 	$hex = str_replace( '#', '', $hex );
@@ -751,7 +707,7 @@ function newspack_should_display_updated_date() {
  */
 function newspack_search_id( $prefix = '' ) {
 	static $id_counter = 0;
-	return $prefix . ( string ) ++$id_counter;
+	return $prefix . (string) ++$id_counter;
 }
 
 /**

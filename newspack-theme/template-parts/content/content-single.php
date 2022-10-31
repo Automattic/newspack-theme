@@ -13,10 +13,10 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 		get_the_id(),
 		null,
 		'post',
-		[
+		array(
 			'maxwidth'  => 150,
 			'maxheight' => 100,
-		]
+		)
 	);
 	$native_sponsors      = newspack_get_native_sponsors( $all_sponsors );
 	$underwriter_sponsors = newspack_get_underwriter_sponsors( $all_sponsors );
@@ -77,7 +77,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 	<?php
 	$show_author = ! empty( $native_sponsors ) ? newspack_display_sponsors_and_authors( $native_sponsors ) : true;
 	if ( $show_author && ! is_singular( 'attachment' ) ) :
-		get_template_part( 'template-parts/post/author', 'bio' );
+		get_template_part( 'template-parts/post/bio', 'author' );
 	endif;
 	?>
 
