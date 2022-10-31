@@ -1,3 +1,11 @@
+## [1.65.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.65.0...v1.65.1-alpha.1) (2022-10-24)
+
+
+### Bug Fixes
+
+* correct pullquote font size for WP 6.1 ([#1958](https://github.com/Automattic/newspack-theme/issues/1958)) ([f55c200](https://github.com/Automattic/newspack-theme/commit/f55c200bd291b4e59058e0c16f39dcd87c1ad0b9))
+* correct search block styles ([#1959](https://github.com/Automattic/newspack-theme/issues/1959)) ([a9cb593](https://github.com/Automattic/newspack-theme/commit/a9cb593e86004aae85ce1048cf84f06c95caec19))
+
 # [1.65.0](https://github.com/Automattic/newspack-theme/compare/v1.64.0...v1.65.0) (2022-10-19)
 
 
