@@ -83,7 +83,7 @@ function newspack_trust_indicators_output_author_info() {
 		}
 	}
 
-	$author_phone = get_user_meta( $author->ID, 'public_contact_info_tel', true );
+	$author_phone   = get_user_meta( $author->ID, 'public_contact_info_tel', true );
 	$author_twitter = get_user_meta( $author->ID, 'twitter', true );
 	?>
 	<div class="trust-indicators author-meta">
@@ -130,6 +130,21 @@ function newspack_trust_indicators_output_author_job_title( $title ) {
 add_filter( 'get_the_archive_title', 'newspack_trust_indicators_output_author_job_title' );
 
 /**
+ * Adds author role to author footer.
+ *
+ * @param string $author_name string The author name.
+ * @param int    $author_id string The author ID.
+ */
+function newspack_trust_indicators_author_bio_name( $author_name, $author_id ) {
+	$role = get_user_meta( $author_id, 'title', true );
+	if ( $role ) {
+		$author_name .= '<span class="author-job-title">' . $role . '</span>';
+	}
+	return $author_name;
+}
+add_filter( 'newspack_author_bio_name', 'newspack_trust_indicators_author_bio_name', 10, 2 );
+
+/**
  * Gets author role to add to single post author bios.
  */
 function newspack_trust_indicators_job_title_single( $author_ID ) {
@@ -150,7 +165,7 @@ function newspack_trust_indicators_output_author_details() {
 	$author = get_queried_object();
 
 	$all_settings_fields = Trust_Indicators_User_Settings::get_fields();
-	$fields = [
+	$fields              = [
 		'location',
 		'languages_spoken',
 		'areas_of_expertise',
