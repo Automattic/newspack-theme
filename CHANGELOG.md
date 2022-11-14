@@ -1,3 +1,10 @@
+## [1.65.2](https://github.com/Automattic/newspack-theme/compare/v1.65.1...v1.65.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* usage of filter for post author footer bio name ([8aa871b](https://github.com/Automattic/newspack-theme/commit/8aa871bd2b83f1ce4c4b0ec327317413a69b5e4a)), closes [#1806](https://github.com/Automattic/newspack-theme/issues/1806) [#1848](https://github.com/Automattic/newspack-theme/issues/1848) [#1848](https://github.com/Automattic/newspack-theme/issues/1848)
+
 ## [1.65.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.65.1...v1.65.2-alpha.1) (2022-11-03)
 
 
