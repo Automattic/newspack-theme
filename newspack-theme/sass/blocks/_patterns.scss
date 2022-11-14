@@ -255,16 +255,4 @@
 			}
 		}
 	}
-
-	/* Registration Style 1 */
-
-	&.registration__style-1 {
-		@include utilities.media( tablet ) {
-			padding: 32px;
-		}
-
-		.newspack-registration {
-			margin-bottom: 0;
-		}
-	}
 }
