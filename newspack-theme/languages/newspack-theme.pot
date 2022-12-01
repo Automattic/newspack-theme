@@ -110,7 +110,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:48
-msgid "https://newspack.pub/"
+msgid "https://newspack.com/"
 msgstr ""
 
 #: footer.php:49
