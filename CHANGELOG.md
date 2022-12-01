@@ -1,3 +1,10 @@
+## [1.65.3-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.65.2...v1.65.3-alpha.1) (2022-12-01)
+
+
+### Bug Fixes
+
+* woocommerce CSS loading condition ([a58953a](https://github.com/Automattic/newspack-theme/commit/a58953a9a218442d8020b38154f14de8260b74a5))
+
 ## [1.65.2](https://github.com/Automattic/newspack-theme/compare/v1.65.1...v1.65.2) (2022-11-14)
 
 
