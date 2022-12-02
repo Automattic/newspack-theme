@@ -40,6 +40,7 @@ function newspack_woocommerce_scripts() {
 		function_exists( 'is_woocommerce' ) && is_woocommerce()
 		|| function_exists( 'is_cart' ) && is_cart()
 		|| function_exists( 'is_checkout' ) && is_checkout()
+		|| function_exists( 'is_account_page' ) && is_account_page()
 	) {
 		wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
 		wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
