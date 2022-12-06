@@ -1,3 +1,15 @@
+## [1.65.3-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.65.3-alpha.1...v1.65.3-alpha.2) (2022-12-06)
+
+
+### Bug Fixes
+
+* restore styles on My Account page ([#1992](https://github.com/Automattic/newspack-theme/issues/1992)) ([646b9a7](https://github.com/Automattic/newspack-theme/commit/646b9a79ab74bb86c7faeca6a00f82ee7dfdfff3))
+
+
+### Performance Improvements
+
+* minify CSS for custom colors and fonts ([591dc9e](https://github.com/Automattic/newspack-theme/commit/591dc9e84bdedbab4d793636ed929aa3837bfb76))
+
 ## [1.65.3-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.65.2...v1.65.3-alpha.1) (2022-12-01)
 
 
