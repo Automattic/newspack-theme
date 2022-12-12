@@ -111,8 +111,8 @@ msgid "Comments are closed."
 msgstr "Komentarze są wyłączone."
 
 #: footer.php:48
-msgid "https://newspack.pub/"
-msgstr "https://newspack.pub/"
+msgid "https://newspack.com/"
+msgstr "https://newspack.com/"
 
 #: footer.php:49
 msgid "Proudly powered by Newspack by Automattic"

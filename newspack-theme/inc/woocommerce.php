@@ -36,8 +36,15 @@ function newspack_woocommerce_scripts() {
 	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
 		return;
 	}
-	wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
-	wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
+	if (
+		function_exists( 'is_woocommerce' ) && is_woocommerce()
+		|| function_exists( 'is_cart' ) && is_cart()
+		|| function_exists( 'is_checkout' ) && is_checkout()
+		|| function_exists( 'is_account_page' ) && is_account_page()
+	) {
+		wp_enqueue_style( 'newspack-woocommerce-style', get_template_directory_uri() . '/styles/woocommerce.css', array( 'newspack-style' ), wp_get_theme()->get( 'Version' ) );
+		wp_style_add_data( 'newspack-woocommerce-style', 'rtl', 'replace' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
 
@@ -115,7 +122,8 @@ if ( ! function_exists( 'newspack_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function newspack_woocommerce_wrapper_before() { ?>
+	function newspack_woocommerce_wrapper_before() {
+		?>
 		<section id="primary" class="content-area">
 			<main id="main" class="site-main">
 		<?php
