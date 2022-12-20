@@ -1,3 +1,10 @@
+# [1.66.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.65.3...v1.66.0-alpha.1) (2022-12-20)
+
+
+### Features
+
+* add post.news social icon ([#2004](https://github.com/Automattic/newspack-theme/issues/2004)) ([c62c3e9](https://github.com/Automattic/newspack-theme/commit/c62c3e9a97a0d6ef5bd31582e4846475bf402d6f))
+
 ## [1.65.3](https://github.com/Automattic/newspack-theme/compare/v1.65.2...v1.65.3) (2022-12-12)
 
 
