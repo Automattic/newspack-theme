@@ -17,6 +17,7 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 
 $feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
 $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
+$queried             = get_queried_object();
 
 ?>
 
@@ -24,33 +25,20 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 
 		<header class="page-header">
 			<?php
-				if ( is_author() ) {
+			if ( is_author() ) {
+				$author_avatar = '';
 
-					$queried       = get_queried_object();
-					$author_avatar = '';
-
-					if ( function_exists( 'coauthors_posts_links' ) ) {
-						// Check if this is a guest author post type.
-						if ( 'guest-author' === get_post_type( $queried->{ 'ID' } ) ) {
-							// If yes, make sure the author actually has an avatar set; otherwise, coauthors_get_avatar returns a featured image.
-							if ( get_post_thumbnail_id( $queried->{ 'ID' } ) ) {
-								$author_avatar = coauthors_get_avatar( $queried, 120 );
-							} else {
-								// If there is no avatar, force it to return the current fallback image.
-								$author_avatar = get_avatar( ' ' );
-							}
-						} else {
-							$author_avatar = coauthors_get_avatar( $queried, 120 );
-						}
-					} else {
-						$author_id     = get_query_var( 'author' );
-						$author_avatar = get_avatar( $author_id, 120 );
-					}
-
-					if ( $author_avatar ) {
-						echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
-					}
+				if ( function_exists( 'coauthors_posts_links' ) ) {
+					$author_avatar = coauthors_get_avatar( $queried, 120 );
+				} else {
+					$author_id     = get_query_var( 'author' );
+					$author_avatar = get_avatar( $author_id, 120 );
 				}
+
+				if ( $author_avatar ) {
+					echo wp_kses( $author_avatar, newspack_sanitize_avatars() );
+				}
+			}
 			?>
 			<span>
 
@@ -61,22 +49,28 @@ $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
 				}
 				?>
 
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-
-				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
-
 				<?php
+				if ( is_author() && 'guest-author' === get_post_type( $queried->ID ) ) {
+					printf(
+						'<h1 class="page-title"><span class="page-subtitle">%1$s</span> <span class="page-description">%2$s</span></h1>',
+						esc_html__( 'Author Archives:', 'newspack' ),
+						esc_html( $queried->display_name )
+					);
+				} else {
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+				}
+
+				do_action( 'newspack_theme_below_archive_title' );
+
 				if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) :
 					// Get description for native archive sponsors.
 					newspack_sponsor_archive_description( $native_sponsors );
+				elseif ( is_author() && 'guest-author' === get_post_type( $queried->ID ) && '' !== $queried->description ) :
+					echo '<div class="taxonomy-description">' . wp_kses_post( wpautop( $queried->description ) ) . '</div>';
 				elseif ( '' !== get_the_archive_description() ) :
-					?>
-				<div class="taxonomy-description">
-					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
-				</div>
-				<?php endif; ?>
+					echo '<div class="taxonomy-description">' . wp_kses_post( wpautop( get_the_archive_description() ) ) . '</div>';
+				endif;
 
-				<?php
 				if ( ( is_category() || is_tag() ) && ! empty( $underwriter_sponsors ) ) {
 					// Get info for underwriter archive sponsors.
 					newspack_sponsored_underwriters_info( $underwriter_sponsors );
