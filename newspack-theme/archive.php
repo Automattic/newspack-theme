@@ -49,28 +49,22 @@ $queried             = get_queried_object();
 				}
 				?>
 
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+
+				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
+
 				<?php
-				if ( is_author() && 'guest-author' === get_post_type( $queried->ID ) ) {
-					printf(
-						'<h1 class="page-title"><span class="page-subtitle">%1$s</span> <span class="page-description">%2$s</span></h1>',
-						esc_html__( 'Author Archives:', 'newspack' ),
-						esc_html( $queried->display_name )
-					);
-				} else {
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				}
-
-				do_action( 'newspack_theme_below_archive_title' );
-
 				if ( ( is_category() || is_tag() ) && ! empty( $native_sponsors ) ) :
 					// Get description for native archive sponsors.
 					newspack_sponsor_archive_description( $native_sponsors );
-				elseif ( is_author() && 'guest-author' === get_post_type( $queried->ID ) && '' !== $queried->description ) :
-					echo '<div class="taxonomy-description">' . wp_kses_post( wpautop( $queried->description ) ) . '</div>';
 				elseif ( '' !== get_the_archive_description() ) :
-					echo '<div class="taxonomy-description">' . wp_kses_post( wpautop( get_the_archive_description() ) ) . '</div>';
-				endif;
+					?>
+					<div class="taxonomy-description">
+						<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+					</div>
+				<?php endif; ?>
 
+				<?php
 				if ( ( is_category() || is_tag() ) && ! empty( $underwriter_sponsors ) ) {
 					// Get info for underwriter archive sponsors.
 					newspack_sponsored_underwriters_info( $underwriter_sponsors );
