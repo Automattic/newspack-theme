@@ -17,8 +17,6 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 
 $feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
 $show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
-$queried             = get_queried_object();
-
 ?>
 
 	<section id="primary" class="content-area">
@@ -26,6 +24,7 @@ $queried             = get_queried_object();
 		<header class="page-header">
 			<?php
 			if ( is_author() ) {
+				$queried       = get_queried_object();
 				$author_avatar = '';
 
 				if ( function_exists( 'coauthors_posts_links' ) ) {
