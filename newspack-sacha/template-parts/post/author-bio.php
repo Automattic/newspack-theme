@@ -21,17 +21,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 	foreach ( $authors as $author ) {
 
 		if ( '' !== $author->description ) {
-
-			if ( 'guest-author' === get_post_type( $author->ID ) ) {
-				if ( get_post_thumbnail_id( $author->ID ) ) {
-					$author_avatar = coauthors_get_avatar( $author, 80 );
-				} else {
-					// If there is no avatar, force it to return the current fallback image.
-					$author_avatar = get_avatar( ' ' );
-				}
-			} else {
-				$author_avatar = coauthors_get_avatar( $author, 80 );
-			}
+			$author_avatar = coauthors_get_avatar( $author, 80 );
 			?>
 
 			<div class="author-bio">
