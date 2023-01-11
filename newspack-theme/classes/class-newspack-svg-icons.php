@@ -246,10 +246,8 @@ class Newspack_SVG_Icons {
 			'mailto:',
 		),
 		'mastodon'    => array(
-			// Regex pattern to match any .tld for the mastodon host name.
-			'#https?:\/\/(www\.)?mastodon\.(\w+)(\.\w+)?#',
-			// Regex pattern to match any .tld for the mstdn host name.
-			'#https?:\/\/(www\.)?mstdn\.(\w+)(\.\w+)?#',
+			'mastodon.',
+			'mstdn.',
 			'counter.social',
 			'fosstodon.org',
 			'gc2.jp',
