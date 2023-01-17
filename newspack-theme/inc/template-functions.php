@@ -726,7 +726,12 @@ function newspack_convert_modified_to_time_ago( $post_time, $format, $post ) {
  * Check whether updated date should be displayed.
  */
 function newspack_should_display_updated_date() {
-	if ( is_single() && true === get_theme_mod( 'post_updated_date', false ) && ! get_post_meta( get_the_ID(), 'newspack_hide_updated_date', true ) ) {
+	$show_updated_date_sitewide = get_theme_mod( 'post_updated_date', false );
+
+	$hide_updated_date_post     = get_post_meta( get_the_ID(), 'newspack_hide_updated_date', true );
+	$show_updated_date_post     = get_post_meta( get_the_ID(), 'newspack_show_updated_date', true ) && ! $show_updated_date_sitewide;
+
+	if ( is_single() && ( ( $show_updated_date_sitewide && ! $hide_updated_date_post ) || $show_updated_date_post ) ) {
 		$post          = get_post();
 		$publish_date  = $post->post_date;
 		$modified_date = $post->post_modified;
@@ -735,7 +740,8 @@ function newspack_should_display_updated_date() {
 		$modified_timestamp = strtotime( $modified_date );
 		$modified_cutoff    = strtotime( 'tomorrow midnight', $publish_timestamp );
 
-		if ( $modified_timestamp > $modified_cutoff ) {
+		// Show the updated date either if it's enabled site-wide and more than 24 hours past the publish date, or if it's enabled on this specific post:
+		if ( ( $modified_timestamp > $modified_cutoff && $show_updated_date_sitewide ) || $show_updated_date_post ) {
 			return true;
 		} else {
 			return false;
