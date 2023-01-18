@@ -337,6 +337,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 		$default_image_attributes = array(
 			'loading'             => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? 'lazy' : false, // Disable lazy loading for first featured image on the page.
 			'data-hero-candidate' => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? false : true, // Make this image a hero candidate for AMP prerendering.
+			'fetchpriority'       => 'high',
 		);
 
 		if ( is_singular() ) :
@@ -371,7 +372,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 							)
 						);
 					else :
-						the_post_thumbnail( $size );
+						the_post_thumbnail( $size, $default_image_attributes );
 					endif;
 
 					newspack_post_thumbnail_caption();
