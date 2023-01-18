@@ -905,6 +905,16 @@ function newspack_register_meta() {
 	);
 
 	register_post_meta(
+		'post',
+		'newspack_show_updated_date',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'boolean',
+		)
+	);
+
+	register_post_meta(
 		'page',
 		'newspack_hide_page_title',
 		array(
@@ -1133,12 +1143,16 @@ function newspack_get_featured_image_post_types() {
  */
 function newspack_get_post_toggle_post_types() {
 	$hide_date_post_types = [];
+	$show_date_post_types = [];
 	if ( true === get_theme_mod( 'post_updated_date', false ) ) {
 		$hide_date_post_types[] = 'post';
+	} else {
+		$show_date_post_types[] = 'post';
 	}
 
 	return array(
 		'hide_date'          => $hide_date_post_types,
+		'show_date'          => $show_date_post_types,
 		'hide_title'         => [ 'page' ],
 		'show_share_buttons' => function_exists( 'sharing_display' ) ? [ 'page' ] : [],
 	);
