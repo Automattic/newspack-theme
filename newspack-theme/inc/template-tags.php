@@ -46,7 +46,7 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 
 		if ( is_single() ) {
 			printf(
-			'<span class="posted-on">%1$s</span>',
+				'<span class="posted-on">%1$s</span>',
 				wp_kses(
 					$time_string,
 					array(
@@ -62,7 +62,7 @@ if ( ! function_exists( 'newspack_posted_on' ) ) :
 			);
 		} else {
 			printf(
-			'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
+				'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
 				esc_url( get_permalink() ),
 				wp_kses(
 					$time_string,
@@ -127,7 +127,7 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 				}
 				?>
 			</span><!-- .byline -->
-		<?php
+			<?php
 		else :
 			printf(
 				/* translators: 1: Author avatar. 2: post author, only visible to screen readers. 3: author link. */
@@ -229,13 +229,13 @@ if ( ! function_exists( 'newspack_categories' ) ) :
 	 * Prints HTML with the current post's categories.
 	 */
 	function newspack_categories() {
-		$categories_list = '';
+		$categories_list     = '';
 		$primary_cat_enabled = get_theme_mod( 'post_primary_category', true );
 
 		// Only display Yoast primary category if set.
 		if ( class_exists( 'WPSEO_Primary_Term' ) && $primary_cat_enabled ) {
 			$primary_term = new WPSEO_Primary_Term( 'category', get_the_ID() );
-			$category_id = $primary_term->get_primary_term();
+			$category_id  = $primary_term->get_primary_term();
 			if ( $category_id ) {
 				$category = get_term( $category_id );
 				if ( $category ) {
@@ -337,9 +337,11 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 		$default_image_attributes = array(
 			'loading'             => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? 'lazy' : false, // Disable lazy loading for first featured image on the page.
 			'data-hero-candidate' => isset( $GLOBALS['newspack_after_first_featured_image'] ) ? false : true, // Make this image a hero candidate for AMP prerendering.
+			'fetchpriority'       => 'high',
 		);
 
-		if ( is_singular() ) : ?>
+		if ( is_singular() ) :
+			?>
 
 			<figure class="post-thumbnail">
 
@@ -370,7 +372,7 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 							)
 						);
 					else :
-						the_post_thumbnail( $size );
+						the_post_thumbnail( $size, $default_image_attributes );
 					endif;
 
 					newspack_post_thumbnail_caption();
@@ -554,7 +556,7 @@ function newspack_primary_menu() {
 		);
 		?>
 	</nav>
-<?php
+	<?php
 }
 
 /**
@@ -585,7 +587,7 @@ function newspack_secondary_menu() {
 		);
 		?>
 	</nav>
-<?php
+	<?php
 }
 
 /**
@@ -614,7 +616,7 @@ function newspack_tertiary_menu() {
 			);
 			?>
 		</nav>
-<?php
+	<?php
 }
 
 /**
@@ -659,7 +661,7 @@ function newspack_social_menu_header() {
 	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php newspack_social_menu_settings(); ?>
 	</nav><!-- .social-navigation -->
-<?php
+	<?php
 }
 
 /**
@@ -673,5 +675,5 @@ function newspack_social_menu_footer() {
 	<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'newspack' ); ?>">
 		<?php newspack_social_menu_settings(); ?>
 	</nav><!-- .social-navigation -->
-<?php
+	<?php
 }
