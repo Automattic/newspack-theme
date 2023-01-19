@@ -669,19 +669,6 @@ function newspack_fse_blocks_to_remove() {
 }
 
 /**
- * Minify CSS.
- *
- * @param string $css string CSS string.
- */
-function newspack_minify_css( $css ) {
-	return preg_replace(
-		[ '/(,|\{|\}|;|\*\/)\s+/', '/\s+(,|\{|\}|;|\*\/)/' ],
-		'\1',
-		$css
-	);
-}
-
-/**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
@@ -972,7 +959,7 @@ function newspack_colors_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-colors">
-		<?php echo newspack_minify_css( newspack_custom_colors_css() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo newspack_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }
@@ -1045,7 +1032,7 @@ function newspack_typography_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-theme-fonts">
-		<?php echo newspack_minify_css( newspack_custom_typography_css() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo newspack_custom_typography_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 
 	<?php
