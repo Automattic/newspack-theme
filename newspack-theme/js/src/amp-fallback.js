@@ -164,7 +164,7 @@
 	const dropdownToggle = document.getElementsByClassName( 'submenu-expand' );
 	if ( 0 < dropdownToggle.length ) {
 		for ( let i = 0; i < dropdownToggle.length; i++ ) {
-			let dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' );
+			const dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' );
 			dropdownToggle[ i ].addEventListener(
 				'click',
 				function () {
