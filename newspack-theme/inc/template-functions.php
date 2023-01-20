@@ -482,9 +482,22 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		$toggle_id = "toggle_" . $item->ID ;
 
 		$output .= sprintf(
-			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )" aria-haspopup="true">%s</button>',
-			$icon
+			'<button aria-controls="submenu-%1$s" aria-expanded="false" class="submenu-expand" aria-label="Open menu dropdown" [class]="%2$s ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="%2$s ? \'true\' : \'false\'" on="tap:AMP.setState( { %2$s : ! %2$s } )" aria-haspopup="true">
+				%3$s
+				<span class="screen-reader-text" [text]="%2$s ? \'%5$s\' : \'%4$s\'">%4$s</span>
+			</button>',
+			$item->ID,
+			$toggle_id,
+			$icon,
+			esc_html__( 'Open dropdown menu', 'newspack' ),
+			esc_html__( 'Close dropdown menu', 'newspack' )
 		);
+
+		/*
+		"<span class="screen-reader-text" [text]="searchVisible ? 'close' : 'open'""
+			"Open Search"
+		</span>
+		*/
 
 		// Set the current menu ID so it can be accessed by other functions.
 		Newspack_Current_Menu_ID::set_current_ID( $item->ID );
