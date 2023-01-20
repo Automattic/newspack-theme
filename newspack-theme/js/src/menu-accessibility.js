@@ -7,13 +7,13 @@
  */
 
 ( function () {
-	const primaryMenu = document.getElementById( 'site-navigation' );
 
-	// Options for the observer (which mutations to observe)
-	const config = { childList: true };
+	// Watch when primary menu is loaded by AMP.
+	const primaryMenu = document.getElementById( 'site-navigation' ),
+		config = { childList: true };
 
 	// Callback function to execute when mutations are observed.
-	const callback = ( mutationList ) => {
+	const callback = mutationList => {
 		for ( const mutation of mutationList ) {
 			if ( mutation.type === 'childList' ) {
 				updateMenu();
