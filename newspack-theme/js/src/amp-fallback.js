@@ -164,11 +164,7 @@
 	const dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
 	if ( 0 < dropdownToggle.length ) {
 		for ( let i = 0; i < dropdownToggle.length; i++ ) {
-			const dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' ),
-				subMenuID = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
-				subMenu = dropdownToggle[ i ].nextElementSibling;
-
-			subMenu.setAttribute( 'id', subMenuID );
+			const dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' );
 
 			dropdownToggle[ i ].addEventListener(
 				'click',

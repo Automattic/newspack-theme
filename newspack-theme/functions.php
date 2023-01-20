@@ -433,6 +433,7 @@ function newspack_scripts() {
 		'hide_order_details'  => esc_html__( 'Hide details', 'newspack' ),
 		'open_dropdown_menu'  => esc_html__( 'Open dropdown menu', 'newspack' ),
 		'close_dropdown_menu' => esc_html__( 'Close dropdown menu', 'newspack' ),
+		'is_amp'              => newspack_is_amp(),
 	);
 
 	if ( ! newspack_is_amp() ) {
