@@ -7,7 +7,6 @@
  */
 
 ( function () {
-
 	const primaryMenu = document.getElementById( 'site-navigation' );
 
 	// Options for the observer (which mutations to observe)
@@ -22,41 +21,39 @@
 		}
 	};
 
-// Create an observer instance linked to the callback function
-const observer = new MutationObserver( callback );
+	// Create an observer instance linked to the callback function
+	const observer = new MutationObserver( callback );
 
-// Start observing the target node for configured mutations
-observer.observe( primaryMenu, config );
+	// Start observing the target node for configured mutations
+	observer.observe( primaryMenu, config );
 
-function updateMenu() {
-	// Get menu toggles.
-	const headerContain = document.getElementById( 'masthead' ),
-		dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
+	function updateMenu() {
+		// Get menu toggles.
+		const headerContain = document.getElementById( 'masthead' ),
+			dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
 
-	if ( 0 < dropdownToggle.length ) {
-		for ( let i = 0; i < dropdownToggle.length; i++ ) {
-			let dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' ),
-				subMenuID           = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
-				subMenu             = dropdownToggle[ i ].nextElementSibling;
+		if ( 0 < dropdownToggle.length ) {
+			for ( let i = 0; i < dropdownToggle.length; i++ ) {
+				let dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' ),
+					subMenuID           = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
+					subMenu             = dropdownToggle[ i ].nextElementSibling;
 
-			subMenu.setAttribute( 'id', subMenuID );
+				subMenu.setAttribute( 'id', subMenuID );
 
-			dropdownToggle[ i ].addEventListener(
-				'click',
-				function () {
-					if ( dropdownToggle[ i ].classList.contains( 'open-dropdown' ) ) {
-						dropdownToggleLabel.innerText = newspackScreenReaderText.close_dropdown_menu;
-					} else {
-						dropdownToggleLabel.innerText = newspackScreenReaderText.open_dropdown_menu;
-					}
-				},
-				false
-			);
+				dropdownToggle[ i ].addEventListener(
+					'click',
+					function () {
+						if ( dropdownToggle[ i ].classList.contains( 'open-dropdown' ) ) {
+							dropdownToggleLabel.innerText = newspackScreenReaderText.close_dropdown_menu;
+						} else {
+							dropdownToggleLabel.innerText = newspackScreenReaderText.open_dropdown_menu;
+						}
+					},
+					false
+				);
+			}
 		}
+		// Later, you can stop observing
+		observer.disconnect();
 	}
-
-	// Later, you can stop observing
-	observer.disconnect();
-}
-
 } )();
