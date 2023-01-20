@@ -424,23 +424,28 @@ function newspack_scripts() {
 
 	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
+	$newspack_l10n = array(
+		'open_search'         => esc_html__( 'Open Search', 'newspack' ),
+		'close_search'        => esc_html__( 'Close Search', 'newspack' ),
+		'expand_comments'     => esc_html__( 'Expand Comments', 'newspack' ),
+		'collapse_comments'   => esc_html__( 'Collapse Comments', 'newspack' ),
+		'show_order_details'  => esc_html__( 'Show details', 'newspack' ),
+		'hide_order_details'  => esc_html__( 'Hide details', 'newspack' ),
+		'open_dropdown_menu'  => esc_html__( 'Open dropdown menu', 'newspack' ),
+		'close_dropdown_menu' => esc_html__( 'Close dropdown menu', 'newspack' ),
+	);
+
 	if ( ! newspack_is_amp() ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		$newspack_l10n = array(
-			'open_search'        => esc_html__( 'Open Search', 'newspack' ),
-			'close_search'       => esc_html__( 'Close Search', 'newspack' ),
-			'expand_comments'    => esc_html__( 'Expand Comments', 'newspack' ),
-			'collapse_comments'  => esc_html__( 'Collapse Comments', 'newspack' ),
-			'show_order_details' => esc_html__( 'Show details', 'newspack' ),
-			'hide_order_details' => esc_html__( 'Hide details', 'newspack' ),
-		);
-
 		wp_enqueue_script( 'newspack-amp-fallback', get_theme_file_uri( '/js/dist/amp-fallback.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 		wp_localize_script( 'newspack-amp-fallback', 'newspackScreenReaderText', $newspack_l10n );
 	}
+
+	wp_enqueue_script( 'newspack-menu-accessibility', get_theme_file_uri( '/js/dist/menu-accessibility.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	wp_localize_script( 'newspack-menu-accessibility', 'newspackScreenReaderText', $newspack_l10n );
 
 	if ( class_exists( '\Newspack\AMP_Enhancements' ) && \Newspack\AMP_Enhancements::is_amp_plus_configured() ) {
 		wp_enqueue_script( 'newspack-amp-plus', get_theme_file_uri( '/js/dist/amp-plus.js' ), array(), wp_get_theme()->get( 'Version' ), true );
