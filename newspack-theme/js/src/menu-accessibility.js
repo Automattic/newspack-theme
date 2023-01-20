@@ -7,7 +7,6 @@
  */
 
 ( function () {
-
 	// Watch when primary menu is loaded by AMP.
 	const primaryMenu = document.getElementById( 'site-navigation' ),
 		config = { childList: true };
