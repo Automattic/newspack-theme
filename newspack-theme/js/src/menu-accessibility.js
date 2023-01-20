@@ -13,7 +13,7 @@
 	const config = { childList: true };
 
 	// Callback function to execute when mutations are observed.
-	const callback = ( mutationList, observer ) => {
+	const callback = ( mutationList ) => {
 		for ( const mutation of mutationList ) {
 			if ( mutation.type === 'childList' ) {
 				updateMenu();
@@ -34,9 +34,9 @@
 
 		if ( 0 < dropdownToggle.length ) {
 			for ( let i = 0; i < dropdownToggle.length; i++ ) {
-				let dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' ),
-					subMenuID           = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
-					subMenu             = dropdownToggle[ i ].nextElementSibling;
+				const dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' ),
+					subMenuID = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
+					subMenu = dropdownToggle[ i ].nextElementSibling;
 
 				subMenu.setAttribute( 'id', subMenuID );
 
