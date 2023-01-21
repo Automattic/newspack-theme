@@ -22,7 +22,7 @@
 				// Give each submenu an ID based on their parent item ID.
 				subMenu.setAttribute( 'id', subMenuId );
 				// Give each dropdown toggle an aria-controls attribute that matches the submenu ID.
-				dropdownToggle[i].setAttribute( 'aria-controls', subMenuId );
+				dropdownToggle[ i ].setAttribute( 'aria-controls', subMenuId );
 			}
 		}
 	}
