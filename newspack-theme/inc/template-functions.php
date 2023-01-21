@@ -462,7 +462,7 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 		$menu_state = 'setState' . $item->ID;
 
 		$output .= sprintf(
-			 '<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $menu_state . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $menu_state . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $menu_state . ': !' . $menu_state . ' } )" aria-haspopup="true">
+			 '<button aria-expanded="false" class="submenu-expand" [class]="' . $menu_state . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $menu_state . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $menu_state . ': !' . $menu_state . ' } )" aria-haspopup="true">
 					%1$s
 					<span class="screen-reader-text" [text]="' . $menu_state . ' ? \'%3$s\' : \'%2$s\'">%2$s</span>
 				</button>',

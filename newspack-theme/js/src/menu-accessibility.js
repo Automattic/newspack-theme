@@ -8,16 +8,21 @@
 
 ( function () {
 	function updateMenu() {
-		// Get menu toggles.
+		// Get dropdown menu toggles in the header.
 		const headerContain = document.getElementById( 'masthead' ),
 			dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
 
+		// Loop through each dropdown menu toggle.
 		if ( 0 < dropdownToggle.length ) {
 			for ( let i = 0; i < dropdownToggle.length; i++ ) {
-				const parentMenuID = dropdownToggle[ i ].getAttribute( 'aria-controls' ),
-					subMenu = dropdownToggle[ i ].nextElementSibling;
+				const parentMenuID = dropdownToggle[ i ].parentNode.getAttribute( 'id' ),
+					subMenu = dropdownToggle[ i ].nextElementSibling,
+					subMenuId = parentMenuID.replace( 'menu-item-', 'submenu-' );
 
-				subMenu.setAttribute( 'id', parentMenuID );
+				// Give each submenu an ID based on their parent item ID.
+				subMenu.setAttribute( 'id', subMenuId );
+				// Give each dropdown toggle an aria-controls attribute that matches the submenu ID.
+				dropdownToggle[i].setAttribute( 'aria-controls', subMenuId );
 			}
 		}
 	}
