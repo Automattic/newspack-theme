@@ -1,3 +1,17 @@
+# [1.67.0](https://github.com/Automattic/newspack-theme/compare/v1.66.0...v1.67.0) (2023-01-25)
+
+
+### Bug Fixes
+
+* confirm query is explicitly for a page ([#2010](https://github.com/Automattic/newspack-theme/issues/2010)) ([a0e9dd0](https://github.com/Automattic/newspack-theme/commit/a0e9dd035f20e77c2816cc1c1f17e85e1de0b455))
+* correct issues with users and guest authors sharing IDs ([#2008](https://github.com/Automattic/newspack-theme/issues/2008)) ([40a164b](https://github.com/Automattic/newspack-theme/commit/40a164bea6b0ba3815dd5934fbab3763b36cc105))
+* use flex-grow instead of shorthand ([#2012](https://github.com/Automattic/newspack-theme/issues/2012)) ([d60ae24](https://github.com/Automattic/newspack-theme/commit/d60ae24ceb14db8ae5513eadd8a0c8460acefdc6))
+
+
+### Features
+
+* add Mastodon icon to the social links menu ([#2017](https://github.com/Automattic/newspack-theme/issues/2017)) ([9d408bc](https://github.com/Automattic/newspack-theme/commit/9d408bc9bbff9d154289c3998d0eb60e26d5e183))
+
 # [1.67.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.66.0...v1.67.0-alpha.1) (2023-01-13)
 
 
