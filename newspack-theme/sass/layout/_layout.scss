@@ -8,7 +8,7 @@
 	flex-direction: column;
 	min-height: 100vh;
 	> *:not( #content ) {
-		flex: 0;
+		flex-grow: 0;
 	}
 }
 #content {
