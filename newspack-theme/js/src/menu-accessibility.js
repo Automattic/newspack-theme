@@ -49,8 +49,12 @@
 		const observer = new MutationObserver( callback );
 
 		// Start observing the target node for configured mutations
-		observer.observe( primaryMenu, config );
-		observer.observe( secondaryMenu, config );
+		if ( primaryMenu ) {
+			observer.observe( primaryMenu, config );
+		}
+		if ( secondaryMenu ) {
+			observer.observe( secondaryMenu, config );
+		}
 	} else {
 		updateMenu();
 	}
