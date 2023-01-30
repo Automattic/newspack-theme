@@ -15,9 +15,9 @@
 		// Loop through each dropdown menu toggle.
 		if ( 0 < dropdownToggle.length ) {
 			for ( let i = 0; i < dropdownToggle.length; i++ ) {
-				const parentMenuID = dropdownToggle[ i ].parentNode.getAttribute( 'id' ),
+				const parentMenuID = dropdownToggle[ i ].getAttribute( 'data-toggle-parent-id' ),
 					subMenu = dropdownToggle[ i ].nextElementSibling,
-					subMenuId = parentMenuID.replace( 'menu-item-', 'submenu-' );
+					subMenuId = parentMenuID.replace( 'toggle-', 'submenu-' );
 
 				// Give each submenu an ID based on their parent item ID.
 				subMenu.setAttribute( 'id', subMenuId );
