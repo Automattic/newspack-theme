@@ -13,7 +13,8 @@
 }
 
 figcaption,
-.wp-caption-text {
+.wp-caption-text,
+.swiper-pagination-simple {
 	color: colors.$color__text-light;
 	margin: 0 auto;
 	padding: 0;
@@ -29,7 +30,8 @@ figcaption,
 
 figcaption,
 .wp-caption-text,
-.amp-image-lightbox-caption {
+.amp-image-lightbox-caption,
+.swiper-pagination-simple {
 	font-size: fonts.$font__size-xs;
 	font-family: fonts.$font__heading;
 	line-height: fonts.$font__line-height-pre;
