@@ -54,7 +54,8 @@ body.newspack-single-wide-template {
 		}
 	}
 
-	figcaption {
+	figcaption,
+	.swiper-pagination-simple {
 		max-width: 1230px;
 	}
 }
