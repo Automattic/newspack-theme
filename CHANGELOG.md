@@ -1,3 +1,12 @@
+# [1.68.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.67.0...v1.68.0-alpha.1) (2023-01-26)
+
+
+### Features
+
+* add before and after page content hooks ([b188fb2](https://github.com/Automattic/newspack-theme/commit/b188fb2d10e92e4aa94ee28df15d60b76c0a8eb3))
+* add per-post option to show updated date ([#2020](https://github.com/Automattic/newspack-theme/issues/2020)) ([0898766](https://github.com/Automattic/newspack-theme/commit/0898766b5d04a65dc5a6ca50e975e415e4291d01))
+* hint to browser that the featured image should be prioritised ([#2022](https://github.com/Automattic/newspack-theme/issues/2022)) ([2a8ea7f](https://github.com/Automattic/newspack-theme/commit/2a8ea7f8b2f244970554c3c0b940b9b46bdb4729))
+
 # [1.67.0](https://github.com/Automattic/newspack-theme/compare/v1.66.0...v1.67.0) (2023-01-25)
 
 
