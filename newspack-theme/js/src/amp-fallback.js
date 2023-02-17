@@ -161,16 +161,22 @@
 	} );
 
 	// Menu toggle variables.
-	const dropdownToggle = document.getElementsByClassName( 'submenu-expand' );
+	const dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
 	if ( 0 < dropdownToggle.length ) {
 		for ( let i = 0; i < dropdownToggle.length; i++ ) {
+			const dropdownToggleLabel = dropdownToggle[ i ].querySelector( 'span.screen-reader-text' );
+
 			dropdownToggle[ i ].addEventListener(
 				'click',
 				function () {
 					if ( dropdownToggle[ i ].classList.contains( 'open-dropdown' ) ) {
 						dropdownToggle[ i ].classList.remove( 'open-dropdown' );
+						dropdownToggle[ i ].setAttribute( 'aria-expanded', 'false' );
+						dropdownToggleLabel.innerText = newspackScreenReaderText.close_dropdown_menu;
 					} else {
 						dropdownToggle[ i ].classList.add( 'open-dropdown' );
+						dropdownToggle[ i ].setAttribute( 'aria-expanded', 'true' );
+						dropdownToggleLabel.innerText = newspackScreenReaderText.open_dropdown_menu;
 					}
 				},
 				false
