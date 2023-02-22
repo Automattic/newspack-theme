@@ -214,6 +214,16 @@
 	}
 }
 
+.widget.widget_top-posts {
+	.widgets-list-layout img {
+		max-width: 60px;
+	}
+
+	.widgets-list-layout .widgets-list-layout-links {
+		width: calc( 100% - 75px );
+	}
+}
+
 #secondary {
 	section:first-child,
 	section:first-child > div {
@@ -225,16 +235,6 @@
 	.widget-title,
 	.widgettitle {
 		font-size: fonts.$font__size-md;
-	}
-
-	.widget_top-posts {
-		.widgets-list-layout img {
-			max-width: 60px;
-		}
-
-		.widgets-list-layout .widgets-list-layout-links {
-			width: calc( 100% - 75px );
-		}
 	}
 }
 
