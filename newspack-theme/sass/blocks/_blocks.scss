@@ -86,7 +86,14 @@
 					width: auto;
 				}
 			}
+
+			.alignfull,
+			.alignwide {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
+
 		.alignfull {
 			margin-left: calc( 50% - 50vw );
 			margin-right: calc( 50% - 50vw );
@@ -94,6 +101,18 @@
 
 			&.wp-block-cover {
 				width: 100vw;
+			}
+
+			.alignwide {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: calc( 50vw + 600px );
+			}
+
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 
@@ -1477,16 +1496,17 @@ $colors: (
 		> .wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > .alignwide {
-					margin-left: auto;
-					margin-right: auto;
-					max-width: 1200px;
-				}
 				> div > *:not( .alignfull ):not( .alignwide ) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 780px;
 				}
+			}
+			&.alignfull > div > .alignwide {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: calc( 50vw + 390px );
 			}
 		}
 	}
@@ -1498,6 +1518,7 @@ $colors: (
 .post-template-single-feature,
 .page-template-single-feature {
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
+
 	.wp-block-pullquote,
 	.wp-block-table,
 	.wp-block-columns:not( .is-not-stacked-on-mobile ),
@@ -1521,21 +1542,6 @@ $colors: (
 		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
-		}
-	}
-
-	// keep nested align-full elements from overflowing the container.
-	.entry .entry-content {
-		.wp-block-column,
-		.wp-block-group,
-		.wp-block-cover {
-			.alignwide,
-			.alignfull {
-				margin-left: 0;
-				margin-right: 0;
-				padding-left: 0;
-				padding-right: 0;
-			}
 		}
 	}
 
