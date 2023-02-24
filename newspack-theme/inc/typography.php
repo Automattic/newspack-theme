@@ -143,7 +143,7 @@ function newspack_custom_typography_css() {
 		.jp-relatedposts-i2 .jp-relatedposts-headline,
 		#jp-relatedposts.jp-relatedposts .jp-relatedposts-headline,
 		.jetpack_top_posts_widget li a,
-		..widget_top-posts li a,
+		.widget_top-posts li a,
 
 		/* Yoast Breadcrumbs */
 		.site-breadcrumb .wrapper > span,
