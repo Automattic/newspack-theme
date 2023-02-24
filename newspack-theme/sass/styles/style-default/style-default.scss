@@ -35,7 +35,7 @@
 		border-radius: 5px;
 		font-size: fonts.$font__size-sm;
 		font-weight: 700;
-		padding: #{structure.$size__spacing-unit * 0.5} #{structure.$size__spacing-unit * 0.75};
+		padding: #{structure.$size__spacing-unit * 0.5};
 	}
 
 	.menu-highlight a {
