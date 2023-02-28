@@ -105,6 +105,15 @@ function newspack_gallery_widget_content_width( $width ) {
 add_filter( 'gallery_widget_content_width', 'newspack_gallery_widget_content_width' );
 
 /**
+ * Increase the size of the thumbnails in the Top Posts widget.
+ */
+function newspack_custom_top_posts_thumb_size( $get_image_options ) {
+	$get_image_options['avatar_size'] = 240;
+	return $get_image_options;
+}
+add_filter( 'jetpack_top_posts_widget_image_options', 'newspack_custom_top_posts_thumb_size' );
+
+/**
  * Alter featured-image default visibility for content-options.
  */
 function newspack_override_post_thumbnail( $width ) {
