@@ -127,7 +127,8 @@ table th {
 
 figcaption,
 .gallery-caption,
-.wp-caption-text {
+.wp-caption-text,
+.swiper-pagination-simple {
 	color: colors.$color__text-light;
 	font-family: fonts.$font__heading;
 	font-size: fonts.$font__size-xxs;

@@ -440,25 +440,6 @@ function newspack_get_discussion_data() {
 }
 
 /**
- * Get and store current menu's ID so it can be shared across functions.
- *
- * @return string Current menu item ID.
- */
-class Newspack_Current_Menu_ID {
-	private static $currentMenuId = '';
-
-	// Sets the current Menu ID value in newspack_add_dropdown_icons().
-	public static function set_current_ID( $value ) {
-		self::$currentMenuId = $value;
-	}
-
-	// Gets the current Menu ID for Newspack_Custom_Submenu_Walker().
-	public static function get_current_ID() {
-		return self::$currentMenuId;
-	}
-}
-
-/**
  * Add a dropdown icon to top-level menu items.
  *
  * @param string $output Nav menu item start element.
@@ -478,41 +459,24 @@ function newspack_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 		// Add SVG icon to parent items.
 		$icon = newspack_get_icon_svg( 'keyboard_arrow_down', 24 );
-
-		$toggle_id = "toggle_" . $item->ID ;
+		$menu_state = 'setState' . $item->ID;
 
 		$output .= sprintf(
-			'<button aria-controls="submenu-'. $item->ID . '" aria-expanded="false" class="submenu-expand" [class]="' . $toggle_id . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $toggle_id . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $toggle_id . ' : !' . $toggle_id . ' } )" aria-haspopup="true">%s</button>',
-			$icon
+			 '<button aria-expanded="false" class="submenu-expand" [class]="' . $menu_state . ' ? \'submenu-expand open-dropdown\' : \'submenu-expand\'" [aria-expanded]="' . $menu_state . ' ? \'true\' : \'false\'" on="tap:AMP.setState( { ' . $menu_state . ': !' . $menu_state . ' } )" aria-haspopup="true" data-toggle-parent-id="toggle-' . $item->ID . '">
+					%1$s
+					<span class="screen-reader-text" [text]="' . $menu_state . ' ? \'%3$s\' : \'%2$s\'">%2$s</span>
+				</button>',
+			$icon,
+			esc_html__( 'Open dropdown menu', 'newspack' ),
+			esc_html__( 'Close dropdown menu', 'newspack' )
 		);
-
-		// Set the current menu ID so it can be accessed by other functions.
-		Newspack_Current_Menu_ID::set_current_ID( $item->ID );
 	}
+
+	//tap:AMP.setState( { searchVisible: !searchVisible
 
 	return $output;
 }
 add_filter( 'walker_nav_menu_start_el', 'newspack_add_dropdown_icons', 10, 4 );
-
-/**
- * Add an ID with parent menu item's ID to each submenu.
- *
- * @param string $output Nav menu item start element.
- * @param int    $depth  Depth.
- * @param object $args   Nav menu args.
- * @return string Nav menu level start element.
- */
-class Newspack_Custom_Submenu_Walker extends Walker_Nav_Menu {
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-
-		// Get the current stored menu ID.
-		$menu_parent_id = Newspack_Current_Menu_ID::get_current_ID();
-
-		$submenu_ID = "submenu-" . esc_attr( $menu_parent_id );
-		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"sub-menu\" id=\"$submenu_ID\">\n";
-	}
-}
 
 /**
  * The default color used for the primary color throughout this theme
