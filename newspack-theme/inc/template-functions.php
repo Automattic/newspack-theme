@@ -164,6 +164,14 @@ function newspack_body_classes( $classes ) {
 		$classes[] = 'has-highlight-menu';
 	}
 
+	// Adds class if the RAS account link is enabled.
+	if ( class_exists( '\Newspack\Reader_Activation' ) ) {
+		$ras_settings = \Newspack\Reader_Activation::get_settings();
+		if ( $ras_settings['enabled_account_link'] ) {
+			$classes[] = 'has-ras-link';
+		}
+	}
+
 	// Adds a class of has-sidebar when there is a sidebar present and populated.
 	if ( is_active_sidebar( 'sidebar-1' )
 		&& ( ( ! is_archive() && newspack_is_default_template() && ! ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) )

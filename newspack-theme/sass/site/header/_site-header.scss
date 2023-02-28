@@ -48,6 +48,13 @@
 	}
 }
 
+@include utilities.media( tablet ) {
+	.has-ras-link.h-cl.has-tertiary-menu .site-header .custom-logo-link .custom-logo {
+		height: auto;
+		max-width: 150px;
+	}
+}
+
 // Site identity
 .site-identity {
 	align-items: baseline;
@@ -170,14 +177,17 @@
 }
 
 @include utilities.media( tablet ) {
-	.h-dh .header-search-contain {
+	.h-dh:not( .has-ras-link ) .header-search-contain {
 		display: block;
 	}
 }
 
 @include utilities.media( narrowdesktop ) {
-	.h-sh .header-search-contain {
-		display: block;
+	.h-sh,
+	.has-ras-link {
+		.header-search-contain {
+			display: block;
+		}
 	}
 }
 
@@ -255,7 +265,7 @@
 			margin: auto;
 		}
 
-		&.h-dh {
+		&.h-dh:not( .has-ras-link ) {
 			.site-header .middle-header-contain .wrapper .site-branding {
 				display: flex;
 				justify-content: center;
@@ -271,7 +281,8 @@
 	}
 
 	@include utilities.media( narrowdesktop ) {
-		&.h-sh {
+		&.h-sh,
+		&.has-ras-link {
 			.site-header .middle-header-contain .wrapper .site-branding {
 				display: flex;
 				justify-content: center;
@@ -577,7 +588,7 @@
 			}
 		}
 
-		&.h-cl .site-header .middle-header-contain .wrapper > div {
+		&.h-cl:not( .has-ras-link ) .site-header .middle-header-contain .wrapper > div {
 			width: 31%;
 
 			&.site-branding {
@@ -591,15 +602,18 @@
 	}
 
 	&.h-cl {
-		&.h-dh .site-header .custom-logo {
+		&.h-dh:not( .has-ras-link ) .site-header .custom-logo {
 			@include utilities.media( tablet ) {
 				object-position: center center;
 			}
 		}
 
-		&.h-sh .site-header .custom-logo {
-			@include utilities.media( narrowdesktop ) {
-				object-position: center center;
+		&.h-sh,
+		&.has-ras-link {
+			.site-header .custom-logo {
+				@include utilities.media( narrowdesktop ) {
+					object-position: center center;
+				}
 			}
 		}
 	}
@@ -681,14 +695,17 @@
 
 @include utilities.media( tablet ) {
 	// Header default height
-	.h-dh .desktop-only {
+	.h-dh:not( .has-ras-link ) .desktop-only {
 		display: inherit;
 	}
 }
 
 @include utilities.media( narrowdesktop ) {
 	// Header short height
-	.h-sh .desktop-only {
-		display: inherit;
+	.h-sh,
+	.has-ras-link {
+		.desktop-only {
+			display: inherit;
+		}
 	}
 }
