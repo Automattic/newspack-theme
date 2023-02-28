@@ -97,6 +97,7 @@ h6 {
 
 a {
 	@include utilities.link-transition;
+
 	color: colors.$color__link;
 
 	&:hover,
@@ -116,6 +117,7 @@ a {
 	color: inherit;
 	font-size: 0.8em;
 	@include utilities.link-transition;
+
 	margin: 0.5em 0;
 }
 
@@ -444,7 +446,7 @@ div[data-align='full'] {
 /** === Blockquote === */
 
 .wp-block-quote {
-	&:not( .is-large ):not( .is-style-large ) {
+	&:not(.is-large, .is-style-large) {
 		border-width: 2px;
 		border-color: colors.$color__link;
 	}
@@ -727,7 +729,7 @@ div[data-align='full'] {
 		border-top: 1px solid colors.$color__border;
 	}
 
-	&:not( .is-style-wide ):not( .is-style-dots ) {
+	&:not(.is-style-wide, .is-style-dots) {
 		max-width: #{5 * structure.$size__spacing-unit};
 		margin-left: auto;
 		margin-right: auto;

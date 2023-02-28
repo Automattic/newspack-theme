@@ -3,25 +3,25 @@
 @use '../variables-site/structure';
 
 .alignleft {
-	/*rtl:ignore*/
+	/* rtl:ignore */
 	float: left;
-	/*rtl:ignore*/
+	/* rtl:ignore */
 	margin-right: structure.$size__spacing-unit;
 
 	@include utilities.media( tablet ) {
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		margin-right: calc( 2 * #{structure.$size__spacing-unit} );
 	}
 }
 
 .alignright {
-	/*rtl:ignore*/
+	/* rtl:ignore */
 	float: right;
-	/*rtl:ignore*/
+	/* rtl:ignore */
 	margin-left: structure.$size__spacing-unit;
 
 	@include utilities.media( tablet ) {
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		margin-left: calc( 2 * #{structure.$size__spacing-unit} );
 	}
 }

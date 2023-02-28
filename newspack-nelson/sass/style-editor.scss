@@ -161,7 +161,7 @@ blockquote {
 		}
 	}
 
-	&:not( .is-style-dots ):not( .is-style-wide ) {
+	&:not(.is-style-dots, .is-style-wide) {
 		border-top: 5px solid colors.$color__text-main;
 
 		&.has-background {

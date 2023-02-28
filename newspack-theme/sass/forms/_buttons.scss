@@ -10,6 +10,7 @@ input[type='reset'],
 input[type='submit'],
 .wp-block-search__button {
 	@include utilities.button-transition;
+
 	background: colors.$color__background-button;
 	border: none;
 	border-radius: 5px;

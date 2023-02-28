@@ -32,6 +32,7 @@
 		background-color: color.adjust( colors.$color__text-light, $lightness: 45% );
 		color: colors.$color__text-main;
 		@include utilities.button-transition;
+
 		border-radius: 5px;
 		font-size: fonts.$font__size-sm;
 		font-weight: 700;
