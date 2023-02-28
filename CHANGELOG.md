@@ -1,3 +1,16 @@
+# [1.69.0](https://github.com/Automattic/newspack-theme/compare/v1.68.0...v1.69.0) (2023-02-28)
+
+
+### Bug Fixes
+
+* tweak styles for slideshow block's pagination ([#2032](https://github.com/Automattic/newspack-theme/issues/2032)) ([db744bb](https://github.com/Automattic/newspack-theme/commit/db744bbe2131e3b5152815bffc6aee3c509e57d8))
+* update menu ARIA labels, add missing button text ([#2025](https://github.com/Automattic/newspack-theme/issues/2025)) ([1b1ecab](https://github.com/Automattic/newspack-theme/commit/1b1ecab488308459d46c9112c9d9a1627fd33669))
+
+
+### Features
+
+* remove inline CSS minification (in favor of newspack-plugin) ([08694b1](https://github.com/Automattic/newspack-theme/commit/08694b12654183dfb8c6fb6e727914cb3832a032))
+
 # [1.69.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.68.0...v1.69.0-alpha.1) (2023-02-17)
 
 
