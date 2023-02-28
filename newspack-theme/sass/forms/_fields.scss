@@ -18,19 +18,19 @@ input[type='datetime-local'],
 input[type='zip'],
 input[type='color'],
 textarea {
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	background: colors.$color__background-input;
 	border: solid 1px colors.$color__border;
 	box-sizing: border-box;
 	outline: none;
 	padding: #{0.36 * structure.$size__spacing-unit} #{0.66 * structure.$size__spacing-unit};
-	-webkit-appearance: none;
+	appearance: none;
 	outline-offset: 0;
 	border-radius: 0;
 
 	&:focus {
 		border-color: colors.$color__text-main;
-		outline: thin solid rgba( colors.$color__text-main, 0.25 );
+		outline: thin solid rgb( colors.$color__text-main, 0.25 );
 		outline-offset: -4px;
 	}
 }
@@ -56,7 +56,6 @@ form {
 }
 
 input[type='checkbox'] {
-	-webkit-appearance: none;
 	appearance: none;
 	background: white;
 	border: solid 1px colors.$color__border;
