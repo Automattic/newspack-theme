@@ -9,20 +9,22 @@
 ( function () {
 	function updateMenu() {
 		// Get dropdown menu toggles in the header.
-		const headerContain = document.getElementById( 'masthead' ),
-			dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
+		const headerContain = document.getElementById( 'masthead' );
+		if ( headerContain ) {
+			const dropdownToggle = headerContain.getElementsByClassName( 'submenu-expand' );
 
-		// Loop through each dropdown menu toggle.
-		if ( 0 < dropdownToggle.length ) {
-			for ( let i = 0; i < dropdownToggle.length; i++ ) {
-				const parentMenuID = dropdownToggle[ i ].getAttribute( 'data-toggle-parent-id' ),
-					subMenu = dropdownToggle[ i ].nextElementSibling,
-					subMenuId = parentMenuID.replace( 'toggle-', 'submenu-' );
+			// Loop through each dropdown menu toggle.
+			if ( 0 < dropdownToggle.length ) {
+				for ( let i = 0; i < dropdownToggle.length; i++ ) {
+					const parentMenuID = dropdownToggle[ i ].getAttribute( 'data-toggle-parent-id' ),
+						subMenu = dropdownToggle[ i ].nextElementSibling,
+						subMenuId = parentMenuID.replace( 'toggle-', 'submenu-' );
 
-				// Give each submenu an ID based on their parent item ID.
-				subMenu.setAttribute( 'id', subMenuId );
-				// Give each dropdown toggle an aria-controls attribute that matches the submenu ID.
-				dropdownToggle[ i ].setAttribute( 'aria-controls', subMenuId );
+					// Give each submenu an ID based on their parent item ID.
+					subMenu.setAttribute( 'id', subMenuId );
+					// Give each dropdown toggle an aria-controls attribute that matches the submenu ID.
+					dropdownToggle[ i ].setAttribute( 'aria-controls', subMenuId );
+				}
 			}
 		}
 	}
