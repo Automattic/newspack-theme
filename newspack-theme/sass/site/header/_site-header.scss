@@ -48,10 +48,12 @@
 	}
 }
 
-@include utilities.media( tablet ) {
-	.has-ras-link.h-cl.has-tertiary-menu .site-header .custom-logo-link .custom-logo {
-		height: auto;
-		max-width: 150px;
+.has-ras-link.h-cl.has-tertiary-menu .site-header .custom-logo-link .custom-logo {
+	height: auto;
+	max-width: 250px;
+
+	@include utilities.media( tablet ) {
+		max-width: 200px;
 	}
 }
 
@@ -309,6 +311,12 @@
 
 		.site-header .custom-logo {
 			max-width: inherit;
+		}
+
+		&.has-ras-link .site-header .middle-header-contain .wrapper > div {
+			&.site-branding {
+				flex: 0.5;
+			}
 		}
 	}
 
