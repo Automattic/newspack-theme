@@ -167,7 +167,7 @@ function newspack_body_classes( $classes ) {
 	// Adds class if the RAS account link is enabled.
 	if ( class_exists( '\Newspack\Reader_Activation' ) ) {
 		$ras_settings = \Newspack\Reader_Activation::get_settings();
-		if ( $ras_settings['enabled_account_link'] ) {
+		if ( $ras_settings['enabled'] && $ras_settings['enabled_account_link'] ) {
 			$classes[] = 'has-ras-link';
 		}
 	}
@@ -275,6 +275,7 @@ function newspack_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'newspack_body_classes' );
+
 
 /**
  * Adds custom class to the array of posts classes.
