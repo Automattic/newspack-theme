@@ -276,7 +276,6 @@ function newspack_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'newspack_body_classes' );
 
-
 /**
  * Adds custom class to the array of posts classes.
  */
