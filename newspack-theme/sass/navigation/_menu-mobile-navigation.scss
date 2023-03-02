@@ -68,7 +68,7 @@
 	}
 
 	+ .mobile-menu-toggle {
-		margin-left: #{0.75 * structure.$size__spacing-unit};
+		margin-left: 12px;
 		padding: 5px;
 
 		span {
@@ -84,7 +84,7 @@
 		}
 
 		+ .newspack-reader__account-link__mobile {
-			margin-left: #{0.25 * structure.$size__spacing-unit};
+			margin-left: 4px;
 		}
 	}
 }
@@ -142,9 +142,26 @@
 	}
 }
 
+@include utilities.media( narrowdesktop ) {
+	// Header - short height
+	.h-sh:not( .has-ras-link ) {
+		// Mobile Menu toggle
+		.site-header .mobile-menu-toggle,
+		&.h-sub .site-header .mobile-menu-toggle,
+		.site-header .mb-cta {
+			display: none;
+		}
+
+		// Desktop Menu toggle
+		.site-header .desktop-menu-toggle,
+		&.h-sub .subpage-toggle-contain {
+			display: flex;
+		}
+	}
+}
+
 @include utilities.media( desktop ) {
 	// Header - short height & RAS link
-	.h-sh,
 	.has-ras-link {
 		// Mobile Menu toggle
 		.site-header .mobile-menu-toggle,
