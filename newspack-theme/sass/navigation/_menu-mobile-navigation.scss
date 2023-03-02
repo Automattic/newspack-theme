@@ -9,6 +9,7 @@
 .subpage-toggle {
 	align-items: center;
 	background-color: transparent;
+	border-radius: 0;
 	color: inherit;
 	display: flex;
 	padding: 0;
@@ -48,6 +49,11 @@
 	margin-left: auto;
 }
 
+// RAS My Account link
+.newspack-reader__account-link__mobile {
+	margin-right: -7px; // offset the right padding
+}
+
 // Mobile CTA
 .site-header .mb-cta {
 	background: #d33;
@@ -62,7 +68,8 @@
 	}
 
 	+ .mobile-menu-toggle {
-		margin-left: #{0.5 * structure.$size__spacing-unit};
+		margin-left: #{0.75 * structure.$size__spacing-unit};
+		padding: 5px;
 
 		span {
 			display: inline-block;
@@ -71,8 +78,13 @@
 		}
 
 		svg {
-			height: 29px;
-			width: 29px;
+			height: 28px;
+			margin: 0;
+			width: 28px;
+		}
+
+		+ .newspack-reader__account-link__mobile {
+			margin-left: #{0.25 * structure.$size__spacing-unit};
 		}
 	}
 }
