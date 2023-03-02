@@ -52,9 +52,9 @@
 .site-header .mb-cta {
 	background: #d33;
 	color: #fff;
-	font-size: 0.7em;
+	font-size: 0.65em;
 	margin-left: auto;
-	padding: #{0.6 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
+	padding: #{0.5 * structure.$size__spacing-unit};
 
 	&:hover {
 		background: colors.$color__text-main;
@@ -130,7 +130,7 @@
 	}
 }
 
-@include utilities.media( narrowdesktop ) {
+@include utilities.media( desktop ) {
 	// Header - short height & RAS link
 	.h-sh,
 	.has-ras-link {

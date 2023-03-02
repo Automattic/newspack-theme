@@ -48,6 +48,7 @@
 	}
 }
 
+/*
 .has-ras-link.h-cl.has-tertiary-menu .site-header .custom-logo-link .custom-logo {
 	height: auto;
 	max-width: 250px;
@@ -56,6 +57,7 @@
 		max-width: 200px;
 	}
 }
+*/
 
 // Site identity
 .site-identity {
@@ -184,7 +186,7 @@
 	}
 }
 
-@include utilities.media( narrowdesktop ) {
+@include utilities.media( desktop ) {
 	.h-sh,
 	.has-ras-link {
 		.header-search-contain {
@@ -280,9 +282,16 @@
 				width: 100%;
 			}
 		}
+
+		&.has-ras-link .site-header {
+			.custom-logo {
+				max-width: 175px;
+				width: auto;
+			}
+		}
 	}
 
-	@include utilities.media( narrowdesktop ) {
+	@include utilities.media( desktop ) {
 		&.h-sh,
 		&.has-ras-link {
 			.site-header .middle-header-contain .wrapper .site-branding {
@@ -297,34 +306,36 @@
 				width: 100%;
 			}
 		}
-	}
 
-	@include utilities.media( desktop ) {
-		.site-header .middle-header-contain .wrapper > div {
-			flex: 1;
-			width: auto;
-
-			&.site-branding {
+		.site-header {
+			.middle-header-contain .wrapper > div {
+				flex: 1;
 				width: auto;
+
+				&.site-branding {
+					width: auto;
+				}
+			}
+
+			.custom-logo {
+				max-width: inherit;
 			}
 		}
 
-		.site-header .custom-logo {
-			max-width: inherit;
-		}
-
-		&.has-ras-link .site-header .middle-header-contain .wrapper > div {
-			&.site-branding {
+		&.has-ras-link .site-header {
+			.middle-header-contain .wrapper > div.site-branding {
 				flex: 0.5;
 			}
+
+			.custom-logo {
+				max-width: 250px;
+			}
 		}
 	}
 
-	// IE 11-specific logo fix
-	@media screen and ( -ms-high-contrast: none ) and ( min-width: structure.$desktop_width ) {
-		.site-header .custom-logo-link img {
-			height: auto;
-			max-width: 100%;
+	@include utilities.media( wide ) {
+		&.has-ras-link.h-dh .site-header .custom-logo {
+			max-width: 350px;
 		}
 	}
 }
@@ -619,7 +630,7 @@
 		&.h-sh,
 		&.has-ras-link {
 			.site-header .custom-logo {
-				@include utilities.media( narrowdesktop ) {
+				@include utilities.media( desktop ) {
 					object-position: center center;
 				}
 			}
@@ -708,7 +719,7 @@
 	}
 }
 
-@include utilities.media( narrowdesktop ) {
+@include utilities.media( desktop ) {
 	// Header short height
 	.h-sh,
 	.has-ras-link {
