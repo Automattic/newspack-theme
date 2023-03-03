@@ -69,8 +69,10 @@ function newspack_customize_logo_resize( $html ) {
 
 		// Update the max-width to match the RAS max-width in the CSS - this improves the Customizer preview accuracy.
 		if ( class_exists( '\Newspack\Reader_Activation' ) ) {
+			$header_simplified     = get_theme_mod( 'header_simplified', false );
+			$header_center_logo    = get_theme_mod( 'header_center_logo', false );
 			$ras_settings = \Newspack\Reader_Activation::get_settings();
-			if ( $ras_settings['enabled'] && $ras_settings['enabled_account_link'] ) {
+			if ( $ras_settings['enabled'] && $ras_settings['enabled_account_link'] && ( $header_simplified || $header_center_logo ) ) {
 				$logo_max_width = ( $logo['width'] > 350 ) ? 350 : $logo['width'];
 			}
 		}
@@ -145,7 +147,7 @@ function newspack_customize_logo_resize( $html ) {
 		}
 
 		@media (max-width: 1199px) and (min-width: 782px) {
-			.h-stk.h-cl:not(.h-sub):not(:has-ras-link) .site-header .custom-logo {
+			.h-stk.h-cl:not(.h-sub):not(.has-ras-link) .site-header .custom-logo {
 				max-width: 100%;
 				width: auto;
 			}

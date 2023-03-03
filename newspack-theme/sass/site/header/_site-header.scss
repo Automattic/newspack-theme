@@ -720,8 +720,7 @@
 
 // RAS logo sizing
 .h-sh,
-.h-dh.h-cl,
-.h-stk:not( .h-sub ) {
+.h-dh.h-cl {
 	&.has-ras-link .site-header .custom-logo {
 		@include utilities.media( tablet ) {
 			height: auto;
