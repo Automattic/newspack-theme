@@ -42,6 +42,7 @@
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
 	@include utilities.button-transition;
+
 	background: colors.$color__background-button;
 	color: colors.$color__background-body;
 	font-family: fonts.$font__heading;

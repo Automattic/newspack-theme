@@ -19,8 +19,7 @@
 		color: inherit;
 		cursor: pointer;
 		transition: background 250ms ease-in-out, transform 150ms ease;
-		-webkit-appearance: none;
-		-moz-appearance: none;
+		appearance: none;
 
 		&:hover,
 		&:focus {
@@ -130,7 +129,7 @@
 
 			&::before {
 				border-style: solid;
-				border-width: 0 8px 8px 8px;
+				border-width: 0 8px 8px;
 				border-color: transparent transparent colors.$color__background-dark transparent;
 				content: '';
 				display: inline-block;

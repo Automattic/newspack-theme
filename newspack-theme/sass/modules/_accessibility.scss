@@ -23,6 +23,7 @@
 		color: colors.$color__text-screen;
 		display: block;
 		@include mixins-master.font-size( 0.875 );
+
 		font-weight: bold;
 		height: auto;
 		left: 5px;
