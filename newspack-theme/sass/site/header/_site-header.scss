@@ -48,17 +48,6 @@
 	}
 }
 
-/*
-.has-ras-link.h-cl.has-tertiary-menu .site-header .custom-logo-link .custom-logo {
-	height: auto;
-	max-width: 250px;
-
-	@include utilities.media( tablet ) {
-		max-width: 200px;
-	}
-}
-*/
-
 // Site identity
 .site-identity {
 	align-items: baseline;
@@ -96,6 +85,14 @@
 	padding: 0 structure.$size__spacing-unit;
 
 	@include utilities.media( mobile ) {
+		display: block;
+	}
+}
+
+.has-ras-link .site-description {
+	display: none;
+
+	@include utilities.media( desktop ) {
 		display: block;
 	}
 }
@@ -285,13 +282,6 @@
 				width: 100%;
 			}
 		}
-
-		&.has-ras-link .site-header {
-			.custom-logo {
-				max-width: 175px;
-				width: auto;
-			}
-		}
 	}
 
 	@include utilities.media( narrowdesktop ) {
@@ -328,10 +318,6 @@
 			.middle-header-contain .wrapper > div.site-branding {
 				flex: 0.5;
 			}
-
-			.custom-logo {
-				max-width: 250px;
-			}
 		}
 	}
 
@@ -352,8 +338,12 @@
 	}
 
 	@include utilities.media( wide ) {
-		&.has-ras-link.h-dh .site-header .custom-logo {
-			max-width: 350px;
+		&.has-ras-link.h-dh {
+			.site-header {
+				.middle-header-contain .wrapper > div.site-branding {
+					flex: 1;
+				}
+			}
 		}
 	}
 }
@@ -724,6 +714,26 @@
 					width: 1200px;
 				}
 			}
+		}
+	}
+}
+
+// RAS logo sizing
+.h-sh,
+.h-dh.h-cl,
+.h-stk:not( .h-sub ) {
+	&.has-ras-link .site-header .custom-logo {
+		@include utilities.media( tablet ) {
+			height: auto;
+			max-width: 175px;
+		}
+
+		@include utilities.media( desktop ) {
+			max-width: 225px;
+		}
+
+		@include utilities.media( wide ) {
+			max-width: 350px;
 		}
 	}
 }
