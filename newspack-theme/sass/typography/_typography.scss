@@ -1,14 +1,13 @@
 @use 'sass:meta';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/fonts';
 @use '../variables-site/colors';
 
 html {
-	font-size: fonts.$font__size_base_sm;
+	font-size: var( --newspack-theme-font-size-base-sm );
 
 	@include utilities.media( mobile ) {
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 	}
 }
 
@@ -16,10 +15,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: colors.$color__text-main;
-	font-family: fonts.$font__body;
+	font-family: var( --newspack-theme-font-body );
 	font-weight: 400;
 	font-size: 1em;
-	line-height: fonts.$font__line-height-body;
+	line-height: var( --newspack-theme-font-line-height-body );
 	margin: 0;
 	text-rendering: optimizelegibility;
 }
@@ -30,14 +29,14 @@ select,
 optgroup,
 textarea {
 	color: colors.$color__text-main;
-	font-family: fonts.$font__body;
+	font-family: var( --newspack-theme-font-body );
 	font-weight: 400;
-	line-height: fonts.$font__line-height-body;
+	line-height: var( --newspack-theme-font-line-height-body );
 	text-rendering: optimizelegibility;
 }
 
 .use-body-font {
-	font-family: fonts.$font__body;
+	font-family: var( --newspack-theme-font-body );
 }
 
 @include meta.load-css( 'headings' );

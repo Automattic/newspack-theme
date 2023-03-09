@@ -3,7 +3,6 @@
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 /* Body */
@@ -104,7 +103,7 @@ input[type='submit'] {
 .wp-block-columns .wp-block-column > .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: fonts.$font__size-base;
+	font-size: var( --newspack-theme-font-size-base );
 	margin-bottom: structure.$size__spacing-unit;
 }
 
@@ -163,7 +162,7 @@ div.wpnbha .article-section-title,
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: fonts.$font__size_base;
+	font-size: var( --newspack-theme-font-size-base );
 	position: relative;
 
 	&::before {
@@ -202,7 +201,7 @@ div.wpnbha .article-section-title,
 .blog,
 .archive {
 	.cat-links {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 
 		&::before {
 			display: none;
@@ -299,11 +298,11 @@ div.wpnbha .article-section-title,
 /* Author Bio */
 .author-bio .accent-header {
 	color: colors.$color__text-main;
-	font-size: fonts.$font__size_base;
+	font-size: var( --newspack-theme-font-size-base );
 	margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 
 	span {
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 
 		&.author-job-title {
 			margin-left: 0.5em;
@@ -340,7 +339,7 @@ textarea {
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 }
 
@@ -364,7 +363,7 @@ textarea {
 	border: 0;
 	border-bottom: 2px solid;
 	border-top: 1px solid;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-style: normal;
 	font-weight: bold;
 	text-align: center;
@@ -388,8 +387,8 @@ textarea {
 
 	cite {
 		color: inherit;
-		font-family: fonts.$font__body;
-		font-size: fonts.$font__size-base;
+		font-family: var( --newspack-theme-font-body );
+		font-size: var( --newspack-theme-font-size-base );
 		font-weight: normal;
 	}
 
@@ -449,7 +448,7 @@ hr {
 	.widget-title,
 	.widgettitle {
 		color: colors.$color__text-main;
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 	}
 }
 
@@ -507,15 +506,15 @@ hr {
 // Sponsored Content
 .single .sponsor-label {
 	align-items: stretch;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 
 	.cat-links {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	@include utilities.media( tabletonly ) {
 		+ .cat-links {
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 		}
 	}
 }

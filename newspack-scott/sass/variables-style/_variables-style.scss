@@ -1,6 +1,3 @@
-// Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/fonts';
-
 // Use @font-face to make the theme's font files available.
 @font-face {
 	font-family: 'Fira Sans Condensed';
@@ -33,4 +30,6 @@
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
-fonts.$font__heading: 'Fira Sans Condensed', 'Helvetica', sans-serif;
+:root {
+	--newspack-theme-font-heading: 'Fira Sans Condensed', 'Helvetica', sans-serif;
+}

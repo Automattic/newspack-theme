@@ -1,5 +1,4 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 .wp-caption {
@@ -32,9 +31,9 @@ figcaption,
 .wp-caption-text,
 .amp-image-lightbox-caption,
 .swiper-pagination-simple {
-	font-size: fonts.$font__size-xs;
-	font-family: fonts.$font__heading;
-	line-height: fonts.$font__line-height-pre;
+	font-size: var( --newspack-theme-font-size-xs );
+	font-family: var( --newspack-theme-font-heading );
+	line-height: var( --newspack-theme-font-line-height-body );
 }
 
 /* Hack to address a bug that affects caption positioning in Safari only. Targets Safari 9+ only. */

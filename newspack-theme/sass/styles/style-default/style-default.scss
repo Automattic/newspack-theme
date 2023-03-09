@@ -1,7 +1,6 @@
 @use 'sass:color';
 @use '../../mixins/utilities';
 @use '../../variables-site/colors';
-@use '../../variables-site/fonts';
 @use '../../variables-site/structure';
 
 /* Headers */
@@ -16,7 +15,7 @@
 
 .accent-header,
 .article-section-title {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 }
 
 .accent-header,
@@ -34,7 +33,7 @@
 		@include utilities.button-transition;
 
 		border-radius: 5px;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: 700;
 		padding: #{structure.$size__spacing-unit * 0.5} #{structure.$size__spacing-unit * 0.75};
 	}
@@ -131,7 +130,7 @@
 }
 
 .featured-image-behind .cat-links {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	a,
 	a:hover,
 	a:visited {

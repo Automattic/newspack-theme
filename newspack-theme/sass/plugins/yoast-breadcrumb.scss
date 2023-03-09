@@ -1,5 +1,4 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 
 .site-breadcrumb {
 	color: colors.$color__text-light;
@@ -8,9 +7,9 @@
 		padding: 0.5em 0;
 
 		> span {
-			font-family: fonts.$font__heading;
-			font-size: fonts.$font__size-xxs;
-			line-height: fonts.$font__line-height-heading;
+			font-family: var( --newspack-theme-font-heading );
+			font-size: var( --newspack-theme-font-size-xxs );
+			line-height: var( --newspack-theme-font-line-height-heading );
 		}
 	}
 
