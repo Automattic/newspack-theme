@@ -125,6 +125,18 @@ body {
 			z-index: 1;
 		}
 	}
+
+	&.single-featured-image-behind:not( .newspack-front-page ) .global_below_header + .site-content {
+		margin-top: 0;
+	}
+
+	@include utilities.media( tablet ) {
+		&.single-featured-image-beside:not( .newspack-front-page )
+			.global_below_header
+			+ .site-content {
+			margin-top: 0;
+		}
+	}
 }
 
 .single-featured-image-behind .newspack_global_ad.global_below_header {
