@@ -1,3 +1,23 @@
+## [1.69.1](https://github.com/Automattic/newspack-theme/compare/v1.69.0...v1.69.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* correct wide block width ([#2047](https://github.com/Automattic/newspack-theme/issues/2047)) ([9b62c80](https://github.com/Automattic/newspack-theme/commit/9b62c80dfd5ba2578611b1e89a3b5ac49ca59b63))
+* handle header-less layout in amp-fallback script ([7d21ec5](https://github.com/Automattic/newspack-theme/commit/7d21ec5c57cb7dfb989ea535a9a090445b520315))
+* improve Top Posts styles and make images larger ([#2046](https://github.com/Automattic/newspack-theme/issues/2046)) ([182f942](https://github.com/Automattic/newspack-theme/commit/182f9420276efb6c2961c839b4a7d4919962b1e7))
+* Sacha author bio link ([d1005fb](https://github.com/Automattic/newspack-theme/commit/d1005fb7366fc9e648f39e0158007a7904075aa5))
+
+## [1.69.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.69.0...v1.69.1-alpha.1) (2023-03-03)
+
+
+### Bug Fixes
+
+* correct wide block width ([#2047](https://github.com/Automattic/newspack-theme/issues/2047)) ([9b62c80](https://github.com/Automattic/newspack-theme/commit/9b62c80dfd5ba2578611b1e89a3b5ac49ca59b63))
+* handle header-less layout in amp-fallback script ([7d21ec5](https://github.com/Automattic/newspack-theme/commit/7d21ec5c57cb7dfb989ea535a9a090445b520315))
+* improve Top Posts styles and make images larger ([#2046](https://github.com/Automattic/newspack-theme/issues/2046)) ([182f942](https://github.com/Automattic/newspack-theme/commit/182f9420276efb6c2961c839b4a7d4919962b1e7))
+* Sacha author bio link ([d1005fb](https://github.com/Automattic/newspack-theme/commit/d1005fb7366fc9e648f39e0158007a7904075aa5))
+
 # [1.69.0](https://github.com/Automattic/newspack-theme/compare/v1.68.0...v1.69.0) (2023-02-28)
 
 
