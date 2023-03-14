@@ -225,6 +225,7 @@ amp-script .cat-links {
 		display: block;
 		font-size: 0.8em;
 		@include utilities.link-transition;
+
 		margin: 0.5em 0;
 	}
 
@@ -499,7 +500,7 @@ div.sharedaddy {
 			color: colors.$color__text-light;
 			display: block;
 			font-size: fonts.$font__size-sm;
-			margin: 0.25em 0 0 0;
+			margin: 0.25em 0 0;
 			text-transform: none;
 
 			@include utilities.media( mobile ) {

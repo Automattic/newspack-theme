@@ -51,7 +51,7 @@
 
 .wpnbha.has-text-align-center {
 	.article-section-title::before,
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	&.show-image.image-aligntop:not(.show-caption, .show-category)
 		.post-has-image
 		.entry-title {
 		margin-left: auto;
@@ -70,7 +70,7 @@
 		}
 	}
 
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	&.show-image.image-aligntop:not(.show-caption, .show-category)
 		.post-has-image
 		.entry-title {
 		margin-left: 15%;
@@ -150,7 +150,7 @@ div.wpnbha .article-section-title,
 	border-bottom-color: colors.$color__text-main;
 }
 
-.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category ) .post-has-image {
+.wpnbha.show-image.image-aligntop:not(.show-caption, .show-category) .post-has-image {
 	.entry-title {
 		background-color: colors.$color__background-body;
 		margin-top: -1.5em;
@@ -166,7 +166,7 @@ div.wpnbha .article-section-title,
 }
 
 .widget
-	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	.wpnbha.show-image.image-aligntop:not(.show-caption, .show-category)
 	.post-has-image {
 	.entry-title {
 		background: transparent;
@@ -189,7 +189,7 @@ div.wpnbha .article-section-title,
 
 .wp-block-cover,
 .wp-block-group {
-	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
+	.wpnbha.show-image.image-aligntop:not(.show-caption, .show-category)
 		.post-has-image
 		.entry-title {
 		background-color: transparent;
@@ -303,8 +303,8 @@ figcaption,
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not(.alignleft, .alignright),
+	&.has-text-align-left:not(.alignleft, .alignright) {
 		@include utilities.media( tablet ) {
 			p {
 				font-size: fonts.$font__size-xl;
@@ -332,7 +332,7 @@ figcaption,
 		text-transform: uppercase;
 	}
 
-	&:not( .is-style-solid-color ):not( .has-background ) {
+	&:not(.is-style-solid-color, .has-background) {
 		blockquote {
 			padding-left: #{2 * structure.$size__spacing-unit};
 		}
@@ -368,7 +368,7 @@ figcaption,
 			}
 		}
 
-		&:not( .is-style-solid-color ):not( .has-background ) {
+		&:not(.is-style-solid-color, .has-background) {
 			padding-top: structure.$size__spacing-unit;
 
 			blockquote {
@@ -381,7 +381,7 @@ figcaption,
 		}
 	}
 
-	&.alignfull:not( .is-style-solid-color ):not( .has-background )::before {
+	&.alignfull:not(.is-style-solid-color, .has-background)::before {
 		left: 8px;
 	}
 }

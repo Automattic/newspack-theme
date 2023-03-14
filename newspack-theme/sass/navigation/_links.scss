@@ -3,6 +3,7 @@
 
 a {
 	@include utilities.link-transition;
+
 	color: colors.$color__text-light;
 
 	&:visited {

@@ -58,7 +58,7 @@
 body:not( .h-stk ) .site-content,
 body:not( .h-stk ).hide-page-title .site-content,
 body:not( .h-stk ).newspack-front-page.hide-homepage-title .site-content,
-body:not( .h-stk ):not( .newspack-front-page )
+body:not(.h-stk, .newspack-front-page)
 	.newspack_global_ad.global_below_header
 	+ .site-content,
 body:not( .h-stk ) .site-breadcrumb {
@@ -404,8 +404,8 @@ blockquote {
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not(.alignleft, .alignright),
+	&.has-text-align-left:not(.alignleft, .alignright) {
 		@include utilities.media( tablet ) {
 			p {
 				font-size: fonts.$font__size-xl;
@@ -476,7 +476,7 @@ blockquote {
 		border-top: 2px solid currentcolor;
 	}
 
-	&:not( .is-style-dots ):not( .is-style-wide ) {
+	&:not(.is-style-dots, .is-style-wide) {
 		border-top: 5px solid colors.$color__text-main;
 		height: 0;
 

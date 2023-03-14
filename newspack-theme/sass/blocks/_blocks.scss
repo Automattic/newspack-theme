@@ -21,20 +21,20 @@
 	// making a slighly different selector necessary.
 	&.wp-block-image .alignleft,
 	&.alignleft {
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		float: left;
 		margin-left: 0;
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		margin-right: structure.$size__spacing-unit;
 		max-width: 50%;
 	}
 
 	&.wp-block-image .alignright,
 	&.alignright {
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		float: right;
 		margin-right: 0;
-		/*rtl:ignore*/
+		/* rtl:ignore */
 		margin-left: structure.$size__spacing-unit;
 		max-width: 50%;
 	}
@@ -86,7 +86,14 @@
 					width: auto;
 				}
 			}
+
+			.alignfull,
+			.alignwide {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
+
 		.alignfull {
 			margin-left: calc( 50% - 50vw );
 			margin-right: calc( 50% - 50vw );
@@ -95,13 +102,25 @@
 			&.wp-block-cover {
 				width: 100vw;
 			}
+
+			.alignwide {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: calc( 50vw + 600px );
+			}
+
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 
 		.wp-block-cover,
 		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > *:not( .alignfull ):not( .alignwide ) {
+				> div > *:not( .alignfull, .alignwide ) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 1200px;
@@ -405,8 +424,8 @@ p.has-background {
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not( .alignleft, .alignright ),
+	&.has-text-align-left:not( .alignleft, .alignright ) {
 		p {
 			font-size: fonts.$font__size-lg;
 			@include utilities.media( tablet ) {
@@ -622,6 +641,7 @@ p.has-background {
 	color: #fff;
 
 	@include utilities.button-transition;
+
 	border: none;
 	border-radius: 5px;
 	font-family: fonts.$font__heading;
@@ -653,6 +673,7 @@ p.has-background {
 .is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline {
 	@include utilities.button-all-transition;
+
 	border-width: 2px;
 	border-style: solid;
 	border-color: currentcolor;
@@ -969,6 +990,7 @@ hr {
 	.wp-block-file__button {
 		display: table;
 		@include utilities.button-transition;
+
 		border: none;
 		border-radius: 5px;
 		background: colors.$color__background-button;
@@ -1401,17 +1423,17 @@ $colors: (
 		&.alignleft,
 		&.wp-block-image .alignleft {
 			@include utilities.media( mobile ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-right: calc( 2 * #{structure.$size__spacing-unit} );
 			}
 
 			@include utilities.media( tablet ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-left: #{-2 * structure.$size__spacing-unit};
 			}
 
 			@include utilities.media( desktop ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-left: #{-6 * structure.$size__spacing-unit};
 			}
 		}
@@ -1419,17 +1441,17 @@ $colors: (
 		&.alignright,
 		&.wp-block-image .alignright {
 			@include utilities.media( mobile ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-left: calc( 2 * #{structure.$size__spacing-unit} );
 			}
 
 			@include utilities.media( tablet ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-right: #{-2 * structure.$size__spacing-unit};
 			}
 
 			@include utilities.media( desktop ) {
-				/*rtl:ignore*/
+				/* rtl:ignore */
 				margin-right: #{-6 * structure.$size__spacing-unit};
 			}
 		}
@@ -1477,16 +1499,17 @@ $colors: (
 		> .wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > .alignwide {
-					margin-left: auto;
-					margin-right: auto;
-					max-width: 1200px;
-				}
-				> div > *:not( .alignfull ):not( .alignwide ) {
+				> div > *:not( .alignfull, .alignwide ) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 780px;
 				}
+			}
+			&.alignfull > div > .alignwide {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				width: calc( 50vw + 390px );
 			}
 		}
 	}
@@ -1518,24 +1541,9 @@ $colors: (
 	// Make sure content in a full-width group block doesn't touch edges
 	.entry .entry-content > .wp-block-group,
 	[id='pico'] > .wp-block-group {
-		&.alignfull:not( .has-background ):not( .is-style-border ) {
+		&.alignfull:not( .has-background, .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
-		}
-	}
-
-	// keep nested align-full elements from overflowing the container.
-	.entry .entry-content {
-		.wp-block-column,
-		.wp-block-group,
-		.wp-block-cover {
-			.alignwide,
-			.alignfull {
-				margin-left: 0;
-				margin-right: 0;
-				padding-left: 0;
-				padding-right: 0;
-			}
 		}
 	}
 
@@ -1568,7 +1576,7 @@ $colors: (
 	}
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 ## Patterns
---------------------------------------------------------------*/
+-------------------------------------------------------------- */
 @include meta.load-css( 'patterns' );
