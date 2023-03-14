@@ -42,7 +42,7 @@ Newspack Katharine Editor Styles
 	font-weight: bold;
 }
 
-.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption, .show-category)
+.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
 	.post-has-image {
 	.entry-title {
 		background-color: colors.$color__background-body;
@@ -69,7 +69,7 @@ Newspack Katharine Editor Styles
 
 .wpnbha.has-text-align-center {
 	.article-section-title::before,
-	&.show-image.image-aligntop:not(.show-caption, .show-category)
+	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
 		.post-has-image
 		.entry-title {
 		margin-left: auto;
@@ -88,7 +88,7 @@ Newspack Katharine Editor Styles
 			top: 0;
 		}
 	}
-	&.show-image.image-aligntop:not(.show-caption, .show-category)
+	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
 		.post-has-image
 		.entry-title {
 		margin-left: 15%;
@@ -97,7 +97,7 @@ Newspack Katharine Editor Styles
 
 .wp-block-cover,
 .wp-block-group {
-	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption, .show-category)
+	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
 		.post-has-image
 		.entry-title {
 		background-color: transparent;
@@ -115,7 +115,7 @@ figure.wp-block-pullquote {
 	font-weight: bold;
 	position: relative;
 
-	&:not(.is-style-solid-color, .has-background) {
+	&:not( .is-style-solid-color ):not( .has-background ) {
 		blockquote {
 			padding-left: #{2 * structure.$size__spacing-unit};
 		}
