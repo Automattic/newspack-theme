@@ -126,14 +126,12 @@ body {
 		}
 	}
 
-	&.single-featured-image-behind:not(.newspack-front-page, .style-pack-style-2)
-		.global_below_header
-		+ .site-content {
+	&.single-featured-image-behind:not( .newspack-front-page ) .global_below_header + .site-content {
 		margin-top: 0;
 	}
 
 	@include utilities.media( tablet ) {
-		&.single-featured-image-beside:not(.newspack-front-page, .style-pack-style-2)
+		&.single-featured-image-beside:not( .newspack-front-page )
 			.global_below_header
 			+ .site-content {
 			margin-top: 0;

@@ -120,7 +120,7 @@
 		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > *:not( .alignfull, .alignwide ) {
+				> div > *:not( .alignfull ):not( .alignwide ) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 1200px;
@@ -424,8 +424,8 @@ p.has-background {
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft, .alignright ),
-	&.has-text-align-left:not( .alignleft, .alignright ) {
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
 		p {
 			font-size: fonts.$font__size-lg;
 			@include utilities.media( tablet ) {
@@ -1499,7 +1499,7 @@ $colors: (
 		> .wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > *:not( .alignfull, .alignwide ) {
+				> div > *:not( .alignfull ):not( .alignwide ) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 780px;
@@ -1541,7 +1541,7 @@ $colors: (
 	// Make sure content in a full-width group block doesn't touch edges
 	.entry .entry-content > .wp-block-group,
 	[id='pico'] > .wp-block-group {
-		&.alignfull:not( .has-background, .is-style-border ) {
+		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
 		}
