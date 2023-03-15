@@ -481,7 +481,7 @@ function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $sc
 							return false;
 						}
 
-						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'inherit' === $sponsor['sponsor_underwriter_placement'] : true;
+						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'top' === $sponsor['sponsor_underwriter_placement'] || 'inherit' === $sponsor['sponsor_underwriter_placement'] : true;
 					}
 				);
 				$underwriters_bottom = array_filter(
