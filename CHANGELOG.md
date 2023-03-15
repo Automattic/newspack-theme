@@ -1,3 +1,10 @@
+## [1.69.2](https://github.com/Automattic/newspack-theme/compare/v1.69.1...v1.69.2) (2023-03-15)
+
+
+### Bug Fixes
+
+* css :not() rules with multi-selectors broken in AMP ([#2059](https://github.com/Automattic/newspack-theme/issues/2059)) ([de16b23](https://github.com/Automattic/newspack-theme/commit/de16b232a6163952427c7fb835d7784d3ef2d845))
+
 ## [1.69.1](https://github.com/Automattic/newspack-theme/compare/v1.69.0...v1.69.1) (2023-03-14)
 
 

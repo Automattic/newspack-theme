@@ -140,8 +140,8 @@ div.wpnbha .article-section-title {
 		}
 	}
 
-	&.has-text-align-right:not(.alignleft, .alignright),
-	&.has-text-align-left:not(.alignleft, .alignright) {
+	&.has-text-align-right:not( .alignleft ):not( .alignright ),
+	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
 		@include utilities.media( tablet ) {
 			p {
 				font-size: fonts.$font__size-xl;
