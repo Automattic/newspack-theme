@@ -323,6 +323,11 @@ h1.wp-block-post-title {
 	}
 
 	.wp-block-column {
+		&,
+		.wp-block {
+			max-width: 100%;
+		}
+
 		> * {
 			margin-bottom: 0;
 			margin-top: 0;

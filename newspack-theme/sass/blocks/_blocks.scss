@@ -114,6 +114,10 @@
 				margin-left: 0;
 				margin-right: 0;
 			}
+
+			&.wp-block-columns .alignwide {
+				width: 100%;
+			}
 		}
 
 		.wp-block-cover,
@@ -1461,11 +1465,6 @@ $colors: (
 	.wp-block-image {
 		&.alignfull img {
 			width: 100vw;
-			max-width: 100vw;
-		}
-
-		&.alignwide {
-			max-width: 100vw;
 		}
 	}
 
@@ -1495,8 +1494,8 @@ $colors: (
 	//! Group & Cover Block
 	.entry .entry-content,
 	[id='pico'] {
-		> .wp-block-cover,
-		> .wp-block-group {
+		.wp-block-cover,
+		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
 				> div > *:not( .alignfull ):not( .alignwide ) {
@@ -1523,8 +1522,8 @@ $colors: (
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
 	.wp-block-pullquote,
 	.wp-block-table,
-	.wp-block-columns:not( .is-not-stacked-on-mobile ),
-	.wpnbha {
+	.entry-content > .wp-block-columns:not( .is-not-stacked-on-mobile ),
+	.entry-content > .wpnbha {
 		&.alignfull {
 			padding-left: structure.$size__spacing-unit;
 			padding-right: structure.$size__spacing-unit;
@@ -1532,7 +1531,7 @@ $colors: (
 	}
 
 	@include utilities.media( mobile ) {
-		.wp-block-columns.is-not-stacked-on-mobile.alignfull {
+		.entry-content > .wp-block-columns.is-not-stacked-on-mobile.alignfull {
 			padding-left: structure.$size__spacing-unit;
 			padding-right: structure.$size__spacing-unit;
 		}
@@ -1544,6 +1543,27 @@ $colors: (
 		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
+		}
+	}
+
+	// keep nested align-full elements from overflowing the container.
+	.entry .entry-content {
+		.wp-block-columns,
+		.wp-block-group,
+		.wp-block-cover {
+			.alignwide,
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		.wp-block-group,
+		.wp-block-cover {
+			&.alignfull .alignwide {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 
