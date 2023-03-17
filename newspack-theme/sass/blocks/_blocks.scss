@@ -131,6 +131,18 @@
 				}
 			}
 		}
+
+		.wp-block-column {
+			.wp-block-cover,
+			.wp-block-group {
+				&.alignfull,
+				&.alignwide {
+					> div > *:not( .alignfull ):not( .alignwide ) {
+						max-width: 100%;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1509,6 +1521,18 @@ $colors: (
 				margin-right: auto;
 				max-width: 100%;
 				width: calc( 50vw + 390px );
+			}
+		}
+
+		.wp-block-column {
+			.wp-block-cover,
+			.wp-block-group {
+				&.alignfull,
+				&.alignwide {
+					> div > *:not( .alignfull ):not( .alignwide ) {
+						max-width: 100%;
+					}
+				}
 			}
 		}
 	}
