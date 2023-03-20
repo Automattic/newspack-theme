@@ -1136,6 +1136,12 @@ hr {
 	margin-top: -32px;
 }
 
+.wp-block-cover {
+	.wp-block-group.has-background + .wp-block-group.has-background {
+		margin-top: unset;
+	}
+}
+
 // Remove space between full-width group block and header on homepage.
 .newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child,
 .newspack-front-page.hide-homepage-title [id='pico'] > .wp-block-group.alignfull:first-child {
