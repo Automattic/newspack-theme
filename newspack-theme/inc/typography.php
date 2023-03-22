@@ -19,13 +19,13 @@ function newspack_custom_typography_css() {
 	if ( get_theme_mod( 'font_header', '' ) ) {
 		$css_blocks .= '
 			:root {
-					--newspack-theme-font-heading: ' . wp_kses( $font_header, null ) . ';
+				--newspack-theme-font-heading: ' . wp_kses( $font_header, null ) . ';
 			}
 		';
 
 		$editor_css_blocks .= '
 			:root .editor-styles-wrapper {
-					--newspack-theme-font-heading: ' . wp_kses( $font_header, null ) . ';
+				--newspack-theme-font-heading: ' . wp_kses( $font_header, null ) . ';
 			}
 		';
 	}

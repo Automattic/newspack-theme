@@ -1,3 +1,6 @@
+// Import the default variable values.
+@use '../../../newspack-theme/sass/variables-site/fonts';
+
 // Use @font-face to make the theme's font files available.
 @font-face {
 	font-family: 'Fira Sans Condensed';

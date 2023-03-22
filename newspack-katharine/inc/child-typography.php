@@ -14,20 +14,6 @@ function newspack_katharine_custom_typography_css() {
 	$css_blocks        = '';
 	$editor_css_blocks = '';
 
-	if ( get_theme_mod( 'font_header', '' ) ) {
-		$css_blocks .= '
-			.has-drop-cap:not(:focus)::first-letter,
-			.taxonomy-description,
-			.page-title {
-				font-family: ' . wp_kses( $font_header, null ) . ';
-			}';
-
-		$editor_css_blocks .= '
-			.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
-				font-family: ' . wp_kses( $font_header, null ) . ';
-			}
-			';
-	}
 	if ( true === get_theme_mod( 'accent_allcaps', true ) ) {
 		$css_blocks        .= '
 			.accent-header,
