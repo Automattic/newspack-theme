@@ -64,7 +64,7 @@ body.h-db.h-dh .site-header {
 
 		@include utilities.media( tablet ) {
 			&:nth-child( n + 2 ) {
-				margin: 0 0 0 #{structure.$size__spacing-unit * 0.5};
+				margin: 0 0 0 #{structure.$size__spacing-unit * 0.35};
 			}
 		}
 	}

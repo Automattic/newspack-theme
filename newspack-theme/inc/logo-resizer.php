@@ -67,16 +67,6 @@ function newspack_customize_logo_resize( $html ) {
 
 		$logo_max_width = ( $logo['width'] > 600 ) ? 600 : $logo['width'];
 
-		// Update the max-width to match the RAS max-width in the CSS - this improves the Customizer preview accuracy.
-		if ( class_exists( '\Newspack\Reader_Activation' ) ) {
-			$header_simplified     = get_theme_mod( 'header_simplified', false );
-			$header_center_logo    = get_theme_mod( 'header_center_logo', false );
-			$ras_settings = \Newspack\Reader_Activation::get_settings();
-			if ( $ras_settings['enabled'] && $ras_settings['enabled_account_link'] && ( $header_simplified || $header_center_logo ) ) {
-				$logo_max_width = ( $logo['width'] > 350 ) ? 350 : $logo['width'];
-			}
-		}
-
 		// Check for max height and width, default to image sizes if none set in theme
 		$max['height'] = isset( $sizes[0]['height'] ) ? $sizes[0]['height'] : $logo['height'];
 		$max['width']  = isset( $sizes[0]['width'] ) ? $sizes[0]['width'] : $logo_max_width;
@@ -113,9 +103,12 @@ function newspack_customize_logo_resize( $html ) {
 		$sticky_max_width  = 400;
 		$sticky_max_height = 90;
 
+		$ras_max_width  = 300;
+
 		$mobile  = newspack_logo_small_sizes( $img['width'], $img['height'], $mobile_max_width, $mobile_max_height );
 		$subhead = newspack_logo_small_sizes( $img['width'], $img['height'], $subhead_max_width, $subhead_max_height );
 		$sticky  = newspack_logo_small_sizes( $img['width'], $img['height'], $sticky_max_width, $sticky_max_height );
+		$ras     = newspack_logo_small_sizes( $img['width'], $img['height'], $ras_max_width, $max['height'] );
 
 		// add the CSS
 		$css = '
@@ -150,6 +143,13 @@ function newspack_customize_logo_resize( $html ) {
 			.h-stk.h-cl:not(.h-sub):not(.has-ras-link) .site-header .custom-logo {
 				max-width: 100%;
 				width: auto;
+			}
+		}
+
+		@media (max-width: 1310px) and (min-width: 960px) {
+			.h-sh.has-ras-link .site-header .custom-logo,
+			.h-dh.h-cl.has-ras-link .site-header .custom-logo {
+				max-width: ' . $ras['width'] . 'px;
 			}
 		}
 

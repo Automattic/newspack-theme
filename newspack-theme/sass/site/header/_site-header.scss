@@ -33,8 +33,10 @@
 		max-width: 140px;
 
 		.custom-logo {
+			height: auto;
 			max-width: 100%;
 			object-position: left center;
+			width: 100%;
 		}
 	}
 }
@@ -52,6 +54,14 @@
 .site-identity {
 	align-items: baseline;
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.has-ras-link .site-identity {
+	@media ( max-width: 1260px ) {
+		display: block;
+	}
 }
 
 // Site title
@@ -74,6 +84,14 @@
 	}
 }
 
+.has-ras-link .site-title {
+	display: none;
+
+	@include utilities.media( tablet ) {
+		display: block;
+	}
+}
+
 // Site description
 .site-description {
 	color: colors.$color__text-light;
@@ -82,7 +100,6 @@
 	font-size: fonts.$font__size-sm;
 	font-style: italic;
 	margin: 0;
-	padding: 0 structure.$size__spacing-unit;
 
 	@include utilities.media( mobile ) {
 		display: block;
@@ -405,6 +422,12 @@
 		flex-basis: auto;
 	}
 
+	&.has-ras-link {
+		.site-branding {
+			flex: 0.5;
+		}
+	}
+
 	.site-description {
 		margin: 0;
 	}
@@ -714,25 +737,6 @@
 					width: 1200px;
 				}
 			}
-		}
-	}
-}
-
-// RAS logo sizing
-.h-sh,
-.h-dh.h-cl {
-	&.has-ras-link .site-header .custom-logo {
-		@include utilities.media( tablet ) {
-			height: auto;
-			max-width: 175px;
-		}
-
-		@include utilities.media( desktop ) {
-			max-width: 225px;
-		}
-
-		@include utilities.media( wide ) {
-			max-width: 350px;
 		}
 	}
 }
