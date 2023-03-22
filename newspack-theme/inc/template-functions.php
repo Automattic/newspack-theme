@@ -165,9 +165,9 @@ function newspack_body_classes( $classes ) {
 	}
 
 	// Adds class if the RAS account link is enabled.
-	if ( class_exists( '\Newspack\Reader_Activation' ) ) {
-		$ras_settings = \Newspack\Reader_Activation::get_settings();
-		if ( $ras_settings['enabled'] && $ras_settings['enabled_account_link'] ) {
+	if ( class_exists( '\Newspack\Reader_Activation' ) && \Newspack\Reader_Activation::is_enabled() ) {
+		$account_link_enabled = \Newspack\Reader_Activation::get_setting( 'enabled_account_link' );
+		if ( $account_link_enabled ) {
 			$classes[] = 'has-ras-link';
 		}
 	}
