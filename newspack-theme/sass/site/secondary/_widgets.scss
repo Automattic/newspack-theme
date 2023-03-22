@@ -152,7 +152,7 @@
 .widget_top-posts {
 	p {
 		font-style: italic;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	ul,
@@ -175,7 +175,7 @@
 		a {
 			color: colors.$color__text-main;
 			display: block;
-			font-family: fonts.$font__heading;
+			font-family: var( --newspack-theme-font-heading );
 			font-weight: bold;
 			line-height: 1.2;
 			text-decoration: none;
