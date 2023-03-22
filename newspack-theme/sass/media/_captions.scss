@@ -56,6 +56,15 @@ figcaption,
 			width: min( 90vw, 780px );
 		}
 	}
+
+	.wp-block-column {
+		figcaption,
+		.alignfull > figcaption,
+		.alignwide > figcaption {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
 }
 
 .newspack-front-page,
@@ -72,6 +81,15 @@ figcaption,
 	.alignwide {
 		> figcaption {
 			width: min( 90vw, 1200px );
+		}
+	}
+
+	.entry-content .wp-block-column {
+		figcaption,
+		.alignfull > figcaption,
+		.alignwide > figcaption {
+			max-width: 100%;
+			width: 100%;
 		}
 	}
 }

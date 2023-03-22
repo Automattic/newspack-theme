@@ -141,6 +141,12 @@ figcaption,
 	padding-right: 0;
 }
 
+.wp-block-column {
+	figcaption {
+		max-width: 100%;
+	}
+}
+
 .has-text-color {
 	figcaption,
 	.wp-caption-text {
