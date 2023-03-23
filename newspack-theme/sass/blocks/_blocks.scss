@@ -846,11 +846,7 @@ p.has-background {
 	}
 
 	cite {
-		/*
-		 * This requires a rem-based font size calculation instead of our normal em-based one,
-		 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
-		 */
-		font-size: calc( 1rem * #{var( --newspack-theme-font-size-sm )} );
+		font-size: 0.7rem;
 	}
 
 	&.is-large,
@@ -867,11 +863,7 @@ p.has-background {
 
 		cite,
 		footer {
-			/*
-			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
-			 */
-			font-size: calc( 1rem * #{var( --newspack-theme-font-size-sm )} );
+			font-size: 0.7rem;
 		}
 
 		@include utilities.media( tablet ) {
