@@ -1,3 +1,11 @@
+## [1.69.3](https://github.com/Automattic/newspack-theme/compare/v1.69.2...v1.69.3) (2023-03-27)
+
+
+### Bug Fixes
+
+* hide sidebars on print ([#2053](https://github.com/Automattic/newspack-theme/issues/2053)) ([879afdf](https://github.com/Automattic/newspack-theme/commit/879afdfbc86c4a679b76f5bc8922d7c89d6156b7))
+* update newspack-scripts to bypass one stylelint rule ([98c2f3b](https://github.com/Automattic/newspack-theme/commit/98c2f3bbdf3c05039d9b173962c968887d9104d5))
+
 ## [1.69.3-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.69.2...v1.69.3-alpha.1) (2023-03-16)
 
 
