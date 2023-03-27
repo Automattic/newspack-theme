@@ -50,7 +50,7 @@
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^4.0.0",
     "sass": "^1.60.0",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^21.0.0",
     "semantic-release-version-bump": "^1.4.1",
     "stylelint": "^15.2.0"
   }
