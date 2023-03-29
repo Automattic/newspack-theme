@@ -1168,7 +1168,7 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Es tut uns leid. Ihre Sucher ergab keinen Treffer, Bitte versuchen Sie es "
+"Es tut uns leid. Ihre Suche ergab keinen Treffer, Bitte versuchen Sie es "
 "mit einem anderen Begriff."
 
 #: template-parts/content/content-none.php:44
