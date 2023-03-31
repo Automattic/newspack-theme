@@ -73,7 +73,7 @@ function newspack_get_native_sponsors( $sponsors = [] ) {
 	}
 
 	// Scope override: if post is set to display as underwritten, return nothing.
-	if ( 'underwritten'  === $scope_override ) {
+	if ( 'underwritten' === $scope_override ) {
 		return [];
 	}
 
@@ -106,7 +106,7 @@ function newspack_get_underwriter_sponsors( $sponsors = [] ) {
 	}
 
 	// Scope override: if post is set to display as underwritten, return all sponsors.
-	if ( 'underwritten'  === $scope_override ) {
+	if ( 'underwritten' === $scope_override ) {
 		return $sponsors;
 	}
 
@@ -221,7 +221,7 @@ if ( ! function_exists( 'newspack_sponsor_byline' ) ) :
 				}
 				?>
 			</span><!-- .byline -->
-		<?php
+			<?php
 		}
 	}
 endif;
@@ -276,7 +276,7 @@ if ( ! function_exists( 'newspack_sponsor_label' ) ) :
 					</span>
 				<?php endif; ?>
 			</span><!-- .sponsor-label -->
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -297,19 +297,19 @@ if ( ! function_exists( 'newspack_sponsor_logo_list' ) ) :
 
 		if ( ! empty( $sponsors ) ) {
 			echo '<span class="sponsor-logos">';
-				foreach ( $sponsors as $sponsor ) {
-					if ( ! empty( $sponsor['sponsor_logo'] ) ) :
-						if ( '' !== $sponsor['sponsor_url'] ) {
-							echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
-						}
-						?>
+			foreach ( $sponsors as $sponsor ) {
+				if ( ! empty( $sponsor['sponsor_logo'] ) ) :
+					if ( '' !== $sponsor['sponsor_url'] ) {
+						echo '<a href="' . esc_url( $sponsor['sponsor_url'] ) . '" target="_blank">';
+					}
+					?>
 							<img src="<?php echo esc_url( $sponsor['sponsor_logo']['src'] ); ?>" width="<?php echo esc_attr( $sponsor['sponsor_logo']['img_width'] ); ?>" height="<?php echo esc_attr( $sponsor['sponsor_logo']['img_height'] ); ?>">
 						<?php if ( '' !== $sponsor['sponsor_url'] ) : ?>
 							</a>
 						<?php endif; ?>
 					<?php
 					endif;
-				}
+			}
 			echo '</span>';
 		}
 	}
@@ -337,7 +337,7 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 				ob_start();
 				if ( ! empty( $sponsors ) ) {
 					foreach ( $sponsors as $sponsor ) {
-					?>
+						?>
 
 						<div class="author-bio sponsor-bio">
 
@@ -387,7 +387,7 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 
 							</div><!-- .author-bio-text -->
 						</div><!-- .author-bio -->
-					<?php
+						<?php
 					}
 				}
 
@@ -447,7 +447,7 @@ function newspack_sponsor_archive_description( $sponsors = null, $id = null, $sc
 					<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
 				</div><!-- .info -->
 			</div><!-- .sponsor-archive -->
-		<?php
+			<?php
 		}
 	}
 }
@@ -471,7 +471,7 @@ function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $sc
 		add_filter(
 			'the_content',
 			function( $content ) use ( $sponsors, $override_style, $override_placement ) {
-				$underwriters_top = array_filter(
+				$underwriters_top    = array_filter(
 					$sponsors,
 					function( $sponsor ) use ( $override_placement ) {
 						if ( 'top' === $override_placement ) {
@@ -481,7 +481,7 @@ function newspack_sponsored_underwriters_info( $sponsors = null, $id = null, $sc
 							return false;
 						}
 
-						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'top' === $sponsor['sponsor_underwriter_placement'] : true;
+						return isset( $sponsor['sponsor_underwriter_placement'] ) ? 'top' === $sponsor['sponsor_underwriter_placement'] || 'inherit' === $sponsor['sponsor_underwriter_placement'] : true;
 					}
 				);
 				$underwriters_bottom = array_filter(
@@ -518,7 +518,8 @@ function newspack_sponsors_get_underwriter_content( $sponsor, $style = 'standard
 	if (
 		( 'simple' === $style ) ||
 		( 'standard' !== $style && isset( $sponsor['sponsor_underwriter_style'] ) && 'simple' === $sponsor['sponsor_underwriter_style'] )
-	) : ?>
+	) :
+		?>
 		<div class="sponsor-uw-info__simple">
 			<?php if ( ! empty( $sponsor['sponsor_url'] ) ) : ?>
 				<a href="<?php echo esc_url( $sponsor['sponsor_url'] ); ?>" target="_blank">
@@ -547,7 +548,8 @@ function newspack_sponsors_get_underwriter_content( $sponsor, $style = 'standard
 				<?php echo wp_kses_post( $sponsor['sponsor_blurb'] ); ?>
 			</div>
 		</div>
-	<?php endif;
+		<?php
+	endif;
 
 	return ob_get_clean();
 }

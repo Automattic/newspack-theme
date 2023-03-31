@@ -31,6 +31,12 @@
 	}
 }
 
+/** === One-Column Template === */
+
+body.newspack-single-column-template .wp-block-column.wp-block {
+	max-width: 100%;
+}
+
 /** === Wide Templates === */
 
 body.newspack-static-front-page,
@@ -58,6 +64,13 @@ body.newspack-single-wide-template {
 	.swiper-pagination-simple {
 		max-width: 1230px;
 	}
+
+	.wp-block-column {
+		&,
+		.wp-block {
+			max-width: 100%;
+		}
+	}
 }
 
 /** === Wide Blocks === */
@@ -68,10 +81,6 @@ body.newspack-single-column-template {
 	.wp-block[data-align='full'] {
 		max-width: 100vw;
 		width: auto;
-
-		figcaption {
-			padding: 0 structure.$size__spacing-unit;
-		}
 
 		.wp-block-group:not( .has-background ):not( .is-style-border ) {
 			padding-left: #{0.5 * structure.$size__spacing-unit};
