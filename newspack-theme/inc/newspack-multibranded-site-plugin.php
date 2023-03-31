@@ -37,7 +37,7 @@ add_filter(
 add_filter(
 	'theme_mod_ads_color',
 	function( $value ) {
-		if ( ! class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
+		if ( ( defined( 'WP_CLI' ) && WP_CLI ) || is_admin() || ! class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
 			return $value;
 		}
 		if ( Newspack_Multibranded_Site\Customizations\Theme_Colors::current_brand_has_custom_colors( [ 'ads_color_hex' ] ) ) {
@@ -53,7 +53,7 @@ add_filter(
 add_filter(
 	'theme_mod_theme_colors',
 	function( $value ) {
-		if ( ! class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
+		if ( ( defined( 'WP_CLI' ) && WP_CLI ) || is_admin() || ! class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
 			return $value;
 		}
 		if ( Newspack_Multibranded_Site\Customizations\Theme_Colors::current_brand_has_custom_colors( [ 'primary_color_hex', 'secondary_color_hex' ] ) ) {
