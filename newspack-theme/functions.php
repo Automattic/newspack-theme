@@ -1348,3 +1348,10 @@ require get_template_directory() . '/inc/web-stories.php';
 if ( class_exists( 'Tribe__Events__Main' ) ) {
 	require get_template_directory() . '/inc/the-events-calendar.php';
 }
+
+/**
+ * Multi-branded plugin support
+ */
+if ( class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
+	require get_template_directory() . '/inc/newspack-multibranded-site-plugin.php';
+}
