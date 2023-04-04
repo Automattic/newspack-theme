@@ -33,4 +33,6 @@
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
-fonts.$font__heading: 'Fira Sans Condensed', 'Helvetica', sans-serif;
+:root {
+	--newspack-theme-font-heading: 'Fira Sans Condensed', 'Helvetica', sans-serif;
+}

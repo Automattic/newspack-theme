@@ -32,6 +32,8 @@
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
-fonts.$font__heading: 'Montserrat', 'Helvetica', sans-serif;
-fonts.$font__body: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-	'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+:root {
+	--newspack-theme-font-heading: 'Montserrat', 'Helvetica', sans-serif;
+	--newspack-theme-font-body: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}

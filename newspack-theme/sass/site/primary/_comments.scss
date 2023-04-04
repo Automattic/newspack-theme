@@ -2,7 +2,6 @@
 @use '../../mixins/mixins-master';
 @use '../../mixins/utilities';
 @use '../../variables-site/colors';
-@use '../../variables-site/fonts';
 @use '../../variables-site/structure';
 
 .comment-content a {
@@ -80,7 +79,7 @@
 	> small {
 		bottom: 1em;
 		display: block;
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 		position: absolute;
 		right: 0;
 		white-space: nowrap;
@@ -118,7 +117,7 @@
 }
 
 .comment-policy {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	margin: #{0.5 * structure.$size__spacing-unit} 0 structure.$size__spacing-unit;
 
 	a {
@@ -143,8 +142,8 @@
 	.trackback {
 		.comment-body {
 			color: colors.$color__text-light;
-			font-family: fonts.$font__heading;
-			font-size: fonts.$font__size-xs;
+			font-family: var( --newspack-theme-font-heading );
+			font-size: var( --newspack-theme-font-size-xs );
 			font-weight: 500;
 			margin-top: structure.$size__spacing-unit;
 			margin-bottom: structure.$size__spacing-unit;
@@ -158,14 +157,14 @@
 
 			.comment-edit-link {
 				color: colors.$color__text-light;
-				font-family: fonts.$font__heading;
+				font-family: var( --newspack-theme-font-heading );
 				font-weight: 500;
 			}
 		}
 	}
 
 	#respond .comment-reply-title {
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 	}
 }
 
@@ -328,7 +327,7 @@
 }
 
 .must-log-in {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	font-style: italic;
 }
 
@@ -380,8 +379,8 @@
 .comment-form {
 	.comment-notes,
 	label {
-		font-family: fonts.$font__heading;
-		font-size: fonts.$font__size-xs;
+		font-family: var( --newspack-theme-font-heading );
+		font-size: var( --newspack-theme-font-size-xs );
 		color: colors.$color__text-light;
 	}
 
@@ -429,7 +428,7 @@
 	border-top: 1px solid colors.$color__border;
 	color: colors.$color__text-main;
 	display: flex;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	justify-content: center;
 	margin-top: 0;
 	position: relative;

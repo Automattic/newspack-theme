@@ -33,5 +33,7 @@
 }
 
 // Now overlay our style-specific variable values, so we're only overriding specific variables.
-fonts.$font__heading: 'Barlow', 'Helvetica', sans-serif;
-fonts.$font__body: 'Barlow', 'Helvetica', sans-serif;
+:root {
+	--newspack-theme-font-heading: 'Barlow', 'Helvetica', sans-serif;
+	--newspack-theme-font-body: 'Barlow', 'Helvetica', sans-serif;
+}

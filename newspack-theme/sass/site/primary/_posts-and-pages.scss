@@ -1,6 +1,5 @@
 @use '../../mixins/utilities';
 @use '../../variables-site/colors';
-@use '../../variables-site/fonts';
 @use '../../variables-site/structure';
 
 .sticky {
@@ -34,11 +33,11 @@
 }
 
 .entry-title {
-	font-size: fonts.$font__size-xxl;
+	font-size: var( --newspack-theme-font-size-xxl );
 	margin: 0;
 
 	@include utilities.media( desktop ) {
-		font-size: fonts.$font__size-xxxl;
+		font-size: var( --newspack-theme-font-size-xxxl );
 	}
 
 	a {
@@ -83,11 +82,11 @@
 
 body.page {
 	.entry-title {
-		font-size: fonts.$font__size-xl;
+		font-size: var( --newspack-theme-font-size-xl );
 		margin: 0;
 
 		@include utilities.media( desktop ) {
-			font-size: fonts.$font__size-xxl;
+			font-size: var( --newspack-theme-font-size-xxl );
 		}
 	}
 }
@@ -96,7 +95,7 @@ body.page {
 .cat-links,
 amp-script .cat-links {
 	display: block;
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 	margin: 0 0 #{0.75 * structure.$size__spacing-unit};
 }
 /* stylelint-enable */
@@ -108,12 +107,12 @@ amp-script .cat-links {
 
 	span:first-child {
 		font-weight: bold;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		margin-right: structure.$size__spacing-unit;
 	}
 
 	a {
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 	}
 }
 
@@ -180,7 +179,7 @@ amp-script .cat-links {
 	}
 
 	.edit-link {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 
 		svg {
 			margin: 0 #{0.25 * structure.$size__spacing-unit} 0 0;
@@ -296,7 +295,7 @@ amp-script .cat-links {
 	}
 
 	.entry-title {
-		font-size: fonts.$font__size-xl;
+		font-size: var( --newspack-theme-font-size-xl );
 		margin: 0 0 0.5em;
 
 		&--with-subtitle {
@@ -304,15 +303,15 @@ amp-script .cat-links {
 		}
 
 		@include utilities.media( mobile ) {
-			font-size: fonts.$font__size-xxl;
+			font-size: var( --newspack-theme-font-size-xxl );
 		}
 
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xxxl;
+			font-size: var( --newspack-theme-font-size-xxxl );
 		}
 
 		@include utilities.media( desktop ) {
-			font-size: fonts.$font__size-xxxxl;
+			font-size: var( --newspack-theme-font-size-xxxxl );
 		}
 	}
 
@@ -499,7 +498,7 @@ div.sharedaddy {
 		span {
 			color: colors.$color__text-light;
 			display: block;
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 			margin: 0.25em 0 0;
 			text-transform: none;
 
@@ -517,7 +516,7 @@ div.sharedaddy {
 
 	.author-link {
 		color: colors.$color__primary;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: bold;
 		text-decoration: none;
 
@@ -529,7 +528,7 @@ div.sharedaddy {
 
 .author-meta {
 	color: colors.$color__text-light;
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 
 	a {
 		color: inherit;
@@ -803,7 +802,7 @@ div.sharedaddy {
 		}
 
 		.entry-title {
-			font-size: fonts.$font__size-xxl;
+			font-size: var( --newspack-theme-font-size-xxl );
 		}
 
 		figcaption {
@@ -886,13 +885,13 @@ div.sharedaddy {
 	}
 
 	a {
-		font: bold fonts.$font__size-base fonts.$font__heading;
+		font: bold var( --newspack-theme-font-size-base ) var( --newspack-theme-font-heading );
 		text-decoration: none;
 	}
 
 	.jp-related-posts-i2__post-date,
 	.jp-related-posts-i2__post-context {
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 	}
 }
 
@@ -910,10 +909,10 @@ div.sharedaddy {
 .jp-relatedposts-i2,
 #jp-relatedposts.jp-relatedposts {
 	clear: both;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 
 	.jp-relatedposts-headline {
-		font: bold fonts.$font__size-xs fonts.$font__heading;
+		font: bold var( --newspack-theme-font-size-xs ) var( --newspack-theme-font-heading );
 		em::before {
 			display: none;
 		}
@@ -934,12 +933,12 @@ div.sharedaddy {
 		}
 
 		.jp-relatedposts-post-title {
-			line-height: fonts.$font__line-height-heading;
+			line-height: var( --newspack-theme-font-line-height-heading );
 			margin-bottom: #{0.25 * structure.$size__spacing-unit};
 
 			a {
 				color: colors.$color__text-main;
-				font-size: fonts.$font__size-base;
+				font-size: var( --newspack-theme-font-size-base );
 				font-weight: bold;
 			}
 		}
@@ -950,6 +949,6 @@ div.sharedaddy {
 		}
 	}
 	.jp-reltaedposts-post-title {
-		font-family: fonts.$font__heading;
+		font-family: var( --newspack-theme-font-heading );
 	}
 }

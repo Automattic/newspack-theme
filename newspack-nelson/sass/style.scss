@@ -4,7 +4,6 @@
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 // Header Overlap
@@ -255,7 +254,7 @@ h4,
 div.wpnbha .article-section-title,
 .cat-links {
 	color: colors.$color__text-light;
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 	font-weight: bold;
 }
 
@@ -285,10 +284,10 @@ div.wpnbha.is-grid .article-section-title {
 #secondary .widget-title,
 #secondary .widgettitle {
 	color: inherit;
-	font-size: fonts.$font__size-lg;
+	font-size: var( --newspack-theme-font-size-lg );
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size-xl;
+		font-size: var( --newspack-theme-font-size-xl );
 	}
 }
 
@@ -327,7 +326,7 @@ div.wpnbha.is-grid .article-section-title {
 	}
 
 	.entry-meta {
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 	}
 }
 
@@ -361,13 +360,13 @@ div.wpnbha.is-grid .article-section-title {
 // Blocks
 
 blockquote {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 }
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
 	color: colors.$color__secondary;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: 800;
 }
 
@@ -379,7 +378,7 @@ blockquote {
 //! Newspack Article Block
 .wpnbha {
 	article .entry-meta {
-		font-size: #{0.7 * fonts.$font__size_base};
+		font-size: calc( 0.7 * var( --newspack-theme-font-size-base ) );
 	}
 
 	&.type-scale1,
@@ -387,7 +386,7 @@ blockquote {
 	&.type-scale3,
 	&.type-scale4 {
 		article .entry-meta {
-			font-size: #{0.6 * fonts.$font__size_base};
+			font-size: calc( 0.6 * var( --newspack-theme-font-size-base ) );
 		}
 	}
 }
@@ -400,7 +399,7 @@ blockquote {
 	blockquote p,
 	&.is-style-solid-color blockquote p {
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xl;
+			font-size: var( --newspack-theme-font-size-xl );
 		}
 	}
 
@@ -408,7 +407,7 @@ blockquote {
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
 		@include utilities.media( tablet ) {
 			p {
-				font-size: fonts.$font__size-xl;
+				font-size: var( --newspack-theme-font-size-xl );
 			}
 		}
 	}
@@ -424,7 +423,7 @@ blockquote {
 			}
 
 			@include utilities.media( tablet ) {
-				font-size: fonts.$font__size-xl;
+				font-size: var( --newspack-theme-font-size-xl );
 			}
 		}
 	}
@@ -449,7 +448,7 @@ blockquote {
 		@include utilities.media( tablet ) {
 			blockquote p,
 			&.is-style-solid-color blockquote p {
-				font-size: fonts.$font__size-lg;
+				font-size: var( --newspack-theme-font-size-lg );
 			}
 		}
 
@@ -507,7 +506,7 @@ blockquote {
 
 	h2 {
 		color: inherit;
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 		font-weight: 800;
 		letter-spacing: 0;
 		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
@@ -515,7 +514,7 @@ blockquote {
 
 		span {
 			color: colors.$color__text-light;
-			font-size: fonts.$font__size-xs;
+			font-size: var( --newspack-theme-font-size-xs );
 		}
 	}
 
@@ -534,17 +533,17 @@ blockquote {
 
 	.page-title {
 		color: colors.$color__text-light;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 }
 
 .page-description {
-	font-size: fonts.$font__size-xxxxxl;
+	font-size: var( --newspack-theme-font-size-xxxxxl );
 	margin-top: structure.$size__spacing-unit;
 }
 
 .taxonomy-description {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-style: normal;
 }
 

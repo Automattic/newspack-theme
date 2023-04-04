@@ -7,12 +7,11 @@ Newspack Joseph Editor Styles
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 /* Paragraph */
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 }
 
@@ -52,7 +51,7 @@ Newspack Joseph Editor Styles
 	border: 0;
 	border-bottom: 2px solid;
 	border-top: 1px solid;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-style: normal;
 	font-weight: bold;
 	text-align: center;
@@ -75,8 +74,8 @@ Newspack Joseph Editor Styles
 	}
 
 	.wp-block-pullquote__citation {
-		font-family: fonts.$font__body;
-		font-size: fonts.$font__size-base;
+		font-family: var( --newspack-theme-font-body );
+		font-size: var( --newspack-theme-font-size-base );
 		font-weight: normal;
 	}
 }
@@ -87,7 +86,7 @@ Newspack Joseph Editor Styles
 
 	@include utilities.media( tablet ) {
 		p {
-			font-size: fonts.$font__size-md;
+			font-size: var( --newspack-theme-font-size-md );
 		}
 	}
 }
@@ -98,8 +97,8 @@ Newspack Joseph Editor Styles
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	font-family: fonts.$font__body;
-	font-size: fonts.$font__size_base;
+	font-family: var( --newspack-theme-font-body );
+	font-size: var( --newspack-theme-font-size-base );
 	margin-bottom: structure.$size__spacing-unit;
 	position: relative;
 

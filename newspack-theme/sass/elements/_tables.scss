@@ -1,12 +1,11 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 table {
 	margin: 0 0 structure.$size__spacing-unit;
 	border-collapse: collapse;
 	width: 100%;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 
 	td,
 	th {

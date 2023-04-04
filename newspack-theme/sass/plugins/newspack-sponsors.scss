@@ -2,7 +2,6 @@
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 // Category replacement - tag
@@ -64,7 +63,7 @@ amp-script .sponsor-label {
 	font-weight: normal;
 	left: -9999em;
 	letter-spacing: 0;
-	line-height: fonts.$font__line-height-body;
+	line-height: var( --newspack-theme-font-line-height-body );
 	opacity: 0;
 	padding: #{0.75 * structure.$size__spacing-unit} structure.$size__spacing-unit;
 	position: absolute;
@@ -149,7 +148,7 @@ amp-script .sponsor-label {
 		}
 
 		.sponsor-byline {
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 
 			@include utilities.media( desktop ) {
 				> span:first-child {
@@ -274,7 +273,7 @@ amp-script .sponsor-label {
 
 		h2 {
 			color: inherit;
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 			border: 0;
 			margin: 0;
 			padding: 0;

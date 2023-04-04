@@ -33,5 +33,6 @@
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
-fonts.$font__heading: 'IBM Plex Serif', georgia, serif;
-$font__body: georgia, garamond, 'Times New Roman', serif;
+:root {
+	--newspack-theme-font-heading: 'IBM Plex Serif', georgia, serif;
+}

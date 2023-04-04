@@ -1,6 +1,5 @@
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/fonts';
 
 .comment-metadata,
 .comment-reply-link,
@@ -59,12 +58,12 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 }
 
 /* stylelint-disable selector-type-no-unknown  */
 amp-script .cat-links {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 }
 /* stylelint-enable */
 
@@ -86,13 +85,13 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
-	line-height: fonts.$font__line-height-heading;
+	line-height: var( --newspack-theme-font-line-height-heading );
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .nav1 {
-	line-height: fonts.$font__line-height-heading;
+	line-height: var( --newspack-theme-font-line-height-heading );
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -106,10 +105,10 @@ h6 {
 
 h1,
 .page-description {
-	font-size: fonts.$font__size-xxl;
+	font-size: var( --newspack-theme-font-size-xxl );
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size-xxxl;
+		font-size: var( --newspack-theme-font-size-xxxl );
 	}
 }
 
@@ -119,10 +118,10 @@ h1,
 .has-larger-font-size,
 .archive:not( .paged ).feature-latest article.entry:first-of-type .entry-title,
 h2 {
-	font-size: fonts.$font__size-lg;
+	font-size: var( --newspack-theme-font-size-lg );
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size-xl;
+		font-size: var( --newspack-theme-font-size-xl );
 	}
 }
 
@@ -132,14 +131,14 @@ h2 {
 .archive .entry-title,
 .search .entry-title,
 .blog .entry-title {
-	font-size: fonts.$font__size-lg;
+	font-size: var( --newspack-theme-font-size-lg );
 }
 
 h3 {
 	font-size: calc( 1em * 1.3 );
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size-lg;
+		font-size: var( --newspack-theme-font-size-lg );
 	}
 }
 
@@ -151,15 +150,15 @@ h2.author-title,
 p.author-bio,
 .post-navigation .post-title,
 h4 {
-	font-size: fonts.$font__size-md;
+	font-size: var( --newspack-theme-font-size-md );
 }
 
 .page-title {
-	font-size: fonts.$font__size_sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	letter-spacing: 0.01em;
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 	}
 }
 
@@ -172,7 +171,7 @@ h4 {
 .wp-block-loginout a,
 .comment-content,
 h5 {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 }
 
 .discussion-meta-info,
@@ -185,7 +184,7 @@ h5 {
 img::after,
 .site-info,
 h6 {
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 }
 
 .site-title {
