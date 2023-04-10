@@ -114,6 +114,10 @@
 				margin-left: 0;
 				margin-right: 0;
 			}
+
+			&.wp-block-columns .alignwide {
+				width: 100%;
+			}
 		}
 
 		.wp-block-cover,
@@ -124,6 +128,18 @@
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 1200px;
+				}
+			}
+		}
+
+		.wp-block-column {
+			.wp-block-cover,
+			.wp-block-group {
+				&.alignfull,
+				&.alignwide {
+					> div > *:not( .alignfull ):not( .alignwide ) {
+						max-width: 100%;
+					}
 				}
 			}
 		}
@@ -1120,6 +1136,12 @@ hr {
 	margin-top: -32px;
 }
 
+.wp-block-cover {
+	.wp-block-group.has-background + .wp-block-group.has-background {
+		margin-top: unset;
+	}
+}
+
 // Remove space between full-width group block and header on homepage.
 .newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child,
 .newspack-front-page.hide-homepage-title [id='pico'] > .wp-block-group.alignfull:first-child {
@@ -1461,11 +1483,6 @@ $colors: (
 	.wp-block-image {
 		&.alignfull img {
 			width: 100vw;
-			max-width: 100vw;
-		}
-
-		&.alignwide {
-			max-width: 100vw;
 		}
 	}
 
@@ -1495,8 +1512,8 @@ $colors: (
 	//! Group & Cover Block
 	.entry .entry-content,
 	[id='pico'] {
-		> .wp-block-cover,
-		> .wp-block-group {
+		.wp-block-cover,
+		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
 				> div > *:not( .alignfull ):not( .alignwide ) {
@@ -1512,6 +1529,18 @@ $colors: (
 				width: calc( 50vw + 390px );
 			}
 		}
+
+		.wp-block-column {
+			.wp-block-cover,
+			.wp-block-group {
+				&.alignfull,
+				&.alignwide {
+					> div > *:not( .alignfull ):not( .alignwide ) {
+						max-width: 100%;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1523,8 +1552,8 @@ $colors: (
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
 	.wp-block-pullquote,
 	.wp-block-table,
-	.wp-block-columns:not( .is-not-stacked-on-mobile ),
-	.wpnbha {
+	.entry-content > .wp-block-columns:not( .is-not-stacked-on-mobile ),
+	.entry-content > .wpnbha {
 		&.alignfull {
 			padding-left: structure.$size__spacing-unit;
 			padding-right: structure.$size__spacing-unit;
@@ -1532,7 +1561,7 @@ $colors: (
 	}
 
 	@include utilities.media( mobile ) {
-		.wp-block-columns.is-not-stacked-on-mobile.alignfull {
+		.entry-content > .wp-block-columns.is-not-stacked-on-mobile.alignfull {
 			padding-left: structure.$size__spacing-unit;
 			padding-right: structure.$size__spacing-unit;
 		}
@@ -1544,6 +1573,27 @@ $colors: (
 		&.alignfull:not( .has-background ):not( .is-style-border ) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
+		}
+	}
+
+	// keep nested align-full elements from overflowing the container.
+	.entry .entry-content {
+		.wp-block-columns,
+		.wp-block-group,
+		.wp-block-cover {
+			.alignwide,
+			.alignfull {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		.wp-block-group,
+		.wp-block-cover {
+			&.alignfull .alignwide {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 
