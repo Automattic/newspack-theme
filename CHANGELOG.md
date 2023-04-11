@@ -1,3 +1,10 @@
+## [1.69.5](https://github.com/Automattic/newspack-theme/compare/v1.69.4...v1.69.5) (2023-04-11)
+
+
+### Bug Fixes
+
+* remove amp plus handling for ads ([#2088](https://github.com/Automattic/newspack-theme/issues/2088)) ([50a2bee](https://github.com/Automattic/newspack-theme/commit/50a2beeb60a78899f6de2d6862ea5db4922501a8))
+
 ## [1.69.4](https://github.com/Automattic/newspack-theme/compare/v1.69.3...v1.69.4) (2023-04-10)
 
 
