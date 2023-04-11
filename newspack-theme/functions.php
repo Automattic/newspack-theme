@@ -619,6 +619,7 @@ function newspack_fse_blocks_to_remove() {
 	// List of all FSE blocks to remove from the editor.
 	$fse_blocks = array(
 		'core/loginout',
+		'core/comments',
 		'core/post-comments-form',
 		'core/comments-query-loop',
 		'core/query',
@@ -629,6 +630,7 @@ function newspack_fse_blocks_to_remove() {
 		'core/post-terms',
 		'core/post-date',
 		'core/post-author',
+		'core/post-author-name',
 		'core/post-navigation-link',
 		'core/read-more',
 		'core/avatar',
