@@ -691,11 +691,15 @@ p.has-background {
 	border-width: 2px;
 	border-style: solid;
 	border-color: currentcolor;
-	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
 
 	&:not( .has-background ) {
 		background: transparent;
 	}
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
 }
 
 .is-style-outline .wp-block-button__link,

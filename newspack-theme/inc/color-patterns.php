@@ -99,7 +99,8 @@ function newspack_custom_colors_css() {
 			.entry-content a,
 			.author-bio .author-link,
 			.is-style-outline .wp-block-button__link, /* legacy selector */
-			.wp-block-button__link.is-style-outline {
+			.wp-block-button__link.is-style-outline,
+			.is-style-outline > .wp-block-button__link:not(.has-text-color):not(:hover) {
 				color:' . esc_attr( newspack_color_with_contrast( $colors['secondary'] ) ) . ';
 			}
 

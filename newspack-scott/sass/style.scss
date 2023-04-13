@@ -148,12 +148,12 @@ div.wpnbha .article-section-title {
 	}
 
 	blockquote {
-		border-color: inherit;
+		border-color: var( --newspack-theme-color-primary );
 
 		&::before,
 		&::after {
 			border-top: 2px solid;
-			border-color: var( --newspack-theme-color-primary );
+			border-color: inherit;
 			content: '';
 			display: block;
 			position: absolute;
@@ -189,6 +189,10 @@ div.wpnbha .article-section-title {
 				font-size: calc( 1rem * 7 );
 			}
 		}
+	}
+
+	&.has-border-color blockquote {
+		border-color: inherit;
 	}
 
 	&.is-style-solid-color,
