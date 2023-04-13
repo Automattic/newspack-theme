@@ -78,6 +78,14 @@ function newspack_custom_colors_css() {
 				border-color: ' . esc_attr( $colors['primary_contrast'] ) . ';
 			}
 
+			@media only screen and (min-width: 782px) {
+				/* Header default background */
+				.h-db .featured-image-beside .entry-header,
+				.h-db.h-sub.single-featured-image-beside .middle-header-contain {
+					color: ' . esc_attr( $colors['primary_contrast'] ) . ';
+				}
+			}
+
 			/* Set colour that contrasts against the secondary background */
 			.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(:hover),
 			.button,
