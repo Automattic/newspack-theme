@@ -1,6 +1,5 @@
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 /** === Tertiary menu === */
@@ -60,7 +59,7 @@ body.h-db.h-dh .site-header {
 
 	li {
 		display: inline-block;
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 
 		@include utilities.media( tablet ) {
 			&:nth-child( n + 2 ) {
@@ -75,7 +74,7 @@ body.h-db.h-dh .site-header {
 
 	// Header Short Height
 	.h-sh & {
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 		margin-left: structure.$size__spacing-unit;
 	}
 }

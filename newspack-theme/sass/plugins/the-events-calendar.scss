@@ -5,7 +5,6 @@
 
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 //! Layout tweaks
@@ -160,7 +159,7 @@ main#tribe-events-pg-template {
 .tribe_community_edit .button.mb-cta {
 	background: #d33;
 	border-radius: 5px;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-size: 0.7em;
 	font-weight: bold;
 	letter-spacing: 0;
@@ -182,7 +181,7 @@ main#tribe-events-pg-template {
 
 div.tribe-common p,
 div.tribe-events-content {
-	font-family: fonts.$font__body;
+	font-family: var( --newspack-theme-font-body );
 }
 
 div.tribe-common .tribe-common-form-control-checkbox__label,
@@ -249,5 +248,5 @@ div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
 div.tribe-events-single .tribe-events-sub-nav,
 div#top.tribe-theme-enfold.single-tribe_events .tribe-events-single-event-title,
 div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3 {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 }

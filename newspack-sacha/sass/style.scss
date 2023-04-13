@@ -4,7 +4,6 @@
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 // Header
@@ -67,7 +66,7 @@
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 }
 
 .accent-header,
@@ -112,7 +111,7 @@ div.wpnbha .article-section-title,
 }
 
 .cat-links {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 
 	a {
 		color: inherit;
@@ -140,7 +139,7 @@ figcaption,
 
 blockquote,
 cite {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-style: italic;
 
 	em,
@@ -153,9 +152,9 @@ cite {
 .has-drop-cap:not( :focus )::first-letter {
 	background-color: colors.$color__primary;
 	color: #fff;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
-	font-size: fonts.$font__size-xxl;
+	font-size: var( --newspack-theme-font-size-xxl );
 	padding: 0.4em;
 }
 
@@ -168,7 +167,7 @@ cite {
 	blockquote p,
 	&.is-style-solid-color blockquote p {
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xl;
+			font-size: var( --newspack-theme-font-size-xl );
 		}
 	}
 
@@ -176,7 +175,7 @@ cite {
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
 		@include utilities.media( tablet ) {
 			p {
-				font-size: fonts.$font__size-xl;
+				font-size: var( --newspack-theme-font-size-xl );
 			}
 		}
 	}
@@ -195,7 +194,7 @@ cite {
 		@include utilities.media( tablet ) {
 			blockquote p,
 			&.is-style-solid-color blockquote p {
-				font-size: fonts.$font__size-lg;
+				font-size: var( --newspack-theme-font-size-lg );
 			}
 		}
 	}
@@ -439,7 +438,7 @@ cite {
 	text-transform: none;
 
 	@include utilities.media( tablet ) {
-		font-size: fonts.$font__size_base;
+		font-size: var( --newspack-theme-font-size-base );
 	}
 
 	.page-description {
@@ -448,7 +447,7 @@ cite {
 }
 
 .taxonomy-description {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-style: normal;
 
 	@include utilities.media( tablet ) {

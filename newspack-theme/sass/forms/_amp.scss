@@ -1,8 +1,6 @@
-@use '../variables-site/fonts';
-
 .amp-wp-default-form-message {
 	p {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: bold;
 	}
 	small {

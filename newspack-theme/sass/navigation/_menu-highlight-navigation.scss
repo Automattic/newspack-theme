@@ -1,12 +1,11 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 .highlight-menu-contain {
 	margin-top: #{0.25 * structure.$size__spacing-unit};
 	.wrapper {
-		font-family: fonts.$font__heading;
-		font-size: fonts.$font__size-xs;
+		font-family: var( --newspack-theme-font-heading );
+		font-size: var( --newspack-theme-font-size-xs );
 		height: 1.5em;
 		overflow: hidden;
 		word-wrap: break-word;

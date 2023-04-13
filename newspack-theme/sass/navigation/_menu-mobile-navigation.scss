@@ -1,6 +1,5 @@
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 // Menu Toggles
@@ -81,7 +80,7 @@
 .site-header .desktop-menu-toggle,
 .subpage-toggle-contain {
 	display: none;
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 	font-weight: normal;
 	line-height: 2;
 	padding: #{0.125 * structure.$size__spacing-unit} 0;
@@ -198,13 +197,13 @@
 
 	nav,
 	.widget:not( .widget_block ) {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	.mobile-menu-toggle,
 	.desktop-menu-toggle,
 	.subpage-toggle {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		float: right;
 		margin: 0 0 structure.$size__spacing-unit;
 		padding: 0;
@@ -273,7 +272,7 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 	}
 }
 

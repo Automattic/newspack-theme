@@ -1,5 +1,4 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 @use '../mixins/utilities';
 
@@ -12,7 +11,7 @@
 		border: none;
 		padding: 0;
 		margin: 0;
-		font-family: fonts.$font__heading;
+		font-family: var( --newspack-theme-font-heading );
 		line-height: 1.2;
 		text-decoration: none;
 		background: transparent;
@@ -155,7 +154,7 @@
 			background-color: colors.$color__background-dark;
 			color: colors.$color__background-body;
 			display: block;
-			line-height: fonts.$font__line-height-heading;
+			line-height: var( --newspack-theme-font-line-height-heading );
 			padding: calc( 0.75 * #{structure.$size__spacing-unit} )
 				calc( 24px + #{structure.$size__spacing-unit} )
 				calc( 0.75 * #{structure.$size__spacing-unit} ) structure.$size__spacing-unit;

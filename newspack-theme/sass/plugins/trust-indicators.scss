@@ -2,7 +2,6 @@
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 .trust-label {
@@ -74,7 +73,7 @@
 .author-additional-infos {
 	display: flex;
 	flex-wrap: wrap;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 }
 
 .author-additional-info {

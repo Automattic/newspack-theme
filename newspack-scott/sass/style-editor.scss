@@ -8,14 +8,13 @@ Newspack Scott Editor Styles
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 .accent-header,
 .article-section-title {
 	color: #666;
-	font-family: fonts.$font__heading;
-	font-size: fonts.$font__size-sm;
+	font-family: var( --newspack-theme-font-heading );
+	font-size: var( --newspack-theme-font-size-sm );
 
 	&::before {
 		background-color: colors.$color__primary;
@@ -42,7 +41,7 @@ Newspack Scott Editor Styles
 /** === Paragraph === */
 
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 }
 
@@ -102,7 +101,7 @@ Newspack Scott Editor Styles
 		color: colors.$color__primary;
 		content: '\201C';
 		display: inline-block;
-		font-family: fonts.$font__heading;
+		font-family: var( --newspack-theme-font-heading );
 		font-size: calc( 1rem * 6 );
 		font-style: italic;
 		font-weight: normal;
@@ -141,19 +140,19 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: fonts.$font__size-lg;
+		font-size: var( --newspack-theme-font-size-lg );
 
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xl;
+			font-size: var( --newspack-theme-font-size-xl );
 		}
 	}
 
 	p {
-		font-family: fonts.$font__heading;
+		font-family: var( --newspack-theme-font-heading );
 	}
 
 	.wp-block-pullquote__citation {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -284,6 +283,6 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 	}
 }
