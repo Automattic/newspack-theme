@@ -16,26 +16,23 @@ function newspack_custom_colors_css() {
 	// Front-end colors that require the theme_colors to be set to 'custom':
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 
-		$theme_css_variables = '
-			:root {
+		$css_variables =  '
 				--newspack-theme-color-primary: ' . esc_attr( $colors['primary'] ) . ';
 				--newspack-theme-color-primary-variation: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -30 ) ) . ';
 				--newspack-theme-color-secondary: ' . esc_attr( $colors['secondary'] ) . ' !important;
 				--newspack-theme-color-secondary-variation: ' . esc_attr( newspack_adjust_brightness( $colors['secondary'], -40 ) ) . ';
-			}
+
+				--newspack-theme-color-primary-darken-5: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -5 ) ) . ';
+				--newspack-theme-color-primary-darken-10: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -10 ) ) . ';
 		';
 
-		$editor_css_variables = '
-			:root .editor-styles-wrapper {
-				--newspack-theme-color-primary: ' . esc_attr( $colors['primary'] ) . ';
-				--newspack-theme-color-primary-variation: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -30 ) ) . ';
-				--newspack-theme-color-secondary: ' . esc_attr( $colors['secondary'] ) . ' !important;
-				--newspack-theme-color-secondary-variation: ' . esc_attr( newspack_adjust_brightness( $colors['secondary'], -40 ) ) . ';
-			}
+		$theme_css = '
+			:root { ' . $css_variables . ' }
 		';
 
-		$theme_css .= $theme_css_variables;
-		$editor_css .= $editor_css_variables;
+		$editor_css = '
+			:root .editor-styles-wrapper { ' . $css_variables . ' }
+		';
 
 		$theme_css .= '
 			/* Set primary color that contrasts against white */
