@@ -1,10 +1,9 @@
-@use '../variables-site/colors';
 @use '../mixins/utilities';
 
 a {
 	@include utilities.link-transition;
 
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 
 	&:visited {
 		color: inherit;
@@ -12,7 +11,7 @@ a {
 
 	&:hover,
 	&:active {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		outline: 0;
 		text-decoration: none;
 	}

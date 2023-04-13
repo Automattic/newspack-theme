@@ -1,7 +1,6 @@
 @use 'sass:meta';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 
 html {
 	font-size: var( --newspack-theme-font-size-base-sm );
@@ -14,7 +13,7 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 	font-family: var( --newspack-theme-font-body );
 	font-weight: 400;
 	font-size: 1em;
@@ -28,7 +27,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 	font-family: var( --newspack-theme-font-body );
 	font-weight: 400;
 	line-height: var( --newspack-theme-font-line-height-body );

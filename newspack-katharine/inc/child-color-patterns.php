@@ -45,34 +45,12 @@ function newspack_katharine_custom_colors_css() {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
 		}
 
-		.entry-meta .byline a:hover,
-		.entry-meta .byline a:hover:visited,
-		.cat-links a:hover {
-			color: ' . esc_html( newspack_adjust_brightness( $primary_color, -40 ) ) . ';
-		}
-
-		.accent-header:before,
-		div.wpnbha .article-section-title:before,
-		.cat-links:before,
-		.archive .page-title:before,
-		figcaption:after,
-		.wp-caption-text:after,
-		.has-highlight-menu .site-breadcrumb .wrapper > span::before,
-		#secondary .widgettitle::before {
-			background-color: ' . esc_html( $primary_color ) . ';
-		}
-
 		.mobile-sidebar .accent-header:before,
 		.mobile-sidebar div.wpnbha .article-section-title:before,
 		.mobile-sidebar .cat-links:before,
 		.mobile-sidebar figcaption:after,
 		.mobile-sidebar .wp-caption-text:after {
 			background-color: ' . esc_html( $primary_color_contrast ) . ';
-		}
-
-		.mobile-sidebar div.wpnbha .article-section-title::before,
-		.mobile-sidebar .accent-header::before {
-			background-color: ' . esc_html( newspack_adjust_brightness( $primary_color, -30 ) ) . ';
 		}
 
 		@media only screen and (min-width: 782px) {
@@ -92,10 +70,6 @@ function newspack_katharine_custom_colors_css() {
 		$theme_css .= '
 			/* Featured Image Beside styles */
 			@media only screen and (min-width: 782px) {
-				.h-sb .featured-image-beside {
-					background-color: ' . esc_html( $primary_color ) . ';
-				}
-
 				.h-sb .featured-image-beside,
 				.h-sb .featured-image-beside a {
 					color: ' . esc_html( $primary_color_contrast ) . ';
@@ -156,13 +130,6 @@ function newspack_katharine_custom_colors_css() {
 		.block-editor-block-list__layout .block-editor-block-list__block.accent-header,
 		.block-editor-block-list__layout .block-editor-block-list__block .wp-block-newspack-blocks-homepage-articles:not(.has-text-color) .article-section-title {
 			color: ' . esc_html( newspack_color_with_contrast( $primary_color ) ) . ';
-		}
-
-		.block-editor-block-list__layout .block-editor-block-list__block.accent-header:before,
-		.block-editor-block-list__layout .block-editor-block-list__block .article-section-title:before,
-		.block-editor-block-list__layout .block-editor-block-list__block figcaption:after,
-		.block-editor-block-list__layout .block-editor-block-list__block .wp-caption-text:after {
-			background-color: ' . esc_html( $primary_color ) . ';
 		}
 	';
 

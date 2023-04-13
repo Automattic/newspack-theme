@@ -1,5 +1,4 @@
 @use '../../mixins/utilities';
-@use '../../variables-site/colors';
 @use '../../variables-site/structure';
 
 .archive,
@@ -72,7 +71,7 @@
 
 .archive {
 	.page-title {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-primary );
 	}
 
 	@include utilities.media( tablet ) {
@@ -136,7 +135,7 @@
 }
 
 .page-description {
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 }
 
 .tag .page-description::first-letter {
@@ -144,7 +143,7 @@
 }
 
 .taxonomy-description {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 	font-style: italic;
 
 	a {

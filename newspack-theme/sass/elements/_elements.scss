@@ -1,5 +1,4 @@
 @use 'sass:meta';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 html {
@@ -13,7 +12,7 @@ html {
 }
 
 body {
-	background-color: colors.$color__background-body;
+	background-color: var( --newspack-theme-color-bg-body );
 }
 
 h1,
@@ -26,7 +25,7 @@ h6 {
 }
 
 hr {
-	background-color: colors.$color__text-light;
+	background-color: var( --newspack-theme-color-text-light );
 	border: 0;
 	height: 2px;
 }
@@ -49,7 +48,7 @@ blockquote {
 	}
 
 	cite {
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 	}
 }
 

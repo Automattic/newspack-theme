@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 table {
@@ -10,7 +9,7 @@ table {
 	td,
 	th {
 		padding: 0.5em;
-		border: 1px solid colors.$color__text-light;
+		border: 1px solid var( --newspack-theme-color-text-light );
 		word-break: break-all;
 	}
 }
