@@ -704,7 +704,8 @@ p.has-background {
 
 .is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
-.is-style-outline > .wp-block-button__link:not( .has-text-color ) {
+.is-style-outline > .wp-block-button__link:not( .has-text-color ),
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
 	color: var( --newspack-theme-color-secondary );
 }
 
