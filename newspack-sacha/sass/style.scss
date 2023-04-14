@@ -67,6 +67,10 @@ div.wpnbha .article-section-title,
 	font-size: var( --newspack-theme-font-size-xs );
 }
 
+.wpnbha .cat-links a {
+	color: var( --newspack-theme-color-text-light );
+}
+
 .accent-header,
 #secondary .widgettitle,
 .article-section-title > span {
