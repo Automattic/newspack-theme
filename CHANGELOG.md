@@ -1,3 +1,10 @@
+# [1.70.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.70.0-alpha.1...v1.70.0-alpha.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* allow woo required field asterisk toggle ([#2089](https://github.com/Automattic/newspack-theme/issues/2089)) ([a662e2a](https://github.com/Automattic/newspack-theme/commit/a662e2ac3b1ab1063a15aa8cb29de03422c52763))
+
 # [1.70.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.69.5...v1.70.0-alpha.1) (2023-04-13)
 
 
