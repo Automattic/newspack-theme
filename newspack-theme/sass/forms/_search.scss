@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 .search-form {
@@ -12,7 +11,7 @@
 	button {
 		background-color: transparent;
 		bottom: 2px;
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		position: absolute;
 		margin: 0;
 		padding: 0 #{0.5 * structure.$size__spacing-unit};
@@ -27,7 +26,7 @@
 		&:active,
 		&:hover,
 		&:focus {
-			color: colors.$color__primary;
+			color: var( --newspack-theme-color-primary );
 		}
 	}
 }

@@ -1,7 +1,6 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use 'utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 // Rem output with px fallback
@@ -31,14 +30,14 @@
 
 @mixin filter-duotone {
 	&::before {
-		background: colors.$color__primary;
+		background: var( --newspack-theme-color-primary );
 		mix-blend-mode: screen;
 		opacity: 0.1;
 		z-index: 2;
 	}
 
 	&::after {
-		background: colors.$color__primary;
+		background: var( --newspack-theme-color-primary );
 		mix-blend-mode: multiply;
 		opacity: 0.8;
 		z-index: 3;
@@ -65,7 +64,7 @@
 
 @mixin post-section-dash {
 	&::before {
-		background: colors.$color__text-light;
+		background: var( --newspack-theme-color-text-light );
 		content: '\020';
 		display: block;
 		height: 2px;
@@ -79,11 +78,11 @@
  * layers of box-shadow to add the border visually, which will render the border smoother. */
 
 @mixin box-shadow( $size ) {
-	box-shadow: 0 0 0 $size colors.$color__text-light inset,
+	box-shadow: 0 0 0 $size var( --newspack-theme-color-text-light ) inset,
 		// Original border.
-		0 0 0 ( $size + 1px ) colors.$color__text-light inset,
+		0 0 0 ( $size + 1px ) var( --newspack-theme-color-text-light ) inset,
 		// Antialiasing, inner edge.
-		0 0 1px 0 rgba( colors.$color__text-light, 0.7 ); // Antialiasing, outer edge.
+		0 0 1px 0 rgba( var( --newspack-theme-color-text-light ), 0.7 ); // Antialiasing, outer edge.
 }
 
 /* Calculates maximum width for post content */
@@ -190,7 +189,7 @@
 			}
 
 			.components-text-control__input {
-				border-color: colors.$color__border;
+				border-color: var( --newspack-theme-color-border );
 				border-radius: 0;
 			}
 
