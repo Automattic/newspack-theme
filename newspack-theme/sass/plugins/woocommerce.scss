@@ -55,7 +55,6 @@ a.button {
 		.required {
 			color: firebrick;
 			text-decoration: none;
-			display: none; // Only show optional by default.
 
 			&[title] {
 				border: 0 !important;

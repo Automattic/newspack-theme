@@ -61,7 +61,6 @@ function newspack_custom_colors_css() {
 			.mobile-sidebar .nav1 .sub-menu > li > a,
 			.mobile-sidebar .nav1 ul.main-menu > li > a,
 			.wp-block-file .wp-block-file__button,
-			.highlight-menu .menu-label,
 			/* Header default background; default height */
 			body.h-db.h-dh .site-header .nav3 .menu-highlight a,
 			.comment .comment-author .post-author-badge,
