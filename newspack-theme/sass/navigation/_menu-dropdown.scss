@@ -186,10 +186,7 @@
 		margin-top: 0;
 		opacity: 1;
 		position: absolute;
-		left: 0;
-		right: auto;
-		top: 100%;
-		bottom: auto;
+		inset: 100% auto auto 0;
 		height: auto;
 		transform: none;
 		width: #{12.5 * structure.$size__spacing-unit};
