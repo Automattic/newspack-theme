@@ -621,11 +621,8 @@ div.sharedaddy {
 	&::before {
 		background-color: rgba( 0, 0, 0, 0.5 );
 		content: '';
-		bottom: 0;
-		left: 0;
+		inset: 0;
 		position: absolute;
-		right: 0;
-		top: 0;
 		z-index: 1;
 	}
 
@@ -635,11 +632,8 @@ div.sharedaddy {
 	}
 
 	.post-thumbnail {
-		bottom: 0;
-		left: 0;
+		inset: 0;
 		position: absolute;
-		right: 0;
-		top: 0;
 		overflow: hidden;
 	}
 
