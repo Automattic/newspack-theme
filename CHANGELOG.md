@@ -1,3 +1,10 @@
+## [1.70.1](https://github.com/Automattic/newspack-theme/compare/v1.70.0...v1.70.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* bump a new version tag ([c55cf05](https://github.com/Automattic/newspack-theme/commit/c55cf05e8a239818d31761685ee1729c86bd55aa))
+
 # [1.70.0](https://github.com/Automattic/newspack-theme/compare/v1.69.5...v1.70.0) (2023-04-24)
 
 
