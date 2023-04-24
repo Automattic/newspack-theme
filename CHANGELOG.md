@@ -1,3 +1,37 @@
+# [1.70.0](https://github.com/Automattic/newspack-theme/compare/v1.69.5...v1.70.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* allow woo required field asterisk toggle ([#2089](https://github.com/Automattic/newspack-theme/issues/2089)) ([a662e2a](https://github.com/Automattic/newspack-theme/commit/a662e2ac3b1ab1063a15aa8cb29de03422c52763))
+* remove post author, comments blocks from displayed list ([#2083](https://github.com/Automattic/newspack-theme/issues/2083)) ([243c345](https://github.com/Automattic/newspack-theme/commit/243c34500c2a9a1e71eb6d48c905d279950bf44a))
+* update hooks and add pre push ([#2082](https://github.com/Automattic/newspack-theme/issues/2082)) ([55f8978](https://github.com/Automattic/newspack-theme/commit/55f8978a7f956c0e4b0b2abf56ca321769774542))
+
+
+### Features
+
+* add multi-branded site support ([#2077](https://github.com/Automattic/newspack-theme/issues/2077)) ([0229917](https://github.com/Automattic/newspack-theme/commit/0229917d8088fbe9d5eba0ba3840587bf4459c26))
+
+# [1.70.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.70.0-alpha.1...v1.70.0-alpha.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* allow woo required field asterisk toggle ([#2089](https://github.com/Automattic/newspack-theme/issues/2089)) ([a662e2a](https://github.com/Automattic/newspack-theme/commit/a662e2ac3b1ab1063a15aa8cb29de03422c52763))
+
+# [1.70.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.69.5...v1.70.0-alpha.1) (2023-04-13)
+
+
+### Bug Fixes
+
+* remove post author, comments blocks from displayed list ([#2083](https://github.com/Automattic/newspack-theme/issues/2083)) ([243c345](https://github.com/Automattic/newspack-theme/commit/243c34500c2a9a1e71eb6d48c905d279950bf44a))
+* update hooks and add pre push ([#2082](https://github.com/Automattic/newspack-theme/issues/2082)) ([55f8978](https://github.com/Automattic/newspack-theme/commit/55f8978a7f956c0e4b0b2abf56ca321769774542))
+
+
+### Features
+
+* add multi-branded site support ([#2077](https://github.com/Automattic/newspack-theme/issues/2077)) ([0229917](https://github.com/Automattic/newspack-theme/commit/0229917d8088fbe9d5eba0ba3840587bf4459c26))
+
 ## [1.69.5](https://github.com/Automattic/newspack-theme/compare/v1.69.4...v1.69.5) (2023-04-11)
 
 
