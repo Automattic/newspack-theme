@@ -4,7 +4,6 @@
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 // Header
@@ -100,7 +99,7 @@ div.wpnbha.is-grid .article-section-title {
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 }
 
 .blog,
@@ -124,7 +123,7 @@ div.wpnbha .article-section-title,
 .author-bio {
 	h2 {
 		color: inherit;
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
 
 		&::before {
@@ -133,14 +132,14 @@ div.wpnbha .article-section-title,
 
 		span {
 			color: colors.$color__text-light;
-			font-size: fonts.$font__size-xs;
+			font-size: var( --newspack-theme-font-size-xs );
 		}
 	}
 }
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 }
 
@@ -221,7 +220,7 @@ div.wpnbha .article-section-title,
 
 .entry-meta,
 .wpnbha article .entry-meta {
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 }
 
 .single:not( .has-featured-image ) .entry-header,
@@ -299,7 +298,7 @@ figcaption,
 	blockquote p,
 	&.is-style-solid-color blockquote p {
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xl;
+			font-size: var( --newspack-theme-font-size-xl );
 		}
 	}
 
@@ -307,7 +306,7 @@ figcaption,
 	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
 		@include utilities.media( tablet ) {
 			p {
-				font-size: fonts.$font__size-xl;
+				font-size: var( --newspack-theme-font-size-xl );
 			}
 		}
 	}
@@ -315,14 +314,14 @@ figcaption,
 	blockquote {
 		p {
 			font-style: normal;
-			font-size: fonts.$font__size-lg;
+			font-size: var( --newspack-theme-font-size-lg );
 
 			em {
 				font-style: italic;
 			}
 
 			@include utilities.media( tablet ) {
-				font-size: fonts.$font__size-xl;
+				font-size: var( --newspack-theme-font-size-xl );
 			}
 		}
 	}
@@ -364,7 +363,7 @@ figcaption,
 	&.alignright {
 		@include utilities.media( tablet ) {
 			blockquote p {
-				font-size: fonts.$font__size-lg;
+				font-size: var( --newspack-theme-font-size-lg );
 			}
 		}
 
@@ -431,11 +430,11 @@ hr {
 // Archives
 
 .archive .page-title {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	margin-bottom: structure.$size__spacing-unit;
 
 	.page-description {
-		font-size: fonts.$font__size-xxxxl;
+		font-size: var( --newspack-theme-font-size-xxxxl );
 		margin-top: structure.$size__spacing-unit;
 	}
 }

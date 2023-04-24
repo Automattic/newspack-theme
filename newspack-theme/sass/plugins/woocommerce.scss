@@ -5,7 +5,6 @@
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 /**
@@ -57,7 +56,6 @@ a.button {
 		.required {
 			color: firebrick;
 			text-decoration: none;
-			display: none; // Only show optional by default.
 
 			&[title] {
 				border: 0 !important;
@@ -130,7 +128,7 @@ a.button {
 }
 
 .woocommerce-product-rating {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 }
 
 .woocommerce-notices-wrapper:not( :empty ) {
@@ -145,7 +143,7 @@ a.button {
 	background: colors.$color__background-pre;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	list-style: none;
 	margin-bottom: 1.5rem;
 	padding: #{0.5 * structure.$size__spacing-unit} structure.$size__spacing-unit;
@@ -258,7 +256,7 @@ a.button {
 }
 
 .woocommerce-results-wrapper {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	margin-bottom: #{0.5 * structure.$size__spacing-unit};
 
 	@include utilities.media( mobile ) {
@@ -293,7 +291,7 @@ ul.products {
 		}
 
 		.woocommerce-loop-product__title {
-			font-size: fonts.$font__size-md;
+			font-size: var( --newspack-theme-font-size-md );
 			margin: 0 0 0.5em;
 
 			&::before {
@@ -447,7 +445,7 @@ dl.variation,
 	}
 
 	.posted_in {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	.woocommerce-product-rating {
@@ -507,7 +505,7 @@ dl.variation,
 
 	.suggested-text,
 	.suggested-text + .subscription-details {
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	td .nyp {
@@ -653,7 +651,7 @@ table.variations {
 		padding: 0;
 
 		li {
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 			margin-right: 1rem;
 
 			a {
@@ -792,7 +790,7 @@ table.variations {
 	clear: both;
 
 	h2 {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 	}
 }
 
@@ -1108,7 +1106,7 @@ table.variations {
 	}
 
 	h2 {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 	}
 }
 
@@ -1300,7 +1298,7 @@ table.variations {
 
 .woocommerce-checkout {
 	h3 {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 		margin-bottom: structure.$size__spacing-unit;
 		margin-top: 2 * structure.$size__spacing-unit;
 	}
@@ -1310,7 +1308,7 @@ table.variations {
 	.woocommerce-shipping-fields,
 	.woocommerce-additional-fields {
 		label {
-			font-size: fonts.$font__size-sm;
+			font-size: var( --newspack-theme-font-size-sm );
 		}
 	}
 
@@ -1433,7 +1431,7 @@ table.woocommerce-table--order-details.shop_table,
 		th,
 		td {
 			// stylelint-disable-next-line function-calc-no-invalid
-			font-size: calc( fonts.$font__size-sm );
+			font-size: calc( var( --newspack-theme-font-size-sm ) );
 			font-weight: normal;
 			vertical-align: middle;
 		}
@@ -1461,7 +1459,7 @@ table.woocommerce-table--order-details.shop_table,
 	.payment_box {
 		padding: 1rem;
 		background: colors.$color__background-pre;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 
 		ul,
 		ol {
@@ -1541,7 +1539,7 @@ table.woocommerce-table--order-details.shop_table,
 }
 
 .woocommerce-terms-and-conditions-wrapper {
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	margin-bottom: 2 * structure.$size__spacing-unit;
 
 	input[type='checkbox'] {
@@ -1825,9 +1823,9 @@ table.woocommerce-table--order-details.shop_table,
 					box-sizing: border-box;
 					display: block;
 					color: inherit;
-					font-size: fonts.$font__size-sm;
+					font-size: var( --newspack-theme-font-size-sm );
 					font-weight: 700;
-					line-height: fonts.$font__line-height-heading;
+					line-height: var( --newspack-theme-font-line-height-heading );
 					outline: none;
 					padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 					text-decoration: none;

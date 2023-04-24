@@ -1,5 +1,4 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 @use '../mixins/utilities';
 
@@ -17,10 +16,10 @@ input[type='submit'],
 	box-sizing: border-box;
 	display: inline-block;
 	color: colors.$color__background-body;
-	font-family: fonts.$font__heading;
-	font-size: fonts.$font__size-sm;
+	font-family: var( --newspack-theme-font-heading );
+	font-size: var( --newspack-theme-font-size-sm );
 	font-weight: 700;
-	line-height: fonts.$font__line-height-heading;
+	line-height: var( --newspack-theme-font-line-height-heading );
 	outline: none;
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 	text-decoration: none;

@@ -1,6 +1,5 @@
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 // Index/archive navigation
@@ -125,7 +124,7 @@
 	.nav-next {
 		min-width: 50%;
 		width: 100%;
-		font-family: fonts.$font__heading;
+		font-family: var( --newspack-theme-font-heading );
 		font-weight: bold;
 		padding: #{0.5 * structure.$size__spacing-unit} 0;
 

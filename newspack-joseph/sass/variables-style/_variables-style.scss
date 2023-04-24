@@ -64,5 +64,7 @@ colors.$color__background-button: colors.$color__text-main;
 colors.$color__secondary-variation: color.adjust( colors.$color__text-main, $lightness: 20% );
 colors.$color__background-button-hover: color.adjust( colors.$color__text-main, $lightness: 20% );
 
-fonts.$font__heading: 'Old Standard TT', georgia, serif;
-fonts.$font__body: 'EB Garamond', georgia, serif;
+:root {
+	--newspack-theme-font-heading: 'Old Standard TT', georgia, serif;
+	--newspack-theme-font-body: 'EB Garamond', georgia, serif;
+}

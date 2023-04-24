@@ -1,7 +1,6 @@
 @use 'sass:color';
 @use '../../mixins/utilities';
 @use '../../variables-site/colors';
-@use '../../variables-site/fonts';
 @use '../../variables-site/structure';
 
 // Site branding
@@ -79,7 +78,7 @@
 	color: colors.$color__text-light;
 	display: none;
 	font-weight: normal;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	font-style: italic;
 	margin: 0;
 	padding: 0 structure.$size__spacing-unit;

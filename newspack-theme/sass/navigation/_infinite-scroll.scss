@@ -1,6 +1,5 @@
 @use '../mixins/utilities';
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 /* Infinite scroll */
@@ -34,7 +33,7 @@
 .site-main #infinite-handle span {
 	background: transparent;
 	display: block;
-	font-size: fonts.$font__size-sm;
+	font-size: var( --newspack-theme-font-size-sm );
 	text-align: center;
 }
 
@@ -45,9 +44,9 @@
 
 	background: colors.$color__background-button;
 	color: colors.$color__background-body;
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: 700;
-	line-height: fonts.$font__line-height-heading;
+	line-height: var( --newspack-theme-font-line-height-heading );
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 
 	&:hover {

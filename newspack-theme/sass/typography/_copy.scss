@@ -1,5 +1,3 @@
-@use '../variables-site/fonts';
-
 p {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -14,16 +12,16 @@ i {
 
 blockquote {
 	cite {
-		font-family: fonts.$font__heading;
-		font-size: fonts.$font__size-xs;
+		font-family: var( --newspack-theme-font-heading );
+		font-size: var( --newspack-theme-font-size-xs );
 		font-style: normal;
 	}
 }
 
 pre {
-	font-size: fonts.$font__size-sm;
-	font-family: fonts.$font__pre;
-	line-height: fonts.$font__line-height-body;
+	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var( --newspack-theme-font-pre );
+	line-height: var( --newspack-theme-font-line-height-body );
 	overflow: auto;
 }
 
@@ -31,8 +29,8 @@ code,
 kbd,
 tt,
 var {
-	font-size: fonts.$font__size-sm;
-	font-family: fonts.$font__code;
+	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var( --newspack-theme-font-code );
 }
 
 abbr,

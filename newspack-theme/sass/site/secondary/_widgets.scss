@@ -1,12 +1,11 @@
 @use '../../mixins/mixins-master';
 @use '../../mixins/utilities';
 @use '../../variables-site/colors';
-@use '../../variables-site/fonts';
 @use '../../variables-site/structure';
 
 .widget {
-	font-family: fonts.$font__heading;
-	font-size: fonts.$font__size-sm;
+	font-family: var( --newspack-theme-font-heading );
+	font-size: var( --newspack-theme-font-size-sm );
 	margin: 0 0 structure.$size__spacing-unit;
 	word-wrap: break-word;
 
@@ -52,7 +51,7 @@
 		list-style: none;
 
 		li {
-			font-family: fonts.$font__heading;
+			font-family: var( --newspack-theme-font-heading );
 			margin: #{0.125 * structure.$size__spacing-unit} 0;
 
 			@include utilities.media( mobile ) {
@@ -85,14 +84,14 @@
 .widget_recent_entries {
 	a {
 		color: inherit;
-		font-size: fonts.$font__size-lg;
+		font-size: var( --newspack-theme-font-size-lg );
 		font-weight: 700;
-		line-height: fonts.$font__line-height-heading;
+		line-height: var( --newspack-theme-font-line-height-heading );
 	}
 
 	.post-date {
 		color: inherit;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 		display: block;
 		opacity: 0.8;
 	}
@@ -153,7 +152,7 @@
 .widget_top-posts {
 	p {
 		font-style: italic;
-		font-size: fonts.$font__size-sm;
+		font-size: var( --newspack-theme-font-size-sm );
 	}
 
 	ul,
@@ -176,7 +175,7 @@
 		a {
 			color: colors.$color__text-main;
 			display: block;
-			font-family: fonts.$font__heading;
+			font-family: var( --newspack-theme-font-heading );
 			font-weight: bold;
 			line-height: 1.2;
 			text-decoration: none;
@@ -234,7 +233,7 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: fonts.$font__size-md;
+		font-size: var( --newspack-theme-font-size-md );
 	}
 }
 

@@ -15,8 +15,7 @@
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
 		"brainmaestro/composer-git-hooks": "^2.8",
 		"wptrt/wpthemereview": "*",
-		"szepeviktor/phpstan-wordpress": "^1.1",
-		"xwp/wp-dev-lib": "^1.5"
+		"szepeviktor/phpstan-wordpress": "^1.1"
 	},
 	"scripts": {
 		"phpcs-i": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs -i",
@@ -33,7 +32,8 @@
 	},
 	"extra": {
 		"hooks": {
-			"pre-commit": "DEV_LIB_SKIP=eslint ./vendor/xwp/wp-dev-lib/scripts/pre-commit && ./node_modules/.bin/lint-staged",
+			"pre-commit": "./node_modules/.bin/lint-staged",
+			"pre-push": "./.hooks/pre-push",
 			"commit-msg": [
 				"cat $1 | ./node_modules/.bin/newspack-scripts commitlint"
 			]

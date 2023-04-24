@@ -1,5 +1,4 @@
 @use '../variables-site/colors';
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 .gallery {
@@ -35,9 +34,9 @@
 
 .gallery-caption {
 	display: block;
-	font-family: fonts.$font__heading;
-	font-size: fonts.$font__size-xs;
-	line-height: fonts.$font__line-height-pre;
+	font-family: var( --newspack-theme-font-heading );
+	font-size: var( --newspack-theme-font-size-xs );
+	line-height: var( --newspack-theme-font-line-height-body );
 	margin: 0;
 	padding: ( structure.$size__spacing-unit * 0.5 );
 }

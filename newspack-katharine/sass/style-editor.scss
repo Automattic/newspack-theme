@@ -8,13 +8,12 @@ Newspack Katharine Editor Styles
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
 @use '../../newspack-theme/sass/variables-site/colors';
-@use '../../newspack-theme/sass/variables-site/fonts';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 .accent-header,
 .article-section-title {
 	color: colors.$color__primary;
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 	margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	margin-top: 0;
 
@@ -34,11 +33,11 @@ Newspack Katharine Editor Styles
 
 .wpnbha article .entry-meta,
 .entry-meta {
-	font-size: fonts.$font__size-xs;
+	font-size: var( --newspack-theme-font-size-xs );
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	font-family: fonts.$font__heading;
+	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 }
 
@@ -140,10 +139,10 @@ figure.wp-block-pullquote {
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		font-size: fonts.$font__size-lg;
+		font-size: var( --newspack-theme-font-size-lg );
 
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xl;
+			font-size: var( --newspack-theme-font-size-xl );
 		}
 	}
 
@@ -167,7 +166,7 @@ figure.wp-block-pullquote {
 	@include utilities.media( tablet ) {
 		blockquote p,
 		&.is-style-solid-color blockquote p {
-			font-size: fonts.$font__size-lg;
+			font-size: var( --newspack-theme-font-size-lg );
 		}
 	}
 

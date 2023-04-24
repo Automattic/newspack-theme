@@ -1,4 +1,3 @@
-@use '../variables-site/fonts';
 @use '../variables-site/structure';
 
 /** === Main menu === */
@@ -22,7 +21,7 @@
 /* Desktop-specific styles */
 .site-header {
 	.nav1 {
-		font-size: fonts.$font__size-xs;
+		font-size: var( --newspack-theme-font-size-xs );
 
 		.main-menu {
 			display: inline-block;

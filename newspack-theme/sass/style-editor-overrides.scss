@@ -9,7 +9,6 @@
 @use 'variables-site/variables-site';
 @use 'mixins/mixins-master';
 @use 'mixins/utilities';
-@use 'variables-site/fonts';
 @use 'variables-site/structure';
 
 /** === Default Template === */
@@ -147,18 +146,18 @@ body.post-type-post {
 
 	.editor-post-title__block .editor-post-title__input,
 	.editor-styles-wrapper h1.wp-block-post-title {
-		font-size: fonts.$font__size-xl;
+		font-size: var( --newspack-theme-font-size-xl );
 
 		@include utilities.media( mobile ) {
-			font-size: fonts.$font__size-xxl;
+			font-size: var( --newspack-theme-font-size-xxl );
 		}
 
 		@include utilities.media( tablet ) {
-			font-size: fonts.$font__size-xxxl;
+			font-size: var( --newspack-theme-font-size-xxxl );
 		}
 
 		@include utilities.media( desktop ) {
-			font-size: fonts.$font__size-xxxxl;
+			font-size: var( --newspack-theme-font-size-xxxxl );
 		}
 	}
 }
