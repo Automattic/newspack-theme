@@ -3,7 +3,7 @@
 .accent-header,
 .article-section-title {
 	border-bottom: 4px solid var( --newspack-theme-color-border );
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	font-size: var( --newspack-theme-font-size-sm );
 	margin-top: 0;
 	margin-bottom: #{structure.$size__spacing-unit * 0.75};

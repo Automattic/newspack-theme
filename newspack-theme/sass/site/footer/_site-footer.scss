@@ -135,6 +135,7 @@
 		display: block;
 
 		&:hover {
+			color: var( --newspack-theme-color-against-primary );
 			text-decoration: none;
 		}
 	}
