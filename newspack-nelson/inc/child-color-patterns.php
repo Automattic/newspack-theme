@@ -46,7 +46,6 @@ function newspack_nelson_custom_colors_css() {
 		}
 
 		.site-footer {
-			background-color: ' . esc_html( $primary_color ) . ';
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 

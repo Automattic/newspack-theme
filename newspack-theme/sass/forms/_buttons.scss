@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 @use '../mixins/utilities';
 
@@ -10,12 +9,12 @@ input[type='submit'],
 .wp-block-search__button {
 	@include utilities.button-transition;
 
-	background: colors.$color__background-button;
+	background: var( --newspack-theme-color-secondary );
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;
 	display: inline-block;
-	color: colors.$color__background-body;
+	color: var( --newspack-theme-color-bg-body );
 	font-family: var( --newspack-theme-font-heading );
 	font-size: var( --newspack-theme-font-size-sm );
 	font-weight: 700;
@@ -27,8 +26,8 @@ input[type='submit'],
 
 	&:hover,
 	&:hover:visited {
-		background: colors.$color__background-button-hover;
-		color: colors.$color__background-body;
+		background: var( --newspack-theme-color-bg-button-hover );
+		color: var( --newspack-theme-color-bg-body );
 		cursor: pointer;
 	}
 
@@ -38,8 +37,8 @@ input[type='submit'],
 	}
 
 	&:focus {
-		background: colors.$color__background-button-hover;
-		color: colors.$color__background-body;
+		background: var( --newspack-theme-color-bg-button-hover );
+		color: var( --newspack-theme-color-bg-body );
 		outline: thin dotted;
 		outline-offset: -4px;
 	}

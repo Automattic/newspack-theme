@@ -1,12 +1,10 @@
-@use 'sass:color';
 @use '../../mixins/utilities';
-@use '../../variables-site/colors';
 @use '../../variables-site/structure';
 
 // Site branding
 .site-branding {
 	align-items: center;
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -55,27 +53,27 @@
 
 // Site title
 .site-title {
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 	font-weight: 700;
 	margin: 0;
 
 	a {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 
 		&:link,
 		&:visited {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 		}
 
 		&:hover {
-			color: colors.$color__text-hover;
+			color: var( --newspack-theme-color-text-hover )
 		}
 	}
 }
 
 // Site description
 .site-description {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 	display: none;
 	font-weight: normal;
 	font-size: var( --newspack-theme-font-size-sm );
@@ -130,8 +128,8 @@
 .bottom-header-contain {
 	.wrapper {
 		@include utilities.media( tablet ) {
-			border-bottom: 1px solid colors.$color__border;
-			border-top: 1px solid colors.$color__border;
+			border-bottom: 1px solid var( --newspack-theme-color-border );
+			border-top: 1px solid var( --newspack-theme-color-border );
 		}
 	}
 }
@@ -203,7 +201,7 @@
 
 .h-db {
 	.middle-header-contain {
-		border-bottom: 1px solid colors.$color__border;
+		border-bottom: 1px solid var( --newspack-theme-color-border );
 
 		@include utilities.media( tablet ) {
 			border-bottom: 0;
@@ -327,12 +325,12 @@
 	}
 
 	.top-header-contain {
-		background-color: color.adjust( colors.$color__primary, $lightness: -5% );
-		border-bottom: 1px solid color.adjust( colors.$color__primary, $lightness: -10% );
+		background-color: var( --newspack-theme-color-primary-darken-5 );
+		border-bottom: var( --newspack-theme-color-primary-darken-10 );
 	}
 
 	.middle-header-contain {
-		background-color: colors.$color__primary;
+		background-color: var( --newspack-theme-color-primary );
 
 		.wrapper {
 			@include utilities.media( tablet ) {
@@ -402,7 +400,7 @@
 
 	// Default background color.
 	&.h-db .middle-header-contain {
-		border-bottom: 1px solid colors.$color__border;
+		border-bottom: 1px solid var( --newspack-theme-color-border );
 	}
 
 	.middle-header-contain .wrapper {
@@ -448,7 +446,7 @@
 
 		// Default header background colour
 		&.h-db .middle-header-contain {
-			border-bottom: 1px solid colors.$color__border;
+			border-bottom: 1px solid var( --newspack-theme-color-border );
 		}
 
 		.middle-header-contain {
@@ -546,7 +544,7 @@
 // Sticky header
 .h-stk {
 	.site-header {
-		background: colors.$color__background-body;
+		background: var( --newspack-theme-color-bg-body );
 		box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
 		position: sticky;
 		top: 0;
@@ -569,8 +567,8 @@
 		}
 
 		&.h-db .bottom-header-contain {
-			border-bottom: 1px solid colors.$color__border;
-			border-top: 1px solid colors.$color__border;
+			border-bottom: 1px solid var( --newspack-theme-color-border );
+			border-top: 1px solid var( --newspack-theme-color-border );
 			.wrapper {
 				border: 0;
 			}
@@ -619,15 +617,12 @@
 				background: transparent;
 
 				.sticky-bg {
-					bottom: 0;
 					content: '';
 					background: #000;
 					display: block;
-					left: 0;
+					inset: 0;
 					opacity: 0;
 					position: absolute;
-					right: 0;
-					top: 0;
 					z-index: -1;
 					transition: opacity 0.5s ease-in;
 				}

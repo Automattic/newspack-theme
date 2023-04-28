@@ -1,5 +1,4 @@
 @use '../../mixins/utilities';
-@use '../../variables-site/colors';
 @use '../../variables-site/structure';
 
 .sticky {
@@ -44,7 +43,7 @@
 		color: inherit;
 
 		&:hover {
-			color: colors.$color__text-hover;
+			color: var( --newspack-theme-color-text-hover )
 		}
 	}
 }
@@ -63,7 +62,7 @@
 }
 
 .article-summary {
-	background: colors.$color__background-pre;
+	background: var( --newspack-theme-color-bg-pre );
 	font-size: 0.9rem;
 	padding: 1.5rem;
 
@@ -118,7 +117,7 @@ amp-script .cat-links {
 
 .entry-meta,
 .entry-footer {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 }
 
 .entry-meta {
@@ -137,15 +136,15 @@ amp-script .cat-links {
 		}
 
 		a {
-			color: colors.$color__primary;
+			color: var( --newspack-theme-color-primary );
 			text-decoration: none;
 
 			&:visited {
-				color: colors.$color__primary;
+				color: var( --newspack-theme-color-primary );
 			}
 
 			&:hover {
-				color: colors.$color__primary-variation;
+				color: var( --newspack-theme-color-primary-variation );
 			}
 		}
 	}
@@ -153,7 +152,7 @@ amp-script .cat-links {
 	.posted-on {
 		a,
 		a:visited {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 		}
 	}
 
@@ -175,7 +174,7 @@ amp-script .cat-links {
 	}
 
 	a {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-primary );
 	}
 
 	.edit-link {
@@ -233,7 +232,7 @@ amp-script .cat-links {
 
 		&:hover,
 		&:active {
-			color: colors.$color__link-hover;
+			color: var( --newspack-theme-color-link-hover );
 			text-decoration: none;
 		}
 	}
@@ -245,11 +244,11 @@ amp-script .cat-links {
 	h5,
 	h6 {
 		a {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 			text-decoration: none;
 
 			&:visited {
-				color: colors.$color__text-main;
+				color: var( --newspack-theme-color-text-main );
 			}
 		}
 	}
@@ -278,7 +277,7 @@ amp-script .cat-links {
 
 		&,
 		&:hover {
-			color: colors.$color__background-body;
+			color: var( --newspack-theme-color-bg-body );
 		}
 	}
 }
@@ -379,7 +378,7 @@ div.sharedaddy {
 .post-navigation {
 	border-width: 1px 0;
 	border-style: solid;
-	border-color: colors.$color__border;
+	border-color: var( --newspack-theme-color-border );
 	margin: #{2 * structure.$size__spacing-unit} 0 structure.$size__spacing-unit;
 
 	a {
@@ -396,7 +395,7 @@ div.sharedaddy {
 	}
 
 	.meta-nav {
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 		display: block;
 		margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 	}
@@ -496,7 +495,7 @@ div.sharedaddy {
 	h2 {
 		font-size: 1em;
 		span {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			display: block;
 			font-size: var( --newspack-theme-font-size-sm );
 			margin: 0.25em 0 0;
@@ -515,19 +514,19 @@ div.sharedaddy {
 	}
 
 	.author-link {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-secondary );
 		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: bold;
 		text-decoration: none;
 
 		&:hover {
-			color: colors.$color__primary-variation;
+			color: var( --newspack-theme-color-primary-variation );
 		}
 	}
 }
 
 .author-meta {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 	font-size: var( --newspack-theme-font-size-xs );
 
 	a {
@@ -535,7 +534,7 @@ div.sharedaddy {
 		text-decoration: none;
 
 		&:hover {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 		}
 	}
 
@@ -555,7 +554,7 @@ div.sharedaddy {
 			margin-top: 0;
 
 			&:not( :first-child ) {
-				border-left: 1px solid colors.$color__border;
+				border-left: 1px solid var( --newspack-theme-color-border );
 				margin-left: structure.$size__spacing-unit;
 				padding-left: structure.$size__spacing-unit;
 			}
@@ -580,7 +579,7 @@ div.sharedaddy {
 	}
 
 	a:visited {
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 	}
 }
 
@@ -593,7 +592,7 @@ div.sharedaddy {
 }
 
 .featured-image-behind {
-	background-color: colors.$color__text-main;
+	background-color: var( --newspack-theme-color-text-main );
 	display: flex;
 	margin: 0 calc( 50% - 50vw );
 	min-height: calc( 90vh - 60px );
@@ -622,11 +621,8 @@ div.sharedaddy {
 	&::before {
 		background-color: rgba( 0, 0, 0, 0.5 );
 		content: '';
-		bottom: 0;
-		left: 0;
+		inset: 0;
 		position: absolute;
-		right: 0;
-		top: 0;
 		z-index: 1;
 	}
 
@@ -636,11 +632,8 @@ div.sharedaddy {
 	}
 
 	.post-thumbnail {
-		bottom: 0;
-		left: 0;
+		inset: 0;
 		position: absolute;
-		right: 0;
-		top: 0;
 		overflow: hidden;
 	}
 
@@ -709,7 +702,7 @@ div.sharedaddy {
 
 	// Header - default background
 	.h-db .featured-image-beside {
-		background-color: colors.$color__primary;
+		background-color: var( --newspack-theme-color-primary );
 	}
 
 	// Header - solid background
@@ -897,7 +890,7 @@ div.sharedaddy {
 
 .entry-content .jp-relatedposts-i2 a,
 .entry-content .jp-relatedposts-i2 a:visited {
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 }
 
 @include utilities.media( mobile ) {
@@ -937,7 +930,7 @@ div.sharedaddy {
 			margin-bottom: #{0.25 * structure.$size__spacing-unit};
 
 			a {
-				color: colors.$color__text-main;
+				color: var( --newspack-theme-color-text-main );
 				font-size: var( --newspack-theme-font-size-base );
 				font-weight: bold;
 			}

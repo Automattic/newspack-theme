@@ -1,5 +1,4 @@
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 /* Infinite scroll */
@@ -42,20 +41,20 @@
 .site-main #infinite-handle span button:focus {
 	@include utilities.button-transition;
 
-	background: colors.$color__background-button;
-	color: colors.$color__background-body;
+	background: var( --newspack-theme-color-secondary );
+	color: var( --newspack-theme-color-bg-body );
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: 700;
 	line-height: var( --newspack-theme-font-line-height-heading );
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 
 	&:hover {
-		background: colors.$color__background-button-hover;
+		background: var( --newspack-theme-color-bg-button-hover );
 		cursor: pointer;
 	}
 
 	&:focus {
-		background: colors.$color__background-button-hover;
+		background: var( --newspack-theme-color-bg-button-hover );
 		outline: thin dotted;
 		outline-offset: -4px;
 	}

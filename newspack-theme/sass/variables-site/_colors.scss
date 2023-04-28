@@ -1,52 +1,40 @@
-@use 'sass:color';
 // Custom Colors - defaults
-$color__primary: #36f;
-$color__primary-variation: #2240d5;
-$color__secondary: #555;
-$color__secondary-variation: color.adjust( $color__secondary, $lightness: -10% );
-$color__highlight: #fed850;
+:root {
+	--newspack-theme-color-primary: #36f; // TODO: rename --newspack-primary-color, --newspack-listings--primary elsewhere
+	--newspack-theme-color-primary-variation: #2240d5;
+	--newspack-theme-color-secondary: #555; // TODO: replace --newspack-secondary-color elsewhere
+	--newspack-theme-color-secondary-variation: #3E3E3E;
+	--newspack-theme-color-highlight: #fed850;
+	--newspack-theme-color-primary-darken-5: #1a53ff; // TODO: find a better approach than being this literal.
+	--newspack-theme-color-primary-darken-10: #0040ff; // TODO: find a better approach than being this literal.
 
-// Backgrounds
-$color__background-body: #fff;
-$color__background-input: #fff;
-$color__background-light: #f0f0f0;
-$color__background-hr: #ccc;
-$color__background-button: $color__secondary;
-$color__background-button-hover: #111;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
-$color__background_selection: color.mix(
-	$color__background-body,
-	$color__primary,
-	75%
-); // lighten( salmon, 22.5% ); // lighten( #0999d4, 48% );
-$color__background-dark: #333;
+	// Backgrounds
+	--newspack-theme-color-bg-body: #fff;
+	--newspack-theme-color-bg-input: var( --newspack-theme-color-bg-body );
+	--newspack-theme-color-bg-light: #f0f0f0;
+	--newspack-theme-color-bg-button-hover: #111;
+	--newspack-theme-color-bg-pre: #eee;
+	--newspack-theme-color-bg-pre-lighten-5: #fbfbfb; // TODO: find a better approach than being this literal.
+	--newspack-theme-color-bg-dark: #333;
+	--newspack-theme-color-bg-dark-lighten-5: #404040; // TODO: find a better approach than being this literal.
+	--newspack-theme-color-bg-dark-darken-5: #262626; // TODO: find a better approach than being this literal.
 
-// Text
-$color__text-main: #111;
-$color__text-light: #515151;
-$color__text-hover: color.adjust( #111, $lightness: 22.5% );
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
+	// Text
+	--newspack-theme-color-text-main: #111;
+	--newspack-theme-color-text-light: #515151;
+	--newspack-theme-color-text-hover: var( --newspack-theme-color-bg-dark-lighten-5 );
+	--newspack-theme-color-text-screen: #21759b;
 
-// Links
-$color__link: $color__secondary;
-$color__link-visited: $color__secondary;
-$color__link-hover: $color__secondary-variation;
+	// Links
+	--newspack-theme-color-link: var( --newspack-theme-color-secondary );
+	--newspack-theme-color-link-hover: var( --newspack-theme-color-secondary-variation );
 
-// Borders
-$color__border: #ccc;
-$color__border-link: #36f;
-$color__border-link-hover: $color__primary-variation;
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: $color__border;
-$color__border-abbr: #666;
-$color__border-light: #e0e0e0;
+	// Borders
+	--newspack-theme-color-border: #ccc;
+	--newspack-theme-color-border-light: #e0e0e0;
 
-// Alert
-$color__alert-yellow: #f0b849;
-$color__alert-red: #cc1818;
-$color__alert-green: #4ab866;
+	// Alert
+	--newspack-theme-color-alert-yellow: #f0b849;
+	--newspack-theme-color-alert-red: #cc1818;
+	--newspack-theme-color-alert-green: #4ab866;
+}

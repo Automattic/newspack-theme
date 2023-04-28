@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 .wp-caption {
@@ -14,7 +13,7 @@
 figcaption,
 .wp-caption-text,
 .swiper-pagination-simple {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 	margin: 0 auto;
 	padding: 0;
 	text-align: left;

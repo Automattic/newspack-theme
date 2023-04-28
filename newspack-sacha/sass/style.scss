@@ -1,9 +1,7 @@
 @use 'theme-description';
-@use 'sass:color';
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 // Header
@@ -11,15 +9,15 @@
 .h-sb {
 	.top-header-contain,
 	.middle-header-contain {
-		background-color: colors.$color__background-dark;
+		background-color: var( --newspack-theme-color-bg-dark );
 	}
 
 	.top-header-contain {
-		border-color: color.adjust( colors.$color__background-dark, $lightness: 5% );
+		border-color: var( --newspack-theme-color-bg-dark-lighten-5 );
 	}
 
 	.bottom-header-contain {
-		background-color: color.adjust( colors.$color__background-dark, $lightness: -5% );
+		background-color: var( --newspack-theme-color-bg-dark-darken-5 );
 	}
 }
 
@@ -27,7 +25,7 @@
 .h-sub.h-sb.single-featured-image-beside {
 	@include utilities.media( tablet ) {
 		.middle-header-contain {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 		}
 
 		.alternative-logo {
@@ -58,7 +56,7 @@
 #secondary .widgettitle,
 .article-section-title,
 .cat-links {
-	color: colors.$color__primary;
+	color: var( --newspack-theme-color-primary );
 	margin-bottom: structure.$size__spacing-unit;
 	text-align: center;
 }
@@ -67,6 +65,10 @@
 div.wpnbha .article-section-title,
 .cat-links {
 	font-size: var( --newspack-theme-font-size-xs );
+}
+
+.wpnbha .cat-links a {
+	color: var( --newspack-theme-color-text-light );
 }
 
 .accent-header,
@@ -78,7 +80,7 @@ div.wpnbha .article-section-title,
 
 	&::before,
 	&::after {
-		border-top: 1px solid colors.$color__border;
+		border-top: 1px solid var( --newspack-theme-color-border );
 		content: '';
 		flex: 1 0 0.5rem;
 		height: 1px;
@@ -150,7 +152,7 @@ cite {
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	background-color: colors.$color__primary;
+	background-color: var( --newspack-theme-color-primary );
 	color: #fff;
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
@@ -268,8 +270,8 @@ cite {
 	}
 
 	.entry-subhead {
-		border-bottom: 1px solid colors.$color__border;
-		border-top: 1px solid colors.$color__border;
+		border-bottom: 1px solid var( --newspack-theme-color-border );
+		border-top: 1px solid var( --newspack-theme-color-border );
 		display: block;
 		margin-bottom: structure.$size__spacing-unit;
 		padding: #{0.75 * structure.$size__spacing-unit} 0;
@@ -309,14 +311,14 @@ cite {
 
 @include utilities.media( tablet ) {
 	.h-sb .featured-image-beside {
-		background-color: colors.$color__background-pre;
+		background-color: var( --newspack-theme-color-bg-pre );
 
 		.entry-header {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 		}
 
 		.cat-links {
-			color: colors.$color__primary;
+			color: var( --newspack-theme-color-primary );
 		}
 	}
 
@@ -333,12 +335,12 @@ cite {
 }
 
 .entry .entry-footer {
-	color: colors.$color__primary;
+	color: var( --newspack-theme-color-primary );
 	text-align: center;
 
 	a,
 	a:hover {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 	}
 }
 
@@ -348,13 +350,13 @@ cite {
 	}
 
 	a {
-		background: colors.$color__background-pre;
-		color: colors.$color__text-main;
+		background: var( --newspack-theme-color-bg-pre );
+		color: var( --newspack-theme-color-text-main );
 		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
 		padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 		&:hover {
-			background: color.adjust( colors.$color__background-pre, $lightness: 5% );
+			background: var( --newspack-theme-color-bg-pre-lighten-5);
 		}
 	}
 
@@ -378,7 +380,7 @@ cite {
 	}
 
 	h2 {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		margin: 0;
 
 		@include utilities.media( tablet ) {
@@ -496,11 +498,11 @@ cite {
 
 .site-footer {
 	background-color: #f1f1f1;
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 
 	.widget .widget-title,
 	.widget .widgettitle {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-primary );
 		font-weight: bold;
 	}
 
@@ -521,7 +523,7 @@ cite {
 }
 
 .site-info {
-	background-color: colors.$color__background-dark;
+	background-color: var( --newspack-theme-color-bg-dark );
 
 	.site-info-contain:first-child,
 	.widget-area .wrapper {
@@ -532,7 +534,7 @@ cite {
 	a,
 	a:hover,
 	a:visited {
-		color: colors.$color__background-body;
+		color: var( --newspack-theme-color-bg-body );
 	}
 }
 
