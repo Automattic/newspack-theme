@@ -1,3 +1,15 @@
+# [1.71.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.70.1...v1.71.0-alpha.1) (2023-04-28)
+
+
+### Bug Fixes
+
+* correct the default color used for the highlight menu label ([#2093](https://github.com/Automattic/newspack-theme/issues/2093)) ([99c4031](https://github.com/Automattic/newspack-theme/commit/99c4031efccb5bdded4ece97392ae6c8d24efca1))
+
+
+### Features
+
+* add archive title for custom taxonomies ([#2101](https://github.com/Automattic/newspack-theme/issues/2101)) ([2dc5fbb](https://github.com/Automattic/newspack-theme/commit/2dc5fbb0e6d8aab91561d01eb1833d3b315c1d08))
+
 ## [1.70.1](https://github.com/Automattic/newspack-theme/compare/v1.70.0...v1.70.1) (2023-04-24)
 
 
