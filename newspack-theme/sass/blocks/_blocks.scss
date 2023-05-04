@@ -686,12 +686,13 @@ p.has-background {
 //! Button
 .wp-block-buttons {
 	--wp--style--block-gap: 0.5rem;
+	.wp-block-button__link {
+		color: var( --newspack-theme-color-against-secondary );
+	}
 }
 
 .wp-block-button__link {
 	background-color: var( --newspack-theme-color-secondary );
-	color: var( --newspack-theme-color-against-secondary );
-
 	@include utilities.button-transition;
 
 	border: none;
