@@ -321,7 +321,7 @@
 	.middle-header-contain,
 	.middle-header-contain .nav1 .main-menu > li,
 	.middle-header-contain .nav1 .main-menu > li > a {
-		color: #fff;
+		color:  var( --newspack-theme-color-against-primary );
 	}
 
 	.top-header-contain {

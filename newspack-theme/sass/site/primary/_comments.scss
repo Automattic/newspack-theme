@@ -214,7 +214,7 @@
 				color: inherit;
 
 				&:hover {
-					color: var( --newspack-theme-color-primary-variation );
+					color: var( --newspack-theme-color-primary-against-white );
 				}
 			}
 		}
@@ -259,7 +259,7 @@
 			}
 
 			&:hover {
-				color: var( --newspack-theme-color-primary-variation );
+				color: var( --newspack-theme-color-primary-against-white );
 				text-decoration: none;
 			}
 		}

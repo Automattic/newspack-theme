@@ -40,6 +40,12 @@ function newspack_custom_colors_css() {
 			:root .editor-styles-wrapper { ' . $css_variables . ' }
 		';
 
+		$theme_css .= '
+			input[type="checkbox"]::before {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' width=\'24\' height=\'24\'%3E%3Cpath d=\'M16.7 7.1l-6.3 8.5-3.3-2.5-.9 1.2 4.5 3.4L17.9 8z\' fill=\'' . esc_attr( $colors['secondary_contrast'] ) . '\'%3E%3C/path%3E%3C/svg%3E");
+			}
+		';
+
 		if ( true === get_theme_mod( 'header_solid_background', false ) ) {
 			$theme_css .= '
 				.mobile-sidebar {

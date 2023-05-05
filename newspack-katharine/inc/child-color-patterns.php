@@ -21,12 +21,10 @@ function newspack_katharine_custom_colors_css() {
 		}
 	}
 
-	$theme      = '';
+	$theme_css  = '';
 	$editor_css = '';
 
 	// Set colour contrasts.
-	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
-	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
 	$header_color_contrast    = newspack_get_color_contrast( $header_color );
 
 	if ( true === get_theme_mod( 'header_solid_background', false ) ) {
