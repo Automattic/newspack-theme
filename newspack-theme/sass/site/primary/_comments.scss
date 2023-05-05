@@ -259,7 +259,7 @@
 			}
 
 			&:hover {
-				color: var( --newspack-theme-color-against-primary );
+				color: var( --newspack-theme-color-primary-variation );
 				text-decoration: none;
 			}
 		}
@@ -440,7 +440,7 @@
 	&:hover,
 	&:focus {
 		background: transparent;
-		color: var( --newspack-theme-color-against-primary );
+		color: var( --newspack-theme-color-primary-against-white );
 	}
 }
 
