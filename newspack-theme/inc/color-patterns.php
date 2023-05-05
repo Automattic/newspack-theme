@@ -51,7 +51,8 @@ function newspack_custom_colors_css() {
 				.mobile-sidebar a,
 				.mobile-sidebar a:visited,
 				.mobile-sidebar .nav1 .sub-menu > li > a,
-				.mobile-sidebar .nav1 ul.main-menu > li > a {
+				.mobile-sidebar .nav1 ul.main-menu > li > a,
+				.mobile-sidebar .nav3 a {
 					color: ' . esc_attr( $colors['header_contrast'] ) . ';
 				}
 			';
@@ -115,6 +116,7 @@ function newspack_custom_colors_css() {
 				$theme_css .= '
 					.mobile-sidebar .nav3 .menu-highlight a {
 						background: ' . esc_attr( newspack_adjust_brightness( $colors['header'], -20 ) ) . ';
+						color: ' . esc_attr( $colors['header_contrast'] ) . ';
 					}
 					.h-sb .site-header .nav3 a {
 						background-color: ' . newspack_adjust_brightness( $colors['header'], -17 ) . ';
