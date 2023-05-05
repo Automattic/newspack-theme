@@ -358,7 +358,8 @@
 	color: var( --newspack-theme-color-against-primary );
 
 	a,
-	.nav1 .sub-menu > li > a {
+	.nav1 .sub-menu > li > a,
+	.nav3 a {
 		color: var( --newspack-theme-color-against-primary );
 	}
 
