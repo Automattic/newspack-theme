@@ -278,9 +278,9 @@ amp-script .cat-links {
 
 .entry .entry-content {
 	a.button {
+		color: var( --newspack-theme-color-against-secondary );
 		text-decoration: none;
 
-		&,
 		&:hover {
 			color: var( --newspack-theme-color-bg-body );
 		}
