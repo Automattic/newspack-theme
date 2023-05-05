@@ -220,6 +220,10 @@ h1.wp-block-post-title {
 	.more-link + .entry-meta {
 		margin-top: #{0.75 * structure.$size__spacing-unit};
 	}
+
+	.cat-links a {
+		color: inherit;
+	}
 }
 
 /** === Newspack Carousel === */
