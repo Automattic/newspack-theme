@@ -1,7 +1,6 @@
 @use '../variables-site/variables-site';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 .newspack_global_ad {
@@ -15,11 +14,11 @@
 	}
 
 	&.global_above_header {
-		background-color: colors.$color__background-pre;
+		background-color: var( --newspack-theme-color-bg-pre );
 	}
 
 	&.sticky {
-		background-color: colors.$color__background-body;
+		background-color: var( --newspack-theme-color-bg-body );
 		box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
 		bottom: 0;
 		display: none;
@@ -29,10 +28,10 @@
 
 		button {
 			align-items: center;
-			background-color: colors.$color__background-body;
+			background-color: var( --newspack-theme-color-bg-body );
 			border-radius: 0.75rem 0 0;
 			box-shadow: 0 -1px 1px 0 rgba( 0, 0, 0, 0.2 );
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 			display: flex;
 			font-size: 1.25rem;
 			height: 1.75rem;
@@ -77,17 +76,14 @@
 
 	button,
 	.amp-sticky-ad-close-button {
-		background-color: colors.$color__background-body;
+		background-color: var( --newspack-theme-color-bg-body );
 		background-image: none;
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		font-size: 1.25rem;
 
 		&::before {
 			content: '×';
-			bottom: 0;
-			left: 0;
-			right: 0;
-			top: 0;
+			inset: 0;
 		}
 
 		&:focus,

@@ -1,5 +1,4 @@
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 // Index/archive navigation
@@ -39,7 +38,7 @@
 			}
 
 			&.current {
-				background-color: colors.$color__text-light;
+				background-color: var( --newspack-theme-color-text-light );
 				color: #fff;
 			}
 		}
@@ -104,7 +103,7 @@
 	}
 
 	.current {
-		background-color: colors.$color__text-light;
+		background-color: var( --newspack-theme-color-text-light );
 		color: #fff;
 	}
 }

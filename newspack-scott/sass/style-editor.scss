@@ -7,7 +7,6 @@ Newspack Scott Editor Styles
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 .accent-header,
@@ -17,7 +16,7 @@ Newspack Scott Editor Styles
 	font-size: var( --newspack-theme-font-size-sm );
 
 	&::before {
-		background-color: colors.$color__primary;
+		background-color: var( --newspack-theme-color-primary );
 		content: '';
 		display: inline-block;
 		height: 0.75em;
@@ -28,8 +27,9 @@ Newspack Scott Editor Styles
 	}
 }
 
-.entry-meta .byline a {
-	color: colors.$color__text-light;
+.entry-meta .byline a,
+.wpnbha .entry-meta .byline a {
+	color: var( --newspack-theme-color-text-light );
 }
 
 /* Avatar */
@@ -71,7 +71,7 @@ Newspack Scott Editor Styles
 		&::before,
 		&::after {
 			border-top: 2px solid;
-			border-top-color: colors.$color__primary;
+			border-top-color: var( --newspack-theme-color-primary );
 			content: '';
 			display: block;
 			position: absolute;
@@ -98,7 +98,7 @@ Newspack Scott Editor Styles
 	}
 
 	blockquote p:first-of-type::before {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-primary );
 		content: '\201C';
 		display: inline-block;
 		font-family: var( --newspack-theme-font-heading );

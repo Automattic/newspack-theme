@@ -1,7 +1,6 @@
 @use '../variables-site/variables-site';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 // Category replacement - tag
@@ -14,7 +13,7 @@
 	button {
 		align-items: center;
 		background: transparent;
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 		display: inline-flex;
 		margin-left: #{0.15 * structure.$size__spacing-unit};
 		padding: 0;
@@ -46,8 +45,8 @@
 .sponsor-label,
 amp-script .sponsor-label {
 	.flag {
-		background: colors.$color__highlight;
-		color: colors.$color__text-main;
+		background: var( --newspack-theme-color-highlight );
+		color: var( --newspack-theme-color-text-main );
 		line-height: 1;
 		padding: 0.3em 0.5em;
 		text-transform: uppercase;
@@ -101,7 +100,7 @@ amp-script .sponsor-label {
 	margin-right: #{0.25 * structure.$size__spacing-unit};
 
 	@include utilities.media( mobile ) {
-		border-right: 1px solid colors.$color__border;
+		border-right: 1px solid var( --newspack-theme-color-border );
 		margin: 0 #{0.75 * structure.$size__spacing-unit} 0 0;
 	}
 
@@ -177,7 +176,7 @@ amp-script .sponsor-label {
 			margin-top: structure.$size__spacing-unit;
 
 			@include utilities.media( desktop ) {
-				border-left: 1px solid colors.$color__border;
+				border-left: 1px solid var( --newspack-theme-color-border );
 				margin-top: 0;
 				padding-left: 1rem;
 			}
@@ -262,7 +261,7 @@ amp-script .sponsor-label {
 // Sponsor bio when author bio is visible
 .sponsors-show-authors {
 	.sponsor-bio {
-		border: solid colors.$color__border;
+		border: solid var( --newspack-theme-color-border );
 		border-width: 2px 0 1px;
 		padding: structure.$size__spacing-unit 0;
 
@@ -371,9 +370,9 @@ amp-script .sponsor-label {
 // Underwritten content
 .sponsor-uw-info {
 	align-items: center;
-	background: colors.$color__background-pre;
-	border: 1px solid colors.$color__border;
-	border-left: 4px solid colors.$color__primary;
+	background: var( --newspack-theme-color-bg-pre );
+	border: 1px solid var( --newspack-theme-color-border );
+	border-left: 4px solid var( --newspack-theme-color-primary );
 	display: flex;
 	font-size: 80%;
 	padding: structure.$size__spacing-unit;

@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 input[type='text'],
@@ -19,8 +18,8 @@ input[type='zip'],
 input[type='color'],
 textarea {
 	backface-visibility: hidden;
-	background: colors.$color__background-input;
-	border: solid 1px colors.$color__border;
+	background: var( --newspack-theme-color-bg-input );
+	border: solid 1px var( --newspack-theme-color-border );
 	box-sizing: border-box;
 	outline: none;
 	padding: #{0.36 * structure.$size__spacing-unit} #{0.66 * structure.$size__spacing-unit};
@@ -29,8 +28,8 @@ textarea {
 	border-radius: 0;
 
 	&:focus {
-		border-color: colors.$color__text-main;
-		outline: thin solid rgb( colors.$color__text-main, 0.25 );
+		border-color: var( --newspack-theme-color-text-main );
+		outline: thin solid rgb( var( --newspack-theme-color-text-main ), 0.25 );
 		outline-offset: -4px;
 	}
 }
@@ -58,7 +57,7 @@ form {
 input[type='checkbox'] {
 	appearance: none;
 	background: white;
-	border: solid 1px colors.$color__border;
+	border: solid 1px var( --newspack-theme-color-border );
 	border-radius: 2px;
 	color: white;
 	cursor: pointer;
@@ -81,7 +80,7 @@ input[type='checkbox'] {
 	}
 
 	&:checked {
-		background: colors.$color__background-button;
+		background: var( --newspack-theme-color-secondary );
 		border-color: transparent;
 
 		&::before {
@@ -90,7 +89,7 @@ input[type='checkbox'] {
 	}
 
 	&:focus {
-		outline: 1.5px solid colors.$color__background-button;
+		outline: 1.5px solid var( --newspack-theme-color-secondary );
 		outline-offset: 1px;
 	}
 

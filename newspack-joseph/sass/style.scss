@@ -2,7 +2,6 @@
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 /* Body */
@@ -14,7 +13,7 @@ body {
 
 /* Header */
 .top-header-contain {
-	background-color: colors.$color__text-main;
+	background-color: var( --newspack-theme-color-text-main );
 }
 
 .bottom-header-contain {
@@ -41,11 +40,11 @@ body {
 	.bottom-header-contain,
 	.middle-header-contain,
 	.top-header-contain {
-		background-color: colors.$color__text-main;
+		background-color: var( --newspack-theme-color-text-main );
 	}
 
 	.top-header-contain {
-		border-bottom-color: colors.$color__background-body;
+		border-bottom-color: var( --newspack-theme-color-bg-body );
 	}
 }
 
@@ -180,7 +179,7 @@ div.wpnbha .article-section-title,
 
 /* Navigation */
 .mobile-sidebar {
-	background: colors.$color__text-main;
+	background: var( --newspack-theme-color-text-main );
 }
 
 .site-header {
@@ -189,7 +188,7 @@ div.wpnbha .article-section-title,
 			.sub-menu {
 				a:hover,
 				a:focus {
-					background: colors.$color__text-main;
+					background: var( --newspack-theme-color-text-main );
 				}
 			}
 		}
@@ -242,10 +241,10 @@ div.wpnbha .article-section-title,
 .h-sb.single-featured-image-beside {
 	.featured-image-beside {
 		@include utilities.media( tablet ) {
-			background-color: colors.$color__text-main;
+			background-color: var( --newspack-theme-color-text-main );
 
 			.entry-header {
-				color: colors.$color__background-body;
+				color: var( --newspack-theme-color-bg-body );
 			}
 		}
 	}
@@ -270,11 +269,11 @@ div.wpnbha .article-section-title,
 .entry-meta .byline {
 	a,
 	a:visited {
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 	}
 
 	a:hover {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 	}
 }
 
@@ -292,12 +291,12 @@ div.wpnbha .article-section-title,
 
 .accent-header:not( .widget-title )::before,
 .cat-links::before {
-	background: colors.$color__text-main;
+	background: var( --newspack-theme-color-text-main );
 }
 
 /* Author Bio */
 .author-bio .accent-header {
-	color: colors.$color__text-main;
+	color: var( --newspack-theme-color-text-main );
 	font-size: var( --newspack-theme-font-size-base );
 	margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 
@@ -333,7 +332,7 @@ input[type='datetime-local'],
 input[type='color'],
 textarea {
 	&:focus {
-		outline-color: colors.$color__text-main;
+		outline-color: var( --newspack-theme-color-text-main );
 	}
 }
 
@@ -428,7 +427,7 @@ hr {
 
 /* Archive */
 .archive .page-title {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 }
 
 /* Sidebar */
@@ -442,12 +441,12 @@ hr {
 #colophon {
 	&,
 	.social-navigation a {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 	}
 
 	.widget-title,
 	.widgettitle {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		font-size: var( --newspack-theme-font-size-base );
 	}
 }
@@ -471,7 +470,7 @@ hr {
 .site-content .wpnbha {
 	&.is-style-borders {
 		article {
-			border-color: colors.$color__text-main;
+			border-color: var( --newspack-theme-color-text-main );
 		}
 	}
 }
@@ -481,7 +480,7 @@ hr {
 .entry-content {
 	.newspack-lightbox {
 		.newspack-popup-wrapper {
-			box-shadow: 0 0 0 1px colors.$color__text-main;
+			box-shadow: 0 0 0 1px var( --newspack-theme-color-text-main );
 			margin: 0.5rem;
 		}
 
@@ -522,6 +521,6 @@ hr {
 .sponsors-show-authors {
 	div.sponsor-bio,
 	div.sponsor-bio + .sponsor-bio {
-		border-color: colors.$color__text-main;
+		border-color: var( --newspack-theme-color-text-main );
 	}
 }

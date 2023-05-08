@@ -1,5 +1,4 @@
 // Import the default variable values.
-@use 'sass:color';
 @use '../../../newspack-theme/sass/variables-site/colors';
 @use '../../../newspack-theme/sass/variables-site/fonts';
 
@@ -57,14 +56,13 @@
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
-colors.$color__text-light: color.adjust( colors.$color__text-main, $lightness: 20% );
-colors.$color__background-hr: color.adjust( colors.$color__text-main, $lightness: 20% );
-colors.$color__border: colors.$color__text-main;
-colors.$color__background-button: colors.$color__text-main;
-colors.$color__secondary-variation: color.adjust( colors.$color__text-main, $lightness: 20% );
-colors.$color__background-button-hover: color.adjust( colors.$color__text-main, $lightness: 20% );
-
 :root {
 	--newspack-theme-font-heading: 'Old Standard TT', georgia, serif;
 	--newspack-theme-font-body: 'EB Garamond', georgia, serif;
+	--newspack-theme-color-text-light: #444;
+	--newspack-theme-color-bg-hr: #444;
+	--newspack-theme-color-border: var( --newspack-theme-color-text-main );
+	--newspack-theme-color-bg-button: var( --newspack-theme-color-text-main );
+	--newspack-theme-color-bg-button-hover: #444;
+	--newspack-theme-color-secondary-variation: #444;
 }

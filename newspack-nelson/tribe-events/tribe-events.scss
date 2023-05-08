@@ -7,7 +7,6 @@
 // Import TEC baseline styles
 @use '../../newspack-theme/sass/plugins/the-events-calendar';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 // Theme-specific styles
@@ -17,11 +16,11 @@
 
 // Overlap styles
 .tec-wrapper {
-	background-color: colors.$color__background-body;
+	background-color: var( --newspack-theme-color-bg-body );
 	padding-top: structure.$size__spacing-unit 0;
 
 	@include utilities.media( tablet ) {
-		border-top: 4px solid colors.$color__primary-variation;
+		border-top: 4px solid var( --newspack-theme-color-primary-variation );
 		padding: #{3 * structure.$size__spacing-unit} #{2 * structure.$size__spacing-unit} 0;
 	}
 

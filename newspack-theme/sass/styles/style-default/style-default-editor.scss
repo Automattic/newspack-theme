@@ -1,10 +1,9 @@
-@use '../../variables-site/colors';
 @use '../../variables-site/structure';
 
 .accent-header,
 .article-section-title {
-	border-bottom: 4px solid colors.$color__border;
-	color: colors.$color__primary;
+	border-bottom: 4px solid var( --newspack-theme-color-border );
+	color: var( --newspack-theme-color-primary );
 	font-size: var( --newspack-theme-font-size-sm );
 	margin-top: 0;
 	margin-bottom: #{structure.$size__spacing-unit * 0.75};

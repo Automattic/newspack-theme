@@ -1,7 +1,5 @@
-@use '../variables-site/colors';
-
 .site-breadcrumb {
-	color: colors.$color__text-light;
+	color: var( --newspack-theme-color-text-light );
 
 	.wrapper {
 		padding: 0.5em 0;
@@ -14,7 +12,7 @@
 	}
 
 	.breadcrumb_last {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 	}
 
 	// Hide on homepage and if the Featured Image is Behind or Beside
@@ -29,7 +27,7 @@
 		padding-top: 0.25rem;
 
 		.wrapper {
-			border-top: 1px solid colors.$color__border;
+			border-top: 1px solid var( --newspack-theme-color-border );
 		}
 	}
 }

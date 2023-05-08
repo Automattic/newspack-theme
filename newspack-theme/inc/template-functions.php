@@ -340,9 +340,11 @@ function newspack_get_the_archive_title() {
 	} elseif ( is_post_type_archive() ) {
 		$title = esc_html__( 'Post Type Archives: ', 'newspack' ) . '<span class="page-description">' . post_type_archive_title( '', false ) . '</span>';
 	} elseif ( is_tax() ) {
-		$tax = get_taxonomy( get_queried_object()->taxonomy );
+		$tax  = get_taxonomy( get_queried_object()->taxonomy );
+		$term = get_queried_object();
+
 		/* translators: %s: Taxonomy singular name */
-		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name );
+		$title = sprintf( esc_html__( '%s Archives:', 'newspack' ), $tax->labels->singular_name ) . '<span class="page-description">' . $term->name . '</span>';
 	} else {
 		$title = esc_html__( 'Archives:', 'newspack' );
 	}

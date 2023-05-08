@@ -1,4 +1,3 @@
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 .highlight-menu-contain {
@@ -32,13 +31,13 @@
 	}
 
 	.menu-label {
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-secondary );
 		font-weight: bold;
 	}
 
 	a,
 	a:visited {
-		color: colors.$color__link;
+		color: var( --newspack-theme-color-link );
 	}
 }
 

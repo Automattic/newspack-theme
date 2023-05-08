@@ -53,7 +53,6 @@ function newspack_sacha_custom_colors_css() {
 		}
 
 		.has-drop-cap:not(:focus)::first-letter {
-			background-color: ' . esc_html( $primary_color ) . ';
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 	';
@@ -110,7 +109,6 @@ function newspack_sacha_custom_colors_css() {
 		}
 
 		.block-editor-block-list__layout .block-editor-block-list__block.has-drop-cap:not(:focus)::first-letter {
-			background-color: ' . esc_html( $primary_color ) . ';
 			color: ' . esc_html( $primary_color_contrast ) . ';
 		}
 

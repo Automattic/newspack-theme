@@ -1,7 +1,6 @@
 @use 'sass:math';
 @use '../../mixins/mixins-master';
 @use '../../mixins/utilities';
-@use '../../variables-site/colors';
 @use '../../variables-site/structure';
 
 .comment-content a {
@@ -141,7 +140,7 @@
 	.pingback,
 	.trackback {
 		.comment-body {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			font-family: var( --newspack-theme-font-heading );
 			font-size: var( --newspack-theme-font-size-xs );
 			font-weight: 500;
@@ -156,7 +155,7 @@
 			}
 
 			.comment-edit-link {
-				color: colors.$color__text-light;
+				color: var( --newspack-theme-color-text-light );
 				font-family: var( --newspack-theme-font-heading );
 				font-weight: 500;
 			}
@@ -215,13 +214,13 @@
 				color: inherit;
 
 				&:hover {
-					color: colors.$color__primary-variation;
+					color: var( --newspack-theme-color-primary-variation );
 				}
 			}
 		}
 
 		.post-author-badge {
-			background: colors.$color__primary;
+			background: var( --newspack-theme-color-primary );
 			border-radius: 100%;
 			color: #fff;
 			display: inline-block;
@@ -252,7 +251,7 @@
 		.comment-edit-link {
 			display: inline;
 			font-weight: 500;
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			vertical-align: baseline;
 
 			time {
@@ -260,7 +259,7 @@
 			}
 
 			&:hover {
-				color: colors.$color__primary-variation;
+				color: var( --newspack-theme-color-primary-variation );
 				text-decoration: none;
 			}
 		}
@@ -270,13 +269,13 @@
 		}
 
 		.edit-link-sep {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			margin: 0 0.2em;
 			vertical-align: baseline;
 		}
 
 		.edit-link {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 
 			svg {
 				transform: scale( 0.8 );
@@ -292,7 +291,7 @@
 			z-index: 1;
 
 			&:hover {
-				color: colors.$color__primary;
+				color: var( --newspack-theme-color-primary );
 			}
 		}
 	}
@@ -337,7 +336,7 @@
 	font-weight: 500;
 
 	&:hover {
-		color: colors.$color__primary-variation;
+		color: var( --newspack-theme-color-primary-variation );
 	}
 }
 
@@ -381,7 +380,7 @@
 	label {
 		font-family: var( --newspack-theme-font-heading );
 		font-size: var( --newspack-theme-font-size-xs );
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 	}
 
 	.comment-form-author,
@@ -425,8 +424,8 @@
 	align-items: center;
 	background: transparent;
 	border-radius: 0;
-	border-top: 1px solid colors.$color__border;
-	color: colors.$color__text-main;
+	border-top: 1px solid var( --newspack-theme-color-border );
+	color: var( --newspack-theme-color-text-main );
 	display: flex;
 	font-size: var( --newspack-theme-font-size-sm );
 	justify-content: center;
@@ -441,7 +440,7 @@
 	&:hover,
 	&:focus {
 		background: transparent;
-		color: colors.$color__primary;
+		color: var( --newspack-theme-color-primary );
 	}
 }
 

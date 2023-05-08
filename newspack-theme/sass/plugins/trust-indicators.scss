@@ -1,7 +1,6 @@
 @use '../variables-site/variables-site';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 .trust-label {
@@ -22,7 +21,7 @@
 .single .cat-links {
 	vertical-align: middle;
 	.type-of-work {
-		color: colors.$color__text-main;
+		color: var( --newspack-theme-color-text-main );
 		margin-right: 0.5em;
 	}
 }

@@ -7,7 +7,6 @@ Newspack Sacha Editor Styles
 @use 'variables-style/variables-style';
 @use '../../newspack-theme/sass/style-editor-base';
 @use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/colors';
 @use '../../newspack-theme/sass/variables-site/structure';
 
 .editor-post-title__block .editor-post-title__input,
@@ -19,7 +18,7 @@ h1.wp-block-post-title,
 .accent-header,
 .article-section-title {
 	align-items: center;
-	color: colors.$color__primary;
+	color: var( --newspack-theme-color-primary );
 	display: flex;
 	font-size: var( --newspack-theme-font-size-xs );
 	margin-bottom: #{1.5 * structure.$size__spacing-unit};
@@ -29,7 +28,7 @@ h1.wp-block-post-title,
 
 	&::before,
 	&::after {
-		background: colors.$color__border;
+		background: var( --newspack-theme-color-border );
 		content: '';
 		flex: 1 0 0.5rem;
 		height: 1px;
@@ -46,7 +45,7 @@ h1.wp-block-post-title,
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	background-color: colors.$color__primary;
+	background-color: var( --newspack-theme-color-primary );
 	color: #fff;
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;

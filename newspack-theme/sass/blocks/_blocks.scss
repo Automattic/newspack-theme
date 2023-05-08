@@ -1,7 +1,6 @@
 @use 'sass:meta';
 @use '../mixins/mixins-master';
 @use '../mixins/utilities';
-@use '../variables-site/colors';
 @use '../variables-site/structure';
 
 /* !Block styles */
@@ -499,12 +498,12 @@ p.has-background {
 	}
 
 	&.is-style-solid-color {
-		background-color: colors.$color__primary;
+		background-color: var( --newspack-theme-color-primary );
 		padding-left: 0;
 		padding-right: 0;
 
 		a {
-			color: colors.$color__background-body;
+			color: var( --newspack-theme-color-bg-body );
 		}
 
 		cite {
@@ -583,7 +582,7 @@ p.has-background {
 
 		a,
 		a:visited {
-			color: colors.$color__text-main;
+			color: var( --newspack-theme-color-text-main );
 			text-decoration: none;
 		}
 
@@ -592,7 +591,7 @@ p.has-background {
 		}
 
 		.wp-block-latest-comments__comment-date {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			font-size: 0.9em;
 			font-weight: normal;
 			margin: #{0.15 * structure.$size__spacing-unit} 0 0;
@@ -652,7 +651,7 @@ p.has-background {
 }
 
 .wp-block-button__link {
-	background-color: colors.$color__background-button;
+	background-color: var( --newspack-theme-color-secondary );
 	color: #fff;
 
 	@include utilities.button-transition;
@@ -692,17 +691,22 @@ p.has-background {
 	border-width: 2px;
 	border-style: solid;
 	border-color: currentcolor;
-	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
 
 	&:not( .has-background ) {
 		background: transparent;
 	}
 }
 
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
+}
+
 .is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
-.is-style-outline > .wp-block-button__link:not( .has-text-color ) {
-	color: colors.$color__background-button;
+.is-style-outline > .wp-block-button__link:not( .has-text-color ),
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	color: var( --newspack-theme-color-secondary );
 }
 
 .wp-block-button {
@@ -712,7 +716,7 @@ p.has-background {
 		&:active,
 		&:focus {
 			color: #fff !important; // to override !important from Gutenberg styles
-			background: colors.$color__background-button-hover !important; // to override !important from Gutenberg styles
+			background: var( --newspack-theme-color-bg-button-hover ) !important; // to override !important from Gutenberg styles
 		}
 
 		&:focus {
@@ -723,7 +727,7 @@ p.has-background {
 		&.is-style-outline:hover,
 		&.is-style-outline:active,
 		&.is-style-outline:focus {
-			border-color: colors.$color__background-button-hover;
+			border-color: var( --newspack-theme-color-bg-button-hover );
 		}
 	}
 }
@@ -800,7 +804,7 @@ p.has-background {
 		line-height: var( --newspack-theme-font-line-height-heading );
 	}
 	time {
-		color: colors.$color__text-light;
+		color: var( --newspack-theme-color-text-light );
 		font-family: var( --newspack-theme-font-heading );
 	}
 	.wp-block-latest-posts__post-excerpt {
@@ -809,7 +813,7 @@ p.has-background {
 
 	&.is-grid {
 		li {
-			border-top: 2px solid colors.$color__border;
+			border-top: 2px solid var( --newspack-theme-color-border );
 			padding-top: ( 1 * structure.$size__spacing-unit );
 			margin-bottom: ( 2 * structure.$size__spacing-unit );
 			a {
@@ -850,7 +854,7 @@ p.has-background {
 	&:not( .is-large ),
 	&:not( .is-style-large ) {
 		border-width: 2px;
-		border-color: colors.$color__link;
+		border-color: var( --newspack-theme-color-link );
 		padding-top: 0;
 		padding-bottom: 0;
 	}
@@ -929,7 +933,7 @@ p.has-background {
 hr {
 	background-color: transparent;
 	border: 0;
-	border-top: 1px solid colors.$color__border;
+	border-top: 1px solid var( --newspack-theme-color-border );
 	height: 1px;
 	margin: ( 2 * structure.$size__spacing-unit ) auto;
 	max-width: #{5 * structure.$size__spacing-unit};
@@ -947,7 +951,7 @@ hr {
 		text-align: center;
 
 		&::before {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			font-size: var( --newspack-theme-font-size-lg );
 			letter-spacing: var( --newspack-theme-font-size-sm );
 			padding-left: var( --newspack-theme-font-size-sm );
@@ -980,7 +984,7 @@ hr {
 .wp-block-table {
 	&.is-style-stripes td,
 	&.is-style-stripes th {
-		border-color: colors.$color__text-light;
+		border-color: var( --newspack-theme-color-text-light );
 	}
 
 	&.aligncenter {
@@ -1000,7 +1004,7 @@ hr {
 
 		border: none;
 		border-radius: 5px;
-		background: colors.$color__background-button;
+		background: var( --newspack-theme-color-secondary );
 		font-family: var( --newspack-theme-font-heading );
 		font-size: inherit;
 		line-height: var( --newspack-theme-font-line-height-heading );
@@ -1013,7 +1017,7 @@ hr {
 
 		&:hover,
 		&:focus {
-			background: colors.$color__background-button-hover;
+			background: var( --newspack-theme-color-bg-button-hover );
 			color: #fff;
 			cursor: pointer;
 		}
@@ -1038,7 +1042,7 @@ hr {
 
 	&.wp-block-search__button-inside {
 		.wp-block-search__inside-wrapper {
-			border-color: colors.$color__border;
+			border-color: var( --newspack-theme-color-border );
 			padding: 0;
 
 			input {
@@ -1062,7 +1066,7 @@ hr {
 			}
 
 			&:not( .has-text-color ) {
-				color: colors.$color__text-main;
+				color: var( --newspack-theme-color-text-main );
 			}
 		}
 	}
@@ -1281,14 +1285,14 @@ hr {
 		padding: 0;
 
 		h5 {
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 		}
 	}
 
 	.organic-profile-social {
 		.social-link {
 			border: 0;
-			color: colors.$color__text-light;
+			color: var( --newspack-theme-color-text-light );
 			display: inline-block;
 			font-size: 16px;
 			height: 32px;
@@ -1336,10 +1340,10 @@ hr {
 }
 
 $colors: (
-	'primary': colors.$color__primary,
-	'primary-variation': colors.$color__primary-variation,
-	'secondary': colors.$color__secondary,
-	'secondary-variation': colors.$color__secondary-variation,
+	'primary': var( --newspack-theme-color-primary ),
+	'primary-variation': var( --newspack-theme-color-primary-variation ),
+	'secondary': var( --newspack-theme-color-secondary ),
+	'secondary-variation': var( --newspack-theme-color-secondary-variation ),
 	'dark-gray': #111,
 	'medium-gray': #767676,
 	'light-gray': #eee,
@@ -1381,15 +1385,15 @@ $colors: (
 .has-grad-1-gradient-background {
 	background-image: linear-gradient(
 		135deg,
-		colors.$color__primary 0%,
-		colors.$color__primary-variation 100%
+		var( --newspack-theme-color-primary ) 0%,
+		var( --newspack-theme-color-primary-variation ) 100%
 	);
 }
 .has-grad-2-gradient-background {
 	background-image: linear-gradient(
 		135deg,
-		colors.$color__secondary 0%,
-		colors.$color__secondary-variation 100%
+		var( --newspack-theme-color-secondary ) 0%,
+		var( --newspack-theme-color-secondary-variation ) 100%
 	);
 }
 .has-grad-3-gradient-background {
@@ -1592,7 +1596,7 @@ $colors: (
 	.entry .entry-content .scaip {
 		.newspack_global_ad,
 		.widget_newspack-ads-widget {
-			background-color: colors.$color__background-pre;
+			background-color: var( --newspack-theme-color-bg-pre );
 			margin-left: calc( 50% - 50vw );
 			margin-right: calc( 50% - 50vw );
 			max-width: 100vw;
