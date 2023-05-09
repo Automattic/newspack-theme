@@ -118,8 +118,11 @@ body:not( .h-sb ) .site-header {
 	}
 }
 
-.h-sb .highlight-menu a {
-	color: #fff;
+.h-sb .highlight-menu {
+	a,
+	.menu-label {
+		color: #fff;
+	}
 }
 
 // Header - sticky
