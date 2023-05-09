@@ -1,3 +1,10 @@
+## [1.71.1](https://github.com/Automattic/newspack-theme/compare/v1.71.0...v1.71.1) (2023-05-09)
+
+
+### Bug Fixes
+
+* bump release version ([fe8c6c5](https://github.com/Automattic/newspack-theme/commit/fe8c6c511d73f66f6d6191ab4b29abb20df8372d))
+
 # [1.71.0](https://github.com/Automattic/newspack-theme/compare/v1.70.1...v1.71.0) (2023-05-08)
 
 
