@@ -1,4 +1,4 @@
-/* globals newspackScreenReaderText */
+/* globals newspackScreenReaderTextSponsors */
 
 /**
  * File amp-fallback.js.
@@ -22,7 +22,7 @@
 				supportLabel.classList.toggle( 'show-info' );
 				// Toggle screen reader text label and aria settings.
 				if ( supportToggleTextDefault === supportToggleTextContain.innerText ) {
-					supportToggleTextContain.innerText = newspackScreenReaderText.close_info;
+					supportToggleTextContain.innerText = newspackScreenReaderTextSponsors.close_info;
 
 					supportInfo.setAttribute( 'aria-expanded', 'true' );
 					supportToggle.setAttribute( 'aria-expanded', 'true' );

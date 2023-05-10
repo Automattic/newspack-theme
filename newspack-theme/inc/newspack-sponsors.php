@@ -30,7 +30,7 @@ function newspack_sponsors_enqueue_scripts() {
 		);
 
 		wp_enqueue_script( 'newspack-amp-fallback-sponsors', get_theme_file_uri( '/js/dist/amp-fallback-newspack-sponsors.js' ), array(), wp_get_theme()->get( 'Version' ), true );
-		wp_localize_script( 'newspack-amp-fallback-sponsors', 'newspackScreenReaderText', $newspack_l10n );
+		wp_localize_script( 'newspack-amp-fallback-sponsors', 'newspackScreenReaderTextSponsors', $newspack_l10n );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_sponsors_enqueue_scripts' );
