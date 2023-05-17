@@ -25,11 +25,11 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 			?>
 
 			<div class="author-bio">
-				<?php if ( $author_avatar ) { ?>
+				<?php if ( $author_avatar ) : ?>
 					<a href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
 						<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
 					</a>
-				<?php } ?>
+				<?php endif; ?>
 
 				<div class="author-bio-text">
 					<div class="author-bio-header">
@@ -84,21 +84,19 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 	}
 
 elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
+	$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
 	?>
 
 <div class="author-bio">
 
-	<?php
-		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
-	if ( $author_avatar ) { 
-		?>
+	<?php if ( $author_avatar ) : ?>
 		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 			<?php
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo $author_avatar;
 			?>
 		</a>
-	<?php } ?>
+	<?php endif; ?>
 
 	<div class="author-bio-text">
 		<div class="author-bio-header">
