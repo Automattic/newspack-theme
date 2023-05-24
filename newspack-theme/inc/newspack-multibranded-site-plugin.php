@@ -15,17 +15,17 @@ add_filter(
 			[
 				'theme_mod_name' => 'primary_color_hex',
 				'label'          => __( 'Primary Color', 'newspack-theme' ),
-				'default'        => newspack_get_primary_color(),
+				'default'        => 'default' !== get_theme_mod( 'theme_colors' ) ? get_theme_mod( 'primary_color_hex', newspack_get_primary_color() ) : newspack_get_primary_color(),
 			],
 			[
 				'theme_mod_name' => 'secondary_color_hex',
 				'label'          => __( 'Secondary Color', 'newspack-theme' ),
-				'default'        => newspack_get_secondary_color(),
+				'default'        => 'default' !== get_theme_mod( 'theme_colors' ) ? get_theme_mod( 'secondary_color_hex', newspack_get_secondary_color() ) : newspack_get_secondary_color(),
 			],
 			[
 				'theme_mod_name' => 'ads_color_hex',
 				'label'          => __( 'Background color to the ads', 'newspack-theme' ),
-				'default'        => '#ffffff',
+				'default'        => get_theme_mod( 'ads_color_hex', '#ffffff' ),
 			],
 		];
 	}
