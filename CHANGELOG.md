@@ -1,3 +1,27 @@
+# [1.72.0](https://github.com/Automattic/newspack-theme/compare/v1.71.1...v1.72.0) (2023-05-24)
+
+
+### Bug Fixes
+
+* prevent sponsor strings from overwriting theme script strings ([#2108](https://github.com/Automattic/newspack-theme/issues/2108)) ([5f70160](https://github.com/Automattic/newspack-theme/commit/5f701603482841bce8bce36568c75d660b1a7a0c))
+
+
+### Features
+
+* inform current colors to multi-branded plugi ([#2102](https://github.com/Automattic/newspack-theme/issues/2102)) ([7142f91](https://github.com/Automattic/newspack-theme/commit/7142f91c7177b11b02a807eb6c4cb206633404a8))
+
+# [1.72.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.71.1...v1.72.0-alpha.1) (2023-05-11)
+
+
+### Bug Fixes
+
+* prevent sponsor strings from overwriting theme script strings ([#2108](https://github.com/Automattic/newspack-theme/issues/2108)) ([5f70160](https://github.com/Automattic/newspack-theme/commit/5f701603482841bce8bce36568c75d660b1a7a0c))
+
+
+### Features
+
+* inform current colors to multi-branded plugi ([#2102](https://github.com/Automattic/newspack-theme/issues/2102)) ([7142f91](https://github.com/Automattic/newspack-theme/commit/7142f91c7177b11b02a807eb6c4cb206633404a8))
+
 ## [1.71.1](https://github.com/Automattic/newspack-theme/compare/v1.71.0...v1.71.1) (2023-05-09)
 
 
