@@ -93,7 +93,7 @@ amp-script .sponsor-label {
 	}
 }
 
-.sponsor-logos {
+.sponsor-logos:not(:empty) {
 	align-items: center;
 	display: inline-flex;
 	line-height: 1;

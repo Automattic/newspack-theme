@@ -494,6 +494,7 @@ div.sharedaddy {
 
 	h2 {
 		font-size: 1em;
+
 		span {
 			color: var( --newspack-theme-color-text-light );
 			display: block;
@@ -505,6 +506,11 @@ div.sharedaddy {
 				display: inline;
 				margin: 0 0 0 0.5em;
 			}
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
 		}
 	}
 

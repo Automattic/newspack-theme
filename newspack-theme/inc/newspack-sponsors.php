@@ -359,10 +359,10 @@ if ( ! function_exists( 'newspack_sponsor_footer_bio' ) ) :
 								<div class="author-bio-header">
 									<h2 class="accent-header">
 										<?php
-										echo esc_html( $sponsor['sponsor_byline'] ) . ' ';
 										if ( '' !== $sponsor['sponsor_url'] ) {
 											echo '<a target="_blank" href="' . esc_url( $sponsor['sponsor_url'] ) . '">';
 										}
+										echo esc_html( $sponsor['sponsor_byline'] ) . ' ';
 										echo esc_html( $sponsor['sponsor_name'] );
 										if ( '' !== $sponsor['sponsor_url'] ) {
 											echo '</a>';

@@ -27,11 +27,17 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 			<div class="author-bio">
 				<div class="author-bio-text">
 					<div class="author-bio-header">
-						<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
+						<?php if ( $author_avatar ) { ?>
+							<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
+								<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
+							</a>
+						<?php } ?>
 
 						<div>
 							<h2 class="accent-header">
-								<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID ), array( 'span' => array( 'class' => array() ) ) ); ?>
+								<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
+									<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID ), array( 'span' => array( 'class' => array() ) ) ); ?>
+								</a>
 							</h2>
 
 							<?php if ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) : ?>
@@ -84,15 +90,20 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 		<div class="author-bio-header">
 			<?php
 				$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 80 );
-			if ( $author_avatar ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				echo $author_avatar;
-			}
-			?>
+				if ( $author_avatar ) { ?>
+				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+					<?php
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo $author_avatar;
+					?>
+				</a>
+			<?php } ?>
 
 			<div>
 				<h2 class="accent-header">
-					<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
+					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+						<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
+					</a>
 				</h2>
 
 				<?php if ( true === get_theme_mod( 'show_author_email', false ) ) : ?>
