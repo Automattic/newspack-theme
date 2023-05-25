@@ -197,7 +197,8 @@ function newspack_custom_colors_css() {
 				.accent-header,
 				#secondary .widgettitle,
 				.article-section-title,
-				.entry .entry-footer a:hover {
+				.entry .entry-footer a:hover,
+				div.author-bio .author-link {
 					color: ' . esc_attr( newspack_color_with_contrast( $colors['primary'] ) ) . ';
 				}
 			';
