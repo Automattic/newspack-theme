@@ -1,3 +1,15 @@
+# [1.73.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.72.0...v1.73.0-alpha.1) (2023-05-25)
+
+
+### Bug Fixes
+
+* remove unnecessary sponsor logo spacing ([#2120](https://github.com/Automattic/newspack-theme/issues/2120)) ([ad66f3f](https://github.com/Automattic/newspack-theme/commit/ad66f3f38975982f4ae4bb8b893d3735f69f1052))
+
+
+### Features
+
+* add links to the author bio ([#2114](https://github.com/Automattic/newspack-theme/issues/2114)) ([3cc0525](https://github.com/Automattic/newspack-theme/commit/3cc052515050e1d9a3958af40f54da1ecb3feae6))
+
 # [1.72.0](https://github.com/Automattic/newspack-theme/compare/v1.71.1...v1.72.0) (2023-05-24)
 
 
