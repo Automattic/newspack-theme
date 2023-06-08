@@ -1,3 +1,15 @@
+# [1.74.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.73.0...v1.74.0-alpha.1) (2023-06-08)
+
+
+### Bug Fixes
+
+* correct highlight menu colour ([#2112](https://github.com/Automattic/newspack-theme/issues/2112)) ([6a18039](https://github.com/Automattic/newspack-theme/commit/6a18039c5d7aebd92efc08e6db6d7b0717871949))
+
+
+### Features
+
+* register header and footer colors to Multibranded plugin ([#2124](https://github.com/Automattic/newspack-theme/issues/2124)) ([7854f97](https://github.com/Automattic/newspack-theme/commit/7854f97232f7cc08bd702c7af82457517520ce7f))
+
 # [1.73.0](https://github.com/Automattic/newspack-theme/compare/v1.72.0...v1.73.0) (2023-06-05)
 
 
