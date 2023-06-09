@@ -974,12 +974,12 @@ div.sharedaddy {
 				.jp-relatedposts-post-thumbs {
 					> * {
 							float: right;
-							width: calc( 100% - 120px );
+							width: 64%;
 						}
 
 					> .jp-relatedposts-post-a:first-child {
 						float: left;
-						width: 100px;
+						width: 33%;
 					}
 				}
 			}
