@@ -29,12 +29,12 @@ add_filter(
 			],
 			[
 				'theme_mod_name' => 'header_color_hex',
-				'label'          => __( 'Header background (Requires the Solid brackroung option to be enabled)', 'newspack-theme' ),
+				'label'          => __( 'Header background (Requires the Solid background option to be enabled)', 'newspack-theme' ),
 				'default'        => get_theme_mod( 'header_color_hex', '#666666' ),
 			],
 			[
 				'theme_mod_name' => 'header_primary_menu_color_hex',
-				'label'          => __( 'Background color to the primary menu (Requires the Solid brackroung option to be enabled)', 'newspack-theme' ),
+				'label'          => __( 'Background color to the primary menu (Requires the Solid background option to be enabled)', 'newspack-theme' ),
 				'default'        => get_theme_mod( 'header_primary_menu_color_hex', '' ),
 			],
 			[
