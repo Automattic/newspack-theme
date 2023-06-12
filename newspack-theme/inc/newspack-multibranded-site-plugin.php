@@ -116,8 +116,9 @@ add_filter(
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function newspack_multibranded_remove_customizer_options( $wp_customize ) {
-	// Remove the footer-specific logo control from Site Identity.
+	// Remove the footer-specific logo controls from Site Identity.
 	$wp_customize->remove_control( 'newspack_footer_logo' );
+	$wp_customize->remove_control( 'footer_logo_size' );
 
 	// Remove the alternative logo control from Header Settings > Subpage Header.
 	$wp_customize->remove_control( 'newspack_alternative_logo' );
