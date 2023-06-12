@@ -173,8 +173,11 @@
 	}
 }
 
-div.author-bio .author-link {
-	color: var( --newspack-theme-color-primary-against-white );
+div.author-bio {
+	.author-link,
+	h2 a {
+		color: var( --newspack-theme-color-primary-against-white );
+	}
 }
 
 /* Archives */
