@@ -1,3 +1,11 @@
+# [1.74.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.74.0-alpha.1...v1.74.0-alpha.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* correct typo in the multi-branded site UI ([#2137](https://github.com/Automattic/newspack-theme/issues/2137)) ([c3106ff](https://github.com/Automattic/newspack-theme/commit/c3106ff7b12ec85d2a81ebb75e689478ee3826c0))
+* move caption check to fix campaigns issue ([#2127](https://github.com/Automattic/newspack-theme/issues/2127)) ([90e9555](https://github.com/Automattic/newspack-theme/commit/90e95556776b2823fbc799a0ac21257e5fdfdb2c))
+
 # [1.74.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.73.0...v1.74.0-alpha.1) (2023-06-08)
 
 
