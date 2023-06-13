@@ -863,10 +863,10 @@ div.sharedaddy {
 		@include utilities.media( tablet ) {
 			margin-bottom: #{2 * structure.$size__spacing-unit};
 		}
-	}
 
-	img {
-		width: 100%;
+		img {
+			width: 100%;
+		}
 	}
 
 	figcaption {
