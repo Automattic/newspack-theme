@@ -410,9 +410,13 @@ if ( ! function_exists( 'newspack_post_thumbnail_caption' ) ) {
 			return;
 		}
 
-		$caption = get_the_excerpt( get_post_thumbnail_id() );
 		// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
 		$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
+
+		// Only get the caption if one exists.
+		if ( $caption_exists ) {
+			$caption = get_the_excerpt( get_post_thumbnail_id() );
+		}
 
 		// Account for featured images that have a credit but no caption.
 		if ( ! $caption_exists && class_exists( '\Newspack\Newspack_Image_Credits' ) ) {
