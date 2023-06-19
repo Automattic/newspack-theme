@@ -1,3 +1,37 @@
+# [1.74.0](https://github.com/Automattic/newspack-theme/compare/v1.73.0...v1.74.0) (2023-06-19)
+
+
+### Bug Fixes
+
+* correct highlight menu colour ([#2112](https://github.com/Automattic/newspack-theme/issues/2112)) ([6a18039](https://github.com/Automattic/newspack-theme/commit/6a18039c5d7aebd92efc08e6db6d7b0717871949))
+* correct typo in the multi-branded site UI ([#2137](https://github.com/Automattic/newspack-theme/issues/2137)) ([c3106ff](https://github.com/Automattic/newspack-theme/commit/c3106ff7b12ec85d2a81ebb75e689478ee3826c0))
+* move caption check to fix campaigns issue ([#2127](https://github.com/Automattic/newspack-theme/issues/2127)) ([90e9555](https://github.com/Automattic/newspack-theme/commit/90e95556776b2823fbc799a0ac21257e5fdfdb2c))
+
+
+### Features
+
+* register header and footer colors to Multibranded plugin ([#2124](https://github.com/Automattic/newspack-theme/issues/2124)) ([7854f97](https://github.com/Automattic/newspack-theme/commit/7854f97232f7cc08bd702c7af82457517520ce7f))
+
+# [1.74.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.74.0-alpha.1...v1.74.0-alpha.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* correct typo in the multi-branded site UI ([#2137](https://github.com/Automattic/newspack-theme/issues/2137)) ([c3106ff](https://github.com/Automattic/newspack-theme/commit/c3106ff7b12ec85d2a81ebb75e689478ee3826c0))
+* move caption check to fix campaigns issue ([#2127](https://github.com/Automattic/newspack-theme/issues/2127)) ([90e9555](https://github.com/Automattic/newspack-theme/commit/90e95556776b2823fbc799a0ac21257e5fdfdb2c))
+
+# [1.74.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.73.0...v1.74.0-alpha.1) (2023-06-08)
+
+
+### Bug Fixes
+
+* correct highlight menu colour ([#2112](https://github.com/Automattic/newspack-theme/issues/2112)) ([6a18039](https://github.com/Automattic/newspack-theme/commit/6a18039c5d7aebd92efc08e6db6d7b0717871949))
+
+
+### Features
+
+* register header and footer colors to Multibranded plugin ([#2124](https://github.com/Automattic/newspack-theme/issues/2124)) ([7854f97](https://github.com/Automattic/newspack-theme/commit/7854f97232f7cc08bd702c7af82457517520ce7f))
+
 # [1.73.0](https://github.com/Automattic/newspack-theme/compare/v1.72.0...v1.73.0) (2023-06-05)
 
 
