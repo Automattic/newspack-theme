@@ -863,10 +863,10 @@ div.sharedaddy {
 		@include utilities.media( tablet ) {
 			margin-bottom: #{2 * structure.$size__spacing-unit};
 		}
-	}
 
-	img {
-		width: 100%;
+		img {
+			width: 100%;
+		}
 	}
 
 	figcaption {
@@ -918,36 +918,71 @@ div.sharedaddy {
 	}
 }
 
+//#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a
+
 #jp-relatedposts.jp-relatedposts {
-	.jp-relatedposts-items-visual .jp-relatedposts-post {
-		opacity: 1;
-		width: 100%;
+	.jp-relatedposts-items-visual,
+	.jp-relatedposts-items-minimal {
+		&.jp-relatedposts-items {
+			.jp-relatedposts-post {
+				width: 100%;
 
-		@include utilities.media( tablet ) {
-			width: 33.3%;
-		}
+				&,
+				span {
+					max-width: 100%;
+				}
 
-		.jp-relatedposts-post-img {
-			margin-bottom: #{0.5 * structure.$size__spacing-unit};
-		}
+				.jp-relatedposts-post-img {
+					margin-bottom: #{0.5 * structure.$size__spacing-unit};
+				}
 
-		.jp-relatedposts-post-title {
-			line-height: var( --newspack-theme-font-line-height-heading );
-			margin-bottom: #{0.25 * structure.$size__spacing-unit};
+				.jp-relatedposts-post-title {
+					line-height: var( --newspack-theme-font-line-height-heading );
+					margin-bottom: #{0.25 * structure.$size__spacing-unit};
 
-			a {
-				color: var( --newspack-theme-color-text-main );
-				font-size: var( --newspack-theme-font-size-base );
-				font-weight: bold;
+					a {
+						color: var( --newspack-theme-color-text-main );
+						font-size: var( --newspack-theme-font-size-base );
+						font-weight: bold !important;
+					}
+				}
+
+				.jp-relatedposts-post-date,
+				.jp-relatedposts-post-content {
+					opacity: 1;
+				}
+
+				@include utilities.media( tabletonly ) {
+					padding-right: 0;
+
+					.jp-relatedposts-post-title a {
+						font-size: 0.85rem;
+					}
+				}
 			}
 		}
 
-		.jp-relatedposts-post-date,
-		.jp-relatedposts-post-content {
-			opacity: 1;
+		&.jp-relatedposts-grid {
+			.jp-relatedposts-post {
+				@include utilities.media( tablet ) {
+					width: 33.3%;
+				}
+
+			}
+
+			@include utilities.media( tabletonly ) {
+				.jp-relatedposts-post-thumbs {
+					> * {
+							float: right;
+							width: 64%;
+						}
+
+					> .jp-relatedposts-post-a:first-child {
+						float: left;
+						width: 33%;
+					}
+				}
+			}
 		}
-	}
-	.jp-reltaedposts-post-title {
-		font-family: var( --newspack-theme-font-heading );
 	}
 }

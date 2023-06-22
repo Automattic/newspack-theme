@@ -1047,6 +1047,23 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to enable image cropping in the archive pages.
+	$wp_customize->add_setting(
+		'archive_enable_cropping',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'archive_enable_cropping',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Crop archive images to a 4:3 aspect ratio (changes require regenerating thumbnails for existing featured images)', 'newspack' ),
+			'section' => 'archive_options',
+		)
+	);
+
 	// Add option to change archive layouts.
 	$wp_customize->add_setting(
 		'archive_layout',
