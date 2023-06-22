@@ -67,6 +67,11 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_image_size( 'newspack-archive-image-large', 1200, 900, true );
 		add_image_size( 'newspack-footer-logo', 400, 9999 );
 
+		if ( ! get_theme_mod( 'archive_enable_cropping' ) ) {
+			add_image_size( 'newspack-archive-image', 800, 9999, false );
+			add_image_size( 'newspack-archive-image-large', 1200, 9999, false );
+		}
+
 		/**
 		 * Enable feature support for specific post types.
 		 */
