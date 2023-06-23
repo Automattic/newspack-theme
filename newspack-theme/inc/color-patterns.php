@@ -28,6 +28,9 @@ function newspack_custom_colors_css() {
 				--newspack-theme-color-primary-against-white: ' . esc_attr( newspack_color_with_contrast( $colors['primary'] ) ) . ';
 				--newspack-theme-color-secondary-against-white: ' . esc_attr( newspack_color_with_contrast( $colors['secondary'] ) ) . ';
 
+				--newspack-theme-color-primary-variation-against-white: ' . esc_attr( newspack_color_with_contrast( newspack_adjust_brightness( $colors['primary'], -30 ) ) ) . ';
+				--newspack-theme-color-secondary-variation-against-white: ' . esc_attr( newspack_color_with_contrast( newspack_adjust_brightness( $colors['secondary'], -40 ) ) ) . ';
+
 				--newspack-theme-color-against-primary: ' . esc_attr( $colors['primary_contrast'] ) . ';
 				--newspack-theme-color-against-secondary: ' . esc_attr( $colors['secondary_contrast'] ) . ';
 		';
