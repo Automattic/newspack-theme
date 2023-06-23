@@ -227,7 +227,7 @@ amp-script .cat-links {
 		@include utilities.link-transition;
 
 		&:hover {
-			color: var( --newspack-theme-color-primary-against-white );
+			color: var( --newspack-theme-color-link-hover );
 		}
 	}
 
