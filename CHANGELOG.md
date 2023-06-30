@@ -1,3 +1,10 @@
+# [1.75.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.75.0-alpha.1...v1.75.0-alpha.2) (2023-06-30)
+
+
+### Bug Fixes
+
+* add default for the archive image cropping ([#2151](https://github.com/Automattic/newspack-theme/issues/2151)) ([279d66e](https://github.com/Automattic/newspack-theme/commit/279d66e8a579fadf3600eb3facc6b7ffbf6e5417))
+
 # [1.75.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.74.0...v1.75.0-alpha.1) (2023-06-22)
 
 
