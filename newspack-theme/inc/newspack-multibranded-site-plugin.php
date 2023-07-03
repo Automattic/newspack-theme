@@ -109,3 +109,34 @@ add_filter(
 		return $value;
 	}
 );
+
+/**
+ * Certain customizer options make multibranded site excessively complicated, so they're removed when the plugin is active.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function newspack_multibranded_remove_customizer_options( $wp_customize ) {
+	// Remove the footer-specific logo controls from Site Identity.
+	$wp_customize->remove_control( 'newspack_footer_logo' );
+	$wp_customize->remove_control( 'footer_logo_size' );
+
+	// Remove the alternative logo control from Header Settings > Subpage Header.
+	$wp_customize->remove_control( 'newspack_alternative_logo' );
+}
+add_action( "customize_register", "newspack_multibranded_remove_customizer_options" );
+
+/**
+ * Filter the footer logo to return nothing when plugin is active.
+ */
+function newspack_multibranded_unset_footer_logo( $newspack_footer_logo ) {
+	return '';
+}
+add_filter( 'theme_mod_newspack_footer_logo', 'newspack_multibranded_unset_footer_logo' );
+
+/**
+ * Filter the Subpage Header alternative logo to return nothing when plugin is active.
+ */
+function newspack_multibranded_unset_alternative( $newspack_alternative_logo ) {
+	return '';
+}
+add_filter( 'theme_mod_newspack_alternative_logo', 'newspack_multibranded_unset_alternative' );

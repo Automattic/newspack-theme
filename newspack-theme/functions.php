@@ -67,6 +67,11 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_image_size( 'newspack-archive-image-large', 1200, 900, true );
 		add_image_size( 'newspack-footer-logo', 400, 9999 );
 
+		if ( ! get_theme_mod( 'archive_enable_cropping', true ) ) {
+			add_image_size( 'newspack-archive-image', 800, 9999, false );
+			add_image_size( 'newspack-archive-image-large', 1200, 9999, false );
+		}
+
 		/**
 		 * Enable feature support for specific post types.
 		 */
@@ -1167,19 +1172,6 @@ function newspack_theme_newspack_ads_maybe_use_responsive_placement( $responsive
 	return $responsive;
 }
 add_filter( 'newspack_ads_maybe_use_responsive_placement', 'newspack_theme_newspack_ads_maybe_use_responsive_placement', 10, 3 );
-
-/**
- * Display Featured Images in RSS feed.
- */
-function newspack_thumbnails_in_rss( $content ) {
-	global $post;
-	if ( has_post_thumbnail( $post->ID ) ) {
-		$content = '<figure>' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</figure>' . $content;
-	}
-	return $content;
-}
-add_filter( 'the_excerpt_rss', 'newspack_thumbnails_in_rss' );
-add_filter( 'the_content_feed', 'newspack_thumbnails_in_rss' );
 
 /**
  * Add a extra span and class to the_archive_title, for easier styling.

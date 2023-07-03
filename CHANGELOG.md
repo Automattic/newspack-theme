@@ -1,3 +1,26 @@
+# [1.75.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.75.0-alpha.1...v1.75.0-alpha.2) (2023-06-30)
+
+
+### Bug Fixes
+
+* add default for the archive image cropping ([#2151](https://github.com/Automattic/newspack-theme/issues/2151)) ([279d66e](https://github.com/Automattic/newspack-theme/commit/279d66e8a579fadf3600eb3facc6b7ffbf6e5417))
+
+# [1.75.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.74.0...v1.75.0-alpha.1) (2023-06-22)
+
+
+### Bug Fixes
+
+* correct sidebar link colour ([#2131](https://github.com/Automattic/newspack-theme/issues/2131)) ([a3ff141](https://github.com/Automattic/newspack-theme/commit/a3ff141db636396eb44376417889348cfc9f28f2))
+* correct sponsor logo size ([#2130](https://github.com/Automattic/newspack-theme/issues/2130)) ([6baab49](https://github.com/Automattic/newspack-theme/commit/6baab494007b601321c01741e3834db878bdd401))
+
+
+### Features
+
+* add option to disable archive image cropping ([#2145](https://github.com/Automattic/newspack-theme/issues/2145)) ([82cac47](https://github.com/Automattic/newspack-theme/commit/82cac47f26f1b274b32b5b1ef83e8d69dc82645b))
+* hide/unset alternative logos when multibranded is enabled ([#2132](https://github.com/Automattic/newspack-theme/issues/2132)) ([575d7f9](https://github.com/Automattic/newspack-theme/commit/575d7f901274719d92fdc9f4034003bfff0b5827))
+* improve mobile styles for related posts ([#2129](https://github.com/Automattic/newspack-theme/issues/2129)) ([b5e6476](https://github.com/Automattic/newspack-theme/commit/b5e6476756d151654da45d2281336de2e70da457))
+* move the RSS image to the Newspack Plugin ([#2139](https://github.com/Automattic/newspack-theme/issues/2139)) ([887c5b4](https://github.com/Automattic/newspack-theme/commit/887c5b4a099220cb8f3f5036948348a1476d33a9))
+
 # [1.74.0](https://github.com/Automattic/newspack-theme/compare/v1.73.0...v1.74.0) (2023-06-19)
 
 
