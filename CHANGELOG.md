@@ -1,3 +1,10 @@
+## [1.75.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.75.0...v1.75.1-alpha.1) (2023-07-07)
+
+
+### Bug Fixes
+
+* **woocommerce:** account page grid on member area ([#2150](https://github.com/Automattic/newspack-theme/issues/2150)) ([b0e6409](https://github.com/Automattic/newspack-theme/commit/b0e64099d39eba24c27f2160c400528fd9c86a7e))
+
 # [1.75.0](https://github.com/Automattic/newspack-theme/compare/v1.74.0...v1.75.0) (2023-07-03)
 
 
