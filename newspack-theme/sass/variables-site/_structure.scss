@@ -1,4 +1,4 @@
-// Responsive widths.
+// Misc measurements.
 
 $size__spacing-unit: 1rem;
 $size__site-main: 1200px;
@@ -15,3 +15,13 @@ $tablet_width: 782px;
 $narrow_desktop_width: 960px;
 $desktop_width: 1168px;
 $wide_width: 1379px;
+
+// Gutenberg spacing variables.
+
+body {
+	--wp--preset--spacing--50: clamp( 1.25rem, 1rem + 0.8333vw, 1.5rem );
+	--wp--preset--spacing--60: clamp( 1.5rem, 0.75rem + 2.5vw, 2.25rem);
+	--wp--preset--spacing--70: clamp( 1.75rem, 0.12rem + 5.4333vw, 3.38rem);
+	--wp--preset--spacing--80: clamp( 2rem, -1.06rem + 10.2vw, 5.06rem);
+}
+
