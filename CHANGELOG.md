@@ -1,3 +1,11 @@
+## [1.75.1-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.75.1-alpha.1...v1.75.1-alpha.2) (2023-07-12)
+
+
+### Bug Fixes
+
+* add clamp to higher spacing values ([#2157](https://github.com/Automattic/newspack-theme/issues/2157)) ([68e18e5](https://github.com/Automattic/newspack-theme/commit/68e18e508fe89b20f0267f7872e68ce26449f0ab))
+* reorder author bio truncation order ([#2156](https://github.com/Automattic/newspack-theme/issues/2156)) ([64504c0](https://github.com/Automattic/newspack-theme/commit/64504c0a8f6c8e55a00fc6e6742920163a50dbf1))
+
 ## [1.75.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.75.0...v1.75.1-alpha.1) (2023-07-07)
 
 
