@@ -596,7 +596,7 @@ if ( ! function_exists( 'newspack_secondary_menu' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'newspack_secondary_menu' ) ) :
+if ( ! function_exists( 'newspack_tertiary_menu' ) ) :
 	/**
 	 * Displays tertiary menu; created a function to reduce duplication.
 	 */
