@@ -1879,7 +1879,7 @@ table.woocommerce-table--order-details.shop_table,
 	}
 
 	@include utilities.media( tablet ) {
-		.entry-content > .woocommerce {
+		.entry-content .woocommerce {
 			align-items: start;
 			display: grid;
 			gap: 3.2rem;

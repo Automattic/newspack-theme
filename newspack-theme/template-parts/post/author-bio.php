@@ -57,7 +57,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 
 					<?php if ( get_theme_mod( 'author_bio_truncate', true ) ) : ?>
 						<p>
-							<?php echo esc_html( wp_strip_all_tags( newspack_truncate_text( $author->description, $author_bio_length ) ) ); ?>
+							<?php echo esc_html( newspack_truncate_text( wp_strip_all_tags( $author->description ), $author_bio_length ) ); ?>
 							<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
 							<?php
 								/* translators: %s is the current author's name. */
@@ -124,7 +124,7 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 
 		<?php if ( get_theme_mod( 'author_bio_truncate', true ) ) : ?>
 			<p>
-				<?php echo esc_html( wp_strip_all_tags( newspack_truncate_text( get_the_author_meta( 'description' ), $author_bio_length ) ) ); ?>
+				<?php echo esc_html( newspack_truncate_text( wp_strip_all_tags( get_the_author_meta( 'description' ) ), $author_bio_length ) ); ?>
 				<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 				<?php
 					/* translators: %s is the current author's name. */
