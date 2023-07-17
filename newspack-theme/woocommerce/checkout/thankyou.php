@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$downloads = $order->get_downloadable_items();
 
 		if ( $downloads ) : ?>
-			<h4><?php esc_html_e( 'Downloads', 'newspack' ); ?></h4>
+			<h4><?php esc_html_e( 'Download your purchase', 'newspack' ); ?></h4>
 
 			<section class="woocommerce-order-downloads">
 				<?php if ( isset( $show_title ) ) : ?>
