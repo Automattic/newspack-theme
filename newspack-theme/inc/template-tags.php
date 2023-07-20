@@ -533,109 +533,117 @@ function newspack_has_menus() {
 	}
 }
 
-/**
- * Displays primary menu; created a function to reduce duplication.
- */
-function newspack_primary_menu() {
-	if ( ! has_nav_menu( 'primary-menu' ) ) {
-		return;
-	}
+if ( ! function_exists( 'newspack_primary_menu' ) ) :
+	/**
+	 * Displays primary menu; created a function to reduce duplication.
+	 */
+	function newspack_primary_menu() {
+		if ( ! has_nav_menu( 'primary-menu' ) ) {
+			return;
+		}
 
-	// Only set a toolbar-target attributes if the primary menu container exists in the header - if not subpage header.
-	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
-		$toolbar_attributes = 'toolbar-target="site-navigation" toolbar="(min-width: 767px)"';
-	}
-	?>
-	<nav class="main-navigation nav1 dd-menu" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'primary-menu',
-				'menu_class'     => 'main-menu',
-				'container'      => false,
-				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			)
-		);
+		// Only set a toolbar-target attributes if the primary menu container exists in the header - if not subpage header.
+		$toolbar_attributes = '';
+		if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
+			$toolbar_attributes = 'toolbar-target="site-navigation" toolbar="(min-width: 767px)"';
+		}
 		?>
-	</nav>
-	<?php
-}
-
-/**
- * Displays secondary menu; created a function to reduce duplication.
- */
-function newspack_secondary_menu() {
-	if ( ! has_nav_menu( 'secondary-menu' ) ) {
-		return;
-	}
-
-	// Only set a toolbar-target attributes if the secondary menu container exists in the header - if not short or subpage header.
-	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
-		$toolbar_attributes = 'toolbar-target="secondary-nav-contain" toolbar="(min-width: 767px)"';
-	}
-
-	?>
-	<nav class="secondary-menu nav2 dd-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'secondary-menu',
-				'menu_class'     => 'secondary-menu',
-				'container'      => false,
-				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			)
-		);
-		?>
-	</nav>
-	<?php
-}
-
-/**
- * Displays tertiary menu; created a function to reduce duplication.
- */
-function newspack_tertiary_menu() {
-	if ( ! has_nav_menu( 'tertiary-menu' ) ) {
-		return;
-	}
-
-	// Only set a toolbar-target attributes if the tertiary menu container exists in the header - if not subpage header.
-	$toolbar_attributes = '';
-	if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
-		$toolbar_attributes = 'toolbar-target="tertiary-nav-contain" toolbar="(min-width: 767px)"';
-	}
-	?>
-		<nav class="tertiary-menu nav3" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<nav class="main-navigation nav1 dd-menu" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'tertiary-menu',
+					'theme_location' => 'primary-menu',
+					'menu_class'     => 'main-menu',
 					'container'      => false,
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'depth'          => 1,
 				)
 			);
 			?>
 		</nav>
-	<?php
-}
+		<?php
+	}
+endif;
 
-/**
- * Displays social links menu; create a function for the wp_nav_menu settings to reduce duplication.
- */
-function newspack_social_menu_settings() {
-	wp_nav_menu(
-		array(
-			'theme_location' => 'social',
-			'menu_class'     => 'social-links-menu',
-			'container'      => false,
-			'link_before'    => '<span class="screen-reader-text">',
-			'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
-			'depth'          => 1,
-		)
-	);
-}
+if ( ! function_exists( 'newspack_secondary_menu' ) ) :
+	/**
+	 * Displays secondary menu; created a function to reduce duplication.
+	 */
+	function newspack_secondary_menu() {
+		if ( ! has_nav_menu( 'secondary-menu' ) ) {
+			return;
+		}
+
+		// Only set a toolbar-target attributes if the secondary menu container exists in the header - if not short or subpage header.
+		$toolbar_attributes = '';
+		if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
+			$toolbar_attributes = 'toolbar-target="secondary-nav-contain" toolbar="(min-width: 767px)"';
+		}
+
+		?>
+		<nav class="secondary-menu nav2 dd-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'secondary-menu',
+					'menu_class'     => 'secondary-menu',
+					'container'      => false,
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				)
+			);
+			?>
+		</nav>
+		<?php
+	}
+endif;
+
+if ( ! function_exists( 'newspack_tertiary_menu' ) ) :
+	/**
+	 * Displays tertiary menu; created a function to reduce duplication.
+	 */
+	function newspack_tertiary_menu() {
+		if ( ! has_nav_menu( 'tertiary-menu' ) ) {
+			return;
+		}
+
+		// Only set a toolbar-target attributes if the tertiary menu container exists in the header - if not subpage header.
+		$toolbar_attributes = '';
+		if ( false === get_theme_mod( 'header_sub_simplified', false ) || is_front_page() ) {
+			$toolbar_attributes = 'toolbar-target="tertiary-nav-contain" toolbar="(min-width: 767px)"';
+		}
+		?>
+			<nav class="tertiary-menu nav3" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>" <?php echo $toolbar_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'tertiary-menu',
+						'container'      => false,
+						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'depth'          => 1,
+					)
+				);
+				?>
+			</nav>
+		<?php
+	}
+endif;	
+
+if ( ! function_exists( 'newspack_social_menu_settings' ) ) :
+	/**
+	 * Displays social links menu; create a function for the wp_nav_menu settings to reduce duplication.
+	 */
+	function newspack_social_menu_settings() {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'social',
+				'menu_class'     => 'social-links-menu',
+				'container'      => false,
+				'link_before'    => '<span class="screen-reader-text">',
+				'link_after'     => '</span>' . newspack_get_icon_svg( 'link' ),
+				'depth'          => 1,
+			)
+		);
+	}
+endif;
 
 /**
  * Displays social links menu for the header; includes AMP toolbar and toolbar-target attributes.
