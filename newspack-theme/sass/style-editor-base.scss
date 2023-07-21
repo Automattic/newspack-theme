@@ -998,6 +998,28 @@ ul.wp-block-archives,
 	}
 }
 
+/** === Details block === */
+.wp-block-details {
+	border: solid var( --newspack-theme-color-border );
+	border-width: 1px 0;
+	padding: 0.8rem;
+
+	> :not(summary) {
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	summary {
+		font-family: var( --newspack-theme-font-heading );
+	}
+
+	+ .wp-block-details {
+		border-top: 0;
+		margin-top: -28px;
+		padding-top: 16px;
+	}
+}
+
 /** === Organic Profile Block === */
 .wp-block-organic-profile-block {
 	box-shadow: none;
