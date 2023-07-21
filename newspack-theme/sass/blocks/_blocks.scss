@@ -1184,6 +1184,29 @@ hr {
 	}
 }
 
+//! Footnote styles
+.h-stk {
+	sup.fn a {
+		scroll-margin-top: 80px;
+
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 180px;
+		}
+	}
+
+	&.h-dh sup.fn a {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 210px;
+		}
+	}
+
+	&.h-sub:not(.home) sup.fn a {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 100px;
+		}
+	}
+}
+
 //! Navigtation block
 .wp-block-navigation a {
 	text-decoration: none;
