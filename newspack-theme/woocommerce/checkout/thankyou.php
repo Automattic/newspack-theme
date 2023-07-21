@@ -97,11 +97,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		$downloads = $order->get_downloadable_items();
 		if ( $downloads ) {
+		?>
+			<h4><?php esc_html_e( 'Downloads', 'newspack' ); ?></h4>
+
+			<?php
 			wc_get_template(
 				'order/order-downloads.php',
 				array(
-					'downloads'  => $downloads,
-					'show_title' => true,
+					'downloads' => $downloads,
 				)
 			);
 		}
