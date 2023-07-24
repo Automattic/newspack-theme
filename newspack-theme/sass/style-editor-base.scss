@@ -721,6 +721,13 @@ div[data-align='full'] {
 			}
 		}
 	}
+
+	&__button-behavior-expand:not(.wp-block-search__searchfield-hidden) {
+		.wp-block-search__button {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
 }
 
 /** === Code === */
