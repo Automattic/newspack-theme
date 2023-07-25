@@ -1162,6 +1162,28 @@ hr {
 	}
 }
 
+//! Details block
+.wp-block-details {
+	border: solid var( --newspack-theme-color-border );
+	border-width: 1px 0;
+	padding: 0.5rem 1.5rem;
+
+	> :not(summary) {
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	summary {
+		font-family: var( --newspack-theme-font-heading );
+		margin-left: -1rem;
+	}
+
+	+ .wp-block-details {
+		border-top: 0;
+		margin-top: -32px;
+	}
+}
+
 //! Navigtation block
 .wp-block-navigation a {
 	text-decoration: none;
