@@ -1002,7 +1002,7 @@ ul.wp-block-archives,
 .wp-block-details {
 	border: solid var( --newspack-theme-color-border );
 	border-width: 1px 0;
-	padding: 0.8rem;
+	padding: 0.5rem 1.5rem;
 
 	> :not(summary) {
 		margin-bottom: 16px;
@@ -1016,7 +1016,6 @@ ul.wp-block-archives,
 	+ .wp-block-details {
 		border-top: 0;
 		margin-top: -28px;
-		padding-top: 16px;
 	}
 }
 
