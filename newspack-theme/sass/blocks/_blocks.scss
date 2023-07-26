@@ -1184,6 +1184,36 @@ hr {
 	}
 }
 
+//! Footnote styles
+.wp-block-footnotes li:focus {
+	outline: thin dotted;
+}
+
+.h-stk {
+	sup.fn a,
+	.wp-block-footnotes li {
+		scroll-margin-top: 115px;
+
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 180px;
+		}
+	}
+
+	&.h-dh sup.fn a,
+	&.h-dh .wp-block-footnotes li {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 210px;
+		}
+	}
+
+	&.h-sub:not(.home) sup.fn a,
+	&.h-sub:not(.home) .wp-block-footnotes li {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 100px;
+		}
+	}
+}
+
 //! Navigtation block
 .wp-block-navigation a {
 	text-decoration: none;
