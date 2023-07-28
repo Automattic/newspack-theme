@@ -998,6 +998,10 @@ hr {
 	font-family: var( --newspack-theme-font-heading );
 	font-size: var( --newspack-theme-font-size-sm );
 
+	&.has-background {
+		padding: structure.$size__spacing-unit;
+	}
+
 	.wp-block-file__button {
 		display: table;
 		@include utilities.button-transition;

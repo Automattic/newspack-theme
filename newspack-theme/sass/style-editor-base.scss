@@ -626,6 +626,10 @@ div[data-align='full'] {
 	font-family: var( --newspack-theme-font-heading );
 	font-size: var( --newspack-theme-font-size-sm );
 
+	&.has-background {
+		padding: structure.$size__spacing-unit;
+	}
+
 	.wp-block-file__textlink {
 		text-decoration: underline;
 		color: var( --newspack-theme-color-link );
