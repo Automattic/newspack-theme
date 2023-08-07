@@ -50,7 +50,17 @@ class Newspack_SVG_Icons {
 		static $regex_map; // Only compute regex map once, for performance.
 		if ( ! isset( $regex_map ) ) {
 			$regex_map = array();
-			$map       = &self::$social_icons_map; // Use reference instead of copy, to save memory.
+
+			/**
+			 * Filters the mapping of social icons to URLs.
+			 * 
+			 * Allows plugins or child themes to insert alternative mappings for recognition in the social links menu.
+			 * 
+			 * @since 1.76.0
+			 * 
+			 * @param array $servers Social icons map.
+			 */
+			$map = apply_filters( 'newspack_social_icons_map', self::$social_icons_map );
 			foreach ( array_keys( self::$social_icons ) as $icon ) {
 				$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );
 				$domains            = array_map( 'trim', $domains ); // Remove leading/trailing spaces, to prevent regex from failing to match.
