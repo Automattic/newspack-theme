@@ -1,3 +1,10 @@
+# [1.76.0](https://github.com/Automattic/newspack-theme/compare/v1.75.1...v1.76.0) (2023-08-07)
+
+
+### Features
+
+* make menu display functions pluggable ([#2159](https://github.com/Automattic/newspack-theme/issues/2159)) ([52876d4](https://github.com/Automattic/newspack-theme/commit/52876d4d4fc3b9f0c2955078817514ed91a8d1a3))
+
 # [1.76.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.75.1...v1.76.0-alpha.1) (2023-07-20)
 
 
