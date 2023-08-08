@@ -1,3 +1,19 @@
+# [1.77.0](https://github.com/Automattic/newspack-theme/compare/v1.76.0...v1.77.0) (2023-08-08)
+
+
+### Bug Fixes
+
+* add padding to the file block when it has a background ([#2168](https://github.com/Automattic/newspack-theme/issues/2168)) ([5a29efa](https://github.com/Automattic/newspack-theme/commit/5a29efa22841a101e6b4857ef1a86517c30bf064))
+* improve new search setting appearance for WP 6.3 ([#2167](https://github.com/Automattic/newspack-theme/issues/2167)) ([a87f7e5](https://github.com/Automattic/newspack-theme/commit/a87f7e51c37d9d342a86859a5735f20d2e464b7e))
+
+
+### Features
+
+* add downloads details to checkout ([#2162](https://github.com/Automattic/newspack-theme/issues/2162)) ([81c52f5](https://github.com/Automattic/newspack-theme/commit/81c52f55328e1aa1ea4e065fd31c830977b13831))
+* add styles for the details block ([#2165](https://github.com/Automattic/newspack-theme/issues/2165)) ([25832c3](https://github.com/Automattic/newspack-theme/commit/25832c3483d8a5d62a9a0e957c722fbbb866a9ca))
+* add styles for the footnote block ([#2166](https://github.com/Automattic/newspack-theme/issues/2166)) ([22732f5](https://github.com/Automattic/newspack-theme/commit/22732f5e6ffb79a9d35f0d7f826fb0df93d007d1))
+* add Threads logo to the social links menu ([#2158](https://github.com/Automattic/newspack-theme/issues/2158)) ([64bf6c1](https://github.com/Automattic/newspack-theme/commit/64bf6c184c27d009bce2c71e62b8debc6173b596))
+
 # [1.77.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.76.0...v1.77.0-alpha.1) (2023-08-08)
 
 
