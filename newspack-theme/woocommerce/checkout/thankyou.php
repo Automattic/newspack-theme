@@ -93,6 +93,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 			?>
 		<?php endif; ?>
+
+		<?php
+		$downloads = $order->get_downloadable_items();
+		if ( $downloads ) {
+		?>
+			<h4><?php esc_html_e( 'Download your purchase', 'newspack' ); ?></h4>
+
+			<?php
+			wc_get_template(
+				'order/order-downloads.php',
+				array(
+					'downloads' => $downloads,
+				)
+			);
+		}
+		?>
+
 	<?php else : ?>
 
 		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">

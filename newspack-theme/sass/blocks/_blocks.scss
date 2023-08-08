@@ -998,6 +998,10 @@ hr {
 	font-family: var( --newspack-theme-font-heading );
 	font-size: var( --newspack-theme-font-size-sm );
 
+	&.has-background {
+		padding: structure.$size__spacing-unit;
+	}
+
 	.wp-block-file__button {
 		display: table;
 		@include utilities.button-transition;
@@ -1068,6 +1072,13 @@ hr {
 			&:not( .has-text-color ) {
 				color: var( --newspack-theme-color-text-main );
 			}
+		}
+	}
+
+	&__button-behavior-expand:not(.wp-block-search__searchfield-hidden) {
+		.wp-block-search__button {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
 		}
 	}
 }
@@ -1159,6 +1170,58 @@ hr {
 .wp-block-loginout {
 	label {
 		display: block;
+	}
+}
+
+//! Details block
+.wp-block-details {
+	border: solid var( --newspack-theme-color-border );
+	border-width: 1px 0;
+	padding: 0.5rem 1.5rem;
+
+	> :not(summary) {
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	summary {
+		font-family: var( --newspack-theme-font-heading );
+		margin-left: -1rem;
+	}
+
+	+ .wp-block-details {
+		border-top: 0;
+		margin-top: -32px;
+	}
+}
+
+//! Footnote styles
+.wp-block-footnotes li:focus {
+	outline: thin dotted;
+}
+
+.h-stk {
+	sup.fn a,
+	.wp-block-footnotes li {
+		scroll-margin-top: 115px;
+
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 180px;
+		}
+	}
+
+	&.h-dh sup.fn a,
+	&.h-dh .wp-block-footnotes li {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 210px;
+		}
+	}
+
+	&.h-sub:not(.home) sup.fn a,
+	&.h-sub:not(.home) .wp-block-footnotes li {
+		@include utilities.media( tablet ) {
+			scroll-margin-top: 100px;
+		}
 	}
 }
 
