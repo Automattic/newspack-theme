@@ -1378,7 +1378,8 @@ table.woocommerce-table--order-details.shop_table,
 .woocommerce-product-attributes,
 .woocommerce-grouped-product-list.group_table,
 .woocommerce-cart-form .woocommerce-cart-form__contents,
-.cart-collaterals .shop_table_responsive {
+.cart-collaterals .shop_table_responsive,
+.woocommerce-table--order-downloads {
 	border-top: 1px solid var( --newspack-theme-color-border );
 
 	thead {
@@ -1555,10 +1556,6 @@ table.woocommerce-table--order-details.shop_table,
 		table.shop_table_responsive {
 			tr {
 				margin: 0 0 1.5rem;
-
-				&:first-child {
-					border-top: 1px solid;
-				}
 
 				&:last-child {
 					margin-bottom: 0;
