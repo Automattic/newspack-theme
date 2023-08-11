@@ -910,6 +910,10 @@ p.has-background {
 	figcaption {
 		text-align: left;
 	}
+
+	img:not([style*='object-fit']) {
+		height: auto !important; // !important to override inline styles.
+	}
 }
 
 //! Galleries
