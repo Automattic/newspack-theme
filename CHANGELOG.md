@@ -1,3 +1,10 @@
+## [1.77.1](https://github.com/Automattic/newspack-theme/compare/v1.77.0...v1.77.1) (2023-08-11)
+
+
+### Bug Fixes
+
+* force height: auto on image blocks to fix scaling issue ([#2174](https://github.com/Automattic/newspack-theme/issues/2174)) ([442f1ca](https://github.com/Automattic/newspack-theme/commit/442f1ca184f61ca510ee77f3eba049c2eb30b8e0))
+
 # [1.77.0](https://github.com/Automattic/newspack-theme/compare/v1.76.0...v1.77.0) (2023-08-08)
 
 
