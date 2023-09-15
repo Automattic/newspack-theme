@@ -421,6 +421,14 @@ div[data-align='full'] {
 	}
 }
 
+[data-type="core/group"]{
+	&.is-selected .block-list-appender,
+	.block-list-appender:only-child {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /** === Button === */
 .wp-block-buttons {
 	--wp--style--block-gap: 10px;
