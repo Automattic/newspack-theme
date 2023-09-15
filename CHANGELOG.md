@@ -1,3 +1,11 @@
+## [1.77.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.77.1...v1.77.2-alpha.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* correct group block alignment in editor preview ([#2176](https://github.com/Automattic/newspack-theme/issues/2176)) ([8431906](https://github.com/Automattic/newspack-theme/commit/84319066842b0aea136b1ccab4d5c1f6c3b93592))
+* update WooCommerce template to v8.1.0 ([#2178](https://github.com/Automattic/newspack-theme/issues/2178)) ([dceb031](https://github.com/Automattic/newspack-theme/commit/dceb031ee60e27cfac505aec44994ece3298ce74))
+
 ## [1.77.1](https://github.com/Automattic/newspack-theme/compare/v1.77.0...v1.77.1) (2023-08-11)
 
 
