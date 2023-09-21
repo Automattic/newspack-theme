@@ -110,9 +110,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		}
 		?>
 
+		<?php do_action( 'newspack_woocommerce_thankyou', $order->get_id() ); ?>
+
 	<?php else : ?>
 
-	<?php wc_get_template( 'checkout/order-received.php', array( 'order' => false ) ); ?>
+		<?php wc_get_template( 'checkout/order-received.php', array( 'order' => false ) ); ?>
 
 	<?php endif; ?>
 
