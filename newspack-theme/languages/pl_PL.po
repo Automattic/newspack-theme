@@ -722,7 +722,7 @@ msgstr "Domyślny szablon postu"
 
 #: inc/customizer.php:829
 #: inc/customizer.php:975
-msgid "Default Template"
+msgid "With Sidebar"
 msgstr "Domyślny szablon"
 
 #: inc/customizer.php:830
