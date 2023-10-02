@@ -1425,7 +1425,8 @@ $colors: (
 	.wp-block-pullquote.has-#{$name}-background-color,
 	.is-style-outline .wp-block-button__link.has-#{$name}-background-color:not( :hover ),
 	.wp-block-navigation-item.has-#{$name}-background-color,
-	.wp-block-search__button.has-#{$name}-background-color {
+	.wp-block-search__button.has-#{$name}-background-color,
+	.newspack-newsletters-subscribe input[type='submit'].has-#{$name}-background-color {
 		background-color: $hex;
 	}
 
@@ -1437,7 +1438,8 @@ $colors: (
 	.wp-block-button__link.has-#{$name}-color:visited:not( :hover ),
 	.is-style-outline .wp-block-button__link.has-#{$name}-color:not( :hover ), //legacy selector
 	.wp-block-button__link.is-style-outline.has-#{$name}-color:not( :hover ),
-	.wp-block-search__button.has-#{$name}-color {
+	.wp-block-search__button.has-#{$name}-color,
+	.newspack-newsletters-subscribe input[type='submit'].has-#{$name}-color {
 		color: $hex;
 	}
 
