@@ -1,3 +1,17 @@
+# [1.78.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.78.0-alpha.1...v1.78.0-alpha.2) (2023-10-02)
+
+
+### Bug Fixes
+
+* make newsletter subscribe button style more specific ([#2177](https://github.com/Automattic/newspack-theme/issues/2177)) ([18d3e2c](https://github.com/Automattic/newspack-theme/commit/18d3e2c30e62f5a5fd281b6c64a0bbadb937b918))
+
+# [1.78.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.77.2...v1.78.0-alpha.1) (2023-09-28)
+
+
+### Features
+
+* **woocommerce:** thank you template hook ([#2180](https://github.com/Automattic/newspack-theme/issues/2180)) ([aba2314](https://github.com/Automattic/newspack-theme/commit/aba2314746d83123df1cfac0bc71e2b34df6fa48))
+
 ## [1.77.2](https://github.com/Automattic/newspack-theme/compare/v1.77.1...v1.77.2) (2023-09-25)
 
 
