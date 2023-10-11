@@ -27,7 +27,7 @@ msgid "Automattic"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://newspack.blog"
+msgid "https://newspack.com"
 msgstr ""
 
 #: 404.php:18

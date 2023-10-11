@@ -1,7 +1,7 @@
 {
 	"name": "automattic/newspack-theme",
-	"description": "A theme for Newspack. https://newspack.blog/",
-	"homepage": "https://newspack.blog/",
+	"description": "A theme for Newspack. https://newspack.com/",
+	"homepage": "https://newspack.com/",
 	"type": "package",
 	"license": "GPL-2.0-or-later",
 	"support": {
