@@ -85,19 +85,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 				// Copied from templates/order/order-details.php
 				$show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
-				if ( false === get_theme_mod( 'thank_you_customer_details_display', false ) ) {
-					$show_customer_details = false;
-				}
-				if ( $show_customer_details ) {
-					wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
-				}
+			if ( false === get_theme_mod( 'thank_you_customer_details_display', false ) ) {
+				$show_customer_details = false;
+			}
+			if ( $show_customer_details ) {
+				wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
+			}
 			?>
 		<?php endif; ?>
 
 		<?php
 		$downloads = $order->get_downloadable_items();
 		if ( $downloads ) {
-		?>
+			?>
 			<h4><?php esc_html_e( 'Download your purchase', 'newspack' ); ?></h4>
 
 			<?php
@@ -109,8 +109,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			);
 		}
 		?>
-
-		<?php do_action( 'newspack_woocommerce_thankyou', $order->get_id() ); ?>
 
 	<?php else : ?>
 
