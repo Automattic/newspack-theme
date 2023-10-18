@@ -7,7 +7,7 @@ Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-The theme for Newspack. https://newspack.blog.
+The theme for Newspack. https://newspack.com.
 
 == Description ==
 

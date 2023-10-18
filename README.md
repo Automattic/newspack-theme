@@ -1,6 +1,6 @@
 # Newspack
 
-Welcome to the Newspack theme repository on GitHub. Here you can browse the source, look at open issues and keep track of development. We also recommend everyone [follow the Newspack blog](https://newspack.blog/) to stay up to date about everything happening in the project.
+Welcome to the Newspack theme repository on GitHub. Here you can browse the source, look at open issues and keep track of development. We also recommend everyone [follow the Newspack blog](https://newspack.com/) to stay up to date about everything happening in the project.
 
 The Newspack theme is a forward-looking news theme designed and developed to be highly customizable with the WordPress block editor.
 

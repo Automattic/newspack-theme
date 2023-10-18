@@ -27,8 +27,8 @@ msgid "Automattic"
 msgstr "Automattic"
 
 #. Author URI of the theme
-msgid "https://newspack.blog"
-msgstr "https://newspack.blog/"
+msgid "https://newspack.com"
+msgstr "https://newspack.com/"
 
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
@@ -722,7 +722,7 @@ msgstr "Domyślny szablon postu"
 
 #: inc/customizer.php:829
 #: inc/customizer.php:975
-msgid "Default Template"
+msgid "With Sidebar"
 msgstr "Domyślny szablon"
 
 #: inc/customizer.php:830

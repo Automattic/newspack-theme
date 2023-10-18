@@ -408,7 +408,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'    => 'radio',
 			'label'   => __( 'Colors', 'newspack' ),
-			'choices'  => array(
+			'choices' => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
@@ -580,7 +580,7 @@ function newspack_customize_register( $wp_customize ) {
 		array(
 			'type'    => 'radio',
 			'label'   => __( 'Ads Background Color', 'newspack' ),
-			'choices'   => array(
+			'choices' => array(
 				'default' => _x( 'Default', 'primary color', 'newspack' ),
 				'custom'  => _x( 'Custom', 'primary color', 'newspack' ),
 			),
@@ -863,7 +863,7 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => __( 'Default Post Template', 'newspack' ),
 			'description' => esc_html__( 'This option changes the selected template used for newly created posts going forward. The template can still be changed on a per-post basis.', 'newspack' ),
 			'choices'     => array(
-				'default'            => esc_html__( 'Default Template', 'newspack' ),
+				'default'            => esc_html__( 'With Sidebar', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
 				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
@@ -1011,7 +1011,7 @@ function newspack_customize_register( $wp_customize ) {
 			'label'       => __( 'Default Page Template', 'newspack' ),
 			'description' => esc_html__( 'This option changes the selected template used for newly created pages going forward. The template can still be changed on a per-page basis.', 'newspack' ),
 			'choices'     => array(
-				'default'            => esc_html__( 'Default Template', 'newspack' ),
+				'default'            => esc_html__( 'With Sidebar', 'newspack' ),
 				'single-feature.php' => esc_html__( 'One Column', 'newspack' ),
 				'single-wide.php'    => esc_html__( 'One Column Wide', 'newspack' ),
 			),
@@ -1078,7 +1078,7 @@ function newspack_customize_register( $wp_customize ) {
 			'type'    => 'radio',
 			'label'   => esc_html__( 'Archive Layout', 'newspack' ),
 			'choices' => array(
-				'default'         => esc_html__( 'Default', 'newspack' ),
+				'default'         => esc_html__( 'With sidebar', 'newspack' ),
 				'one-column'      => esc_html__( 'One column', 'newspack' ),
 				'one-column-wide' => esc_html__( 'One column wide', 'newspack' ),
 			),
