@@ -1,3 +1,11 @@
+# [1.79.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.78.0...v1.79.0-alpha.1) (2023-10-18)
+
+
+### Features
+
+* add X icon to social links menu ([#2187](https://github.com/Automattic/newspack-theme/issues/2187)) ([f902d38](https://github.com/Automattic/newspack-theme/commit/f902d38679d246ac1534e32c92af6b60f10a2a54))
+* **customizer:** change default template's name ([6d41c7c](https://github.com/Automattic/newspack-theme/commit/6d41c7c26b446974b6fcc9acde0c7c3fa742ba25))
+
 # [1.78.0](https://github.com/Automattic/newspack-theme/compare/v1.77.2...v1.78.0) (2023-10-09)
 
 
