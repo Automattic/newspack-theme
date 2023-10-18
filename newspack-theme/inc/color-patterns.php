@@ -9,14 +9,14 @@
  * Generate the CSS for the current primary color.
  */
 function newspack_custom_colors_css() {
-	$colors = newspack_get_colors();
-	$theme_css = '';
+	$colors     = newspack_get_colors();
+	$theme_css  = '';
 	$editor_css = '';
 
 	// Front-end colors that require the theme_colors to be set to 'custom':
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 
-		$css_variables =  '
+		$css_variables = '
 				--newspack-theme-color-primary: ' . esc_attr( $colors['primary'] ) . ';
 				--newspack-theme-color-primary-variation: ' . esc_attr( newspack_adjust_brightness( $colors['primary'], -30 ) ) . ';
 				--newspack-theme-color-secondary: ' . esc_attr( $colors['secondary'] ) . ' !important;
@@ -83,18 +83,6 @@ function newspack_custom_colors_css() {
 				.h-db.h-sub.single-featured-image-beside .middle-header-contain {
 					color: ' . esc_attr( $colors['primary_contrast'] ) . ';
 				}
-			}
-
-			/* Set colour that contrasts against the secondary background */
-			.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(:hover),
-			.button,
-			.button:visited,
-			button,
-			input[type="button"],
-			input[type="reset"],
-			input[type="submit"],
-			.wp-block-search__button {
-				color: ' . esc_attr( $colors['secondary_contrast'] ) . ';
 			}
 
 			input[type="checkbox"]::before {
