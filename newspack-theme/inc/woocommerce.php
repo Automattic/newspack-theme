@@ -32,10 +32,6 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  * @return void
  */
 function newspack_woocommerce_scripts() {
-	// Load WooCommerce styles from theme.
-	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
-		return;
-	}
 	if (
 		function_exists( 'is_woocommerce' ) && is_woocommerce()
 		|| function_exists( 'is_cart' ) && is_cart()
@@ -47,6 +43,15 @@ function newspack_woocommerce_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
+
+/**
+ * Remove WooCommerce general styles.
+ */
+function newspack_dequeue_styles( $enqueue_styles ) {
+	unset( $enqueue_styles['woocommerce-general'] );
+	return $enqueue_styles;
+}
+add_filter( 'woocommerce_enqueue_styles', 'newspack_dequeue_styles' );
 
 /**
  * Remove WooCommerce sidebar - this theme doesn't have a traditional sidebar.
