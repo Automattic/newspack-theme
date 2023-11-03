@@ -971,7 +971,7 @@ function newspack_customize_register( $wp_customize ) {
 		'post_excerpt_instead_of_subtitle',
 		array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Display the excerpt at the top of single posts instead of the article subtitle.', 'newspack' ),
+			'label'   => __( 'Display the custom excerpt at the top of single posts instead of the article subtitle.', 'newspack' ),
 			'section' => 'post_default_settings',
 		)
 	);
