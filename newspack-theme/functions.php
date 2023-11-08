@@ -95,11 +95,13 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		add_theme_support(
 			'html5',
 			array(
-				'search-form',
+				'caption',
 				'comment-form',
 				'comment-list',
 				'gallery',
-				'caption',
+				'script',
+				'search-form',
+				'style',
 			)
 		);
 
