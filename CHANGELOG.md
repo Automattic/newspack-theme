@@ -1,3 +1,10 @@
+# [1.80.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.80.0-alpha.1...v1.80.0-alpha.2) (2023-11-08)
+
+
+### Bug Fixes
+
+* force release due to last commit being chore ([ee17396](https://github.com/Automattic/newspack-theme/commit/ee17396574f956f17842e64c3ac10b88f0cf5ee6))
+
 ## [1.79.1](https://github.com/Automattic/newspack-theme/compare/v1.79.0...v1.79.1) (2023-11-08)
 
 
