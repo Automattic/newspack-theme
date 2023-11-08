@@ -1336,3 +1336,5 @@ if ( class_exists( 'Tribe__Events__Main' ) ) {
 if ( class_exists( 'Newspack_Multibranded_Site\Customizations\Theme_Colors' ) ) {
 	require get_template_directory() . '/inc/newspack-multibranded-site-plugin.php';
 }
+
+require get_template_directory() . '/inc/newspack-gpt.php';
