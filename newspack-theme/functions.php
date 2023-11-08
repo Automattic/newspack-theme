@@ -96,12 +96,12 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 			'html5',
 			array(
 				'caption',
- 				'comment-form',
- 				'comment-list',
- 				'gallery',
- 				'script',
- 				'search-form',
- 				'style',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'script',
+				'search-form',
+				'style',
 			)
 		);
 
