@@ -959,6 +959,23 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to display previous and next links on single posts.
+	$wp_customize->add_setting(
+		'post_excerpt_instead_of_subtitle',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'post_excerpt_instead_of_subtitle',
+		array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Display the custom excerpt at the top of single posts instead of the article subtitle.', 'newspack' ),
+			'section' => 'post_default_settings',
+		)
+	);
+
 	/**
 	 * Page Template Settings
 	 */
