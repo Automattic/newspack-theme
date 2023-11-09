@@ -1,3 +1,10 @@
+# [1.80.0-alpha.3](https://github.com/Automattic/newspack-theme/compare/v1.80.0-alpha.2...v1.80.0-alpha.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* clears woo template cache ([#2201](https://github.com/Automattic/newspack-theme/issues/2201)) ([b279d0d](https://github.com/Automattic/newspack-theme/commit/b279d0d9267a10456abaf2e60d4d4d2a1bb8f1b7))
+
 # [1.80.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.80.0-alpha.1...v1.80.0-alpha.2) (2023-11-08)
 
 
