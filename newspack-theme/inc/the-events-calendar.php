@@ -44,7 +44,7 @@ add_action( 'customize_register', 'newspack_tec_customize_register' );
  */
 function newspack_tec_show_sidebar() {
 	$show_sidebar = false;
-	if ( tribe_is_event() && is_single() && true === get_theme_mod( 'newspack_tec_sidebar_single', false ) ) {
+	if ( function_exists( 'tribe_is_event' ) && tribe_is_event() && is_single() && true === get_theme_mod( 'newspack_tec_sidebar_single', false ) ) {
 		$show_sidebar = true;
 	}
 
