@@ -1,3 +1,23 @@
+# [1.80.0](https://github.com/Automattic/newspack-theme/compare/v1.79.2...v1.80.0) (2023-11-13)
+
+
+### Bug Fixes
+
+* clears woo template cache ([#2201](https://github.com/Automattic/newspack-theme/issues/2201)) ([b279d0d](https://github.com/Automattic/newspack-theme/commit/b279d0d9267a10456abaf2e60d4d4d2a1bb8f1b7))
+* reinstate WC CSS modifications ([aeb4439](https://github.com/Automattic/newspack-theme/commit/aeb4439ce861ff7610f38b10b69a6ab74be45743)), closes [#2191](https://github.com/Automattic/newspack-theme/issues/2191)
+
+
+### Features
+
+* **woocommerce:** remove woocommerce templates and dequeueing ([c79953e](https://github.com/Automattic/newspack-theme/commit/c79953e61a7dacbf3e67291192742bf74a0f640f))
+
+# [1.80.0-alpha.4](https://github.com/Automattic/newspack-theme/compare/v1.80.0-alpha.3...v1.80.0-alpha.4) (2023-11-10)
+
+
+### Bug Fixes
+
+* avoid fatals on TEC updates ([#2203](https://github.com/Automattic/newspack-theme/issues/2203)) ([83ed541](https://github.com/Automattic/newspack-theme/commit/83ed5411342f2180a636b93e06d69679acde1679))
+
 ## [1.79.2](https://github.com/Automattic/newspack-theme/compare/v1.79.1...v1.79.2) (2023-11-10)
 
 
