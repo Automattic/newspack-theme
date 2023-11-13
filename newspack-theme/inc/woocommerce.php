@@ -32,10 +32,6 @@ add_action( 'after_setup_theme', 'newspack_woocommerce_setup' );
  * @return void
  */
 function newspack_woocommerce_scripts() {
-	// Load WooCommerce styles from theme.
-	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
-		return;
-	}
 	if (
 		function_exists( 'is_woocommerce' ) && is_woocommerce()
 		|| function_exists( 'is_cart' ) && is_cart()
@@ -49,24 +45,10 @@ function newspack_woocommerce_scripts() {
 add_action( 'wp_enqueue_scripts', 'newspack_woocommerce_scripts' );
 
 /**
- * Optionally dequeue WooCommerce's block styles.
- */
-function newspack_disable_woocommerce_block_styles() {
-	if ( true === get_theme_mod( 'woocommerce_block_home_dequeue', false ) && is_front_page() ) {
-		wp_deregister_style( 'wc-blocks-style' );
-	}
-}
-add_action( 'enqueue_block_assets', 'newspack_disable_woocommerce_block_styles', 999 );
-
-/**
  * Remove WooCommerce general styles.
  */
 function newspack_dequeue_styles( $enqueue_styles ) {
 	unset( $enqueue_styles['woocommerce-general'] );
-	if ( true === get_theme_mod( 'woocommerce_styles_home_dequeue', false ) && is_front_page() ) {
-		unset( $enqueue_styles['woocommerce-layout'] );
-		unset( $enqueue_styles['woocommerce-smallscreen'] );
-	}
 	return $enqueue_styles;
 }
 add_filter( 'woocommerce_enqueue_styles', 'newspack_dequeue_styles' );
@@ -149,36 +131,6 @@ if ( ! function_exists( 'newspack_woocommerce_wrapper_after' ) ) {
 add_action( 'woocommerce_after_main_content', 'newspack_woocommerce_wrapper_after' );
 
 /**
- * Filters the page title for the Thank You page.
- */
-function newspack_thankyou_page_title( $title, $id ) {
-	if ( function_exists( 'is_order_received_page' ) &&
-		is_order_received_page() && get_the_ID() === $id ) {
-		$title = get_theme_mod( 'woocommerce_thank_you_title', esc_html__( 'Order received', 'newspack' ) );
-	}
-	return wp_kses_post( $title );
-}
-add_filter( 'the_title', 'newspack_thankyou_page_title', 10, 2 );
-
-/**
- * Filters the 'message' for the Thank You page.
- */
-function newspack_thankyou_order_message() {
-	$thank_you_msg = get_theme_mod( 'woocommerce_thank_you_message', esc_html__( 'Thank you. Your order has been received.', 'newspack' ) );
-	return esc_html( $thank_you_msg );
-}
-add_filter( 'woocommerce_thankyou_order_received_text', 'newspack_thankyou_order_message' );
-
-/**
- * Remove the subscription 'thank you' message.
- */
-function newspack_subscription_thank_you() {
-	return '';
-}
-add_filter( 'woocommerce_subscriptions_thank_you_message', 'newspack_subscription_thank_you' );
-
-
-/**
  * Override the Woo function that prints the shop page content.
  */
 function woocommerce_product_archive_description() {
@@ -219,22 +171,6 @@ function woocommerce_before_shop_loop_wrapper_close() {
 	echo '</div><!-- .woocommerce-results-order-wrapper -->';
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_before_shop_loop_wrapper_close', 40 );
-
-/*
- * Check if any products in the card need shipping.
- *
- * @return bool $needs_shipping Whether the cart requires shipping.
- */
-function newspack_checkout_needs_shipping() {
-	// Check to see if there are only virtual items in the cart.
-	$needs_shipping = false;
-	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		if ( $cart_item['data']->needs_shipping() ) {
-			$needs_shipping = true;
-		}
-	}
-	return $needs_shipping;
-}
 
 /**
  * Improve appearance of WooCommerce checkout.
