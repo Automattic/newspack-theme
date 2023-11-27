@@ -1,3 +1,31 @@
+# [1.81.0](https://github.com/Automattic/newspack-theme/compare/v1.80.0...v1.81.0) (2023-11-27)
+
+
+### Bug Fixes
+
+* add a scroll-margin to anchors for sticky header ([#2195](https://github.com/Automattic/newspack-theme/issues/2195)) ([acb38af](https://github.com/Automattic/newspack-theme/commit/acb38afa1be0a0256f58231626f21150316df5ed))
+* clears woo template cache ([#2201](https://github.com/Automattic/newspack-theme/issues/2201)) ([d7bcd79](https://github.com/Automattic/newspack-theme/commit/d7bcd791603a019ec0f2abbde17eacc04a725c42))
+
+
+### Features
+
+* add single post option to display custom excerpt in lieu of subtitle ([#2194](https://github.com/Automattic/newspack-theme/issues/2194)) ([fdc0eab](https://github.com/Automattic/newspack-theme/commit/fdc0eab51380d79139e88021cce2be2eceefdcb3))
+* add WhatsApp icon ([#2196](https://github.com/Automattic/newspack-theme/issues/2196)) ([eec3d96](https://github.com/Automattic/newspack-theme/commit/eec3d9628a0ca6bc76355aab0f3a6972202d3032))
+
+# [1.81.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.80.0...v1.81.0-alpha.1) (2023-11-16)
+
+
+### Bug Fixes
+
+* add a scroll-margin to anchors for sticky header ([#2195](https://github.com/Automattic/newspack-theme/issues/2195)) ([acb38af](https://github.com/Automattic/newspack-theme/commit/acb38afa1be0a0256f58231626f21150316df5ed))
+* clears woo template cache ([#2201](https://github.com/Automattic/newspack-theme/issues/2201)) ([d7bcd79](https://github.com/Automattic/newspack-theme/commit/d7bcd791603a019ec0f2abbde17eacc04a725c42))
+
+
+### Features
+
+* add single post option to display custom excerpt in lieu of subtitle ([#2194](https://github.com/Automattic/newspack-theme/issues/2194)) ([fdc0eab](https://github.com/Automattic/newspack-theme/commit/fdc0eab51380d79139e88021cce2be2eceefdcb3))
+* add WhatsApp icon ([#2196](https://github.com/Automattic/newspack-theme/issues/2196)) ([eec3d96](https://github.com/Automattic/newspack-theme/commit/eec3d9628a0ca6bc76355aab0f3a6972202d3032))
+
 # [1.80.0](https://github.com/Automattic/newspack-theme/compare/v1.79.2...v1.80.0) (2023-11-13)
 
 
