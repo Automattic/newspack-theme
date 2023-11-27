@@ -20,7 +20,11 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 $page_hide_title = get_post_meta( $post->ID, 'newspack_hide_page_title', true );
 
 // Get post subtitle.
-$subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
+if ( true === get_theme_mod( 'post_excerpt_instead_of_subtitle', false ) ) {
+	$subtitle = $post->post_excerpt;
+} else {
+	$subtitle = get_post_meta( $post->ID, 'newspack_post_subtitle', true );
+}
 ?>
 
 <?php if ( is_singular() ) : ?>
