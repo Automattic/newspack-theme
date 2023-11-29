@@ -429,6 +429,11 @@ function newspack_scripts() {
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
+	/**
+	 * Filters whether to enqueue print styles.
+	 *
+	 * @param bool $should_enqueue_print_styles Whether to enqueue print styles.
+	 */
 	if ( apply_filters( 'newspack_theme_enqueue_print_styles', true ) ) {
 		wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 	}
@@ -442,6 +447,11 @@ function newspack_scripts() {
 		wp_enqueue_style( 'newspack-font-alternative-import', newspack_custom_typography_link( 'custom_font_import_code_alternate' ), array(), null );
 	}
 
+	/**
+	 * Filters whether to enqueue JS.
+	 *
+	 * @param bool $should_enqueue_js Whether to enqueue JS.
+	 */
 	if ( ! apply_filters( 'newspack_theme_enqueue_js', true ) ) {
 		return;
 	}
