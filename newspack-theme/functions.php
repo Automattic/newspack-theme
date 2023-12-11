@@ -429,7 +429,32 @@ function newspack_scripts() {
 
 	wp_style_add_data( 'newspack-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	/**
+	 * Filters whether to enqueue print styles.
+	 *
+	 * @param bool $should_enqueue_print_styles Whether to enqueue print styles.
+	 */
+	if ( apply_filters( 'newspack_theme_enqueue_print_styles', true ) ) {
+		wp_enqueue_style( 'newspack-print-style', get_template_directory_uri() . '/styles/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	}
+
+	// Load custom fonts, if any.
+	if ( get_theme_mod( 'custom_font_import_code', '' ) ) {
+		wp_enqueue_style( 'newspack-font-import', newspack_custom_typography_link( 'custom_font_import_code' ), array(), null );
+	}
+
+	if ( get_theme_mod( 'custom_font_import_code_alternate', '' ) ) {
+		wp_enqueue_style( 'newspack-font-alternative-import', newspack_custom_typography_link( 'custom_font_import_code_alternate' ), array(), null );
+	}
+
+	/**
+	 * Filters whether to enqueue JS.
+	 *
+	 * @param bool $should_enqueue_js Whether to enqueue JS.
+	 */
+	if ( ! apply_filters( 'newspack_theme_enqueue_js', true ) ) {
+		return;
+	}
 
 	$newspack_l10n = array(
 		'open_search'         => esc_html__( 'Open Search', 'newspack' ),
@@ -459,16 +484,6 @@ function newspack_scripts() {
 		wp_enqueue_script( 'amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js', array(), '0.1', true );
 		wp_enqueue_script( 'amp-position-observer', 'https://cdn.ampproject.org/v0/amp-position-observer-0.1.js', array(), '0.1', true );
 	}
-
-	// Load custom fonts, if any.
-	if ( get_theme_mod( 'custom_font_import_code', '' ) ) {
-		wp_enqueue_style( 'newspack-font-import', newspack_custom_typography_link( 'custom_font_import_code' ), array(), null );
-	}
-
-	if ( get_theme_mod( 'custom_font_import_code_alternate', '' ) ) {
-		wp_enqueue_style( 'newspack-font-alternative-import', newspack_custom_typography_link( 'custom_font_import_code_alternate' ), array(), null );
-	}
-
 }
 add_action( 'wp_enqueue_scripts', 'newspack_scripts' );
 
