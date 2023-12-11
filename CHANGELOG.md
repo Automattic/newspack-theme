@@ -1,3 +1,10 @@
+# [1.82.0](https://github.com/Automattic/newspack-theme/compare/v1.81.0...v1.82.0) (2023-12-11)
+
+
+### Features
+
+* filter JS and print styles enqueuing ([#2207](https://github.com/Automattic/newspack-theme/issues/2207)) ([86d60bf](https://github.com/Automattic/newspack-theme/commit/86d60bf04f622fd29ce976c7405338ceab13d490))
+
 # [1.82.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.81.0...v1.82.0-alpha.1) (2023-12-01)
 
 
