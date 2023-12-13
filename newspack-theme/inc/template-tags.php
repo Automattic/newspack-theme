@@ -95,7 +95,8 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 			$i            = 1;
 
 			foreach ( $authors as $author ) {
-				$author_avatar = coauthors_get_avatar( $author, 80 );
+				// avatar_url is a property added by Newspack Network plugin to distributed posts.
+				$author_avatar = $author->avatar_url ?? coauthors_get_avatar( $author, 80 );
 
 				echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>';
 			}
@@ -117,11 +118,21 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 						$sep = '';
 					endif;
 
+					$author_link = ! empty( $author->user_nicename ) ? get_author_posts_url( $author->ID, $author->user_nicename ) : '';
+
+					if ( ! empty( $author->user_nicename ) ) {
+						$author_name = sprintf(
+							'<a class="url fn n" href="%1$s">%2$s</a>',
+							esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ),
+							esc_html( $author->display_name )
+						);
+					} else {
+						$author_name = esc_html( $author->display_name );
+					}
+
 					printf(
-						/* translators: 1: author link. 2: author name. 3. variable seperator (comma, 'and', or empty) */
-						'<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>%3$s ',
-						esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ),
-						esc_html( $author->display_name ),
+						'<span class="author vcard">%1$s</span>%2$s ',
+						$author_name, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above.
 						esc_html( $sep )
 					);
 				}
@@ -625,7 +636,7 @@ if ( ! function_exists( 'newspack_tertiary_menu' ) ) :
 			</nav>
 		<?php
 	}
-endif;	
+endif;
 
 if ( ! function_exists( 'newspack_social_menu_settings' ) ) :
 	/**
