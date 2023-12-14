@@ -21,8 +21,8 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 	foreach ( $authors as $author ) {
 
 		if ( '' !== $author->description ) {
-			// avatar_url is a property added by Newspack Network plugin to distributed posts.
-			$author_avatar = $author->avatar_url ?? coauthors_get_avatar( $author, 80 );
+			// avatar_img_tag is a property added by Newspack Network plugin to distributed posts.
+			$author_avatar = $author->avatar_img_tag ?? coauthors_get_avatar( $author, 80 );
 			$author_url    = ! empty( $author->user_nicename ) ? get_author_posts_url( $author->ID, $author->user_nicename ) : '';
 			?>
 
