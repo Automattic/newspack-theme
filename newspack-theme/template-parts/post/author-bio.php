@@ -44,7 +44,16 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 								<?php if ( $author_url ) : ?>
 									<a href="<?php echo esc_url( $author_url ); ?>" rel="author">
 								<?php endif; ?>
-									<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID ), array( 'span' => array( 'class' => array() ) ) ); ?>
+									<?php
+									/**
+									 * Filters the author name in the author bio.
+									 *
+									 * @param string $author_name The author name.
+									 * @param int    $author_id   The author ID.
+									 * @param object $author      The author object. Can be a WP_User object or a Co-Authors Plus Guest Author object.
+									 */
+									echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID, $author ), array( 'span' => array( 'class' => array() ) ) );
+									?>
 								<?php if ( $author_url ) : ?>
 									</a>
 								<?php endif; ?>
@@ -118,7 +127,8 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 			<div>
 				<h2 class="accent-header">
 					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-						<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
+					<?php // This filter is documented above. ?>
+					<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ), get_user_by( 'id', get_the_author_meta( 'ID' ) ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
 					</a>
 				</h2>
 
