@@ -95,8 +95,8 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 			$i            = 1;
 
 			foreach ( $authors as $author ) {
-				// avatar_url is a property added by Newspack Network plugin to distributed posts.
-				$author_avatar = $author->avatar_url ?? coauthors_get_avatar( $author, 80 );
+				// avatar_img_tag is a property added by Newspack Network plugin to distributed posts.
+				$author_avatar = $author->avatar_img_tag ?? coauthors_get_avatar( $author, 80 );
 
 				echo '<span class="author-avatar">' . wp_kses( $author_avatar, newspack_sanitize_avatars() ) . '</span>';
 			}
