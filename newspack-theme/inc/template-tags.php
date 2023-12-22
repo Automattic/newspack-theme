@@ -118,12 +118,12 @@ if ( ! function_exists( 'newspack_posted_by' ) ) :
 						$sep = '';
 					endif;
 
-					$author_link = ! empty( $author->user_nicename ) ? get_author_posts_url( $author->ID, $author->user_nicename ) : '';
+					$author_link = get_author_posts_url( $author->ID, $author->user_nicename );
 
-					if ( ! empty( $author->user_nicename ) ) {
+					if ( '#' !== $author_link ) {
 						$author_name = sprintf(
 							'<a class="url fn n" href="%1$s">%2$s</a>',
-							esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ),
+							esc_url( $author_link ),
 							esc_html( $author->display_name )
 						);
 					} else {

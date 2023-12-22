@@ -23,16 +23,16 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 		if ( '' !== $author->description ) {
 			// avatar_img_tag is a property added by Newspack Network plugin to distributed posts.
 			$author_avatar = $author->avatar_img_tag ?? coauthors_get_avatar( $author, 80 );
-			$author_url    = ! empty( $author->user_nicename ) ? get_author_posts_url( $author->ID, $author->user_nicename ) : '';
+			$author_url    = get_author_posts_url( $author->ID, $author->user_nicename );
 			?>
 
 			<div class="author-bio">
 				<?php if ( $author_avatar ) : ?>
-					<?php if ( $author_url ) : ?>
+					<?php if ( '#' !== $author_url ) : ?>
 						<a href="<?php echo esc_url( $author_url ); ?>" rel="author">
 					<?php endif; ?>
 						<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
-					<?php if ( $author_url ) : ?>
+					<?php if ( '#' !== $author_url ) : ?>
 						</a>
 					<?php endif; ?>
 				<?php endif; ?>
@@ -41,7 +41,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<div class="author-bio-header">
 						<div>
 							<h2 class="accent-header">
-								<?php if ( $author_url ) : ?>
+								<?php if ( '#' !== $author_url ) : ?>
 									<a href="<?php echo esc_url( $author_url ); ?>" rel="author">
 								<?php endif; ?>
 									<?php
@@ -54,7 +54,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 									 */
 									echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID, $author ), array( 'span' => array( 'class' => array() ) ) );
 									?>
-								<?php if ( $author_url ) : ?>
+								<?php if ( '#' !== $author_url ) : ?>
 									</a>
 								<?php endif; ?>
 							</h2>
@@ -77,7 +77,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<?php if ( get_theme_mod( 'author_bio_truncate', true ) ) : ?>
 						<p>
 							<?php echo esc_html( newspack_truncate_text( wp_strip_all_tags( $author->description ), $author_bio_length ) ); ?>
-							<?php if ( $author_url ) : ?>
+							<?php if ( '#' !== $author_url ) : ?>
 								<a class="author-link" href="<?php echo esc_url( $author_url ); ?>" rel="author">
 								<?php
 									/* translators: %s is the current author's name. */
@@ -89,7 +89,7 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<?php else : ?>
 						<?php echo wp_kses_post( wpautop( $author->description ) ); ?>
 
-						<?php if ( $author_url ) : ?>
+						<?php if ( '#' !== $author_url ) : ?>
 							<a class="author-link" href="<?php echo esc_url( $author_url ); ?>" rel="author">
 								<?php
 									/* translators: %s is the current author's name. */
