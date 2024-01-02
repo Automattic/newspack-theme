@@ -333,7 +333,7 @@ p.has-background {
 		margin-right: #{0.62 * structure.$size__spacing-unit};
 	}
 	.wpbnbd .thanks,
-	.wpbnbd button {
+	.wpbnbd button[type='submit'] {
 		margin-left: structure.$size__spacing-unit;
 		margin-right: structure.$size__spacing-unit;
 	}
