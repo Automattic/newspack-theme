@@ -339,17 +339,15 @@ p.has-background {
 			margin-left: structure.$size__spacing-unit;
 			margin-right: structure.$size__spacing-unit;
 		}
-
-		.freq-label {
-			font-size: 1em;
-		}
 	}
 }
 
-.site-info .widget .wpbnbd {
-	.thanks {
-		margin: 0.5rem 1.5rem;
-	}
+.widget .wpbnbd .freq-label {
+	font-size: 1em;
+}
+
+.site-info .widget .wpbnbd .thanks {
+	margin: 0.5rem 1.5rem;
 }
 
 .desktop-sidebar,
