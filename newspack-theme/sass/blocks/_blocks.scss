@@ -328,21 +328,26 @@ p.has-background {
 	}
 
 	//! Newspack Donate Block
-	.wpbnbd.tiered .tiers {
-		margin-left: #{0.62 * structure.$size__spacing-unit};
-		margin-right: #{0.62 * structure.$size__spacing-unit};
-	}
-	.wpbnbd .thanks,
-	.wpbnbd button {
-		margin-left: structure.$size__spacing-unit;
-		margin-right: structure.$size__spacing-unit;
+	.wpbnbd {
+		&.tiered .tiers {
+			margin-left: #{0.62 * structure.$size__spacing-unit};
+			margin-right: #{0.62 * structure.$size__spacing-unit};
+		}
+
+		.thanks,
+		button[type='submit'] {
+			margin-left: structure.$size__spacing-unit;
+			margin-right: structure.$size__spacing-unit;
+		}
 	}
 }
 
-.site-info .widget .wpbnbd {
-	.thanks {
-		margin: 0.5rem 1.5rem;
-	}
+.widget .wpbnbd .freq-label {
+	font-size: 1em;
+}
+
+.site-info .widget .wpbnbd .thanks {
+	margin: 0.5rem 1.5rem;
 }
 
 .desktop-sidebar,
