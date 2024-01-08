@@ -1,3 +1,17 @@
+# [1.83.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.83.0-alpha.1...v1.83.0-alpha.2) (2024-01-04)
+
+
+### Bug Fixes
+
+* make sidebar donate block button style more specific ([#2217](https://github.com/Automattic/newspack-theme/issues/2217)) ([10609d7](https://github.com/Automattic/newspack-theme/commit/10609d7e226a21b66499726314de6bb3e0d1231f))
+
+# [1.83.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.82.0...v1.83.0-alpha.1) (2023-12-15)
+
+
+### Features
+
+* add filter to social icons map ([#2212](https://github.com/Automattic/newspack-theme/issues/2212)) ([7b6c411](https://github.com/Automattic/newspack-theme/commit/7b6c4117a07ad97c4e20aa5ca5680830c61114bc))
+
 # [1.82.0](https://github.com/Automattic/newspack-theme/compare/v1.81.0...v1.82.0) (2023-12-11)
 
 
