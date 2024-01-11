@@ -21,23 +21,42 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 	foreach ( $authors as $author ) {
 
 		if ( '' !== $author->description ) {
-			$author_avatar = coauthors_get_avatar( $author, 80 );
+			// avatar_img_tag is a property added by Newspack Network plugin to distributed posts.
+			$author_avatar = $author->avatar_img_tag ?? coauthors_get_avatar( $author, 80 );
+			$author_url    = get_author_posts_url( $author->ID, $author->user_nicename );
 			?>
 
 			<div class="author-bio">
 				<?php if ( $author_avatar ) : ?>
-					<a href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
+					<?php if ( '#' !== $author_url ) : ?>
+						<a href="<?php echo esc_url( $author_url ); ?>" rel="author">
+					<?php endif; ?>
 						<?php echo wp_kses( $author_avatar, newspack_sanitize_avatars() ); ?>
-					</a>
+					<?php if ( '#' !== $author_url ) : ?>
+						</a>
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<div class="author-bio-text">
 					<div class="author-bio-header">
 						<div>
 							<h2 class="accent-header">
-								<a href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
-									<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID ), array( 'span' => array( 'class' => array() ) ) ); ?>
-								</a>
+								<?php if ( '#' !== $author_url ) : ?>
+									<a href="<?php echo esc_url( $author_url ); ?>" rel="author">
+								<?php endif; ?>
+									<?php
+									/**
+									 * Filters the author name in the author bio.
+									 *
+									 * @param string $author_name The author name.
+									 * @param int    $author_id   The author ID.
+									 * @param object $author      The author object. Can be a WP_User object or a Co-Authors Plus Guest Author object.
+									 */
+									echo wp_kses( apply_filters( 'newspack_author_bio_name', $author->display_name, $author->ID, $author ), array( 'span' => array( 'class' => array() ) ) );
+									?>
+								<?php if ( '#' !== $author_url ) : ?>
+									</a>
+								<?php endif; ?>
 							</h2>
 
 							<?php if ( ( true === get_theme_mod( 'show_author_email', false ) && '' !== $author->user_email ) || true === get_theme_mod( 'show_author_social', false ) ) : ?>
@@ -58,22 +77,26 @@ if ( function_exists( 'coauthors_posts_links' ) && is_single() && ! empty( get_c
 					<?php if ( get_theme_mod( 'author_bio_truncate', true ) ) : ?>
 						<p>
 							<?php echo esc_html( newspack_truncate_text( wp_strip_all_tags( $author->description ), $author_bio_length ) ); ?>
-							<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
-							<?php
-								/* translators: %s is the current author's name. */
-								printf( esc_html__( 'More by %s', 'newspack' ), esc_html( $author->display_name ) );
-							?>
-							</a>
+							<?php if ( '#' !== $author_url ) : ?>
+								<a class="author-link" href="<?php echo esc_url( $author_url ); ?>" rel="author">
+								<?php
+									/* translators: %s is the current author's name. */
+									printf( esc_html__( 'More by %s', 'newspack' ), esc_html( $author->display_name ) );
+								?>
+								</a>
+							<?php endif; ?>
 						</p>
 					<?php else : ?>
 						<?php echo wp_kses_post( wpautop( $author->description ) ); ?>
 
-						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( $author->ID, $author->user_nicename ) ); ?>" rel="author">
-							<?php
-								/* translators: %s is the current author's name. */
-								printf( esc_html__( 'More by %s', 'newspack' ), esc_html( $author->display_name ) );
-							?>
-						</a>
+						<?php if ( '#' !== $author_url ) : ?>
+							<a class="author-link" href="<?php echo esc_url( $author_url ); ?>" rel="author">
+								<?php
+									/* translators: %s is the current author's name. */
+									printf( esc_html__( 'More by %s', 'newspack' ), esc_html( $author->display_name ) );
+								?>
+							</a>
+						<?php endif; ?>
 					<?php endif; ?>
 
 				</div><!-- .author-bio-text -->
@@ -104,7 +127,8 @@ elseif ( (bool) get_the_author_meta( 'description' ) && is_single() ) :
 			<div>
 				<h2 class="accent-header">
 					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-						<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
+					<?php // This filter is documented above. ?>
+					<?php echo wp_kses( apply_filters( 'newspack_author_bio_name', get_the_author(), get_the_author_meta( 'ID' ), get_user_by( 'id', get_the_author_meta( 'ID' ) ) ), array( 'span' => array( 'class' => array() ) ) ); ?>
 					</a>
 				</h2>
 
