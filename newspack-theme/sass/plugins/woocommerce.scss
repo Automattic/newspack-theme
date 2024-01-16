@@ -1850,7 +1850,6 @@ table.woocommerce-table--order-details.shop_table,
 					a {
 						background: var( --newspack-theme-color-primary );
 						color: var( --newspack-theme-color-bg-body );
-						pointer-events: none;
 
 						&:focus-visible {
 							outline-color: var( --newspack-theme-color-bg-body );
