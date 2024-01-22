@@ -49,7 +49,7 @@ div.wpnbha .article-section-title {
 @include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links::before {
-			background-color: var( --newspack-theme-color-bg-body );
+			background-color: var( --newspack-theme-color-against-primary );
 		}
 	}
 }

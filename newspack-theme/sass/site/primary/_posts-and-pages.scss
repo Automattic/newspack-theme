@@ -136,15 +136,15 @@ amp-script .cat-links {
 		}
 
 		a {
-			color: var( --newspack-theme-color-primary );
+			color: var( --newspack-theme-color-primary-against-white );
 			text-decoration: none;
 
 			&:visited {
-				color: var( --newspack-theme-color-primary );
+				color: var( --newspack-theme-color-primary-against-white );
 			}
 
 			&:hover {
-				color: var( --newspack-theme-color-primary-variation );
+				color: var( --newspack-theme-color-primary-variation-against-white );
 			}
 		}
 	}
@@ -174,7 +174,7 @@ amp-script .cat-links {
 	}
 
 	a {
-		color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-primary-against-white );
 	}
 
 	.edit-link {
@@ -222,12 +222,17 @@ amp-script .cat-links {
 		color: inherit;
 		display: block;
 		font-size: 0.8em;
+		margin: 0.5em 0;
+
 		@include utilities.link-transition;
 
-		margin: 0.5em 0;
+		&:hover {
+			color: var( --newspack-theme-color-link-hover );
+		}
 	}
 
 	a {
+		color: var( --newspack-theme-color-secondary-against-white );
 		text-decoration: underline;
 
 		&:hover,
@@ -273,9 +278,9 @@ amp-script .cat-links {
 
 .entry .entry-content {
 	a.button {
+		color: var( --newspack-theme-color-against-secondary );
 		text-decoration: none;
 
-		&,
 		&:hover {
 			color: var( --newspack-theme-color-bg-body );
 		}
@@ -520,7 +525,7 @@ div.sharedaddy {
 	}
 
 	.author-link {
-		color: var( --newspack-theme-color-secondary );
+		color: var( --newspack-theme-color-secondary-against-white );
 		font-size: var( --newspack-theme-font-size-sm );
 		font-weight: bold;
 		text-decoration: none;
@@ -709,6 +714,11 @@ div.sharedaddy {
 	// Header - default background
 	.h-db .featured-image-beside {
 		background-color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-against-primary );
+
+		.entry-header {
+			color: var( --newspack-theme-color-against-primary );
+		}
 	}
 
 	// Header - solid background

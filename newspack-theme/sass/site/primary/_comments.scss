@@ -214,7 +214,7 @@
 				color: inherit;
 
 				&:hover {
-					color: var( --newspack-theme-color-primary-variation );
+					color: var( --newspack-theme-color-primary-against-white );
 				}
 			}
 		}
@@ -222,7 +222,7 @@
 		.post-author-badge {
 			background: var( --newspack-theme-color-primary );
 			border-radius: 100%;
-			color: #fff;
+			color: var( --newspack-theme-color-against-primary );
 			display: inline-block;
 			height: 16px;
 			line-height: 16px;
@@ -259,7 +259,7 @@
 			}
 
 			&:hover {
-				color: var( --newspack-theme-color-primary-variation );
+				color: var( --newspack-theme-color-primary-against-white );
 				text-decoration: none;
 			}
 		}
@@ -291,7 +291,7 @@
 			z-index: 1;
 
 			&:hover {
-				color: var( --newspack-theme-color-primary );
+				color: var( --newspack-theme-color-primary-against-white );
 			}
 		}
 	}
@@ -440,7 +440,7 @@
 	&:hover,
 	&:focus {
 		background: transparent;
-		color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-primary-against-white );
 	}
 }
 

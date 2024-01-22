@@ -20,6 +20,16 @@
 	.bottom-header-contain {
 		background-color: var( --newspack-theme-color-bg-dark-darken-5 );
 	}
+
+	.site-header,
+	.site-title a,
+	.site-title a:visited,
+	.site-description,
+	.middle-header-contain,
+	.middle-header-contain .nav1 .main-menu > li,
+	.middle-header-contain .nav1 .main-menu > li > a {
+		color: #fff;
+	}
 }
 
 // Mobile CTA
@@ -33,8 +43,9 @@
 .article-section-title,
 .cat-links,
 .archive .page-title,
+#secondary .widget-title,
 #secondary .widgettitle {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 
 	&::before {
 		background-color: var( --newspack-theme-color-primary );
@@ -80,6 +91,14 @@
 	.cat-links {
 		color: inherit;
 	}
+
+	.accent-header::before,
+	div.wpnbha .article-section-title::before,
+	.cat-links::before,
+	figcaption::after,
+	.wp-caption-text::after {
+		background-color: var( --newspack-theme-color-against-primary );
+	}
 }
 
 .accent-header,
@@ -115,7 +134,7 @@ div.wpnbha .article-section-title,
 .cat-links a,
 .cat-links a:hover,
 .cat-links a:visited {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 }
 
 .author-bio {
@@ -201,11 +220,11 @@ div.wpnbha .article-section-title,
 @include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links a {
-			color: var( --newspack-theme-color-bg-body );
+			color: var( --newspack-theme-color-against-primary );
 		}
 
 		.cat-links::before {
-			background-color: var( --newspack-theme-color-bg-body );
+			background-color: var( --newspack-theme-color-against-primary );
 		}
 	}
 }
@@ -227,7 +246,7 @@ div.wpnbha .article-section-title,
 }
 
 .entry .entry-footer {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 }
 
 .entry .entry-footer a,
@@ -255,6 +274,15 @@ div.wpnbha .article-section-title,
 	// Header - Solid background
 	.h-sb .featured-image-beside {
 		background-color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-against-primary );
+
+		a {
+			color: inherit;
+		}
+
+		.cat-links::before {
+			background-color: var( --newspack-theme-color-against-primary );
+		}
 	}
 }
 
