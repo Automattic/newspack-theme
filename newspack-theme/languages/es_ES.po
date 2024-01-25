@@ -122,8 +122,8 @@ msgid "https://newspack.com/"
 msgstr ""
 
 #: footer.php:49
-msgid "Proudly powered by Newspack by Automattic"
-msgstr "Orgullosamente impulsado por Newspack de Automattic"
+msgid "Powered by Newspack"
+msgstr "Impulsado por Newspack"
 
 #: functions.php:78
 msgid "Primary Menu"
