@@ -1,3 +1,10 @@
+# [1.84.0](https://github.com/Automattic/newspack-theme/compare/v1.83.0...v1.84.0) (2024-01-25)
+
+
+### Features
+
+* add support to Newspack Network distributed authors ([7c9463d](https://github.com/Automattic/newspack-theme/commit/7c9463ddfa49e6d824ee1eee9cc5ff82e0c92586))
+
 # [1.84.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.83.0...v1.84.0-alpha.1) (2024-01-11)
 
 
