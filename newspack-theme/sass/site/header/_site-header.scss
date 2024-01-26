@@ -321,7 +321,7 @@
 	.middle-header-contain,
 	.middle-header-contain .nav1 .main-menu > li,
 	.middle-header-contain .nav1 .main-menu > li > a {
-		color: #fff;
+		color:  var( --newspack-theme-color-against-primary );
 	}
 
 	.top-header-contain {
@@ -654,6 +654,7 @@
 			div.middle-header-contain {
 				background: rgba( 0, 0, 0, 0.5 );
 				background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.85 ) 0%, rgba( 0, 0, 0, 0 ) 100% );
+				color: #fff;
 				max-width: 100%;
 				width: 100%;
 

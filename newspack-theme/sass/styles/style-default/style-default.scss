@@ -7,7 +7,7 @@
 #secondary .widgettitle,
 .article-section-title {
 	border-bottom: 4px solid var( --newspack-theme-color-border );
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	padding-bottom: #{structure.$size__spacing-unit * 0.33};
 }
 
@@ -39,7 +39,7 @@
 	.menu-highlight a {
 		background-color: var( --newspack-theme-color-primary );
 		border: 0;
-		color: #fff;
+		color: var( --newspack-theme-color-against-primary );
 		padding: #{structure.$size__spacing-unit * 0.5} #{structure.$size__spacing-unit * 0.75};
 	}
 }
@@ -47,11 +47,12 @@
 .h-sb .site-header .nav3 {
 	a {
 		background-color: var( --newspack-theme-color-primary-darken-10 );
-		color: #fff;
+		color: var( --newspack-theme-color-against-primary );
 	}
 
 	.menu-highlight a {
 		background-color: var( --newspack-theme-color-secondary );
+		color: var( --newspack-theme-color-against-secondary );
 	}
 }
 
@@ -76,6 +77,7 @@
 
 	.menu-highlight a {
 		background-color: var( --newspack-theme-color-primary-darken-10 );
+		color: var( --newspack-theme-color-against-primary );
 	}
 }
 
@@ -88,19 +90,19 @@
 .cat-links {
 	a {
 		background-color: var( --newspack-theme-color-primary );
-		color: #fff;
+		color: var( --newspack-theme-color-against-primary );
 		display: inline-block;
 		line-height: 1;
 		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
 		padding: 0.3em 0.5em;
 
 		&:visited {
-			color: #fff;
+			color: var( --newspack-theme-color-against-primary );
 		}
 
 		&:hover {
 			background-color: var( --newspack-theme-color-primary-variation );
-			color: #fff;
+			color: var( --newspack-theme-color-against-primary );
 		}
 	}
 }
@@ -158,10 +160,6 @@
 	}
 }
 
-footer.entry-footer a {
-	color: var( --newspack-theme-color-primary-variation );
-}
-
 .tags-links a {
 	background-color: #f1f1f1;
 	margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
@@ -175,8 +173,11 @@ footer.entry-footer a {
 	}
 }
 
-div.author-bio .author-link {
-	color: var( --newspack-theme-color-primary );
+div.author-bio {
+	.author-link,
+	h2 a {
+		color: var( --newspack-theme-color-primary-against-white );
+	}
 }
 
 /* Archives */

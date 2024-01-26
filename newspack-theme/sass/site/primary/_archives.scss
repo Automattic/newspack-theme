@@ -71,7 +71,7 @@
 
 .archive {
 	.page-title {
-		color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-primary-against-white );
 	}
 
 	@include utilities.media( tablet ) {

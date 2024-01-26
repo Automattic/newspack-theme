@@ -366,7 +366,7 @@ blockquote {
 
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
-	color: var( --newspack-theme-color-secondary );
+	color: var( --newspack-theme-color-secondary-against-white );
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: 800;
 }
@@ -562,7 +562,7 @@ blockquote {
 
 .site-footer {
 	background-color: var( --newspack-theme-color-primary );
-	color: var( --newspack-theme-color-bg-body );
+	color: var( --newspack-theme-color-against-primary );
 
 	a,
 	a:hover,

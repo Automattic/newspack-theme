@@ -686,16 +686,18 @@ p.has-background {
 //! Button
 .wp-block-buttons {
 	--wp--style--block-gap: 0.5rem;
+	.wp-block-button__link {
+		color: var( --newspack-theme-color-against-secondary );
+	}
 }
 
 .wp-block-button__link {
 	background-color: var( --newspack-theme-color-secondary );
-	color: #fff;
-
 	@include utilities.button-transition;
 
 	border: none;
 	border-radius: 5px;
+	color: var( --newspack-theme-color-against-secondary );
 	font-family: var( --newspack-theme-font-heading );
 	font-size: var( --newspack-theme-font-size-sm );
 	line-height: var( --newspack-theme-font-line-height-heading );
@@ -744,7 +746,7 @@ p.has-background {
 .wp-block-button__link.is-style-outline,
 .is-style-outline > .wp-block-button__link:not( .has-text-color ),
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
-	color: var( --newspack-theme-color-secondary );
+	color: var( --newspack-theme-color-secondary-against-white );
 }
 
 .wp-block-button {
@@ -1057,7 +1059,7 @@ hr {
 		text-decoration: none;
 		font-weight: bold;
 		padding: ( structure.$size__spacing-unit * 0.75 ) structure.$size__spacing-unit;
-		color: #fff;
+		color: var( --newspack-theme-color-against-secondary );
 		margin-left: 0;
 		margin-top: calc( 0.75 * #{structure.$size__spacing-unit} );
 

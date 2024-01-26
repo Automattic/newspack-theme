@@ -19,6 +19,16 @@
 	.bottom-header-contain {
 		background-color: var( --newspack-theme-color-bg-dark-darken-5 );
 	}
+
+	.site-header,
+	.site-title a,
+	.site-title a:visited,
+	.site-description,
+	.middle-header-contain,
+	.middle-header-contain .nav1 .main-menu > li,
+	.middle-header-contain .nav1 .main-menu > li > a {
+		color: #fff;
+	}
 }
 
 // Subpage header with a solid background
@@ -56,7 +66,7 @@
 #secondary .widgettitle,
 .article-section-title,
 .cat-links {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	margin-bottom: structure.$size__spacing-unit;
 	text-align: center;
 }
@@ -153,7 +163,7 @@ cite {
 //! Paragraph
 .has-drop-cap:not( :focus )::first-letter {
 	background-color: var( --newspack-theme-color-primary );
-	color: #fff;
+	color: var( --newspack-theme-color-against-primary );
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 	font-size: var( --newspack-theme-font-size-xxl );
@@ -318,7 +328,7 @@ cite {
 		}
 
 		.cat-links {
-			color: var( --newspack-theme-color-primary );
+			color: var( --newspack-theme-color-primary-against-white );
 		}
 	}
 
@@ -335,7 +345,7 @@ cite {
 }
 
 .entry .entry-footer {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	text-align: center;
 
 	a,
@@ -502,7 +512,7 @@ cite {
 
 	.widget .widget-title,
 	.widget .widgettitle {
-		color: var( --newspack-theme-color-primary );
+		color: var( --newspack-theme-color-primary-against-white );
 		font-weight: bold;
 	}
 
