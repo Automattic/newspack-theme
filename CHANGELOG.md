@@ -1,3 +1,11 @@
+## [1.84.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.84.0...v1.84.1-alpha.1) (2024-01-26)
+
+
+### Bug Fixes
+
+* **my-account:** make active menu links clickable ([#2221](https://github.com/Automattic/newspack-theme/issues/2221)) ([23f8955](https://github.com/Automattic/newspack-theme/commit/23f89555323669b806849d7e688a18c9898ce30a))
+* replace contrast-related colours code with CSS variables ([#2109](https://github.com/Automattic/newspack-theme/issues/2109)) ([b2dbc60](https://github.com/Automattic/newspack-theme/commit/b2dbc607fdcbb70952a186b71ac6b7b81d4b994d))
+
 # [1.84.0](https://github.com/Automattic/newspack-theme/compare/v1.83.0...v1.84.0) (2024-01-25)
 
 
