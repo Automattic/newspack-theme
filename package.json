@@ -40,7 +40,7 @@
     "@semantic-release/git": "^10.0.1",
     "@wordpress/browserslist-config": "^5.19.0",
     "chokidar-cli": "^3.0.0",
-    "classnames": "^2.3.2",
+    "classnames": "^2.5.1",
     "eslint": "^7.32.0",
     "fs-extra": "^11.1.1",
     "lint-staged": "^13.2.2",
