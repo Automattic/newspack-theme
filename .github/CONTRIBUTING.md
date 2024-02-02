@@ -29,7 +29,7 @@ Feature requests can be [submitted to our issue tracker](https://github.com/Auto
 
 ## Pull requests
 
-To submit a patch to the Newspack theme, simply create a pull request to the master branch of the Newspack theme repository. Please test and provide an explanation for your changes. When opening a pull request, please follow these guidelines:
+To submit a patch to the Newspack theme, simply create a pull request to the trunk branch of the Newspack theme repository. Please test and provide an explanation for your changes. When opening a pull request, please follow these guidelines:
 
 - **Ensure you stick to the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) and the [VIP Go Coding Standards](https://vip.wordpress.com/documentation/vip-go/code-review-blockers-warnings-notices/)**
 - Install our pre-commit hook using composer. It'll help with the coding standards by automatically checking code when you commit. To install them run `composer install` from the command line within the Newspack plugin or theme directory.

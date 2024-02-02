@@ -1,6 +1,6 @@
 /** === Includes === */
 
-@use 'mixins/mixins-master';
+@use 'mixins/mixins-main';
 @use 'mixins/utilities';
 @use 'variables-site/colors';
 @use 'variables-site/fonts';
@@ -832,7 +832,7 @@ ul.wp-block-archives,
 .wp-block-categories {
 	ul {
 		padding-top: ( 0.75 * structure.$size__spacing-unit );
-		@include mixins-master.nestedSubMenuPadding();
+		@include mixins-main.nestedSubMenuPadding();
 	}
 
 	li ul {
@@ -1216,7 +1216,7 @@ ul.wp-block-archives,
 	}
 
 	&.subscribe__style-8 {
-		@include mixins-master.jetpack-mailchimp-editor;
+		@include mixins-main.jetpack-mailchimp-editor;
 
 		.block-editor-block-list__layout[class*='is-size-'] & {
 			margin-left: -32px;
@@ -1280,7 +1280,7 @@ ul.wp-block-archives,
 	}
 
 	&.subscribe__style-9 {
-		@include mixins-master.jetpack-mailchimp-editor;
+		@include mixins-main.jetpack-mailchimp-editor;
 
 		.wp-block-columns {
 			margin: 0;
@@ -1324,7 +1324,7 @@ ul.wp-block-archives,
 	}
 
 	&.subscribe__style-10 {
-		@include mixins-master.jetpack-mailchimp-editor( $gap: 0 );
+		@include mixins-main.jetpack-mailchimp-editor( $gap: 0 );
 
 		.wp-block-jetpack-mailchimp > p {
 			display: none;

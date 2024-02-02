@@ -1,4 +1,4 @@
-@use '../mixins/mixins-master';
+@use '../mixins/mixins-main';
 
 .clear::before,
 .clear::after,
@@ -12,7 +12,7 @@
 .site-content::after,
 .site-footer::before,
 .site-footer::after {
-	@include mixins-master.clearfix;
+	@include mixins-main.clearfix;
 }
 
 .clear::after,
@@ -21,5 +21,5 @@
 .site-header::after,
 .site-content::after,
 .site-footer::after {
-	@include mixins-master.clearfix-after;
+	@include mixins-main.clearfix-after;
 }

@@ -1,4 +1,4 @@
-@use '../mixins/mixins-master';
+@use '../mixins/mixins-main';
 @use '../mixins/utilities';
 
 .newspack-pattern {
@@ -134,7 +134,7 @@
 			font-size: 0.8em;
 		}
 
-		@include mixins-master.jetpack-mailchimp;
+		@include mixins-main.jetpack-mailchimp;
 
 		&.has-background {
 			padding: 0;
@@ -196,7 +196,7 @@
 			font-size: 0.8em;
 		}
 
-		@include mixins-master.jetpack-mailchimp;
+		@include mixins-main.jetpack-mailchimp;
 
 		&.has-background {
 			padding: 32px;
@@ -232,7 +232,7 @@
 		max-width: 90vw;
 		width: 1200px;
 
-		@include mixins-master.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
+		@include mixins-main.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
 
 		/* stylelint-disable-next-line */
 		#wp-block-jetpack-mailchimp_consent-text {

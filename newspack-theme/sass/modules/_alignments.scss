@@ -1,4 +1,4 @@
-@use '../mixins/mixins-master';
+@use '../mixins/mixins-main';
 @use '../mixins/utilities';
 @use '../variables-site/structure';
 
@@ -28,5 +28,5 @@
 
 .aligncenter {
 	clear: both;
-	@include mixins-master.center-block;
+	@include mixins-main.center-block;
 }
