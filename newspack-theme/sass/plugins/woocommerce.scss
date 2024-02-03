@@ -72,7 +72,7 @@ a.button {
 				width: 100%;
 			}
 
-			.form-row:not(.form-row-first):not(.form-row-last) {
+			+ .form-row:not(.form-row-first):not(.form-row-last) {
 				clear: left;
 			}
 		}
