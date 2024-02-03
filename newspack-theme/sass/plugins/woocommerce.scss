@@ -71,6 +71,10 @@ a.button {
 			&:last-child {
 				width: 100%;
 			}
+
+			.form-row:not(.form-row-first):not(.form-row-last) {
+				clear: left;
+			}
 		}
 	}
 }
@@ -1889,6 +1893,10 @@ table.woocommerce-table--order-details.shop_table,
 			.woocommerce_account_subscriptions :first-child {
 				margin-top: 0;
 			}
+		}
+
+		.wcs-gifting-recipient-details-content {
+			grid-column: 1/-1;
 		}
 	}
 }
