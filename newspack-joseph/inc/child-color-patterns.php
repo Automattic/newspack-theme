@@ -8,18 +8,12 @@
  * Add child theme-specific custom colours.
  */
 function newspack_joseph_custom_colors_css() {
-	$primary_color   = newspack_get_primary_color();
-	$secondary_color = newspack_get_secondary_color();
 	$header_color    = '#111';
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
-		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
-		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
-
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color = get_theme_mod( 'header_color_hex', '#666666' );
 		}
-
 		if ( 'default' !== get_theme_mod( 'footer_color', 'default' ) ) {
 			$footer_color          = get_theme_mod( 'footer_color_hex', '' );
 			$footer_color_contrast = newspack_get_color_contrast( $footer_color );
@@ -27,8 +21,6 @@ function newspack_joseph_custom_colors_css() {
 	}
 
 	// Set colour contrasts.
-	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
-	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
 	$header_color_contrast    = newspack_get_color_contrast( $header_color );
 
 	$theme_css = '

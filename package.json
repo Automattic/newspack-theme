@@ -1,6 +1,6 @@
 {
   "name": "newspack",
-  "version": "1.84.0",
+  "version": "1.84.1-alpha.1",
   "description": "A theme for Newspack. https://newspack.com",
   "bugs": {
     "url": "https://github.com/Automattic/newspack-theme/issues"

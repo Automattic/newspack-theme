@@ -77,7 +77,7 @@ blockquote {
 }
 
 .has-drop-cap:not( :focus )::first-letter {
-	color: var( --newspack-theme-color-secondary );
+	color: var( --newspack-theme-color-secondary-against-white );
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: 800;
 }

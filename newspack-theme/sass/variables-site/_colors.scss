@@ -8,6 +8,14 @@
 	--newspack-theme-color-primary-darken-5: #1a53ff; // TODO: find a better approach than being this literal.
 	--newspack-theme-color-primary-darken-10: #0040ff; // TODO: find a better approach than being this literal.
 
+	// Constast colors - text against white background, if light changes to grey:
+	--newspack-theme-color-primary-against-white: var( --newspack-theme-color-primary ); // primary color against white bg.
+	--newspack-theme-color-secondary-against-white: var( --newspack-theme-color-secondary ); // secondary color against white bg.
+
+	// Contrast colors - text to use against primary or secondary (black or white)
+	--newspack-theme-color-against-primary: #fff; // text color on top of primary color bg.
+	--newspack-theme-color-against-secondary: #fff; // text color on top of primary color bg.
+
 	// Backgrounds
 	--newspack-theme-color-bg-body: #fff;
 	--newspack-theme-color-bg-input: var( --newspack-theme-color-bg-body );
@@ -27,7 +35,7 @@
 
 	// Links
 	--newspack-theme-color-link: var( --newspack-theme-color-secondary );
-	--newspack-theme-color-link-hover: var( --newspack-theme-color-secondary-variation );
+	--newspack-theme-color-link-hover: var( --newspack-theme-color-secondary-variation-against-white );
 
 	// Borders
 	--newspack-theme-color-border: #ccc;

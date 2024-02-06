@@ -305,7 +305,7 @@
 	nav + nav,
 	nav + .widget,
 	.widget + .widget {
-		border-top: 1px solid #fff;
+		border-top: 1px solid var( --newspack-theme-color-against-primary );
 	}
 
 	nav + nav {
@@ -355,11 +355,12 @@
 // Mobile Sidebar and Menu styles
 .mobile-sidebar {
 	background-color: var( --newspack-theme-color-primary );
-	color: #fff;
+	color: var( --newspack-theme-color-against-primary );
 
 	a,
-	.nav1 .sub-menu > li > a {
-		color: #fff;
+	.nav1 .sub-menu > li > a,
+	.nav3 a {
+		color: var( --newspack-theme-color-against-primary );
 	}
 
 	a:hover,

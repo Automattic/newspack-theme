@@ -11,7 +11,7 @@ Newspack Katharine Editor Styles
 
 .accent-header,
 .article-section-title {
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	font-size: var( --newspack-theme-font-size-xs );
 	margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	margin-top: 0;

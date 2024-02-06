@@ -9,12 +9,10 @@
  */
 function newspack_scott_custom_colors_css() {
 	$primary_color   = newspack_get_primary_color();
-	$secondary_color = newspack_get_secondary_color();
 	$header_color    = $primary_color;
 
 	if ( 'default' !== get_theme_mod( 'theme_colors', 'default' ) ) {
 		$primary_color   = get_theme_mod( 'primary_color_hex', $primary_color );
-		$secondary_color = get_theme_mod( 'secondary_color_hex', $secondary_color );
 
 		if ( 'default' !== get_theme_mod( 'header_color', 'default' ) ) {
 			$header_color = get_theme_mod( 'header_color_hex', '#666666' );
@@ -29,26 +27,15 @@ function newspack_scott_custom_colors_css() {
 	}
 
 	// Set colour contrasts.
-	$primary_color_contrast   = newspack_get_color_contrast( $primary_color );
-	$secondary_color_contrast = newspack_get_color_contrast( $secondary_color );
 	$header_color_contrast    = newspack_get_color_contrast( $header_color );
 
-	$theme_css = '
-		.mobile-sidebar .article-section-title,
-		.mobile-sidebar .accent-header {
-			color: ' . esc_html( $primary_color_contrast ) . ';
-		}
+	$theme_css  = '';
+	$editor_css = '';
 
+	$theme_css .= '
 		.mobile-sidebar .article-section-title::before,
 		.mobile-sidebar .accent-header::before {
 			background-color: ' . esc_html( newspack_adjust_brightness( $header_color, -30 ) ) . ';
-		}
-
-		@media only screen and (min-width: 782px) {
-			/* Header default background */
-			.h-db .featured-image-beside .cat-links:before {
-				background-color: ' . esc_html( $primary_color_contrast ) . ';
-			}
 		}
 	';
 
@@ -100,8 +87,6 @@ function newspack_scott_custom_colors_css() {
 			}
 		';
 	}
-
-	$editor_css = '';
 
 	if ( function_exists( 'register_block_type' ) && is_admin() ) {
 		$theme_css = $editor_css;

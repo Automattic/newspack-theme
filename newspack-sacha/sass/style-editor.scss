@@ -18,7 +18,7 @@ h1.wp-block-post-title,
 .accent-header,
 .article-section-title {
 	align-items: center;
-	color: var( --newspack-theme-color-primary );
+	color: var( --newspack-theme-color-primary-against-white );
 	display: flex;
 	font-size: var( --newspack-theme-font-size-xs );
 	margin-bottom: #{1.5 * structure.$size__spacing-unit};
@@ -46,7 +46,7 @@ h1.wp-block-post-title,
 
 .has-drop-cap:not( :focus )::first-letter {
 	background-color: var( --newspack-theme-color-primary );
-	color: #fff;
+	color: var( --newspack-theme-color-against-primary );
 	font-family: var( --newspack-theme-font-heading );
 	font-weight: bold;
 	font-size: var( --newspack-theme-font-size-xxl );
