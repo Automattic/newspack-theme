@@ -52,7 +52,7 @@ if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 
 				<?php endif; ?>
 
 				<a target="_blank" href="<?php echo esc_url( __( 'https://newspack.com/', 'newspack' ) ); ?>" class="imprint">
-					<?php echo esc_html__( 'Proudly powered by Newspack by Automattic', 'newspack' ); ?>
+					<?php echo esc_html__( 'Powered by Newspack', 'newspack' ); ?>
 				</a>
 
 				<?php

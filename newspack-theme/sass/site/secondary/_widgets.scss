@@ -1,4 +1,4 @@
-@use '../../mixins/mixins-master';
+@use '../../mixins/mixins-main';
 @use '../../mixins/utilities';
 @use '../../variables-site/structure';
 
@@ -163,8 +163,8 @@
 
 	li {
 		&::after {
-			@include mixins-master.clearfix;
-			@include mixins-master.clearfix-after;
+			@include mixins-main.clearfix;
+			@include mixins-main.clearfix-after;
 		}
 
 		&:not( :last-child ) {

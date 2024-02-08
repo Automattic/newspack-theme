@@ -75,6 +75,7 @@ workflows:
                 - release
                 - alpha
                 - /^hotfix\/.*/
+                - /^epic\/.*/
       - post_release:
           requires:
             - release
