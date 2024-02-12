@@ -46,7 +46,7 @@
     "lint-staged": "^13.2.2",
     "newspack-scripts": "^5.3.0",
     "npm-run-all": "^4.1.5",
-    "postcss-scss": "^4.0.6",
+    "postcss-scss": "^4.0.9",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^4.1.1",
     "sass": "^1.70.0",
