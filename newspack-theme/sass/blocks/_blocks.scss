@@ -708,7 +708,7 @@ p.has-background {
 	outline: none;
 
 	&:visited {
-		color: #fff;
+		color: var( --newspack-theme-color-against-secondary );
 	}
 }
 
