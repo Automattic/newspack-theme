@@ -4,10 +4,26 @@ const { THEMES } = require( './scripts/create-child-releases.js' );
 
 module.exports = {
 	branches: [
+		// `release` branch is published on the main distribution channel (a new version on GH).
 		'release',
+		// `alpha` branch – for regular pre-releases.
 		{
 			name: 'alpha',
-			prerelease: 'alpha',
+			prerelease: true,
+		},
+		// `hotfix/*` branches – for releases outside of the release schedule.
+		{
+			name: 'hotfix/*',
+			// With `prerelease: true`, the `name` would be used for the pre-release tag. A name with a `/`
+			// is not valid, though. See https://semver.org/#spec-item-9.
+			prerelease: '${name.replace(/\\//g, "-")}',
+		},
+		// `epic/*` branches – for beta testing/QA pre-release builds.
+		{
+			name: 'epic/*',
+			// With `prerelease: true`, the `name` would be used for the pre-release tag. A name with a `/`
+			// is not valid, though. See https://semver.org/#spec-item-9.
+			prerelease: '${name.replace(/\\//g, "-")}',
 		},
 	],
 	prepare: [
