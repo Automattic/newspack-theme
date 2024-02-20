@@ -1,3 +1,16 @@
+# [1.85.0](https://github.com/Automattic/newspack-theme/compare/v1.84.1...v1.85.0) (2024-02-20)
+
+
+### Bug Fixes
+
+* **my-account:** fixes for My Account ([#2240](https://github.com/Automattic/newspack-theme/issues/2240)) ([90f2b8f](https://github.com/Automattic/newspack-theme/commit/90f2b8f805c8de02e1b68cefe6dc1901d1051e18))
+
+
+### Features
+
+* **ci:** add epic/* release workflow and rename `master` to `trunk` ([#2225](https://github.com/Automattic/newspack-theme/issues/2225)) ([86e6ada](https://github.com/Automattic/newspack-theme/commit/86e6ada53147925df1bd50eac00dd00527995203))
+* simplify footer credits ([#2222](https://github.com/Automattic/newspack-theme/issues/2222)) ([01ef71d](https://github.com/Automattic/newspack-theme/commit/01ef71d020384062c5567e70fa5728eec599df0d))
+
 # [1.85.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.84.1...v1.85.0-alpha.1) (2024-02-08)
 
 
