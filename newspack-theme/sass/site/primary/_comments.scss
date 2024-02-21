@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use '../../mixins/mixins-master';
+@use '../../mixins/mixins-main';
 @use '../../mixins/utilities';
 @use '../../variables-site/structure';
 
@@ -341,7 +341,7 @@
 }
 
 .discussion-avatar-list {
-	@include mixins-master.clearfix;
+	@include mixins-main.clearfix;
 
 	margin: 0;
 	padding: 0;
