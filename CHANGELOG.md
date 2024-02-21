@@ -1,3 +1,10 @@
+## [1.85.1](https://github.com/Automattic/newspack-theme/compare/v1.85.0...v1.85.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* correct button visited color ([#2247](https://github.com/Automattic/newspack-theme/issues/2247)) ([da10aec](https://github.com/Automattic/newspack-theme/commit/da10aecb80f67869d7b71196ed7189e67da406f8))
+
 # [1.85.0](https://github.com/Automattic/newspack-theme/compare/v1.84.1...v1.85.0) (2024-02-20)
 
 
