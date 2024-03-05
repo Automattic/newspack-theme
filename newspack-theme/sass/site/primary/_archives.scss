@@ -31,6 +31,10 @@
 
 	.post-thumbnail {
 		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
+
+		figcaption {
+			margin-top: 8px;
+		}
 	}
 
 	.entry-content > p {

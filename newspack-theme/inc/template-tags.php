@@ -398,6 +398,11 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<?php the_post_thumbnail( $size, $default_image_attributes ); ?>
 				</a>
+				<?php if ( get_theme_mod( 'archive_show_credits' ) && method_exists( 'Newspack\Newspack_Image_Credits', 'get_media_credit_string' ) ) : ?>
+					<figcaption>
+						<?php echo wp_kses_post( \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() ) ); ?>
+					</figcaption>
+				<?php endif; ?>
 			</figure>
 
 			<?php

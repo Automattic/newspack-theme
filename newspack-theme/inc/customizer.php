@@ -1081,6 +1081,24 @@ function newspack_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add option to show image credits in archives.
+	$wp_customize->add_setting(
+		'archive_show_credits',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'newspack_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'archive_show_credits',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show image credits in archives and search results', 'newspack' ),
+			'section' => 'archive_options',
+		)
+	);
+
+
 	// Add option to change archive layouts.
 	$wp_customize->add_setting(
 		'archive_layout',
