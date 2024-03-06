@@ -31,6 +31,13 @@
 
 	.post-thumbnail {
 		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
+
+		figcaption {
+			margin-top: 8px;
+			@include utilities.media( tablet ) {
+				font-size: var(--newspack-theme-font-size-xxs);
+			}
+		}
 	}
 
 	.entry-content > p {
