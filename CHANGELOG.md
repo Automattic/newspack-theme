@@ -1,3 +1,10 @@
+# [1.86.0](https://github.com/Automattic/newspack-theme/compare/v1.85.1...v1.86.0) (2024-03-06)
+
+
+### Features
+
+* add theme option to show image captions/credits in archives ([#2257](https://github.com/Automattic/newspack-theme/issues/2257)) ([ef50172](https://github.com/Automattic/newspack-theme/commit/ef50172c0a5507a011eec5f7b88beda1798b65b0))
+
 ## [1.85.1](https://github.com/Automattic/newspack-theme/compare/v1.85.0...v1.85.1) (2024-02-21)
 
 
