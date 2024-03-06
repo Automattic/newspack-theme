@@ -398,6 +398,23 @@ if ( ! function_exists( 'newspack_post_thumbnail' ) ) :
 				<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 					<?php the_post_thumbnail( $size, $default_image_attributes ); ?>
 				</a>
+				<?php if ( get_theme_mod( 'archive_show_captions' ) || get_theme_mod( 'archive_show_credits' ) ) : ?>
+					<?php
+					$featured_image_id = get_post_thumbnail_id();
+					$caption           = wp_get_attachment_caption( $featured_image_id );
+					$credit            = method_exists( 'Newspack\Newspack_Image_Credits', 'get_media_credit_string' ) && \Newspack\Newspack_Image_Credits::get_media_credit_string( $featured_image_id );
+					if ( $caption || $credit ) :
+						?>
+						<figcaption>
+							<?php if ( get_theme_mod( 'archive_show_captions' ) && $caption ) : ?>
+								<?php echo esc_html( $caption ); ?>
+							<?php endif; ?>
+							<?php if ( get_theme_mod( 'archive_show_credits' ) && $credit ) : ?>
+								<?php echo wp_kses_post( \Newspack\Newspack_Image_Credits::get_media_credit_string( get_post_thumbnail_id() ) ); ?>
+							<?php endif; ?>
+						</figcaption>
+					<?php endif; ?>
+				<?php endif; ?>
 			</figure>
 
 			<?php
