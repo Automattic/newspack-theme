@@ -1093,7 +1093,7 @@ function newspack_customize_register( $wp_customize ) {
 		'archive_show_captions',
 		array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show image captions in archives and search results', 'newspack' ),
+			'label'   => esc_html__( 'Show image captions in archives and WordPress's default search results', 'newspack' ),
 			'section' => 'archive_options',
 		)
 	);
