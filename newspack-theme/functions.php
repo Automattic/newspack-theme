@@ -63,6 +63,7 @@ if ( ! function_exists( 'newspack_setup' ) ) :
 		set_post_thumbnail_size( 1568, 9999 );
 
 		add_image_size( 'newspack-featured-image', 1200, 9999 );
+		add_image_size( 'newspack-featured-image-large', 2000, 9999 );
 		add_image_size( 'newspack-archive-image', 800, 600, true );
 		add_image_size( 'newspack-archive-image-large', 1200, 900, true );
 		add_image_size( 'newspack-footer-logo', 400, 9999 );
