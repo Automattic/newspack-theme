@@ -1,3 +1,10 @@
+# [1.87.0](https://github.com/Automattic/newspack-theme/compare/v1.86.0...v1.87.0) (2024-03-25)
+
+
+### Features
+
+* add large image size for larger featured images ([#2254](https://github.com/Automattic/newspack-theme/issues/2254)) ([86be097](https://github.com/Automattic/newspack-theme/commit/86be0978fcacbfc4243144ba9c721d766b35789b))
+
 # [1.87.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.86.0...v1.87.0-alpha.1) (2024-03-07)
 
 
