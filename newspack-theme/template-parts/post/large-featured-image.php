@@ -11,7 +11,7 @@ if ( 'behind' === newspack_featured_image_position() ) :
 ?>
 
 	<div class="featured-image-behind">
-		<?php newspack_post_thumbnail(); ?>
+		<?php newspack_post_thumbnail( 'newspack-featured-image-large' ); ?>
 		<div class="wrapper">
 			<header class="entry-header">
 				<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
@@ -30,7 +30,7 @@ if ( 'behind' === newspack_featured_image_position() ) :
 			</header>
 		</div><!-- .wrapper -->
 
-		<?php newspack_post_thumbnail(); ?>
+		<?php newspack_post_thumbnail( 'newspack-featured-image-large' ); ?>
 
 		<?php newspack_post_thumbnail_caption(); ?>
 	</div><!-- .featured-image-behind -->
@@ -38,7 +38,7 @@ if ( 'behind' === newspack_featured_image_position() ) :
 <?php elseif ( 'above' === newspack_featured_image_position() ) : ?>
 
 	<div class="featured-image-above">
-		<?php newspack_post_thumbnail(); ?>
+		<?php newspack_post_thumbnail( 'newspack-featured-image-large' ); ?>
 
 		<header class="entry-header">
 			<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
