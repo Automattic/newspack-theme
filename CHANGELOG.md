@@ -1,3 +1,10 @@
+## [1.87.1](https://github.com/Automattic/newspack-theme/compare/v1.87.0...v1.87.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* update template for woo 8.7.0 ([#2264](https://github.com/Automattic/newspack-theme/issues/2264)) ([7be65dc](https://github.com/Automattic/newspack-theme/commit/7be65dc1ebcf4da42ec6d4dd62fcae1c06b09b7a))
+
 # [1.87.0](https://github.com/Automattic/newspack-theme/compare/v1.86.0...v1.87.0) (2024-03-25)
 
 
