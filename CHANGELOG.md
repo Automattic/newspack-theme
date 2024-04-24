@@ -1,3 +1,17 @@
+## [1.87.2](https://github.com/Automattic/newspack-theme/compare/v1.87.1...v1.87.2) (2024-04-24)
+
+
+### Bug Fixes
+
+* make single post subtitle styles more specific ([#2271](https://github.com/Automattic/newspack-theme/issues/2271)) ([5c7a834](https://github.com/Automattic/newspack-theme/commit/5c7a8342887c4e71262af2a316c2d7cfd017ed4f))
+
+## [1.87.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.87.1...v1.87.2-alpha.1) (2024-04-11)
+
+
+### Bug Fixes
+
+* make single post subtitle styles more specific ([#2271](https://github.com/Automattic/newspack-theme/issues/2271)) ([5c7a834](https://github.com/Automattic/newspack-theme/commit/5c7a8342887c4e71262af2a316c2d7cfd017ed4f))
+
 ## [1.87.1](https://github.com/Automattic/newspack-theme/compare/v1.87.0...v1.87.1) (2024-03-27)
 
 
