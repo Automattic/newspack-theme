@@ -49,15 +49,19 @@
 }
 
 .newspack-post-subtitle {
-	margin-bottom: 1.3em;
 	font-style: italic;
-	@include utilities.media( mobile ) {
-		margin-bottom: 2.3em;
-	}
 
 	em,
 	i {
 		font-style: normal;
+	}
+}
+
+.entry-header .newspack-post-subtitle {
+	margin-bottom: 1.3em;
+
+	@include utilities.media( mobile ) {
+		margin-bottom: 2.3em;
 	}
 }
 
