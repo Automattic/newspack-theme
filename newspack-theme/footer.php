@@ -48,7 +48,7 @@ if ( '' !== get_theme_mod( 'newspack_footer_logo', '' ) && 0 !== get_theme_mod( 
 					}
 				?>
 				<?php if ( ! empty( $copyright_info ) ) : ?>
-					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( $copyright_info ); ?>.</span>
+					<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( $copyright_info ); ?></span>
 				<?php endif; ?>
 
 				<a target="_blank" href="<?php echo esc_url( __( 'https://newspack.com/', 'newspack' ) ); ?>" class="imprint">
