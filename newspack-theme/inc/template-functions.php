@@ -680,6 +680,9 @@ function newspack_convert_to_time_ago( $post_time, $format, $post ) {
 	return $post_time;
 }
 add_filter( 'get_the_date', 'newspack_convert_to_time_ago', 10, 3 );
+add_filter( 'newspack_blocks_formatted_displayed_post_date', function($date_formatted, $post){
+	return newspack_math_to_time_ago( $date_formatted, '', $post, false );
+}, 10, 3 );
 
 /**
  * Apply time ago format to modified dates if enabled.
