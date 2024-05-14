@@ -82,7 +82,7 @@ jobs:
 
 workflows:
   version: 2
-  main:
+  all:
     jobs:
       - build
       - lint:
