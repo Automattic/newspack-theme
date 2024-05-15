@@ -1,3 +1,10 @@
+# [1.88.0](https://github.com/Automattic/newspack-theme/compare/v1.87.2...v1.88.0) (2024-05-15)
+
+
+### Features
+
+* remove period from copyright ([#2284](https://github.com/Automattic/newspack-theme/issues/2284)) ([ebc2d24](https://github.com/Automattic/newspack-theme/commit/ebc2d249f2079545f85c169f943ea59ea4bef8ff))
+
 # [1.88.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.87.2...v1.88.0-alpha.1) (2024-04-25)
 
 
