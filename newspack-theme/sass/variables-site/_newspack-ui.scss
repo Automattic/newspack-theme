@@ -1,0 +1,25 @@
+@use '../mixins/utilities';
+
+html body {
+	// Override the Newspack UI font sizes to be based off of the Newspack Theme's 18px font base:
+	--newspack-ui-font-size-m: clamp( 1rem, 0.04rem + 2.209vw, 1.611rem ); // 18px - 20px
+	--newspack-ui-font-size-l: clamp( 1.111rem, 0.762rem + 0.803vw, 1.333rem ); // 20px - 24px
+	--newspack-ui-font-size-xl: clamp( 1.222rem, 0.35rem + 2.008vw, 1.778rem ); // 22px - 32px
+	--newspack-ui-font-size-2xl: clamp( 1.444rem, 0.049rem + 3.213vw, 2.333rem ); // 26px - 42px
+	--newspack-ui-font-size-3xl: clamp( 1.556rem, -0.189rem + 4.016vw, 2.667rem ); // 28px - 48px
+	--newspack-ui-font-size-4xl: clamp( 1.778rem, -1.014rem + 6.426vw, 3.556rem ); // 32px - 64px
+	--newspack-ui-font-size-5xl: clamp( 1.889rem, -2.124rem + 9.237vw, 4.444rem ); // 34px - 80px
+	--newspack-ui-font-size-6xl: clamp( 2rem, -3.234rem + 12.048vw, 5.333rem ); // 36px - 96px
+
+	@include utilities.media( mobile ) {
+		// Override the Newspack UI font sizes to be based off of the Newspack Theme's 20px font base on desktop:
+		--newspack-ui-font-size-m: clamp( 0.9rem, 0.743rem + 0.402vw, 1rem ); // 18px - 20px
+		--newspack-ui-font-size-l: clamp( 1rem, 0.686rem + 0.803vw, 1.2rem ); // 20px - 24px
+		--newspack-ui-font-size-xl: clamp( 1.1rem, 0.315rem + 2.008vw, 1.6rem ); // 22px - 32px
+		--newspack-ui-font-size-2xl: clamp( 1.3rem, 0.044rem + 3.213vw, 2.1rem ); // 26px - 42px
+		--newspack-ui-font-size-3xl: clamp( 1.4rem, -0.17rem + 4.016vw, 2.4rem ); // 28px - 48px
+		--newspack-ui-font-size-4xl: clamp( 1.6rem, -0.912rem + 6.426vw, 3.2rem ); // 32px - 64px
+		--newspack-ui-font-size-5xl: clamp( 1.7rem, -1.912rem + 9.237vw, 4rem ); // 34px - 80px
+		--newspack-ui-font-size-6xl: clamp( 1.8rem, -2.911rem + 12.048vw, 4.8rem ); // 36px - 96px
+	}
+}
