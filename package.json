@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.13",
-    "@rushstack/eslint-patch": "^1.10.2",
+    "@rushstack/eslint-patch": "^1.10.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@wordpress/browserslist-config": "^5.40.0",
