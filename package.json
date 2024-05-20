@@ -44,7 +44,7 @@
     "eslint": "^8.57.0",
     "fs-extra": "^11.2.0",
     "lint-staged": "^15.2.2",
-    "newspack-scripts": "^5.3.0",
+    "newspack-scripts": "^5.4.0",
     "npm-run-all": "^4.1.5",
     "postcss-scss": "^4.0.9",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
