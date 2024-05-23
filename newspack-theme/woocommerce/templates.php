@@ -13,7 +13,7 @@
  */
 $newspack_theme_woo_templates_version = 1;
 
-if ( function_exists( 'wc_clear_template_cache' ) && get_option( 'newspack_theme_woo_templates_version', 0 ) !== $newspack_theme_woo_templates_version ) {
+if ( function_exists( 'wc_clear_template_cache' ) && (int) get_option( 'newspack_theme_woo_templates_version', 0 ) !== $newspack_theme_woo_templates_version ) {
 	wc_clear_template_cache();
 	update_option( 'newspack_theme_woo_templates_version', $newspack_theme_woo_templates_version );
 }
