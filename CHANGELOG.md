@@ -1,3 +1,10 @@
+## [1.88.1](https://github.com/Automattic/newspack-theme/compare/v1.88.0...v1.88.1) (2024-05-23)
+
+
+### Bug Fixes
+
+* dont update option on every request ([3d30e62](https://github.com/Automattic/newspack-theme/commit/3d30e62d26968485bc9aee13b287fd37dad1d031))
+
 # [1.88.0](https://github.com/Automattic/newspack-theme/compare/v1.87.2...v1.88.0) (2024-05-15)
 
 
