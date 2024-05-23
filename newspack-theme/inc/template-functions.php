@@ -31,8 +31,9 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 			return $position;
 		}
 
+		$image_wide_width = 1200;
 		if ( (
-			'large' === $position && 1200 > $thumbnail_info['width'] )
+			'large' === $position && $image_wide_width > $thumbnail_info['width'] )
 			|| ! in_array( get_post_type(), newspack_get_featured_image_post_types() )
 		) {
 			$position = 'small';
