@@ -2,6 +2,25 @@
 @use '../mixins/utilities';
 
 .newspack-pattern {
+	/* Subscribe Style 5 */
+
+	&.subscribe__style-5 {
+		.wp-block-cover__inner-container {
+			> * {
+				margin-bottom: 32px;
+				margin-top: 32px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
 	/* Subscribe Style 6 */
 
 	&.subscribe__style-6 {
