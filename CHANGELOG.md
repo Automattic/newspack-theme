@@ -4,6 +4,7 @@
 ### Bug Fixes
 
 * **homepage-posts:** handle "time ago" format in HBP ([e4e8af5](https://github.com/Automattic/newspack-theme/commit/e4e8af558c9e0e2823b3b9e4c781704cb20237ee))
+* dont update option on every request ([3d30e62](https://github.com/Automattic/newspack-theme/commit/3d30e62d26968485bc9aee13b287fd37dad1d031))
 
 # [1.88.0](https://github.com/Automattic/newspack-theme/compare/v1.87.2...v1.88.0) (2024-05-15)
 
