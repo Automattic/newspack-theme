@@ -1,3 +1,10 @@
+## [1.88.2](https://github.com/Automattic/newspack-theme/compare/v1.88.1...v1.88.2) (2024-05-28)
+
+
+### Bug Fixes
+
+* **homepage-posts:** handle "time ago" format in HBP ([e4e8af5](https://github.com/Automattic/newspack-theme/commit/e4e8af558c9e0e2823b3b9e4c781704cb20237ee))
+
 ## [1.88.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.1...v1.88.2-alpha.1) (2024-05-23)
 
 
