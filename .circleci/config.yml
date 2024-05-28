@@ -21,6 +21,28 @@ jobs:
           paths:
             - project
 
+  # Build distributable ZIP files.
+  build_distributables:
+    docker:
+      - image: cimg/node:16.11.1
+    steps:
+      - checkout_code
+      - run:
+          name: Build theme ZIPs
+          command: npm run build && npm run release:archive
+      - store_artifacts:
+          path: release/newspack-joseph.zip
+      - store_artifacts:
+          path: release/newspack-katharine.zip
+      - store_artifacts:
+          path: release/newspack-nelson.zip
+      - store_artifacts:
+          path: release/newspack-sacha.zip
+      - store_artifacts:
+          path: release/newspack-scott.zip
+      - store_artifacts:
+          path: release/newspack-theme.zip
+
   # Linting
   lint:
     docker:
@@ -60,10 +82,13 @@ jobs:
 
 workflows:
   version: 2
-  main:
+  all:
     jobs:
       - build
       - lint:
+          requires:
+            - build
+      - build_distributables:
           requires:
             - build
       - release:
