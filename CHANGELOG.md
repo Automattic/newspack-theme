@@ -6,12 +6,28 @@
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
 
-## [1.88.1-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.88.0...v1.88.1-epic-ras-acc.1) (2024-05-16)
+## [1.88.2](https://github.com/Automattic/newspack-theme/compare/v1.88.1...v1.88.2) (2024-05-28)
 
 
 ### Bug Fixes
 
 * **homepage-posts:** handle "time ago" format in HBP ([e4e8af5](https://github.com/Automattic/newspack-theme/commit/e4e8af558c9e0e2823b3b9e4c781704cb20237ee))
+
+## [1.88.2-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.1...v1.88.2-alpha.1) (2024-05-23)
+
+
+### Bug Fixes
+
+* **homepage-posts:** handle "time ago" format in HBP ([e4e8af5](https://github.com/Automattic/newspack-theme/commit/e4e8af558c9e0e2823b3b9e4c781704cb20237ee))
+
+## [1.88.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.0...v1.88.1-alpha.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* **homepage-posts:** handle "time ago" format in HBP ([e4e8af5](https://github.com/Automattic/newspack-theme/commit/e4e8af558c9e0e2823b3b9e4c781704cb20237ee))
+* dont update option on every request ([3d30e62](https://github.com/Automattic/newspack-theme/commit/3d30e62d26968485bc9aee13b287fd37dad1d031))
+
 
 # [1.88.0](https://github.com/Automattic/newspack-theme/compare/v1.87.2...v1.88.0) (2024-05-15)
 
