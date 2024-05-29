@@ -36,8 +36,6 @@
   "devDependencies": {
     "@octokit/rest": "^20.1.1",
     "@rushstack/eslint-patch": "^1.10.3",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
     "@wordpress/browserslist-config": "^5.41.0",
     "chokidar-cli": "^3.0.0",
     "classnames": "^2.5.1",
@@ -49,9 +47,6 @@
     "postcss-scss": "^4.0.9",
     "prettier": "npm:wp-prettier@^2.6.2-beta-1",
     "rtlcss": "^4.1.1",
-    "sass": "^1.77.2",
-    "semantic-release": "^23.1.1",
-    "semantic-release-version-bump": "^1.4.1",
-    "stylelint": "^15.11.0"
+    "sass": "^1.77.2"
   }
 }
