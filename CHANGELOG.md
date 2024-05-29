@@ -1,3 +1,16 @@
+# [1.89.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.89.0-epic-ras-acc.1...v1.89.0-epic-ras-acc.2) (2024-05-29)
+
+
+### Bug Fixes
+
+* dont update option on every request ([3d30e62](https://github.com/Automattic/newspack-theme/commit/3d30e62d26968485bc9aee13b287fd37dad1d031))
+* handle attachement fetch failure ([#2301](https://github.com/Automattic/newspack-theme/issues/2301)) ([6bdffe0](https://github.com/Automattic/newspack-theme/commit/6bdffe0359553999bedb960731b8897933869a7f))
+
+
+### Features
+
+* add specific css for subscribe pattern 5 and 6 ([#2305](https://github.com/Automattic/newspack-theme/issues/2305)) ([f7cf899](https://github.com/Automattic/newspack-theme/commit/f7cf899be7858a92affdd0a6d8bc668e3f9e1218))
+
 # [1.89.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.88.1-epic-ras-acc.1...v1.89.0-epic-ras-acc.1) (2024-05-17)
 
 
