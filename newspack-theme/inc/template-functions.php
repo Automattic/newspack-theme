@@ -17,31 +17,25 @@ if ( ! function_exists( 'newspack_featured_image_position' ) ) :
 			return '';
 		}
 
-		// Get thumbnail
-		$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
-		$img_width      = $thumbnail_info['width'];
+		$position = is_single() ? get_theme_mod( 'featured_image_default', 'large' ) : get_theme_mod( 'page_featured_image_default', 'small' );
 
 		// Get per-post image position setting.
 		$image_pos = get_post_meta( get_the_ID(), 'newspack_featured_image_position', true );
-
-		// Set a position value to return.
-		$position = '';
-
-		// First, check for a per-post image setting.
 		if ( '' !== $image_pos ) {
 			$position = $image_pos;
-		// If this post doesn't have a setting, fall back to the default.
-		} else {
-			if ( is_single() ) {
-				// Set default if a post:
-				$position = get_theme_mod( 'featured_image_default', 'large' );
-			} elseif ( is_page() ) {
-				// Set default if a page:
-				$position = get_theme_mod( 'page_featured_image_default', 'small' );
-			}
 		}
 
-		if ( ( 'large' === $position && 1200 > $img_width ) || ! in_array( get_post_type(), newspack_get_featured_image_post_types() ) ) {
+		// Get thumbnail
+		$thumbnail_info = wp_get_attachment_metadata( get_post_thumbnail_id() );
+		if ( $thumbnail_info === false ) {
+			return $position;
+		}
+
+		$image_wide_width = 1200;
+		if ( (
+			'large' === $position && $image_wide_width > $thumbnail_info['width'] )
+			|| ! in_array( get_post_type(), newspack_get_featured_image_post_types() )
+		) {
 			$position = 'small';
 		}
 
