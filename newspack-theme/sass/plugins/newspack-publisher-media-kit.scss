@@ -1,0 +1,24 @@
+.publisher-media-kit {
+	&__wrapper {
+		&.wp-block-group{
+			> .wp-block-group__inner-container {
+				> * {
+					margin-bottom: var( --wp--preset--spacing--80 );
+					margin-top: var( --wp--preset--spacing--80 );
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+
+						.page-template-no-header-footer-php & {
+							margin-bottom: var( --wp--preset--spacing--80 );
+						}
+					}
+				}
+			}
+		}
+	}
+}
