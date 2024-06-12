@@ -1,3 +1,15 @@
+# [1.89.0](https://github.com/Automattic/newspack-theme/compare/v1.88.2...v1.89.0) (2024-06-12)
+
+
+### Bug Fixes
+
+* handle attachement fetch failure ([#2301](https://github.com/Automattic/newspack-theme/issues/2301)) ([6bdffe0](https://github.com/Automattic/newspack-theme/commit/6bdffe0359553999bedb960731b8897933869a7f))
+
+
+### Features
+
+* add specific css for subscribe pattern 5 and 6 ([#2305](https://github.com/Automattic/newspack-theme/issues/2305)) ([f7cf899](https://github.com/Automattic/newspack-theme/commit/f7cf899be7858a92affdd0a6d8bc668e3f9e1218))
+
 # [1.89.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.2...v1.89.0-alpha.1) (2024-05-31)
 
 
