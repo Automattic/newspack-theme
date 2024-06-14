@@ -1,9 +1,10 @@
 const fs = require( 'fs' );
+const path = require( 'path' );
 const chokidar = require( 'chokidar' );
 const postcss = require( 'postcss' );
 const sass = require( 'sass' );
 const rtlcss = require( 'rtlcss' );
-const postcssFocusWithin = require( 'postcss-focus-within' );
+const postcssFocusWithin = require( path.resolve( __dirname, '../node_modules/newspack-scripts/node_modules/postcss-focus-within' ) );
 
 if ( ! fs.existsSync( './newspack-theme/styles' ) ) {
 	fs.mkdirSync( './newspack-theme/styles' );

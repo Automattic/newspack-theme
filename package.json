@@ -1,52 +1,51 @@
 {
-  "name": "newspack",
-  "version": "1.88.2",
-  "description": "A theme for Newspack. https://newspack.com",
-  "bugs": {
-    "url": "https://github.com/Automattic/newspack-theme/issues"
-  },
-  "homepage": "https://github.com/WordPress/newspack#readme",
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
-  "lint-staged": {
-    "*.scss": "npm run lint:scss:staged",
-    "*.js": "npm run lint:js:staged"
-  },
-  "scripts": {
-    "cm": "newspack-scripts commit",
-    "semantic-release": "semantic-release",
-    "start": "npm ci && newspack-scripts watch",
-    "build:js": "webpack",
-    "build:scss": "node scripts/compile-scss.js",
-    "build": "run-p \"build:*\"",
-    "watch:js": "webpack --watch",
-    "watch:scss": "node scripts/compile-scss.js --watch",
-    "watch": "run-p \"watch:*\"",
-    "lint": "npm run lint:scss && npm run lint:js",
-    "lint:js": "eslint ./newspack-*/**/*.js",
-    "lint:js:staged": "eslint --ext .js,.jsx",
-    "lint:scss": "stylelint '**/*.scss' --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
-    "lint:scss:staged": "stylelint --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
-    "format:js": "prettier './newspack-*/**/*.{js,jsx}' --write",
-    "format:scss": "prettier --write \"**/*.scss\"",
-    "release:archive": "mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store",
-    "release": "npm run build && npm run semantic-release"
-  },
-  "devDependencies": {
-    "@octokit/rest": "^20.1.1",
-    "@rushstack/eslint-patch": "^1.10.3",
-    "@wordpress/browserslist-config": "^5.41.0",
-    "chokidar-cli": "^3.0.0",
-    "classnames": "^2.5.1",
-    "eslint": "^8.57.0",
-    "fs-extra": "^11.2.0",
-    "lint-staged": "^15.2.5",
-    "newspack-scripts": "^5.4.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-scss": "^4.0.9",
-    "prettier": "npm:wp-prettier@^2.6.2-beta-1",
-    "rtlcss": "^4.1.1",
-    "sass": "^1.77.2"
-  }
+	"name": "newspack",
+	"version": "1.88.2",
+	"description": "A theme for Newspack. https://newspack.com",
+	"bugs": {
+		"url": "https://github.com/Automattic/newspack-theme/issues"
+	},
+	"homepage": "https://github.com/WordPress/newspack#readme",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"lint-staged": {
+		"*.scss": "npm run lint:scss:staged",
+		"*.js": "npm run lint:js:staged"
+	},
+	"scripts": {
+		"cm": "newspack-scripts commit",
+		"semantic-release": "newspack-scripts proxy semantic-release",
+		"start": "npm ci && newspack-scripts watch newspack-theme/js/dist",
+		"build:js": "newspack-scripts build --output-path newspack-theme/js/dist",
+		"watch:js": "newspack-scripts watch --output-path newspack-theme/js/dist",
+		"build:scss": "node scripts/compile-scss.js",
+		"watch:scss": "node scripts/compile-scss.js --watch",
+		"build": "run-p \"build:*\"",
+		"watch": "run-p \"watch:*\"",
+		"lint": "npm run lint:scss && npm run lint:js",
+		"lint:js": "newspack-scripts eslint 'src/**/*.{js,jsx,ts,tsx}'",
+		"lint:js:staged": "newspack-scripts eslint --ext .js,.jsx,.ts,.tsx",
+		"fix:js": "newspack-scripts eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+		"lint:scss": "newspack-scripts stylelint '**/*.scss' --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
+		"lint:scss:staged": "newspack-scripts stylelint --customSyntax postcss-scss --config=./node_modules/newspack-scripts/config/stylelint.config.js",
+		"format:scss": "npx prettier --write '**/*.scss'",
+		"release:archive": "mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store",
+		"release": "npm run build && npm run semantic-release"
+	},
+	"devDependencies": {
+		"@octokit/rest": "^20.1.1",
+		"@rushstack/eslint-patch": "^1.10.3",
+		"@wordpress/browserslist-config": "^6.0.0",
+		"chokidar-cli": "^3.0.0",
+		"classnames": "^2.5.1",
+		"eslint": "^8.57.0",
+		"fs-extra": "^11.2.0",
+		"lint-staged": "^15.2.5",
+		"newspack-scripts": "~/Repositories/newspack-scripts",
+		"npm-run-all": "^4.1.5",
+		"postcss-scss": "^4.0.9",
+		"rtlcss": "^4.1.1",
+		"sass": "^1.77.5"
+	}
 }

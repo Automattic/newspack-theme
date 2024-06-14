@@ -32,12 +32,8 @@ fs.readdirSync( path.join( __dirname, 'newspack-theme/js', 'src' ) )
 		entry[ script ] = path.join( __dirname, 'newspack-theme/js', 'src', script, 'index.js' );
 	} );
 
-const webpackConfig = getBaseWebpackConfig(
-	{ WP: true },
-	{
-		entry,
-		'output-path': path.join( __dirname, 'newspack-theme/js', 'dist' ),
-	}
-);
+const webpackConfig = getBaseWebpackConfig( {
+	entry,
+} );
 
 module.exports = webpackConfig;
