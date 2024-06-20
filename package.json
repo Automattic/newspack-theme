@@ -15,7 +15,7 @@
 	},
 	"scripts": {
 		"cm": "newspack-scripts commit",
-		"semantic-release": "newspack-scripts proxy semantic-release",
+		"semantic-release": "newspack-scripts semantic-release",
 		"start": "npm ci && npm run watch",
 		"build:js": "newspack-scripts wp-scripts build --output-path newspack-theme/js/dist",
 		"watch:js": "newspack-scripts wp-scripts start --output-path newspack-theme/js/dist",
