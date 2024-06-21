@@ -1402,6 +1402,14 @@ hr {
 }
 
 //! Font Sizes
+.has-xx-small-font-size {
+	font-size: var( --newspack-theme-font-size-xxs );
+}
+
+.has-x-small-font-size {
+	font-size: var( --newspack-theme-font-size-xs );
+}
+
 .has-small-font-size {
 	font-size: var( --newspack-theme-font-size-sm );
 }
