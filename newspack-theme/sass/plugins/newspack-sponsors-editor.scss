@@ -1,12 +1,12 @@
-@use '../variables-site/variables-site';
-@use '../mixins/mixins-main';
-@use '../variables-site/structure';
+@use "../variables-site/variables-site";
+@use "../mixins/mixins-main";
+@use "../variables-site/structure";
 
 // Newspack Blocks
 .sponsor-label {
 	.flag {
-		background: var( --newspack-theme-color-highlight );
-		color: var( --newspack-theme-color-text-main );
+		background: var(--newspack-theme-color-highlight);
+		color: var(--newspack-theme-color-text-main);
 		line-height: 1;
 		padding: 0.3em 0.5em;
 		text-transform: uppercase;

@@ -1,5 +1,5 @@
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 /* Infinite scroll */
 
@@ -17,7 +17,7 @@
 }
 
 .infinite-loader {
-	margin: calc( 3 * 1rem ) auto;
+	margin: calc(3 * 1rem) auto;
 }
 
 .infinite-loader .spinner {
@@ -26,13 +26,13 @@
 }
 
 .site-main #infinite-handle {
-	margin: calc( 2 * 1rem ) auto;
+	margin: calc(2 * 1rem) auto;
 }
 
 .site-main #infinite-handle span {
 	background: transparent;
 	display: block;
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 	text-align: center;
 }
 
@@ -41,20 +41,20 @@
 .site-main #infinite-handle span button:focus {
 	@include utilities.button-transition;
 
-	background: var( --newspack-theme-color-secondary );
-	color: var( --newspack-theme-color-bg-body );
-	font-family: var( --newspack-theme-font-heading );
+	background: var(--newspack-theme-color-secondary);
+	color: var(--newspack-theme-color-bg-body);
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: 700;
-	line-height: var( --newspack-theme-font-line-height-heading );
+	line-height: var(--newspack-theme-font-line-height-heading);
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 
 	&:hover {
-		background: var( --newspack-theme-color-bg-button-hover );
+		background: var(--newspack-theme-color-bg-button-hover);
 		cursor: pointer;
 	}
 
 	&:focus {
-		background: var( --newspack-theme-color-bg-button-hover );
+		background: var(--newspack-theme-color-bg-button-hover);
 		outline: thin dotted;
 		outline-offset: -4px;
 	}

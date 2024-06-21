@@ -1,13 +1,13 @@
-@use 'sass:meta';
-@use '../mixins/mixins-main';
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "sass:meta";
+@use "../mixins/mixins-main";
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 /* !Block styles */
 
 .entry .entry-content > *,
 .newspack-inline-popup > *,
-[id='pico'] > * {
+[id="pico"] > * {
 	margin: 32px 0;
 	max-width: 100%;
 
@@ -37,8 +37,8 @@
 		max-width: 50%;
 	}
 
-	.alignleft:not( :first-child ),
-	.alignright:not( :first-child ) {
+	.alignleft:not(:first-child),
+	.alignright:not(:first-child) {
 		margin-top: 0;
 	}
 
@@ -76,8 +76,8 @@
 	.entry .entry-content {
 		.alignwide {
 			@include utilities.media( tablet ) {
-				margin-left: calc( 25% - 25vw );
-				margin-right: calc( 25% - 25vw );
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
 				max-width: 100vw;
 
 				&.wp-block-cover {
@@ -93,8 +93,8 @@
 		}
 
 		.alignfull {
-			margin-left: calc( 50% - 50vw );
-			margin-right: calc( 50% - 50vw );
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
 			max-width: 100vw;
 
 			&.wp-block-cover {
@@ -105,7 +105,7 @@
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 100%;
-				width: calc( 50vw + 600px );
+				width: calc(50vw + 600px);
 			}
 
 			.alignfull {
@@ -122,7 +122,7 @@
 		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > *:not( .alignfull ):not( .alignwide ) {
+				> div > *:not(.alignfull):not(.alignwide) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 1200px;
@@ -135,7 +135,7 @@
 			.wp-block-group {
 				&.alignfull,
 				&.alignwide {
-					> div > *:not( .alignfull ):not( .alignwide ) {
+					> div > *:not(.alignfull):not(.alignwide) {
 						max-width: 100%;
 					}
 				}
@@ -146,12 +146,12 @@
 
 .page-template-no-header-footer {
 	.entry .entry-content,
-	[id='pico'] {
+	[id="pico"] {
 		> *.alignfull:first-child {
 			margin-top: 0;
 		}
 
-		> *:not( .alignfull ):last-child {
+		> *:not(.alignfull):last-child {
 			margin-bottom: 32px;
 		}
 	}
@@ -223,7 +223,7 @@ h6 {
 }
 
 //! Paragraphs
-.has-drop-cap:not( :focus )::first-letter {
+.has-drop-cap:not(:focus)::first-letter {
 	font-size: 4em;
 	line-height: 0.75;
 	margin: 0.125em #{0.75 * structure.$size__spacing-unit} 0 0;
@@ -282,7 +282,7 @@ p.has-background {
 				font-size: 0.9rem;
 			}
 			.entry-meta {
-				font-size: var( --newspack-theme-font-size-xs );
+				font-size: var(--newspack-theme-font-size-xs);
 			}
 			.entry-wrapper {
 				padding: 20px 36px;
@@ -335,7 +335,7 @@ p.has-background {
 		}
 
 		.thanks,
-		button[type='submit'] {
+		button[type="submit"] {
 			margin-left: structure.$size__spacing-unit;
 			margin-right: structure.$size__spacing-unit;
 		}
@@ -355,7 +355,7 @@ p.has-background {
 .mobile-sidebar {
 	//! Newspack Profile block
 	.wp-block-newspack-blocks-author-profile {
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 	}
 }
 
@@ -413,11 +413,11 @@ p.has-background {
 		}
 
 		@include utilities.media( tablet ) {
-			padding: structure.$size__spacing-unit calc( 2 * #{structure.$size__spacing-unit} );
+			padding: structure.$size__spacing-unit calc(2 * #{structure.$size__spacing-unit});
 		}
 
 		blockquote,
-		.wp-block-pullquote:not( .is-style-solid-color ) blockquote {
+		.wp-block-pullquote:not(.is-style-solid-color) blockquote {
 			padding-left: 0;
 		}
 	}
@@ -434,9 +434,9 @@ p.has-background {
 }
 
 .wp-block-cover .wp-block-cover__inner-container {
-	a:not( .wp-block-button__link ),
-	a:not( .wp-block-button__link ):hover,
-	a:not( .wp-block-button__link ):visited {
+	a:not(.wp-block-button__link),
+	a:not(.wp-block-button__link):hover,
+	a:not(.wp-block-button__link):visited {
 		color: inherit;
 	}
 }
@@ -452,13 +452,13 @@ p.has-background {
 
 	blockquote {
 		border: none;
-		margin: structure.$size__spacing-unit 0 calc( 1.25 * #{structure.$size__spacing-unit} );
+		margin: structure.$size__spacing-unit 0 calc(1.25 * #{structure.$size__spacing-unit});
 		padding-left: 0;
 	}
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		font-size: var( --newspack-theme-font-size-lg );
+		font-size: var(--newspack-theme-font-size-lg);
 	}
 
 	p {
@@ -472,16 +472,16 @@ p.has-background {
 		}
 
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not(.alignleft):not(.alignright),
+	&.has-text-align-left:not(.alignleft):not(.alignright) {
 		p {
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 			@include utilities.media( tablet ) {
-				font-size: var( --newspack-theme-font-size-lg );
+				font-size: var(--newspack-theme-font-size-lg);
 			}
 		}
 	}
@@ -489,14 +489,14 @@ p.has-background {
 	cite {
 		display: inline-block;
 		color: inherit;
-		font-family: var( --newspack-theme-font-heading );
-		font-size: var( --newspack-theme-font-size-xs );
+		font-family: var(--newspack-theme-font-heading);
+		font-size: var(--newspack-theme-font-size-xs);
 		opacity: 0.8;
 		line-height: 1.6;
 		text-transform: none;
 
 		&::before {
-			content: '\2014';
+			content: "\2014";
 			margin-right: #{0.25 * structure.$size__spacing-unit};
 		}
 	}
@@ -525,7 +525,7 @@ p.has-background {
 				font-size: 1rem;
 
 				@include utilities.media( tablet ) {
-					font-size: var( --newspack-theme-font-size-md );
+					font-size: var(--newspack-theme-font-size-md);
 				}
 
 				&:first-child {
@@ -536,12 +536,12 @@ p.has-background {
 	}
 
 	&.is-style-solid-color {
-		background-color: var( --newspack-theme-color-primary );
+		background-color: var(--newspack-theme-color-primary);
 		padding-left: 0;
 		padding-right: 0;
 
 		a {
-			color: var( --newspack-theme-color-bg-body );
+			color: var(--newspack-theme-color-bg-body);
 		}
 
 		cite {
@@ -573,14 +573,14 @@ p.has-background {
 		&.alignright,
 		&.alignleft {
 			@include utilities.media( tablet ) {
-				padding: structure.$size__spacing-unit calc( 2 * #{structure.$size__spacing-unit} );
+				padding: structure.$size__spacing-unit calc(2 * #{structure.$size__spacing-unit});
 			}
 		}
 	}
 
 	&.is-style-solid-color,
 	&.has-background,
-	&[style*='border-style'][style*='border-width'] {
+	&[style*="border-style"][style*="border-width"] {
 		@include utilities.media( tablet ) {
 			padding-left: #{1.5 * structure.$size__spacing-unit};
 			padding-right: #{1.5 * structure.$size__spacing-unit};
@@ -610,17 +610,17 @@ p.has-background {
 	padding-left: 0;
 
 	.wp-block-latest-comments__comment {
-		font-size: var( --newspack-theme-font-size-sm );
-		line-height: var( --newspack-theme-font-line-height-body );
+		font-size: var(--newspack-theme-font-size-sm);
+		line-height: var(--newspack-theme-font-line-height-body);
 	}
 
 	.wp-block-latest-comments__comment-meta {
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 		font-weight: bold;
 
 		a,
 		a:visited {
-			color: var( --newspack-theme-color-text-main );
+			color: var(--newspack-theme-color-text-main);
 			text-decoration: none;
 		}
 
@@ -629,7 +629,7 @@ p.has-background {
 		}
 
 		.wp-block-latest-comments__comment-date {
-			color: var( --newspack-theme-color-text-light );
+			color: var(--newspack-theme-color-text-light);
 			font-size: 0.9em;
 			font-weight: normal;
 			margin: #{0.15 * structure.$size__spacing-unit} 0 0;
@@ -687,20 +687,20 @@ p.has-background {
 .wp-block-buttons {
 	--wp--style--block-gap: 0.5rem;
 	.wp-block-button__link {
-		color: var( --newspack-theme-color-against-secondary );
+		color: var(--newspack-theme-color-against-secondary);
 	}
 }
 
 .wp-block-button__link {
-	background-color: var( --newspack-theme-color-secondary );
+	background-color: var(--newspack-theme-color-secondary);
 	@include utilities.button-transition;
 
 	border: none;
 	border-radius: 5px;
-	color: var( --newspack-theme-color-against-secondary );
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
-	line-height: var( --newspack-theme-font-line-height-heading );
+	color: var(--newspack-theme-color-against-secondary);
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
+	line-height: var(--newspack-theme-font-line-height-heading);
 	box-sizing: border-box;
 	font-weight: bold;
 	text-decoration: none;
@@ -708,15 +708,15 @@ p.has-background {
 	outline: none;
 
 	&:visited {
-		color: var( --newspack-theme-color-against-secondary );
+		color: var(--newspack-theme-color-against-secondary);
 	}
 }
 
 .wp-block-jetpack-button button.wp-block-button__link {
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 	font-weight: bold;
-	line-height: var( --newspack-theme-font-line-height-heading );
+	line-height: var(--newspack-theme-font-line-height-heading);
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 }
 
@@ -732,21 +732,21 @@ p.has-background {
 	border-style: solid;
 	border-color: currentcolor;
 
-	&:not( .has-background ) {
+	&:not(.has-background) {
 		background: transparent;
 	}
 }
 
 .wp-block-button .wp-block-button__link.is-style-outline,
 .wp-block-button.is-style-outline > .wp-block-button__link {
-	padding: calc( 0.76rem - 2px ) calc( 1rem - 2px );
+	padding: calc(0.76rem - 2px) calc(1rem - 2px);
 }
 
 .is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline,
-.is-style-outline > .wp-block-button__link:not( .has-text-color ),
+.is-style-outline > .wp-block-button__link:not(.has-text-color),
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
-	color: var( --newspack-theme-color-secondary-against-white );
+	color: var(--newspack-theme-color-secondary-against-white);
 }
 
 .wp-block-button {
@@ -756,7 +756,7 @@ p.has-background {
 		&:active,
 		&:focus {
 			color: #fff !important; // to override !important from Gutenberg styles
-			background: var( --newspack-theme-color-bg-button-hover ) !important; // to override !important from Gutenberg styles
+			background: var(--newspack-theme-color-bg-button-hover) !important; // to override !important from Gutenberg styles
 		}
 
 		&:focus {
@@ -767,14 +767,14 @@ p.has-background {
 		&.is-style-outline:hover,
 		&.is-style-outline:active,
 		&.is-style-outline:focus {
-			border-color: var( --newspack-theme-color-bg-button-hover );
+			border-color: var(--newspack-theme-color-bg-button-hover);
 		}
 	}
 }
 
 //! Temporary fix for a block button issue
 // See: https://github.com/WordPress/gutenberg/issues/21747
-.wp-block-button.is-style-outline:not( .wp-block-button__link ) {
+.wp-block-button.is-style-outline:not(.wp-block-button__link) {
 	border: 0;
 }
 
@@ -802,9 +802,9 @@ p.has-background {
 .wp-block-archives,
 .wp-block-categories {
 	li {
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 		font-weight: bold;
-		line-height: var( --newspack-theme-font-line-height-heading );
+		line-height: var(--newspack-theme-font-line-height-heading);
 	}
 
 	&.aligncenter {
@@ -839,13 +839,13 @@ p.has-background {
 
 .wp-block-latest-posts {
 	li > a {
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 		font-weight: bold;
-		line-height: var( --newspack-theme-font-line-height-heading );
+		line-height: var(--newspack-theme-font-line-height-heading);
 	}
 	time {
-		color: var( --newspack-theme-color-text-light );
-		font-family: var( --newspack-theme-font-heading );
+		color: var(--newspack-theme-color-text-light);
+		font-family: var(--newspack-theme-font-heading);
 	}
 	.wp-block-latest-posts__post-excerpt {
 		font-size: 0.8em;
@@ -853,18 +853,18 @@ p.has-background {
 
 	&.is-grid {
 		li {
-			border-top: 2px solid var( --newspack-theme-color-border );
+			border-top: 2px solid var(--newspack-theme-color-border);
 			padding-top: ( 1 * structure.$size__spacing-unit );
 			margin-bottom: ( 2 * structure.$size__spacing-unit );
 			a {
 				&::after {
-					content: '';
+					content: "";
 				}
 			}
 			&:last-child {
 				margin-bottom: auto;
 				a::after {
-					content: '';
+					content: "";
 				}
 			}
 		}
@@ -873,28 +873,28 @@ p.has-background {
 
 //! Latest preformatted text
 .wp-block-preformatted {
-	font-size: var( --newspack-theme-font-size-xs );
+	font-size: var(--newspack-theme-font-size-xs);
 	line-height: 1.8;
 	padding: structure.$size__spacing-unit;
 }
 
 .widget .wp-block-preformatted {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 }
 
 //! Verse
 .wp-block-verse {
-	font-family: var( --newspack-theme-font-body );
-	font-size: var( --newspack-theme-font-size-base );
+	font-family: var(--newspack-theme-font-body);
+	font-size: var(--newspack-theme-font-size-base);
 	line-height: 1.8;
 }
 
 //! Blockquote
 .wp-block-quote {
-	&:not( .is-large ),
-	&:not( .is-style-large ) {
+	&:not(.is-large),
+	&:not(.is-style-large) {
 		border-width: 2px;
-		border-color: var( --newspack-theme-color-link );
+		border-color: var(--newspack-theme-color-link);
 		padding-top: 0;
 		padding-bottom: 0;
 	}
@@ -916,7 +916,7 @@ p.has-background {
 		border-left: none;
 
 		p {
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 			font-style: italic;
 			line-height: 1.4;
 		}
@@ -931,7 +931,7 @@ p.has-background {
 			padding: structure.$size__spacing-unit 0;
 
 			p {
-				font-size: var( --newspack-theme-font-size-lg );
+				font-size: var(--newspack-theme-font-size-lg);
 			}
 		}
 	}
@@ -951,7 +951,7 @@ p.has-background {
 		text-align: left;
 	}
 
-	img:not([style*='object-fit']) {
+	img:not([style*="object-fit"]) {
 		height: auto !important; // !important to override inline styles.
 	}
 }
@@ -977,7 +977,7 @@ p.has-background {
 hr {
 	background-color: transparent;
 	border: 0;
-	border-top: 1px solid var( --newspack-theme-color-border );
+	border-top: 1px solid var(--newspack-theme-color-border);
 	height: 1px;
 	margin: ( 2 * structure.$size__spacing-unit ) auto;
 	max-width: #{5 * structure.$size__spacing-unit};
@@ -995,10 +995,10 @@ hr {
 		text-align: center;
 
 		&::before {
-			color: var( --newspack-theme-color-text-light );
-			font-size: var( --newspack-theme-font-size-lg );
-			letter-spacing: var( --newspack-theme-font-size-sm );
-			padding-left: var( --newspack-theme-font-size-sm );
+			color: var(--newspack-theme-color-text-light);
+			font-size: var(--newspack-theme-font-size-lg);
+			letter-spacing: var(--newspack-theme-font-size-sm);
+			padding-left: var(--newspack-theme-font-size-sm);
 		}
 	}
 
@@ -1012,7 +1012,7 @@ hr {
 }
 
 .entry .entry-content,
-[id='pico'] {
+[id="pico"] {
 	> .wp-block-separator,
 	> hr {
 		margin: ( 2 * structure.$size__spacing-unit ) auto;
@@ -1028,7 +1028,7 @@ hr {
 .wp-block-table {
 	&.is-style-stripes td,
 	&.is-style-stripes th {
-		border-color: var( --newspack-theme-color-text-light );
+		border-color: var(--newspack-theme-color-text-light);
 	}
 
 	&.aligncenter {
@@ -1039,8 +1039,8 @@ hr {
 
 //! File
 .wp-block-file {
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 
 	&.has-background {
 		padding: structure.$size__spacing-unit;
@@ -1052,20 +1052,20 @@ hr {
 
 		border: none;
 		border-radius: 5px;
-		background: var( --newspack-theme-color-secondary );
-		font-family: var( --newspack-theme-font-heading );
+		background: var(--newspack-theme-color-secondary);
+		font-family: var(--newspack-theme-font-heading);
 		font-size: inherit;
-		line-height: var( --newspack-theme-font-line-height-heading );
+		line-height: var(--newspack-theme-font-line-height-heading);
 		text-decoration: none;
 		font-weight: bold;
 		padding: ( structure.$size__spacing-unit * 0.75 ) structure.$size__spacing-unit;
-		color: var( --newspack-theme-color-against-secondary );
+		color: var(--newspack-theme-color-against-secondary);
 		margin-left: 0;
-		margin-top: calc( 0.75 * #{structure.$size__spacing-unit} );
+		margin-top: calc(0.75 * #{structure.$size__spacing-unit});
 
 		&:hover,
 		&:focus {
-			background: var( --newspack-theme-color-bg-button-hover );
+			background: var(--newspack-theme-color-bg-button-hover);
 			color: #fff;
 			cursor: pointer;
 		}
@@ -1090,7 +1090,7 @@ hr {
 
 	&.wp-block-search__button-inside {
 		.wp-block-search__inside-wrapper {
-			border-color: var( --newspack-theme-color-border );
+			border-color: var(--newspack-theme-color-border);
 			padding: 0;
 
 			input {
@@ -1100,7 +1100,7 @@ hr {
 
 		.wp-block-search__button {
 			margin: 2px;
-			padding: calc( 0.76rem - 4px ) 1rem;
+			padding: calc(0.76rem - 4px) 1rem;
 
 			&.has-icon {
 				padding: #{0.15 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit};
@@ -1109,12 +1109,12 @@ hr {
 
 		.has-icon {
 			border: 0;
-			&:not( .has-background ) {
+			&:not(.has-background) {
 				background: transparent;
 			}
 
-			&:not( .has-text-color ) {
-				color: var( --newspack-theme-color-text-main );
+			&:not(.has-text-color) {
+				color: var(--newspack-theme-color-text-main);
 			}
 		}
 	}
@@ -1132,7 +1132,7 @@ hr {
 	border-radius: 0;
 
 	code {
-		font-size: var( --newspack-theme-font-size-md );
+		font-size: var(--newspack-theme-font-size-md);
 		white-space: pre-wrap;
 		word-break: break-word;
 	}
@@ -1156,7 +1156,7 @@ hr {
 	@include utilities.media( mobile ) {
 		&.alignleft,
 		&.alignright {
-			iframe[style*='width: 100%'] {
+			iframe[style*="width: 100%"] {
 				width: 400px !important; // !important to override inline style.
 			}
 		}
@@ -1164,11 +1164,11 @@ hr {
 }
 
 .entry .entry-content > .wp-block-group.alignleft,
-[id='pico'] > .wp-block-group.alignleft,
+[id="pico"] > .wp-block-group.alignleft,
 .entry .entry-content > .wp-block-group.alignright,
-[id='pico'] > .wp-block-group.alignright {
+[id="pico"] > .wp-block-group.alignright {
 	@include utilities.media( mobile ) {
-		&:not( :first-child ) {
+		&:not(:first-child) {
 			margin-top: 0;
 		}
 	}
@@ -1182,7 +1182,7 @@ hr {
 }
 
 .wp-block-group.has-background + .wp-block-group.has-background,
-[id='pico'] > .wp-block-group.has-background + .wp-block-group.has-background {
+[id="pico"] > .wp-block-group.has-background + .wp-block-group.has-background {
 	margin-top: -32px;
 }
 
@@ -1194,12 +1194,10 @@ hr {
 
 // Remove space between full-width group block and header on homepage.
 .newspack-front-page.hide-homepage-title .entry-content > .wp-block-group.alignfull:first-child,
-.newspack-front-page.hide-homepage-title [id='pico'] > .wp-block-group.alignfull:first-child {
+.newspack-front-page.hide-homepage-title [id="pico"] > .wp-block-group.alignfull:first-child {
 	margin-top: 0;
 	@include utilities.media( tablet ) {
-		margin-top: calc(
-			#{-0.5 * structure.$size__spacing-unit} - 1px
-		); // minus 1px to offset bottom border on header
+		margin-top: calc(#{-0.5 * structure.$size__spacing-unit} - 1px); // minus 1px to offset bottom border on header
 	}
 }
 
@@ -1219,7 +1217,7 @@ hr {
 
 //! Details block
 .wp-block-details {
-	border: solid var( --newspack-theme-color-border );
+	border: solid var(--newspack-theme-color-border);
 	border-width: 1px 0;
 	padding: 0.5rem 1.5rem;
 
@@ -1229,7 +1227,7 @@ hr {
 	}
 
 	summary {
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 		margin-left: -1rem;
 	}
 
@@ -1251,25 +1249,25 @@ hr {
 
 //! Mailchimp block
 .wp-block-jetpack-mailchimp {
-	input[type='email'] {
+	input[type="email"] {
 		width: 100%;
 	}
 
 	p {
 		margin: 0;
 
-		&[id^='wp-block-jetpack-mailchimp'] {
-			font-size: var( --newspack-theme-font-size-sm );
+		&[id^="wp-block-jetpack-mailchimp"] {
+			font-size: var(--newspack-theme-font-size-sm);
 		}
 	}
 
 	.wp-block-jetpack-button.wp-block-button {
-		margin: calc( structure.$size__spacing-unit / 2 ) 0;
+		margin: calc(structure.$size__spacing-unit / 2) 0;
 	}
 
 	.wp-block-jetpack-mailchimp_notification {
-		font-size: var( --newspack-theme-font-size-sm );
-		margin-top: calc( structure.$size__spacing-unit / 2 );
+		font-size: var(--newspack-theme-font-size-sm);
+		margin-top: calc(structure.$size__spacing-unit / 2);
 
 		&.is-visible {
 			margin-bottom: 0;
@@ -1302,8 +1300,8 @@ hr {
 
 				> p:first-child {
 					flex: 1 1 auto;
-					margin-bottom: calc( structure.$size__spacing-unit / 2 );
-					margin-right: calc( structure.$size__spacing-unit / 2 );
+					margin-bottom: calc(structure.$size__spacing-unit / 2);
+					margin-right: calc(structure.$size__spacing-unit / 2);
 				}
 
 				> .wp-block-jetpack-button.wp-block-button {
@@ -1349,7 +1347,7 @@ hr {
 			margin-right: 32px;
 		}
 
-		&[class*='amp-wp-'] figure {
+		&[class*="amp-wp-"] figure {
 			display: flex;
 			height: 100%;
 		}
@@ -1367,14 +1365,14 @@ hr {
 		padding: 0;
 
 		h5 {
-			color: var( --newspack-theme-color-text-light );
+			color: var(--newspack-theme-color-text-light);
 		}
 	}
 
 	.organic-profile-social {
 		.social-link {
 			border: 0;
-			color: var( --newspack-theme-color-text-light );
+			color: var(--newspack-theme-color-text-light);
 			display: inline-block;
 			font-size: 16px;
 			height: 32px;
@@ -1394,42 +1392,42 @@ hr {
 
 //! Font Sizes
 .has-small-font-size {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 }
 
 .has-normal-font-size {
-	font-size: var( --newspack-theme-font-size-base );
+	font-size: var(--newspack-theme-font-size-base);
 }
 
 .has-large-font-size {
-	font-size: var( --newspack-theme-font-size-lg );
+	font-size: var(--newspack-theme-font-size-lg);
 }
 
 .has-huge-font-size,
 .has-x-large-font-size {
-	font-size: var( --newspack-theme-font-size-xl );
+	font-size: var(--newspack-theme-font-size-xl);
 }
 
 @include utilities.media( tablet ) {
 	.has-large-font-size {
-		font-size: var( --newspack-theme-font-size-xl );
+		font-size: var(--newspack-theme-font-size-xl);
 	}
 
 	.has-huge-font-size,
 	.has-x-large-font-size {
-		font-size: var( --newspack-theme-font-size-xxl );
+		font-size: var(--newspack-theme-font-size-xxl);
 	}
 }
 
 $colors: (
-	'primary': var( --newspack-theme-color-primary ),
-	'primary-variation': var( --newspack-theme-color-primary-variation ),
-	'secondary': var( --newspack-theme-color-secondary ),
-	'secondary-variation': var( --newspack-theme-color-secondary-variation ),
-	'dark-gray': #111,
-	'medium-gray': #767676,
-	'light-gray': #eee,
-	'white': #fff,
+	"primary": var(--newspack-theme-color-primary),
+	"primary-variation": var(--newspack-theme-color-primary-variation),
+	"secondary": var(--newspack-theme-color-secondary),
+	"secondary-variation": var(--newspack-theme-color-secondary-variation),
+	"dark-gray": #111,
+	"medium-gray": #767676,
+	"light-gray": #eee,
+	"white": #fff,
 );
 
 @each $name, $hex in $colors {
@@ -1467,30 +1465,22 @@ $colors: (
 
 // Gradients
 .has-grad-1-gradient-background {
-	background-image: linear-gradient(
-		135deg,
-		var( --newspack-theme-color-primary ) 0%,
-		var( --newspack-theme-color-primary-variation ) 100%
-	);
+	background-image: linear-gradient(135deg, var(--newspack-theme-color-primary) 0%, var(--newspack-theme-color-primary-variation) 100%);
 }
 .has-grad-2-gradient-background {
-	background-image: linear-gradient(
-		135deg,
-		var( --newspack-theme-color-secondary ) 0%,
-		var( --newspack-theme-color-secondary-variation ) 100%
-	);
+	background-image: linear-gradient(135deg, var(--newspack-theme-color-secondary) 0%, var(--newspack-theme-color-secondary-variation) 100%);
 }
 .has-grad-3-gradient-background {
-	background-image: linear-gradient( 135deg, rgb( 17, 17, 17 ) 0%, rgb( 85, 85, 85 ) 100% );
+	background-image: linear-gradient(135deg, rgb(17, 17, 17) 0%, rgb(85, 85, 85) 100%);
 }
 .has-grad-4-gradient-background {
-	background-image: linear-gradient( 135deg, rgb( 68, 68, 68 ) 0%, rgb( 136, 136, 136 ) 100% );
+	background-image: linear-gradient(135deg, rgb(68, 68, 68) 0%, rgb(136, 136, 136) 100%);
 }
 .has-grad-5-gradient-background {
-	background-image: linear-gradient( 135deg, rgb( 119, 119, 119 ) 0%, rgb( 221, 221, 221 ) 100% );
+	background-image: linear-gradient(135deg, rgb(119, 119, 119) 0%, rgb(221, 221, 221) 100%);
 }
 .has-grad-6-gradient-background {
-	background-image: linear-gradient( 135deg, rgb( 221, 221, 221 ) 0%, rgb( 255, 255, 255 ) 100% );
+	background-image: linear-gradient(135deg, rgb(221, 221, 221) 0%, rgb(255, 255, 255) 100%);
 }
 
 .entry-content .has-text-color a,
@@ -1504,18 +1494,18 @@ $colors: (
 .page-template-single-feature,
 .page-template-no-header-footer {
 	.entry .entry-content > *,
-	[id='pico'] > * {
+	[id="pico"] > * {
 		&.alignwide {
 			@include utilities.media( tablet ) {
-				margin-left: calc( 25% - 25vw );
-				margin-right: calc( 25% - 25vw );
+				margin-left: calc(25% - 25vw);
+				margin-right: calc(25% - 25vw);
 				max-width: 100vw;
 			}
 		}
 
 		&.alignfull {
-			margin-left: calc( 50% - 50vw );
-			margin-right: calc( 50% - 50vw );
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
 			max-width: 100vw;
 			position: relative;
 			width: 100vw;
@@ -1525,7 +1515,7 @@ $colors: (
 		&.wp-block-image .alignleft {
 			@include utilities.media( mobile ) {
 				/* rtl:ignore */
-				margin-right: calc( 2 * #{structure.$size__spacing-unit} );
+				margin-right: calc(2 * #{structure.$size__spacing-unit});
 			}
 
 			@include utilities.media( tablet ) {
@@ -1543,7 +1533,7 @@ $colors: (
 		&.wp-block-image .alignright {
 			@include utilities.media( mobile ) {
 				/* rtl:ignore */
-				margin-left: calc( 2 * #{structure.$size__spacing-unit} );
+				margin-left: calc(2 * #{structure.$size__spacing-unit});
 			}
 
 			@include utilities.media( tablet ) {
@@ -1590,12 +1580,12 @@ $colors: (
 
 	//! Group & Cover Block
 	.entry .entry-content,
-	[id='pico'] {
+	[id="pico"] {
 		.wp-block-cover,
 		.wp-block-group {
 			&.alignfull,
 			&.alignwide {
-				> div > *:not( .alignfull ):not( .alignwide ) {
+				> div > *:not(.alignfull):not(.alignwide) {
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 780px;
@@ -1605,7 +1595,7 @@ $colors: (
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 100%;
-				width: calc( 50vw + 390px );
+				width: calc(50vw + 390px);
 			}
 		}
 
@@ -1614,7 +1604,7 @@ $colors: (
 			.wp-block-group {
 				&.alignfull,
 				&.alignwide {
-					> div > *:not( .alignfull ):not( .alignwide ) {
+					> div > *:not(.alignfull):not(.alignwide) {
 						max-width: 100%;
 					}
 				}
@@ -1631,7 +1621,7 @@ $colors: (
 	//! Add padding to some fullalign blocks to prevent text cut-offs.
 	.wp-block-pullquote,
 	.wp-block-table,
-	.entry-content > .wp-block-columns:not( .is-not-stacked-on-mobile ),
+	.entry-content > .wp-block-columns:not(.is-not-stacked-on-mobile),
 	.entry-content > .wpnbha {
 		&.alignfull {
 			padding-left: structure.$size__spacing-unit;
@@ -1648,8 +1638,8 @@ $colors: (
 
 	// Make sure content in a full-width group block doesn't touch edges
 	.entry .entry-content > .wp-block-group,
-	[id='pico'] > .wp-block-group {
-		&.alignfull:not( .has-background ):not( .is-style-border ) {
+	[id="pico"] > .wp-block-group {
+		&.alignfull:not(.has-background):not(.is-style-border) {
 			padding-left: 5.5%;
 			padding-right: 5.5%;
 		}
@@ -1680,9 +1670,9 @@ $colors: (
 	.entry .entry-content .scaip {
 		.newspack_global_ad,
 		.widget_newspack-ads-widget {
-			background-color: var( --newspack-theme-color-bg-pre );
-			margin-left: calc( 50% - 50vw );
-			margin-right: calc( 50% - 50vw );
+			background-color: var(--newspack-theme-color-bg-pre);
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
 			max-width: 100vw;
 			> * {
 				margin-top: structure.$size__vertical-rhythm * 2;
@@ -1708,4 +1698,4 @@ $colors: (
 /* --------------------------------------------------------------
 ## Patterns
 -------------------------------------------------------------- */
-@include meta.load-css( 'patterns' );
+@include meta.load-css( "patterns" );

@@ -1,4 +1,4 @@
-@use '../variables-site/structure';
+@use "../variables-site/structure";
 
 ul,
 ol {
@@ -18,7 +18,7 @@ ol {
 }
 
 li {
-	line-height: var( --newspack-theme-font-line-height-body );
+	line-height: var(--newspack-theme-font-line-height-body);
 }
 
 li > ul,

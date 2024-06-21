@@ -4,20 +4,20 @@ Newspack Scott Editor Styles
 
 /** === Includes === */
 
-@use 'variables-style/variables-style';
-@use '../../newspack-theme/sass/style-editor-base';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "variables-style/variables-style";
+@use "../../newspack-theme/sass/style-editor-base";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 .accent-header,
 .article-section-title {
 	color: #666;
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 
 	&::before {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: inline-block;
 		height: 0.75em;
 		margin: 0 0.75em 0 0;
@@ -29,7 +29,7 @@ Newspack Scott Editor Styles
 
 .entry-meta .byline a,
 .wpnbha .entry-meta .byline a {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 }
 
 /* Avatar */
@@ -40,8 +40,8 @@ Newspack Scott Editor Styles
 
 /** === Paragraph === */
 
-.has-drop-cap:not( :focus )::first-letter {
-	font-family: var( --newspack-theme-font-heading );
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: bold;
 }
 
@@ -71,8 +71,8 @@ Newspack Scott Editor Styles
 		&::before,
 		&::after {
 			border-top: 2px solid;
-			border-top-color: var( --newspack-theme-color-primary );
-			content: '';
+			border-top-color: var(--newspack-theme-color-primary);
+			content: "";
 			display: block;
 			position: absolute;
 			opacity: 0.8;
@@ -81,16 +81,16 @@ Newspack Scott Editor Styles
 
 		&::before {
 			left: 15%;
-			right: calc( 50% + 2em );
+			right: calc(50% + 2em);
 		}
 
 		&::after {
-			left: calc( 50% + 2em );
+			left: calc(50% + 2em);
 			right: 15%;
 		}
 	}
 
-	&[style*='border-color'] blockquote {
+	&[style*="border-color"] blockquote {
 		&::before,
 		&::after {
 			border-top-color: inherit;
@@ -98,14 +98,14 @@ Newspack Scott Editor Styles
 	}
 
 	blockquote p:first-of-type::before {
-		color: var( --newspack-theme-color-primary );
-		content: '\201C';
+		color: var(--newspack-theme-color-primary);
+		content: "\201C";
 		display: inline-block;
-		font-family: var( --newspack-theme-font-heading );
-		font-size: calc( 1rem * 6 );
+		font-family: var(--newspack-theme-font-heading);
+		font-size: calc(1rem * 6);
 		font-style: italic;
 		font-weight: normal;
-		left: calc( 50% - 0.3em );
+		left: calc(50% - 0.3em);
 		line-height: 0.75;
 		position: absolute;
 		text-align: center;
@@ -114,7 +114,7 @@ Newspack Scott Editor Styles
 		z-index: 1;
 
 		@include utilities.media( tablet ) {
-			font-size: calc( 1rem * 8 );
+			font-size: calc(1rem * 8);
 		}
 	}
 
@@ -140,19 +140,19 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: var( --newspack-theme-font-size-lg );
+		font-size: var(--newspack-theme-font-size-lg);
 
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-xl );
+			font-size: var(--newspack-theme-font-size-xl);
 		}
 	}
 
 	p {
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 	}
 
 	.wp-block-pullquote__citation {
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -220,7 +220,7 @@ Newspack Scott Editor Styles
 		}
 	}
 
-	&[style*='border-width'] {
+	&[style*="border-width"] {
 		blockquote {
 			margin-top: 0;
 		}
@@ -233,8 +233,8 @@ Newspack Scott Editor Styles
 	}
 }
 
-[data-align='left'] .wp-block-pullquote,
-[data-align='right'] .wp-block-pullquote {
+[data-align="left"] .wp-block-pullquote,
+[data-align="right"] .wp-block-pullquote {
 	border-width: 0;
 	text-align: left;
 
@@ -252,7 +252,7 @@ Newspack Scott Editor Styles
 	}
 
 	blockquote p:first-of-type::before {
-		font-size: calc( 1rem * 6 );
+		font-size: calc(1rem * 6);
 		left: 0;
 		text-align: left;
 		top: 0.3em;
@@ -283,6 +283,6 @@ Newspack Scott Editor Styles
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: var( --newspack-theme-font-size-md );
+		font-size: var(--newspack-theme-font-size-md);
 	}
 }

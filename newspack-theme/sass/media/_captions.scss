@@ -1,10 +1,10 @@
-@use '../variables-site/structure';
+@use "../variables-site/structure";
 
 .wp-caption {
-	margin-bottom: calc( 1.5 * #{structure.$size__spacing-unit} );
+	margin-bottom: calc(1.5 * #{structure.$size__spacing-unit});
 }
 
-.wp-caption img[class*='wp-image-'] {
+.wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -13,7 +13,7 @@
 figcaption,
 .wp-caption-text,
 .swiper-pagination-simple {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 	margin: 0 auto;
 	padding: 0;
 	text-align: left;
@@ -30,14 +30,14 @@ figcaption,
 .wp-caption-text,
 .amp-image-lightbox-caption,
 .swiper-pagination-simple {
-	font-size: var( --newspack-theme-font-size-xs );
-	font-family: var( --newspack-theme-font-heading );
-	line-height: var( --newspack-theme-font-line-height-body );
+	font-size: var(--newspack-theme-font-size-xs);
+	font-family: var(--newspack-theme-font-heading);
+	line-height: var(--newspack-theme-font-line-height-body);
 }
 
 /* Hack to address a bug that affects caption positioning in Safari only. Targets Safari 9+ only. */
 @supports ( -webkit-hyphens: none ) {
-	.wp-block-image [class^='align'] > figcaption {
+	.wp-block-image [class^="align"] > figcaption {
 		display: block;
 	}
 }
@@ -51,7 +51,7 @@ figcaption,
 	.alignfull,
 	.alignwide {
 		> figcaption {
-			width: min( 90vw, 780px );
+			width: min(90vw, 780px);
 		}
 	}
 
@@ -78,7 +78,7 @@ figcaption,
 	.alignfull,
 	.alignwide {
 		> figcaption {
-			width: min( 90vw, 1200px );
+			width: min(90vw, 1200px);
 		}
 	}
 

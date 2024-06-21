@@ -1,6 +1,6 @@
-@use '../mixins/mixins-main';
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/mixins-main";
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 .alignleft {
 	/* rtl:ignore */
@@ -10,7 +10,7 @@
 
 	@include utilities.media( tablet ) {
 		/* rtl:ignore */
-		margin-right: calc( 2 * #{structure.$size__spacing-unit} );
+		margin-right: calc(2 * #{structure.$size__spacing-unit});
 	}
 }
 
@@ -22,7 +22,7 @@
 
 	@include utilities.media( tablet ) {
 		/* rtl:ignore */
-		margin-left: calc( 2 * #{structure.$size__spacing-unit} );
+		margin-left: calc(2 * #{structure.$size__spacing-unit});
 	}
 }
 

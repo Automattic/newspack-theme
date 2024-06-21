@@ -4,21 +4,21 @@ Newspack Katharine Editor Styles
 
 /** === Includes === */
 
-@use 'variables-style/variables-style';
-@use '../../newspack-theme/sass/style-editor-base';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "variables-style/variables-style";
+@use "../../newspack-theme/sass/style-editor-base";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 .accent-header,
 .article-section-title {
-	color: var( --newspack-theme-color-primary-against-white );
-	font-size: var( --newspack-theme-font-size-xs );
+	color: var(--newspack-theme-color-primary-against-white);
+	font-size: var(--newspack-theme-font-size-xs);
 	margin-bottom: #{1.5 * structure.$size__spacing-unit};
 	margin-top: 0;
 
 	&::before {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: block;
 		height: 5px;
 		margin: 0 0 structure.$size__spacing-unit;
@@ -27,23 +27,23 @@ Newspack Katharine Editor Styles
 }
 
 .is-grid .article-section-title {
-	margin-bottom: calc( 30px - var( --wpnbha-col-gap, 32px ) );
+	margin-bottom: calc(30px - var(--wpnbha-col-gap, 32px));
 }
 
 .wpnbha article .entry-meta,
 .entry-meta {
-	font-size: var( --newspack-theme-font-size-xs );
+	font-size: var(--newspack-theme-font-size-xs);
 }
 
-.has-drop-cap:not( :focus )::first-letter {
-	font-family: var( --newspack-theme-font-heading );
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: bold;
 }
 
-.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-	.post-has-image {
+.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category)
+.post-has-image {
 	.entry-title {
-		background-color: var( --newspack-theme-color-bg-body );
+		background-color: var(--newspack-theme-color-bg-body);
 		margin-top: -1.75em;
 		padding: 0.5em 0.25em 0 0;
 		position: relative;
@@ -62,14 +62,14 @@ Newspack Katharine Editor Styles
 
 .wp-block-newspack-blocks-homepage-articles.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: var( --newspack-theme-color-text-main );
+	border-bottom-color: var(--newspack-theme-color-text-main);
 }
 
 .wpnbha.has-text-align-center {
 	.article-section-title::before,
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	&.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -77,7 +77,7 @@ Newspack Katharine Editor Styles
 
 .wpnbha.has-text-align-right {
 	.article-section-title {
-		padding-top: calc( 1rem + 5px );
+		padding-top: calc(1rem + 5px);
 		position: relative;
 
 		&::before {
@@ -86,18 +86,18 @@ Newspack Katharine Editor Styles
 			top: 0;
 		}
 	}
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	&.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		margin-left: 15%;
 	}
 }
 
 .wp-block-cover,
 .wp-block-group {
-	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	.wp-block-newspack-blocks-homepage-articles.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		background-color: transparent;
 		margin-top: 0;
 		padding: 0;
@@ -113,7 +113,7 @@ figure.wp-block-pullquote {
 	font-weight: bold;
 	position: relative;
 
-	&:not( .is-style-solid-color ):not( .has-background ) {
+	&:not(.is-style-solid-color):not(.has-background) {
 		blockquote {
 			padding-left: #{2 * structure.$size__spacing-unit};
 		}
@@ -122,7 +122,7 @@ figure.wp-block-pullquote {
 			border-top: 8px solid;
 			border-left: 8px solid;
 			border-color: inherit;
-			content: '';
+			content: "";
 			display: block;
 			height: 40px;
 			left: 0;
@@ -131,17 +131,17 @@ figure.wp-block-pullquote {
 			width: 40px;
 		}
 
-		&[style*='border-width']::before {
+		&[style*="border-width"]::before {
 			display: none;
 		}
 	}
 
 	blockquote p,
 	&.is-style-solid-color blockquote p {
-		font-size: var( --newspack-theme-font-size-lg );
+		font-size: var(--newspack-theme-font-size-lg);
 
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-xl );
+			font-size: var(--newspack-theme-font-size-xl);
 		}
 	}
 
@@ -160,16 +160,16 @@ figure.wp-block-pullquote {
 	}
 }
 
-[data-align='left'] .wp-block-pullquote,
-[data-align='right'] .wp-block-pullquote {
+[data-align="left"] .wp-block-pullquote,
+[data-align="right"] .wp-block-pullquote {
 	@include utilities.media( tablet ) {
 		blockquote p,
 		&.is-style-solid-color blockquote p {
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 		}
 	}
 
-	&:not( .is-style-solid-color ) {
+	&:not(.is-style-solid-color) {
 		padding-top: structure.$size__spacing-unit;
 
 		blockquote {
@@ -200,8 +200,8 @@ figcaption,
 	text-align: left;
 
 	&::after {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: block;
 		height: 5px;
 		margin-top: #{1.25 * structure.$size__spacing-unit};
@@ -220,10 +220,10 @@ figcaption,
 	}
 }
 
-.wp-block-separator:not( .is-style-dots ),
+.wp-block-separator:not(.is-style-dots),
 hr {
 	background: transparent !important;
-	border-top: 1px dotted var( --newspack-theme-color-text-main );
+	border-top: 1px dotted var(--newspack-theme-color-text-main);
 
 	&.has-background {
 		border-top: 1px dotted currentcolor;
@@ -231,8 +231,8 @@ hr {
 }
 
 .wp-block .wp-block-columns.is-style-borders {
-	[data-type='core/column'] {
-		border-bottom: 1px dotted var( --newspack-theme-color-text-main );
+	[data-type="core/column"] {
+		border-bottom: 1px dotted var(--newspack-theme-color-text-main);
 
 		&:last-child {
 			border-bottom: 0;
@@ -245,14 +245,14 @@ hr {
 				border-right: 1px dotted transparent;
 			}
 
-			&:nth-child( odd )::after {
-				border-color: var( --newspack-theme-color-text-main );
+			&:nth-child(odd)::after {
+				border-color: var(--newspack-theme-color-text-main);
 			}
 		}
 
 		@include utilities.media( tablet ) {
 			&::after {
-				border-color: var( --newspack-theme-color-text-main );
+				border-color: var(--newspack-theme-color-text-main);
 			}
 		}
 	}
@@ -260,5 +260,5 @@ hr {
 
 .wp-block-group.is-style-border {
 	border-style: dotted;
-	border-color: var( --newspack-theme-color-text-main );
+	border-color: var(--newspack-theme-color-text-main);
 }

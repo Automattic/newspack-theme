@@ -1,24 +1,34 @@
 // Font and typographic variables
 
 :root {
-	--newspack-theme-font-body: georgia, garamond, 'Times New Roman', serif;
-	--newspack-theme-font-heading: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--newspack-theme-font-body: georgia, garamond, "Times New Roman", serif;
+	--newspack-theme-font-heading:
+		-apple-system,
+		blinkmacsystemfont,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
 	--newspack-theme-font-code: menlo, monaco, consolas, lucida console, monospace;
-	--newspack-theme-font-pre: 'Courier 10 Pitch', courier, monospace;
+	--newspack-theme-font-pre: "Courier 10 Pitch", courier, monospace;
 	--newspack-theme-font-size-base: 20px;
 	--newspack-theme-font-size-base-sm: 18px;
 	--newspack-theme-font-size-ratio: 1.125;
-	--newspack-theme-font-size-xxs: calc( 1em * 0.6 ); // 12px
-	--newspack-theme-font-size-xs: calc( 1em * 0.7 ); // 14px
-	--newspack-theme-font-size-sm: calc( 1em * 0.8 ); // 16px
-	--newspack-theme-font-size-md: calc( 1em * 1.2 ); // 24px
-	--newspack-theme-font-size-lg: calc( 1em * 1.4 ); // 28px
-	--newspack-theme-font-size-xl: calc( 1em * 1.8 ); // 36px
-	--newspack-theme-font-size-xxl: calc( 1em * 2.2 ); // 44px
-	--newspack-theme-font-size-xxxl: calc( 1em * 2.8 ); // 56px
-	--newspack-theme-font-size-xxxxl: calc( 1em * 3.2 ); // 64px
-	--newspack-theme-font-size-xxxxxl: calc( 1em * 4 ); // 80px
+	--newspack-theme-font-size-xxs: calc(1em * 0.6); // 12px
+	--newspack-theme-font-size-xs: calc(1em * 0.7); // 14px
+	--newspack-theme-font-size-sm: calc(1em * 0.8); // 16px
+	--newspack-theme-font-size-md: calc(1em * 1.2); // 24px
+	--newspack-theme-font-size-lg: calc(1em * 1.4); // 28px
+	--newspack-theme-font-size-xl: calc(1em * 1.8); // 36px
+	--newspack-theme-font-size-xxl: calc(1em * 2.2); // 44px
+	--newspack-theme-font-size-xxxl: calc(1em * 2.8); // 56px
+	--newspack-theme-font-size-xxxxl: calc(1em * 3.2); // 64px
+	--newspack-theme-font-size-xxxxxl: calc(1em * 4); // 80px
 	--newspack-theme-font-line-height-body: 1.6;
 	--newspack-theme-font-line-height-heading: 1.2;
 }
