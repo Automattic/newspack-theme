@@ -1,3 +1,16 @@
+# [1.89.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.89.0-alpha.1...v1.89.0-alpha.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* udpate package-lock.json ([514bf1f](https://github.com/Automattic/newspack-theme/commit/514bf1f8ca38647865783c3fed17c5b5dfb0b499))
+* update newspack-scripts to v5.5.1 ([#2329](https://github.com/Automattic/newspack-theme/issues/2329)) ([43098e2](https://github.com/Automattic/newspack-theme/commit/43098e2fe6403e7867155362ffb2cf13b21f92ca))
+
+
+### Features
+
+* ensure regenerator-runtime is available (for WP 6.6) ([8706ca8](https://github.com/Automattic/newspack-theme/commit/8706ca86faf946200cf2b98d43d3c60f372535c0))
+
 # [1.89.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.2...v1.89.0-alpha.1) (2024-05-31)
 
 
