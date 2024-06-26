@@ -32,6 +32,10 @@ fs.readdirSync( path.join( __dirname, 'newspack-theme/js', 'src' ) )
 		entry[ script ] = path.join( __dirname, 'newspack-theme/js', 'src', script, 'index.js' );
 	} );
 
+Object.keys( entry ).forEach( key => {
+	entry[ key ] = [ 'regenerator-runtime/runtime', entry[ key ] ];
+} );
+
 const webpackConfig = getBaseWebpackConfig(
 	{ WP: true },
 	{
