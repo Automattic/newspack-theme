@@ -1,3 +1,10 @@
+## [1.90.1](https://github.com/Automattic/newspack-theme/compare/v1.90.0...v1.90.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* post-release job for Node v16 ([e8365e8](https://github.com/Automattic/newspack-theme/commit/e8365e88615c7dc0c8f46436a097b3dc986116ab))
+
 # [1.90.0](https://github.com/Automattic/newspack-theme/compare/v1.89.0...v1.90.0) (2024-07-01)
 
 
