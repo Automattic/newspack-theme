@@ -3,6 +3,7 @@
 const { basename, resolve } = require( 'path' );
 const { stat, readFile } = require( 'fs-extra' );
 const { Octokit } = require( '@octokit/rest' );
+const fetch = require( 'node-fetch' ); // Required for Node v16. See: https://github.com/octokit/octokit.js/#fetch-missing
 
 const THEMES = [
 	'newspack-theme',
@@ -31,6 +32,9 @@ const createExternalReleasesOfThemes = async () => {
 
 	const octokit = new Octokit( {
 		auth: TOKEN,
+		request: {
+			fetch,
+		},
 	} );
 
 	const RELEASES = THEMES.map( name => ( {
