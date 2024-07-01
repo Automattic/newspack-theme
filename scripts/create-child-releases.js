@@ -32,7 +32,9 @@ const createExternalReleasesOfThemes = async () => {
 
 	const octokit = new Octokit( {
 		auth: TOKEN,
-		fetch,
+		request: {
+			fetch,
+		},
 	} );
 
 	const RELEASES = THEMES.map( name => ( {
