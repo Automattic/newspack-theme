@@ -1,3 +1,10 @@
+# [1.91.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-alpha.1) (2024-07-05)
+
+
+### Features
+
+* add support for publisher media kit ([#2317](https://github.com/Automattic/newspack-theme/issues/2317)) ([4430264](https://github.com/Automattic/newspack-theme/commit/4430264a924362138b6c31c5e33d9b78123b5378))
+
 ## [1.90.3](https://github.com/Automattic/newspack-theme/compare/v1.90.2...v1.90.3) (2024-07-01)
 
 
