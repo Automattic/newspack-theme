@@ -34,7 +34,7 @@
 		"release": "npm run build && npm run semantic-release"
 	},
 	"devDependencies": {
-		"@octokit/rest": "^20.1.1",
+		"@octokit/rest": "^21.0.0",
 		"@rushstack/eslint-patch": "^1.10.3",
 		"@wordpress/browserslist-config": "^5.41.0",
 		"chokidar-cli": "^3.0.0",
