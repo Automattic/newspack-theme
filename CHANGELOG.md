@@ -1,3 +1,10 @@
+# [1.91.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.1...v1.91.0-epic-ras-acc.2) (2024-07-08)
+
+
+### Bug Fixes
+
+* **ras-acc:** clean up merge conflict marker ([#2335](https://github.com/Automattic/newspack-theme/issues/2335)) ([080e0fc](https://github.com/Automattic/newspack-theme/commit/080e0fc1a8e59f70fef23b7a46b11dc6f85bcf11))
+
 # [1.91.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-epic-ras-acc.1) (2024-07-03)
 
 
