@@ -142,6 +142,10 @@ figcaption,
 }
 
 .wp-block-column {
+	&.is-style-rounded {
+		border-radius: 6px;
+	}
+
 	figcaption {
 		max-width: 100%;
 	}
