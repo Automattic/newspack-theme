@@ -19,11 +19,11 @@ import { appendSubtitleToTitleDOMElement, connectWithSelect } from './utils';
  *
  * https://developer.wordpress.org/block-editor/developers/slotfills/plugin-document-setting-panel/
  */
-const NewspackSubtitlePanel = ( { subtitle, mode } ) => {
-	// Update the DOM when subtitle value changes or editor mode is switched
+const NewspackSubtitlePanel = ( { subtitle } ) => {
+	// Update the DOM when subtitle value changes.
 	useEffect( () => {
-		appendSubtitleToTitleDOMElement( subtitle, mode === 'text' );
-	}, [ subtitle, mode ] );
+		appendSubtitleToTitleDOMElement( subtitle );
+	}, [ subtitle ] );
 
 	return (
 		<PluginDocumentSettingPanel
