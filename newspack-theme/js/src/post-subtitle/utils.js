@@ -28,5 +28,4 @@ export const appendSubtitleToTitleDOMElement = subtitle => {
 
 export const connectWithSelect = withSelect( select => ( {
 	subtitle: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ META_FIELD_NAME ],
-	mode: select( 'core/edit-post' ).getEditorMode(),
 } ) );
