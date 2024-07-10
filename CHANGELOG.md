@@ -1,3 +1,10 @@
+## [1.90.5](https://github.com/Automattic/newspack-theme/compare/v1.90.4...v1.90.5) (2024-07-10)
+
+
+### Bug Fixes
+
+* remove margin from grid block ([#2342](https://github.com/Automattic/newspack-theme/issues/2342)) ([854794b](https://github.com/Automattic/newspack-theme/commit/854794b5c615a3754f9c3b5352d8880499bee67f))
+
 ## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
 
 
