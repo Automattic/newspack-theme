@@ -1161,6 +1161,10 @@ hr {
 			}
 		}
 	}
+
+	& > .wp-block-group-is-layout-grid > * {
+		margin: 0;
+	}
 }
 
 .entry .entry-content > .wp-block-group.alignleft,
@@ -1181,8 +1185,8 @@ hr {
 	}
 }
 
-.wp-block-group.has-background + .wp-block-group.has-background,
-[id='pico'] > .wp-block-group.has-background + .wp-block-group.has-background {
+.wp-block-group.has-background.alignfull + .wp-block-group.has-background.alignfull,
+[id='pico'] > .wp-block-group.has-background.alignfull + .wp-block-group.has-background.alignfull {
 	margin-top: -32px;
 }
 
