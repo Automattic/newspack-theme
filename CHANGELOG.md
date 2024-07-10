@@ -1,5 +1,16 @@
-# [1.91.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-alpha.1...v1.91.0-alpha.2) (2024-07-09)
+## [1.90.5](https://github.com/Automattic/newspack-theme/compare/v1.90.4...v1.90.5) (2024-07-10)
 
+### Bug Fixes
+
+* remove margin from grid block ([#2342](https://github.com/Automattic/newspack-theme/issues/2342)) ([854794b](https://github.com/Automattic/newspack-theme/commit/854794b5c615a3754f9c3b5352d8880499bee67f))
+
+## [1.91.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-alpha.1...v1.91.0-alpha.2) (2024-07-09)
+
+### Bug Fixes
+
+* correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
+
+## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
 
 ### Bug Fixes
 
@@ -7,16 +18,9 @@
 
 # [1.91.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-alpha.1) (2024-07-05)
 
-
 ### Features
 
 * add support for publisher media kit ([#2317](https://github.com/Automattic/newspack-theme/issues/2317)) ([4430264](https://github.com/Automattic/newspack-theme/commit/4430264a924362138b6c31c5e33d9b78123b5378))
-
-## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
-
-### Bug Fixes
-
-* correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
 
 ## [1.90.3](https://github.com/Automattic/newspack-theme/compare/v1.90.2...v1.90.3) (2024-07-01)
 
