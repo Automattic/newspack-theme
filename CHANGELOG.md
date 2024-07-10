@@ -1,3 +1,10 @@
+# [1.91.0-epic-ras-acc.3](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.2...v1.91.0-epic-ras-acc.3) (2024-07-10)
+
+
+### Bug Fixes
+
+* correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
+
 ## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
 
 ### Bug Fixes
