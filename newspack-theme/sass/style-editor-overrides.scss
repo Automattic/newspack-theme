@@ -135,11 +135,13 @@ body.newspack-single-column-template {
 body.post-type-post {
 	.editor-post-title__block,
 	.edit-post-visual-editor__post-title-wrapper,
-	.editor-styles-wrapper h1.wp-block-post-title {
+	.editor-styles-wrapper h1.wp-block-post-title,
+	#newspack-post-subtitle-element {
 		max-width: 1200px;
 	}
 
-	.edit-post-visual-editor__post-title-wrapper {
+	.edit-post-visual-editor__post-title-wrapper,
+	#newspack-post-subtitle-element {
 		margin-left: auto;
 		margin-right: auto;
 	}

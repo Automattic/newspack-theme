@@ -1,18 +1,24 @@
-# [1.91.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.1...v1.91.0-epic-ras-acc.2) (2024-07-08)
+## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
 
+### Bug Fixes
+
+* correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
+
+
+## [1.91.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.1...v1.91.0-epic-ras-acc.2) (2024-07-08)
 
 ### Bug Fixes
 
 * **ras-acc:** clean up merge conflict marker ([#2335](https://github.com/Automattic/newspack-theme/issues/2335)) ([080e0fc](https://github.com/Automattic/newspack-theme/commit/080e0fc1a8e59f70fef23b7a46b11dc6f85bcf11))
 
-# [1.91.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-epic-ras-acc.1) (2024-07-03)
-
+## [1.91.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-epic-ras-acc.1) (2024-07-03)
 
 ### Features
 
 * add support for publisher media kit ([#2317](https://github.com/Automattic/newspack-theme/issues/2317)) ([4430264](https://github.com/Automattic/newspack-theme/commit/4430264a924362138b6c31c5e33d9b78123b5378))
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
+
 
 ## [1.90.3](https://github.com/Automattic/newspack-theme/compare/v1.90.2...v1.90.3) (2024-07-01)
 
