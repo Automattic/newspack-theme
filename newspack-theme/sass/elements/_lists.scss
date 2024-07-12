@@ -11,6 +11,27 @@ ul {
 	ul {
 		list-style-type: circle;
 	}
+
+	&.is-style-checked {
+		list-style-type: none;
+		padding-left: calc( 24px + 0.25em );
+
+		li {
+			position: relative;
+
+			&::before {
+				background: currentcolor;
+				clip-path: polygon( 69.5833% 29.5834%, 43.3333% 65%, 29.5833% 54.5834%, 25.8333% 59.5834%, 44.5833% 73.75%, 74.5833% 33.3334%, 69.5833% 29.5834% );
+				content: '';
+				display: block;
+				height: 24px;
+				left: calc( -24px - 0.25em );
+				position: absolute;
+				top: calc( ( 1em * var( --newspack-theme-font-line-height-body ) - 24px ) / 2 );
+				width: 24px;
+			}
+		}
+	}
 }
 
 ol {
