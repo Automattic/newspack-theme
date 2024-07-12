@@ -18,6 +18,7 @@ ul {
 
 		li {
 			position: relative;
+
 			&::before {
 				background: currentcolor;
 				clip-path: polygon( 69.5833% 29.5834%, 43.3333% 65%, 29.5833% 54.5834%, 25.8333% 59.5834%, 44.5833% 73.75%, 74.5833% 33.3334%, 69.5833% 29.5834% );
