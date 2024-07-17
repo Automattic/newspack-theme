@@ -1,4 +1,25 @@
-# [1.91.0-epic-ras-acc.3](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.2...v1.91.0-epic-ras-acc.3) (2024-07-10)
+# [1.91.0](https://github.com/Automattic/newspack-theme/compare/v1.90.5...v1.91.0) (2024-07-15)
+
+
+### Features
+
+* add support for publisher media kit ([#2317](https://github.com/Automattic/newspack-theme/issues/2317)) ([4430264](https://github.com/Automattic/newspack-theme/commit/4430264a924362138b6c31c5e33d9b78123b5378))
+
+# [1.91.0-alpha.3](https://github.com/Automattic/newspack-theme/compare/v1.91.0-alpha.2...v1.91.0-alpha.3) (2024-07-10)
+
+
+### Bug Fixes
+
+* remove margin from grid block ([#2342](https://github.com/Automattic/newspack-theme/issues/2342)) ([854794b](https://github.com/Automattic/newspack-theme/commit/854794b5c615a3754f9c3b5352d8880499bee67f))
+
+## [1.90.5](https://github.com/Automattic/newspack-theme/compare/v1.90.4...v1.90.5) (2024-07-10)
+
+
+### Bug Fixes
+
+* remove margin from grid block ([#2342](https://github.com/Automattic/newspack-theme/issues/2342)) ([854794b](https://github.com/Automattic/newspack-theme/commit/854794b5c615a3754f9c3b5352d8880499bee67f))
+
+## [1.91.0-alpha.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-alpha.1...v1.91.0-alpha.2) (2024-07-09)
 
 
 ### Bug Fixes
@@ -7,6 +28,7 @@
 
 ## [1.90.4](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.90.4) (2024-07-09)
 
+
 ### Bug Fixes
 
 * correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
@@ -14,11 +36,13 @@
 
 ## [1.91.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.91.0-epic-ras-acc.1...v1.91.0-epic-ras-acc.2) (2024-07-08)
 
+
 ### Bug Fixes
 
 * **ras-acc:** clean up merge conflict marker ([#2335](https://github.com/Automattic/newspack-theme/issues/2335)) ([080e0fc](https://github.com/Automattic/newspack-theme/commit/080e0fc1a8e59f70fef23b7a46b11dc6f85bcf11))
 
 ## [1.91.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-epic-ras-acc.1) (2024-07-03)
+
 
 ### Features
 
@@ -26,6 +50,20 @@
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
 
+
+## [1.90.3](https://github.com/Automattic/newspack-theme/compare/v1.90.2...v1.90.3) (2024-07-01)
+
+
+### Bug Fixes
+
+* correct subtitle order for WP 6.6 ([#2341](https://github.com/Automattic/newspack-theme/issues/2341)) ([e75fa8e](https://github.com/Automattic/newspack-theme/commit/e75fa8ef5ee847f5906704c535cf78bc191f2680))
+
+# [1.91.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.90.3...v1.91.0-alpha.1) (2024-07-05)
+
+
+### Features
+
+* add support for publisher media kit ([#2317](https://github.com/Automattic/newspack-theme/issues/2317)) ([4430264](https://github.com/Automattic/newspack-theme/commit/4430264a924362138b6c31c5e33d9b78123b5378))
 
 ## [1.90.3](https://github.com/Automattic/newspack-theme/compare/v1.90.2...v1.90.3) (2024-07-01)
 
@@ -50,12 +88,10 @@
 
 # [1.90.0](https://github.com/Automattic/newspack-theme/compare/v1.89.0...v1.90.0) (2024-07-01)
 
-
 ### Bug Fixes
 
 * udpate package-lock.json ([514bf1f](https://github.com/Automattic/newspack-theme/commit/514bf1f8ca38647865783c3fed17c5b5dfb0b499))
 * update newspack-scripts to v5.5.1 ([#2329](https://github.com/Automattic/newspack-theme/issues/2329)) ([43098e2](https://github.com/Automattic/newspack-theme/commit/43098e2fe6403e7867155362ffb2cf13b21f92ca))
-
 
 ### Features
 
@@ -85,6 +121,7 @@
 ### Features
 
 * ensure regenerator-runtime is available (for WP 6.6) ([8706ca8](https://github.com/Automattic/newspack-theme/commit/8706ca86faf946200cf2b98d43d3c60f372535c0))
+
 
 # [1.89.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.88.2...v1.89.0-alpha.1) (2024-05-31)
 
