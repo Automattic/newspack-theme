@@ -1,3 +1,10 @@
+# [1.92.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0-alpha.1) (2024-07-19)
+
+
+### Features
+
+* add newspack-block-theme backwards compatibility ([#2315](https://github.com/Automattic/newspack-theme/issues/2315)) ([0e60c3a](https://github.com/Automattic/newspack-theme/commit/0e60c3ab00b18d8736f03e68346f29739066a5cc))
+
 # [1.91.0](https://github.com/Automattic/newspack-theme/compare/v1.90.5...v1.91.0) (2024-07-15)
 
 
