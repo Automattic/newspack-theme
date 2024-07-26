@@ -1581,13 +1581,6 @@ table.woocommerce-table--order-details.shop_table,
 	.woocommerce-product-gallery__trigger {
 		right: 1rem;
 	}
-
-	.wc_payment_method {
-		> label:first-of-type img {
-			float: none;
-			margin-left: 0.5 * structure.$size__spacing-unit;
-		}
-	}
 }
 
 @media only screen and ( min-width: 768px ) {
