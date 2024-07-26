@@ -1,3 +1,10 @@
+# [1.92.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.92.0-epic-ras-acc.1...v1.92.0-epic-ras-acc.2) (2024-07-26)
+
+
+### Bug Fixes
+
+* **ras-acc:** remove redundant checkout styles ([#2350](https://github.com/Automattic/newspack-theme/issues/2350)) ([1f48f20](https://github.com/Automattic/newspack-theme/commit/1f48f2061fe40ea091fb6135444e4ada2be8012e))
+
 # [1.92.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0-epic-ras-acc.1) (2024-07-17)
 
 
