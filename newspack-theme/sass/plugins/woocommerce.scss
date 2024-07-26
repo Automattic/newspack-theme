@@ -969,6 +969,12 @@ table.variations {
  * Account section
  */
 .woocommerce-account {
+	.entry-content .newspack-reader-auth__inline-wrapper {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: var( --newspack-ui-modal-width-s, 410px );
+	}
+
 	.woocommerce-MyAccount-navigation {
 		margin: 0 0 2rem;
 
