@@ -368,18 +368,24 @@ p.has-background {
 		padding-right: structure.$size__spacing-unit;
 	}
 
-	.wp-block-column > * {
-		margin-bottom: 32px;
-		margin-top: 32px;
-
-		&:first-child,
-		&:first-child .article-section-title, // when Load More is enabled.
-		&.accent-header + div.wpnbha {
-			margin-top: 0;
+	.wp-block-column {
+		&.is-style-rounded {
+			border-radius: 6px;
 		}
 
-		&:last-child {
-			margin-bottom: 0;
+		> * {
+			margin-bottom: 32px;
+			margin-top: 32px;
+
+			&:first-child,
+			&:first-child .article-section-title, // when Load More is enabled.
+			&.accent-header + div.wpnbha {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -1397,6 +1403,14 @@ hr {
 }
 
 //! Font Sizes
+.has-xx-small-font-size {
+	font-size: var( --newspack-theme-font-size-xxs );
+}
+
+.has-x-small-font-size {
+	font-size: var( --newspack-theme-font-size-xs );
+}
+
 .has-small-font-size {
 	font-size: var( --newspack-theme-font-size-sm );
 }
@@ -1410,7 +1424,11 @@ hr {
 }
 
 .has-huge-font-size,
-.has-x-large-font-size {
+.has-x-large-font-size,
+.has-xx-large-font-size,
+.has-xxx-large-font-size,
+.has-xxxx-large-font-size,
+.has-xxxxx-large-font-size {
 	font-size: var( --newspack-theme-font-size-xl );
 }
 
@@ -1420,19 +1438,42 @@ hr {
 	}
 
 	.has-huge-font-size,
-	.has-x-large-font-size {
+	.has-x-large-font-size,
+	.has-xx-large-font-size {
 		font-size: var( --newspack-theme-font-size-xxl );
+	}
+
+	.has-xxx-large-font-size {
+		font-size:var( --newspack-theme-font-size-xxxl );
+	}
+
+	.has-xxxx-large-font-size {
+		font-size:var( --newspack-theme-font-size-xxxxl );
+	}
+
+	.has-xxxxx-large-font-size {
+		font-size:var( --newspack-theme-font-size-xxxxxl );
 	}
 }
 
 $colors: (
+	'accent': var( --newspack-theme-color-primary ),
 	'primary': var( --newspack-theme-color-primary ),
 	'primary-variation': var( --newspack-theme-color-primary-variation ),
+	'accent-2': var( --newspack-theme-color-secondary ),
 	'secondary': var( --newspack-theme-color-secondary ),
 	'secondary-variation': var( --newspack-theme-color-secondary-variation ),
+	'contrast': #111,
 	'dark-gray': #111,
+	'contrast-2': var( --newspack-theme-color-bg-dark ),
+	'contrast-3': #767676,
 	'medium-gray': #767676,
+	'base-5': var( --newspack-theme-color-text-light ),
+	'base-4': var( --newspack-theme-color-border ),
+	'base-3': var( --newspack-theme-color-border-light ),
+	'base-2': #eee,
 	'light-gray': #eee,
+	'base': #fff,
 	'white': #fff,
 );
 
