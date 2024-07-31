@@ -11,13 +11,22 @@
 ### Bug Fixes
 
 * **ras-acc:** clean up merge conflict marker ([#2335](https://github.com/Automattic/newspack-theme/issues/2335)) ([080e0fc](https://github.com/Automattic/newspack-theme/commit/080e0fc1a8e59f70fef23b7a46b11dc6f85bcf11))
+* update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
+* update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
+
+# [1.92.0](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0) (2024-07-30)
 
 
 ### Features
 
 * add newspack-block-theme backwards compatibility ([#2315](https://github.com/Automattic/newspack-theme/issues/2315)) ([0e60c3a](https://github.com/Automattic/newspack-theme/commit/0e60c3ab00b18d8736f03e68346f29739066a5cc))
-* update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
-* update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
+
+# [1.92.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0-alpha.1) (2024-07-19)
+
+
+### Features
+
+* add newspack-block-theme backwards compatibility ([#2315](https://github.com/Automattic/newspack-theme/issues/2315)) ([0e60c3a](https://github.com/Automattic/newspack-theme/commit/0e60c3ab00b18d8736f03e68346f29739066a5cc))
 
 # [1.91.0](https://github.com/Automattic/newspack-theme/compare/v1.90.5...v1.91.0) (2024-07-15)
 
