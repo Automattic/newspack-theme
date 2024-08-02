@@ -1,19 +1,19 @@
-@use '../../mixins/utilities';
-@use '../../variables-site/structure';
+@use "../../mixins/utilities";
+@use "../../variables-site/structure";
 
 /* Headers */
 
 .accent-header,
 #secondary .widgettitle,
 .article-section-title {
-	border-bottom: 4px solid var( --newspack-theme-color-border );
-	color: var( --newspack-theme-color-primary-against-white );
+	border-bottom: 4px solid var(--newspack-theme-color-border);
+	color: var(--newspack-theme-color-primary-against-white);
 	padding-bottom: #{structure.$size__spacing-unit * 0.33};
 }
 
 .accent-header,
 .article-section-title {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 }
 
 .accent-header,
@@ -26,33 +26,33 @@
 
 .nav3 {
 	a {
-		background-color: var( --newspack-theme-color-bg-pre );
-		color: var( --newspack-theme-color-text-main );
+		background-color: var(--newspack-theme-color-bg-pre);
+		color: var(--newspack-theme-color-text-main);
 		@include utilities.button-transition;
 
 		border-radius: 5px;
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 		font-weight: 700;
 		padding: #{structure.$size__spacing-unit * 0.5} #{structure.$size__spacing-unit * 0.75};
 	}
 
 	.menu-highlight a {
-		background-color: var( --newspack-theme-color-primary );
+		background-color: var(--newspack-theme-color-primary);
 		border: 0;
-		color: var( --newspack-theme-color-against-primary );
+		color: var(--newspack-theme-color-against-primary);
 		padding: #{structure.$size__spacing-unit * 0.5} #{structure.$size__spacing-unit * 0.75};
 	}
 }
 
 .h-sb .site-header .nav3 {
 	a {
-		background-color: var( --newspack-theme-color-primary-darken-10 );
-		color: var( --newspack-theme-color-against-primary );
+		background-color: var(--newspack-theme-color-primary-darken-10);
+		color: var(--newspack-theme-color-against-primary);
 	}
 
 	.menu-highlight a {
-		background-color: var( --newspack-theme-color-secondary );
-		color: var( --newspack-theme-color-against-secondary );
+		background-color: var(--newspack-theme-color-secondary);
+		color: var(--newspack-theme-color-against-secondary);
 	}
 }
 
@@ -62,7 +62,7 @@
 	li.menu-highlight a {
 		&:hover,
 		&:focus {
-			background-color: var( --newspack-theme-color-text-main );
+			background-color: var(--newspack-theme-color-text-main);
 			color: #fff;
 			opacity: 1;
 		}
@@ -76,8 +76,8 @@
 	}
 
 	.menu-highlight a {
-		background-color: var( --newspack-theme-color-primary-darken-10 );
-		color: var( --newspack-theme-color-against-primary );
+		background-color: var(--newspack-theme-color-primary-darken-10);
+		color: var(--newspack-theme-color-against-primary);
 	}
 }
 
@@ -89,20 +89,20 @@
 
 .cat-links {
 	a {
-		background-color: var( --newspack-theme-color-primary );
-		color: var( --newspack-theme-color-against-primary );
+		background-color: var(--newspack-theme-color-primary);
+		color: var(--newspack-theme-color-against-primary);
 		display: inline-block;
 		line-height: 1;
 		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
 		padding: 0.3em 0.5em;
 
 		&:visited {
-			color: var( --newspack-theme-color-against-primary );
+			color: var(--newspack-theme-color-against-primary);
 		}
 
 		&:hover {
-			background-color: var( --newspack-theme-color-primary-variation );
-			color: var( --newspack-theme-color-against-primary );
+			background-color: var(--newspack-theme-color-primary-variation);
+			color: var(--newspack-theme-color-against-primary);
 		}
 	}
 }
@@ -130,7 +130,7 @@
 }
 
 .featured-image-behind .cat-links {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 	a,
 	a:hover,
 	a:visited {
@@ -176,7 +176,7 @@
 div.author-bio {
 	.author-link,
 	h2 a {
-		color: var( --newspack-theme-color-primary-against-white );
+		color: var(--newspack-theme-color-primary-against-white);
 	}
 }
 
@@ -200,7 +200,7 @@ div.author-bio {
 .site-footer .footer-branding,
 .site-footer .footer-widgets:first-child {
 	.wrapper {
-		border-top: 4px solid var( --newspack-theme-color-border );
+		border-top: 4px solid var(--newspack-theme-color-border);
 	}
 }
 

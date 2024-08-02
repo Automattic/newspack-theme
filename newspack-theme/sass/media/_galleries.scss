@@ -1,10 +1,10 @@
-@use '../variables-site/structure';
+@use "../variables-site/structure";
 
 .gallery {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin-bottom: calc( 1.5 * #{structure.$size__spacing-unit} );
+	margin-bottom: calc(1.5 * #{structure.$size__spacing-unit});
 }
 
 .gallery-item {
@@ -18,7 +18,7 @@
 	// Loops to enumerate the classes for gallery columns.
 	@for $i from 2 through 9 {
 		.gallery-columns-#{$i} & {
-			max-width: calc( ( 100% - 16px * #{$i - 1} ) / #{$i} );
+			max-width: calc(( 100% - 16px * #{$i - 1} ) / #{$i});
 
 			&:nth-of-type( #{$i}n + #{$i} ) {
 				margin-right: 0;
@@ -33,9 +33,9 @@
 
 .gallery-caption {
 	display: block;
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-xs );
-	line-height: var( --newspack-theme-font-line-height-body );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-xs);
+	line-height: var(--newspack-theme-font-line-height-body);
 	margin: 0;
 	padding: ( structure.$size__spacing-unit * 0.5 );
 }
@@ -48,6 +48,6 @@
 	box-shadow: 0 0 0 0 transparent;
 
 	&:focus {
-		box-shadow: 0 0 0 2px rgba( var( --newspack-theme-color-primary ), 1 );
+		box-shadow: 0 0 0 2px rgba(var(--newspack-theme-color-primary), 1);
 	}
 }

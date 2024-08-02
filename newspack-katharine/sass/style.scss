@@ -1,8 +1,8 @@
-@use 'theme-description';
-@use 'variables-style/variables-style';
-@use '../../newspack-theme/sass/style-base';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "theme-description";
+@use "variables-style/variables-style";
+@use "../../newspack-theme/sass/style-base";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 // Header
 
@@ -10,15 +10,15 @@
 .h-sb {
 	.top-header-contain,
 	.middle-header-contain {
-		background-color: var( --newspack-theme-color-bg-dark );
+		background-color: var(--newspack-theme-color-bg-dark);
 	}
 
 	.top-header-contain {
-		border-color: var( --newspack-theme-color-bg-dark-lighten-5 );
+		border-color: var(--newspack-theme-color-bg-dark-lighten-5);
 	}
 
 	.bottom-header-contain {
-		background-color: var( --newspack-theme-color-bg-dark-darken-5 );
+		background-color: var(--newspack-theme-color-bg-dark-darken-5);
 	}
 
 	.site-header,
@@ -45,11 +45,11 @@
 .archive .page-title,
 #secondary .widget-title,
 #secondary .widgettitle {
-	color: var( --newspack-theme-color-primary-against-white );
+	color: var(--newspack-theme-color-primary-against-white);
 
 	&::before {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: block;
 		height: 5px;
 		margin: 0 0 structure.$size__spacing-unit;
@@ -59,9 +59,9 @@
 
 .wpnbha.has-text-align-center {
 	.article-section-title::before,
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	&.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -78,9 +78,9 @@
 		}
 	}
 
-	&.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	&.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		margin-left: 15%;
 	}
 }
@@ -97,7 +97,7 @@
 	.cat-links::before,
 	figcaption::after,
 	.wp-caption-text::after {
-		background-color: var( --newspack-theme-color-against-primary );
+		background-color: var(--newspack-theme-color-against-primary);
 	}
 }
 
@@ -110,13 +110,13 @@ div.wpnbha .article-section-title,
 }
 
 div.wpnbha.is-grid .article-section-title {
-	margin-bottom: calc( #{1.5 * structure.$size__spacing-unit} - var( --wpnbha-col-gap, 32px ) );
+	margin-bottom: calc(#{1.5 * structure.$size__spacing-unit} - var(--wpnbha-col-gap, 32px));
 }
 
 .accent-header,
 div.wpnbha .article-section-title,
 .cat-links {
-	font-size: var( --newspack-theme-font-size-xs );
+	font-size: var(--newspack-theme-font-size-xs);
 }
 
 .blog,
@@ -134,13 +134,13 @@ div.wpnbha .article-section-title,
 .cat-links a,
 .cat-links a:hover,
 .cat-links a:visited {
-	color: var( --newspack-theme-color-primary-against-white );
+	color: var(--newspack-theme-color-primary-against-white);
 }
 
 .author-bio {
 	h2 {
 		color: inherit;
-		font-size: var( --newspack-theme-font-size-md );
+		font-size: var(--newspack-theme-font-size-md);
 		margin: 0 0 #{0.5 * structure.$size__spacing-unit};
 
 		&::before {
@@ -148,27 +148,27 @@ div.wpnbha .article-section-title,
 		}
 
 		span {
-			color: var( --newspack-theme-color-text-light );
-			font-size: var( --newspack-theme-font-size-xs );
+			color: var(--newspack-theme-color-text-light);
+			font-size: var(--newspack-theme-font-size-xs);
 		}
 	}
 }
 
 //! Paragraph
-.has-drop-cap:not( :focus )::first-letter {
-	font-family: var( --newspack-theme-font-heading );
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: bold;
 }
 
 //! Newspack Article Block
 .entry .wpnbha.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: var( --newspack-theme-color-text-main );
+	border-bottom-color: var(--newspack-theme-color-text-main);
 }
 
-.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category ) .post-has-image {
+.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category) .post-has-image {
 	.entry-title {
-		background-color: var( --newspack-theme-color-bg-body );
+		background-color: var(--newspack-theme-color-bg-body);
 		margin-top: -1.5em;
 		padding: 0.5em 0.25em 0 0;
 		position: relative;
@@ -182,8 +182,8 @@ div.wpnbha .article-section-title,
 }
 
 .widget
-	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-	.post-has-image {
+.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category)
+.post-has-image {
 	.entry-title {
 		background: transparent;
 		margin-top: inherit;
@@ -205,9 +205,9 @@ div.wpnbha .article-section-title,
 
 .wp-block-cover,
 .wp-block-group {
-	.wpnbha.show-image.image-aligntop:not( .show-caption ):not( .show-category )
-		.post-has-image
-		.entry-title {
+	.wpnbha.show-image.image-aligntop:not(.show-caption):not(.show-category)
+	.post-has-image
+	.entry-title {
 		background-color: transparent;
 		margin-top: 0;
 		padding: 0;
@@ -220,11 +220,11 @@ div.wpnbha .article-section-title,
 @include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links a {
-			color: var( --newspack-theme-color-against-primary );
+			color: var(--newspack-theme-color-against-primary);
 		}
 
 		.cat-links::before {
-			background-color: var( --newspack-theme-color-against-primary );
+			background-color: var(--newspack-theme-color-against-primary);
 		}
 	}
 }
@@ -237,31 +237,31 @@ div.wpnbha .article-section-title,
 
 .entry-meta,
 .wpnbha article .entry-meta {
-	font-size: var( --newspack-theme-font-size-xs );
+	font-size: var(--newspack-theme-font-size-xs);
 }
 
-.single:not( .has-featured-image ) .entry-header,
-.single:not( .has-large-featured-image ) .entry-header {
-	border-bottom: 1px dotted var( --newspack-theme-color-text-main );
+.single:not(.has-featured-image) .entry-header,
+.single:not(.has-large-featured-image) .entry-header {
+	border-bottom: 1px dotted var(--newspack-theme-color-text-main);
 }
 
 .entry .entry-footer {
-	color: var( --newspack-theme-color-primary-against-white );
+	color: var(--newspack-theme-color-primary-against-white);
 }
 
 .entry .entry-footer a,
 .entry .entry-footer a:hover {
-	color: var( --newspack-theme-color-text-main );
+	color: var(--newspack-theme-color-text-main);
 }
 
 .tags-links {
 	a {
-		background: var( --newspack-theme-color-bg-pre );
+		background: var(--newspack-theme-color-bg-pre);
 		margin: 0 #{0.25 * structure.$size__spacing-unit} #{0.25 * structure.$size__spacing-unit} 0;
 		padding: #{0.25 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 		&:hover {
-			background:  var( --newspack-theme-color-bg-pre-lighten-5 );
+			background: var(--newspack-theme-color-bg-pre-lighten-5);
 		}
 	}
 
@@ -273,15 +273,15 @@ div.wpnbha .article-section-title,
 @include utilities.media( tablet ) {
 	// Header - Solid background
 	.h-sb .featured-image-beside {
-		background-color: var( --newspack-theme-color-primary );
-		color: var( --newspack-theme-color-against-primary );
+		background-color: var(--newspack-theme-color-primary);
+		color: var(--newspack-theme-color-against-primary);
 
 		a {
 			color: inherit;
 		}
 
 		.cat-links::before {
-			background-color: var( --newspack-theme-color-against-primary );
+			background-color: var(--newspack-theme-color-against-primary);
 		}
 	}
 }
@@ -294,8 +294,8 @@ figcaption,
 	text-align: left;
 
 	&::after {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: block;
 		height: 5px;
 		margin-top: #{0.75 * structure.$size__spacing-unit};
@@ -312,7 +312,7 @@ figcaption,
 .wp-block-group.is-style-border,
 .post-navigation {
 	border-style: dotted;
-	border-color: var( --newspack-theme-color-text-main );
+	border-color: var(--newspack-theme-color-text-main);
 }
 
 //! Pullquote
@@ -324,15 +324,15 @@ figcaption,
 	blockquote p,
 	&.is-style-solid-color blockquote p {
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-xl );
+			font-size: var(--newspack-theme-font-size-xl);
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not(.alignleft):not(.alignright),
+	&.has-text-align-left:not(.alignleft):not(.alignright) {
 		@include utilities.media( tablet ) {
 			p {
-				font-size: var( --newspack-theme-font-size-xl );
+				font-size: var(--newspack-theme-font-size-xl);
 			}
 		}
 	}
@@ -340,14 +340,14 @@ figcaption,
 	blockquote {
 		p {
 			font-style: normal;
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 
 			em {
 				font-style: italic;
 			}
 
 			@include utilities.media( tablet ) {
-				font-size: var( --newspack-theme-font-size-xl );
+				font-size: var(--newspack-theme-font-size-xl);
 			}
 		}
 	}
@@ -357,7 +357,7 @@ figcaption,
 		text-transform: uppercase;
 	}
 
-	&:not( .is-style-solid-color ):not( .has-background ) {
+	&:not(.is-style-solid-color):not(.has-background) {
 		blockquote {
 			padding-left: #{2 * structure.$size__spacing-unit};
 		}
@@ -366,7 +366,7 @@ figcaption,
 			border-top: 8px solid;
 			border-left: 8px solid;
 			border-color: inherit;
-			content: '';
+			content: "";
 			display: block;
 			height: 40px;
 			left: 0;
@@ -375,7 +375,7 @@ figcaption,
 			width: 40px;
 		}
 
-		&[style*='border-width']::before {
+		&[style*="border-width"]::before {
 			display: none;
 		}
 	}
@@ -389,11 +389,11 @@ figcaption,
 	&.alignright {
 		@include utilities.media( tablet ) {
 			blockquote p {
-				font-size: var( --newspack-theme-font-size-lg );
+				font-size: var(--newspack-theme-font-size-lg);
 			}
 		}
 
-		&:not( .is-style-solid-color ):not( .has-background ) {
+		&:not(.is-style-solid-color):not(.has-background) {
 			padding-top: structure.$size__spacing-unit;
 
 			blockquote {
@@ -406,7 +406,7 @@ figcaption,
 		}
 	}
 
-	&.alignfull:not( .is-style-solid-color ):not( .has-background )::before {
+	&.alignfull:not(.is-style-solid-color):not(.has-background)::before {
 		left: 8px;
 	}
 }
@@ -414,7 +414,7 @@ figcaption,
 //! Newspack Article Block
 .wpnbha.is-style-borders article {
 	border-bottom-style: dotted;
-	border-bottom-color: var( --newspack-theme-color-text-main );
+	border-bottom-color: var(--newspack-theme-color-text-main);
 }
 
 .wpnbha .cat-links {
@@ -425,7 +425,7 @@ figcaption,
 	a,
 	a:visited,
 	a:hover {
-		color: var( --newspack-theme-color-text-light );
+		color: var(--newspack-theme-color-text-light);
 	}
 }
 
@@ -441,7 +441,7 @@ figcaption,
 
 .wp-block-separator,
 hr {
-	border-top: 1px dotted var( --newspack-theme-color-text-main );
+	border-top: 1px dotted var(--newspack-theme-color-text-main);
 	background: transparent !important;
 
 	&.has-background {
@@ -456,11 +456,11 @@ hr {
 // Archives
 
 .archive .page-title {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 	margin-bottom: structure.$size__spacing-unit;
 
 	.page-description {
-		font-size: var( --newspack-theme-font-size-xxxxl );
+		font-size: var(--newspack-theme-font-size-xxxxl);
 		margin-top: structure.$size__spacing-unit;
 	}
 }
@@ -468,8 +468,8 @@ hr {
 // Site Footer
 
 .site-footer {
-	background-color: var( --newspack-theme-color-bg-dark );
-	color: var( --newspack-theme-color-bg-body );
+	background-color: var(--newspack-theme-color-bg-dark);
+	color: var(--newspack-theme-color-bg-body);
 
 	a,
 	a:hover,
@@ -491,12 +491,12 @@ hr {
 	}
 
 	.wrapper {
-		border-bottom: 1px solid rgba( 255, 255, 255, 0.25 );
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 	}
 }
 
 .site-info {
-	color: var( --newspack-theme-color-bg-body );
+	color: var(--newspack-theme-color-bg-body);
 
 	.site-info-contain:first-child,
 	.widget-area .wrapper {
@@ -527,7 +527,7 @@ hr {
 .sponsors-show-authors {
 	div.sponsor-bio,
 	div.sponsor-bio + .sponsor-bio {
-		border-color: var( --newspack-theme-color-text-main );
+		border-color: var(--newspack-theme-color-text-main);
 		border-style: dotted;
 	}
 }

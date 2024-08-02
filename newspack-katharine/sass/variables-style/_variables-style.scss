@@ -1,18 +1,18 @@
 // Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/colors';
-@use '../../../newspack-theme/sass/variables-site/fonts';
+@use "../../../newspack-theme/sass/variables-site/colors";
+@use "../../../newspack-theme/sass/variables-site/fonts";
 
 // Use @font-face to make the theme's font files available.
 @font-face {
 	font-family: Barlow;
-	src: url( 'fonts/barlow/Barlow-Regular.ttf' );
+	src: url("fonts/barlow/Barlow-Regular.ttf");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: Barlow;
-	src: url( 'fonts/barlow/Barlow-Italic.ttf' );
+	src: url("fonts/barlow/Barlow-Italic.ttf");
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
@@ -20,14 +20,14 @@
 
 @font-face {
 	font-family: Barlow;
-	src: url( 'fonts/barlow/Barlow-Bold.ttf' );
+	src: url("fonts/barlow/Barlow-Bold.ttf");
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: Barlow;
-	src: url( 'fonts/barlow/Barlow-BoldItalic.ttf' );
+	src: url("fonts/barlow/Barlow-BoldItalic.ttf");
 	font-style: italic;
 	font-weight: 700;
 	font-display: swap;
@@ -35,6 +35,6 @@
 
 // Now overlay our style-specific variable values, so we're only overriding specific variables.
 :root {
-	--newspack-theme-font-heading: 'Barlow', 'Helvetica', sans-serif;
-	--newspack-theme-font-body: 'Barlow', 'Helvetica', sans-serif;
+	--newspack-theme-font-heading: "Barlow", "Helvetica", sans-serif;
+	--newspack-theme-font-body: "Barlow", "Helvetica", sans-serif;
 }

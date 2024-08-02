@@ -1,21 +1,21 @@
-@use 'theme-description';
-@use 'variables-style/variables-style';
-@use '../../newspack-theme/sass/style-base';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "theme-description";
+@use "variables-style/variables-style";
+@use "../../newspack-theme/sass/style-base";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 /* Child theme-specific overrides */
 
-.accent-header:not( .widget-title ),
+.accent-header:not(.widget-title),
 .article-section-title,
 .cat-links,
 .page-title {
 	color: #666;
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 
 	&::before {
-		background-color: var( --newspack-theme-color-primary );
-		content: '';
+		background-color: var(--newspack-theme-color-primary);
+		content: "";
 		display: inline-block;
 		height: 0.75em;
 		margin: 0 0.5em 0 0;
@@ -35,13 +35,13 @@ div.wpnbha .article-section-title {
 }
 
 .cat-links {
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 }
 
 #secondary .widget-title,
 #secondary .widgettitle {
-	font-size: var( --newspack-theme-font-size-lg );
+	font-size: var(--newspack-theme-font-size-lg);
 }
 
 /* Posts & Pages */
@@ -49,7 +49,7 @@ div.wpnbha .article-section-title {
 @include utilities.media( tablet ) {
 	.featured-image-beside {
 		.cat-links::before {
-			background-color: var( --newspack-theme-color-against-primary );
+			background-color: var(--newspack-theme-color-against-primary);
 		}
 	}
 }
@@ -65,17 +65,17 @@ div.wpnbha .article-section-title {
 .entry-meta .byline {
 	a,
 	a:visited {
-		color: var( --newspack-theme-color-text-light );
+		color: var(--newspack-theme-color-text-light);
 	}
 
 	a:hover {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 }
 
 .single {
 	.cat-links {
-		font-size: var( --newspack-theme-font-size-base );
+		font-size: var(--newspack-theme-font-size-base);
 	}
 
 	@include utilities.media( tablet ) {
@@ -101,12 +101,12 @@ div.wpnbha .article-section-title {
 /* Author Bio */
 
 .author-bio .accent-header {
-	color: var( --newspack-theme-color-text-main );
-	font-size: var( --newspack-theme-font-size-md );
+	color: var(--newspack-theme-color-text-main);
+	font-size: var(--newspack-theme-font-size-md);
 	margin: 0 0 #{0.25 * structure.$size__spacing-unit};
 
 	span {
-		font-size: var( --newspack-theme-font-size-xs );
+		font-size: var(--newspack-theme-font-size-xs);
 	}
 
 	&::before {
@@ -117,15 +117,15 @@ div.wpnbha .article-section-title {
 /* Blocks */
 
 //! Paragraph
-.has-drop-cap:not( :focus )::first-letter {
-	font-family: var( --newspack-theme-font-heading );
+.has-drop-cap:not(:focus)::first-letter {
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: bold;
 }
 
 //! Pullquote
 .wp-block-pullquote {
 	border-width: 0;
-	font-family: var( --newspack-theme-font-heading );
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: bold;
 	padding-top: #{4 * structure.$size__spacing-unit};
 	position: relative;
@@ -134,27 +134,27 @@ div.wpnbha .article-section-title {
 	&.is-style-solid-color blockquote p,
 	blockquote p {
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-xl );
+			font-size: var(--newspack-theme-font-size-xl);
 		}
 	}
 
-	&.has-text-align-right:not( .alignleft ):not( .alignright ),
-	&.has-text-align-left:not( .alignleft ):not( .alignright ) {
+	&.has-text-align-right:not(.alignleft):not(.alignright),
+	&.has-text-align-left:not(.alignleft):not(.alignright) {
 		@include utilities.media( tablet ) {
 			p {
-				font-size: var( --newspack-theme-font-size-xl );
+				font-size: var(--newspack-theme-font-size-xl);
 			}
 		}
 	}
 
 	blockquote {
-		border-color: var( --newspack-theme-color-primary );
+		border-color: var(--newspack-theme-color-primary);
 
 		&::before,
 		&::after {
 			border-top: 2px solid;
 			border-color: inherit;
-			content: '';
+			content: "";
 			display: block;
 			position: absolute;
 			opacity: 0.8;
@@ -163,21 +163,21 @@ div.wpnbha .article-section-title {
 
 		&::before {
 			left: 15%;
-			right: calc( 50% + 2em );
+			right: calc(50% + 2em);
 		}
 
 		&::after {
-			left: calc( 50% + 2em );
+			left: calc(50% + 2em);
 			right: 15%;
 		}
 
 		p:first-of-type::before {
-			color: var( --newspack-theme-color-primary );
-			content: '\201C';
+			color: var(--newspack-theme-color-primary);
+			content: "\201C";
 			display: inline-block;
-			font-size: calc( 1rem * 5 );
+			font-size: calc(1rem * 5);
 			font-weight: normal;
-			left: calc( 50% - 0.3em );
+			left: calc(50% - 0.3em);
 			line-height: 0.75;
 			position: absolute;
 			text-align: center;
@@ -186,7 +186,7 @@ div.wpnbha .article-section-title {
 			z-index: 1;
 
 			@include utilities.media( tablet ) {
-				font-size: calc( 1rem * 7 );
+				font-size: calc(1rem * 7);
 			}
 		}
 	}
@@ -222,7 +222,7 @@ div.wpnbha .article-section-title {
 	}
 
 	cite {
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 		font-weight: normal;
 		text-transform: uppercase;
 	}
@@ -314,7 +314,7 @@ div.wpnbha .article-section-title {
 
 		&.is-style-solid-color blockquote p,
 		blockquote p {
-			font-size: var( --newspack-theme-font-size-md );
+			font-size: var(--newspack-theme-font-size-md);
 		}
 
 		&,
@@ -324,7 +324,7 @@ div.wpnbha .article-section-title {
 		}
 
 		p:first-of-type::before {
-			font-size: calc( 1rem * 5 );
+			font-size: calc(1rem * 5);
 			left: 0;
 			text-align: left;
 			width: 0.5em;
@@ -342,7 +342,7 @@ div.wpnbha .article-section-title {
 		}
 	}
 
-	&[style*='border-width'] {
+	&[style*="border-width"] {
 		padding-top: structure.$size__spacing-unit;
 
 		p:first-of-type::before,
@@ -367,7 +367,7 @@ div.wpnbha .article-section-title {
 
 // Archive
 .archive .page-title {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 }
 
 // Widgets
@@ -384,12 +384,12 @@ div.wpnbha .article-section-title {
 #colophon {
 	&,
 	.social-navigation a {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 
 	.widget-title {
-		color: var( --newspack-theme-color-text-main );
-		font-size: var( --newspack-theme-font-size-base );
+		color: var(--newspack-theme-color-text-main);
+		font-size: var(--newspack-theme-font-size-base);
 	}
 }
 
@@ -408,7 +408,7 @@ div.wpnbha .article-section-title {
 // If custom font is set, `#colophon .site-info` selector would override it
 // (See issue #663)
 .site-info {
-	font-family: var( --newspack-theme-font-heading );
+	font-family: var(--newspack-theme-font-heading);
 }
 
 /* Yoast Breadcrumbs */
@@ -416,8 +416,8 @@ div.wpnbha .article-section-title {
 .site-breadcrumb {
 	.wrapper {
 		> span::before {
-			background-color: var( --newspack-theme-color-primary );
-			content: '';
+			background-color: var(--newspack-theme-color-primary);
+			content: "";
 			display: inline-block;
 			height: 0.75em;
 			margin: 0 0.5em 0 0;
@@ -435,7 +435,7 @@ div.wpnbha .article-section-title {
 
 // Sponsored Content
 .single .sponsor-label {
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 
 	+ .cat-links {
 		font-size: 0.9rem;

@@ -3,9 +3,9 @@
 // CSS file is generated in /tribe-events/tribe-events.css
 // See: https://theeventscalendar.com/knowledgebase/k/customizing-css/
 
-@use '../mixins/mixins-main';
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/mixins-main";
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 //! Layout tweaks
 main#tribe-events-pg-template,
@@ -36,21 +36,22 @@ main#tribe-events-pg-template {
 		margin-top: structure.$size__spacing-unit;
 
 		> a.tribe-events-button {
-			background: url( "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='18'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23141827' d='M0 .431V17.57c0 .238.163.431.364.431h17.273c.2 0 .363-.193.363-.431V.43c0-.237-.163-.43-.363-.43H.364C.163 0 0 .193 0 .431zm18 7.585h-1.015V4.687H.991v12.07h15.994v-3.753H18V8.016zM.99 1.239h15.995v2.315H.991V1.239z'/%3E%3Cpath stroke='%23141827' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.2' d='M22.918 10.5H9.207m11.488-3.255l3.252 3.272-3.213 3.213'/%3E%3C/g%3E%3C/svg%3E" )
+			background:
+				url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='18'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23141827' d='M0 .431V17.57c0 .238.163.431.364.431h17.273c.2 0 .363-.193.363-.431V.43c0-.237-.163-.43-.363-.43H.364C.163 0 0 .193 0 .431zm18 7.585h-1.015V4.687H.991v12.07h15.994v-3.753H18V8.016zM.99 1.239h15.995v2.315H.991V1.239z'/%3E%3Cpath stroke='%23141827' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.2' d='M22.918 10.5H9.207m11.488-3.255l3.252 3.272-3.213 3.213'/%3E%3C/g%3E%3C/svg%3E")
 				0/24px no-repeat;
-			color: var( --tec-color-link-accent );
+			color: var(--tec-color-link-accent);
 			display: inline-block;
-			font-size: var( --tec-font-size-2 );
-			font-weight: var( --tec-font-weight-regular );
+			font-size: var(--tec-font-size-2);
+			font-weight: var(--tec-font-weight-regular);
 			letter-spacing: unset;
-			line-height: var( --tec-line-height-3 );
+			line-height: var(--tec-line-height-3);
 			margin: 0;
-			padding: 0 0 0 var( --tec-spacer-7 );
+			padding: 0 0 0 var(--tec-spacer-7);
 			text-decoration: none;
 			text-transform: unset;
 
-			&:not( :last-of-type ) {
-				margin-right: var( --tec-spacer-8 );
+			&:not(:last-of-type) {
+				margin-right: var(--tec-spacer-8);
 			}
 		}
 	}
@@ -89,7 +90,7 @@ main#tribe-events-pg-template {
 
 	.tec-wrapper #secondary {
 		margin-top: #{2 * structure.$size__spacing-unit};
-		width: calc( 35% - #{2 * structure.$size__spacing-unit} );
+		width: calc(35% - #{2 * structure.$size__spacing-unit});
 	}
 
 	.tec-sidebar #tribe-events-pg-template {
@@ -107,7 +108,7 @@ main#tribe-events-pg-template {
 
 @include utilities.media( desktop ) {
 	.tec-wrapper #secondary {
-		width: calc( 35% - #{3 * structure.$size__spacing-unit} );
+		width: calc(35% - #{3 * structure.$size__spacing-unit});
 	}
 }
 
@@ -159,7 +160,7 @@ main#tribe-events-pg-template {
 .tribe_community_edit .button.mb-cta {
 	background: #d33;
 	border-radius: 5px;
-	font-family: var( --newspack-theme-font-heading );
+	font-family: var(--newspack-theme-font-heading);
 	font-size: 0.7em;
 	font-weight: bold;
 	letter-spacing: 0;
@@ -181,7 +182,7 @@ main#tribe-events-pg-template {
 
 div.tribe-common p,
 div.tribe-events-content {
-	font-family: var( --newspack-theme-font-body );
+	font-family: var(--newspack-theme-font-body);
 }
 
 div.tribe-common .tribe-common-form-control-checkbox__label,
@@ -226,7 +227,6 @@ div.tribe-events .tribe-events-calendar-month__calendar-event-tooltip-datetime,
 div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-month,
 div.tribe-events .tribe-events-calendar-latest-past__event-date-tag-year,
 div.tribe-events-widget .tribe-events-widget-countdown__number,
-
 /* TEC - single event view */
 p.tribe-events-back a,
 p.tribe-events-back a:visited,
@@ -248,5 +248,5 @@ div.tribe-events-single ul.tribe-related-events li .tribe-related-events-title,
 div.tribe-events-single .tribe-events-sub-nav,
 div#top.tribe-theme-enfold.single-tribe_events .tribe-events-single-event-title,
 div#top.tribe-theme-enfold.single-tribe_events .tribe-events-schedule h3 {
-	font-family: var( --newspack-theme-font-heading );
+	font-family: var(--newspack-theme-font-heading);
 }
