@@ -1,5 +1,5 @@
-@use '../mixins/mixins-main';
-@use '../mixins/utilities';
+@use "../mixins/mixins-main";
+@use "../mixins/utilities";
 
 .newspack-pattern {
 	/* Subscribe Style 5 */
@@ -33,14 +33,14 @@
 		.wp-block-media-text {
 			display: block;
 
-			@include utilities.media( tablet ) {
+			@include utilities.media(tablet) {
 				display: grid;
 			}
 
 			&__media {
 				display: none;
 
-				@include utilities.media( tablet ) {
+				@include utilities.media(tablet) {
 					display: block;
 				}
 			}
@@ -50,7 +50,7 @@
 				gap: 16px;
 				padding: 36px;
 
-				@include utilities.media( tablet ) {
+				@include utilities.media(tablet) {
 					padding: 64px;
 				}
 
@@ -121,7 +121,7 @@
 			display: none;
 			margin-bottom: 0;
 
-			@include utilities.media( tablet ) {
+			@include utilities.media(tablet) {
 				display: block;
 			}
 
@@ -149,7 +149,7 @@
 			.wp-block-group__inner-container {
 				padding: 36px;
 
-				@include utilities.media( tablet ) {
+				@include utilities.media(tablet) {
 					padding: 64px;
 				}
 			}
@@ -172,7 +172,7 @@
 				margin: 12px 0 0;
 				padding: 0 4px 4px;
 
-				@include utilities.media( tablet ) {
+				@include utilities.media(tablet) {
 					margin: -48px 0 0;
 					padding: 0 32px 32px;
 				}
@@ -195,8 +195,8 @@
 			margin: 0;
 			padding: 0;
 
-			&:not( .is-not-stacked-on-mobile ) {
-				@include utilities.media( tabletonly ) {
+			&:not(.is-not-stacked-on-mobile) {
+				@include utilities.media(tabletonly) {
 					gap: 16px;
 				}
 			}
@@ -257,7 +257,7 @@
 		max-width: 90vw;
 		width: 1200px;
 
-		@include mixins-main.jetpack-mailchimp( $gap: 0, $notification-margin: 8px 0 0 );
+		@include mixins-main.jetpack-mailchimp($gap: 0, $notification-margin: 8px 0 0);
 
 		/* stylelint-disable-next-line */
 		#wp-block-jetpack-mailchimp_consent-text {
@@ -266,8 +266,8 @@
 
 		.wp-block-column:first-of-type {
 			p {
-				padding-bottom: calc( 1px + 0.36rem );
-				padding-top: calc( 1px + 0.36rem );
+				padding-bottom: calc(1px + 0.36rem);
+				padding-top: calc(1px + 0.36rem);
 			}
 		}
 

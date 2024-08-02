@@ -1,33 +1,33 @@
 // Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/colors';
-@use '../../../newspack-theme/sass/variables-site/fonts';
+@use "../../../newspack-theme/sass/variables-site/colors";
+@use "../../../newspack-theme/sass/variables-site/fonts";
 
 // Use @font-face to make the theme's font files available.
 @font-face {
-	font-family: 'IBM Plex Serif';
-	src: url( 'fonts/ibm-plex-serif/IBMPlexSerif-Regular.ttf' );
+	font-family: "IBM Plex Serif";
+	src: url("fonts/ibm-plex-serif/IBMPlexSerif-Regular.ttf");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'IBM Plex Serif';
-	src: url( 'fonts/ibm-plex-serif/IBMPlexSerif-Italic.ttf' );
+	font-family: "IBM Plex Serif";
+	src: url("fonts/ibm-plex-serif/IBMPlexSerif-Italic.ttf");
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'IBM Plex Serif';
-	src: url( 'fonts/ibm-plex-serif/IBMPlexSerif-Bold.ttf' );
+	font-family: "IBM Plex Serif";
+	src: url("fonts/ibm-plex-serif/IBMPlexSerif-Bold.ttf");
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'IBM Plex Serif';
-	src: url( 'fonts/ibm-plex-serif/IBMPlexSerif-BoldItalic.ttf' );
+	font-family: "IBM Plex Serif";
+	src: url("fonts/ibm-plex-serif/IBMPlexSerif-BoldItalic.ttf");
 	font-style: italic;
 	font-weight: 700;
 	font-display: swap;
@@ -35,5 +35,5 @@
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
 :root {
-	--newspack-theme-font-heading: 'IBM Plex Serif', georgia, serif;
+	--newspack-theme-font-heading: "IBM Plex Serif", georgia, serif;
 }

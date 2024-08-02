@@ -1,5 +1,5 @@
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 // Index/archive navigation
 .pagination {
@@ -38,7 +38,7 @@
 			}
 
 			&.current {
-				background-color: var( --newspack-theme-color-text-light );
+				background-color: var(--newspack-theme-color-text-light);
 				color: #fff;
 			}
 		}
@@ -63,7 +63,7 @@
 			display: none;
 		}
 
-		@include utilities.media( tablet ) {
+		@include utilities.media(tablet) {
 			margin-left: 0 auto;
 			padding: 0;
 		}
@@ -103,7 +103,7 @@
 	}
 
 	.current {
-		background-color: var( --newspack-theme-color-text-light );
+		background-color: var(--newspack-theme-color-text-light);
 		color: #fff;
 	}
 }
@@ -123,14 +123,14 @@
 	.nav-next {
 		min-width: 50%;
 		width: 100%;
-		font-family: var( --newspack-theme-font-heading );
+		font-family: var(--newspack-theme-font-heading);
 		font-weight: bold;
 		padding: #{0.5 * structure.$size__spacing-unit} 0;
 
 		.secondary-text {
 			display: none;
 
-			@include utilities.media( tablet ) {
+			@include utilities.media(tablet) {
 				display: inline;
 			}
 		}

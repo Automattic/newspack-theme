@@ -1,24 +1,24 @@
-@use '../variables-site/structure';
-@use '../mixins/utilities';
+@use "../variables-site/structure";
+@use "../mixins/utilities";
 
 .button,
 button,
-input[type='button'],
-input[type='reset'],
-input[type='submit'],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .wp-block-search__button {
 	@include utilities.button-transition;
 
-	background: var( --newspack-theme-color-secondary );
+	background: var(--newspack-theme-color-secondary);
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;
 	display: inline-block;
-	color: var( --newspack-theme-color-against-secondary );
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	color: var(--newspack-theme-color-against-secondary);
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 	font-weight: 700;
-	line-height: var( --newspack-theme-font-line-height-heading );
+	line-height: var(--newspack-theme-font-line-height-heading);
 	outline: none;
 	padding: ( structure.$size__spacing-unit * 0.76 ) structure.$size__spacing-unit;
 	text-decoration: none;
@@ -26,8 +26,8 @@ input[type='submit'],
 
 	&:hover,
 	&:hover:visited {
-		background: var( --newspack-theme-color-bg-button-hover );
-		color: var( --newspack-theme-color-bg-body );
+		background: var(--newspack-theme-color-bg-button-hover);
+		color: var(--newspack-theme-color-bg-body);
 		cursor: pointer;
 	}
 
@@ -37,8 +37,8 @@ input[type='submit'],
 	}
 
 	&:focus {
-		background: var( --newspack-theme-color-bg-button-hover );
-		color: var( --newspack-theme-color-bg-body );
+		background: var(--newspack-theme-color-bg-button-hover);
+		color: var(--newspack-theme-color-bg-body);
 		outline: thin dotted;
 		outline-offset: -4px;
 	}

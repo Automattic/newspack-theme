@@ -12,16 +12,16 @@ i {
 
 blockquote {
 	cite {
-		font-family: var( --newspack-theme-font-heading );
-		font-size: var( --newspack-theme-font-size-xs );
+		font-family: var(--newspack-theme-font-heading);
+		font-size: var(--newspack-theme-font-size-xs);
 		font-style: normal;
 	}
 }
 
 pre {
-	font-size: var( --newspack-theme-font-size-sm );
-	font-family: var( --newspack-theme-font-pre );
-	line-height: var( --newspack-theme-font-line-height-body );
+	font-size: var(--newspack-theme-font-size-sm);
+	font-family: var(--newspack-theme-font-pre);
+	line-height: var(--newspack-theme-font-line-height-body);
 	overflow: auto;
 }
 
@@ -29,8 +29,8 @@ code,
 kbd,
 tt,
 var {
-	font-size: var( --newspack-theme-font-size-sm );
-	font-family: var( --newspack-theme-font-code );
+	font-size: var(--newspack-theme-font-size-sm);
+	font-family: var(--newspack-theme-font-code);
 }
 
 abbr,

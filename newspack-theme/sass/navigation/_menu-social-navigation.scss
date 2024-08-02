@@ -1,4 +1,4 @@
-@use '../variables-site/transitions';
+@use "../variables-site/transitions";
 
 /* Social menu */
 
@@ -15,7 +15,7 @@
 	li {
 		list-style: none;
 
-		&:nth-child( n + 2 ) {
+		&:nth-child(n + 2) {
 			margin-left: 0.5em;
 		}
 
@@ -42,10 +42,10 @@
 				height: 24px;
 
 				// Prevent icons from jumping in Safari using hardware acceleration.
-				transform: translateZ( 0 );
+				transform: translateZ(0);
 
 				&#ui-icon-link {
-					transform: rotate( -45deg );
+					transform: rotate(-45deg);
 				}
 			}
 		}

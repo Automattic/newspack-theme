@@ -1,5 +1,5 @@
-@use '../../mixins/utilities';
-@use '../../variables-site/structure';
+@use "../../mixins/utilities";
+@use "../../variables-site/structure";
 
 .archive,
 .blog,
@@ -22,7 +22,7 @@
 	}
 
 	.entry {
-		margin-top: calc( 3 * #{structure.$size__spacing-unit} );
+		margin-top: calc(3 * #{structure.$size__spacing-unit});
 
 		&:first-of-type {
 			margin-top: 0;
@@ -78,11 +78,11 @@
 
 .archive {
 	.page-title {
-		color: var( --newspack-theme-color-primary-against-white );
+		color: var(--newspack-theme-color-primary-against-white);
 	}
 
 	@include utilities.media( tablet ) {
-		&:not( .paged ).feature-latest article.has-post-thumbnail:first-of-type {
+		&:not(.paged).feature-latest article.has-post-thumbnail:first-of-type {
 			display: block;
 
 			.post-thumbnail {
@@ -136,13 +136,13 @@
 		}
 	}
 
-	.cat-links:not( .sponsor-label ) {
+	.cat-links:not(.sponsor-label) {
 		display: none;
 	}
 }
 
 .page-description {
-	color: var( --newspack-theme-color-text-main );
+	color: var(--newspack-theme-color-text-main);
 }
 
 .tag .page-description::first-letter {
@@ -150,7 +150,7 @@
 }
 
 .taxonomy-description {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 	font-style: italic;
 
 	a {

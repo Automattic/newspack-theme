@@ -1,10 +1,10 @@
-@use '../../mixins/utilities';
-@use '../../variables-site/structure';
+@use "../../mixins/utilities";
+@use "../../variables-site/structure";
 
 // Site branding
 .site-branding {
 	align-items: center;
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -53,30 +53,30 @@
 
 // Site title
 .site-title {
-	color: var( --newspack-theme-color-text-main );
+	color: var(--newspack-theme-color-text-main);
 	font-weight: 700;
 	margin: 0;
 
 	a {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 
 		&:link,
 		&:visited {
-			color: var( --newspack-theme-color-text-main );
+			color: var(--newspack-theme-color-text-main);
 		}
 
 		&:hover {
-			color: var( --newspack-theme-color-text-hover )
+			color: var(--newspack-theme-color-text-hover);
 		}
 	}
 }
 
 // Site description
 .site-description {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 	display: none;
 	font-weight: normal;
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 	font-style: italic;
 	margin: 0;
 	padding: 0 structure.$size__spacing-unit;
@@ -87,7 +87,7 @@
 }
 
 .hide-site-tagline .site-description {
-	clip: rect( 1px, 1px, 1px, 1px );
+	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute;
 }
 
@@ -128,8 +128,8 @@
 .bottom-header-contain {
 	.wrapper {
 		@include utilities.media( tablet ) {
-			border-bottom: 1px solid var( --newspack-theme-color-border );
-			border-top: 1px solid var( --newspack-theme-color-border );
+			border-bottom: 1px solid var(--newspack-theme-color-border);
+			border-top: 1px solid var(--newspack-theme-color-border);
 		}
 	}
 }
@@ -156,7 +156,7 @@
 
 	#header-search {
 		position: absolute;
-		top: calc( 100% + 4px );
+		top: calc(100% + 4px);
 		width: 300px;
 		z-index: 5;
 
@@ -201,7 +201,7 @@
 
 .h-db {
 	.middle-header-contain {
-		border-bottom: 1px solid var( --newspack-theme-color-border );
+		border-bottom: 1px solid var(--newspack-theme-color-border);
 
 		@include utilities.media( tablet ) {
 			border-bottom: 0;
@@ -321,16 +321,16 @@
 	.middle-header-contain,
 	.middle-header-contain .nav1 .main-menu > li,
 	.middle-header-contain .nav1 .main-menu > li > a {
-		color:  var( --newspack-theme-color-against-primary );
+		color: var(--newspack-theme-color-against-primary);
 	}
 
 	.top-header-contain {
-		background-color: var( --newspack-theme-color-primary-darken-5 );
-		border-bottom: var( --newspack-theme-color-primary-darken-10 );
+		background-color: var(--newspack-theme-color-primary-darken-5);
+		border-bottom: var(--newspack-theme-color-primary-darken-10);
 	}
 
 	.middle-header-contain {
-		background-color: var( --newspack-theme-color-primary );
+		background-color: var(--newspack-theme-color-primary);
 
 		.wrapper {
 			@include utilities.media( tablet ) {
@@ -400,7 +400,7 @@
 
 	// Default background color.
 	&.h-db .middle-header-contain {
-		border-bottom: 1px solid var( --newspack-theme-color-border );
+		border-bottom: 1px solid var(--newspack-theme-color-border);
 	}
 
 	.middle-header-contain .wrapper {
@@ -446,7 +446,7 @@
 
 		// Default header background colour
 		&.h-db .middle-header-contain {
-			border-bottom: 1px solid var( --newspack-theme-color-border );
+			border-bottom: 1px solid var(--newspack-theme-color-border);
 		}
 
 		.middle-header-contain {
@@ -479,7 +479,7 @@
 		&.h-ll {
 			// Make sure the alt logo still sits to the left if smaller than the main logo.
 			/* stylelint-disable selector-type-no-unknown  */
-			.site-header .custom-logo-link amp-img.amp-wp-enforced-sizes[layout='intrinsic'] > img {
+			.site-header .custom-logo-link amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img {
 				object-position: left center;
 			}
 			/* stylelint-enable */
@@ -544,8 +544,8 @@
 // Sticky header
 .h-stk {
 	.site-header {
-		background: var( --newspack-theme-color-bg-body );
-		box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.1 );
+		background: var(--newspack-theme-color-bg-body);
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 		position: sticky;
 		top: 0;
 		z-index: 999;
@@ -562,13 +562,13 @@
 
 	@include utilities.media( tablet ) {
 		// Tighten up the padding a bit
-		&.h-dh:not( .h-sub ) .middle-header-contain .wrapper {
+		&.h-dh:not(.h-sub) .middle-header-contain .wrapper {
 			padding: #{0.75 * structure.$size__spacing-unit} 0;
 		}
 
 		&.h-db .bottom-header-contain {
-			border-bottom: 1px solid var( --newspack-theme-color-border );
-			border-top: 1px solid var( --newspack-theme-color-border );
+			border-bottom: 1px solid var(--newspack-theme-color-border);
+			border-top: 1px solid var(--newspack-theme-color-border);
 			.wrapper {
 				border: 0;
 			}
@@ -617,7 +617,7 @@
 				background: transparent;
 
 				.sticky-bg {
-					content: '';
+					content: "";
 					background: #000;
 					display: block;
 					inset: 0;
@@ -652,8 +652,8 @@
 	@include utilities.media( tablet ) {
 		&.h-sub.single-featured-image-beside {
 			div.middle-header-contain {
-				background: rgba( 0, 0, 0, 0.5 );
-				background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.85 ) 0%, rgba( 0, 0, 0, 0 ) 100% );
+				background: rgba(0, 0, 0, 0.5);
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
 				color: #fff;
 				max-width: 100%;
 				width: 100%;

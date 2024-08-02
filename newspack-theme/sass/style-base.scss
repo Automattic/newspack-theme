@@ -1,70 +1,70 @@
 /* Mixins */
-@use 'mixins/mixins-main';
+@use "mixins/mixins-main";
 
 /* Normalize */
 
-@use 'normalize';
+@use "normalize";
 
 /* Typography */
 
-@use 'typography/typography';
+@use "typography/typography";
 
 /* Elements */
 
-@use 'elements/elements';
+@use "elements/elements";
 
 /* Forms */
 
-@use 'forms/forms';
+@use "forms/forms";
 
 /* Navigation */
 
-@use 'navigation/navigation';
+@use "navigation/navigation";
 
 /* Accessibility */
 
-@use 'modules/accessibility';
+@use "modules/accessibility";
 
 /* Alignments */
 
-@use 'modules/alignments';
+@use "modules/alignments";
 
 /* Clearings */
 
-@use 'modules/clearings';
+@use "modules/clearings";
 
 /* Layout */
 
-@use 'layout/layout';
+@use "layout/layout";
 
 /* Content */
 
-@use 'site/site';
+@use "site/site";
 
 /* Widgets */
 
-@use 'site/secondary/widgets';
+@use "site/secondary/widgets";
 
 /* Blocks */
 
-@use 'blocks/blocks';
+@use "blocks/blocks";
 
 /* Media */
 
-@use 'media/media';
+@use "media/media";
 
 /* Newspack Ads support */
 
-@use 'plugins/newspack-ads';
+@use "plugins/newspack-ads";
 
 /* Yoast Breadcrumb support */
 
-@use 'plugins/yoast-breadcrumb';
+@use "plugins/yoast-breadcrumb";
 
 /* Newspack Listings support */
 
-@use 'plugins/newspack-listings';
+@use "plugins/newspack-listings";
 
 /* Newspack Publisher Media Kit */
 
-@use 'plugins/newspack-publisher-media-kit';
+@use "plugins/newspack-publisher-media-kit";

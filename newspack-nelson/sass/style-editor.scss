@@ -4,10 +4,10 @@ Newspack Nelson Editor Styles
 
 /** === Includes === */
 
-@use 'variables-style/variables-style';
-@use '../../newspack-theme/sass/style-editor-base';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "variables-style/variables-style";
+@use "../../newspack-theme/sass/style-editor-base";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 // Elements
 
@@ -20,16 +20,16 @@ h4,
 }
 
 blockquote {
-	font-family: var( --newspack-theme-font-heading );
+	font-family: var(--newspack-theme-font-heading);
 }
 
 // Accent Headers
 
 .accent-header,
 .article-section-title {
-	color: var( --newspack-theme-color-text-light );
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-xs );
+	color: var(--newspack-theme-color-text-light);
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-xs);
 	font-weight: bold;
 }
 
@@ -41,22 +41,22 @@ blockquote {
 }
 
 .is-grid .article-section-title {
-	margin-bottom: calc( 20px - var( --wpnbha-col-gap, 32px ) );
+	margin-bottom: calc(20px - var(--wpnbha-col-gap, 32px));
 	@include utilities.media( tablet ) {
-		margin-bottom: calc( 30px - var( --wpnbha-col-gap, 32px ) );
+		margin-bottom: calc(30px - var(--wpnbha-col-gap, 32px));
 	}
 }
 
 .entry-meta .byline a,
 .wpnbha .entry-meta .byline a {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 }
 
 // Blocks
 
 .wp-block-newspack-blocks-homepage-articles {
 	article .entry-meta {
-		font-size: calc( 0.7 * var( --newspack-theme-font-size-base ) );
+		font-size: calc(0.7 * var(--newspack-theme-font-size-base));
 	}
 
 	&.type-scale1,
@@ -64,7 +64,7 @@ blockquote {
 	&.type-scale3,
 	&.type-scale4 {
 		article .entry-meta {
-			font-size: calc( 0.6 * var( --newspack-theme-font-size-base ) );
+			font-size: calc(0.6 * var(--newspack-theme-font-size-base));
 		}
 	}
 }
@@ -76,9 +76,9 @@ blockquote {
 	}
 }
 
-.has-drop-cap:not( :focus )::first-letter {
-	color: var( --newspack-theme-color-secondary-against-white );
-	font-family: var( --newspack-theme-font-heading );
+.has-drop-cap:not(:focus)::first-letter {
+	color: var(--newspack-theme-color-secondary-against-white);
+	font-family: var(--newspack-theme-font-heading);
 	font-weight: 800;
 }
 
@@ -96,10 +96,10 @@ blockquote {
 
 	&.is-style-solid-color blockquote p,
 	blockquote p {
-		font-size: var( --newspack-theme-font-size-lg );
+		font-size: var(--newspack-theme-font-size-lg);
 
 		@include utilities.media( tablet ) {
-			font-size: var( --newspack-theme-font-size-xl );
+			font-size: var(--newspack-theme-font-size-xl);
 		}
 	}
 
@@ -119,8 +119,8 @@ blockquote {
 	}
 }
 
-[data-align='left'] .wp-block-pullquote,
-[data-align='right'] .wp-block-pullquote {
+[data-align="left"] .wp-block-pullquote,
+[data-align="right"] .wp-block-pullquote {
 	border-width: 0;
 	position: relative;
 
@@ -132,7 +132,7 @@ blockquote {
 	@include utilities.media( tablet ) {
 		&.is-style-solid-color blockquote p,
 		blockquote p {
-			font-size: var( --newspack-theme-font-size-lg );
+			font-size: var(--newspack-theme-font-size-lg);
 		}
 	}
 
@@ -140,28 +140,28 @@ blockquote {
 		border-color: inherit;
 		border-width: 10px 0 0;
 		border-style: solid;
-		content: '';
+		content: "";
 		display: block;
 		width: 75%;
 	}
 
 	&.is-style-solid-color::before,
-	&[style*='border-width']::before {
+	&[style*="border-width"]::before {
 		display: none;
 	}
 }
 
 .wp-block-separator {
-	&:not( .is-style-dots ) {
-		border-top: 2px solid var( --newspack-theme-color-text-main );
+	&:not(.is-style-dots) {
+		border-top: 2px solid var(--newspack-theme-color-text-main);
 
 		&.has-background {
 			border-top-color: currentcolor;
 		}
 	}
 
-	&:not( .is-style-dots ):not( .is-style-wide ) {
-		border-top: 5px solid var( --newspack-theme-color-text-main );
+	&:not(.is-style-dots):not(.is-style-wide) {
+		border-top: 5px solid var(--newspack-theme-color-text-main);
 
 		&.has-background {
 			border-top-color: currentcolor;
@@ -169,6 +169,6 @@ blockquote {
 	}
 
 	&.is-style-dots::before {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 }

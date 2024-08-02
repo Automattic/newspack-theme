@@ -1,5 +1,5 @@
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 /** === Layout === */
 
@@ -7,7 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	> *:not( #content ) {
+	> *:not(#content) {
 		flex-grow: 0;
 	}
 }
@@ -16,10 +16,10 @@
 }
 
 .admin-bar #page {
-	min-height: calc( 100vh - 46px );
+	min-height: calc(100vh - 46px);
 
 	@include utilities.media( tablet ) {
-		min-height: calc( 100vh - 32px );
+		min-height: calc(100vh - 32px);
 	}
 }
 
@@ -67,7 +67,7 @@
 }
 
 .single,
-.page:not( .newspack-front-page ) {
+.page:not(.newspack-front-page) {
 	&.has-sidebar #main {
 		@include utilities.media( tablet ) {
 			display: flex;
@@ -105,10 +105,10 @@
 .page #secondary,
 .single #secondary {
 	@include utilities.media( tablet ) {
-		width: calc( 35% - #{2 * structure.$size__spacing-unit} );
+		width: calc(35% - #{2 * structure.$size__spacing-unit});
 	}
 	@include utilities.media( desktop ) {
-		width: calc( 35% - #{3 * structure.$size__spacing-unit} );
+		width: calc(35% - #{3 * structure.$size__spacing-unit});
 	}
 }
 
@@ -169,7 +169,7 @@
 		}
 	}
 
-	&:not( .hide-page-title ):not( [class*='single-featured-image-'] ) {
+	&:not(.hide-page-title):not([class*="single-featured-image-"]) {
 		.entry-header {
 			margin-top: structure.$size__spacing-unit;
 		}

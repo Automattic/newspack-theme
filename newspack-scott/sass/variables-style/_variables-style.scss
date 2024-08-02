@@ -1,33 +1,33 @@
 // Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/colors';
-@use '../../../newspack-theme/sass/variables-site/fonts';
+@use "../../../newspack-theme/sass/variables-site/colors";
+@use "../../../newspack-theme/sass/variables-site/fonts";
 
 // Use @font-face to make the theme's font files available.
 @font-face {
-	font-family: 'Fira Sans Condensed';
-	src: url( 'fonts/fira-sans-condensed/FiraSansCondensed-Regular.ttf' );
+	font-family: "Fira Sans Condensed";
+	src: url("fonts/fira-sans-condensed/FiraSansCondensed-Regular.ttf");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Fira Sans Condensed';
-	src: url( 'fonts/fira-sans-condensed/FiraSansCondensed-Italic.ttf' );
+	font-family: "Fira Sans Condensed";
+	src: url("fonts/fira-sans-condensed/FiraSansCondensed-Italic.ttf");
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Fira Sans Condensed';
-	src: url( 'fonts/fira-sans-condensed/FiraSansCondensed-SemiBold.ttf' );
+	font-family: "Fira Sans Condensed";
+	src: url("fonts/fira-sans-condensed/FiraSansCondensed-SemiBold.ttf");
 	font-weight: 600;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Fira Sans Condensed';
-	src: url( 'fonts/fira-sans-condensed/FiraSansCondensed-SemiBoldItalic.ttf' );
+	font-family: "Fira Sans Condensed";
+	src: url("fonts/fira-sans-condensed/FiraSansCondensed-SemiBoldItalic.ttf");
 	font-style: italic;
 	font-weight: 600;
 	font-display: swap;
@@ -35,5 +35,5 @@
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
 :root {
-	--newspack-theme-font-heading: 'Fira Sans Condensed', 'Helvetica', sans-serif;
+	--newspack-theme-font-heading: "Fira Sans Condensed", "Helvetica", sans-serif;
 }

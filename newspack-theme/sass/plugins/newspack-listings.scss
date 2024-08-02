@@ -7,18 +7,18 @@
 	}
 }
 
-.wpnbha .featured-listing[class*='type-newspack_lst_'] .entry-title a,
-.wpnbpc .featured-listing[class*='type-newspack_lst_'] .entry-title a,
-.archive .featured-listing[class*='type-newspack_lst_'] .entry-title a,
-.search .featured-listing[class*='type-newspack_lst_'] .entry-title a,
-.blog .featured-listing[class*='type-newspack_lst_'] .entry-title a,
+.wpnbha .featured-listing[class*="type-newspack_lst_"] .entry-title a,
+.wpnbpc .featured-listing[class*="type-newspack_lst_"] .entry-title a,
+.archive .featured-listing[class*="type-newspack_lst_"] .entry-title a,
+.search .featured-listing[class*="type-newspack_lst_"] .entry-title a,
+.blog .featured-listing[class*="type-newspack_lst_"] .entry-title a,
 .newspack-listings__curated-list .featured-listing .newspack-listings__listing-title {
 	&::before {
-		border: calc( 0.25em + 1px ) solid var( --newspack-theme-color-primary ); // half the width
+		border: calc(0.25em + 1px) solid var(--newspack-theme-color-primary); // half the width
 		border-top: 0;
 		border-bottom-color: transparent; // the 'cut in'
 		box-sizing: border-box;
-		content: '';
+		content: "";
 		display: inline-block;
 		height: 0.8em;
 		margin-right: 0.3em;
