@@ -49,7 +49,7 @@
 		"eslint": "^8.57.0",
 		"fs-extra": "^11.2.0",
 		"lint-staged": "^15.2.7",
-		"newspack-scripts": "5.6.0-alpha.8",
+		"newspack-scripts": "^5.5.2",
 		"npm-run-all": "^4.1.5",
 		"postcss-focus-within": "^8.0.1",
 		"postcss-scss": "^4.0.9",
