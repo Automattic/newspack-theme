@@ -1,6 +1,6 @@
-@use '../../mixins/utilities';
-@use '../../variables-site/structure';
-@use '../../variables-site/transitions';
+@use "../../mixins/utilities";
+@use "../../variables-site/structure";
+@use "../../variables-site/transitions";
 
 /* Site footer */
 
@@ -8,7 +8,7 @@
 	margin: #{2 * structure.$size__spacing-unit} 0 0;
 
 	a {
-		color: var( --newspack-theme-color-text-light );
+		color: var(--newspack-theme-color-text-light);
 		transition: opacity transitions.$link_transition ease-in-out;
 	}
 
@@ -27,11 +27,11 @@
 		@include utilities.media( mobile ) {
 			flex: 1 0 0;
 			margin-right: #{2 * structure.$size__spacing-unit};
-			min-width: calc( 50% - #{2 * structure.$size__spacing-unit} );
+			min-width: calc(50% - #{2 * structure.$size__spacing-unit});
 		}
 
 		@include utilities.media( tablet ) {
-			min-width: calc( 25% - #{2 * structure.$size__spacing-unit} );
+			min-width: calc(25% - #{2 * structure.$size__spacing-unit});
 		}
 
 		&:last-child {
@@ -41,7 +41,7 @@
 
 	.widget-title,
 	.widgettitle {
-		color: var( --newspack-theme-color-text-light );
+		color: var(--newspack-theme-color-text-light);
 		font-size: inherit;
 	}
 }
@@ -71,7 +71,7 @@
 		}
 
 		/* stylelint-disable selector-type-no-unknown  */
-		amp-img.amp-wp-enforced-sizes[layout='intrinsic'] > img {
+		amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img {
 			object-position: left center;
 		}
 		/* stylelint-enable */
@@ -107,7 +107,7 @@
 }
 
 .site-info {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 	padding-bottom: structure.$size__spacing-unit;
 
 	.wrapper {
@@ -119,7 +119,7 @@
 			&.site-info-contain {
 				justify-content: flex-start;
 
-				> *:not( :first-child ) {
+				> *:not(:first-child) {
 					margin-left: structure.$size__spacing-unit;
 				}
 
@@ -135,7 +135,7 @@
 		display: block;
 
 		&:hover {
-			color: var( --newspack-theme-color-primary-against-white );
+			color: var(--newspack-theme-color-primary-against-white);
 			text-decoration: none;
 		}
 	}
@@ -146,13 +146,13 @@
 	}
 
 	.site-info-contain:first-child {
-		border-top: 1px solid var( --newspack-theme-color-border );
+		border-top: 1px solid var(--newspack-theme-color-border);
 		padding-top: structure.$size__spacing-unit;
 	}
 
 	.widget-area {
 		.wrapper {
-			border-top: 1px solid var( --newspack-theme-color-border );
+			border-top: 1px solid var(--newspack-theme-color-border);
 			justify-content: space-between;
 			padding: structure.$size__spacing-unit 0 #{0.5 * structure.$size__spacing-unit};
 		}

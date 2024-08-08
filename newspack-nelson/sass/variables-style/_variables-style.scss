@@ -1,18 +1,18 @@
 // Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/colors';
-@use '../../../newspack-theme/sass/variables-site/fonts';
+@use "../../../newspack-theme/sass/variables-site/colors";
+@use "../../../newspack-theme/sass/variables-site/fonts";
 
 // Use @font-face to make the theme's font files available.
 @font-face {
 	font-family: Montserrat;
-	src: url( 'fonts/montserrat/Montserrat-Medium.ttf' );
+	src: url("fonts/montserrat/Montserrat-Medium.ttf");
 	font-weight: 500;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: Montserrat;
-	src: url( 'fonts/montserrat/Montserrat-MediumItalic.ttf' );
+	src: url("fonts/montserrat/Montserrat-MediumItalic.ttf");
 	font-style: italic;
 	font-weight: 500;
 	font-display: swap;
@@ -20,21 +20,31 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url( 'fonts/montserrat/Montserrat-Bold.ttf' );
+	src: url("fonts/montserrat/Montserrat-Bold.ttf");
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: Montserrat;
-	src: url( 'fonts/montserrat/Montserrat-ExtraBold.ttf' );
+	src: url("fonts/montserrat/Montserrat-ExtraBold.ttf");
 	font-weight: 800;
 	font-display: swap;
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
 :root {
-	--newspack-theme-font-heading: 'Montserrat', 'Helvetica', sans-serif;
-	--newspack-theme-font-body: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--newspack-theme-font-heading: "Montserrat", "Helvetica", sans-serif;
+	--newspack-theme-font-body:
+		-apple-system,
+		blinkmacsystemfont,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
 }

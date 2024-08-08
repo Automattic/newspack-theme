@@ -1,5 +1,5 @@
-@use 'sass:meta';
-@use '../variables-site/structure';
+@use "sass:meta";
+@use "../variables-site/structure";
 
 html {
 	box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background-color: var( --newspack-theme-color-bg-body );
+	background-color: var(--newspack-theme-color-bg-body);
 }
 
 h1,
@@ -25,12 +25,12 @@ h6 {
 }
 
 hr {
-	background-color: var( --newspack-theme-color-text-light );
+	background-color: var(--newspack-theme-color-text-light);
 	border: 0;
 	height: 2px;
 }
 
-@include meta.load-css( 'lists' );
+@include meta.load-css( "lists" );
 
 img {
 	height: auto;
@@ -48,8 +48,8 @@ blockquote {
 	}
 
 	cite {
-		color: var( --newspack-theme-color-text-light );
+		color: var(--newspack-theme-color-text-light);
 	}
 }
 
-@include meta.load-css( 'tables' );
+@include meta.load-css( "tables" );

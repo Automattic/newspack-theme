@@ -1,15 +1,15 @@
-@use '../variables-site/structure';
+@use "../variables-site/structure";
 
 table {
 	margin: 0 0 structure.$size__spacing-unit;
 	border-collapse: collapse;
 	width: 100%;
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 
 	td,
 	th {
 		padding: 0.5em;
-		border: 1px solid var( --newspack-theme-color-text-light );
+		border: 1px solid var(--newspack-theme-color-text-light);
 		word-break: break-all;
 	}
 }
