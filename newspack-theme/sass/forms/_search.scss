@@ -1,4 +1,4 @@
-@use '../variables-site/structure';
+@use "../variables-site/structure";
 
 .search-form {
 	position: relative;
@@ -11,7 +11,7 @@
 	button {
 		background-color: transparent;
 		bottom: 2px;
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 		position: absolute;
 		margin: 0;
 		padding: 0 #{0.5 * structure.$size__spacing-unit};
@@ -26,7 +26,7 @@
 		&:active,
 		&:hover,
 		&:focus {
-			color: var( --newspack-theme-color-primary-against-white );
+			color: var(--newspack-theme-color-primary-against-white);
 		}
 	}
 }

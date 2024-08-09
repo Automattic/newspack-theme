@@ -1,68 +1,68 @@
 // Import the default variable values.
-@use '../../../newspack-theme/sass/variables-site/colors';
-@use '../../../newspack-theme/sass/variables-site/fonts';
+@use "../../../newspack-theme/sass/variables-site/colors";
+@use "../../../newspack-theme/sass/variables-site/fonts";
 
 // Use @font-face to make the theme's font files available.
 @font-face {
-	font-family: 'EB Garamond';
-	src: url( 'fonts/eb-garamond/EBGaramond-Regular.ttf' );
+	font-family: "EB Garamond";
+	src: url("fonts/eb-garamond/EBGaramond-Regular.ttf");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'EB Garamond';
-	src: url( 'fonts/eb-garamond/EBGaramond-Italic.ttf' );
+	font-family: "EB Garamond";
+	src: url("fonts/eb-garamond/EBGaramond-Italic.ttf");
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'EB Garamond';
-	src: url( 'fonts/eb-garamond/EBGaramond-Bold.ttf' );
+	font-family: "EB Garamond";
+	src: url("fonts/eb-garamond/EBGaramond-Bold.ttf");
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'EB Garamond';
-	src: url( 'fonts/eb-garamond/EBGaramond-BoldItalic.ttf' );
+	font-family: "EB Garamond";
+	src: url("fonts/eb-garamond/EBGaramond-BoldItalic.ttf");
 	font-style: italic;
 	font-weight: 700;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Old Standard TT';
-	src: url( 'fonts/old-standard-tt/OldStandardTT-Regular.ttf' );
+	font-family: "Old Standard TT";
+	src: url("fonts/old-standard-tt/OldStandardTT-Regular.ttf");
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Old Standard TT';
-	src: url( 'fonts/old-standard-tt/OldStandardTT-Italic.ttf' );
+	font-family: "Old Standard TT";
+	src: url("fonts/old-standard-tt/OldStandardTT-Italic.ttf");
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Old Standard TT';
-	src: url( 'fonts/old-standard-tt/OldStandardTT-Bold.ttf' );
+	font-family: "Old Standard TT";
+	src: url("fonts/old-standard-tt/OldStandardTT-Bold.ttf");
 	font-weight: 700;
 	font-display: swap;
 }
 
 // Now overlay our style-specific variables, so we're only overriding specific variables.
 :root {
-	--newspack-theme-font-heading: 'Old Standard TT', georgia, serif;
-	--newspack-theme-font-body: 'EB Garamond', georgia, serif;
+	--newspack-theme-font-heading: "Old Standard TT", georgia, serif;
+	--newspack-theme-font-body: "EB Garamond", georgia, serif;
 	--newspack-theme-color-text-light: #444;
 	--newspack-theme-color-bg-hr: #444;
-	--newspack-theme-color-border: var( --newspack-theme-color-text-main );
-	--newspack-theme-color-bg-button: var( --newspack-theme-color-text-main );
+	--newspack-theme-color-border: var(--newspack-theme-color-text-main);
+	--newspack-theme-color-bg-button: var(--newspack-theme-color-text-main);
 	--newspack-theme-color-bg-button-hover: #444;
 	--newspack-theme-color-secondary-variation: #444;
 }

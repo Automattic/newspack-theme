@@ -1,5 +1,5 @@
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 /** === Tertiary menu === */
 
@@ -38,13 +38,13 @@
 body.h-db.h-dh .site-header {
 	.nav3 {
 		.menu-highlight a {
-			background-color: var( --newspack-theme-color-primary );
+			background-color: var(--newspack-theme-color-primary);
 			border: 0;
-			color: var( --newspack-theme-color-against-primary );
+			color: var(--newspack-theme-color-against-primary);
 
 			&:hover {
-				background-color: var( --newspack-theme-color-text-main );
-				color: var( --newspack-theme-color-bg-body );
+				background-color: var(--newspack-theme-color-text-main);
+				color: var(--newspack-theme-color-bg-body);
 			}
 		}
 	}
@@ -58,10 +58,10 @@ body.h-db.h-dh .site-header {
 
 	li {
 		display: inline-block;
-		font-size: var( --newspack-theme-font-size-xs );
+		font-size: var(--newspack-theme-font-size-xs);
 
 		@include utilities.media( tablet ) {
-			&:nth-child( n + 2 ) {
+			&:nth-child(n + 2) {
 				margin: 0 0 0 #{structure.$size__spacing-unit * 0.75};
 			}
 		}
@@ -73,7 +73,7 @@ body.h-db.h-dh .site-header {
 
 	// Header Short Height
 	.h-sh & {
-		font-size: var( --newspack-theme-font-size-base );
+		font-size: var(--newspack-theme-font-size-base);
 		margin-left: structure.$size__spacing-unit;
 	}
 }

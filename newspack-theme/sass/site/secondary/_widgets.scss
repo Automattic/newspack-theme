@@ -1,10 +1,10 @@
-@use '../../mixins/mixins-main';
-@use '../../mixins/utilities';
-@use '../../variables-site/structure';
+@use "../../mixins/mixins-main";
+@use "../../mixins/utilities";
+@use "../../variables-site/structure";
 
 .widget {
-	font-family: var( --newspack-theme-font-heading );
-	font-size: var( --newspack-theme-font-size-sm );
+	font-family: var(--newspack-theme-font-heading);
+	font-size: var(--newspack-theme-font-size-sm);
 	margin: 0 0 structure.$size__spacing-unit;
 	word-wrap: break-word;
 
@@ -32,7 +32,7 @@
 
 	a {
 		&:hover {
-			color: var( --newspack-theme-color-secondary-variation );
+			color: var(--newspack-theme-color-secondary-variation);
 		}
 	}
 }
@@ -50,7 +50,7 @@
 		list-style: none;
 
 		li {
-			font-family: var( --newspack-theme-font-heading );
+			font-family: var(--newspack-theme-font-heading);
 			margin: #{0.125 * structure.$size__spacing-unit} 0;
 
 			@include utilities.media( mobile ) {
@@ -83,14 +83,14 @@
 .widget_recent_entries {
 	a {
 		color: inherit;
-		font-size: var( --newspack-theme-font-size-lg );
+		font-size: var(--newspack-theme-font-size-lg);
 		font-weight: 700;
-		line-height: var( --newspack-theme-font-line-height-heading );
+		line-height: var(--newspack-theme-font-line-height-heading);
 	}
 
 	.post-date {
 		color: inherit;
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 		display: block;
 		opacity: 0.8;
 	}
@@ -115,14 +115,14 @@
 	}
 
 	.widgets-list-layout-links {
-		width: calc( 100% - 60px );
+		width: calc(100% - 60px);
 	}
 }
 
 .jetpack_subscription_widget {
 	.error,
 	div {
-		background-color: var( --newspack-theme-color-bg-pre );
+		background-color: var(--newspack-theme-color-bg-pre);
 		padding: structure.$size__spacing-unit;
 
 		p {
@@ -151,7 +151,7 @@
 .widget_top-posts {
 	p {
 		font-style: italic;
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 	}
 
 	ul,
@@ -167,14 +167,14 @@
 			@include mixins-main.clearfix-after;
 		}
 
-		&:not( :last-child ) {
+		&:not(:last-child) {
 			margin: 0 0 0.75em;
 		}
 
 		a {
-			color: var( --newspack-theme-color-text-main );
+			color: var(--newspack-theme-color-text-main);
 			display: block;
-			font-family: var( --newspack-theme-font-heading );
+			font-family: var(--newspack-theme-font-heading);
 			font-weight: bold;
 			line-height: 1.2;
 			text-decoration: none;
@@ -190,7 +190,7 @@
 
 	.widgets-list-layout .widgets-list-layout-links {
 		float: right;
-		width: calc( 100% - 95px );
+		width: calc(100% - 95px);
 	}
 
 	.widget-grid-view-image {
@@ -202,7 +202,7 @@
 			margin: 0 4px 2px 0;
 		}
 
-		&:nth-child( 2n ) {
+		&:nth-child(2n) {
 			float: right;
 
 			a {
@@ -218,7 +218,7 @@
 	}
 
 	.widgets-list-layout .widgets-list-layout-links {
-		width: calc( 100% - 75px );
+		width: calc(100% - 75px);
 	}
 }
 
@@ -232,12 +232,12 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: var( --newspack-theme-font-size-md );
+		font-size: var(--newspack-theme-font-size-md);
 	}
 }
 
 .single #secondary {
-	padding-top: calc( #{structure.$size__spacing-unit} * 1.5 );
+	padding-top: calc(#{structure.$size__spacing-unit} * 1.5);
 }
 
 .page #secondary {
@@ -264,19 +264,19 @@
 	}
 
 	.alignfull {
-		margin-left: calc( 50% - 50vw );
-		margin-right: calc( 50% - 50vw );
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
 		max-width: 100vw;
 		width: auto;
 	}
 
 	.alignwide {
-		margin-left: calc( 25% - 25vw );
-		margin-right: calc( 25% - 25vw );
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
 		max-width: 100vw;
 	}
 
-	[class*='__inner-container'] {
+	[class*="__inner-container"] {
 		margin: 0 auto;
 		max-width: 1200px;
 	}
@@ -287,7 +287,7 @@
 }
 
 .h-db .above-header-widgets {
-	border-bottom: 1px solid var( --newspack-theme-color-border );
+	border-bottom: 1px solid var(--newspack-theme-color-border);
 }
 
 // The Subpage header + special featured image placements also can't really support an ad in this spot.

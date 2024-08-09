@@ -2,12 +2,12 @@
 // See: https://theeventscalendar.com/knowledgebase/k/basic-font-and-color-changes-with-css/
 
 // Import theme variables
-@use '../sass/variables-style/variables-style';
+@use "../sass/variables-style/variables-style";
 
 // Import TEC baseline styles
-@use '../../newspack-theme/sass/plugins/the-events-calendar';
-@use '../../newspack-theme/sass/mixins/utilities';
-@use '../../newspack-theme/sass/variables-site/structure';
+@use "../../newspack-theme/sass/plugins/the-events-calendar";
+@use "../../newspack-theme/sass/mixins/utilities";
+@use "../../newspack-theme/sass/variables-site/structure";
 
 // Theme-specific styles
 .tribe_community_edit .button.mb-cta {
@@ -16,11 +16,11 @@
 
 // Overlap styles
 .tec-wrapper {
-	background-color: var( --newspack-theme-color-bg-body );
+	background-color: var(--newspack-theme-color-bg-body);
 	padding-top: structure.$size__spacing-unit 0;
 
 	@include utilities.media( tablet ) {
-		border-top: 4px solid var( --newspack-theme-color-primary-variation );
+		border-top: 4px solid var(--newspack-theme-color-primary-variation);
 		padding: #{3 * structure.$size__spacing-unit} #{2 * structure.$size__spacing-unit} 0;
 	}
 
