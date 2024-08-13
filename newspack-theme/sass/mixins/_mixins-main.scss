@@ -1,11 +1,11 @@
-@use 'sass:map';
-@use 'sass:meta';
-@use 'utilities';
-@use '../variables-site/structure';
+@use "sass:map";
+@use "sass:meta";
+@use "utilities";
+@use "../variables-site/structure";
 
 // Rem output with px fallback
-@mixin font-size( $sizeValue: 1 ) {
-	font-size: ( $sizeValue * 16 ) * 1px;
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
@@ -18,7 +18,7 @@
 
 // Clearfix
 @mixin clearfix() {
-	content: '';
+	content: "";
 	display: table;
 	table-layout: fixed;
 }
@@ -30,20 +30,20 @@
 
 @mixin filter-duotone {
 	&::before {
-		background: var( --newspack-theme-color-primary );
+		background: var(--newspack-theme-color-primary);
 		mix-blend-mode: screen;
 		opacity: 0.1;
 		z-index: 2;
 	}
 
 	&::after {
-		background: var( --newspack-theme-color-primary );
+		background: var(--newspack-theme-color-primary);
 		mix-blend-mode: multiply;
 		opacity: 0.8;
 		z-index: 3;
 
 		/* Browsers supporting mix-blend-mode don't need opacity < 1 */
-		@supports ( mix-blend-mode: multiply ) {
+		@supports (mix-blend-mode: multiply) {
 			opacity: 1;
 		}
 	}
@@ -51,7 +51,7 @@
 
 @mixin filter-grayscale {
 	position: relative;
-	filter: grayscale( 100% );
+	filter: grayscale(100%);
 	z-index: 1;
 
 	&::after {
@@ -64,8 +64,8 @@
 
 @mixin post-section-dash {
 	&::before {
-		background: var( --newspack-theme-color-text-light );
-		content: '\020';
+		background: var(--newspack-theme-color-text-light);
+		content: "\020";
 		display: block;
 		height: 2px;
 		margin: $size__spacing-unit 0;
@@ -77,21 +77,22 @@
  * since its edges can look jagged due to lack of antialiasing. In this case, we are several
  * layers of box-shadow to add the border visually, which will render the border smoother. */
 
-@mixin box-shadow( $size ) {
-	box-shadow: 0 0 0 $size var( --newspack-theme-color-text-light ) inset,
+@mixin box-shadow($size) {
+	box-shadow:
+		0 0 0 $size var(--newspack-theme-color-text-light) inset,
 		// Original border.
-		0 0 0 ( $size + 1px ) var( --newspack-theme-color-text-light ) inset,
+		0 0 0 ($size + 1px) var(--newspack-theme-color-text-light) inset,
 		// Antialiasing, inner edge.
-		0 0 1px 0 rgba( var( --newspack-theme-color-text-light ), 0.7 ); // Antialiasing, outer edge.
+		0 0 1px 0 rgba(var(--newspack-theme-color-text-light), 0.7); // Antialiasing, outer edge.
 }
 
 /* Calculates maximum width for post content */
 @mixin postContentMaxWidth() {
-	@include utilities.media( tablet ) {
+	@include utilities.media(tablet) {
 		max-width: $size__site-tablet-content;
 	}
 
-	@include utilities.media( desktop ) {
+	@include utilities.media(desktop) {
 		max-width: $size__site-desktop-content;
 	}
 }
@@ -103,45 +104,45 @@
 	}
 
 	ul > li > a::before {
-		font-family: var( --newspack-theme-font-body );
+		font-family: var(--newspack-theme-font-body);
 		font-weight: normal;
-		content: '\2013\00a0'counters( submenu, '\2013\00a0', none );
+		content: "\2013\00a0"counters(submenu, "\2013\00a0", none);
 		counter-increment: submenu;
 	}
 }
 
 /* Jetpack Mailchimp Block */
-@mixin jetpack-mailchimp( $gap: 16px 8px, $notification-margin: 16px 0 0 ) {
+@mixin jetpack-mailchimp($gap: 16px 8px, $notification-margin: 16px 0 0) {
 	.wp-block-jetpack-mailchimp {
 		form {
 			display: grid;
 			gap: 8px;
 
-			@include utilities.media( mobile ) {
+			@include utilities.media(mobile) {
 				align-items: center;
 				gap: $gap;
 				grid-template-areas:
-					'input button'
-					'content content';
+					"input button"
+					"content content";
 				grid-template-columns: 1fr auto;
 			}
 
 			> * {
 				margin: 0;
 
-				@include utilities.media( mobile ) {
+				@include utilities.media(mobile) {
 					grid-area: content;
 				}
 			}
 
 			> p:first-of-type {
-				@include utilities.media( mobile ) {
+				@include utilities.media(mobile) {
 					grid-area: input;
 				}
 			}
 
 			> .wp-block-button {
-				@include utilities.media( mobile ) {
+				@include utilities.media(mobile) {
 					grid-area: button;
 				}
 
@@ -165,16 +166,16 @@
 	}
 }
 
-@mixin jetpack-mailchimp-editor( $gap: 16px 8px ) {
+@mixin jetpack-mailchimp-editor($gap: 16px 8px) {
 	.wp-block-jetpack-mailchimp {
 		display: grid;
 		gap: 8px;
 
-		@include utilities.media( mobile ) {
+		@include utilities.media(mobile) {
 			gap: $gap;
 			grid-template-areas:
-				'input button'
-				'content content';
+				"input button"
+				"content content";
 			grid-template-columns: 1fr auto;
 		}
 
@@ -189,11 +190,11 @@
 			}
 
 			.components-text-control__input {
-				border-color: var( --newspack-theme-color-border );
+				border-color: var(--newspack-theme-color-border);
 				border-radius: 0;
 			}
 
-			@include utilities.media( mobile ) {
+			@include utilities.media(mobile) {
 				grid-area: input;
 			}
 		}
@@ -207,7 +208,7 @@
 				width: 100%;
 			}
 
-			@include utilities.media( mobile ) {
+			@include utilities.media(mobile) {
 				grid-area: button;
 			}
 		}
@@ -215,11 +216,11 @@
 		p {
 			font-size: 0.7em;
 
-			@include utilities.media( mobile ) {
+			@include utilities.media(mobile) {
 				grid-area: content;
 			}
 		}
 	}
 }
 
-@include meta.load-css( 'utilities' );
+@include meta.load-css("utilities");

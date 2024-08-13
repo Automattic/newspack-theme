@@ -1,5 +1,5 @@
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 // Menu Toggles
 .mobile-menu-toggle,
@@ -65,7 +65,7 @@
 	}
 
 	&:hover {
-		background: var( --newspack-theme-color-text-main );
+		background: var(--newspack-theme-color-text-main);
 		color: #fff;
 	}
 
@@ -89,7 +89,7 @@
 .site-header .desktop-menu-toggle,
 .subpage-toggle-contain {
 	display: none;
-	font-size: var( --newspack-theme-font-size-xs );
+	font-size: var(--newspack-theme-font-size-xs);
 	font-weight: normal;
 	line-height: 2;
 	padding: #{0.125 * structure.$size__spacing-unit} 0;
@@ -184,7 +184,7 @@
 				z-index: 1;
 			}
 
-			&:not( .h-stk ).single-featured-image-beside {
+			&:not(.h-stk).single-featured-image-beside {
 				.mb-cta {
 					right: 2.25rem;
 				}
@@ -205,14 +205,14 @@
 	}
 
 	nav,
-	.widget:not( .widget_block ) {
-		font-size: var( --newspack-theme-font-size-sm );
+	.widget:not(.widget_block) {
+		font-size: var(--newspack-theme-font-size-sm);
 	}
 
 	.mobile-menu-toggle,
 	.desktop-menu-toggle,
 	.subpage-toggle {
-		font-size: var( --newspack-theme-font-size-sm );
+		font-size: var(--newspack-theme-font-size-sm);
 		float: right;
 		margin: 0 0 structure.$size__spacing-unit;
 		padding: 0;
@@ -259,11 +259,11 @@
 
 	a,
 	a:visited {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 
 	.widget {
-		border-top: 1px solid var( --newspack-theme-color-border );
+		border-top: 1px solid var(--newspack-theme-color-border);
 		font-size: 0.9em;
 		margin-bottom: #{1.5 * structure.$size__spacing-unit};
 		padding-top: #{1.5 * structure.$size__spacing-unit};
@@ -281,7 +281,7 @@
 
 	.widget-title,
 	.widgettitle {
-		font-size: var( --newspack-theme-font-size-md );
+		font-size: var(--newspack-theme-font-size-md);
 	}
 }
 
@@ -305,7 +305,7 @@
 	nav + nav,
 	nav + .widget,
 	.widget + .widget {
-		border-top: 1px solid var( --newspack-theme-color-against-primary );
+		border-top: 1px solid var(--newspack-theme-color-against-primary);
 	}
 
 	nav + nav {
@@ -354,13 +354,13 @@
 
 // Mobile Sidebar and Menu styles
 .mobile-sidebar {
-	background-color: var( --newspack-theme-color-primary );
-	color: var( --newspack-theme-color-against-primary );
+	background-color: var(--newspack-theme-color-primary);
+	color: var(--newspack-theme-color-against-primary);
 
 	a,
 	.nav1 .sub-menu > li > a,
 	.nav3 a {
-		color: var( --newspack-theme-color-against-primary );
+		color: var(--newspack-theme-color-against-primary);
 	}
 
 	a:hover,
@@ -374,19 +374,19 @@
 .subpage-sidebar {
 	.nav1 .sub-menu > li > a,
 	.nav1 .sub-menu > li > a:visited {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 
 	nav + nav,
 	nav + .widget,
 	.widget + .widget {
-		border-color: var( --newspack-theme-color-border );
+		border-color: var(--newspack-theme-color-border);
 	}
 }
 
 .h-sb.h-sh .subpage-sidebar {
 	.nav1 ul.main-menu > li > a {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 }
 
@@ -438,8 +438,8 @@
 }
 
 .overlay-mask {
-	background-color: rgba( 0, 0, 0, 0.5 );
-	content: '';
+	background-color: rgba(0, 0, 0, 0.5);
+	content: "";
 	inset: 0;
 	position: fixed;
 	z-index: 999998;

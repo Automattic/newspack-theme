@@ -1,18 +1,18 @@
 .site-breadcrumb {
-	color: var( --newspack-theme-color-text-light );
+	color: var(--newspack-theme-color-text-light);
 
 	.wrapper {
 		padding: 0.5em 0;
 
 		> span {
-			font-family: var( --newspack-theme-font-heading );
-			font-size: var( --newspack-theme-font-size-xxs );
-			line-height: var( --newspack-theme-font-line-height-heading );
+			font-family: var(--newspack-theme-font-heading);
+			font-size: var(--newspack-theme-font-size-xxs);
+			line-height: var(--newspack-theme-font-line-height-heading);
 		}
 	}
 
 	.breadcrumb_last {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 	}
 
 	// Hide on homepage and if the Featured Image is Behind or Beside
@@ -27,7 +27,7 @@
 		padding-top: 0.25rem;
 
 		.wrapper {
-			border-top: 1px solid var( --newspack-theme-color-border );
+			border-top: 1px solid var(--newspack-theme-color-border);
 		}
 	}
 }

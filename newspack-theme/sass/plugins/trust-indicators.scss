@@ -1,7 +1,7 @@
-@use '../variables-site/variables-site';
-@use '../mixins/mixins-main';
-@use '../mixins/utilities';
-@use '../variables-site/structure';
+@use "../variables-site/variables-site";
+@use "../mixins/mixins-main";
+@use "../mixins/utilities";
+@use "../variables-site/structure";
 
 .trust-label {
 	display: block;
@@ -21,7 +21,7 @@
 .single .cat-links {
 	vertical-align: middle;
 	.type-of-work {
-		color: var( --newspack-theme-color-text-main );
+		color: var(--newspack-theme-color-text-main);
 		margin-right: 0.5em;
 	}
 }
@@ -72,7 +72,7 @@
 .author-additional-infos {
 	display: flex;
 	flex-wrap: wrap;
-	font-size: var( --newspack-theme-font-size-sm );
+	font-size: var(--newspack-theme-font-size-sm);
 }
 
 .author-additional-info {
