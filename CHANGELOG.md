@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 # [2.0.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.93.0-epic-ras-acc.1...v2.0.0-epic-ras-acc.1) (2024-08-09)
-
 
 ### Bug Fixes
 
 * correct linting errors ([d3b74c7](https://github.com/Automattic/newspack-theme/commit/d3b74c73da1d1ff364004ca136190f00d77bc9a2))
 * correct more linting errors ([593c246](https://github.com/Automattic/newspack-theme/commit/593c24677fabba714453d8dc7c3691e759ce0d66))
+
+
+# [2.0.0](https://github.com/Automattic/newspack-theme/compare/v1.92.0...v2.0.0) (2024-08-13)
+
+### Bug Fixes
+
 * update dependencies to support `@wordpress/scripts` ([#2318](https://github.com/Automattic/newspack-theme/issues/2318)) ([1ee216c](https://github.com/Automattic/newspack-theme/commit/1ee216cc1815f32d028524a21a9a8a6a09cfab3f))
 
 
@@ -38,29 +44,66 @@
 
 * chore: bump newspack-scripts to v5.5.2
 
-# [1.93.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.92.0...v1.93.0-epic-ras-acc.1) (2024-07-31)
 
+# [2.0.0-alpha.1](https://github.com/Automattic/newspack-theme/compare/v1.92.0...v2.0.0-alpha.1) (2024-08-02)
+
+### Bug Fixes
+
+* update dependencies to support `@wordpress/scripts` ([#2318](https://github.com/Automattic/newspack-theme/issues/2318)) ([1ee216c](https://github.com/Automattic/newspack-theme/commit/1ee216cc1815f32d028524a21a9a8a6a09cfab3f))
+
+
+### BREAKING CHANGES
+
+* Updates dependencies for compatibility with WordPress 6.6.*, but breaks JS in WordPress 6.5.* and below. If you need support for WP 6.5.*, please do not upgrade to this new major version.
+
+* chore: refactor for newspack-scripts dependency updates
+
+* refactor: use proxy script for eslint and stylelint scripts
+
+* chore: update newspack-scripts to v5.6.0-alpha.3
+
+* fix: actually update newspack-scripts to v5.6.0-alpha.3
+
+* chore: update newspack-scripts to v5.6.0-alpha.4
+
+* fix: semantic-release script
+
+* fix: add missing Prettier config files
+
+* chore: update newspack-scripts to 5.6.0-alpha.5
+
+* chore: update newspack-scripts to v5.6.0-alpha.7
+
+* fix: reformat SCSS
+
+* chore: update newspack-scripts to v5.6.0-alpha.8
+
+* fix: broken composer lockfile
+
+* chore: bump newspack-scripts to v5.5.2
+
+
+# [1.93.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.92.0...v1.93.0-epic-ras-acc.1) (2024-07-31)
 
 ### Bug Fixes
 
 * **ras-acc:** clean up merge conflict marker ([#2335](https://github.com/Automattic/newspack-theme/issues/2335)) ([080e0fc](https://github.com/Automattic/newspack-theme/commit/080e0fc1a8e59f70fef23b7a46b11dc6f85bcf11))
 * **ras-acc:** remove redundant checkout styles ([#2350](https://github.com/Automattic/newspack-theme/issues/2350)) ([1f48f20](https://github.com/Automattic/newspack-theme/commit/1f48f2061fe40ea091fb6135444e4ada2be8012e))
-
 
 ### Features
 
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
 
-# [1.92.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.92.0-epic-ras-acc.1...v1.92.0-epic-ras-acc.2) (2024-07-26)
 
+# [1.92.0-epic-ras-acc.2](https://github.com/Automattic/newspack-theme/compare/v1.92.0-epic-ras-acc.1...v1.92.0-epic-ras-acc.2) (2024-07-26)
 
 ### Bug Fixes
 
 * **ras-acc:** remove redundant checkout styles ([#2350](https://github.com/Automattic/newspack-theme/issues/2350)) ([1f48f20](https://github.com/Automattic/newspack-theme/commit/1f48f2061fe40ea091fb6135444e4ada2be8012e))
 
-# [1.92.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0-epic-ras-acc.1) (2024-07-17)
 
+# [1.92.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0-epic-ras-acc.1) (2024-07-17)
 
 ### Bug Fixes
 
@@ -68,8 +111,8 @@
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
 
-# [1.92.0](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0) (2024-07-30)
 
+# [1.92.0](https://github.com/Automattic/newspack-theme/compare/v1.91.0...v1.92.0) (2024-07-30)
 
 ### Features
 
