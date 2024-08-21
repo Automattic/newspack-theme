@@ -13,7 +13,7 @@
 		"wp-coding-standards/wpcs": "^2.1",
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
-		"brainmaestro/composer-git-hooks": "^2.8",
+		"brainmaestro/composer-git-hooks": "^3.0",
 		"wptrt/wpthemereview": "*",
 		"szepeviktor/phpstan-wordpress": "^1.1"
 	},
