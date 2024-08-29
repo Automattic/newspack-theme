@@ -439,7 +439,8 @@ if ( ! function_exists( 'newspack_post_thumbnail_caption' ) ) {
 		}
 
 		// Check the existance of the caption separately, so filters -- like ones that add ads -- don't interfere.
-		$caption_exists = get_post( get_post_thumbnail_id() )->post_excerpt;
+		$thumbnail      = get_post( get_post_thumbnail_id() );
+		$caption_exists = $thumbnail && $thumbnail->post_excerpt;
 
 		// Only get the caption if one exists.
 		if ( $caption_exists ) {

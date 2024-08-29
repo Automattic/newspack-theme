@@ -41,17 +41,17 @@
 		"release:archive": "mkdir -p release && zip -r release/newspack-theme.zip newspack-theme -x .DS_Store && zip -r release/newspack-sacha.zip newspack-sacha -x .DS_Store && zip -r release/newspack-scott.zip newspack-scott -x .DS_Store && zip -r release/newspack-nelson.zip newspack-nelson -x .DS_Store  && zip -r release/newspack-katharine.zip newspack-katharine -x .DS_Store && zip -r release/newspack-joseph.zip newspack-joseph -x .DS_Store"
 	},
 	"devDependencies": {
-		"@octokit/rest": "^20.1.1",
+		"@octokit/rest": "^21.0.2",
 		"@rushstack/eslint-patch": "^1.10.4",
-		"@wordpress/browserslist-config": "^6.0.0",
+		"@wordpress/browserslist-config": "^6.6.0",
 		"chokidar-cli": "^3.0.0",
 		"classnames": "^2.5.1",
 		"eslint": "^8.57.0",
 		"fs-extra": "^11.2.0",
-		"lint-staged": "^15.2.7",
+		"lint-staged": "^15.2.9",
 		"newspack-scripts": "^5.5.2",
 		"npm-run-all": "^4.1.5",
-		"postcss-focus-within": "^8.0.1",
+		"postcss-focus-within": "^9.0.0",
 		"postcss-scss": "^4.0.9",
 		"rtlcss": "^4.2.0",
 		"sass": "^1.77.8"
