@@ -22,7 +22,6 @@
 * update clamp calculations based on viewport range of 782 - 1280 ([63307ae](https://github.com/Automattic/newspack-theme/commit/63307ae052c72a9eeb753d8f45b4f0e746917991))
 * update Newspack UI variable font sizes for the theme ([212e2fd](https://github.com/Automattic/newspack-theme/commit/212e2fd95201601b77baf4c83e1b11637f045972))
 
-<<<<<<< HEAD
 # [2.0.0-epic-ras-acc.1](https://github.com/Automattic/newspack-theme/compare/v1.93.0-epic-ras-acc.1...v2.0.0-epic-ras-acc.1) (2024-08-09)
 
 ### Bug Fixes

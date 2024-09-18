@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@octokit/rest": "^20.0.2",
 		"@rushstack/eslint-patch": "^1.10.4",
-		"@wordpress/browserslist-config": "^6.6.0",
+		"@wordpress/browserslist-config": "^6.7.0",
 		"chokidar-cli": "^3.0.0",
 		"classnames": "^2.5.1",
 		"eslint": "^8.57.0",
@@ -54,7 +54,7 @@
 		"postcss-focus-within": "^9.0.0",
 		"postcss-scss": "^4.0.9",
 		"rtlcss": "^4.3.0",
-		"sass": "^1.77.8"
+		"sass": "^1.78.0"
 	},
 	"overrides": {
 		"terser-webpack-plugin": {
