@@ -1,3 +1,10 @@
+## [2.0.1-alpha.2](https://github.com/Automattic/newspack-theme/compare/v2.0.1-alpha.1...v2.0.1-alpha.2) (2024-09-20)
+
+
+### Bug Fixes
+
+* allow active My Account links to be clicked ([#2376](https://github.com/Automattic/newspack-theme/issues/2376)) ([99e0509](https://github.com/Automattic/newspack-theme/commit/99e0509b2e00fc45bf3b2963c89fd638fe118d26))
+
 ## [2.0.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v2.0.0...v2.0.1-alpha.1) (2024-08-30)
 
 
