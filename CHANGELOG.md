@@ -1,3 +1,27 @@
+## [2.0.1](https://github.com/Automattic/newspack-theme/compare/v2.0.0...v2.0.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* allow active My Account links to be clicked ([#2376](https://github.com/Automattic/newspack-theme/issues/2376)) ([99e0509](https://github.com/Automattic/newspack-theme/commit/99e0509b2e00fc45bf3b2963c89fd638fe118d26))
+* avoid warnings ([#2367](https://github.com/Automattic/newspack-theme/issues/2367)) ([5218a12](https://github.com/Automattic/newspack-theme/commit/5218a1284f2dc1c66e9723dc42915d8afd9aab94))
+* downgrade octokit version to v20 ([#2370](https://github.com/Automattic/newspack-theme/issues/2370)) ([5ac4510](https://github.com/Automattic/newspack-theme/commit/5ac451004e64b1df14439218eedc74610f358540))
+
+## [2.0.1-alpha.2](https://github.com/Automattic/newspack-theme/compare/v2.0.1-alpha.1...v2.0.1-alpha.2) (2024-09-20)
+
+
+### Bug Fixes
+
+* allow active My Account links to be clicked ([#2376](https://github.com/Automattic/newspack-theme/issues/2376)) ([99e0509](https://github.com/Automattic/newspack-theme/commit/99e0509b2e00fc45bf3b2963c89fd638fe118d26))
+
+## [2.0.1-alpha.1](https://github.com/Automattic/newspack-theme/compare/v2.0.0...v2.0.1-alpha.1) (2024-08-30)
+
+
+### Bug Fixes
+
+* avoid warnings ([#2367](https://github.com/Automattic/newspack-theme/issues/2367)) ([5218a12](https://github.com/Automattic/newspack-theme/commit/5218a1284f2dc1c66e9723dc42915d8afd9aab94))
+* downgrade octokit version to v20 ([#2370](https://github.com/Automattic/newspack-theme/issues/2370)) ([5ac4510](https://github.com/Automattic/newspack-theme/commit/5ac451004e64b1df14439218eedc74610f358540))
+
 # [2.0.0](https://github.com/Automattic/newspack-theme/compare/v1.92.0...v2.0.0) (2024-08-13)
 
 
