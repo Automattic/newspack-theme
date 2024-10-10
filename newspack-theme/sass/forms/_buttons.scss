@@ -42,4 +42,11 @@ input[type="submit"],
 		outline: thin dotted;
 		outline-offset: -4px;
 	}
+
+	&[disabled],
+	&[disabled]:hover {
+		background: var(--newspack-ui-color-neutral-30, #ddd);
+		color: var(--newspack-ui-color-neutral-0, #fff);
+		cursor: default;
+	}
 }
