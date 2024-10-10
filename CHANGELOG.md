@@ -1,3 +1,10 @@
+# [2.1.0-epic-ras-acc.4](https://github.com/Automattic/newspack-theme/compare/v2.1.0-epic-ras-acc.3...v2.1.0-epic-ras-acc.4) (2024-10-10)
+
+
+### Features
+
+* add disabled styles ([#2386](https://github.com/Automattic/newspack-theme/issues/2386)) ([2f4d5a7](https://github.com/Automattic/newspack-theme/commit/2f4d5a7c7117d91c2a0eb09784ce599a6948a1c3))
+
 # [2.1.0-epic-ras-acc.3](https://github.com/Automattic/newspack-theme/compare/v2.1.0-epic-ras-acc.2...v2.1.0-epic-ras-acc.3) (2024-09-18)
 
 ### Bug Fixes
