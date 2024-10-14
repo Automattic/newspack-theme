@@ -54,7 +54,7 @@
 		"postcss-focus-within": "^9.0.0",
 		"postcss-scss": "^4.0.9",
 		"rtlcss": "^4.3.0",
-		"sass": "^1.79.4"
+		"sass": "^1.79.5"
 	},
 	"overrides": {
 		"terser-webpack-plugin": {
