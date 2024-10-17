@@ -48,15 +48,15 @@
 
 // Mobile CTA
 .site-header .mb-cta {
+	font-size: 0.7em;
+	margin-left: auto;
+	padding: #{0.6 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
+
 	&,
 	&:visited:not(:hover) {
 		background: #d33;
 		color: #fff;
 	}
-
-	font-size: 0.7em;
-	margin-left: auto;
-	padding: #{0.6 * structure.$size__spacing-unit} #{0.5 * structure.$size__spacing-unit};
 
 	&,
 	&:visited {
