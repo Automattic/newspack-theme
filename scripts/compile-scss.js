@@ -3,8 +3,11 @@ const path = require( 'path' );
 const chokidar = require( 'chokidar' );
 const postcss = require( 'postcss' );
 const sass = require( 'sass' );
+const cssnano = require('cssnano');
 const rtlcss = require( 'rtlcss' );
 const postcssFocusWithin = require( path.resolve( __dirname, '../node_modules/newspack-scripts/node_modules/postcss-focus-within' ) );
+
+const isWatching = process.argv.some( arg => arg.startsWith( '--watch' ) )
 
 if ( ! fs.existsSync( './newspack-theme/styles' ) ) {
 	fs.mkdirSync( './newspack-theme/styles' );
@@ -62,7 +65,11 @@ const compileSassFile = ( { inFile, outFile, withRTL } ) =>
 					reject( error );
 				} else {
 					// process the file with PostCSS
-					postcss( [ postcssFocusWithin ] )
+					const postCSSProcessors = [
+						postcssFocusWithin,
+						...(isWatching ? [] : [cssnano])
+					]
+					postcss( postCSSProcessors )
 						.process( result.css, { from: inFile, to: outFile } )
 						.then( result => {
 							// save the file
@@ -210,7 +217,7 @@ const SASS_STYLESHEETS = [
 compileAllStylesheets();
 
 // run watcher if `--watch` argument present
-if ( process.argv.some( arg => arg.startsWith( '--watch' ) ) ) {
+if ( isWatching ) {
 	console.log( `watching the scss files…
 ` );
 
